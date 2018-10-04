@@ -34,7 +34,8 @@
             "description": "When sub-classing, this defines the sub-class entity name",
             "examples": [ "VendorProductOffering", "DroneServiceSpecification" ]
         }
-    }
+    },
+    
     "dependencies": {
         "@schemaLocation": [ "@baseType", "@type" ],
 
