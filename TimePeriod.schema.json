@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "TimePeriod.schema.json",
+    "title": "TimePeriod",
+    "description": "A period of time, either as a deadline (endDateTime only) or with a start and end. If you provide a startDateTime, you must also provide the endDateTime",
+    "type": "object",
+
+    "properties": {
+        "startDateTime": {
+            "description": "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+            "type": "string",
+            "format": "date-time",
+            "examples": [ "1985-04-12T23:20:50.52Z", "2018-09-21T09:13:16-07:00" ]
+        },
+        "endDateTime": {
+            "description": "End of the time period, using IETC-RFC-3339 format",
+            "type": "string",
+            "format": "date-time",
+            "examples": [ "1985-04-12T23:20:50.52Z", "2018-09-21T09:13:16-07:00"  ]
+        },
+
+        "@schemaLocation": {
+            "type": "uri",
+            "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
+            "examples": [ "http://host/schemas/Subclass.schema.json"]
+        },
+        "@baseType": {
+            "type": "string",
+            "description": "When sub-classing, this defines the super-class",
+            "examples": [ "Place", "ServiceSpecification" ]
+        },
+        "@type": {
+            "type": "string",
+            "description": "When sub-classing, this defines the sub-class entity name",
+            "examples": [ "VendorProductOffering", "DroneServiceSpecification" ]
+        }
+    }
+    "dependencies": {
+        "@schemaLocation": [ "@baseType", "@type" ],
+
+        "startDateTime": [ "endDateTime" ]
+    }
+}
