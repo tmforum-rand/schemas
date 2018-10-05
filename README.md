@@ -25,8 +25,9 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
 * All TM Forum entities follow the **_Polymorphic Pattern_** for subclassing as first defined in the [TM Forum API Design Guidelines version 3.0](https://www.tmforum.org/resources/standard/tmf630-api-design-guidelines-3-0-r17-5-0/), so all schema files should include the following properties:
 ```
     "@schemaLocation": {
-        "type": "uri",
+        "type": "string",
         "description": "Link to a JSON-Schema file that defines additional attributes and relationships",
+        "format": "uri",
         "examples": [ "http://host/schemas/Subclass.schema.json"]
     },
     "@baseType": {
@@ -58,7 +59,8 @@ This has been put together as a **full template example**. Any new JSON-Schema f
         },
 
         "@schemaLocation": {
-            "type": "uri",
+            "type": "string",
+            "format": "uri",
             "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
             "examples": [ "http://host/schemas/Subclass.schema.json"]
         },
