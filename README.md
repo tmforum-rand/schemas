@@ -4,7 +4,7 @@ This directory contains the collection of JSON Schema files that define the enti
 These schemas all conform to the core definitions and terminology of [IETF Internet-Draft Version 4](http://json-schema.org/draft-04/json-schema-core.html) (further development of the specification can be tracked [here](https://github.com/json-schema-org/).
 
 The TM Forum JSON Schema files all conform to a basic JSON Schema template, which encapsulates some high-level principles:
-* The **filename convention** for all schemas is: <_Entity_>`.schema.json`, with _Entity_ being unique to the catalog, written in [CamelCase](https://en.wikipedia.org/wiki/Camel_case) notation with no embeded status (_draft_, _reviewed_, _final_ etc) or version text (_v1.0_ etc)
+* The **filename convention** for all schemas is: <_Entity_>`.schema.json`, with _Entity_ being unique to the catalog, written in [UpperCamelCase](https://en.wikipedia.org/wiki/Camel_case) notation with no embeded status (eg: _draft_, _reviewed_, _final_) or version text (eg: _v1.0_, _V1_). Where additional operation-specific schemas are used (eg: for _Create_, _Update_) the appropriate operation should be appended to the end fo the <_Entity_> term, such as <_Entity_>`Create.schema.json`   
 * All schema's must be **fully identified**, with `$schema`, `$id`, `title` and `description` attributes, such as the following:
 ```
     "$schema": "http://json-schema.org/draft-07/schema#",
@@ -12,17 +12,26 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
 ```
-* All properties within the schema must be **well defined**, using a `type`, an informative, concise `description` and at least one example value within the `examples` array. You are encouraged to use the full range of `type` values, and `format` to best constrain the JSON attribute to a set of sensible values, such that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
+* All properties within the schema must be **well defined**, using a `type`, an informative, concise `description` and at least one example value within the `examples` array. You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values, such that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
 ```
     "attribute": {
         "type": "One of: {array|string|integer|enum|hostname|uri|...}",
+        "format": "Use format to better constrain the value"
         "description": "Every attribute MUST have a concise description, beyond 'this is the blah attribute'",
         "examples": [ "At least", "One example" ],
-        "format": "Use format to better constrain the value"
     }
 ```
-
-* All TM Forum entities follow the **_Polymorphic Pattern_** for subclassing as first defined in the [TM Forum API Design Guidelines version 3.0](https://www.tmforum.org/resources/standard/tmf630-api-design-guidelines-3-0-r17-5-0/), so all schema files should include the following properties:
+* All property names MUST use **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)** and avoid the use of abbreviations.
+* Numeric properties (of `"type": "integer"` or `"number"` SHOULD consider constraints to limit the value to a sensible range using: x ≥ `minimum`, x > `exclusiveMinimum`, x ≤ `maximum` and x < `exclusiveMaximum`. For example: a `"latitude"` might be described with:
+```
+    "latitude": {
+        "type": "number",
+        "minimum": -90,
+        "maximum": 90
+    }
+```
+* String properties (`"type": "string"`) SHOULD consider constraints for sensible values using `"format"` ([see valid formats here](https://json-schema.org/latest/json-schema-validation.html#rfc.section.7.3)), [`maxLength`, `minLength`](https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.3) and [`pattern`](https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.3.3).
+* All TM Forum entities MUST follow the **_Polymorphic Pattern_** for subclassing as first defined in the [TM Forum API Design Guidelines version 3.0](https://www.tmforum.org/resources/standard/tmf630-api-design-guidelines-3-0-r17-5-0/), so all schema files should include the following properties:
 ```
     "@schemaLocation": {
         "type": "string",
