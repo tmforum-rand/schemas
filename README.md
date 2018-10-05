@@ -7,7 +7,7 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
 * The **filename convention** for all schemas is: <_Entity_>`.schema.json`, with _Entity_ being unique to the catalog, written in [CamelCase](https://en.wikipedia.org/wiki/Camel_case) notation with no embeded status (_draft_, _reviewed_, _final_ etc) or version text (_v1.0_ etc)
 * All schema's must be **fully identified**, with `$schema`, `$id`, `title` and `description` attributes, such as the following:
 ```
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "TMForumTemplate.schema.json",
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
@@ -44,7 +44,7 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
 This has been put together as a **full template example**. Any new JSON-Schema for TM Forum entities might start by cut-n-pasting the text below, then modifying as appropriate:
 ```
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "TMForumTemplate.schema.json",
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
