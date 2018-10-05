@@ -18,13 +18,15 @@
             "examples": [ "status='active'" ]
         },
         "callback": {
-            "type": "uri",
+            "type": "string",
+            "format": "uri",
             "description": "This is the URI that will be POST'ed to when a notification is triggered",
             "examples": [ "http://host/resource/id/listener" ]
         },
 
         "@schemaLocation": {
-            "type": "uri",
+            "type": "string",
+            "format": "uri",
             "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
             "examples": [ "http://host/schemas/Subclass.schema.json"]
         },
