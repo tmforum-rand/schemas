@@ -29,7 +29,8 @@
             "examples": [ "400-2", "500-4" ]
         },
         "referenceError": {
-            "type": "uri",
+            "type": "string",
+            "format": "uri",
             "description": "URI of documentation describing the error",
             "examples": [
                 "https://docs.microsoft.com/en-us/windows/desktop/wmdm/error-codes",
@@ -37,7 +38,8 @@
         },
 
         "@schemaLocation": {
-            "type": "uri",
+            "type": "string",
+            "format": "uri",
             "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
             "examples": [ "http://host/schemas/Subclass.schema.json"]
         },
