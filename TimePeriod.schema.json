@@ -20,8 +20,9 @@
         },
 
         "@schemaLocation": {
-            "type": "uri",
+            "type": "string",
             "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
+            "format": "uri",
             "examples": [ "http://host/schemas/Subclass.schema.json"]
         },
         "@baseType": {
