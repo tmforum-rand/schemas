@@ -12,13 +12,13 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
 ```
-* All properties within the schema must be **well defined**, with names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)** and avoiding the use of abbreviations. They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array. You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values, so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
+* All properties within the schema must be **well defined**, with names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)** and avoiding the use of abbreviations. They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array. You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
 ```
     "attribute": {
         "type": "One of: {array|string|integer|enum|hostname|uri|...}",
-        "format": "Use format to better constrain the value"
+        "format": "Use format to better constrain the value",
         "description": "Every attribute MUST have a concise description, beyond 'this is the blah attribute'",
-        "examples": [ "At least", "One example" ],
+        "examples": [ "At least", "One example" ]
     }
 ```
 * **Numeric properties** (of `"type": "integer"` or `"number"` SHOULD consider constraints to limit the value to a sensible range using: x ≥ `minimum`, x > `exclusiveMinimum`, x ≤ `maximum` and x < `exclusiveMaximum`. For example: a `"latitude"` might be described with:
