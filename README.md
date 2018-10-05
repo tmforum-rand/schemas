@@ -5,14 +5,14 @@ These schemas all conform to the core definitions and terminology of [IETF Inter
 
 The TM Forum JSON Schema files all conform to a basic JSON Schema template, which encapsulates some high-level principles:
 * The **filename convention** for all schemas is: <_Entity_>`.schema.json`, with _Entity_ being unique to the catalog, written in [UpperCamelCase](https://en.wikipedia.org/wiki/Camel_case) notation with no embeded status (eg: _draft_, _reviewed_, _final_) or version text (eg: _v1.0_, _V1_). Where additional operation-specific schemas are used (eg: _Create_, _Update_) the appropriate operation should be appended to the end of the <_Entity_> term, such as <_Entity_>`Create.schema.json`   
-* All schema's must be **fully identified**, with `$schema`, `$id`, `title` and `description` attributes, such as the following:
+* All schema's MUST be **fully identified**, with `$schema`, `$id`, `title` and `description` attributes, such as the following:
 ```
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "TMForumTemplate.schema.json",
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
 ```
-* All properties within the schema must be **well defined**, with names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)** and avoiding the use of abbreviations. They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array. You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
+* All properties within the schema MUST be **well defined**, with names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)** and avoiding the use of abbreviations. They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array. You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
 ```
     "attribute": {
         "type": "One of: {array|string|integer|enum|hostname|uri|...}",
@@ -51,7 +51,7 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
         "examples": [ "VendorProductOffering", "DroneServiceSpecification" ]
     }
 ```
-This has been put together as a **full template example**. Any new JSON-Schema for TM Forum entities might start by cut-n-pasting the text below, then modifying as appropriate:
+This has been put together as a **JSON Schema template example**. Any new JSON-Schema for TM Forum entities might start by cut-n-pasting the text below, then modifying as appropriate:
 ```
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
