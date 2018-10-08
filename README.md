@@ -12,7 +12,11 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
 ```
-* All properties within the schema MUST be **well defined**, with names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)** and avoiding the use of abbreviations. They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array. You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
+* All properties within the schema MUST be **well defined**
+* * With names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)**
+* * Avoiding the use of acronyms, abbreviations and trailing-types (eg: information*URL*, description*String*)
+* * They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array.
+* * You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
 ```
     "attribute": {
         "type": "One of: {array|string|integer|enum|hostname|uri|...}",
@@ -31,8 +35,8 @@ The TM Forum JSON Schema files all conform to a basic JSON Schema template, whic
 ```
 * **String properties** (`"type": "string"`) SHOULD consider constraints for sensible values using `"format"` ([see valid formats here](https://json-schema.org/latest/json-schema-validation.html#rfc.section.7.3)), [`maxLength`, `minLength`](https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.3) and [`pattern`](https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.3.3).
 * The **Primary Identifier** of the resource MUST be called `"id"`, with no pre- or post-fix text, and should contain no business meaning, expose underlying technology or be easily guessable (eg: reusing a database-generated autonumber).
-* As far as possible properties that reflect the same concept across APIs should agree on the same name, so `lifecycle`, `state` and `status` should all be converged to a single term.
-* All TM Forum entities MUST follow the **_Polymorphic Pattern_** for subclassing as first defined in the [TM Forum API Design Guidelines version 3.0](https://www.tmforum.org/resources/standard/tmf630-api-design-guidelines-3-0-r17-5-0/), so all schema files should include the following properties:
+* As far as possible properties that reflect the same concept across APIs should agree on the same name, so `lifecycle`, `state`, `serviceState` and `status` should all be converged to a single term.
+* All TM Forum entities MUST follow the **_Polymorphic Pattern_** for subclassing as first defined in the [TM Forum API Design Guidelines version 3.0](https://www.tmforum.org/resources/standard/tmf630-api-design-guidelines-3-0-r17-5-0/), so all schema files should include the following fragment:
 ```
     "@schemaLocation": {
         "type": "string",
