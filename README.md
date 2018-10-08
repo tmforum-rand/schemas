@@ -10,11 +10,11 @@ These schemas all conform to the core definitions and terminology of [IETF Inter
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
 ```
-* All properties within the schema MUST be **well defined**
-* * With names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)**
-* * Avoiding the use of acronyms, abbreviations and trailing-types (eg: information*URL*, description*String*)
-* * They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array.
-* * You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
+* All properties within the schema MUST be **well defined**:
+  * With names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)**
+  * Avoiding the use of acronyms, abbreviations and trailing-types (eg: information*URL*, description*String*)
+  * They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array.
+  * You are encouraged to use the full range of `type` and `format` values to best constrain the JSON attribute to a set of sensible values so that a JSON parser, along with the schema, can do a lot of validation work on your behalf:
 ```
     "attribute": {
         "type": "One of: {array|string|integer|enum|hostname|uri|...}",
