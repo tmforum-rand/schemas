@@ -1,7 +1,7 @@
 # TM Forum JSON-Schema Repository
 This directory contains the collection of JSON Schema files that define the entities used within the [TM Forum Open-API Catalog](https://projects.tmforum.org/wiki/display/API/Open+API+Table). A description of JSON Schema itself can be found [here](http://json-schema.org), while the TM Forum Open-API topic (developer portal, manifesto, community, certification) can be found [here](https://www.tmforum.org/open-apis/).
 
-These schemas all conform to the core definitions and terminology of [IETF Internet-Draft Version 4](http://json-schema.org/draft-04/json-schema-core.html) (further development of the specification can be tracked [here](https://github.com/json-schema-org/).
+These schemas all conform to the core definitions and terminology of [IETF Internet-Draft Version 7](http://json-schema.org/draft-07/json-schema-core.html) (further development of the specification can be tracked [here](https://github.com/json-schema-org/).
 
 The TM Forum JSON Schema files all conform to a basic JSON Schema template, which encapsulates some high-level principles:
 * The **filename convention** for all schemas is: <_Entity_>`.schema.json`, with _Entity_ being unique to the catalog, written in [UpperCamelCase](https://en.wikipedia.org/wiki/Camel_case) notation with no embeded status (eg: _draft_, _reviewed_, _final_) or version text (eg: _v1.0_, _V1_). Where additional operation-specific schemas are used (eg: _Create_, _Update_) the appropriate operation should be appended to the end of the <_Entity_> term, such as <_Entity_>`Create.schema.json`   
