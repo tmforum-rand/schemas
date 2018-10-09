@@ -4,7 +4,7 @@
     "title": "CommonComponents",
     "description": "Highly reusable schema fragments for use in TMForum Open-APIs",
     "type": "object",
-    "properties": {
+    "definitions": {
         "polymorphicPattern": {
             "description": "Allows entities to be sub-classed by referencing a subclass schema",
             "type": "object",
