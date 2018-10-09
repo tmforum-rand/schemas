@@ -17,29 +17,13 @@
             "type": "string",
             "format": "date-time",
             "examples": [ "1985-04-12T23:20:50.52Z", "2018-09-21T09:13:16-07:00"  ]
-        },
-
-        "@schemaLocation": {
-            "type": "string",
-            "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
-            "format": "uri",
-            "examples": [ "http://host/schemas/Subclass.schema.json"]
-        },
-        "@baseType": {
-            "type": "string",
-            "description": "When sub-classing, this defines the super-class",
-            "examples": [ "Place", "ServiceSpecification" ]
-        },
-        "@type": {
-            "type": "string",
-            "description": "When sub-classing, this defines the sub-class entity name",
-            "examples": [ "VendorProductOffering", "DroneServiceSpecification" ]
         }
     },
-    
-    "dependencies": {
-        "@schemaLocation": [ "@baseType", "@type" ],
+    "allOf" : [
+        { "$ref": "CommonComponents.schema.json/#polymorphicPattern" }
+     ],
 
+    "dependencies": {
         "startDateTime": [ "endDateTime" ]
     }
 }

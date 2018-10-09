@@ -6,13 +6,13 @@
     "type": "object",
     "definitions": {
         "polymorphicPattern": {
-            "description": "Allows entities to be sub-classed by referencing a subclass schema",
+            "$id": "#polymorphicPattern",
             "type": "object",
             "properties": {
                 "@schemaLocation": {
                     "type": "string",
                     "format": "uri",
-                    "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships",
                     "examples": [ "http://host/schemas/Subclass.schema.json"]
                 },
                 "@baseType": {
