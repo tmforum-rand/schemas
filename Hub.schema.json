@@ -12,37 +12,19 @@
             "description": "This is the unique-id for your subscription - referenced when updating or deleting a subscription",
             "examples": [ "4aafacbd-11ff-4dc8-b445-305f2215715f", "2334bc59-726e-4d34-ab96-f50e0561412f" ]
         },
-        "query": {
-            "type": "string",
-            "description": "This is a query string used to filter notifications in the context of the notifier",
-            "examples": [ "status='active'" ]
-        },
         "callback": {
             "type": "string",
             "format": "uri",
             "description": "This is the URI that will be POST'ed to when a notification is triggered",
             "examples": [ "http://host/resource/id/listener" ]
         },
-
-        "@schemaLocation": {
+        "query": {
             "type": "string",
-            "format": "uri",
-            "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
-            "examples": [ "http://host/schemas/Subclass.schema.json"]
-        },
-        "@baseType": {
-            "type": "string",
-            "description": "When sub-classing, this defines the super-class",
-            "examples": [ "Place", "ServiceSpecification" ]
-        },
-        "@type": {
-            "type": "string",
-            "description": "When sub-classing, this defines the sub-class entity name",
-            "examples": [ "VendorProductOffering", "DroneServiceSpecification" ]
+            "description": "This is a query string used to filter notifications in the context of the notifier",
+            "examples": [ "status='active'" ]
         }
     },
-
-    "dependencies": {
-        "@schemaLocation": [ "@baseType", "@type" ]
-    }
+    "allOf" : [
+        { "$ref": "CommonComponents.schema.json/#polymorphicPattern" }
+    ]
 }
