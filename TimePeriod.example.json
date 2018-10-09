@@ -1,0 +1,11 @@
+{
+    "$comment": "Example Validating Payload",
+    "$schema": "https://raw.githubusercontent.com/tmforum-rand/schemas/master/TimePeriod.schema.json",
+
+    "startDateTime": "1985-04-12T23:20:50.52Z",
+    "endDateTime": "2018-09-21T09:13:16-07:00",
+
+    "@schemaLocation": "http://host/schemas/Subclass.schema.json",
+    "@baseType": "TimePeriod",
+    "@type": "MyTimePeriod"
+}
