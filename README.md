@@ -68,11 +68,11 @@ This has been put together as a **JSON Schema template example**. Any new JSON-S
             "description": "Every attribute MUST have a concise description, beyond 'this is the <> attribute'",
             "examples": [ "At least", "One example" ],
             "format": "Use format to better constrain the value"
-        },
-        "allOf" : [
-            { "$ref": "CommonComponents.schema.json/#polymorphicPattern" }
-            ]
+        }
     },
+    "allOf" : [
+        { "$ref": "CommonComponents.schema.json/#polymorphicPattern" }
+    ],
 
     "dependencies": {
         "@schemaLocation": [ "@baseType", "@type" ],
