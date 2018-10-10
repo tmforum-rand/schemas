@@ -75,8 +75,6 @@ This has been put together as a **JSON Schema template example**. Any new JSON-S
     ],
 
     "dependencies": {
-        "@schemaLocation": [ "@baseType", "@type" ],
-
         "attribute": [ "list any attributes dependent on 'attribute'" ]
     }
 }
