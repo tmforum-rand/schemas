@@ -34,7 +34,7 @@ These schemas all conform to the core definitions and terminology of [IETF Inter
 * **String properties** (`"type": "string"`) SHOULD consider constraints for sensible values using `"format"` ([see valid formats here](https://json-schema.org/latest/json-schema-validation.html#rfc.section.7.3)), [`maxLength`, `minLength`](https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.3) and [`pattern`](https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.3.3).
 * The **Primary Identifier** of the resource MUST be called `"id"`, with no pre- or post-fix text, and should contain no business meaning, expose underlying technology or be easily guessable (eg: reusing a database-generated autonumber).
 * As far as possible properties that reflect the same concept across APIs should agree on the same name, so `lifecycle`, `state`, `serviceState` and `status` should all be converged to a single term.
-* All TM Forum entities MUST follow the **_Polymorphic Pattern_** for subclassing as first defined in the [TM Forum API Design Guidelines version 3.0](https://www.tmforum.org/resources/standard/tmf630-api-design-guidelines-3-0-r17-5-0/), so all schema files should include the following fragment:
+* All TM Forum entities MUST follow the **_Polymorphic Pattern_** for subclassing as first defined in the [TM Forum API Design Guidelines version 3.0](https://www.tmforum.org/resources/standard/tmf630-api-design-guidelines-3-0-r17-5-0/), so all schema files should include the following fragment - now encapsulated in (CommonComponents.schema.json/#polymorphicPattern):
 ```
     "@schemaLocation": {
         "type": "string",
@@ -69,23 +69,9 @@ This has been put together as a **JSON Schema template example**. Any new JSON-S
             "examples": [ "At least", "One example" ],
             "format": "Use format to better constrain the value"
         },
-
-        "@schemaLocation": {
-            "type": "string",
-            "format": "uri",
-            "description": "A link to a JSON-Schema file that defines additional attributes and relationships",
-            "examples": [ "http://host/schemas/Subclass.schema.json"]
-        },
-        "@baseType": {
-            "type": "string",
-            "description": "When sub-classing, this defines the super-class",
-            "examples": [ "Place", "ServiceSpecification" ]
-        },
-        "@type": {
-            "type": "string",
-            "description": "When sub-classing, this defines the sub-class entity name",
-            "examples": [ "VendorProductOffering", "DroneServiceSpecification" ]
-        }
+        "allOf" : [
+            { "$ref": "CommonComponents.schema.json/#polymorphicPattern" }
+            ]
     },
 
     "dependencies": {
