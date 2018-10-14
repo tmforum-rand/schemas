@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ServiceOrder.schema.json", 
+    "title": "ServiceOrder", 
+    "type": "object", 
+    "properties": {
+        "category": {
+            "type": "string"
+        }, 
+        "completionDate": {
+            "type": "string", 
+            "format": "date-time"
+        }, 
+        "description": {
+            "type": "string"
+        }, 
+        "expectedCompletionDate": {
+            "type": "string", 
+            "format": "date-time"
+        }, 
+        "externalId": {
+            "type": "string"
+        }, 
+        "href": {
+            "type": "string"
+        }, 
+        "id": {
+            "type": "string"
+        }, 
+        "notificationContact": {
+            "type": "string"
+        }, 
+        "orderDate": {
+            "type": "string", 
+            "format": "date-time"
+        }, 
+        "priority": {
+            "type": "string"
+        }, 
+        "requestedCompletionDate": {
+            "type": "string", 
+            "format": "date-time"
+        }, 
+        "requestedStartDate": {
+            "type": "string", 
+            "format": "date-time"
+        }, 
+        "startDate": {
+            "type": "string", 
+            "format": "date-time"
+        }, 
+        "state": {
+            "type": "string"
+        }, 
+        "note": {
+            "type": "array", 
+            "items": {
+                "$ref": "Note.schema.json/#Note"
+            }
+        }, 
+        "orderItem": {
+            "type": "array", 
+            "items": {
+                "$ref": "ServiceOrderItem.schema.json/#ServiceOrderItem"
+            }
+        }, 
+        "relatedParty": {
+            "type": "array", 
+            "items": {
+                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+            }
+        }, 
+        "orderRelationship": {
+            "type": "array", 
+            "items": {
+                "$ref": "OrderRelationship.schema.json/#OrderRelationship"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

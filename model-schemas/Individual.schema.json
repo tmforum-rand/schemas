@@ -1,0 +1,126 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Individual.schema.json", 
+    "title": "Individual", 
+    "description": "Represents a physical person", 
+    "type": "object", 
+    "properties": {
+        "birthDate": {
+            "type": "string", 
+            "format": "date-time", 
+            "description": "Birth date"
+        }, 
+        "countryOfBirth": {
+            "type": "string", 
+            "description": "The country of birth"
+        }, 
+        "deathDate": {
+            "type": "string", 
+            "format": "date-time", 
+            "description": "Death date"
+        }, 
+        "familyName": {
+            "type": "string", 
+            "description": "Last name"
+        }, 
+        "formattedName": {
+            "type": "string", 
+            "description": "A formatted name useful for specific contexts (chinese, japonese, korean,...)"
+        }, 
+        "fullName": {
+            "type": "string", 
+            "description": "Full name flatten (first, middle, and last names)"
+        }, 
+        "gender": {
+            "type": "string", 
+            "description": "Gender"
+        }, 
+        "givenName": {
+            "type": "string", 
+            "description": "First name"
+        }, 
+        "href": {
+            "type": "string", 
+            "description": "Reference of the individual"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier for the individual"
+        }, 
+        "location": {
+            "type": "string", 
+            "description": "Temporary current location of the individual (may be used if the individual has approved its sharing)"
+        }, 
+        "maritalStatus": {
+            "type": "string", 
+            "description": "Marital status (married, divorced, widow...)"
+        }, 
+        "middleName": {
+            "type": "string", 
+            "description": "Middle name"
+        }, 
+        "nationality": {
+            "type": "string", 
+            "description": "Nationality"
+        }, 
+        "placeOfBirth": {
+            "type": "string", 
+            "description": "An hyperlink to the place of birth"
+        }, 
+        "status": {
+            "type": "string", 
+            "description": "Status of the individual (Initialized, Validated, Deceased)"
+        }, 
+        "title": {
+            "type": "string", 
+            "description": "Used for titles (aristocratic, social...): Pr, Dr, Sir..."
+        }, 
+        "relatedParty": {
+            "type": "array", 
+            "items": {
+                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+            }
+        }, 
+        "characteristic": {
+            "type": "array", 
+            "items": {
+                "$ref": "Characteristic.schema.json/#Characteristic"
+            }
+        }, 
+        "externalReference": {
+            "type": "array", 
+            "items": {
+                "$ref": "ExternalReference.schema.json/#ExternalReference"
+            }
+        }, 
+        "identification": {
+            "type": "array", 
+            "items": {
+                "$ref": "IndividualIdentification.schema.json/#IndividualIdentification"
+            }
+        }, 
+        "disability": {
+            "type": "array", 
+            "items": {
+                "$ref": "Disability.schema.json/#Disability"
+            }
+        }, 
+        "otherName": {
+            "type": "array", 
+            "items": {
+                "$ref": "OtherName.schema.json/#OtherName"
+            }
+        }, 
+        "contactMedium": {
+            "type": "array", 
+            "items": {
+                "$ref": "ContactMedium.schema.json/#ContactMedium"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

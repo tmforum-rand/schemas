@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "VoucherMethod.schema.json", 
+    "title": "VoucherMethod", 
+    "type": "object", 
+    "properties": {
+        "details": {
+            "$ref": "VoucherDetails.schema.json/#VoucherDetails"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

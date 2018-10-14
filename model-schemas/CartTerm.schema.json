@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "CartTerm.schema.json", 
+    "title": "CartTerm", 
+    "type": "object", 
+    "properties": {
+        "description": {
+            "type": "string"
+        }, 
+        "duration": {
+            "$ref": "Quantity.schema.json/#Quantity"
+        }, 
+        "name": {
+            "type": "string"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

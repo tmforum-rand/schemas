@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "TerminationError.schema.json", 
+    "title": "TerminationError", 
+    "description": "If qualifcationItem has not been done properly we indicate there the termination error(s).", 
+    "type": "object", 
+    "properties": {
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of the termination error"
+        }, 
+        "value": {
+            "type": "string", 
+            "description": "Text to describe the termination error (Unable to proceed to qualification because incomplete information provided)"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

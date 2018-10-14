@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "OrganizationParentRelationship.schema.json", 
+    "title": "OrganizationParentRelationship", 
+    "description": "Represents the links between organizations: useful to describe an organization structure between headquarters, affiliates,... It indicates the parent of the organization.", 
+    "type": "object", 
+    "properties": {
+        "href": {
+            "type": "string", 
+            "description": "Reference of the parent organization"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of the parent organization"
+        }, 
+        "relationshipType": {
+            "type": "string", 
+            "description": "Juridical, hierarchical, geographical, functional..."
+        }, 
+        "validFor": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "The time period the relationship is valid"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

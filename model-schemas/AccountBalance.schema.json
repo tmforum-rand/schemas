@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "AccountBalance.schema.json", 
+    "title": "AccountBalance", 
+    "description": "Balances linked to the account", 
+    "type": "object", 
+    "properties": {
+        "amount": {
+            "$ref": "Money.schema.json/#Money", 
+            "description": "Balance amount"
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Type of the balance : deposit balance, disputed balance, loyalty balance, receivable balance..."
+        }, 
+        "validFor": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "Balance validity period"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

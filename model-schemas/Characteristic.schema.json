@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Characteristic.schema.json", 
+    "title": "Characteristic", 
+    "description": "Describes a given characteristic of an object or entity through a name/value pair.", 
+    "type": "object", 
+    "properties": {
+        "name": {
+            "type": "string", 
+            "description": "Name of the characteristic"
+        }, 
+        "value": {
+            "type": "string", 
+            "description": "Value of the characteristic"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

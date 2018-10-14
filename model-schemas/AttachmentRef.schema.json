@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "AttachmentRef.schema.json", 
+    "title": "AttachmentRef", 
+    "description": "Attachement reference. An attachment complements the description of an element (for instance a product) through video, pictures...", 
+    "type": "object", 
+    "properties": {
+        "description": {
+            "type": "string", 
+            "description": "A narrative text describing the content of the attachment"
+        }, 
+        "href": {
+            "type": "string", 
+            "description": "URL serving as reference for the attachment"
+        }, 
+        "id": {
+            "type": "string"
+        }, 
+        "url": {
+            "type": "string"
+        }, 
+        "@referredType": {
+            "type": "string", 
+            "description": "The actual type of the target instance when needed for disambiguation."
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

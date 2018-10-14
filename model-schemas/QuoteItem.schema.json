@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "QuoteItem.schema.json", 
+    "title": "QuoteItem", 
+    "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.", 
+    "type": "object", 
+    "properties": {
+        "action": {
+            "type": "string", 
+            "description": "Action to be perfomed on this quote item (add, modify, remove, etc.)"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Identifier of the quote item (generally it is a sequence number 01, 02, 03, ...)"
+        }, 
+        "quantity": {
+            "type": "integer", 
+            "description": "Quantity asked for this quote item"
+        }, 
+        "state": {
+            "type": "string", 
+            "description": "State of the quote item : described in the state machine diagram"
+        }, 
+        "quoteItem": {
+            "type": "array", 
+            "items": {
+                "$ref": "QuoteItem.schema.json/#QuoteItem"
+            }
+        }, 
+        "quoteItemRelationship": {
+            "type": "array", 
+            "items": {
+                "$ref": "QuoteItemRelationship.schema.json/#QuoteItemRelationship"
+            }
+        }, 
+        "attachment": {
+            "type": "array", 
+            "items": {
+                "$ref": "Attachment.schema.json/#Attachment"
+            }
+        }, 
+        "quoteItemAuthorization": {
+            "type": "array", 
+            "items": {
+                "$ref": "Authorization.schema.json/#Authorization"
+            }
+        }, 
+        "note": {
+            "type": "array", 
+            "items": {
+                "$ref": "Note.schema.json/#Note"
+            }
+        }, 
+        "relatedParty": {
+            "type": "array", 
+            "items": {
+                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+            }
+        }, 
+        "appointment": {
+            "type": "array", 
+            "items": {
+                "$ref": "AppointmentRef.schema.json/#AppointmentRef"
+            }
+        }, 
+        "productOffering": {
+            "$ref": "ProductOfferingRef.schema.json/#ProductOfferingRef"
+        }, 
+        "quoteItemPrice": {
+            "type": "array", 
+            "items": {
+                "$ref": "QuotePrice.schema.json/#QuotePrice"
+            }
+        }, 
+        "product": {
+            "$ref": "Product.schema.json/#Product"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

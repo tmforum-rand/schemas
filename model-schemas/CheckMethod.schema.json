@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "CheckMethod.schema.json", 
+    "title": "CheckMethod", 
+    "type": "object", 
+    "properties": {
+        "details": {
+            "$ref": "CheckDetails.schema.json/#CheckDetails"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

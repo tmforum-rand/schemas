@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ServiceTestSpecification.schema.json", 
+    "title": "ServiceTestSpecification", 
+    "description": "The service test specification describes the service test in terms of parameters to be configured and \nmeasures to be taken.", 
+    "type": "object", 
+    "properties": {
+        "description": {
+            "type": "string", 
+            "description": "Description of a service test specification."
+        }, 
+        "href": {
+            "type": "string", 
+            "description": "Hyperlink to access a service test specification."
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Identifier of a service test specification."
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "Name of a service test specification."
+        }, 
+        "validFor": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "A valid duration of a thing."
+        }, 
+        "testMeasureDefinition": {
+            "type": "array", 
+            "items": {
+                "$ref": "TestMeasureDefinition.schema.json/#TestMeasureDefinition"
+            }
+        }, 
+        "relatedServiceSpecification": {
+            "$ref": "RelatedServiceSpecificationRef.schema.json/#RelatedServiceSpecificationRef"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

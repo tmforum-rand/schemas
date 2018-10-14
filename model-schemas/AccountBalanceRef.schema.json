@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "AccountBalanceRef.schema.json", 
+    "title": "AccountBalanceRef", 
+    "description": "Balances linked to the account", 
+    "type": "object", 
+    "properties": {
+        "amount": {
+            "$ref": "Money.schema.json/#Money", 
+            "description": "Balance amount"
+        }, 
+        "status": {
+            "type": "string", 
+            "description": "The condition of the account balance, such as due, paid, in arrears."
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Type of the balance : deposit balance, disputed balance, loyalty balance, receivable balance..."
+        }, 
+        "@referredType": {
+            "type": "string", 
+            "description": "The actual type of the target instance when needed for disambiguation."
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

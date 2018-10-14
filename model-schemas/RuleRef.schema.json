@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "RuleRef.schema.json", 
+    "title": "RuleRef", 
+    "description": "Rule reference. Rule is a common pattern or Template for the SLA parameters, metrics, and thresholds", 
+    "type": "object", 
+    "properties": {
+        "description": {
+            "type": "string"
+        }, 
+        "href": {
+            "type": "string"
+        }, 
+        "@referredType": {
+            "type": "string", 
+            "description": "The actual type of the target instance when needed for disambiguation."
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

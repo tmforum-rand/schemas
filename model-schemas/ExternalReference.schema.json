@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ExternalReference.schema.json", 
+    "title": "ExternalReference", 
+    "description": "To manage touch points to external OTT identifiers for the individual or the organization (facebook, google+,...)", 
+    "type": "object", 
+    "properties": {
+        "href": {
+            "type": "string", 
+            "description": "External reference"
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Reference type"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

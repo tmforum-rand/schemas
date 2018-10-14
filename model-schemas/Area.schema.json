@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Area.schema.json", 
+    "title": "Area", 
+    "description": "Area corresponds to a geographic area as a city, a locality, a district, etc.", 
+    "type": "object", 
+    "properties": {
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of an Area"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "The defined name of the municipality"
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "SUBURB, LOCALITY, CITY, TOWN, BOROUGH, ..."
+        }, 
+        "characteristic": {
+            "type": "array", 
+            "items": {
+                "$ref": "LocationCharacteristic.schema.json/#LocationCharacteristic"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

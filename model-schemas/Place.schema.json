@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Place.schema.json", 
+    "title": "Place", 
+    "description": "Place reference. Place defines the places where the products are sold or delivered.", 
+    "type": "object", 
+    "properties": {
+        "href": {
+            "type": "string", 
+            "description": "Unique reference of the place"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of the place"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "A user-friendly name for the place, such as \"Paris Store\", \"London Store\", \"Main Home\""
+        }, 
+        "role": {
+            "type": "string", 
+            "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

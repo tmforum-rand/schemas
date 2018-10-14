@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "DocumentRelationship.schema.json", 
+    "title": "DocumentRelationship", 
+    "description": "Another document that is related to the current document;", 
+    "type": "object", 
+    "properties": {
+        "type": {
+            "type": "string", 
+            "description": "a string, Type of relationship: e.g \"related\""
+        }, 
+        "documentRef": {
+            "$ref": "DocumentRef.schema.json/#DocumentRef"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

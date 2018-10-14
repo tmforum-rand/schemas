@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "BillStructure.schema.json", 
+    "title": "BillStructure", 
+    "description": "The structure of the bill for party accounts (billling or settlement).", 
+    "type": "object", 
+    "properties": {
+        "presentationMedia": {
+            "type": "array", 
+            "items": {
+                "$ref": "BillPresentationMediaRef.schema.json/#BillPresentationMediaRef"
+            }
+        }, 
+        "format": {
+            "$ref": "BillFormatRef.schema.json/#BillFormatRef"
+        }, 
+        "cycleSpecification": {
+            "$ref": "BillingCycleSpecificationRef.schema.json/#BillingCycleSpecificationRef"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

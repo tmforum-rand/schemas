@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Organization.schema.json", 
+    "title": "Organization", 
+    "description": "Represents a group of people identified by shared interests or purpose. Because of the complex nature of many businesses, both organizations and organization units are represented by the same business entity in this model.", 
+    "type": "object", 
+    "properties": {
+        "existsDuring": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "Details the establishment of the organization and its cessation"
+        }, 
+        "href": {
+            "type": "string", 
+            "description": "Reference of the organization"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier for the organization"
+        }, 
+        "isLegalEntity": {
+            "type": "boolean", 
+            "description": "To tag if the organization is a legal entity known by a national referential"
+        }, 
+        "nameType": {
+            "type": "string", 
+            "description": "Co., Inc., Ltd., Pty Ltd., Plc., Gmbh."
+        }, 
+        "status": {
+            "type": "string", 
+            "description": "Status of the organization (initialized, validated, closed)"
+        }, 
+        "tradingName": {
+            "type": "string", 
+            "description": "The name that the organization (unit) trades under"
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Type of the organization (company...)"
+        }, 
+        "otherName": {
+            "$ref": "OtherName.schema.json/#OtherName"
+        }, 
+        "externalReference": {
+            "type": "array", 
+            "items": {
+                "$ref": "ExternalReference.schema.json/#ExternalReference"
+            }
+        }, 
+        "relatedParty": {
+            "type": "array", 
+            "items": {
+                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+            }
+        }, 
+        "parentRelationship": {
+            "$ref": "OrganizationParentRelationship.schema.json/#OrganizationParentRelationship"
+        }, 
+        "contactMedium": {
+            "type": "array", 
+            "items": {
+                "$ref": "ContactMedium.schema.json/#ContactMedium"
+            }
+        }, 
+        "characteristic": {
+            "type": "array", 
+            "items": {
+                "$ref": "Characteristic.schema.json/#Characteristic"
+            }
+        }, 
+        "childRelationship": {
+            "type": "array", 
+            "items": {
+                "$ref": "OrganizationChildRelationship.schema.json/#OrganizationChildRelationship"
+            }
+        }, 
+        "identification": {
+            "type": "array", 
+            "items": {
+                "$ref": "OrganizationIdentification.schema.json/#OrganizationIdentification"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

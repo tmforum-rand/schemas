@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "QualificationItemRelationship.schema.json", 
+    "title": "QualificationItemRelationship", 
+    "description": "Stucture used to describe relationship between productOfferingQualifcation item from the same ProductOfferingQualification.", 
+    "type": "object", 
+    "properties": {
+        "id": {
+            "type": "string", 
+            "description": "Id of the ProductOfferingQualificationItem (from the same ProductOfferingQualificationItem)."
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Type of relationship (ex: reliesOn, connectedTo, etc...)"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

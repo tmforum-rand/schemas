@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "AgreementSpecificationRef.schema.json", 
+    "title": "AgreementSpecificationRef", 
+    "description": "AgreementSpecification reference. An AgreementSpecification represents a template of an agreement that can be used when establishing partnerships.", 
+    "type": "object", 
+    "properties": {
+        "description": {
+            "type": "string", 
+            "description": "A narrative that explains in detail what the agreement specification is about."
+        }, 
+        "href": {
+            "type": "string", 
+            "description": "Reference URL of the agreement specification"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of the agreement specification"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "Name of the agreement specification"
+        }, 
+        "@referredType": {
+            "type": "string", 
+            "description": "The actual type of the target instance when needed for disambiguation."
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

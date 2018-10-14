@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ServiceCharacteristic.schema.json", 
+    "title": "ServiceCharacteristic", 
+    "description": "is a list of name value pairs that define the service characteristics", 
+    "type": "object", 
+    "properties": {
+        "name": {
+            "type": "string", 
+            "description": "Name of the characteristic"
+        }, 
+        "valueType": {
+            "type": "string", 
+            "description": "Value of the characteristic"
+        }, 
+        "value": {
+            "$ref": "Value.schema.json/#Value"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

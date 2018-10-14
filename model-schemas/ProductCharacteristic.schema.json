@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ProductCharacteristic.schema.json", 
+    "title": "ProductCharacteristic", 
+    "description": "Characteristics of the product to instantiate or to modify", 
+    "type": "object", 
+    "properties": {
+        "name": {
+            "type": "string", 
+            "description": "Name of the characteristic"
+        }, 
+        "value": {
+            "type": "string", 
+            "description": "Value of the characteristic"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

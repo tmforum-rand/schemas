@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "DocumentSpecification.schema.json", 
+    "title": "DocumentSpecification", 
+    "description": "A document specification reference", 
+    "type": "object", 
+    "properties": {
+        "href": {
+            "type": "string", 
+            "description": "The URI for the object itself."
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Indentifier of the DocumentSpecification"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "a String. Name of the DocumentSpecification"
+        }, 
+        "URL": {
+            "type": "string", 
+            "description": "URL of the Document Specification"
+        }, 
+        "version": {
+            "type": "string", 
+            "description": "A string, a version of the DocumentSpecification."
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

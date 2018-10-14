@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "PaymentPlan.schema.json", 
+    "title": "PaymentPlan", 
+    "description": "Defines a plan for payment (when a party wants to spread his payments)", 
+    "type": "object", 
+    "properties": {
+        "numberOfPayments": {
+            "type": "integer", 
+            "description": "Number of payments used to spread the global payment"
+        }, 
+        "paymentFrequency": {
+            "type": "string", 
+            "description": "Frequency of the payments, such as monthly and bimonthly"
+        }, 
+        "priority": {
+            "type": "integer", 
+            "description": "Priority of the payment plan"
+        }, 
+        "status": {
+            "type": "string", 
+            "description": "Status of the payment plan (effective, ineffective)"
+        }, 
+        "totalAmount": {
+            "$ref": "Money.schema.json/#Money", 
+            "description": "Amount paid"
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Type of payment plan"
+        }, 
+        "validFor": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "Validity period of the payment plan"
+        }, 
+        "paymentMethod": {
+            "$ref": "PaymentMethodRef.schema.json/#PaymentMethodRef"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "SLAViolation.schema.json", 
+    "title": "SLAViolation", 
+    "type": "object", 
+    "properties": {
+        "date": {
+            "type": "string", 
+            "format": "date-time"
+        }, 
+        "href": {
+            "type": "string"
+        }, 
+        "id": {
+            "type": "string"
+        }, 
+        "relatedParty": {
+            "type": "array", 
+            "items": {
+                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+            }
+        }, 
+        "violation": {
+            "$ref": "Violation.schema.json/#Violation"
+        }, 
+        "sla": {
+            "$ref": "SLARef.schema.json/#SLARef"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "BankAccountTransferMethod.schema.json", 
+    "title": "BankAccountTransferMethod", 
+    "type": "object", 
+    "properties": {
+        "details": {
+            "$ref": "BankAccountTransferDetails.schema.json/#BankAccountTransferDetails"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

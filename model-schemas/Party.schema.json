@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Party.schema.json", 
+    "title": "Party", 
+    "type": "object", 
+    "properties": {}, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "CartItem.schema.json", 
+    "title": "CartItem", 
+    "description": "An identified part of the shopping cart. A shopping cart  is decomposed into one or more shopping cart item. Cart item represents a product offering or bundled product offering that user wish to purchase, as well as the pricing of the product offering, reference to product in case of configured characteristic or installation address. Cart items can be related to other cart item to related bundled offerings or reference cart Items to a shipping options", 
+    "type": "object", 
+    "properties": {
+        "action": {
+            "type": "string", 
+            "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Identifier of the cart item (generally it is a sequence number 01, 02, 03, ...) in the shopping cart"
+        }, 
+        "quantity": {
+            "type": "integer", 
+            "description": "Quantity of cart items"
+        }, 
+        "status": {
+            "type": "string", 
+            "description": "status of cart item. e.g \"Active\" , \"SavedForLater\"."
+        }, 
+        "cartTerm": {
+            "type": "array", 
+            "items": {
+                "$ref": "CartTerm.schema.json/#CartTerm"
+            }
+        }, 
+        "cartItem": {
+            "type": "array", 
+            "items": {
+                "$ref": "CartItem.schema.json/#CartItem"
+            }
+        }, 
+        "note": {
+            "type": "array", 
+            "items": {
+                "$ref": "Note.schema.json/#Note"
+            }
+        }, 
+        "totalItemPrice": {
+            "type": "array", 
+            "items": {
+                "$ref": "CartPrice.schema.json/#CartPrice"
+            }
+        }, 
+        "product": {
+            "$ref": "Product.schema.json/#Product"
+        }, 
+        "itemPrice": {
+            "type": "array", 
+            "items": {
+                "$ref": "CartPrice.schema.json/#CartPrice"
+            }
+        }, 
+        "productOffering": {
+            "$ref": "ProductOfferingRef.schema.json/#ProductOfferingRef"
+        }, 
+        "cartItemRelationship": {
+            "type": "array", 
+            "items": {
+                "$ref": "CartItemRelationship.schema.json/#CartItemRelationship"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

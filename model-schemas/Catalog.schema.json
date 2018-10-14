@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Catalog.schema.json", 
+    "title": "Catalog", 
+    "description": "Is a collection of Product Offerings, intended for a specific DistributionChannel, enhanced with additional information such as SLA parameters, invoicing and shipping details.", 
+    "type": "object", 
+    "properties": {
+        "href": {
+            "type": "string", 
+            "description": "Unique reference of the catalog"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of the Catalog"
+        }, 
+        "lastUpdate": {
+            "type": "string", 
+            "format": "date-time", 
+            "description": "Date and time of the last update"
+        }, 
+        "lifecycleStatus": {
+            "type": "string", 
+            "description": "Used to indicate the current lifecycle status"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "Name of the catalog"
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Indicates if the catalog is a product, service or resource catalog"
+        }, 
+        "validFor": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "The period for which the catalog is valid"
+        }, 
+        "version": {
+            "type": "string", 
+            "description": "Catalog version"
+        }, 
+        "relatedParty": {
+            "type": "array", 
+            "items": {
+                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+            }
+        }, 
+        "category": {
+            "type": "array", 
+            "items": {
+                "$ref": "CategoryRef.schema.json/#CategoryRef"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

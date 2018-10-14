@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "PartyAccount.schema.json", 
+    "title": "PartyAccount", 
+    "description": "Account used for billing or for settlement purposes concerning a given party (an organization or an individual).", 
+    "type": "object", 
+    "properties": {
+        "paymentStatus": {
+            "type": "string", 
+            "description": "The condition of the account, such as due, paid, in arrears."
+        }, 
+        "billStructure": {
+            "$ref": "BillStructure.schema.json/#BillStructure"
+        }, 
+        "paymentPlan": {
+            "type": "array", 
+            "items": {
+                "$ref": "PaymentPlan.schema.json/#PaymentPlan"
+            }
+        }, 
+        "financialAccount": {
+            "$ref": "FinancialAccountRef.schema.json/#FinancialAccountRef"
+        }, 
+        "defaultPaymentMethod": {
+            "$ref": "PaymentMethodRef.schema.json/#PaymentMethodRef"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

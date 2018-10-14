@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "LocationCharacteristic.schema.json", 
+    "title": "LocationCharacteristic", 
+    "description": "Name/value pairs, used to extra characterized the Area (e.g. if a standard\ncode set has been defined for the GeographicArea type, etc.)", 
+    "type": "object", 
+    "properties": {
+        "name": {
+            "type": "string"
+        }, 
+        "value": {
+            "type": "string"
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

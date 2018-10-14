@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "CategoryRef.schema.json", 
+    "title": "CategoryRef", 
+    "description": "The category for grouping recommendations", 
+    "type": "object", 
+    "properties": {
+        "href": {
+            "type": "string", 
+            "description": "Hypertext Reference of the category"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of category"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "Name of the category."
+        }, 
+        "@referredType": {
+            "type": "string", 
+            "description": "The actual type of the target instance when needed for disambiguation."
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

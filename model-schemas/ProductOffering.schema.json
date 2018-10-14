@@ -1,0 +1,109 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ProductOffering.schema.json", 
+    "title": "ProductOffering", 
+    "description": "Represents entities that are orderable from the provider of the catalog, this resource includes pricing information.", 
+    "type": "object", 
+    "properties": {
+        "description": {
+            "type": "string", 
+            "description": "Description of the productOffering"
+        }, 
+        "href": {
+            "type": "string", 
+            "description": "Reference of the ProductOffering"
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of the productOffering"
+        }, 
+        "isBundle": {
+            "type": "boolean", 
+            "description": "isBundle determines whether a productOffering represents a single productOffering (false), or a bundle of productOfferings (true)."
+        }, 
+        "lastUpdate": {
+            "type": "string", 
+            "format": "date-time", 
+            "description": "Date and time of the last update"
+        }, 
+        "lifecycleStatus": {
+            "type": "string", 
+            "description": "Used to indicate the current lifecycle status"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "Name of the productOffering"
+        }, 
+        "statusReason": {
+            "type": "string", 
+            "description": "A string providing a complementary information on the value of the lifecycle status attribute."
+        }, 
+        "validFor": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "The period for which the productOffering is valid"
+        }, 
+        "version": {
+            "type": "string", 
+            "description": "ProductOffering version"
+        }, 
+        "place": {
+            "type": "array", 
+            "items": {
+                "$ref": "Place.schema.json/#Place"
+            }
+        }, 
+        "serviceLevelAgreement": {
+            "$ref": "SLARef.schema.json/#SLARef"
+        }, 
+        "productSpecification": {
+            "$ref": "ProductSpecificationRef.schema.json/#ProductSpecificationRef"
+        }, 
+        "channel": {
+            "type": "array", 
+            "items": {
+                "$ref": "Channel.schema.json/#Channel"
+            }
+        }, 
+        "serviceCandidate": {
+            "$ref": "ServiceCandidateRef.schema.json/#ServiceCandidateRef"
+        }, 
+        "category": {
+            "type": "array", 
+            "items": {
+                "$ref": "CategoryRef.schema.json/#CategoryRef"
+            }
+        }, 
+        "resourceCandidate": {
+            "$ref": "ResourceCandidateRef.schema.json/#ResourceCandidateRef"
+        }, 
+        "productOfferingTerm": {
+            "type": "array", 
+            "items": {
+                "$ref": "ProductOfferingTerm.schema.json/#ProductOfferingTerm"
+            }
+        }, 
+        "productOfferingPrice": {
+            "type": "array", 
+            "items": {
+                "$ref": "ProductOfferingPrice.schema.json/#ProductOfferingPrice"
+            }
+        }, 
+        "agreement": {
+            "type": "array", 
+            "items": {
+                "$ref": "AgreementRef.schema.json/#AgreementRef"
+            }
+        }, 
+        "bundledProductOffering": {
+            "type": "array", 
+            "items": {
+                "$ref": "BundledProductOffering.schema.json/#BundledProductOffering"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}

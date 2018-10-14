@@ -1,0 +1,64 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Recommendation.schema.json", 
+    "title": "Recommendation", 
+    "description": "Recommendation API is used to recommend offering quickly based on the history and real-time context of customer. It is a real-time and personalized recommendation API. It is usually provided by e-commerce or BSS, CRM system in omni-channel.", 
+    "type": "object", 
+    "properties": {
+        "description": {
+            "type": "string"
+        }, 
+        "href": {
+            "type": "string", 
+            "description": "Hypertext Reference of the recommendation."
+        }, 
+        "id": {
+            "type": "string", 
+            "description": "Unique identifier of recommendation"
+        }, 
+        "name": {
+            "type": "string", 
+            "description": "Name of recommendation"
+        }, 
+        "type": {
+            "type": "string", 
+            "description": "Type of recommendation.\nThe basic type is :\n\u00a1\u00aeAD\u00a1\u00af: it means the recommendation is the advertisement for display\n\u00a1\u00aeOFFER\u00a1\u00af: it means the recommended content is the offer entry page. By clicking it, the user can be forwarded to the details of the offering"
+        }, 
+        "validFor": {
+            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "description": "The period in which the recommendation is valid."
+        }, 
+        "order": {
+            "$ref": "ProductOrderRef.schema.json/#ProductOrderRef"
+        }, 
+        "location": {
+            "$ref": "GeographicLocationRef.schema.json/#GeographicLocationRef", 
+            "description": "The geographic location which the recommendation is related with"
+        }, 
+        "channel": {
+            "$ref": "ChannelRef.schema.json/#ChannelRef"
+        }, 
+        "category": {
+            "$ref": "CategoryRef.schema.json/#CategoryRef", 
+            "description": "The category for grouping recommendations"
+        }, 
+        "shoppingCart": {
+            "$ref": "ShoppingCartRef.schema.json/#ShoppingCartRef", 
+            "description": "The shopping cart which the recommendation is related with."
+        }, 
+        "party": {
+            "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+        }, 
+        "item": {
+            "type": "array", 
+            "items": {
+                "$ref": "RecommendationItem.schema.json/#RecommendationItem"
+            }
+        }
+    }, 
+    "allOf": [
+        {
+            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+        }
+    ]
+}
