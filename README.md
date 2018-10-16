@@ -10,7 +10,7 @@ These schemas all conform to the core definitions and terminology of [IETF Inter
     "title": "TMForumSchemaTemplate",
     "description": "Every Schema MUST have a short, concise description",
 ```
-* All properties within the schema MUST be **well defined**:
+* All definitions within the schema MUST be **well defined**:
   * With names in **[lowerCamelCase](https://en.wikipedia.org/wiki/Camel_case)**
   * Avoiding the use of acronyms, abbreviations and trailing-types (eg: information*URL*, description*String*)
   * They should have a `type`, an informative, concise `description` and at least one example value within the `examples` array.
@@ -62,7 +62,7 @@ This has been put together as a **JSON Schema template example**. Any new JSON-S
     "description": "Every Schema MUST have a short, concise description",
     "type": "object",
 
-    "properties": {
+    "definitions": {
         "attribute": {
             "type": "One of: {array|string|integer|enum|hostname|uri|...}",
             "description": "Every attribute MUST have a concise description, beyond 'this is the <> attribute'",
