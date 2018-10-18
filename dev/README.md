@@ -1,4 +1,4 @@
-# TM Forum JSON-Schema Repository
+# TM Forum JSON-Schema Design Guidelines
 This directory contains the collection of JSON Schema files that define the entities used within the [TM Forum Open-API Catalog](https://projects.tmforum.org/wiki/display/API/Open+API+Table). A description of JSON Schema itself can be found [here](http://json-schema.org), while the TM Forum Open-API topic (developer portal, manifesto, community, certification) can be found [here](https://www.tmforum.org/open-apis/).
 
 These schemas all conform to the core definitions and terminology of [IETF Internet-Draft Version 7](http://json-schema.org/draft-07/json-schema-core.html) (further development of the specification can be tracked [here](https://github.com/json-schema-org/). The TM Forum JSON Schema files all conform to a basic JSON Schema template, which encapsulates some high-level principles:
