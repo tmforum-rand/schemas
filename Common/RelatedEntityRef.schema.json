@@ -1,30 +1,35 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "RelatedEntityRef.schema.json", 
-    "title": "RelatedEntityRef", 
-    "description": "The related entity source of a KQI or KPI. A KQI draws its data from a number of sources, \nincluding Key Performance Indicators (KPIs).  A KPI provides a measurement of a specific aspect \nof the performance of a Service (whether it is a network- or a non-network-based Service) or a \ngroup of Services of the same type.", 
-    "type": "object", 
-    "properties": {
-        "herf": {
-            "type": "string", 
-            "description": "The hyperlink to access an entity."
-        }, 
-        "id": {
-            "type": "string", 
-            "description": "The identifier of an entity."
-        }, 
-        "name": {
-            "type": "string", 
-            "description": "The name of an entity."
-        }, 
-        "@referredType": {
-            "type": "string", 
-            "description": "The actual type of the target instance when needed for disambiguation."
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "RelatedEntityRef.schema.json",
+    "title": "RelatedEntityRef",
+    "definitions": {
+        "RelatedEntityRef": {
+            "description": "The related entity source of a KQI or KPI. A KQI draws its data from a number of sources, \nincluding Key Performance Indicators (KPIs).  A KPI provides a measurement of a specific aspect \nof the performance of a Service (whether it is a network- or a non-network-based Service) or a \ngroup of Services of the same type.",
+            "type": "object",
+            "properties": {
+                "herf": {
+                    "type": "string",
+                    "description": "The hyperlink to access an entity."
+                },
+                "id": {
+                    "type": "string",
+                    "description": "The identifier of an entity."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of an entity."
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    }, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }
+

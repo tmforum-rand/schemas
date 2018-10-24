@@ -1,13 +1,18 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "GeographicPlace.schema.json", 
-    "title": "GeographicPlace", 
-    "description": "Resource base is an abstract resource that does not support any uniform creation or operation. The following is only used for documentation purposes. The intent is to describe the common set of attributes shared by all concrete resources (e.g. TPE, EQUIPMENT) in the inventory.", 
-    "type": "object", 
-    "properties": {}, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GeographicPlace.schema.json",
+    "title": "GeographicPlace",
+    "definitions": {
+        "GeographicPlace": {
+            "description": "Resource base is an abstract resource that does not support any uniform creation or operation. The following is only used for documentation purposes. The intent is to describe the common set of attributes shared by all concrete resources (e.g. TPE, EQUIPMENT) in the inventory.",
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    ]
+    }
 }
+

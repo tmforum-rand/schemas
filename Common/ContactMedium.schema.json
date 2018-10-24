@@ -1,29 +1,34 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ContactMedium.schema.json", 
-    "title": "ContactMedium", 
-    "description": "Indicates the contact medium that could be used to contact the party.", 
-    "type": "object", 
-    "properties": {
-        "preferred": {
-            "type": "boolean", 
-            "description": "If true, indicates that is the preferred contact medium"
-        }, 
-        "type": {
-            "type": "string", 
-            "description": "Type of the contact medium, such as: email address, telephone number, postal address"
-        }, 
-        "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
-            "description": "The time period that the contact medium is valid for"
-        }, 
-        "characteristic": {
-            "$ref": "MediumCharacteristic.schema.json/#MediumCharacteristic"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ContactMedium.schema.json",
+    "title": "ContactMedium",
+    "definitions": {
+        "ContactMedium": {
+            "description": "Indicates the contact medium that could be used to contact the party.",
+            "type": "object",
+            "properties": {
+                "preferred": {
+                    "type": "boolean",
+                    "description": "If true, indicates that is the preferred contact medium"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type of the contact medium, such as: email address, telephone number, postal address"
+                },
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "description": "The time period that the contact medium is valid for"
+                },
+                "characteristic": {
+                    "$ref": "MediumCharacteristic.schema.json/#MediumCharacteristic"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    }, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }
+

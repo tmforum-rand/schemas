@@ -1,36 +1,41 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "RetrieveGeographicLocation.schema.json", 
-    "title": "RetrieveGeographicLocation", 
-    "type": "object", 
-    "properties": {
-        "href": {
-            "type": "string"
-        }, 
-        "id": {
-            "type": "string"
-        }, 
-        "requestedAccuracy": {
-            "type": "number", 
-            "format": "float"
-        }, 
-        "status": {
-            "type": "string"
-        }, 
-        "time": {
-            "type": "string", 
-            "format": "date-time"
-        }, 
-        "geographicLocation": {
-            "$ref": "GeographicLocation.schema.json/#GeographicLocation"
-        }, 
-        "thing": {
-            "$ref": "Object.schema.json/#Object"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "RetrieveGeographicLocation.schema.json",
+    "title": "RetrieveGeographicLocation",
+    "definitions": {
+        "RetrieveGeographicLocation": {
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "requestedAccuracy": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "geographicLocation": {
+                    "$ref": "GeographicLocation.schema.json/#GeographicLocation"
+                },
+                "thing": {
+                    "$ref": "Object.schema.json/#Object"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    }, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }
+

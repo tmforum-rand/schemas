@@ -1,20 +1,25 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "Quantity.schema.json", 
-    "title": "Quantity", 
-    "type": "object", 
-    "properties": {
-        "amount": {
-            "type": "number", 
-            "format": "float"
-        }, 
-        "units": {
-            "type": "string"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Quantity.schema.json",
+    "title": "Quantity",
+    "definitions": {
+        "Quantity": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "units": {
+                    "type": "string"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    }, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }
+

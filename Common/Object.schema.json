@@ -1,19 +1,24 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "Object.schema.json", 
-    "title": "Object", 
-    "type": "object", 
-    "properties": {
-        "type": {
-            "type": "string"
-        }, 
-        "uri": {
-            "type": "string"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Object.schema.json",
+    "title": "Object",
+    "definitions": {
+        "Object": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "uri": {
+                    "type": "string"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    }, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }
+

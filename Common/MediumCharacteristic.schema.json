@@ -1,54 +1,59 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "MediumCharacteristic.schema.json", 
-    "title": "MediumCharacteristic", 
-    "description": "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)", 
-    "type": "object", 
-    "properties": {
-        "city": {
-            "type": "string", 
-            "description": "The city"
-        }, 
-        "country": {
-            "type": "string", 
-            "description": "The country"
-        }, 
-        "emailAddress": {
-            "type": "string", 
-            "description": "Full email address in standard format"
-        }, 
-        "faxNumber": {
-            "type": "string", 
-            "description": "The fax number of the contact"
-        }, 
-        "phoneNumber": {
-            "type": "string", 
-            "description": "The primary phone number of the contact"
-        }, 
-        "postCode": {
-            "type": "string", 
-            "description": "Postcode"
-        }, 
-        "stateOrProvince": {
-            "type": "string", 
-            "description": "State or province"
-        }, 
-        "street1": {
-            "type": "string", 
-            "description": "Describes the street"
-        }, 
-        "street2": {
-            "type": "string", 
-            "description": "Complementary street description"
-        }, 
-        "type": {
-            "type": "string", 
-            "description": "Type of medium (fax, mobile phone...)"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "MediumCharacteristic.schema.json",
+    "title": "MediumCharacteristic",
+    "definitions": {
+        "MediumCharacteristic": {
+            "description": "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)",
+            "type": "object",
+            "properties": {
+                "city": {
+                    "type": "string",
+                    "description": "The city"
+                },
+                "country": {
+                    "type": "string",
+                    "description": "The country"
+                },
+                "emailAddress": {
+                    "type": "string",
+                    "description": "Full email address in standard format"
+                },
+                "faxNumber": {
+                    "type": "string",
+                    "description": "The fax number of the contact"
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "description": "The primary phone number of the contact"
+                },
+                "postCode": {
+                    "type": "string",
+                    "description": "Postcode"
+                },
+                "stateOrProvince": {
+                    "type": "string",
+                    "description": "State or province"
+                },
+                "street1": {
+                    "type": "string",
+                    "description": "Describes the street"
+                },
+                "street2": {
+                    "type": "string",
+                    "description": "Complementary street description"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type of medium (fax, mobile phone...)"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    }, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }
+

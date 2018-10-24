@@ -1,12 +1,17 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "AlternateGeographicAddress.schema.json", 
-    "title": "AlternateGeographicAddress", 
-    "type": "object", 
-    "properties": {}, 
-    "allOf": [
-        {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "AlternateGeographicAddress.schema.json",
+    "title": "AlternateGeographicAddress",
+    "definitions": {
+        "AlternateGeographicAddress": {
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                }
+            ]
         }
-    ]
+    }
 }
+
