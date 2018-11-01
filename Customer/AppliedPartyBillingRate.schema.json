@@ -1,13 +1,13 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "AppliedPartyBillingRate.schema.json", 
-    "title": "AppliedPartyBillingRate", 
-    "description": "An applied billing rate presented on a party bill. It is created before or during the billing process.", 
-    "type": "object", 
-    "properties": {}, 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "AppliedPartyBillingRate.schema.json",
+    "title": "AppliedPartyBillingRate",
+    "description": "An applied billing rate presented on a party bill. It is created before or during the billing process.",
+    "type": "object",
+    "properties": {},
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

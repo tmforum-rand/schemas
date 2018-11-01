@@ -1,19 +1,19 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "OrderItemRelationship.schema.json", 
-    "title": "OrderItemRelationship", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "OrderItemRelationship.schema.json",
+    "title": "OrderItemRelationship",
+    "type": "object",
     "properties": {
         "id": {
             "type": "string"
-        }, 
+        },
         "type": {
             "type": "string"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

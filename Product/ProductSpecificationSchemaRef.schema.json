@@ -1,18 +1,18 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ProductSpecificationSchemaRef.schema.json", 
-    "title": "ProductSpecificationSchemaRef", 
-    "description": "ProductSpecification description could be done with schema use. This information allows to retrieve schema type and location", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductSpecificationSchemaRef.schema.json",
+    "title": "ProductSpecificationSchemaRef",
+    "description": "ProductSpecification description could be done with schema use. This information allows to retrieve schema type and location",
+    "type": "object",
     "properties": {
         "@referredType": {
-            "type": "string", 
+            "type": "string",
             "description": "The actual type of the target instance when needed for disambiguation."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

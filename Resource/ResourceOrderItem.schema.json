@@ -1,39 +1,39 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ResourceOrderItem.schema.json", 
-    "title": "ResourceOrderItem", 
-    "description": "An identified part of the order. A resource order is decomposed into one or more order items.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ResourceOrderItem.schema.json",
+    "title": "ResourceOrderItem",
+    "description": "An identified part of the order. A resource order is decomposed into one or more order items.",
+    "type": "object",
     "properties": {
         "action": {
-            "type": "string", 
+            "type": "string",
             "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Identifier of the line item (generally it is a sequence number 01, 02, 03, ...)"
-        }, 
+        },
         "quantity": {
-            "type": "integer", 
+            "type": "integer",
             "description": "Quantity ordered"
-        }, 
+        },
         "state": {
-            "type": "string", 
+            "type": "string",
             "description": "State of the order item : described in the state machine diagram"
-        }, 
+        },
         "resourceSpecification": {
-            "$ref": "ResourceSpecificationRef.schema.json/#ResourceSpecificationRef"
-        }, 
+            "$ref": "ResourceSpecificationRef.schema.json/#definitions/ResourceSpecificationRef"
+        },
         "orderItemRelationship": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ResourceOrderItemRelationship.schema.json/#ResourceOrderItemRelationship"
+                "$ref": "ResourceOrderItemRelationship.schema.json/#definitions/ResourceOrderItemRelationship"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

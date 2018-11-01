@@ -1,12 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "CustomerBill.schema.json", 
-    "title": "CustomerBill", 
-    "type": "object", 
-    "properties": {}, 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "CustomerBill.schema.json",
+    "title": "CustomerBill",
+    "type": "object",
+    "properties": {},
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

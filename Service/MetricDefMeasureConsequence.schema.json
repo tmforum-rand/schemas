@@ -1,34 +1,34 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "MetricDefMeasureConsequence.schema.json", 
-    "title": "MetricDefMeasureConsequence", 
-    "description": "A MetricDefMeasureConsequence defines the action (prescribed action or notification) to take when a \nMetricDefMeasureThresholdRule is crossed.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "MetricDefMeasureConsequence.schema.json",
+    "title": "MetricDefMeasureConsequence",
+    "description": "A MetricDefMeasureConsequence defines the action (prescribed action or notification) to take when a \nMetricDefMeasureThresholdRule is crossed.",
+    "type": "object",
     "properties": {
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "A narrative that explains in detail what the consequence is."
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "A word, term, or phrase by which a \nMetricDefMeasureConsequence is known and distinguished from other MetricDefMeasureConsequences."
-        }, 
+        },
         "prescribeAction": {
-            "type": "string", 
+            "type": "string",
             "description": "Recommended remedy for a violated threshold. This could be \nthe hyperlink to the action."
-        }, 
+        },
         "repeatAction": {
-            "type": "string", 
-            "description": "An indicator use to specify that a consequence should cease \nbeing applied if a value is in the same range as the previous value  or continue being applied if a value is in the same range as the previous value.   \nIf the repeatAcation is True, if the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatAcation is False, the consequence is applied only if the previous MetricMeasure value wasn\u00a1\u00aft in the same range."
-        }, 
+            "type": "string",
+            "description": "An indicator use to specify that a consequence should cease \nbeing applied if a value is in the same range as the previous value  or continue being applied if a value is in the same range as the previous value.   \nIf the repeatAcation is True, if the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatAcation is False, the consequence is applied only if the previous MetricMeasure value wasn¡¯t in the same range."
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "A valid duration of a thing."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

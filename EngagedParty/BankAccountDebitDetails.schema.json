@@ -1,34 +1,34 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "BankAccountDebitDetails.schema.json", 
-    "title": "BankAccountDebitDetails", 
-    "description": "Detailed information for a bank account debit. Bear in mind that this could be extended to add any required authorization fields to allow recurring payments", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BankAccountDebitDetails.schema.json",
+    "title": "BankAccountDebitDetails",
+    "description": "Detailed information for a bank account debit. Bear in mind that this could be extended to add any required authorization fields to allow recurring payments",
+    "type": "object",
     "properties": {
         "accountNumber": {
-            "type": "integer", 
+            "type": "integer",
             "description": "Bank Account Number (this could refer to the IBAN or SWIFT number)"
-        }, 
+        },
         "accountNumberType": {
-            "type": "string", 
+            "type": "string",
             "description": "Type of account number (e.g.: IBAN, SWIFT, ...)"
-        }, 
+        },
         "BIC": {
-            "type": "string", 
+            "type": "string",
             "description": "Business Identifier Code/Swift code of the financial institution where the account is located"
-        }, 
+        },
         "blank": {
-            "type": "string", 
+            "type": "string",
             "description": "Display name of the bank"
-        }, 
+        },
         "owner": {
-            "type": "string", 
+            "type": "string",
             "description": "Owner of the bank account"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

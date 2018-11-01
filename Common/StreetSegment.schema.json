@@ -28,7 +28,7 @@
                     "description": "the first street number suffix"
                 },
                 "address": {
-                    "$ref": "AddressRef.schema.json/#AddressRef"
+                    "$ref": "AddressRef.schema.json/#definitions/AddressRef"
                 }
             },
             "allOf": [
@@ -39,4 +39,3 @@
         }
     }
 }
-

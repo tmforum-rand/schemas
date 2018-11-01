@@ -24,7 +24,7 @@
                     "description": "Type of relationship such as aggregation, migration, substitution, dependency, exclusivity"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "The period for which the SpecCharRelationship is valid"
                 }
             },
@@ -36,4 +36,3 @@
         }
     }
 }
-

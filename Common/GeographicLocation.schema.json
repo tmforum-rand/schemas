@@ -32,7 +32,7 @@
                 "geometry": {
                     "type": "array",
                     "items": {
-                        "$ref": "GeographicPoint.schema.json/#GeographicPoint"
+                        "$ref": "GeographicPoint.schema.json/#definitions/GeographicPoint"
                     }
                 }
             },
@@ -44,4 +44,3 @@
         }
     }
 }
-

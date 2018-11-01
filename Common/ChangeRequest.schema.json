@@ -101,12 +101,12 @@
                 "attachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "Attachment.schema.json/#Attachment"
+                        "$ref": "Attachment.schema.json/#definitions/Attachment"
                     },
                     "description": "The attachments of the communication message (when it is email type)."
                 },
                 "workLog": {
-                    "$ref": "WorkLog.schema.json/#WorkLog"
+                    "$ref": "WorkLog.schema.json/#definitions/WorkLog"
                 },
                 "incident": {
                     "type": "array",
@@ -115,62 +115,62 @@
                     }
                 },
                 "changeRequestSpecification": {
-                    "$ref": "ChangeRequestSpecification.schema.json/#ChangeRequestSpecification"
+                    "$ref": "ChangeRequestSpecification.schema.json/#definitions/ChangeRequestSpecification"
                 },
                 "impactEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "ImpactEntityRef.schema.json/#ImpactEntityRef"
+                        "$ref": "ImpactEntityRef.schema.json/#definitions/ImpactEntityRef"
                     }
                 },
                 "changeRequestCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "ChangeRequestCharacteristic.schema.json/#ChangeRequestCharacteristic"
+                        "$ref": "ChangeRequestCharacteristic.schema.json/#definitions/ChangeRequestCharacteristic"
                     }
                 },
                 "targetEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "TargetEntityRef.schema.json/#TargetEntityRef"
+                        "$ref": "TargetEntityRef.schema.json/#definitions/TargetEntityRef"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
                     },
                     "description": "The parties involved by the change request"
                 },
                 "resolution": {
-                    "$ref": "Resolution.schema.json/#Resolution"
+                    "$ref": "Resolution.schema.json/#definitions/Resolution"
                 },
                 "sla": {
                     "type": "array",
                     "items": {
-                        "$ref": "SLARef.schema.json/#SLARef"
+                        "$ref": "../EngagedParty/SLARef.schema.json/#definitions/SLARef"
                     }
                 },
                 "relateChangeRequest": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedChangeRequestRef.schema.json/#RelatedChangeRequestRef"
+                        "$ref": "RelatedChangeRequestRef.schema.json/#definitions/RelatedChangeRequestRef"
                     }
                 },
                 "category": {
                     "type": "array",
                     "items": {
-                        "$ref": "CategoryRef.schema.json/#CategoryRef"
+                        "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef"
                     }
                 },
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "Note.schema.json/#Note"
+                        "$ref": "Note.schema.json/#definitions/Note"
                     }
                 },
                 "location": {
-                    "$ref": "GeographicAddressRef.schema.json/#GeographicAddressRef",
+                    "$ref": "GeographicAddressRef.schema.json/#definitions/GeographicAddressRef",
                     "description": "The place at which the change request occurred."
                 }
             },
@@ -182,4 +182,3 @@
         }
     }
 }
-

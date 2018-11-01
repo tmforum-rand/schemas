@@ -1,51 +1,51 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ShoppingCart.schema.json", 
-    "title": "ShoppingCart", 
-    "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ShoppingCart.schema.json",
+    "title": "ShoppingCart",
+    "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions",
+    "type": "object",
     "properties": {
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Hyperlink to access the shopping cart"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier created on provider side (e.g. Order Capture system)"
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "The period for which the shopping cart is valid (e.g. 90 if no activity or 7 days if cart is empty)"
-        }, 
+        },
         "contactMedium": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ContactMedium.schema.json/#ContactMedium"
+                "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
             }
-        }, 
+        },
         "cartTotalPrice": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "CartPrice.schema.json/#CartPrice"
-            }, 
+                "$ref": "CartPrice.schema.json/#definitions/CartPrice"
+            },
             "description": "Total amount of the shopping cart, usually of money, that represents the actual price paid by the Customer for cart (considering only \"Active\" cart items)"
-        }, 
+        },
         "cartItem": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "CartItem.schema.json/#CartItem"
+                "$ref": "CartItem.schema.json/#definitions/CartItem"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

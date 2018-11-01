@@ -22,7 +22,7 @@
                 "usageSpecCharacteristicValue": {
                     "type": "array",
                     "items": {
-                        "$ref": "UsageSpecCharacteristicValue.schema.json/#UsageSpecCharacteristicValue"
+                        "$ref": "UsageSpecCharacteristicValue.schema.json/#definitions/UsageSpecCharacteristicValue"
                     }
                 }
             },
@@ -34,4 +34,3 @@
         }
     }
 }
-

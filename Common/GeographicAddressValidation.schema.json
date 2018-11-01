@@ -33,12 +33,12 @@
                     "description": "Result of the address validation (success, partial, fail)"
                 },
                 "validAddress": {
-                    "$ref": "GeographicAddress.schema.json/#GeographicAddress"
+                    "$ref": "GeographicAddress.schema.json/#definitions/GeographicAddress"
                 },
                 "alternateGeographicAddress": {
                     "type": "array",
                     "items": {
-                        "$ref": "AlternateGeographicAddress.schema.json/#AlternateGeographicAddress"
+                        "$ref": "AlternateGeographicAddress.schema.json/#definitions/AlternateGeographicAddress"
                     }
                 }
             },
@@ -50,4 +50,3 @@
         }
     }
 }
-

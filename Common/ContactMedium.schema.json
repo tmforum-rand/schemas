@@ -16,11 +16,11 @@
                     "description": "Type of the contact medium, such as: email address, telephone number, postal address"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "The time period that the contact medium is valid for"
                 },
                 "characteristic": {
-                    "$ref": "MediumCharacteristic.schema.json/#MediumCharacteristic"
+                    "$ref": "MediumCharacteristic.schema.json/#definitions/MediumCharacteristic"
                 }
             },
             "allOf": [
@@ -31,4 +31,3 @@
         }
     }
 }
-

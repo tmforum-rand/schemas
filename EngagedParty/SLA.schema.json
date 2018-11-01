@@ -1,64 +1,64 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "SLA.schema.json", 
-    "title": "SLA", 
-    "description": "Part of a business agreement between a Service Provider and a Customer, quantitatively specifying the service performance level the Service Provider commits to deliver.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "SLA.schema.json",
+    "title": "SLA",
+    "description": "Part of a business agreement between a Service Provider and a Customer, quantitatively specifying the service performance level the Service Provider commits to deliver.",
+    "type": "object",
     "properties": {
         "approvalDate": {
-            "type": "string", 
+            "type": "string",
             "format": "date-time"
-        }, 
+        },
         "approved": {
             "type": "boolean"
-        }, 
+        },
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "Description of the Service Level Agreement (SLA)"
-        }, 
+        },
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the Service Level Agreement (SLA)"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of the Service Level Agreement (SLA)"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the Service Level Agreement (SLA)"
-        }, 
+        },
         "state": {
-            "type": "string", 
+            "type": "string",
             "description": "State of the Service Level Agreement (SLA)"
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "Period where the clauses of the SLA are applicable"
-        }, 
+        },
         "version": {
-            "type": "string", 
+            "type": "string",
             "description": "Version of the Service Level Agreement (SLA)"
-        }, 
+        },
         "rule": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Rule.schema.json/#Rule"
+                "$ref": "Rule.schema.json/#definitions/Rule"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "template": {
-            "$ref": "TemplateRef.schema.json/#TemplateRef"
+            "$ref": "TemplateRef.schema.json/#definitions/TemplateRef"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

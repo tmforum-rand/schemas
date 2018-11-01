@@ -22,13 +22,13 @@
                 "characteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "LocationCharacteristic.schema.json/#LocationCharacteristic"
+                        "$ref": "LocationCharacteristic.schema.json/#definitions/LocationCharacteristic"
                     }
                 },
                 "address": {
                     "type": "array",
                     "items": {
-                        "$ref": "AddressRef.schema.json/#AddressRef"
+                        "$ref": "AddressRef.schema.json/#definitions/AddressRef"
                     }
                 }
             },
@@ -40,4 +40,3 @@
         }
     }
 }
-

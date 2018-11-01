@@ -21,7 +21,7 @@
                 "hourPeriod": {
                     "type": "array",
                     "items": {
-                        "$ref": "HourPeriod.schema.json/#HourPeriod"
+                        "$ref": "HourPeriod.schema.json/#definitions/HourPeriod"
                     }
                 }
             },
@@ -33,4 +33,3 @@
         }
     }
 }
-

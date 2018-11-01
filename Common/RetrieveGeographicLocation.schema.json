@@ -24,10 +24,10 @@
                     "format": "date-time"
                 },
                 "geographicLocation": {
-                    "$ref": "GeographicLocation.schema.json/#GeographicLocation"
+                    "$ref": "GeographicLocation.schema.json/#definitions/GeographicLocation"
                 },
                 "thing": {
-                    "$ref": "Object.schema.json/#Object"
+                    "$ref": "Object.schema.json/#definitions/Object"
                 }
             },
             "allOf": [
@@ -38,4 +38,3 @@
         }
     }
 }
-

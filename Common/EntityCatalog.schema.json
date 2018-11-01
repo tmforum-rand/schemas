@@ -33,7 +33,7 @@
                     "description": "Name of the catalog"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "The period for which the catalog is valid"
                 },
                 "version": {
@@ -49,4 +49,3 @@
         }
     }
 }
-

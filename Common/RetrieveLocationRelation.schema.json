@@ -25,11 +25,11 @@
                 "intersection": {
                     "type": "array",
                     "items": {
-                        "$ref": "GeographicLocation.schema.json/#GeographicLocation"
+                        "$ref": "GeographicLocation.schema.json/#definitions/GeographicLocation"
                     }
                 },
                 "location": {
-                    "$ref": "GeographicLocationRef.schema.json/#GeographicLocationRef"
+                    "$ref": "GeographicLocationRef.schema.json/#definitions/GeographicLocationRef"
                 }
             },
             "allOf": [
@@ -40,4 +40,3 @@
         }
     }
 }
-

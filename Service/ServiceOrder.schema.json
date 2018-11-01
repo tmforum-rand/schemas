@@ -1,85 +1,85 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ServiceOrder.schema.json", 
-    "title": "ServiceOrder", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceOrder.schema.json",
+    "title": "ServiceOrder",
+    "type": "object",
     "properties": {
         "category": {
             "type": "string"
-        }, 
+        },
         "completionDate": {
-            "type": "string", 
+            "type": "string",
             "format": "date-time"
-        }, 
+        },
         "description": {
             "type": "string"
-        }, 
+        },
         "expectedCompletionDate": {
-            "type": "string", 
+            "type": "string",
             "format": "date-time"
-        }, 
+        },
         "externalId": {
             "type": "string"
-        }, 
+        },
         "href": {
             "type": "string"
-        }, 
+        },
         "id": {
             "type": "string"
-        }, 
+        },
         "notificationContact": {
             "type": "string"
-        }, 
+        },
         "orderDate": {
-            "type": "string", 
+            "type": "string",
             "format": "date-time"
-        }, 
+        },
         "priority": {
             "type": "string"
-        }, 
+        },
         "requestedCompletionDate": {
-            "type": "string", 
+            "type": "string",
             "format": "date-time"
-        }, 
+        },
         "requestedStartDate": {
-            "type": "string", 
+            "type": "string",
             "format": "date-time"
-        }, 
+        },
         "startDate": {
-            "type": "string", 
+            "type": "string",
             "format": "date-time"
-        }, 
+        },
         "state": {
             "type": "string"
-        }, 
+        },
         "note": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Note.schema.json/#Note"
+                "$ref": "../Common/Note.schema.json/#definitions/Note"
             }
-        }, 
+        },
         "orderItem": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ServiceOrderItem.schema.json/#ServiceOrderItem"
+                "$ref": "ServiceOrderItem.schema.json/#definitions/ServiceOrderItem"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "orderRelationship": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrderRelationship.schema.json/#OrderRelationship"
+                "$ref": "../Customer/OrderRelationship.schema.json/#definitions/OrderRelationship"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

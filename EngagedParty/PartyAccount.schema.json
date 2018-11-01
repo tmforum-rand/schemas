@@ -1,33 +1,33 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "PartyAccount.schema.json", 
-    "title": "PartyAccount", 
-    "description": "Account used for billing or for settlement purposes concerning a given party (an organization or an individual).", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "PartyAccount.schema.json",
+    "title": "PartyAccount",
+    "description": "Account used for billing or for settlement purposes concerning a given party (an organization or an individual).",
+    "type": "object",
     "properties": {
         "paymentStatus": {
-            "type": "string", 
+            "type": "string",
             "description": "The condition of the account, such as due, paid, in arrears."
-        }, 
+        },
         "billStructure": {
-            "$ref": "BillStructure.schema.json/#BillStructure"
-        }, 
+            "$ref": "../Customer/BillStructure.schema.json/#definitions/BillStructure"
+        },
         "paymentPlan": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "PaymentPlan.schema.json/#PaymentPlan"
+                "$ref": "PaymentPlan.schema.json/#definitions/PaymentPlan"
             }
-        }, 
+        },
         "financialAccount": {
-            "$ref": "FinancialAccountRef.schema.json/#FinancialAccountRef"
-        }, 
+            "$ref": "FinancialAccountRef.schema.json/#definitions/FinancialAccountRef"
+        },
         "defaultPaymentMethod": {
-            "$ref": "PaymentMethodRef.schema.json/#PaymentMethodRef"
+            "$ref": "PaymentMethodRef.schema.json/#definitions/PaymentMethodRef"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

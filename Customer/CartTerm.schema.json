@@ -1,22 +1,22 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "CartTerm.schema.json", 
-    "title": "CartTerm", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "CartTerm.schema.json",
+    "title": "CartTerm",
+    "type": "object",
     "properties": {
         "description": {
             "type": "string"
-        }, 
+        },
         "duration": {
-            "$ref": "Quantity.schema.json/#Quantity"
-        }, 
+            "$ref": "../Common/Quantity.schema.json/#definitions/Quantity"
+        },
         "name": {
             "type": "string"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

@@ -23,7 +23,7 @@
                     "description": "Type of relationship"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "Validity for the relationship"
                 }
             },
@@ -35,4 +35,3 @@
         }
     }
 }
-

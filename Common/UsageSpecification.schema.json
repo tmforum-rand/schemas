@@ -24,13 +24,13 @@
                     "description": "The name of the usage specification."
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "The period for which the usage specification is valid"
                 },
                 "usageSpecCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "UsageSpecCharacteristic.schema.json/#UsageSpecCharacteristic"
+                        "$ref": "UsageSpecCharacteristic.schema.json/#definitions/UsageSpecCharacteristic"
                     }
                 }
             },
@@ -42,4 +42,3 @@
         }
     }
 }
-

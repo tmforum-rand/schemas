@@ -12,7 +12,7 @@
                     "description": "a string, Type of relationship: e.g \"related\""
                 },
                 "documentRef": {
-                    "$ref": "DocumentRef.schema.json/#DocumentRef"
+                    "$ref": "DocumentRef.schema.json/#definitions/DocumentRef"
                 }
             },
             "allOf": [
@@ -23,4 +23,3 @@
         }
     }
 }
-

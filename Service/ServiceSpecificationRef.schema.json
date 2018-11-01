@@ -1,37 +1,37 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ServiceSpecificationRef.schema.json", 
-    "title": "ServiceSpecificationRef", 
-    "description": "Service specification reference: ServiceSpecification(s) required to realize a ProductSpecification.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceSpecificationRef.schema.json",
+    "title": "ServiceSpecificationRef",
+    "description": "Service specification reference: ServiceSpecification(s) required to realize a ProductSpecification.",
+    "type": "object",
     "properties": {
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the serviceSpecification"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of the service specification"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the requiredServiceSpecification"
-        }, 
+        },
         "version": {
-            "type": "string", 
+            "type": "string",
             "description": "Service specification version"
-        }, 
+        },
         "targetServiceSchema": {
-            "$ref": "TargetServiceSchema.schema.json/#TargetServiceSchema"
-        }, 
+            "$ref": "TargetServiceSchema.schema.json/#definitions/TargetServiceSchema"
+        },
         "@referredType": {
-            "type": "string", 
+            "type": "string",
             "description": "The actual type of the target instance when needed for disambiguation."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

@@ -41,7 +41,7 @@
                     "description": "Unique identifier of the parent category"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "The period for which the category is valid"
                 },
                 "version": {
@@ -57,4 +57,3 @@
         }
     }
 }
-

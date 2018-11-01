@@ -1,88 +1,88 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "Organization.schema.json", 
-    "title": "Organization", 
-    "description": "Represents a group of people identified by shared interests or purpose. Because of the complex nature of many businesses, both organizations and organization units are represented by the same business entity in this model.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Organization.schema.json",
+    "title": "Organization",
+    "description": "Represents a group of people identified by shared interests or purpose. Because of the complex nature of many businesses, both organizations and organization units are represented by the same business entity in this model.",
+    "type": "object",
     "properties": {
         "existsDuring": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "Details the establishment of the organization and its cessation"
-        }, 
+        },
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the organization"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier for the organization"
-        }, 
+        },
         "isLegalEntity": {
-            "type": "boolean", 
+            "type": "boolean",
             "description": "To tag if the organization is a legal entity known by a national referential"
-        }, 
+        },
         "nameType": {
-            "type": "string", 
+            "type": "string",
             "description": "Co., Inc., Ltd., Pty Ltd., Plc., Gmbh."
-        }, 
+        },
         "status": {
-            "type": "string", 
+            "type": "string",
             "description": "Status of the organization (initialized, validated, closed)"
-        }, 
+        },
         "tradingName": {
-            "type": "string", 
+            "type": "string",
             "description": "The name that the organization (unit) trades under"
-        }, 
+        },
         "type": {
-            "type": "string", 
+            "type": "string",
             "description": "Type of the organization (company...)"
-        }, 
+        },
         "otherName": {
-            "$ref": "OtherName.schema.json/#OtherName"
-        }, 
+            "$ref": "OtherName.schema.json/#definitions/OtherName"
+        },
         "externalReference": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ExternalReference.schema.json/#ExternalReference"
+                "$ref": "../Common/ExternalReference.schema.json/#definitions/ExternalReference"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "parentRelationship": {
-            "$ref": "OrganizationParentRelationship.schema.json/#OrganizationParentRelationship"
-        }, 
+            "$ref": "OrganizationParentRelationship.schema.json/#definitions/OrganizationParentRelationship"
+        },
         "contactMedium": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ContactMedium.schema.json/#ContactMedium"
+                "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
             }
-        }, 
+        },
         "characteristic": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Characteristic.schema.json/#Characteristic"
+                "$ref": "../Common/Characteristic.schema.json/#definitions/Characteristic"
             }
-        }, 
+        },
         "childRelationship": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrganizationChildRelationship.schema.json/#OrganizationChildRelationship"
+                "$ref": "OrganizationChildRelationship.schema.json/#definitions/OrganizationChildRelationship"
             }
-        }, 
+        },
         "identification": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrganizationIdentification.schema.json/#OrganizationIdentification"
+                "$ref": "OrganizationIdentification.schema.json/#definitions/OrganizationIdentification"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

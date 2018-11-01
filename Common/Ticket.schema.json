@@ -66,19 +66,19 @@
                 "relatedObject": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedObject.schema.json/#RelatedObject"
+                        "$ref": "RelatedObject.schema.json/#definitions/RelatedObject"
                     }
                 },
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "Note.schema.json/#Note"
+                        "$ref": "Note.schema.json/#definitions/Note"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
                     }
                 }
             },
@@ -90,4 +90,3 @@
         }
     }
 }
-

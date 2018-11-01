@@ -1,69 +1,69 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ProductOfferingQualificationItem.schema.json", 
-    "title": "ProductOfferingQualificationItem", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductOfferingQualificationItem.schema.json",
+    "title": "ProductOfferingQualificationItem",
+    "type": "object",
     "properties": {
         "expectedActivationDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date when the requester look for productOfferingQualification activation"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Id of the productOfferingQualification item"
-        }, 
+        },
         "qualificationItemResult": {
-            "type": "string", 
+            "type": "string",
             "description": "Qualification result for this productOfferingQualification item. It could be:\n\n qualified (request productOffering or productSpecification are available), \n unqualified (requested not available and not alternate available),\n alternate (requested not available but proposal available)\n"
-        }, 
+        },
         "state": {
-            "type": "string", 
+            "type": "string",
             "description": "State of the productOfferingQualification item (acknowledged, inProgress, terminatedWithError, done)"
-        }, 
+        },
         "eligibilityUnavailabilityReason": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "EligibilityUnavailabilityReason.schema.json/#EligibilityUnavailabilityReason"
+                "$ref": "../Customer/EligibilityUnavailabilityReason.schema.json/#definitions/EligibilityUnavailabilityReason"
             }
-        }, 
+        },
         "category": {
-            "$ref": "CategoryRef.schema.json/#CategoryRef"
-        }, 
+            "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef"
+        },
         "qualificationItemRelationship": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "QualificationItemRelationship.schema.json/#QualificationItemRelationship"
+                "$ref": "../Service/QualificationItemRelationship.schema.json/#definitions/QualificationItemRelationship"
             }
-        }, 
+        },
         "note": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Note.schema.json/#Note"
+                "$ref": "../Common/Note.schema.json/#definitions/Note"
             }
-        }, 
+        },
         "product": {
-            "$ref": "Product.schema.json/#Product"
-        }, 
+            "$ref": "Product.schema.json/#definitions/Product"
+        },
         "terminationError": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "TerminationError.schema.json/#TerminationError"
+                "$ref": "../Customer/TerminationError.schema.json/#definitions/TerminationError"
             }
-        }, 
+        },
         "productOffering": {
-            "$ref": "ProductOfferingRef.schema.json/#ProductOfferingRef"
-        }, 
+            "$ref": "ProductOfferingRef.schema.json/#definitions/ProductOfferingRef"
+        },
         "alternateProductOfferingProposal": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "AlternateProductOfferingProposal.schema.json/#AlternateProductOfferingProposal"
+                "$ref": "AlternateProductOfferingProposal.schema.json/#definitions/AlternateProductOfferingProposal"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

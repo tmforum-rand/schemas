@@ -1,30 +1,30 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "BankAccount.schema.json", 
-    "title": "BankAccount", 
-    "description": "Describes the information of a bank account", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BankAccount.schema.json",
+    "title": "BankAccount",
+    "description": "Describes the information of a bank account",
+    "type": "object",
     "properties": {
         "accountHolder": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the holder of the bank account"
-        }, 
+        },
         "BIC": {
-            "type": "string", 
+            "type": "string",
             "description": "Identifier of the bank according to its international code"
-        }, 
+        },
         "domiciliation": {
-            "type": "string", 
+            "type": "string",
             "description": "Address of the bank agency which manages the bank account"
-        }, 
+        },
         "IBAN": {
-            "type": "string", 
+            "type": "string",
             "description": "International format to describe a bank account"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

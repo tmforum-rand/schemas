@@ -1,30 +1,30 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ProductOfferingTerm.schema.json", 
-    "title": "ProductOfferingTerm", 
-    "description": "A condition under which a ProductOffering is made available to Customers. For instance, a productOffering can be offered with multiple commitment periods.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductOfferingTerm.schema.json",
+    "title": "ProductOfferingTerm",
+    "description": "A condition under which a ProductOffering is made available to Customers. For instance, a productOffering can be offered with multiple commitment periods.",
+    "type": "object",
     "properties": {
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "Description of the productOfferingTerm"
-        }, 
+        },
         "duration": {
-            "type": "string", 
+            "type": "string",
             "description": "Duration of the productOfferingTerm"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the productOfferingTerm"
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "The period for which the productOfferingterm is valid"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

@@ -1,84 +1,84 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "QuoteItem.schema.json", 
-    "title": "QuoteItem", 
-    "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteItem.schema.json",
+    "title": "QuoteItem",
+    "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
+    "type": "object",
     "properties": {
         "action": {
-            "type": "string", 
+            "type": "string",
             "description": "Action to be perfomed on this quote item (add, modify, remove, etc.)"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Identifier of the quote item (generally it is a sequence number 01, 02, 03, ...)"
-        }, 
+        },
         "quantity": {
-            "type": "integer", 
+            "type": "integer",
             "description": "Quantity asked for this quote item"
-        }, 
+        },
         "state": {
-            "type": "string", 
+            "type": "string",
             "description": "State of the quote item : described in the state machine diagram"
-        }, 
+        },
         "quoteItem": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "QuoteItem.schema.json/#QuoteItem"
+                "$ref": "QuoteItem.schema.json/#definitions/QuoteItem"
             }
-        }, 
+        },
         "quoteItemRelationship": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "QuoteItemRelationship.schema.json/#QuoteItemRelationship"
+                "$ref": "QuoteItemRelationship.schema.json/#definitions/QuoteItemRelationship"
             }
-        }, 
+        },
         "attachment": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Attachment.schema.json/#Attachment"
+                "$ref": "../Common/Attachment.schema.json/#definitions/Attachment"
             }
-        }, 
+        },
         "quoteItemAuthorization": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Authorization.schema.json/#Authorization"
+                "$ref": "Authorization.schema.json/#definitions/Authorization"
             }
-        }, 
+        },
         "note": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Note.schema.json/#Note"
+                "$ref": "../Common/Note.schema.json/#definitions/Note"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "appointment": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "AppointmentRef.schema.json/#AppointmentRef"
+                "$ref": "AppointmentRef.schema.json/#definitions/AppointmentRef"
             }
-        }, 
+        },
         "productOffering": {
-            "$ref": "ProductOfferingRef.schema.json/#ProductOfferingRef"
-        }, 
+            "$ref": "../Product/ProductOfferingRef.schema.json/#definitions/ProductOfferingRef"
+        },
         "quoteItemPrice": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "QuotePrice.schema.json/#QuotePrice"
+                "$ref": "QuotePrice.schema.json/#definitions/QuotePrice"
             }
-        }, 
+        },
         "product": {
-            "$ref": "Product.schema.json/#Product"
+            "$ref": "../Product/Product.schema.json/#definitions/Product"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

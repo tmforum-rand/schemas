@@ -1,16 +1,16 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "BankCardMethod.schema.json", 
-    "title": "BankCardMethod", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BankCardMethod.schema.json",
+    "title": "BankCardMethod",
+    "type": "object",
     "properties": {
         "details": {
-            "$ref": "BankCardDetails.schema.json/#BankCardDetails"
+            "$ref": "BankCardDetails.schema.json/#definitions/BankCardDetails"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

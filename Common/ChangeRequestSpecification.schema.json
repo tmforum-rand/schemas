@@ -24,7 +24,7 @@
                     "description": "Name of the specification."
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod"
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod"
                 }
             },
             "allOf": [
@@ -35,4 +35,3 @@
         }
     }
 }
-

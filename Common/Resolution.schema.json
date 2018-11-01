@@ -22,7 +22,7 @@
                 "task": {
                     "type": "array",
                     "items": {
-                        "$ref": "Task.schema.json/#Task"
+                        "$ref": "Task.schema.json/#definitions/Task"
                     }
                 }
             },
@@ -34,4 +34,3 @@
         }
     }
 }
-

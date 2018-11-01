@@ -28,11 +28,11 @@
                     "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "The period for which the entitySpecRelationship is valid"
                 },
                 "associationSpec": {
-                    "$ref": "AssociationSpecRef.schema.json/#AssociationSpecRef"
+                    "$ref": "AssociationSpecRef.schema.json/#definitions/AssociationSpecRef"
                 }
             },
             "allOf": [
@@ -43,4 +43,3 @@
         }
     }
 }
-

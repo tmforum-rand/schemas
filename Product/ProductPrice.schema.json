@@ -1,40 +1,40 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ProductPrice.schema.json", 
-    "title": "ProductPrice", 
-    "description": "An amount, usually of money, that represents the actual price paid by a Customer for a purchase, a rent or a lease of a Product. The price is valid for a defined period of time.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductPrice.schema.json",
+    "title": "ProductPrice",
+    "description": "An amount, usually of money, that represents the actual price paid by a Customer for a purchase, a rent or a lease of a Product. The price is valid for a defined period of time.",
+    "type": "object",
     "properties": {
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "A narrative that explains in detail the semantics of this product price."
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "A short descriptive name such as \"Subscription price\"."
-        }, 
+        },
         "priceType": {
-            "type": "string", 
+            "type": "string",
             "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth."
-        }, 
+        },
         "recurringChargePeriod": {
-            "type": "string", 
+            "type": "string",
             "description": "Could be month, week..."
-        }, 
+        },
         "unitOfMeasure": {
-            "type": "string", 
+            "type": "string",
             "description": "Could be minutes, GB..."
-        }, 
+        },
         "productPriceAlteration": {
-            "$ref": "PriceAlteration.schema.json/#PriceAlteration"
-        }, 
+            "$ref": "../Customer/PriceAlteration.schema.json/#definitions/PriceAlteration"
+        },
         "price": {
-            "$ref": "Price.schema.json/#Price"
+            "$ref": "../Customer/Price.schema.json/#definitions/Price"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

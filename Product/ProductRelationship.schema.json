@@ -1,21 +1,21 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ProductRelationship.schema.json", 
-    "title": "ProductRelationship", 
-    "description": "Linked products to the one instantiate, it can be :\n\n \"bundled\" if the product is a bundle and you want to describe the \"bundled\" products inside this bundle\n  \"reliesOn\" if the product needs another already owned product to rely on (e.g. an option on an already owned mobile access product)\n\n\"targets\" or \"isTargeted\" (depending on the way of expressing the link) for any other kind of links that may be useful", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductRelationship.schema.json",
+    "title": "ProductRelationship",
+    "description": "Linked products to the one instantiate, it can be :\n\n \"bundled\" if the product is a bundle and you want to describe the \"bundled\" products inside this bundle\n  \"reliesOn\" if the product needs another already owned product to rely on (e.g. an option on an already owned mobile access product)\n\n\"targets\" or \"isTargeted\" (depending on the way of expressing the link) for any other kind of links that may be useful",
+    "type": "object",
     "properties": {
         "type": {
-            "type": "string", 
+            "type": "string",
             "description": "Type of the product relationship. It can be :\n\n \"bundled\" if the product is a bundle and you want to describe the \"bundled\" products inside this bundle\n  \"reliesOn\" if the product needs another already owned product to rely on (e.g. an option on an already owned mobile access product)\n\n\"targets\" or \"isTargeted\" (depending on the way of expressing the link) for any other kind of links that may be useful"
-        }, 
+        },
         "product": {
-            "$ref": "Product.schema.json/#Product"
+            "$ref": "Product.schema.json/#definitions/Product"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

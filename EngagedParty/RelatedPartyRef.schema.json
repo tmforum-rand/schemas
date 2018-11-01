@@ -1,34 +1,34 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "RelatedPartyRef.schema.json", 
-    "title": "RelatedPartyRef", 
-    "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "RelatedPartyRef.schema.json",
+    "title": "RelatedPartyRef",
+    "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity.",
+    "type": "object",
     "properties": {
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the related party, could be a party reference or a party role reference"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of a related party"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the related party"
-        }, 
+        },
         "role": {
-            "type": "string", 
+            "type": "string",
             "description": "Role of the related party."
-        }, 
+        },
         "@referredType": {
-            "type": "string", 
+            "type": "string",
             "description": "The actual type of the target instance when needed for disambiguation."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

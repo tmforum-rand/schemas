@@ -1,101 +1,101 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ProductSpecification.schema.json", 
-    "title": "ProductSpecification", 
-    "description": "Is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to customers or other parties playing a party role.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductSpecification.schema.json",
+    "title": "ProductSpecification",
+    "description": "Is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to customers or other parties playing a party role.",
+    "type": "object",
     "properties": {
         "brand": {
-            "type": "string", 
+            "type": "string",
             "description": "The manufacturer or trademark of the specification"
-        }, 
+        },
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "A narrative that explains in detail what the product specification is"
-        }, 
+        },
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the product specification"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of the product specification"
-        }, 
+        },
         "isBundle": {
-            "type": "boolean", 
+            "type": "boolean",
             "description": "isBundle determines whether a productSpecification represents a single productSpecification (false), or a bundle of productSpecification (true)."
-        }, 
+        },
         "lastUpdate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date and time of the last update"
-        }, 
+        },
         "lifecycleStatus": {
-            "type": "string", 
+            "type": "string",
             "description": "Used to indicate the current lifecycle status"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the product specification"
-        }, 
+        },
         "productNumber": {
-            "type": "string", 
+            "type": "string",
             "description": "An identification number assigned to uniquely identity the specification"
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "The period for which the product specification is valid"
-        }, 
+        },
         "version": {
-            "type": "string", 
+            "type": "string",
             "description": "Product specification version"
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "productSpecCharacteristic": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ProductSpecCharacteristic.schema.json/#ProductSpecCharacteristic"
+                "$ref": "ProductSpecCharacteristic.schema.json/#definitions/ProductSpecCharacteristic"
             }
-        }, 
+        },
         "serviceSpecification": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ServiceSpecificationRef.schema.json/#ServiceSpecificationRef"
+                "$ref": "../Service/ServiceSpecificationRef.schema.json/#definitions/ServiceSpecificationRef"
             }
-        }, 
+        },
         "productSpecificationRelationship": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ProductSpecificationRelationship.schema.json/#ProductSpecificationRelationship"
+                "$ref": "ProductSpecificationRelationship.schema.json/#definitions/ProductSpecificationRelationship"
             }
-        }, 
+        },
         "resourceSpecification": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ResourceSpecificationRef.schema.json/#ResourceSpecificationRef"
+                "$ref": "../Resource/ResourceSpecificationRef.schema.json/#definitions/ResourceSpecificationRef"
             }
-        }, 
+        },
         "attachment": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Attachment.schema.json/#Attachment"
+                "$ref": "../Common/Attachment.schema.json/#definitions/Attachment"
             }
-        }, 
+        },
         "bundledProductSpecification": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "BundledProductSpecification.schema.json/#BundledProductSpecification"
+                "$ref": "BundledProductSpecification.schema.json/#definitions/BundledProductSpecification"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

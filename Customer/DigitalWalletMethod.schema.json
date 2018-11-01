@@ -1,16 +1,16 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "DigitalWalletMethod.schema.json", 
-    "title": "DigitalWalletMethod", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "DigitalWalletMethod.schema.json",
+    "title": "DigitalWalletMethod",
+    "type": "object",
     "properties": {
         "details": {
-            "$ref": "DigitalWalletDetails.schema.json/#DigitalWalletDetails"
+            "$ref": "DigitalWalletDetails.schema.json/#definitions/DigitalWalletDetails"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

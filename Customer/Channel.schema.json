@@ -1,30 +1,30 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "Channel.schema.json", 
-    "title": "Channel", 
-    "description": "Channel reference. The channel defines the channel for selling product offerings.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Channel.schema.json",
+    "title": "Channel",
+    "description": "Channel reference. The channel defines the channel for selling product offerings.",
+    "type": "object",
     "properties": {
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the channel"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of the channel"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the channel"
-        }, 
+        },
         "role": {
-            "type": "string", 
+            "type": "string",
             "description": "Role of the channel - could be 'initChannel', 'submitChannel' for example."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

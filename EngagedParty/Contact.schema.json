@@ -1,39 +1,39 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "Contact.schema.json", 
-    "title": "Contact", 
-    "description": "An individual or an organization used as a contact point for a given account and accessed via some contact medium.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Contact.schema.json",
+    "title": "Contact",
+    "description": "An individual or an organization used as a contact point for a given account and accessed via some contact medium.",
+    "type": "object",
     "properties": {
         "contactName": {
-            "type": "string", 
+            "type": "string",
             "description": "A displayable name for that contact"
-        }, 
+        },
         "contactType": {
-            "type": "string", 
+            "type": "string",
             "description": "Type of contact (primary, secondary...)"
-        }, 
+        },
         "partyRoleType": {
-            "type": "string", 
+            "type": "string",
             "description": "Identifies what kind of party role type is linked to the contact (a account manager...)"
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "Validity period of that contact"
-        }, 
+        },
         "contactMedium": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ContactMedium.schema.json/#ContactMedium"
+                "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
             }
-        }, 
+        },
         "relatedParty": {
-            "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+            "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

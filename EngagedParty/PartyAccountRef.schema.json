@@ -1,38 +1,38 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "PartyAccountRef.schema.json", 
-    "title": "PartyAccountRef", 
-    "description": "PartyAccount reference. A party account is an arrangement that a party has with an enterprise that provides products to the party.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "PartyAccountRef.schema.json",
+    "title": "PartyAccountRef",
+    "description": "PartyAccount reference. A party account is an arrangement that a party has with an enterprise that provides products to the party.",
+    "type": "object",
     "properties": {
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "Detailed description of the party account"
-        }, 
+        },
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the party account"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of the party account"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "Name of the party account"
-        }, 
+        },
         "status": {
-            "type": "string", 
+            "type": "string",
             "description": "The condition of the account, such as due, paid, in arrears."
-        }, 
+        },
         "@referredType": {
-            "type": "string", 
+            "type": "string",
             "description": "The actual type of the target instance when needed for disambiguation."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

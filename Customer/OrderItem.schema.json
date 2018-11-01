@@ -1,84 +1,84 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "OrderItem.schema.json", 
-    "title": "OrderItem", 
-    "description": "An identified part of the order. A product order is decomposed into one or more order items.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "OrderItem.schema.json",
+    "title": "OrderItem",
+    "description": "An identified part of the order. A product order is decomposed into one or more order items.",
+    "type": "object",
     "properties": {
         "action": {
-            "type": "string", 
+            "type": "string",
             "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Identifier of the line item (generally it is a sequence number 01, 02, 03, ...)"
-        }, 
+        },
         "quantity": {
-            "type": "integer", 
+            "type": "integer",
             "description": "Quantity ordered"
-        }, 
+        },
         "state": {
-            "type": "string", 
+            "type": "string",
             "description": "State of the order item : described in the state machine diagram"
-        }, 
+        },
         "appointment": {
-            "$ref": "AppointmentRef.schema.json/#AppointmentRef"
-        }, 
+            "$ref": "AppointmentRef.schema.json/#definitions/AppointmentRef"
+        },
         "billingAccount": {
-            "$ref": "BillingAccountRef.schema.json/#BillingAccountRef"
-        }, 
+            "$ref": "BillingAccountRef.schema.json/#definitions/BillingAccountRef"
+        },
         "itemPrice": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrderPrice.schema.json/#OrderPrice"
+                "$ref": "OrderPrice.schema.json/#definitions/OrderPrice"
             }
-        }, 
+        },
         "orderItem": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrderItem.schema.json/#OrderItem"
+                "$ref": "OrderItem.schema.json/#definitions/OrderItem"
             }
-        }, 
+        },
         "orderItemRelationship": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrderItemRelationship.schema.json/#OrderItemRelationship"
+                "$ref": "OrderItemRelationship.schema.json/#definitions/OrderItemRelationship"
             }
-        }, 
+        },
         "itemTotalPrice": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrderPrice.schema.json/#OrderPrice"
+                "$ref": "OrderPrice.schema.json/#definitions/OrderPrice"
             }
-        }, 
+        },
         "payment": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "PaymentRef.schema.json/#PaymentRef"
+                "$ref": "../EngagedParty/PaymentRef.schema.json/#definitions/PaymentRef"
             }
-        }, 
+        },
         "productOffering": {
-            "$ref": "ProductOfferingRef.schema.json/#ProductOfferingRef"
-        }, 
+            "$ref": "../Product/ProductOfferingRef.schema.json/#definitions/ProductOfferingRef"
+        },
         "product": {
-            "$ref": "Product.schema.json/#Product"
-        }, 
+            "$ref": "../Product/Product.schema.json/#definitions/Product"
+        },
         "qualification": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "QualificationRef.schema.json/#QualificationRef"
+                "$ref": "../Service/QualificationRef.schema.json/#definitions/QualificationRef"
             }
-        }, 
+        },
         "itemTerm": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OrderTerm.schema.json/#OrderTerm"
+                "$ref": "OrderTerm.schema.json/#definitions/OrderTerm"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

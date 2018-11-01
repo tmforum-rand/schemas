@@ -1,23 +1,23 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ResourceRef.schema.json", 
-    "title": "ResourceRef", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ResourceRef.schema.json",
+    "title": "ResourceRef",
+    "type": "object",
     "properties": {
         "href": {
             "type": "string"
-        }, 
+        },
         "id": {
             "type": "string"
-        }, 
+        },
         "@referredType": {
-            "type": "string", 
+            "type": "string",
             "description": "The actual type of the target instance when needed for disambiguation."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

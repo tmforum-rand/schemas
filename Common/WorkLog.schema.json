@@ -23,7 +23,7 @@
                 "record": {
                     "type": "array",
                     "items": {
-                        "$ref": "Record.schema.json/#Record"
+                        "$ref": "Record.schema.json/#definitions/Record"
                     }
                 }
             },
@@ -35,4 +35,3 @@
         }
     }
 }
-

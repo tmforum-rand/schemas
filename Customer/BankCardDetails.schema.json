@@ -1,47 +1,47 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "BankCardDetails.schema.json", 
-    "title": "BankCardDetails", 
-    "description": "Detailed information for a bank card", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BankCardDetails.schema.json",
+    "title": "BankCardDetails",
+    "description": "Detailed information for a bank card",
+    "type": "object",
     "properties": {
         "bank": {
-            "type": "string", 
+            "type": "string",
             "description": "Bank that issued the card"
-        }, 
+        },
         "brand": {
-            "type": "string", 
+            "type": "string",
             "description": "Card brand. E.g.: Visa, MasterCard, AmericanExpress."
-        }, 
+        },
         "cardNumber": {
-            "type": "string", 
+            "type": "string",
             "description": "Credit card number"
-        }, 
+        },
         "cvv": {
-            "type": "string", 
+            "type": "string",
             "description": "security code (e.g.: CVV, CVV2) of the card"
-        }, 
+        },
         "expirationDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Expiration date of the card"
-        }, 
+        },
         "lastFourDiguts": {
-            "type": "string", 
+            "type": "string",
             "description": "Last four digits of the credit card"
-        }, 
+        },
         "nameOnCard": {
-            "type": "string", 
+            "type": "string",
             "description": "Name on the card"
-        }, 
+        },
         "type": {
-            "type": "string", 
+            "type": "string",
             "description": "Type of the card (e.g.: Credit, debit...)"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

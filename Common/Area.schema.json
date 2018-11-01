@@ -22,7 +22,7 @@
                 "characteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "LocationCharacteristic.schema.json/#LocationCharacteristic"
+                        "$ref": "LocationCharacteristic.schema.json/#definitions/LocationCharacteristic"
                     }
                 }
             },
@@ -34,4 +34,3 @@
         }
     }
 }
-

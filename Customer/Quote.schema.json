@@ -1,112 +1,112 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "Quote.schema.json", 
-    "title": "Quote", 
-    "description": "Quote can be used to negotiate service and product acquisition or modification between a customer and a service provider. Quote contain list of quote items, a reference to customer (partyRole), a list of productOffering and attached prices and conditions.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Quote.schema.json",
+    "title": "Quote",
+    "description": "Quote can be used to negotiate service and product acquisition or modification between a customer and a service provider. Quote contain list of quote items, a reference to customer (partyRole), a list of productOffering and attached prices and conditions.",
+    "type": "object",
     "properties": {
         "category": {
-            "type": "string", 
+            "type": "string",
             "description": "Used to categorize the quote from a business perspective that can be useful for the CRM system (e.g. \"enterprise\", \"residential\", ...)"
-        }, 
+        },
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "Description of the quote"
-        }, 
+        },
         "effectiveQuoteCompletionDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date when the quote has been completed"
-        }, 
+        },
         "expectedFulfillmentStartDate": {
-            "$ref": "Date.schema.json/#Date", 
+            "$ref": "Date.schema.json/#Date",
             "description": "this is the date wished by the requester to have the requested quote item delivered"
-        }, 
+        },
         "expectedQuoteCompletionDate": {
-            "$ref": "Date.schema.json/#Date", 
+            "$ref": "Date.schema.json/#Date",
             "description": "This is expected date - from quote requester - to have a response for this quote"
-        }, 
+        },
         "externalId": {
-            "type": "string", 
+            "type": "string",
             "description": "ID given by the consumer and only understandable by him (to facilitate his searches afterwards)"
-        }, 
+        },
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Hyperlink to access the quote"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier - attributed by quoting system"
-        }, 
+        },
         "quoteDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date and time when the quote was created"
-        }, 
+        },
         "state": {
-            "type": "string", 
+            "type": "string",
             "description": "State of the quote : described in the state-machine diagram above"
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "Quote validity period"
-        }, 
+        },
         "version": {
-            "type": "string", 
+            "type": "string",
             "description": "Quote version - if the customer rejected the quote but  negotiations still open a new version of the quote is managed"
-        }, 
+        },
         "note": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Note.schema.json/#Note"
+                "$ref": "../Common/Note.schema.json/#definitions/Note"
             }
-        }, 
+        },
         "billingAccount": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "BillingAccountRef.schema.json/#BillingAccountRef"
+                "$ref": "BillingAccountRef.schema.json/#definitions/BillingAccountRef"
             }
-        }, 
+        },
         "agreement": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "AgreementRef.schema.json/#AgreementRef"
+                "$ref": "../EngagedParty/AgreementRef.schema.json/#definitions/AgreementRef"
             }
-        }, 
+        },
         "quoteAuthorization": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Authorization.schema.json/#Authorization"
+                "$ref": "Authorization.schema.json/#definitions/Authorization"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "contactMedium": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ContactMedium.schema.json/#ContactMedium"
+                "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
             }
-        }, 
+        },
         "quoteItem": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "QuoteItem.schema.json/#QuoteItem"
+                "$ref": "QuoteItem.schema.json/#definitions/QuoteItem"
             }
-        }, 
+        },
         "quoteTotalPrice": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "QuotePrice.schema.json/#QuotePrice"
+                "$ref": "QuotePrice.schema.json/#definitions/QuotePrice"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

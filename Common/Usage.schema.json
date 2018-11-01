@@ -33,24 +33,24 @@
                     "description": "Type of usage"
                 },
                 "usageSpecification": {
-                    "$ref": "UsageSpecificationRef.schema.json/#UsageSpecificationRef"
+                    "$ref": "UsageSpecificationRef.schema.json/#definitions/UsageSpecificationRef"
                 },
                 "usageCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "UsageCharacteristic.schema.json/#UsageCharacteristic"
+                        "$ref": "UsageCharacteristic.schema.json/#definitions/UsageCharacteristic"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
                     }
                 },
                 "ratedProductUsage": {
                     "type": "array",
                     "items": {
-                        "$ref": "RatedProductUsage.schema.json/#RatedProductUsage"
+                        "$ref": "RatedProductUsage.schema.json/#definitions/RatedProductUsage"
                     }
                 }
             },
@@ -62,4 +62,3 @@
         }
     }
 }
-

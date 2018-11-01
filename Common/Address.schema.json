@@ -56,7 +56,7 @@
                     "description": "alley, avenue, boulevard, brae, crescent, drive, highway, lane, terrace, parade, place, tarn, way, wharf "
                 },
                 "subAddress": {
-                    "$ref": "SubAddress.schema.json/#SubAddress"
+                    "$ref": "SubAddress.schema.json/#definitions/SubAddress"
                 }
             },
             "allOf": [
@@ -67,4 +67,3 @@
         }
     }
 }
-

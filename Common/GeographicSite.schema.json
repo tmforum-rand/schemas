@@ -33,25 +33,25 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
                     }
                 },
                 "calendar": {
                     "type": "array",
                     "items": {
-                        "$ref": "CalendarPeriod.schema.json/#CalendarPeriod"
+                        "$ref": "CalendarPeriod.schema.json/#definitions/CalendarPeriod"
                     }
                 },
                 "geographicLocation": {
-                    "$ref": "GeographicLocation.schema.json/#GeographicLocation"
+                    "$ref": "GeographicLocation.schema.json/#definitions/GeographicLocation"
                 },
                 "address": {
-                    "$ref": "GeographicAddress.schema.json/#GeographicAddress"
+                    "$ref": "GeographicAddress.schema.json/#definitions/GeographicAddress"
                 },
                 "siteRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "SiteRelationship.schema.json/#SiteRelationship"
+                        "$ref": "SiteRelationship.schema.json/#definitions/SiteRelationship"
                     }
                 }
             },
@@ -63,4 +63,3 @@
         }
     }
 }
-

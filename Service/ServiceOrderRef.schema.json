@@ -1,29 +1,29 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ServiceOrderRef.schema.json", 
-    "title": "ServiceOrderRef", 
-    "description": "Service Order reference. Useful to understand the which was the Service order trough which the service was instantiated in the service inventory", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceOrderRef.schema.json",
+    "title": "ServiceOrderRef",
+    "description": "Service Order reference. Useful to understand the which was the Service order trough which the service was instantiated in the service inventory",
+    "type": "object",
     "properties": {
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the Service Order"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of the Service Order"
-        }, 
+        },
         "serviceOrderItemId": {
             "type": "string"
-        }, 
+        },
         "@referredType": {
-            "type": "string", 
+            "type": "string",
             "description": "The actual type of the target instance when needed for disambiguation."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

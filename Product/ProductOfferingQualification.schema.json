@@ -1,91 +1,91 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ProductOfferingQualification.schema.json", 
-    "title": "ProductOfferingQualification", 
-    "description": "ProductOfferingQualification is used to perform a commercial eligibility. It allows to retrieve a list of productOffering that are commercially available in the context of the interaction (defined be place, channel, party, product).", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductOfferingQualification.schema.json",
+    "title": "ProductOfferingQualification",
+    "description": "ProductOfferingQualification is used to perform a commercial eligibility. It allows to retrieve a list of productOffering that are commercially available in the context of the interaction (defined be place, channel, party, product).",
+    "type": "object",
     "properties": {
         "description": {
-            "type": "string", 
+            "type": "string",
             "description": "Description of the productOfferingQualifcation"
-        }, 
+        },
         "effectiveQualificationDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Effective date to productOfferingQualification completion"
-        }, 
+        },
         "estimatedResponseDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date when the requester expect to provide an answer for the qualification request."
-        }, 
+        },
         "expectedQualificationDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Deadline date when the requester expected a qualification answer"
-        }, 
+        },
         "expirationDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date the qualification response expires"
-        }, 
+        },
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Hyperlink to access the productOfferingQualification"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier of the productOfferingQualification resource"
-        }, 
+        },
         "productOfferingQualificationDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date when the productOfferingQualification has been submitted"
-        }, 
+        },
         "provideAlternative": {
-            "type": "boolean", 
+            "type": "boolean",
             "description": "An indicator which when the value is \"true\" means that alternative solutions should be provided"
-        }, 
+        },
         "provideOnlyAvailable": {
-            "type": "boolean", 
+            "type": "boolean",
             "description": "An indicator which when the value is \"true\" means that only available product offering must be listed in the response"
-        }, 
+        },
         "provideUnavailabilityReason": {
-            "type": "boolean", 
+            "type": "boolean",
             "description": "An indicator which when the value is \"true\" means that unavailability reason are expected for non available product offering"
-        }, 
+        },
         "qualificationResult": {
             "type": "string"
-        }, 
+        },
         "state": {
-            "type": "string", 
+            "type": "string",
             "description": "State of the productOfferingQualification (acknowledged, inProgress, terminatedWithError, done)"
-        }, 
+        },
         "productOfferingQualificationItem": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ProductOfferingQualificationItem.schema.json/#ProductOfferingQualificationItem"
+                "$ref": "ProductOfferingQualificationItem.schema.json/#definitions/ProductOfferingQualificationItem"
             }
-        }, 
+        },
         "note": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Note.schema.json/#Note"
+                "$ref": "../Common/Note.schema.json/#definitions/Note"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "channel": {
-            "$ref": "Channel.schema.json/#Channel"
+            "$ref": "../Customer/Channel.schema.json/#definitions/Channel"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

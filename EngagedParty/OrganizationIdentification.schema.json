@@ -1,35 +1,35 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "OrganizationIdentification.schema.json", 
-    "title": "OrganizationIdentification", 
-    "description": "Represents our registration of information used as proof of identity by an organization", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "OrganizationIdentification.schema.json",
+    "title": "OrganizationIdentification",
+    "description": "Represents our registration of information used as proof of identity by an organization",
+    "type": "object",
     "properties": {
         "identificationId": {
-            "type": "string", 
+            "type": "string",
             "description": "Identifier"
-        }, 
+        },
         "issuingAuthority": {
-            "type": "string", 
+            "type": "string",
             "description": "Authority which has issued the identifier (chamber of commerce...)"
-        }, 
+        },
         "issuingDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Date at which the identifier was issued"
-        }, 
+        },
         "type": {
-            "type": "string", 
+            "type": "string",
             "description": "Type of identification information used to identify the company in a country or internationally"
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "The period for which the identification information is valid."
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

@@ -24,7 +24,7 @@
                     "description": "Phone number of the sender, if the communication type is SMS."
                 },
                 "party": {
-                    "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
                 }
             },
             "allOf": [
@@ -35,4 +35,3 @@
         }
     }
 }
-

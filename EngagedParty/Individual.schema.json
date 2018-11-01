@@ -1,126 +1,126 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "Individual.schema.json", 
-    "title": "Individual", 
-    "description": "Represents a physical person", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Individual.schema.json",
+    "title": "Individual",
+    "description": "Represents a physical person",
+    "type": "object",
     "properties": {
         "birthDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Birth date"
-        }, 
+        },
         "countryOfBirth": {
-            "type": "string", 
+            "type": "string",
             "description": "The country of birth"
-        }, 
+        },
         "deathDate": {
-            "type": "string", 
-            "format": "date-time", 
+            "type": "string",
+            "format": "date-time",
             "description": "Death date"
-        }, 
+        },
         "familyName": {
-            "type": "string", 
+            "type": "string",
             "description": "Last name"
-        }, 
+        },
         "formattedName": {
-            "type": "string", 
+            "type": "string",
             "description": "A formatted name useful for specific contexts (chinese, japonese, korean,...)"
-        }, 
+        },
         "fullName": {
-            "type": "string", 
+            "type": "string",
             "description": "Full name flatten (first, middle, and last names)"
-        }, 
+        },
         "gender": {
-            "type": "string", 
+            "type": "string",
             "description": "Gender"
-        }, 
+        },
         "givenName": {
-            "type": "string", 
+            "type": "string",
             "description": "First name"
-        }, 
+        },
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Reference of the individual"
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier for the individual"
-        }, 
+        },
         "location": {
-            "type": "string", 
+            "type": "string",
             "description": "Temporary current location of the individual (may be used if the individual has approved its sharing)"
-        }, 
+        },
         "maritalStatus": {
-            "type": "string", 
+            "type": "string",
             "description": "Marital status (married, divorced, widow...)"
-        }, 
+        },
         "middleName": {
-            "type": "string", 
+            "type": "string",
             "description": "Middle name"
-        }, 
+        },
         "nationality": {
-            "type": "string", 
+            "type": "string",
             "description": "Nationality"
-        }, 
+        },
         "placeOfBirth": {
-            "type": "string", 
+            "type": "string",
             "description": "An hyperlink to the place of birth"
-        }, 
+        },
         "status": {
-            "type": "string", 
+            "type": "string",
             "description": "Status of the individual (Initialized, Validated, Deceased)"
-        }, 
+        },
         "title": {
-            "type": "string", 
+            "type": "string",
             "description": "Used for titles (aristocratic, social...): Pr, Dr, Sir..."
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
-        }, 
+        },
         "characteristic": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Characteristic.schema.json/#Characteristic"
+                "$ref": "../Common/Characteristic.schema.json/#definitions/Characteristic"
             }
-        }, 
+        },
         "externalReference": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ExternalReference.schema.json/#ExternalReference"
+                "$ref": "../Common/ExternalReference.schema.json/#definitions/ExternalReference"
             }
-        }, 
+        },
         "identification": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "IndividualIdentification.schema.json/#IndividualIdentification"
+                "$ref": "IndividualIdentification.schema.json/#definitions/IndividualIdentification"
             }
-        }, 
+        },
         "disability": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Disability.schema.json/#Disability"
+                "$ref": "../Customer/Disability.schema.json/#definitions/Disability"
             }
-        }, 
+        },
         "otherName": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "OtherName.schema.json/#OtherName"
+                "$ref": "OtherName.schema.json/#definitions/OtherName"
             }
-        }, 
+        },
         "contactMedium": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ContactMedium.schema.json/#ContactMedium"
+                "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

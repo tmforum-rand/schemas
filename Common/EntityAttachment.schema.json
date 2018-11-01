@@ -32,7 +32,7 @@
                     "description": "Uniform Resource Identifier (URI) of the attachment"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json/#TimePeriod",
+                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
                     "description": "The period for which this attachment is valid"
                 }
             },
@@ -44,4 +44,3 @@
         }
     }
 }
-

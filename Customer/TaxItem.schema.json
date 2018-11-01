@@ -1,27 +1,27 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "TaxItem.schema.json", 
-    "title": "TaxItem", 
-    "description": "A tax item is created for each tax rate and tax type used in the bill.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TaxItem.schema.json",
+    "title": "TaxItem",
+    "description": "A tax item is created for each tax rate and tax type used in the bill.",
+    "type": "object",
     "properties": {
         "taxAmount": {
-            "$ref": "Money.schema.json/#Money", 
+            "$ref": "../Common/Money.schema.json/#definitions/Money",
             "description": "Amount of tax expressed in the given currency"
-        }, 
+        },
         "taxCategory": {
-            "type": "string", 
+            "type": "string",
             "description": "Tax category"
-        }, 
+        },
         "taxRate": {
-            "type": "number", 
-            "format": "float", 
+            "type": "number",
+            "format": "float",
             "description": "Applied rate of the tax"
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }

@@ -1,87 +1,87 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "PartyRole.schema.json", 
-    "title": "PartyRole", 
-    "description": "The part played by a party in a given context.", 
-    "type": "object", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "PartyRole.schema.json",
+    "title": "PartyRole",
+    "description": "The part played by a party in a given context.",
+    "type": "object",
     "properties": {
         "href": {
-            "type": "string", 
+            "type": "string",
             "description": "Url used to reference the party role."
-        }, 
+        },
         "id": {
-            "type": "string", 
+            "type": "string",
             "description": "Unique identifier for PartyRoles"
-        }, 
+        },
         "name": {
-            "type": "string", 
+            "type": "string",
             "description": "A word, term, or phrase by which the PartyRole is known and distinguished from other PartyRoles."
-        }, 
+        },
         "status": {
-            "type": "string", 
+            "type": "string",
             "description": "Used to track the lifecycle status of the party role."
-        }, 
+        },
         "statusReason": {
-            "type": "string", 
+            "type": "string",
             "description": "A string providing an explanation on the value of the status lifecycle. For instance if the status is Rejected, statusReason will provide the reason for rejection."
-        }, 
+        },
         "validFor": {
-            "$ref": "TimePeriod.schema.json/#TimePeriod", 
+            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
             "description": "The time period that the PartyRole is valid for."
-        }, 
+        },
         "engagedParty": {
-            "$ref": "PartyRef.schema.json/#PartyRef"
-        }, 
+            "$ref": "PartyRef.schema.json/#definitions/PartyRef"
+        },
         "type": {
-            "$ref": "RoleTypeRef.schema.json/#RoleTypeRef"
-        }, 
+            "$ref": "RoleTypeRef.schema.json/#definitions/RoleTypeRef"
+        },
         "account": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "AccountRef.schema.json/#AccountRef"
+                "$ref": "AccountRef.schema.json/#definitions/AccountRef"
             }
-        }, 
+        },
         "paymentMethod": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "PaymentMethodRef.schema.json/#PaymentMethodRef"
+                "$ref": "PaymentMethodRef.schema.json/#definitions/PaymentMethodRef"
             }
-        }, 
+        },
         "contactMedium": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "ContactMedium.schema.json/#ContactMedium"
+                "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
             }
-        }, 
+        },
         "characteristic": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "Characteristic.schema.json/#Characteristic"
-            }, 
+                "$ref": "../Common/Characteristic.schema.json/#definitions/Characteristic"
+            },
             "description": "Describes the characteristic of a party role."
-        }, 
+        },
         "creditProfile": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "CreditProfile.schema.json/#CreditProfile"
+                "$ref": "../Customer/CreditProfile.schema.json/#definitions/CreditProfile"
             }
-        }, 
+        },
         "agreement": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "AgreementRef.schema.json/#AgreementRef"
+                "$ref": "AgreementRef.schema.json/#definitions/AgreementRef"
             }
-        }, 
+        },
         "relatedParty": {
-            "type": "array", 
+            "type": "array",
             "items": {
-                "$ref": "RelatedPartyRef.schema.json/#RelatedPartyRef"
+                "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
             }
         }
-    }, 
+    },
     "allOf": [
         {
-            "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
         }
     ]
 }
