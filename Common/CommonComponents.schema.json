@@ -3,46 +3,40 @@
     "$id": "CommonComponents.json",
     "title": "CommonComponents",
     "definitions": {
-        "CommonComponents": {
-            "description": "Highly reusable schema fragments for use in TMForum Open-APIs",
+        "polymorphicPattern": {
+            "$id": "#polymorphicPattern",
             "type": "object",
-            "definitions": {
-                "polymorphicPattern": {
-                    "$id": "#polymorphicPattern",
-                    "type": "object",
-                    "properties": {
-                        "@schemaLocation": {
-                            "type": "string",
-                            "format": "uri",
-                            "description": "A URI to a JSON-Schema file that defines additional attributes and relationships",
-                            "examples": [
-                                "http://host/schemas/Subclass.schema.json"
-                            ]
-                        },
-                        "@baseType": {
-                            "type": "string",
-                            "description": "When sub-classing, this defines the super-class",
-                            "examples": [
-                                "Place",
-                                "ServiceSpecification"
-                            ]
-                        },
-                        "@type": {
-                            "type": "string",
-                            "description": "When sub-classing, this defines the sub-class entity name",
-                            "examples": [
-                                "VendorProductOffering",
-                                "DroneServiceSpecification"
-                            ]
-                        }
-                    },
-                    "dependencies": {
-                        "@schemaLocation": [
-                            "@baseType",
-                            "@type"
-                        ]
-                    }
+            "properties": {
+                "@schemaLocation": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships",
+                    "examples": [
+                        "http://host/schemas/Subclass.schema.json"
+                    ]
+                },
+                "@baseType": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the super-class",
+                    "examples": [
+                        "Place",
+                        "ServiceSpecification"
+                    ]
+                },
+                "@type": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the sub-class entity name",
+                    "examples": [
+                        "VendorProductOffering",
+                        "DroneServiceSpecification"
+                    ]
                 }
+            },
+            "dependencies": {
+                "@schemaLocation": [
+                    "@baseType",
+                    "@type"
+                ]
             }
         }
     }
