@@ -2,21 +2,25 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "QuoteItemRelationship.schema.json",
     "title": "QuoteItemRelationship",
-    "description": "Used to describe relationship between quote item. These relationship could have an impact on pricing and conditions",
-    "type": "object",
-    "properties": {
-        "id": {
-            "type": "string",
-            "description": "ID of the related order item (must be in the same quote)"
-        },
-        "type": {
-            "type": "string",
-            "description": "Relationship type as relies on, bundles, etc..."
+    "definitions": {
+        "QuoteItemRelationship": {
+            "description": "Used to describe relationship between quote item. These relationship could have an impact on pricing and conditions",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "ID of the related order item (must be in the same quote)"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Relationship type as relies on, bundles, etc..."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

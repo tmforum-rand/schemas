@@ -2,15 +2,19 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "CashMethod.schema.json",
     "title": "CashMethod",
-    "type": "object",
-    "properties": {
-        "details": {
-            "$ref": "CashDetails.schema.json/#definitions/CashDetails"
+    "definitions": {
+        "CashMethod": {
+            "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "CashDetails.schema.json/#definitions/CashDetails"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

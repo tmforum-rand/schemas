@@ -2,33 +2,37 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "ServiceQualificationItem.schema.json",
     "title": "ServiceQualificationItem",
-    "type": "object",
-    "properties": {
-        "expectedActivationDate": {
-            "$ref": "Date.schema.json/#Date"
-        },
-        "id": {
-            "type": "string"
-        },
-        "qualificationResult": {
-            "type": "string"
-        },
-        "state": {
-            "type": "string"
-        },
-        "service": {
-            "$ref": "Service.schema.json/#definitions/Service"
-        },
-        "qualificationRelationship": {
-            "type": "array",
-            "items": {
-                "$ref": "QualificationRelationship.schema.json/#definitions/QualificationRelationship"
-            }
+    "definitions": {
+        "ServiceQualificationItem": {
+            "type": "object",
+            "properties": {
+                "expectedActivationDate": {
+                    "$ref": "Date.schema.json/#Date"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "qualificationResult": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "service": {
+                    "$ref": "Service.schema.json/#definitions/Service"
+                },
+                "qualificationRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QualificationRelationship.schema.json/#definitions/QualificationRelationship"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

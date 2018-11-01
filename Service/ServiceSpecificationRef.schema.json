@@ -2,36 +2,40 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "ServiceSpecificationRef.schema.json",
     "title": "ServiceSpecificationRef",
-    "description": "Service specification reference: ServiceSpecification(s) required to realize a ProductSpecification.",
-    "type": "object",
-    "properties": {
-        "href": {
-            "type": "string",
-            "description": "Reference of the serviceSpecification"
-        },
-        "id": {
-            "type": "string",
-            "description": "Unique identifier of the service specification"
-        },
-        "name": {
-            "type": "string",
-            "description": "Name of the requiredServiceSpecification"
-        },
-        "version": {
-            "type": "string",
-            "description": "Service specification version"
-        },
-        "targetServiceSchema": {
-            "$ref": "TargetServiceSchema.schema.json/#definitions/TargetServiceSchema"
-        },
-        "@referredType": {
-            "type": "string",
-            "description": "The actual type of the target instance when needed for disambiguation."
+    "definitions": {
+        "ServiceSpecificationRef": {
+            "description": "Service specification reference: ServiceSpecification(s) required to realize a ProductSpecification.",
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the serviceSpecification"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the service specification"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the requiredServiceSpecification"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Service specification version"
+                },
+                "targetServiceSchema": {
+                    "$ref": "TargetServiceSchema.schema.json/#definitions/TargetServiceSchema"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

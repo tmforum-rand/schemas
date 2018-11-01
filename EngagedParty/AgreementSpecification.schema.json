@@ -2,77 +2,81 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "AgreementSpecification.schema.json",
     "title": "AgreementSpecification",
-    "description": "A template of an agreement that can be used when establishing partnerships.",
-    "type": "object",
-    "properties": {
-        "description": {
-            "type": "string",
-            "description": "A narrative that explains in detail what the agreement specification is about."
-        },
-        "href": {
-            "type": "string",
-            "description": "Reference of the agreement specification"
-        },
-        "id": {
-            "type": "string",
-            "description": "Unique identifier of the agreement specification"
-        },
-        "isBundle": {
-            "type": "boolean",
-            "description": "Indicates that this agreement specification is a grouping of other agreement specifications. The list of bundled agreement specifications is provided via the specificationRelationship property."
-        },
-        "lastUpdate": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Date and time of the last update"
-        },
-        "lifecycleStatus": {
-            "type": "string",
-            "description": "Indicates the current lifecycle status"
-        },
-        "name": {
-            "type": "string",
-            "description": "Name of the agreement specification"
-        },
-        "validFor": {
-            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-            "description": "The period for which the agreement specification is valid"
-        },
-        "version": {
-            "type": "string",
-            "description": "Agreement specification version"
-        },
-        "serviceCategory": {
-            "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef"
-        },
-        "specCharacteristic": {
-            "type": "array",
-            "items": {
-                "$ref": "AgreementSpecCharacteristic.schema.json/#definitions/AgreementSpecCharacteristic"
-            }
-        },
-        "relatedParty": {
-            "type": "array",
-            "items": {
-                "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-            }
-        },
-        "attachment": {
-            "type": "array",
-            "items": {
-                "$ref": "AgreementAttachment.schema.json/#definitions/AgreementAttachment"
-            }
-        },
-        "specificationRelationship": {
-            "type": "array",
-            "items": {
-                "$ref": "AgreementSpecificationRelationship.schema.json/#definitions/AgreementSpecificationRelationship"
-            }
+    "definitions": {
+        "AgreementSpecification": {
+            "description": "A template of an agreement that can be used when establishing partnerships.",
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "A narrative that explains in detail what the agreement specification is about."
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the agreement specification"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the agreement specification"
+                },
+                "isBundle": {
+                    "type": "boolean",
+                    "description": "Indicates that this agreement specification is a grouping of other agreement specifications. The list of bundled agreement specifications is provided via the specificationRelationship property."
+                },
+                "lastUpdate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date and time of the last update"
+                },
+                "lifecycleStatus": {
+                    "type": "string",
+                    "description": "Indicates the current lifecycle status"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the agreement specification"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
+                    "description": "The period for which the agreement specification is valid"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Agreement specification version"
+                },
+                "serviceCategory": {
+                    "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef"
+                },
+                "specCharacteristic": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AgreementSpecCharacteristic.schema.json/#definitions/AgreementSpecCharacteristic"
+                    }
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
+                    }
+                },
+                "attachment": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AgreementAttachment.schema.json/#definitions/AgreementAttachment"
+                    }
+                },
+                "specificationRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AgreementSpecificationRelationship.schema.json/#definitions/AgreementSpecificationRelationship"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

@@ -2,34 +2,38 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "SLAViolation.schema.json",
     "title": "SLAViolation",
-    "type": "object",
-    "properties": {
-        "date": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "href": {
-            "type": "string"
-        },
-        "id": {
-            "type": "string"
-        },
-        "relatedParty": {
-            "type": "array",
-            "items": {
-                "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-            }
-        },
-        "violation": {
-            "$ref": "Violation.schema.json/#definitions/Violation"
-        },
-        "sla": {
-            "$ref": "SLARef.schema.json/#definitions/SLARef"
+    "definitions": {
+        "SLAViolation": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
+                    }
+                },
+                "violation": {
+                    "$ref": "Violation.schema.json/#definitions/Violation"
+                },
+                "sla": {
+                    "$ref": "SLARef.schema.json/#definitions/SLARef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

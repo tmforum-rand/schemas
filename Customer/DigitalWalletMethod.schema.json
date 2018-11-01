@@ -2,15 +2,19 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "DigitalWalletMethod.schema.json",
     "title": "DigitalWalletMethod",
-    "type": "object",
-    "properties": {
-        "details": {
-            "$ref": "DigitalWalletDetails.schema.json/#definitions/DigitalWalletDetails"
+    "definitions": {
+        "DigitalWalletMethod": {
+            "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "DigitalWalletDetails.schema.json/#definitions/DigitalWalletDetails"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

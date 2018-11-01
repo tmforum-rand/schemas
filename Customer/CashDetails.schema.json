@@ -2,12 +2,16 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "CashDetails.schema.json",
     "title": "CashDetails",
-    "description": "Cash has no additional data, but it could be extended to add information (e.g.: the cashier who took the payment, the person who paid, etc)",
-    "type": "object",
-    "properties": {},
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
+    "definitions": {
+        "CashDetails": {
+            "description": "Cash has no additional data, but it could be extended to add information (e.g.: the cashier who took the payment, the person who paid, etc)",
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    ]
+    }
 }

@@ -2,25 +2,29 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "AgreementItem.schema.json",
     "title": "AgreementItem",
-    "description": "A part of the agreement expressed in terms of a product offering and possibly including specific terms and conditions.",
-    "type": "object",
-    "properties": {
-        "productOffering": {
-            "type": "array",
-            "items": {
-                "$ref": "../Product/ProductOfferingRef.schema.json/#definitions/ProductOfferingRef"
-            }
-        },
-        "termOrCondition": {
-            "type": "array",
-            "items": {
-                "$ref": "AgreementTermOrCondition.schema.json/#definitions/AgreementTermOrCondition"
-            }
+    "definitions": {
+        "AgreementItem": {
+            "description": "A part of the agreement expressed in terms of a product offering and possibly including specific terms and conditions.",
+            "type": "object",
+            "properties": {
+                "productOffering": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/ProductOfferingRef.schema.json/#definitions/ProductOfferingRef"
+                    }
+                },
+                "termOrCondition": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AgreementTermOrCondition.schema.json/#definitions/AgreementTermOrCondition"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

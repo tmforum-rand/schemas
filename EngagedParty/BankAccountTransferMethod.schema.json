@@ -2,15 +2,19 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "BankAccountTransferMethod.schema.json",
     "title": "BankAccountTransferMethod",
-    "type": "object",
-    "properties": {
-        "details": {
-            "$ref": "BankAccountTransferDetails.schema.json/#definitions/BankAccountTransferDetails"
+    "definitions": {
+        "BankAccountTransferMethod": {
+            "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "BankAccountTransferDetails.schema.json/#definitions/BankAccountTransferDetails"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

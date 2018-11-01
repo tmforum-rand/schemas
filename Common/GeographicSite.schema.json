@@ -57,7 +57,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#polymorphicPattern"
+                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
                 }
             ]
         }

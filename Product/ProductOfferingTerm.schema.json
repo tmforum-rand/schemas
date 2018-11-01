@@ -2,29 +2,33 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "ProductOfferingTerm.schema.json",
     "title": "ProductOfferingTerm",
-    "description": "A condition under which a ProductOffering is made available to Customers. For instance, a productOffering can be offered with multiple commitment periods.",
-    "type": "object",
-    "properties": {
-        "description": {
-            "type": "string",
-            "description": "Description of the productOfferingTerm"
-        },
-        "duration": {
-            "type": "string",
-            "description": "Duration of the productOfferingTerm"
-        },
-        "name": {
-            "type": "string",
-            "description": "Name of the productOfferingTerm"
-        },
-        "validFor": {
-            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-            "description": "The period for which the productOfferingterm is valid"
+    "definitions": {
+        "ProductOfferingTerm": {
+            "description": "A condition under which a ProductOffering is made available to Customers. For instance, a productOffering can be offered with multiple commitment periods.",
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the productOfferingTerm"
+                },
+                "duration": {
+                    "type": "string",
+                    "description": "Duration of the productOfferingTerm"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the productOfferingTerm"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
+                    "description": "The period for which the productOfferingterm is valid"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

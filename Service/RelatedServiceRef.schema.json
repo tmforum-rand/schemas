@@ -2,29 +2,33 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "RelatedServiceRef.schema.json",
     "title": "RelatedServiceRef",
-    "description": "The service of the service test",
-    "type": "object",
-    "properties": {
-        "href": {
-            "type": "string",
-            "description": "Hyperlink to access a service."
-        },
-        "id": {
-            "type": "string",
-            "description": "Identifier of a service."
-        },
-        "name": {
-            "type": "string",
-            "description": "A name to describe a service."
-        },
-        "@referredType": {
-            "type": "string",
-            "description": "The actual type of the target instance when needed for disambiguation."
+    "definitions": {
+        "RelatedServiceRef": {
+            "description": "The service of the service test",
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Hyperlink to access a service."
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of a service."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A name to describe a service."
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

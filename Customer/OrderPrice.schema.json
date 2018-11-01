@@ -2,45 +2,49 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "OrderPrice.schema.json",
     "title": "OrderPrice",
-    "description": "An amount, usually of money, that represents the actual price paid by the Customer for this item or this order",
-    "type": "object",
-    "properties": {
-        "description": {
-            "type": "string",
-            "description": "A narrative that explains in detail the semantics of this order item price."
-        },
-        "name": {
-            "type": "string",
-            "description": "A short descriptive name such as \"Subscription price\"."
-        },
-        "priceType": {
-            "type": "string",
-            "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
-        },
-        "recurringChargePeriod": {
-            "type": "string",
-            "description": "Could be month, week..."
-        },
-        "unitOfMeasure": {
-            "type": "string",
-            "description": "Could be minutes, GB..."
-        },
-        "billingAccount": {
-            "$ref": "BillingAccountRef.schema.json/#definitions/BillingAccountRef"
-        },
-        "price": {
-            "$ref": "Price.schema.json/#definitions/Price"
-        },
-        "priceAlteration": {
-            "type": "array",
-            "items": {
-                "$ref": "PriceAlteration.schema.json/#definitions/PriceAlteration"
-            }
+    "definitions": {
+        "OrderPrice": {
+            "description": "An amount, usually of money, that represents the actual price paid by the Customer for this item or this order",
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "A narrative that explains in detail the semantics of this order item price."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A short descriptive name such as \"Subscription price\"."
+                },
+                "priceType": {
+                    "type": "string",
+                    "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
+                },
+                "recurringChargePeriod": {
+                    "type": "string",
+                    "description": "Could be month, week..."
+                },
+                "unitOfMeasure": {
+                    "type": "string",
+                    "description": "Could be minutes, GB..."
+                },
+                "billingAccount": {
+                    "$ref": "BillingAccountRef.schema.json/#definitions/BillingAccountRef"
+                },
+                "price": {
+                    "$ref": "Price.schema.json/#definitions/Price"
+                },
+                "priceAlteration": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "PriceAlteration.schema.json/#definitions/PriceAlteration"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

@@ -2,15 +2,19 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "VoucherMethod.schema.json",
     "title": "VoucherMethod",
-    "type": "object",
-    "properties": {
-        "details": {
-            "$ref": "VoucherDetails.schema.json/#definitions/VoucherDetails"
+    "definitions": {
+        "VoucherMethod": {
+            "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "VoucherDetails.schema.json/#definitions/VoucherDetails"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

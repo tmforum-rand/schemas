@@ -2,29 +2,33 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "BundledProductOffering.schema.json",
     "title": "BundledProductOffering",
-    "description": "A type of ProductOffering that belongs to a grouping of ProductOfferings made available to the market. It inherits of all attributes of ProductOffering.",
-    "type": "object",
-    "properties": {
-        "href": {
-            "type": "string",
-            "description": "Unique reference of the BundledProductOffering"
-        },
-        "id": {
-            "type": "string",
-            "description": "Unique identifier of the BundledProductOffering"
-        },
-        "lifecycleStatus": {
-            "type": "string",
-            "description": "Used to indicate the current lifecycle status"
-        },
-        "name": {
-            "type": "string",
-            "description": "Name of the BundledProductOffering"
+    "definitions": {
+        "BundledProductOffering": {
+            "description": "A type of ProductOffering that belongs to a grouping of ProductOfferings made available to the market. It inherits of all attributes of ProductOffering.",
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Unique reference of the BundledProductOffering"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the BundledProductOffering"
+                },
+                "lifecycleStatus": {
+                    "type": "string",
+                    "description": "Used to indicate the current lifecycle status"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the BundledProductOffering"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

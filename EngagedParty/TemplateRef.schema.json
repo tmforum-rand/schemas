@@ -2,28 +2,32 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "TemplateRef.schema.json",
     "title": "TemplateRef",
-    "type": "object",
-    "properties": {
-        "description": {
-            "type": "string"
-        },
-        "href": {
-            "type": "string"
-        },
-        "id": {
-            "type": "string"
-        },
-        "name": {
-            "type": "string"
-        },
-        "@referredType": {
-            "type": "string",
-            "description": "The actual type of the target instance when needed for disambiguation."
+    "definitions": {
+        "TemplateRef": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

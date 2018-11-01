@@ -2,15 +2,19 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "CheckMethod.schema.json",
     "title": "CheckMethod",
-    "type": "object",
-    "properties": {
-        "details": {
-            "$ref": "CheckDetails.schema.json/#definitions/CheckDetails"
+    "definitions": {
+        "CheckMethod": {
+            "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "CheckDetails.schema.json/#definitions/CheckDetails"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

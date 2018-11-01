@@ -2,12 +2,16 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "BillingAccount.schema.json",
     "title": "BillingAccount",
-    "description": "A party account used for billing purposes. It includes a description of the bill structure (frequency, presentation media, format and so on).",
-    "type": "object",
-    "properties": {},
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
+    "definitions": {
+        "BillingAccount": {
+            "description": "A party account used for billing purposes. It includes a description of the bill structure (frequency, presentation media, format and so on).",
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    ]
+    }
 }

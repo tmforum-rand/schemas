@@ -2,32 +2,36 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "PartyAccount.schema.json",
     "title": "PartyAccount",
-    "description": "Account used for billing or for settlement purposes concerning a given party (an organization or an individual).",
-    "type": "object",
-    "properties": {
-        "paymentStatus": {
-            "type": "string",
-            "description": "The condition of the account, such as due, paid, in arrears."
-        },
-        "billStructure": {
-            "$ref": "../Customer/BillStructure.schema.json/#definitions/BillStructure"
-        },
-        "paymentPlan": {
-            "type": "array",
-            "items": {
-                "$ref": "PaymentPlan.schema.json/#definitions/PaymentPlan"
-            }
-        },
-        "financialAccount": {
-            "$ref": "FinancialAccountRef.schema.json/#definitions/FinancialAccountRef"
-        },
-        "defaultPaymentMethod": {
-            "$ref": "PaymentMethodRef.schema.json/#definitions/PaymentMethodRef"
+    "definitions": {
+        "PartyAccount": {
+            "description": "Account used for billing or for settlement purposes concerning a given party (an organization or an individual).",
+            "type": "object",
+            "properties": {
+                "paymentStatus": {
+                    "type": "string",
+                    "description": "The condition of the account, such as due, paid, in arrears."
+                },
+                "billStructure": {
+                    "$ref": "../Customer/BillStructure.schema.json/#definitions/BillStructure"
+                },
+                "paymentPlan": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "PaymentPlan.schema.json/#definitions/PaymentPlan"
+                    }
+                },
+                "financialAccount": {
+                    "$ref": "FinancialAccountRef.schema.json/#definitions/FinancialAccountRef"
+                },
+                "defaultPaymentMethod": {
+                    "$ref": "PaymentMethodRef.schema.json/#definitions/PaymentMethodRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

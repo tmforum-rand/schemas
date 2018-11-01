@@ -2,33 +2,37 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "Rule.schema.json",
     "title": "Rule",
-    "type": "object",
-    "properties": {
-        "consequence": {
-            "type": "string"
-        },
-        "id": {
-            "type": "string"
-        },
-        "metric": {
-            "type": "string"
-        },
-        "operator": {
-            "type": "string"
-        },
-        "referenceValue": {
-            "type": "string"
-        },
-        "tolerance": {
-            "type": "string"
-        },
-        "unit": {
-            "type": "string"
+    "definitions": {
+        "Rule": {
+            "type": "object",
+            "properties": {
+                "consequence": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "metric": {
+                    "type": "string"
+                },
+                "operator": {
+                    "type": "string"
+                },
+                "referenceValue": {
+                    "type": "string"
+                },
+                "tolerance": {
+                    "type": "string"
+                },
+                "unit": {
+                    "type": "string"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

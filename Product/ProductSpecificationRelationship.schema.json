@@ -2,29 +2,33 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "ProductSpecificationRelationship.schema.json",
     "title": "ProductSpecificationRelationship",
-    "description": "A migration, substitution, dependency or exclusivity relationship between/among product specifications.",
-    "type": "object",
-    "properties": {
-        "href": {
-            "type": "string",
-            "description": "Reference of the productSpecification"
-        },
-        "id": {
-            "type": "string",
-            "description": "Unique identifier of the productSpecification"
-        },
-        "type": {
-            "type": "string",
-            "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
-        },
-        "validFor": {
-            "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-            "description": "The period for which the productSpecificationRelationship is valid"
+    "definitions": {
+        "ProductSpecificationRelationship": {
+            "description": "A migration, substitution, dependency or exclusivity relationship between/among product specifications.",
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the productSpecification"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the productSpecification"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
+                    "description": "The period for which the productSpecificationRelationship is valid"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

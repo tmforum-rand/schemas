@@ -2,18 +2,22 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "ResourceRelationship.schema.json",
     "title": "ResourceRelationship",
-    "type": "object",
-    "properties": {
-        "type": {
-            "type": "string"
-        },
-        "resourceRef": {
-            "$ref": "ResourceRef.schema.json/#definitions/ResourceRef"
+    "definitions": {
+        "ResourceRelationship": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "resourceRef": {
+                    "$ref": "ResourceRef.schema.json/#definitions/ResourceRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

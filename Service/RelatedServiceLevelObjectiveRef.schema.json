@@ -2,25 +2,29 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "RelatedServiceLevelObjectiveRef.schema.json",
     "title": "RelatedServiceLevelObjectiveRef",
-    "description": "A set of Service Level Objectives that are contained in the Service Level Specification.",
-    "type": "object",
-    "properties": {
-        "href": {
-            "type": "string",
-            "description": "The hyperlink to access a service level object."
-        },
-        "id": {
-            "type": "string",
-            "description": "The identifier of a service level object."
-        },
-        "@referredType": {
-            "type": "string",
-            "description": "The actual type of the target instance when needed for disambiguation."
+    "definitions": {
+        "RelatedServiceLevelObjectiveRef": {
+            "description": "A set of Service Level Objectives that are contained in the Service Level Specification.",
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "The hyperlink to access a service level object."
+                },
+                "id": {
+                    "type": "string",
+                    "description": "The identifier of a service level object."
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }

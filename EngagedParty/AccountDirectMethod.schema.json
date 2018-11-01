@@ -2,16 +2,20 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "AccountDirectMethod.schema.json",
     "title": "AccountDirectMethod",
-    "description": "A payment method using an internal account that could be billed directly to perform the payment",
-    "type": "object",
-    "properties": {
-        "dertails": {
-            "$ref": "AccountRef.schema.json/#definitions/AccountRef"
+    "definitions": {
+        "AccountDirectMethod": {
+            "description": "A payment method using an internal account that could be billed directly to perform the payment",
+            "type": "object",
+            "properties": {
+                "dertails": {
+                    "$ref": "AccountRef.schema.json/#definitions/AccountRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                }
+            ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "../Common/CommonComponents.schema.json/#polymorphicPattern"
-        }
-    ]
+    }
 }
