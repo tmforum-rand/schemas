@@ -2,6 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "CommonComponents.json",
     "title": "CommonComponents",
+    "description": "Highly reusable schema fragments for use in TMForum Open-APIs",
     "definitions": {
         "polymorphicPattern": {
             "$id": "#polymorphicPattern",
