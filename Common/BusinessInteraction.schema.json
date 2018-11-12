@@ -4,29 +4,32 @@
     "title": "BusinessInteraction",
     "definitions": {
         "BusinessInteraction": {
+            "$id": "#BusinessInteraction",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "interactionData": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "interactionDataComplete": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "interactionDataStatus": {
-                    "type": "string"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "interactionData": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "interactionDataComplete": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "interactionDataStatus": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,19 +4,22 @@
     "title": "LocationCharacteristic",
     "definitions": {
         "LocationCharacteristic": {
+            "$id": "#LocationCharacteristic",
             "description": "Name/value pairs, used to extra characterized the Area (e.g. if a standard\ncode set has been defined for the GeographicArea type, etc.)",
             "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string"
-                },
-                "value": {
-                    "type": "string"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

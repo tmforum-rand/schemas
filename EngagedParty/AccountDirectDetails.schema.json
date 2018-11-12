@@ -4,15 +4,18 @@
     "title": "AccountDirectDetails",
     "definitions": {
         "AccountDirectDetails": {
+            "$id": "#AccountDirectDetails",
             "type": "object",
-            "properties": {
-                "account": {
-                    "$ref": "AccountRef.schema.json/#definitions/AccountRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "account": {
+                            "$ref": "AccountRef.schema.json#AccountRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

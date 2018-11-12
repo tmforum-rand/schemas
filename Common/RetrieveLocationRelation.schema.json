@@ -4,37 +4,40 @@
     "title": "RetrieveLocationRelation",
     "definitions": {
         "RetrieveLocationRelation": {
+            "$id": "#RetrieveLocationRelation",
             "type": "object",
-            "properties": {
-                "distance": {
-                    "type": "string"
-                },
-                "href": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "status": {
-                    "type": "string"
-                },
-                "time": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "intersection": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "GeographicLocation.schema.json/#definitions/GeographicLocation"
-                    }
-                },
-                "location": {
-                    "$ref": "GeographicLocationRef.schema.json/#definitions/GeographicLocationRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "distance": {
+                            "type": "string"
+                        },
+                        "href": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "time": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "intersection": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "GeographicLocation.schema.json#GeographicLocation"
+                            }
+                        },
+                        "location": {
+                            "$ref": "GeographicLocationRef.schema.json#GeographicLocationRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

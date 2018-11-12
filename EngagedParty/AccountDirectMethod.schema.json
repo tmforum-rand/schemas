@@ -4,16 +4,19 @@
     "title": "AccountDirectMethod",
     "definitions": {
         "AccountDirectMethod": {
+            "$id": "#AccountDirectMethod",
             "description": "A payment method using an internal account that could be billed directly to perform the payment",
             "type": "object",
-            "properties": {
-                "dertails": {
-                    "$ref": "AccountRef.schema.json/#definitions/AccountRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "dertails": {
+                            "$ref": "AccountRef.schema.json#AccountRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

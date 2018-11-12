@@ -4,20 +4,23 @@
     "title": "DocumentRelationship",
     "definitions": {
         "DocumentRelationship": {
+            "$id": "#DocumentRelationship",
             "description": "Another document that is related to the current document;",
             "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "description": "a string, Type of relationship: e.g \"related\""
-                },
-                "documentRef": {
-                    "$ref": "DocumentRef.schema.json/#definitions/DocumentRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "description": "a string, Type of relationship: e.g \"related\""
+                        },
+                        "documentRef": {
+                            "$ref": "DocumentRef.schema.json#DocumentRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

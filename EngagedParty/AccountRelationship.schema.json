@@ -4,24 +4,27 @@
     "title": "AccountRelationship",
     "definitions": {
         "AccountRelationship": {
+            "$id": "#AccountRelationship",
             "description": "Significant connection between accounts. For instance an aggregating account for a list of shop branches each having its own billing account.",
             "type": "object",
-            "properties": {
-                "relationshipType": {
-                    "type": "string",
-                    "description": "Type of relationship"
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "Validity period of that relationship"
-                },
-                "account": {
-                    "$ref": "AccountRef.schema.json/#definitions/AccountRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "relationshipType": {
+                            "type": "string",
+                            "description": "Type of relationship"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "Validity period of that relationship"
+                        },
+                        "account": {
+                            "$ref": "AccountRef.schema.json#AccountRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

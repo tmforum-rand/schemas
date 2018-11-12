@@ -4,111 +4,114 @@
     "title": "Quote",
     "definitions": {
         "Quote": {
+            "$id": "#Quote",
             "description": "Quote can be used to negotiate service and product acquisition or modification between a customer and a service provider. Quote contain list of quote items, a reference to customer (partyRole), a list of productOffering and attached prices and conditions.",
             "type": "object",
-            "properties": {
-                "category": {
-                    "type": "string",
-                    "description": "Used to categorize the quote from a business perspective that can be useful for the CRM system (e.g. \"enterprise\", \"residential\", ...)"
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Description of the quote"
-                },
-                "effectiveQuoteCompletionDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date when the quote has been completed"
-                },
-                "expectedFulfillmentStartDate": {
-                    "$ref": "Date.schema.json/#Date",
-                    "description": "this is the date wished by the requester to have the requested quote item delivered"
-                },
-                "expectedQuoteCompletionDate": {
-                    "$ref": "Date.schema.json/#Date",
-                    "description": "This is expected date - from quote requester - to have a response for this quote"
-                },
-                "externalId": {
-                    "type": "string",
-                    "description": "ID given by the consumer and only understandable by him (to facilitate his searches afterwards)"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Hyperlink to access the quote"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier - attributed by quoting system"
-                },
-                "quoteDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date and time when the quote was created"
-                },
-                "state": {
-                    "type": "string",
-                    "description": "State of the quote : described in the state-machine diagram above"
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "Quote validity period"
-                },
-                "version": {
-                    "type": "string",
-                    "description": "Quote version - if the customer rejected the quote but  negotiations still open a new version of the quote is managed"
-                },
-                "note": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Note.schema.json/#definitions/Note"
-                    }
-                },
-                "billingAccount": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "BillingAccountRef.schema.json/#definitions/BillingAccountRef"
-                    }
-                },
-                "agreement": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json/#definitions/AgreementRef"
-                    }
-                },
-                "quoteAuthorization": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "Authorization.schema.json/#definitions/Authorization"
-                    }
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                    }
-                },
-                "contactMedium": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
-                    }
-                },
-                "quoteItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "QuoteItem.schema.json/#definitions/QuoteItem"
-                    }
-                },
-                "quoteTotalPrice": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "QuotePrice.schema.json/#definitions/QuotePrice"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "category": {
+                            "type": "string",
+                            "description": "Used to categorize the quote from a business perspective that can be useful for the CRM system (e.g. \"enterprise\", \"residential\", ...)"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "Description of the quote"
+                        },
+                        "effectiveQuoteCompletionDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date when the quote has been completed"
+                        },
+                        "expectedFulfillmentStartDate": {
+                            "$ref": "Date.schema.json#/Date",
+                            "description": "this is the date wished by the requester to have the requested quote item delivered"
+                        },
+                        "expectedQuoteCompletionDate": {
+                            "$ref": "Date.schema.json#/Date",
+                            "description": "This is expected date - from quote requester - to have a response for this quote"
+                        },
+                        "externalId": {
+                            "type": "string",
+                            "description": "ID given by the consumer and only understandable by him (to facilitate his searches afterwards)"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Hyperlink to access the quote"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier - attributed by quoting system"
+                        },
+                        "quoteDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date and time when the quote was created"
+                        },
+                        "state": {
+                            "type": "string",
+                            "description": "State of the quote : described in the state-machine diagram above"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "Quote validity period"
+                        },
+                        "version": {
+                            "type": "string",
+                            "description": "Quote version - if the customer rejected the quote but  negotiations still open a new version of the quote is managed"
+                        },
+                        "note": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/Note.schema.json#Note"
+                            }
+                        },
+                        "billingAccount": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
+                            }
+                        },
+                        "agreement": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                            }
+                        },
+                        "quoteAuthorization": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "Authorization.schema.json#Authorization"
+                            }
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        },
+                        "contactMedium": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                            }
+                        },
+                        "quoteItem": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "QuoteItem.schema.json#QuoteItem"
+                            }
+                        },
+                        "quoteTotalPrice": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "QuotePrice.schema.json#QuotePrice"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

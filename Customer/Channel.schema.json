@@ -4,29 +4,32 @@
     "title": "Channel",
     "definitions": {
         "Channel": {
+            "$id": "#Channel",
             "description": "Channel reference. The channel defines the channel for selling product offerings.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the channel"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the channel"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the channel"
-                },
-                "role": {
-                    "type": "string",
-                    "description": "Role of the channel - could be 'initChannel', 'submitChannel' for example."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the channel"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the channel"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the channel"
+                        },
+                        "role": {
+                            "type": "string",
+                            "description": "Role of the channel - could be 'initChannel', 'submitChannel' for example."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,18 +4,21 @@
     "title": "ResourceRelationship",
     "definitions": {
         "ResourceRelationship": {
+            "$id": "#ResourceRelationship",
             "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string"
-                },
-                "resourceRef": {
-                    "$ref": "ResourceRef.schema.json/#definitions/ResourceRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "type": {
+                            "type": "string"
+                        },
+                        "resourceRef": {
+                            "$ref": "ResourceRef.schema.json#ResourceRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

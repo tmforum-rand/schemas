@@ -4,20 +4,23 @@
     "title": "HourPeriod",
     "definitions": {
         "HourPeriod": {
+            "$id": "#HourPeriod",
             "type": "object",
-            "properties": {
-                "endHour": {
-                    "type": "string",
-                    "description": "The time when the status ends applying"
-                },
-                "startHour": {
-                    "type": "string",
-                    "description": "The time when the status starts applying"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "endHour": {
+                            "type": "string",
+                            "description": "The time when the status ends applying"
+                        },
+                        "startHour": {
+                            "type": "string",
+                            "description": "The time when the status starts applying"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

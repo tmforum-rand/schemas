@@ -4,33 +4,36 @@
     "title": "RelatedChangeRequestRef",
     "definitions": {
         "RelatedChangeRequestRef": {
+            "$id": "#RelatedChangeRequestRef",
             "description": "An existing Change Request that has some form of correlation with the given Change Request.",
             "type": "object",
-            "properties": {
-                "correlation": {
-                    "type": "string",
-                    "description": "The correlation between two change requests"
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Description of a change request."
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Hyper link to access a change request."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Identifier of an Change Reques"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "correlation": {
+                            "type": "string",
+                            "description": "The correlation between two change requests"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "Description of a change request."
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Hyper link to access a change request."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Identifier of an Change Reques"
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

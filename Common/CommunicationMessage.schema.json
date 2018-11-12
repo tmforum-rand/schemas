@@ -4,85 +4,88 @@
     "title": "CommunicationMessage",
     "definitions": {
         "CommunicationMessage": {
+            "$id": "#CommunicationMessage",
             "description": "Communication message means a notification approach in the format of a message which can be dispatched (sent) to the certain user by the system with the content which can be felt and understood by the recipient. The user can be either a final customer or a customer service agent. The message can reach the customer in different interaction channels, including: email, short message, mobile app notification (push).",
             "type": "object",
-            "properties": {
-                "callbackFlag": {
-                    "type": "boolean"
-                },
-                "content": {
-                    "type": "string",
-                    "description": "The content of the communication message."
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Description for the whole object"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Hypertext Reference of the Communication Message."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of Communication Message"
-                },
-                "logFlag": {
-                    "type": "boolean"
-                },
-                "priority": {
-                    "type": "string",
-                    "description": "The priority of the communication message.\nSmall number means higher priority."
-                },
-                "sendTime": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "The time of sending communication message."
-                },
-                "sendTimeComplete": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "The time of completion of sending communication message."
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Status of communication message"
-                },
-                "subject": {
-                    "type": "string",
-                    "description": "The title of the message. \nIt is necessary for the email and mobile app push."
-                },
-                "tryTimes": {
-                    "type": "integer"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "1: SMS\n2: Email\n3: Mobile app push notification"
-                },
-                "attachment": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "Attachment.schema.json/#definitions/Attachment"
-                    }
-                },
-                "receiver": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "Receiver.schema.json/#definitions/Receiver"
-                    }
-                },
-                "sender": {
-                    "$ref": "Sender.schema.json/#definitions/Sender"
-                },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "CommunicationRequestCharacteristic.schema.json/#definitions/CommunicationRequestCharacteristic"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "callbackFlag": {
+                            "type": "boolean"
+                        },
+                        "content": {
+                            "type": "string",
+                            "description": "The content of the communication message."
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "Description for the whole object"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Hypertext Reference of the Communication Message."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of Communication Message"
+                        },
+                        "logFlag": {
+                            "type": "boolean"
+                        },
+                        "priority": {
+                            "type": "string",
+                            "description": "The priority of the communication message.\nSmall number means higher priority."
+                        },
+                        "sendTime": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The time of sending communication message."
+                        },
+                        "sendTimeComplete": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The time of completion of sending communication message."
+                        },
+                        "status": {
+                            "type": "string",
+                            "description": "Status of communication message"
+                        },
+                        "subject": {
+                            "type": "string",
+                            "description": "The title of the message. \nIt is necessary for the email and mobile app push."
+                        },
+                        "tryTimes": {
+                            "type": "integer"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "1: SMS\n2: Email\n3: Mobile app push notification"
+                        },
+                        "attachment": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "Attachment.schema.json#Attachment"
+                            }
+                        },
+                        "receiver": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "Receiver.schema.json#Receiver"
+                            }
+                        },
+                        "sender": {
+                            "$ref": "Sender.schema.json#Sender"
+                        },
+                        "characteristic": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "CommunicationRequestCharacteristic.schema.json#CommunicationRequestCharacteristic"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

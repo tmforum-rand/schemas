@@ -4,21 +4,24 @@
     "title": "ExternalReference",
     "definitions": {
         "ExternalReference": {
+            "$id": "#ExternalReference",
             "description": "To manage touch points to external OTT identifiers for the individual or the organization (facebook, google+,...)",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "External reference"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Reference type"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "External reference"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Reference type"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

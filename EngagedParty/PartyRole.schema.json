@@ -4,86 +4,89 @@
     "title": "PartyRole",
     "definitions": {
         "PartyRole": {
+            "$id": "#PartyRole",
             "description": "The part played by a party in a given context.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Url used to reference the party role."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier for PartyRoles"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A word, term, or phrase by which the PartyRole is known and distinguished from other PartyRoles."
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Used to track the lifecycle status of the party role."
-                },
-                "statusReason": {
-                    "type": "string",
-                    "description": "A string providing an explanation on the value of the status lifecycle. For instance if the status is Rejected, statusReason will provide the reason for rejection."
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The time period that the PartyRole is valid for."
-                },
-                "engagedParty": {
-                    "$ref": "PartyRef.schema.json/#definitions/PartyRef"
-                },
-                "type": {
-                    "$ref": "RoleTypeRef.schema.json/#definitions/RoleTypeRef"
-                },
-                "account": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "AccountRef.schema.json/#definitions/AccountRef"
-                    }
-                },
-                "paymentMethod": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "PaymentMethodRef.schema.json/#definitions/PaymentMethodRef"
-                    }
-                },
-                "contactMedium": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/ContactMedium.schema.json/#definitions/ContactMedium"
-                    }
-                },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Characteristic.schema.json/#definitions/Characteristic"
-                    },
-                    "description": "Describes the characteristic of a party role."
-                },
-                "creditProfile": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/CreditProfile.schema.json/#definitions/CreditProfile"
-                    }
-                },
-                "agreement": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "AgreementRef.schema.json/#definitions/AgreementRef"
-                    }
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Url used to reference the party role."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier for PartyRoles"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A word, term, or phrase by which the PartyRole is known and distinguished from other PartyRoles."
+                        },
+                        "status": {
+                            "type": "string",
+                            "description": "Used to track the lifecycle status of the party role."
+                        },
+                        "statusReason": {
+                            "type": "string",
+                            "description": "A string providing an explanation on the value of the status lifecycle. For instance if the status is Rejected, statusReason will provide the reason for rejection."
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The time period that the PartyRole is valid for."
+                        },
+                        "engagedParty": {
+                            "$ref": "PartyRef.schema.json#PartyRef"
+                        },
+                        "type": {
+                            "$ref": "RoleTypeRef.schema.json#RoleTypeRef"
+                        },
+                        "account": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "AccountRef.schema.json#AccountRef"
+                            }
+                        },
+                        "paymentMethod": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
+                            }
+                        },
+                        "contactMedium": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                            }
+                        },
+                        "characteristic": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/Characteristic.schema.json#Characteristic"
+                            },
+                            "description": "Describes the characteristic of a party role."
+                        },
+                        "creditProfile": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Customer/CreditProfile.schema.json#CreditProfile"
+                            }
+                        },
+                        "agreement": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "AgreementRef.schema.json#AgreementRef"
+                            }
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

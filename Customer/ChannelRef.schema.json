@@ -4,29 +4,32 @@
     "title": "ChannelRef",
     "definitions": {
         "ChannelRef": {
+            "$id": "#ChannelRef",
             "description": "Channel(ChannelRef)The channel where the recommendation is used. May be online web, mobile app, social ,etc.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Hypertext Reference of the channel."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of channel"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the channel."
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Hypertext Reference of the channel."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of channel"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the channel."
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

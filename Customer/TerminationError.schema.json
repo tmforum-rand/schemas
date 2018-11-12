@@ -4,21 +4,24 @@
     "title": "TerminationError",
     "definitions": {
         "TerminationError": {
+            "$id": "#TerminationError",
             "description": "If qualifcationItem has not been done properly we indicate there the termination error(s).",
             "type": "object",
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the termination error"
-                },
-                "value": {
-                    "type": "string",
-                    "description": "Text to describe the termination error (Unable to proceed to qualification because incomplete information provided)"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the termination error"
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Text to describe the termination error (Unable to proceed to qualification because incomplete information provided)"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

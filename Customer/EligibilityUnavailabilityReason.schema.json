@@ -4,21 +4,24 @@
     "title": "EligibilityUnavailabilityReason",
     "definitions": {
         "EligibilityUnavailabilityReason": {
+            "$id": "#EligibilityUnavailabilityReason",
             "description": "Reason for eligibility result if the productOfferingQualification result is no (meaning the productOffering or productSpec is not available).",
             "type": "object",
-            "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "Unavailability reason code."
-                },
-                "label": {
-                    "type": "string",
-                    "description": "Unavailability reason label."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "code": {
+                            "type": "string",
+                            "description": "Unavailability reason code."
+                        },
+                        "label": {
+                            "type": "string",
+                            "description": "Unavailability reason label."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

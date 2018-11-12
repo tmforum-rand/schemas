@@ -4,15 +4,18 @@
     "title": "TokenizedCardMethod",
     "definitions": {
         "TokenizedCardMethod": {
+            "$id": "#TokenizedCardMethod",
             "type": "object",
-            "properties": {
-                "details": {
-                    "$ref": "TokenizedCardDetails.schema.json/#definitions/TokenizedCardDetails"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "details": {
+                            "$ref": "TokenizedCardDetails.schema.json#TokenizedCardDetails"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

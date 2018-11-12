@@ -4,29 +4,32 @@
     "title": "OrganizationParentRelationship",
     "definitions": {
         "OrganizationParentRelationship": {
+            "$id": "#OrganizationParentRelationship",
             "description": "Represents the links between organizations: useful to describe an organization structure between headquarters, affiliates,... It indicates the parent of the organization.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the parent organization"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the parent organization"
-                },
-                "relationshipType": {
-                    "type": "string",
-                    "description": "Juridical, hierarchical, geographical, functional..."
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The time period the relationship is valid"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the parent organization"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the parent organization"
+                        },
+                        "relationshipType": {
+                            "type": "string",
+                            "description": "Juridical, hierarchical, geographical, functional..."
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The time period the relationship is valid"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

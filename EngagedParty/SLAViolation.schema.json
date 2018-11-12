@@ -4,34 +4,37 @@
     "title": "SLAViolation",
     "definitions": {
         "SLAViolation": {
+            "$id": "#SLAViolation",
             "type": "object",
-            "properties": {
-                "date": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "href": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                    }
-                },
-                "violation": {
-                    "$ref": "Violation.schema.json/#definitions/Violation"
-                },
-                "sla": {
-                    "$ref": "SLARef.schema.json/#definitions/SLARef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "date": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "href": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        },
+                        "violation": {
+                            "$ref": "Violation.schema.json#Violation"
+                        },
+                        "sla": {
+                            "$ref": "SLARef.schema.json#SLARef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

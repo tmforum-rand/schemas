@@ -4,31 +4,34 @@
     "title": "AlternateProductOfferingProposal",
     "definitions": {
         "AlternateProductOfferingProposal": {
+            "$id": "#AlternateProductOfferingProposal",
             "description": "Alternate product Offering proposal is used when the requested product offering is not available with characteristic and date asked for. An alternate proposal could be a distinct product offering or product Spec close to requested one or same as requested but with a different activation date.",
             "type": "object",
-            "properties": {
-                "alternateActivationDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Alternat activation date in case seller is not able to meet requested expected activation date."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Identifier of a alternate propud offering proposal"
-                },
-                "alternateProductSpecification": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductSpecificationRef.schema.json/#definitions/ProductSpecificationRef"
-                    }
-                },
-                "alternateProductOffering": {
-                    "$ref": "ProductOfferingRef.schema.json/#definitions/ProductOfferingRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "alternateActivationDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Alternat activation date in case seller is not able to meet requested expected activation date."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Identifier of a alternate propud offering proposal"
+                        },
+                        "alternateProductSpecification": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                            }
+                        },
+                        "alternateProductOffering": {
+                            "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

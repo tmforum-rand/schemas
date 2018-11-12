@@ -4,11 +4,14 @@
     "title": "AlternateGeographicAddress",
     "definitions": {
         "AlternateGeographicAddress": {
+            "$id": "#AlternateGeographicAddress",
             "type": "object",
-            "properties": {},
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {}
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

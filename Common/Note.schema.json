@@ -4,26 +4,29 @@
     "title": "Note",
     "definitions": {
         "Note": {
+            "$id": "#Note",
             "description": "Extra information about a given entity",
             "type": "object",
-            "properties": {
-                "author": {
-                    "type": "string",
-                    "description": "Author of the note"
-                },
-                "date": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date of the note"
-                },
-                "text": {
-                    "type": "string",
-                    "description": "Text of the note"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "author": {
+                            "type": "string",
+                            "description": "Author of the note"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date of the note"
+                        },
+                        "text": {
+                            "type": "string",
+                            "description": "Text of the note"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

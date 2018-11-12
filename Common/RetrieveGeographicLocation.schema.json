@@ -4,35 +4,38 @@
     "title": "RetrieveGeographicLocation",
     "definitions": {
         "RetrieveGeographicLocation": {
+            "$id": "#RetrieveGeographicLocation",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "requestedAccuracy": {
-                    "type": "number",
-                    "format": "float"
-                },
-                "status": {
-                    "type": "string"
-                },
-                "time": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "geographicLocation": {
-                    "$ref": "GeographicLocation.schema.json/#definitions/GeographicLocation"
-                },
-                "thing": {
-                    "$ref": "Object.schema.json/#definitions/Object"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "requestedAccuracy": {
+                            "type": "number",
+                            "format": "float"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "time": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "geographicLocation": {
+                            "$ref": "GeographicLocation.schema.json#GeographicLocation"
+                        },
+                        "thing": {
+                            "$ref": "Object.schema.json#Object"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

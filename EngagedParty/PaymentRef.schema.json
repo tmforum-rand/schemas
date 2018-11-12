@@ -4,29 +4,32 @@
     "title": "PaymentRef",
     "definitions": {
         "PaymentRef": {
+            "$id": "#PaymentRef",
             "description": "If an immediate payment has been done at the product order submission, the payment information are captured and stored (as a reference) in the order.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Hyperlink to access to a payment"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Identifier of a payment"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A name for the payment"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Hyperlink to access to a payment"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Identifier of a payment"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A name for the payment"
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,11 +4,14 @@
     "title": "Customer",
     "definitions": {
         "Customer": {
+            "$id": "#Customer",
             "type": "object",
-            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {}
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

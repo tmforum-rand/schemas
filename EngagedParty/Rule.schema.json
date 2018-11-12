@@ -4,33 +4,36 @@
     "title": "Rule",
     "definitions": {
         "Rule": {
+            "$id": "#Rule",
             "type": "object",
-            "properties": {
-                "consequence": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "metric": {
-                    "type": "string"
-                },
-                "operator": {
-                    "type": "string"
-                },
-                "referenceValue": {
-                    "type": "string"
-                },
-                "tolerance": {
-                    "type": "string"
-                },
-                "unit": {
-                    "type": "string"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "consequence": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "metric": {
+                            "type": "string"
+                        },
+                        "operator": {
+                            "type": "string"
+                        },
+                        "referenceValue": {
+                            "type": "string"
+                        },
+                        "tolerance": {
+                            "type": "string"
+                        },
+                        "unit": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

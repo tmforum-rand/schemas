@@ -4,32 +4,35 @@
     "title": "Sender",
     "definitions": {
         "Sender": {
+            "$id": "#Sender",
             "description": "Sender of the communication message.",
             "type": "object",
-            "properties": {
-                "email": {
-                    "type": "string",
-                    "description": "Sender address of email, if the communication type is email"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "ID of the sender"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the sender"
-                },
-                "phoneNumber": {
-                    "type": "string",
-                    "description": "Phone number of the sender, if the communication type is SMS."
-                },
-                "party": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "email": {
+                            "type": "string",
+                            "description": "Sender address of email, if the communication type is email"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "ID of the sender"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the sender"
+                        },
+                        "phoneNumber": {
+                            "type": "string",
+                            "description": "Phone number of the sender, if the communication type is SMS."
+                        },
+                        "party": {
+                            "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,19 +4,22 @@
     "title": "Quantity",
     "definitions": {
         "Quantity": {
+            "$id": "#Quantity",
             "type": "object",
-            "properties": {
-                "amount": {
-                    "type": "number",
-                    "format": "float"
-                },
-                "units": {
-                    "type": "string"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "amount": {
+                            "type": "number",
+                            "format": "float"
+                        },
+                        "units": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

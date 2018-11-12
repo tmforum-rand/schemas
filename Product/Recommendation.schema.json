@@ -4,63 +4,66 @@
     "title": "Recommendation",
     "definitions": {
         "Recommendation": {
+            "$id": "#Recommendation",
             "description": "Recommendation API is used to recommend offering quickly based on the history and real-time context of customer. It is a real-time and personalized recommendation API. It is usually provided by e-commerce or BSS, CRM system in omni-channel.",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Hypertext Reference of the recommendation."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of recommendation"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of recommendation"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of recommendation.\nThe basic type is :\n¡®AD¡¯: it means the recommendation is the advertisement for display\n¡®OFFER¡¯: it means the recommended content is the offer entry page. By clicking it, the user can be forwarded to the details of the offering"
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The period in which the recommendation is valid."
-                },
-                "order": {
-                    "$ref": "ProductOrderRef.schema.json/#definitions/ProductOrderRef"
-                },
-                "location": {
-                    "$ref": "../Common/GeographicLocationRef.schema.json/#definitions/GeographicLocationRef",
-                    "description": "The geographic location which the recommendation is related with"
-                },
-                "channel": {
-                    "$ref": "../Customer/ChannelRef.schema.json/#definitions/ChannelRef"
-                },
-                "category": {
-                    "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef",
-                    "description": "The category for grouping recommendations"
-                },
-                "shoppingCart": {
-                    "$ref": "../Customer/ShoppingCartRef.schema.json/#definitions/ShoppingCartRef",
-                    "description": "The shopping cart which the recommendation is related with."
-                },
-                "party": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                },
-                "item": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "RecommendationItem.schema.json/#definitions/RecommendationItem"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Hypertext Reference of the recommendation."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of recommendation"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of recommendation"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of recommendation.\nThe basic type is :\n¡®AD¡¯: it means the recommendation is the advertisement for display\n¡®OFFER¡¯: it means the recommended content is the offer entry page. By clicking it, the user can be forwarded to the details of the offering"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period in which the recommendation is valid."
+                        },
+                        "order": {
+                            "$ref": "ProductOrderRef.schema.json#ProductOrderRef"
+                        },
+                        "location": {
+                            "$ref": "../Common/GeographicLocationRef.schema.json#GeographicLocationRef",
+                            "description": "The geographic location which the recommendation is related with"
+                        },
+                        "channel": {
+                            "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                        },
+                        "category": {
+                            "$ref": "../Customer/CategoryRef.schema.json#CategoryRef",
+                            "description": "The category for grouping recommendations"
+                        },
+                        "shoppingCart": {
+                            "$ref": "../Customer/ShoppingCartRef.schema.json#ShoppingCartRef",
+                            "description": "The shopping cart which the recommendation is related with."
+                        },
+                        "party": {
+                            "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        },
+                        "item": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "RecommendationItem.schema.json#RecommendationItem"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

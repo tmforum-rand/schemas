@@ -4,23 +4,26 @@
     "title": "Incident",
     "definitions": {
         "Incident": {
+            "$id": "#Incident",
             "description": "An Incident is a record of an event that has altered the operational state of a entity (Resource, Service or Customer's \nProduct).",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "The description of the incident."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "The name of the incident."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "The description of the incident."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the incident."
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }
     }
-}\n
+}

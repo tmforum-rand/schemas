@@ -4,12 +4,15 @@
     "title": "AppliedPartyBillingRate",
     "definitions": {
         "AppliedPartyBillingRate": {
+            "$id": "#AppliedPartyBillingRate",
             "description": "An applied billing rate presented on a party bill. It is created before or during the billing process.",
             "type": "object",
-            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {}
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

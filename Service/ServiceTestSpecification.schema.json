@@ -4,42 +4,45 @@
     "title": "ServiceTestSpecification",
     "definitions": {
         "ServiceTestSpecification": {
+            "$id": "#ServiceTestSpecification",
             "description": "The service test specification describes the service test in terms of parameters to be configured and \nmeasures to be taken.",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "Description of a service test specification."
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Hyperlink to access a service test specification."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Identifier of a service test specification."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of a service test specification."
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "A valid duration of a thing."
-                },
-                "testMeasureDefinition": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestMeasureDefinition.schema.json/#definitions/TestMeasureDefinition"
-                    }
-                },
-                "relatedServiceSpecification": {
-                    "$ref": "RelatedServiceSpecificationRef.schema.json/#definitions/RelatedServiceSpecificationRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "Description of a service test specification."
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Hyperlink to access a service test specification."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Identifier of a service test specification."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of a service test specification."
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "A valid duration of a thing."
+                        },
+                        "testMeasureDefinition": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "TestMeasureDefinition.schema.json#TestMeasureDefinition"
+                            }
+                        },
+                        "relatedServiceSpecification": {
+                            "$ref": "RelatedServiceSpecificationRef.schema.json#RelatedServiceSpecificationRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

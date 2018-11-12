@@ -4,19 +4,22 @@
     "title": "ResourceOrderItemRelationship",
     "definitions": {
         "ResourceOrderItemRelationship": {
+            "$id": "#ResourceOrderItemRelationship",
             "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "description": "Type of the order item relationship"
-                },
-                "orderItem": {
-                    "$ref": "ResourceOrderItemRef.schema.json/#definitions/ResourceOrderItemRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "description": "Type of the order item relationship"
+                        },
+                        "orderItem": {
+                            "$ref": "ResourceOrderItemRef.schema.json#ResourceOrderItemRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

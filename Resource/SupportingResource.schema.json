@@ -4,24 +4,27 @@
     "title": "SupportingResource",
     "definitions": {
         "SupportingResource": {
+            "$id": "#SupportingResource",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the supporting resource"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the supporting resource"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the resource supporting the service"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the supporting resource"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the supporting resource"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the resource supporting the service"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

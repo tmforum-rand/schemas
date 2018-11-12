@@ -4,21 +4,24 @@
     "title": "CommunicationRequestCharacteristic",
     "definitions": {
         "CommunicationRequestCharacteristic": {
+            "$id": "#CommunicationRequestCharacteristic",
             "description": "The values of parameters which are used in the content if the content contains them.",
             "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Content parameter identifier"
-                },
-                "value": {
-                    "type": "string",
-                    "description": "Content parameter value"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Content parameter identifier"
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Content parameter value"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

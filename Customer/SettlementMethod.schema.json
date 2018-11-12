@@ -4,21 +4,24 @@
     "title": "SettlementMethod",
     "definitions": {
         "SettlementMethod": {
+            "$id": "#SettlementMethod",
             "description": "Is the way in which the CSP provides the payment",
             "type": "object",
-            "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "Code of the settlement method"
-                },
-                "label": {
-                    "type": "string",
-                    "description": "A word, term or phrase by which a settlement method is known and distinguished from other settlement method"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "code": {
+                            "type": "string",
+                            "description": "Code of the settlement method"
+                        },
+                        "label": {
+                            "type": "string",
+                            "description": "A word, term or phrase by which a settlement method is known and distinguished from other settlement method"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

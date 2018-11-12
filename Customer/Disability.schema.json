@@ -4,17 +4,20 @@
     "title": "Disability",
     "definitions": {
         "Disability": {
+            "$id": "#Disability",
             "description": "Lack or inadequate strength or ability",
             "type": "object",
-            "properties": {
-                "disability": {
-                    "type": "string",
-                    "description": "Physical or mental handicap"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "disability": {
+                            "type": "string",
+                            "description": "Physical or mental handicap"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

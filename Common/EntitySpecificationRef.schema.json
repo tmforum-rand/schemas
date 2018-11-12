@@ -4,33 +4,36 @@
     "title": "EntitySpecificationRef",
     "definitions": {
         "EntitySpecificationRef": {
+            "$id": "#EntitySpecificationRef",
             "description": "reference to an EntitySpecification object",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Hyperlink reference to the target EntitySpecification"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "reference id to the target EntitySpecification"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name given to the EntitySpecification"
-                },
-                "version": {
-                    "type": "string",
-                    "description": "EntitySpecification version"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Hyperlink reference to the target EntitySpecification"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "reference id to the target EntitySpecification"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name given to the EntitySpecification"
+                        },
+                        "version": {
+                            "type": "string",
+                            "description": "EntitySpecification version"
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

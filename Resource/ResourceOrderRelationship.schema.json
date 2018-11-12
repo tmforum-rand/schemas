@@ -4,22 +4,25 @@
     "title": "ResourceOrderRelationship",
     "definitions": {
         "ResourceOrderRelationship": {
+            "$id": "#ResourceOrderRelationship",
             "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "description": "The type of related order item, can be:\n\n \n \"dependency\" if the order item needs to be \"not started\" until another order item is complete \n \"cross-reference\" to keep track of the source order (service order)\n\n\n\n\n \n \n\n\n\n"
-                },
-                "resourceOrder": {
-                    "$ref": "ResourceOrderRef.schema.json/#definitions/ResourceOrderRef"
-                },
-                "serviceOrder": {
-                    "$ref": "../Service/ServiceOrderRef.schema.json/#definitions/ServiceOrderRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "description": "The type of related order item, can be:\n\n \n \"dependency\" if the order item needs to be \"not started\" until another order item is complete \n \"cross-reference\" to keep track of the source order (service order)\n\n\n\n\n \n \n\n\n\n"
+                        },
+                        "resourceOrder": {
+                            "$ref": "ResourceOrderRef.schema.json#ResourceOrderRef"
+                        },
+                        "serviceOrder": {
+                            "$ref": "../Service/ServiceOrderRef.schema.json#ServiceOrderRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

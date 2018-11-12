@@ -4,33 +4,36 @@
     "title": "AgreementSpecificationRef",
     "definitions": {
         "AgreementSpecificationRef": {
+            "$id": "#AgreementSpecificationRef",
             "description": "AgreementSpecification reference. An AgreementSpecification represents a template of an agreement that can be used when establishing partnerships.",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "A narrative that explains in detail what the agreement specification is about."
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference URL of the agreement specification"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the agreement specification"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the agreement specification"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "A narrative that explains in detail what the agreement specification is about."
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Reference URL of the agreement specification"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the agreement specification"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the agreement specification"
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

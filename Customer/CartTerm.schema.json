@@ -4,21 +4,24 @@
     "title": "CartTerm",
     "definitions": {
         "CartTerm": {
+            "$id": "#CartTerm",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string"
-                },
-                "duration": {
-                    "$ref": "../Common/Quantity.schema.json/#definitions/Quantity"
-                },
-                "name": {
-                    "type": "string"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string"
+                        },
+                        "duration": {
+                            "$ref": "../Common/Quantity.schema.json#Quantity"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

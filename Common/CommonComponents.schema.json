@@ -4,7 +4,7 @@
     "title": "CommonComponents",
     "definitions": {
         "polymorphicPattern": {
-            "$id": "#definitions/polymorphicPattern",
+            "$id": "#polymorphicPattern",
             "type": "object",
             "properties": {
                 "@schemaLocation": {

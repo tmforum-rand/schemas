@@ -4,20 +4,23 @@
     "title": "DocumentCharacteristic",
     "definitions": {
         "DocumentCharacteristic": {
+            "$id": "#DocumentCharacteristic",
             "description": "is a list of name value pairs that define the document characteristics.",
             "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "name of the characteristic"
-                },
-                "value": {
-                    "type": "string"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "name of the characteristic"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

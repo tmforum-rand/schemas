@@ -4,12 +4,15 @@
     "title": "FinancialAccount",
     "definitions": {
         "FinancialAccount": {
+            "$id": "#FinancialAccount",
             "description": "An account of money owed by a party to another entity in exchange for goods or services that have been delivered or used. A financial (account receivable account/account payable) aggregates the amounts of one or more party accounts (billing or settlement) owned by a given party.",
             "type": "object",
-            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {}
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

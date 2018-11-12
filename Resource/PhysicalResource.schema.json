@@ -4,30 +4,33 @@
     "title": "PhysicalResource",
     "definitions": {
         "PhysicalResource": {
+            "$id": "#PhysicalResource",
             "description": "Physical resource is a type of resource that describes the common set of attributes shared by all concrete physical resources (e.g. EQUIPMENT) in the inventory.",
             "type": "object",
-            "properties": {
-                "manufactureDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "This is a string attribute that defines the date of manufacture of this item in the fixed format \"dd/mm/yyyy\". This is an optional attribute."
-                },
-                "powerState": {
-                    "type": "string",
-                    "description": "This defines the current power status of the hardware item. Values include:\n\n  0:  Unknown\n  1:  Not Applicable\n  2:  No Power Applied\n  3: Full Power Applied\n  4:  Power Save - Normal\n  5:  Power Save - Degraded\n  6:  Power Save - Standby\n  7:  Power Save - Critical\n  8:  Power Save - Low Power Mode\n  9:  Power Save - Unknown\n 10: Power Cycle\n 11: Power Warning\n 12: Power Off"
-                },
-                "serialNumber": {
-                    "type": "string",
-                    "description": "This is a string that represents a manufacturer-allocated number used to identify different instances of the same hardware item. The ModelNumber and PartNumber attributes are used to identify different types of hardware items. This is a REQUIRED attribute."
-                },
-                "versionNumber": {
-                    "type": "string",
-                    "description": "This is a string that identifies the version of this object. This is an optional attribute."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "manufactureDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "This is a string attribute that defines the date of manufacture of this item in the fixed format \"dd/mm/yyyy\". This is an optional attribute."
+                        },
+                        "powerState": {
+                            "type": "string",
+                            "description": "This defines the current power status of the hardware item. Values include:\n\n  0:  Unknown\n  1:  Not Applicable\n  2:  No Power Applied\n  3: Full Power Applied\n  4:  Power Save - Normal\n  5:  Power Save - Degraded\n  6:  Power Save - Standby\n  7:  Power Save - Critical\n  8:  Power Save - Low Power Mode\n  9:  Power Save - Unknown\n 10: Power Cycle\n 11: Power Warning\n 12: Power Off"
+                        },
+                        "serialNumber": {
+                            "type": "string",
+                            "description": "This is a string that represents a manufacturer-allocated number used to identify different instances of the same hardware item. The ModelNumber and PartNumber attributes are used to identify different types of hardware items. This is a REQUIRED attribute."
+                        },
+                        "versionNumber": {
+                            "type": "string",
+                            "description": "This is a string that identifies the version of this object. This is an optional attribute."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

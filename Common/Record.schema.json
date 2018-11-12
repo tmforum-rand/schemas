@@ -4,26 +4,29 @@
     "title": "Record",
     "definitions": {
         "Record": {
+            "$id": "#Record",
             "description": "A record in a worklog.",
             "type": "object",
-            "properties": {
-                "dateTime": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "The date time that a record is generated."
-                },
-                "description": {
-                    "type": "string",
-                    "description": "The detail description in a record."
-                },
-                "supportPerson": {
-                    "type": "string",
-                    "description": "The person who logged that record."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "dateTime": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The date time that a record is generated."
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "The detail description in a record."
+                        },
+                        "supportPerson": {
+                            "type": "string",
+                            "description": "The person who logged that record."
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,52 +4,55 @@
     "title": "Promotion",
     "definitions": {
         "Promotion": {
+            "$id": "#Promotion",
             "description": "Promotion Resource is used to provide the additional discount, voucher, bonus or gift to the customer who meets the pre-defined criteria. Using promotion, the enterprise is able to attract the users and encourage more consumption, especially continuous purchases.   Normally Promotion is not regarded as one type of product or product offering. It is often applied when the customer buys the product offerings with the price or amount surpassing the certain limit.",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "Description of Promotion"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Hyperlink to access the promotion."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of Promotion."
-                },
-                "lastUpdate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Latest update date of Promotion"
-                },
-                "lifecycleStatus": {
-                    "type": "string",
-                    "description": "Status of Promotion, including draft/Test/WaitForApproval/Release/Suspend/Retirement."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of Promotion."
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of promotion.The basic type is Award/Discount/Reduction. More types can be extended in future."
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The period for which the promotion is valid."
-                },
-                "pattern": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "PromotionPattern.schema.json/#definitions/PromotionPattern"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "Description of Promotion"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Hyperlink to access the promotion."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of Promotion."
+                        },
+                        "lastUpdate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Latest update date of Promotion"
+                        },
+                        "lifecycleStatus": {
+                            "type": "string",
+                            "description": "Status of Promotion, including draft/Test/WaitForApproval/Release/Suspend/Retirement."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of Promotion."
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of promotion.The basic type is Award/Discount/Reduction. More types can be extended in future."
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the promotion is valid."
+                        },
+                        "pattern": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "PromotionPattern.schema.json#PromotionPattern"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

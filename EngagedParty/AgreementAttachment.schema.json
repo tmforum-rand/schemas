@@ -4,29 +4,32 @@
     "title": "AgreementAttachment",
     "definitions": {
         "AgreementAttachment": {
+            "$id": "#AgreementAttachment",
             "description": "Represents a complementary piece of information to describe the agreement. Could be a document, picture, a video or any kind of multimedia content.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the attachment"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the attachment"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Attachment type such as video, picture"
-                },
-                "url": {
-                    "type": "string",
-                    "description": "Uniform Resource Locator, is a web page address (a subset of URI)"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the attachment"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the attachment"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Attachment type such as video, picture"
+                        },
+                        "url": {
+                            "type": "string",
+                            "description": "Uniform Resource Locator, is a web page address (a subset of URI)"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

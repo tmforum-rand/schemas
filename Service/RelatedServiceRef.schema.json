@@ -4,29 +4,32 @@
     "title": "RelatedServiceRef",
     "definitions": {
         "RelatedServiceRef": {
+            "$id": "#RelatedServiceRef",
             "description": "The service of the service test",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Hyperlink to access a service."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Identifier of a service."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A name to describe a service."
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Hyperlink to access a service."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Identifier of a service."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A name to describe a service."
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

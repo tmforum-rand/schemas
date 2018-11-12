@@ -4,58 +4,61 @@
     "title": "Catalog",
     "definitions": {
         "Catalog": {
+            "$id": "#Catalog",
             "description": "Is a collection of Product Offerings, intended for a specific DistributionChannel, enhanced with additional information such as SLA parameters, invoicing and shipping details.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Unique reference of the catalog"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the Catalog"
-                },
-                "lastUpdate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date and time of the last update"
-                },
-                "lifecycleStatus": {
-                    "type": "string",
-                    "description": "Used to indicate the current lifecycle status"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the catalog"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Indicates if the catalog is a product, service or resource catalog"
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The period for which the catalog is valid"
-                },
-                "version": {
-                    "type": "string",
-                    "description": "Catalog version"
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                    }
-                },
-                "category": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Unique reference of the catalog"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the Catalog"
+                        },
+                        "lastUpdate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date and time of the last update"
+                        },
+                        "lifecycleStatus": {
+                            "type": "string",
+                            "description": "Used to indicate the current lifecycle status"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the catalog"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Indicates if the catalog is a product, service or resource catalog"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the catalog is valid"
+                        },
+                        "version": {
+                            "type": "string",
+                            "description": "Catalog version"
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        },
+                        "category": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

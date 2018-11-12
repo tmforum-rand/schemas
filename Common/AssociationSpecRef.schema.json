@@ -4,25 +4,28 @@
     "title": "AssociationSpecRef",
     "definitions": {
         "AssociationSpecRef": {
+            "$id": "#AssociationSpecRef",
             "description": "reference to an AssociationSpecification object",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Hyperlink reference to the target AssociationSpecification"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "reference id to the target AssociationSpecification"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Hyperlink reference to the target AssociationSpecification"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "reference id to the target AssociationSpecification"
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

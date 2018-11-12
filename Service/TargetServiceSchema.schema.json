@@ -4,11 +4,14 @@
     "title": "TargetServiceSchema",
     "definitions": {
         "TargetServiceSchema": {
+            "$id": "#TargetServiceSchema",
             "type": "object",
-            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {}
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

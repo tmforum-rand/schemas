@@ -4,24 +4,27 @@
     "title": "ServiceCharacteristic",
     "definitions": {
         "ServiceCharacteristic": {
+            "$id": "#ServiceCharacteristic",
             "description": "is a list of name value pairs that define the service characteristics",
             "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Name of the characteristic"
-                },
-                "valueType": {
-                    "type": "string",
-                    "description": "Value of the characteristic"
-                },
-                "value": {
-                    "$ref": "../Common/Value.schema.json/#definitions/Value"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the characteristic"
+                        },
+                        "valueType": {
+                            "type": "string",
+                            "description": "Value of the characteristic"
+                        },
+                        "value": {
+                            "$ref": "../Common/Value.schema.json#Value"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

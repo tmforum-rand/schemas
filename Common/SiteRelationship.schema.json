@@ -4,32 +4,35 @@
     "title": "SiteRelationship",
     "definitions": {
         "SiteRelationship": {
+            "$id": "#SiteRelationship",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the related site"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the related site entity within the server"
-                },
-                "role": {
-                    "type": "string",
-                    "description": "Role of the related site in the relationship"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of relationship"
-                },
-                "validFor": {
-                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "Validity for the relationship"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the related site"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the related site entity within the server"
+                        },
+                        "role": {
+                            "type": "string",
+                            "description": "Role of the related site in the relationship"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of relationship"
+                        },
+                        "validFor": {
+                            "$ref": "TimePeriod.schema.json#TimePeriod",
+                            "description": "Validity for the relationship"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,34 +4,37 @@
     "title": "CheckDetails",
     "definitions": {
         "CheckDetails": {
+            "$id": "#CheckDetails",
             "description": "Detailed information of a check",
             "type": "object",
-            "properties": {
-                "bank": {
-                    "type": "string",
-                    "description": "Bank performing the payment of the check"
-                },
-                "code": {
-                    "type": "string",
-                    "description": "Unique identifier of the check"
-                },
-                "date": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date when the check was signed"
-                },
-                "drawer": {
-                    "type": "string",
-                    "description": "Person or entity writing the check"
-                },
-                "payee": {
-                    "type": "string",
-                    "description": "Person or entity the check is addressed to"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "bank": {
+                            "type": "string",
+                            "description": "Bank performing the payment of the check"
+                        },
+                        "code": {
+                            "type": "string",
+                            "description": "Unique identifier of the check"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date when the check was signed"
+                        },
+                        "drawer": {
+                            "type": "string",
+                            "description": "Person or entity writing the check"
+                        },
+                        "payee": {
+                            "type": "string",
+                            "description": "Person or entity the check is addressed to"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

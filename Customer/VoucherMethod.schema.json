@@ -4,15 +4,18 @@
     "title": "VoucherMethod",
     "definitions": {
         "VoucherMethod": {
+            "$id": "#VoucherMethod",
             "type": "object",
-            "properties": {
-                "details": {
-                    "$ref": "VoucherDetails.schema.json/#definitions/VoucherDetails"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "details": {
+                            "$ref": "VoucherDetails.schema.json#VoucherDetails"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

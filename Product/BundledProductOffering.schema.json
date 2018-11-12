@@ -4,29 +4,32 @@
     "title": "BundledProductOffering",
     "definitions": {
         "BundledProductOffering": {
+            "$id": "#BundledProductOffering",
             "description": "A type of ProductOffering that belongs to a grouping of ProductOfferings made available to the market. It inherits of all attributes of ProductOffering.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Unique reference of the BundledProductOffering"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the BundledProductOffering"
-                },
-                "lifecycleStatus": {
-                    "type": "string",
-                    "description": "Used to indicate the current lifecycle status"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the BundledProductOffering"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Unique reference of the BundledProductOffering"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the BundledProductOffering"
+                        },
+                        "lifecycleStatus": {
+                            "type": "string",
+                            "description": "Used to indicate the current lifecycle status"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the BundledProductOffering"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

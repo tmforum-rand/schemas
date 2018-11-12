@@ -4,29 +4,32 @@
     "title": "Place",
     "definitions": {
         "Place": {
+            "$id": "#Place",
             "description": "Place reference. Place defines the places where the products are sold or delivered.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Unique reference of the place"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the place"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A user-friendly name for the place, such as \"Paris Store\", \"London Store\", \"Main Home\""
-                },
-                "role": {
-                    "type": "string",
-                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Unique reference of the place"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the place"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A user-friendly name for the place, such as \"Paris Store\", \"London Store\", \"Main Home\""
+                        },
+                        "role": {
+                            "type": "string",
+                            "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

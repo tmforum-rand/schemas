@@ -4,108 +4,111 @@
     "title": "ProductOffering",
     "definitions": {
         "ProductOffering": {
+            "$id": "#ProductOffering",
             "description": "Represents entities that are orderable from the provider of the catalog, this resource includes pricing information.",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "Description of the productOffering"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the ProductOffering"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the productOffering"
-                },
-                "isBundle": {
-                    "type": "boolean",
-                    "description": "isBundle determines whether a productOffering represents a single productOffering (false), or a bundle of productOfferings (true)."
-                },
-                "lastUpdate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date and time of the last update"
-                },
-                "lifecycleStatus": {
-                    "type": "string",
-                    "description": "Used to indicate the current lifecycle status"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the productOffering"
-                },
-                "statusReason": {
-                    "type": "string",
-                    "description": "A string providing a complementary information on the value of the lifecycle status attribute."
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The period for which the productOffering is valid"
-                },
-                "version": {
-                    "type": "string",
-                    "description": "ProductOffering version"
-                },
-                "place": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Place.schema.json/#definitions/Place"
-                    }
-                },
-                "serviceLevelAgreement": {
-                    "$ref": "../EngagedParty/SLARef.schema.json/#definitions/SLARef"
-                },
-                "productSpecification": {
-                    "$ref": "ProductSpecificationRef.schema.json/#definitions/ProductSpecificationRef"
-                },
-                "channel": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/Channel.schema.json/#definitions/Channel"
-                    }
-                },
-                "serviceCandidate": {
-                    "$ref": "../Service/ServiceCandidateRef.schema.json/#definitions/ServiceCandidateRef"
-                },
-                "category": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef"
-                    }
-                },
-                "resourceCandidate": {
-                    "$ref": "../Resource/ResourceCandidateRef.schema.json/#definitions/ResourceCandidateRef"
-                },
-                "productOfferingTerm": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductOfferingTerm.schema.json/#definitions/ProductOfferingTerm"
-                    }
-                },
-                "productOfferingPrice": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductOfferingPrice.schema.json/#definitions/ProductOfferingPrice"
-                    }
-                },
-                "agreement": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json/#definitions/AgreementRef"
-                    }
-                },
-                "bundledProductOffering": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "BundledProductOffering.schema.json/#definitions/BundledProductOffering"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "Description of the productOffering"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the ProductOffering"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the productOffering"
+                        },
+                        "isBundle": {
+                            "type": "boolean",
+                            "description": "isBundle determines whether a productOffering represents a single productOffering (false), or a bundle of productOfferings (true)."
+                        },
+                        "lastUpdate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date and time of the last update"
+                        },
+                        "lifecycleStatus": {
+                            "type": "string",
+                            "description": "Used to indicate the current lifecycle status"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the productOffering"
+                        },
+                        "statusReason": {
+                            "type": "string",
+                            "description": "A string providing a complementary information on the value of the lifecycle status attribute."
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the productOffering is valid"
+                        },
+                        "version": {
+                            "type": "string",
+                            "description": "ProductOffering version"
+                        },
+                        "place": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/Place.schema.json#Place"
+                            }
+                        },
+                        "serviceLevelAgreement": {
+                            "$ref": "../EngagedParty/SLARef.schema.json#SLARef"
+                        },
+                        "productSpecification": {
+                            "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                        },
+                        "channel": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Customer/Channel.schema.json#Channel"
+                            }
+                        },
+                        "serviceCandidate": {
+                            "$ref": "../Service/ServiceCandidateRef.schema.json#ServiceCandidateRef"
+                        },
+                        "category": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                            }
+                        },
+                        "resourceCandidate": {
+                            "$ref": "../Resource/ResourceCandidateRef.schema.json#ResourceCandidateRef"
+                        },
+                        "productOfferingTerm": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ProductOfferingTerm.schema.json#ProductOfferingTerm"
+                            }
+                        },
+                        "productOfferingPrice": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ProductOfferingPrice.schema.json#ProductOfferingPrice"
+                            }
+                        },
+                        "agreement": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                            }
+                        },
+                        "bundledProductOffering": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "BundledProductOffering.schema.json#BundledProductOffering"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,46 +4,49 @@
     "title": "BankCardDetails",
     "definitions": {
         "BankCardDetails": {
+            "$id": "#BankCardDetails",
             "description": "Detailed information for a bank card",
             "type": "object",
-            "properties": {
-                "bank": {
-                    "type": "string",
-                    "description": "Bank that issued the card"
-                },
-                "brand": {
-                    "type": "string",
-                    "description": "Card brand. E.g.: Visa, MasterCard, AmericanExpress."
-                },
-                "cardNumber": {
-                    "type": "string",
-                    "description": "Credit card number"
-                },
-                "cvv": {
-                    "type": "string",
-                    "description": "security code (e.g.: CVV, CVV2) of the card"
-                },
-                "expirationDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Expiration date of the card"
-                },
-                "lastFourDiguts": {
-                    "type": "string",
-                    "description": "Last four digits of the credit card"
-                },
-                "nameOnCard": {
-                    "type": "string",
-                    "description": "Name on the card"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of the card (e.g.: Credit, debit...)"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "bank": {
+                            "type": "string",
+                            "description": "Bank that issued the card"
+                        },
+                        "brand": {
+                            "type": "string",
+                            "description": "Card brand. E.g.: Visa, MasterCard, AmericanExpress."
+                        },
+                        "cardNumber": {
+                            "type": "string",
+                            "description": "Credit card number"
+                        },
+                        "cvv": {
+                            "type": "string",
+                            "description": "security code (e.g.: CVV, CVV2) of the card"
+                        },
+                        "expirationDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Expiration date of the card"
+                        },
+                        "lastFourDiguts": {
+                            "type": "string",
+                            "description": "Last four digits of the credit card"
+                        },
+                        "nameOnCard": {
+                            "type": "string",
+                            "description": "Name on the card"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of the card (e.g.: Credit, debit...)"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,119 +4,122 @@
     "title": "Service",
     "definitions": {
         "Service": {
+            "$id": "#Service",
             "description": "Service is an abstract base class for defining the Service hierarchy. All Services are characterized as either being possibly visible and usable by a Customer or not. This gives rise to the two subclasses of Service: CustomerFacingService and ResourceFacingService.",
             "type": "object",
-            "properties": {
-                "category": {
-                    "type": "string",
-                    "description": "Is it a customer facing or resource facing service"
-                },
-                "description": {
-                    "type": "string",
-                    "description": "free-text description of the service"
-                },
-                "endDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "endDate is the date when the service ends"
-                },
-                "hasStarted": {
-                    "type": "boolean",
-                    "description": "This is a Boolean attribute that, if TRUE, signifies that this Service has already been started. If the value of this attribute is FALSE, then this signifies that this Service has NOT been Started."
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the service"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "\"id\" is the ID created for the service"
-                },
-                "isServiceEnabled": {
-                    "type": "boolean",
-                    "description": "for use. If the value of this attribute is FALSE, then this means that this particular Service has NOT been enabled for use."
-                },
-                "isStateful": {
-                    "type": "boolean",
-                    "description": "This is a Boolean attribute that, if TRUE, means that this Service can be changed without affecting any other services."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "\"name\" is the name of the service."
-                },
-                "orderDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "\"orderDate\" is the date when the service was ordered"
-                },
-                "startDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "stardDate is the date when the service starts"
-                },
-                "startMode": {
-                    "type": "string",
-                    "description": "This attribute is an enumerated integer that indicates how the Service is started. Values include:\n 0: Unknown\n 1: Automatically by the managed environment\n 2: Automatically by the owning device\n 3: Manually by the Provider of the Service\n 4: Manually by a Customer of the Provider\n 5: Any of the above"
-                },
-                "state": {
-                    "type": "string",
-                    "description": "The life cycle state of the service:\n\n feasibilityChecked\n designed\n reserved\n active\n inactive\n terminated  \n"
-                },
-                "serviceOrder": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ServiceOrderRef.schema.json/#definitions/ServiceOrderRef"
-                    }
-                },
-                "supportingResource": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Resource/SupportingResource.schema.json/#definitions/SupportingResource"
-                    }
-                },
-                "serviceRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ServiceRelationship.schema.json/#definitions/ServiceRelationship"
-                    }
-                },
-                "place": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Place.schema.json/#definitions/Place"
-                    }
-                },
-                "supportingService": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "SupportingService.schema.json/#definitions/SupportingService"
-                    }
-                },
-                "note": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Note.schema.json/#definitions/Note"
-                    }
-                },
-                "serviceSpecification": {
-                    "$ref": "ServiceSpecificationRef.schema.json/#definitions/ServiceSpecificationRef"
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                    }
-                },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ServiceCharacteristic.schema.json/#definitions/ServiceCharacteristic"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "category": {
+                            "type": "string",
+                            "description": "Is it a customer facing or resource facing service"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "free-text description of the service"
+                        },
+                        "endDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "endDate is the date when the service ends"
+                        },
+                        "hasStarted": {
+                            "type": "boolean",
+                            "description": "This is a Boolean attribute that, if TRUE, signifies that this Service has already been started. If the value of this attribute is FALSE, then this signifies that this Service has NOT been Started."
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the service"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "\"id\" is the ID created for the service"
+                        },
+                        "isServiceEnabled": {
+                            "type": "boolean",
+                            "description": "for use. If the value of this attribute is FALSE, then this means that this particular Service has NOT been enabled for use."
+                        },
+                        "isStateful": {
+                            "type": "boolean",
+                            "description": "This is a Boolean attribute that, if TRUE, means that this Service can be changed without affecting any other services."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "\"name\" is the name of the service."
+                        },
+                        "orderDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "\"orderDate\" is the date when the service was ordered"
+                        },
+                        "startDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "stardDate is the date when the service starts"
+                        },
+                        "startMode": {
+                            "type": "string",
+                            "description": "This attribute is an enumerated integer that indicates how the Service is started. Values include:\n 0: Unknown\n 1: Automatically by the managed environment\n 2: Automatically by the owning device\n 3: Manually by the Provider of the Service\n 4: Manually by a Customer of the Provider\n 5: Any of the above"
+                        },
+                        "state": {
+                            "type": "string",
+                            "description": "The life cycle state of the service:\n\n feasibilityChecked\n designed\n reserved\n active\n inactive\n terminated  \n"
+                        },
+                        "serviceOrder": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ServiceOrderRef.schema.json#ServiceOrderRef"
+                            }
+                        },
+                        "supportingResource": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Resource/SupportingResource.schema.json#SupportingResource"
+                            }
+                        },
+                        "serviceRelationship": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ServiceRelationship.schema.json#ServiceRelationship"
+                            }
+                        },
+                        "place": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/Place.schema.json#Place"
+                            }
+                        },
+                        "supportingService": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "SupportingService.schema.json#SupportingService"
+                            }
+                        },
+                        "note": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/Note.schema.json#Note"
+                            }
+                        },
+                        "serviceSpecification": {
+                            "$ref": "ServiceSpecificationRef.schema.json#ServiceSpecificationRef"
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        },
+                        "characteristic": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ServiceCharacteristic.schema.json#ServiceCharacteristic"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

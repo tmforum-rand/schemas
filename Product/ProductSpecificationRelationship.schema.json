@@ -4,29 +4,32 @@
     "title": "ProductSpecificationRelationship",
     "definitions": {
         "ProductSpecificationRelationship": {
+            "$id": "#ProductSpecificationRelationship",
             "description": "A migration, substitution, dependency or exclusivity relationship between/among product specifications.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the productSpecification"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the productSpecification"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The period for which the productSpecificationRelationship is valid"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the productSpecification"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the productSpecification"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the productSpecificationRelationship is valid"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

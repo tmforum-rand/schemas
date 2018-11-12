@@ -4,29 +4,32 @@
     "title": "BillFormat",
     "definitions": {
         "BillFormat": {
+            "$id": "#BillFormat",
             "description": "A detailed description of the way in which a bill is presented.",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "An explanatory text for this bill format"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the bill format"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the bill format"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A short descriptive name"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "An explanatory text for this bill format"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the bill format"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the bill format"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A short descriptive name"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

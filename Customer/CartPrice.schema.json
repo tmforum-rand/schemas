@@ -4,42 +4,45 @@
     "title": "CartPrice",
     "definitions": {
         "CartPrice": {
+            "$id": "#CartPrice",
             "description": "An amount, usually of money, that represents the actual price paid by the customer for this item. May represent the total price of the shopping cart or the total of the cart item depending on the relation",
             "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "A narrative that explains in detail the semantics of this order item price."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A short descriptive name such as \"Subscription price\"."
-                },
-                "priceType": {
-                    "type": "string",
-                    "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
-                },
-                "recurringChargePeriod": {
-                    "type": "string",
-                    "description": "Could be month, week..."
-                },
-                "unitOfMeasure": {
-                    "type": "string",
-                    "description": "Could be minutes, GB..."
-                },
-                "price": {
-                    "$ref": "Price.schema.json/#definitions/Price"
-                },
-                "priceAlteration": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "PriceAlteration.schema.json/#definitions/PriceAlteration"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "A narrative that explains in detail the semantics of this order item price."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A short descriptive name such as \"Subscription price\"."
+                        },
+                        "priceType": {
+                            "type": "string",
+                            "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
+                        },
+                        "recurringChargePeriod": {
+                            "type": "string",
+                            "description": "Could be month, week..."
+                        },
+                        "unitOfMeasure": {
+                            "type": "string",
+                            "description": "Could be minutes, GB..."
+                        },
+                        "price": {
+                            "$ref": "Price.schema.json#Price"
+                        },
+                        "priceAlteration": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "PriceAlteration.schema.json#PriceAlteration"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

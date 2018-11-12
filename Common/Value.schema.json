@@ -4,11 +4,14 @@
     "title": "Value",
     "definitions": {
         "Value": {
+            "$id": "#Value",
             "type": "object",
-            "properties": {},
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {}
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

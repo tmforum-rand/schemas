@@ -4,87 +4,90 @@
     "title": "Document",
     "definitions": {
         "Document": {
+            "$id": "#Document",
             "description": "Document is a tangible output from an activity",
             "type": "object",
-            "properties": {
-                "creationDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "The date and time the document was created. A date and time formatted in compliance with the ISO8601 standard must be used."
-                },
-                "description": {
-                    "type": "string",
-                    "description": "free-text description of the document"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "The URI for the object itself."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Identifier of an instance of the document. Required to be unique within the document type.  Used in URIs as the identifier for specific instances of a type."
-                },
-                "lastUpdate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "The date and time the document was last modified. A date and time formatted in compliance with the ISO8601 standard must be used."
-                },
-                "lifecycleState": {
-                    "type": "string",
-                    "description": "The life cycle state of the document."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A string used to give a name to the document"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Name of the document type"
-                },
-                "version": {
-                    "type": "string",
-                    "description": "A particular form or variety of an artefact that is different from others or from the original. The form represents differences in properties that characterize an artefact, that are not enough to warrant creating a new artefact"
-                },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "DocumentCharacteristic.schema.json/#definitions/DocumentCharacteristic"
-                    }
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json/#definitions/RelatedPartyRef"
-                    }
-                },
-                "documentSpecification": {
-                    "$ref": "DocumentSpecification.schema.json/#definitions/DocumentSpecification"
-                },
-                "binaryAttachment": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "DocumentAttachment.schema.json/#definitions/DocumentAttachment"
-                    }
-                },
-                "category": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/CategoryRef.schema.json/#definitions/CategoryRef"
-                    }
-                },
-                "documentRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "DocumentRelationship.schema.json/#definitions/DocumentRelationship"
-                    }
-                },
-                "relatedObject": {
-                    "$ref": "RelatedObject.schema.json/#definitions/RelatedObject"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "creationDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The date and time the document was created. A date and time formatted in compliance with the ISO8601 standard must be used."
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "free-text description of the document"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "The URI for the object itself."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Identifier of an instance of the document. Required to be unique within the document type.  Used in URIs as the identifier for specific instances of a type."
+                        },
+                        "lastUpdate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The date and time the document was last modified. A date and time formatted in compliance with the ISO8601 standard must be used."
+                        },
+                        "lifecycleState": {
+                            "type": "string",
+                            "description": "The life cycle state of the document."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A string used to give a name to the document"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Name of the document type"
+                        },
+                        "version": {
+                            "type": "string",
+                            "description": "A particular form or variety of an artefact that is different from others or from the original. The form represents differences in properties that characterize an artefact, that are not enough to warrant creating a new artefact"
+                        },
+                        "characteristic": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "DocumentCharacteristic.schema.json#DocumentCharacteristic"
+                            }
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        },
+                        "documentSpecification": {
+                            "$ref": "DocumentSpecification.schema.json#DocumentSpecification"
+                        },
+                        "binaryAttachment": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "DocumentAttachment.schema.json#DocumentAttachment"
+                            }
+                        },
+                        "category": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                            }
+                        },
+                        "documentRelationship": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "DocumentRelationship.schema.json#DocumentRelationship"
+                            }
+                        },
+                        "relatedObject": {
+                            "$ref": "RelatedObject.schema.json#RelatedObject"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

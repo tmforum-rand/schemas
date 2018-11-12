@@ -4,33 +4,36 @@
     "title": "ServiceQualificationItem",
     "definitions": {
         "ServiceQualificationItem": {
+            "$id": "#ServiceQualificationItem",
             "type": "object",
-            "properties": {
-                "expectedActivationDate": {
-                    "$ref": "Date.schema.json/#Date"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "qualificationResult": {
-                    "type": "string"
-                },
-                "state": {
-                    "type": "string"
-                },
-                "service": {
-                    "$ref": "Service.schema.json/#definitions/Service"
-                },
-                "qualificationRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "QualificationRelationship.schema.json/#definitions/QualificationRelationship"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "expectedActivationDate": {
+                            "$ref": "Date.schema.json#/Date"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "qualificationResult": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        },
+                        "service": {
+                            "$ref": "Service.schema.json#Service"
+                        },
+                        "qualificationRelationship": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "QualificationRelationship.schema.json#QualificationRelationship"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

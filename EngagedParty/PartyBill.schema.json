@@ -4,11 +4,14 @@
     "title": "PartyBill",
     "definitions": {
         "PartyBill": {
+            "$id": "#PartyBill",
             "type": "object",
-            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {}
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,27 +4,30 @@
     "title": "CartItemRelationship",
     "definitions": {
         "CartItemRelationship": {
+            "$id": "#CartItemRelationship",
             "description": "Relationship among cart items mainly other than hierarchical relationships such as \"RelyOn\", \"DependentOn\", \"Shipping\" etc.",
             "type": "object",
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the referred cart item"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of the cart item relationship"
-                },
-                "cartItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "CartItemRef.schema.json/#definitions/CartItemRef"
-                    }
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the referred cart item"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of the cart item relationship"
+                        },
+                        "cartItem": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "CartItemRef.schema.json#CartItemRef"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

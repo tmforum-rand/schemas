@@ -4,28 +4,31 @@
     "title": "ContactMedium",
     "definitions": {
         "ContactMedium": {
+            "$id": "#ContactMedium",
             "description": "Indicates the contact medium that could be used to contact the party.",
             "type": "object",
-            "properties": {
-                "preferred": {
-                    "type": "boolean",
-                    "description": "If true, indicates that is the preferred contact medium"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of the contact medium, such as: email address, telephone number, postal address"
-                },
-                "validFor": {
-                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The time period that the contact medium is valid for"
-                },
-                "characteristic": {
-                    "$ref": "MediumCharacteristic.schema.json/#definitions/MediumCharacteristic"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "preferred": {
+                            "type": "boolean",
+                            "description": "If true, indicates that is the preferred contact medium"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of the contact medium, such as: email address, telephone number, postal address"
+                        },
+                        "validFor": {
+                            "$ref": "TimePeriod.schema.json#TimePeriod",
+                            "description": "The time period that the contact medium is valid for"
+                        },
+                        "characteristic": {
+                            "$ref": "MediumCharacteristic.schema.json#MediumCharacteristic"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

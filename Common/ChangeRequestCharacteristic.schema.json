@@ -4,21 +4,24 @@
     "title": "ChangeRequestCharacteristic",
     "definitions": {
         "ChangeRequestCharacteristic": {
+            "$id": "#ChangeRequestCharacteristic",
             "description": "Characteristics of the change request to instantiate or to modify",
             "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Name of the characteristic."
-                },
-                "value": {
-                    "type": "string",
-                    "description": "Value of the characteristic."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the characteristic."
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Value of the characteristic."
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

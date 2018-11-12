@@ -4,17 +4,20 @@
     "title": "LogicalResource",
     "definitions": {
         "LogicalResource": {
+            "$id": "#LogicalResource",
             "description": "Logic resource is a type of resource that describes the common set of attributes shared by all concrete logical resources (e.g. TPE, MSISDN, IP Addresses) in the inventory.",
             "type": "object",
-            "properties": {
-                "value": {
-                    "type": "string",
-                    "description": "the value of the logical resource. E.g '0746712345' for  MSISDN's"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "value": {
+                            "type": "string",
+                            "description": "the value of the logical resource. E.g '0746712345' for  MSISDN's"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,40 +4,43 @@
     "title": "EntitySpecRelationship",
     "definitions": {
         "EntitySpecRelationship": {
+            "$id": "#EntitySpecRelationship",
             "description": "A migration, substitution, dependency or exclusivity relationship between/among entity specifications.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the target EntitySpecification"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of target EntitySpecification"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "The name given to the target entity specification instance"
-                },
-                "role": {
-                    "type": "string",
-                    "description": "The association role for this entity specification"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
-                },
-                "validFor": {
-                    "$ref": "TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "The period for which the entitySpecRelationship is valid"
-                },
-                "associationSpec": {
-                    "$ref": "AssociationSpecRef.schema.json/#definitions/AssociationSpecRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the target EntitySpecification"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of target EntitySpecification"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "The name given to the target entity specification instance"
+                        },
+                        "role": {
+                            "type": "string",
+                            "description": "The association role for this entity specification"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
+                        },
+                        "validFor": {
+                            "$ref": "TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the entitySpecRelationship is valid"
+                        },
+                        "associationSpec": {
+                            "$ref": "AssociationSpecRef.schema.json#AssociationSpecRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

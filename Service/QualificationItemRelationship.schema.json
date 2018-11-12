@@ -4,21 +4,24 @@
     "title": "QualificationItemRelationship",
     "definitions": {
         "QualificationItemRelationship": {
+            "$id": "#QualificationItemRelationship",
             "description": "Stucture used to describe relationship between productOfferingQualifcation item from the same ProductOfferingQualification.",
             "type": "object",
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "Id of the ProductOfferingQualificationItem (from the same ProductOfferingQualificationItem)."
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of relationship (ex: reliesOn, connectedTo, etc...)"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "Id of the ProductOfferingQualificationItem (from the same ProductOfferingQualificationItem)."
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of relationship (ex: reliesOn, connectedTo, etc...)"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

@@ -4,44 +4,47 @@
     "title": "PaymentPlan",
     "definitions": {
         "PaymentPlan": {
+            "$id": "#PaymentPlan",
             "description": "Defines a plan for payment (when a party wants to spread his payments)",
             "type": "object",
-            "properties": {
-                "numberOfPayments": {
-                    "type": "integer",
-                    "description": "Number of payments used to spread the global payment"
-                },
-                "paymentFrequency": {
-                    "type": "string",
-                    "description": "Frequency of the payments, such as monthly and bimonthly"
-                },
-                "priority": {
-                    "type": "integer",
-                    "description": "Priority of the payment plan"
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Status of the payment plan (effective, ineffective)"
-                },
-                "totalAmount": {
-                    "$ref": "../Common/Money.schema.json/#definitions/Money",
-                    "description": "Amount paid"
-                },
-                "type": {
-                    "type": "string",
-                    "description": "Type of payment plan"
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json/#definitions/TimePeriod",
-                    "description": "Validity period of the payment plan"
-                },
-                "paymentMethod": {
-                    "$ref": "PaymentMethodRef.schema.json/#definitions/PaymentMethodRef"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "numberOfPayments": {
+                            "type": "integer",
+                            "description": "Number of payments used to spread the global payment"
+                        },
+                        "paymentFrequency": {
+                            "type": "string",
+                            "description": "Frequency of the payments, such as monthly and bimonthly"
+                        },
+                        "priority": {
+                            "type": "integer",
+                            "description": "Priority of the payment plan"
+                        },
+                        "status": {
+                            "type": "string",
+                            "description": "Status of the payment plan (effective, ineffective)"
+                        },
+                        "totalAmount": {
+                            "$ref": "../Common/Money.schema.json#Money",
+                            "description": "Amount paid"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of payment plan"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "Validity period of the payment plan"
+                        },
+                        "paymentMethod": {
+                            "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

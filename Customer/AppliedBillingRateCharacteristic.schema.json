@@ -4,21 +4,24 @@
     "title": "AppliedBillingRateCharacteristic",
     "definitions": {
         "AppliedBillingRateCharacteristic": {
+            "$id": "#AppliedBillingRateCharacteristic",
             "description": "An applied billing rate has dynamic characteristics according to the its type (characteristics are based on the service type, line of business or on others parameters)",
             "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Characteristic name"
-                },
-                "value": {
-                    "type": "string",
-                    "description": "Value affected to the characteristic"
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Characteristic name"
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Value affected to the characteristic"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

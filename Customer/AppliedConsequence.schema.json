@@ -4,29 +4,32 @@
     "title": "AppliedConsequence",
     "definitions": {
         "AppliedConsequence": {
+            "$id": "#AppliedConsequence",
             "description": "An Applied Consequence defines the action (prescribed action or notification) to take when a \nMeasureThresholdRuleViolation occurs.",
             "type": "object",
-            "properties": {
-                "appliedAction": {
-                    "type": "string",
-                    "description": "The action for a violated threshold. This could be a hyperlink to \nthe action."
-                },
-                "description": {
-                    "type": "string",
-                    "description": "A narrative that explains in detail what the consequence is."
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A word, term, or phrase by which Consequence is known and \ndistinguished from other MetricDefMeasureConsequences."
-                },
-                "repeatAction": {
-                    "type": "string",
-                    "description": "An indicator use to specify that a consequence should cease \nbeing applied if a value is in the same range as the previous value or continue being applied if a value is in the same range as the previous value.  \nIf the repeatAcation is True, if the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatAcation is False, the consequence is applied only if the previous MetricMeasure value wasn¡¯t in the same range."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "properties": {
+                        "appliedAction": {
+                            "type": "string",
+                            "description": "The action for a violated threshold. This could be a hyperlink to \nthe action."
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "A narrative that explains in detail what the consequence is."
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "A word, term, or phrase by which Consequence is known and \ndistinguished from other MetricDefMeasureConsequences."
+                        },
+                        "repeatAction": {
+                            "type": "string",
+                            "description": "An indicator use to specify that a consequence should cease \nbeing applied if a value is in the same range as the previous value or continue being applied if a value is in the same range as the previous value.  \nIf the repeatAcation is True, if the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatAcation is False, the consequence is applied only if the previous MetricMeasure value wasn¡¯t in the same range."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }
