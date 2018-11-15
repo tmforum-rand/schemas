@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceSpecificationRelationship.schema.json",
+    "title": "ServiceSpecificationRelationship",
+    "definitions": {
+        "ServiceSpecificationRelationship": {
+            "$id": "#ServiceSpecificationRelationship",
+            "description": "A migration, substitution, dependency or exclusivity relationship between/among service specifications.",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "relationshipType": {
+                            "type": "string",
+                            "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
+                        },
+                        "role": {
+                            "type": "string",
+                            "description": "The association role for this service specification"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the target serviceSpecification"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the target serviceSpecification"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "The name given to the target service specification instance"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the serviceSpecRelationship is valid"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

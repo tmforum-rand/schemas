@@ -14,7 +14,7 @@
                             "type": "string",
                             "description": "Id of the ProductOfferingQualificationItem (from the same ProductOfferingQualificationItem)."
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of relationship (ex: reliesOn, connectedTo, etc...)"
                         }

@@ -10,7 +10,7 @@
             "allOf": [
                 {
                     "properties": {
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Describes links with services of the same category (useful for bundled services)"
                         },
