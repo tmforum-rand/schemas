@@ -10,7 +10,8 @@
                 {
                     "properties": {
                         "expectedActivationDate": {
-                            "$ref": "Date.schema.json#/Date"
+                            "type": "string",
+                            "format": "date-time"
                         },
                         "id": {
                             "type": "string"
