@@ -10,7 +10,8 @@
                 {
                     "properties": {
                         "expectedActivationDate": {
-                            "$ref": "Date.schema.json#/Date"
+                            "type": "string",
+                            "format": "date-time"
                         },
                         "id": {
                             "type": "string"
@@ -28,6 +29,43 @@
                             "type": "array",
                             "items": {
                                 "$ref": "QualificationRelationship.schema.json#QualificationRelationship"
+                            }
+                        },
+                        "expectedServiceAvailabilityDate": {
+                            "description": "Date when the requester looks for service availability",
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "expirationDate": {
+                            "description": "Date when the qualification item response expires",
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "eligibilityUnavailabilityReason": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
+                            }
+                        },
+                        "category": {
+                            "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                        },
+                        "qualificationItemRelationship": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "QualificationItemRelationship.schema.json#QualificationItemRelationship"
+                            }
+                        },
+                        "terminationError": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "TerminationError.schema.json#TerminationError"
+                            }
+                        },
+                        "alternateServiceProposal": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "AlternateServiceProposal.schema.json#AlternateServiceProposal"
                             }
                         }
                     }

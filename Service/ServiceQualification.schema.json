@@ -46,7 +46,7 @@
                         "state": {
                             "type": "string"
                         },
-                        "qualificationItem": {
+                        "serviceQualificationItem": {
                             "type": "array",
                             "items": {
                                 "$ref": "ServiceQualificationItem.schema.json#ServiceQualificationItem"
@@ -57,6 +57,19 @@
                             "items": {
                                 "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                             }
+                        },
+                        "serviceQualificationDate": {
+                            "description": "Date when the serviceQualification has been submitted",
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "externalId": {
+                            "description": "Identifier provided by the requester",
+                            "type": "string"
+                        },
+                        "qualificationResult": {
+                            "description": "Qualification result for this serviceQualification. It could be:  qualified (all qualification item are qualified), alternate (At least one item alternate and no item with  unqualified), unqualified (At least one item unqualified)",
+                            "type": "string"
                         }
                     }
                 },

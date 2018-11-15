@@ -115,6 +115,15 @@
                             "items": {
                                 "$ref": "ServiceCharacteristic.schema.json#ServiceCharacteristic"
                             }
+                        },
+                        "serviceType": {
+                            "description": "Business type of the service",
+                            "type": "string"
+                        },
+                        "serviceDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date when the service was created (whatever its status)."
                         }
                     }
                 },

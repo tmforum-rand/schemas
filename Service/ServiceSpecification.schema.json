@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceSpecification.schema.json",
+    "title": "ServiceSpecification",
+    "definitions": {
+        "ServiceSpecification": {
+            "$id": "#ServiceSpecification",
+            "description": "ServiceSpecification is a class that offers characteristics to describe a type of service.\nFunctionally, it acts as a template by which Services may be instantiated. By sharing the same  specification, these services would therefore share the same set of characteristics.",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the service specification"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the service specification"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the service specification"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "A narrative that explains in detail what the service specification is"
+                        },
+                        "version": {
+                            "type": "string",
+                            "description": "Service specification version"
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the service specification is valid"
+                        },
+                        "lastUpdate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date and time of the last update of the service specification"
+                        },
+                        "lifecycleStatus": {
+                            "type": "string",
+                            "description": "Used to indicate the current lifecycle status of the service specification"
+                        },
+                        "isBundle": {
+                            "type": "boolean",
+                            "description": "isBundle determines whether a ServiceSpecification represents a single ServiceSpecification (false), or a bundle of ServiceSpecification (true)."
+                        },
+                        "resourceSpecification": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Resource/ResourceSpecificationRef.schema.json#ResourceSpecificationRef"
+                            }
+                        },
+                        "attachment": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
+                            }
+                        },
+                        "serviceSpecCharacteristic": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ServiceSpecCharacteristic.schema.json#ServiceSpecCharacteristic"
+                            }
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        },
+                        "serviceSpecRelationship": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "ServiceSpecRelationship.schema.json#ServiceSpecRelationship"
+                            }
+                        },
+                        "targetServiceSchema": {
+                            "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

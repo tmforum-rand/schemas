@@ -10,13 +10,13 @@
             "allOf": [
                 {
                     "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the serviceSpecification"
-                        },
                         "id": {
                             "type": "string",
                             "description": "Unique identifier of the service specification"
+                        },
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the serviceSpecification"
                         },
                         "name": {
                             "type": "string",
@@ -27,7 +27,7 @@
                             "description": "Service specification version"
                         },
                         "targetServiceSchema": {
-                            "$ref": "TargetServiceSchema.schema.json#TargetServiceSchema"
+                            "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                         },
                         "@referredType": {
                             "type": "string",
