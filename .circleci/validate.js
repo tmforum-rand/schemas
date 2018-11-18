@@ -35,7 +35,7 @@ walk(DIR, (err,files) => {
     // filter / remove files not to be validated
     const promises = files
                         .filter(file => file.endsWith('.json') &&
-                                        !file.includes('/.circleci/') &&
+                                        !file.includes('/.circleci/') && !file.includes('/dev/') &&
                                         !file.includes('/package') && !file.includes('/node_modules/'))
                         .map(file => validateSchema(file));
 
