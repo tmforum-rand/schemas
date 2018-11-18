@@ -1,0 +1,16 @@
+{
+  "name": "validate",
+  "version": "1.0.0",
+  "description": "Validation of TMForum API schema specifications",
+  "main": "validate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "node .circleci/validate.js . .circleci"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonschema": "^1.2.4",
+    "path": "^0.12.7"
+  }
+}

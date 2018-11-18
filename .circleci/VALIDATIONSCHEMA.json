@@ -1,0 +1,42 @@
+{
+    "allOf": [
+        {
+            "properties": {
+                "$schema": { "type": "string" },
+                "$id": { "type": "string" },
+                "title": { "type": "string" },
+                "description": { "type": "string" },
+                "definitions": { "type": "object" }
+            },
+            "required": ["$schema", "$id", "title", "definitions"],
+            "additionalProperties": false
+        },
+        {
+            "properties": {
+                "definitions": {
+                    "patternProperties": {
+                        ".*": {
+                            "properties": {
+                                "$id": { "type": "string" },
+                                "type": { "type": "string" },
+                                "description": { "type": "string" },
+                                "allOf": { "type": "array" },
+                                "properties": { "type": "object" },
+                                "enum": { "type": "array" },
+                                "required": { "type": "array" },
+                                "dependencies": { "type": "object" }
+                            },
+                            "oneOf": [ { "required": [ "allOf" ] },
+                                        { "required": [ "properties" ] },
+                                        { "required": [ "enum" ] }
+                            ],
+                            "required": ["type", "$id"],
+                            "additionalProperties": false
+                        }
+                    }
+                }
+            }
+        }, 
+        { "$ref": "http://json-schema.org/draft-07/schema#" }
+    ]
+}
