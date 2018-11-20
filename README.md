@@ -1,5 +1,7 @@
 # TM Forum Open-API Schema Repository
 
+[![CircleCI](https://circleci.com/gh/tmforum-rand/schemas.svg?style=svg)](https://circleci.com/gh/tmforum-rand/schemas)
+
 This repository contains the collection of JSON-Schema files that define the entities used within the TM Forum Open-API Catalog. The directories are structured according to the Open-API Map Level-0 categories:
 
 | Level-0 |  |
