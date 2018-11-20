@@ -179,7 +179,7 @@ function checkSchemaIssues(schema) {
                 const prop = item.properties[p];
 
                 // check for expected properties
-                const expecting = ['example', 'description'];
+                const expecting = ['description']; // ['example', 'description'];
                 expecting.forEach(exp => {
                     if(prop[exp] === undefined) {
                         res.push(p + ' :: no ' + exp + ' value')
