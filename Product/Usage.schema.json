@@ -31,7 +31,7 @@
                             "type": "string",
                             "description": "Status of usage"
                         },
-                        "type": {
+                        "usageType": {
                             "type": "string",
                             "description": "Type of usage"
                         },

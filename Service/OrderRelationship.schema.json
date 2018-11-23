@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "OrderRelationship.schema.json", 
+    "title": "OrderRelationship", 
+    "definitions": {
+        "OrderRelationship": {
+            "type": "object", 
+            "description": "Linked order to the one containing this attribute", 
+            "properties": {
+                "@referredType": {
+                    "type": "string"
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "A hyperlink to the related order"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "The id of the related order"
+                }, 
+                "type": {
+                    "type": "string", 
+                    "description": "The type of related order, can be : \u201cdependency\u201d if the order needs to be \u201cnot started\u201d until another order item is complete (a service order in this case) or \u201ccross-ref\u201d to keep track of the source order (a productOrder)"
+                }
+            }, 
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json#/definitions/polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

@@ -34,7 +34,7 @@
                                 "Explanation Video"
                             ]
                         },
-                        "type": {
+                        "attachmentType": {
                             "type": "string",
                             "description": "Attachment type such as video, picture",
                             "examples": [

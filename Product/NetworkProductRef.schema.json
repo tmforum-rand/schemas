@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "NetworkProductRef.schema.json", 
+    "title": "NetworkProductRef", 
+    "definitions": {
+        "NetworkProductRef": {
+            "type": "object", 
+            "description": "Reference of a product", 
+            "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": ""
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": ""
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the product"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": ""
+                }, 
+                "publicIdentifier": {
+                    "type": "string", 
+                    "description": "Public number associated to the product (msisdn number for mobile line for example)"
+                }
+            }
+        }
+    }
+}

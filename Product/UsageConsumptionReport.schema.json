@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "UsageConsumptionReport.schema.json", 
+    "title": "UsageConsumptionReport", 
+    "definitions": {
+        "UsageConsumptionReport": {
+            "type": "object", 
+            "description": "An usage consumption report enables to know at a given point the balances and the consumption counters related to various buckets (SMS, Voice, Data for example). It could be calculated for a device identified by a public key (msisdn number for a mobile device for example or PSTN or VOIP number for a fix device), for a subscribed offer or option or for an user.", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Indicates the base (class) type of the usage consumption report"
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Link to the schema describing the REST resource"
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Indicates the (class) type of the usage consumption report"
+                }, 
+                "bucket": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "UsageVolumeProduct.schema.json#/definitions/UsageVolumeProduct"
+                    }
+                }, 
+                "description": {
+                    "type": "string", 
+                    "description": "Free short text describing the usage consumption report content"
+                }, 
+                "effectiveDate": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "Date and time when the usage consumption report was calculated and generated"
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Hyperlink to access the usage consumption report"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the usage consumption report given by the server"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "Usage consumption report name"
+                }, 
+                "relatedParty": {
+                    "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                }
+            }
+        }
+    }
+}

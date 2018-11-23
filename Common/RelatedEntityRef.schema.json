@@ -10,7 +10,7 @@
             "allOf": [
                 {
                     "properties": {
-                        "herf": {
+                        "href": {
                             "type": "string",
                             "description": "The hyperlink to access an entity."
                         },

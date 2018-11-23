@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "OrderActionType.schema.json", 
+    "title": "OrderActionType", 
+    "definitions": {
+        "OrderActionType": {
+	    "description" : "string",
+            "type": "string", 
+            "enum": [
+                "add",
+                "modify",
+                "delete",
+                "noChange"
+            ]
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "UsageVolumeBalance.schema.json", 
+    "title": "UsageVolumeBalance", 
+    "definitions": {
+        "UsageVolumeBalance": {
+            "type": "object", 
+            "description": "The balance (called UsageVolumeBalance in the SID model) defines the remaining allowed product usage quantity in terms of volume, time, currency or events. It corresponds to the initial allowed usage quantity minus the usage consumed on the bucket.", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current object is unknown to the implementation"
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object"
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "remainingValue": {
+                    "type": "number", 
+                    "format": "float", 
+                    "description": "Numeric remaining value for the bucket given in the balance unit (for example 1.9). This numeric value could be used for calculation for example"
+                }, 
+                "remainingValueLabel": {
+                    "type": "string", 
+                    "description": "Remaining value in a formatted string for the bucket given in the balance unit (for example 1.9 Gb). This formatted string could be used for display needs for example"
+                }, 
+                "unit": {
+                    "type": "string", 
+                    "description": "Code of the unit used to specify the given value of the balance. It could be different from the bucket unit"
+                }, 
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                }
+            }
+        }
+    }
+}
