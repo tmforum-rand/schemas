@@ -35,14 +35,14 @@ jobs:
         
       - run: 
           name: Validate
-          command: node .circleci/validate.js . .circleci > /tmp/results.txt
-      
-      - store_artifacts:
-          path: /tmp/results.txt
-          
-      - run:
-          name: Push validation results
           command: |
+            #
+            # Validate
+            #
+            node .circleci/validate.js . .circleci > /tmp/results.txt
+            #
+            # Push validation results to github
+            #
             FILE=validation-`date -u "+%Y-%m-%dT%H:%M:%SZ"`.txt
             DIR=".circleci/validation_results"
             mkdir -p $DIR
@@ -54,3 +54,7 @@ jobs:
             git commit --allow-empty -m "Validation result [skip ci]"
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB_TOKEN}@github.com/knutaa/schema-testing.git master
+      
+      - store_artifacts:
+          path: /tmp/results.txt
+          
