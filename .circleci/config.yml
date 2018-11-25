@@ -40,3 +40,17 @@ jobs:
       - store_artifacts:
           path: /tmp/results.txt
           
+      - deploy:
+          name: Push validation results
+          command: |
+            FILE=validation-`date -u "+%Y-%m-%dT%H:%M:%SZ"`.txt
+            DIR=".circleci/validation_results"
+            mkdir -p $DIR
+            cp /tmp/validation_results.txt $DIR/$FILE
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "${EMAIL}"
+            git config user.name "Deployment Bot"
+            git add $DIR/$FILE
+            git commit --allow-empty -m "Validation result [skip ci]"
+            # Push quietly to prevent showing the token in log
+            git push -q https://${GITHUB_TOKEN}@github.com/knutaa/schema-testing.git master
