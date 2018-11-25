@@ -36,13 +36,12 @@ jobs:
       - run: 
           name: Validate
           command: |
-            #
-            # Validate
-            #
             node .circleci/validate.js . .circleci > /tmp/results.txt
-            #
-            # Push validation results to github
-            #
+            
+       - run: 
+          name: Upload validation results
+          when: always
+          command: |     
             FILE=validation-`date -u "+%Y-%m-%dT%H:%M:%SZ"`.txt
             DIR=".circleci/validation_results"
             mkdir -p $DIR
