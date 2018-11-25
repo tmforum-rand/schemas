@@ -7,31 +7,24 @@
             "$id": "#PartnershipTypeRef",
             "description": "PartnershipType reference. A partnership type contains all the information for the setup of a partnership of a given kind. This includes the list of identified role types for the partnership with the corresponding agreement specifications.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference url for the partnership type"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Identifier of the partnership"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the partnership type"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference url for the partnership type"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the partnership"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the partnership type"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

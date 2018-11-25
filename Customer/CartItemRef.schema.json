@@ -7,23 +7,16 @@
             "$id": "#CartItemRef",
             "description": "CartIIem reference. A CartItem is an identified part of the shopping cart.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the cart item"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the cart item"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

@@ -6,27 +6,20 @@
         "DocumentRef": {
             "$id": "#DocumentRef",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "The URI for the object itself."
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Identifier of the document"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "The URI for the object itself."
                 },
-                {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the document"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }
