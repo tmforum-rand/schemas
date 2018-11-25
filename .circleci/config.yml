@@ -37,8 +37,8 @@ jobs:
           name: Validate
           command: |
             node .circleci/validate.js . .circleci > /tmp/results.txt
-            
-       - run: 
+        
+      - run:
           name: Upload validation results
           when: always
           command: |     
