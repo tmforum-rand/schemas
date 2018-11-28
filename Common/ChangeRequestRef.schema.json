@@ -1,22 +1,22 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ChangeRequestRef.schema.json", 
-    "title": "ChangeRequestRef", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ChangeRequestRef.schema.json",
+    "title": "ChangeRequestRef",
     "definitions": {
         "ChangeRequestRef": {
-            "type": "object", 
-            "description": "Reference to a Change Request", 
+            "type": "object",
+            "description": "Reference to a Change Request",
             "properties": {
                 "@referredType": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
-                }, 
+                },
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The reference link to the change request"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The identifier of the change request"
                 }
             }

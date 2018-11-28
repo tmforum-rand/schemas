@@ -7,35 +7,28 @@
             "$id": "#RoleTypeRef",
             "description": "RoleType reference.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "The name of the role type. It uniquely identifies the role type within the partnership type."
-                        },
-                        "partnershipHref": {
-                            "type": "string",
-                            "description": "Reference url of the partnership type containing the role type"
-                        },
-                        "partnershipId": {
-                            "type": "string",
-                            "description": "The identifier of the partnership type containing the role type"
-                        },
-                        "partnershipName": {
-                            "type": "string",
-                            "description": "The name of the partnership type defining this role type"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the role type. It uniquely identifies the role type within the partnership type."
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "partnershipHref": {
+                    "type": "string",
+                    "description": "Reference url of the partnership type containing the role type"
+                },
+                "partnershipId": {
+                    "type": "string",
+                    "description": "The identifier of the partnership type containing the role type"
+                },
+                "partnershipName": {
+                    "type": "string",
+                    "description": "The name of the partnership type defining this role type"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

@@ -7,27 +7,20 @@
             "$id": "#ProductOrderRef",
             "description": "ProductOrder (ProductOrder) .The product order which the recommendation is related with.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Hypertext Reference of the product order."
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of product order"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Hypertext Reference of the product order."
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of product order"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

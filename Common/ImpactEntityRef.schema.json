@@ -7,31 +7,24 @@
             "$id": "#ImpactEntityRef",
             "description": "Defines the entities (product, service, resource, and other related objects) which will be impacted while the change \nrequest is executed.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Description and analysis of the impact of the change request on the Product, Service or Resource."
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Hyperlink to access the impacted party, it could be a party reference or a party role reference."
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Identifier of impacted entity."
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description and analysis of the impact of the change request on the Product, Service or Resource."
                 },
-                {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                "href": {
+                    "type": "string",
+                    "description": "Hyperlink to access the impacted party, it could be a party reference or a party role reference."
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of impacted entity."
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

@@ -7,35 +7,28 @@
             "$id": "#ResourceSpecificationRef",
             "description": "Resource Specification reference: The ResourceSpecification is required to realize a ProductSpecification.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the resource specification"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the resource specification"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the requiredResourceSpecification"
-                        },
-                        "version": {
-                            "type": "string",
-                            "description": "Resource specification version"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the resource specification"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the resource specification"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the requiredResourceSpecification"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Resource specification version"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

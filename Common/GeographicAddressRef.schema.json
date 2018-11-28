@@ -7,27 +7,20 @@
             "$id": "#GeographicAddressRef",
             "description": "The place at which the change request has occurred.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "The detail address of the location."
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "The post code of an address."
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "The detail address of the location."
                 },
-                {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "The post code of an address."
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

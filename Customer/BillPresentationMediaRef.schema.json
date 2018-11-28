@@ -7,31 +7,24 @@
             "$id": "#BillPresentationMediaRef",
             "description": "PresentationMedia reference. A mean of communicating a bill, supported by the associated bill format. For example, post mail, email, web page.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the bill presentation media"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the bill presentation media"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "A short descriptive name"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the bill presentation media"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the bill presentation media"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A short descriptive name"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

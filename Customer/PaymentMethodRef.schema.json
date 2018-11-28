@@ -7,31 +7,24 @@
             "$id": "#PaymentMethodRef",
             "description": "PaymentMethod reference. A payment method defines a specific mean of payment (e.g direct debit).",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the payment mean"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the payment mean"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the payment mean"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the payment mean"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the payment mean"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the payment mean"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

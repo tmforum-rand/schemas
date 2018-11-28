@@ -7,25 +7,23 @@
             "$id": "#RuleRef",
             "description": "Rule reference. Rule is a common pattern or Template for the SLA parameters, metrics, and thresholds",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string"
-                        },
-                        "href": {
-                            "type": "string"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "href": {
+                    "type": "string",
+                    "description": "The reference of the rule"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "The identifier of the referred rule",
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }
