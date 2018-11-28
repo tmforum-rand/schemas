@@ -14,7 +14,7 @@
                             "type": "string",
                             "description": "External reference"
                         },
-                        "type": {
+                        "referenceType": {
                             "type": "string",
                             "description": "Reference type"
                         }

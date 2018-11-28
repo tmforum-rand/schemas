@@ -14,7 +14,7 @@
                             "type": "string",
                             "description": "ID of the related order item (must be in the same quote)"
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Relationship type as relies on, bundles, etc..."
                         }

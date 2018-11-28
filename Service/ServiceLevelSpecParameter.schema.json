@@ -12,7 +12,7 @@
                     "properties": {
                         "name": {
                             "type": "string",
-                            "description": "The name of parameter."
+                            "description": "The name of the parameter"
                         },
                         "serviceParmCategory": {
                             "type": "string",
@@ -20,19 +20,19 @@
                         },
                         "serviceParmPerspective": {
                             "type": "string",
-                            "description": "A string that specifies whether the Service Level Specification \nParameter represents a single user instance parameter or a parameter that represents an aggregation."
+                            "description": "A string that specifies whether the Service Level Specification Parameter represents a single user instance parameter or a parameter that represents an aggregation"
                         },
                         "transformationAlgorithmOfKQI": {
                             "type": "string",
-                            "description": "The description of a logical step-by-step procedure used to \ncalculate the value of a KQI."
+                            "description": "The description of a logical step-by-step procedure used to calculate the value of a KQI"
                         },
-                        "type": {
+                        "parameterType": {
                             "type": "string",
-                            "description": "Types of Service Level Specification parameters are KQI or KPI."
+                            "description": "Types of Service Level Specification parameters are KQI or KPI"
                         },
                         "validFor": {
                             "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "A valid duration of a thing."
+                            "description": "A valid duration of a thing"
                         },
                         "relatedEntity": {
                             "type": "array",

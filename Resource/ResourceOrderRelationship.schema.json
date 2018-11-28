@@ -9,9 +9,9 @@
             "allOf": [
                 {
                     "properties": {
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
-                            "description": "The type of related order item, can be:\n\n \n \"dependency\" if the order item needs to be \"not started\" until another order item is complete \n \"cross-reference\" to keep track of the source order (service order)\n\n\n\n\n \n \n\n\n\n"
+                            "description": "The type of related order item, such as [dependency] if the order item needs to be [not started] until another order item is complete; [cross-reference] to keep track of the source order (service order)"
                         },
                         "resourceOrder": {
                             "$ref": "ResourceOrderRef.schema.json#ResourceOrderRef"

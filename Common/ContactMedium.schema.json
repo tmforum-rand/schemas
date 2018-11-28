@@ -14,7 +14,7 @@
                             "type": "boolean",
                             "description": "If true, indicates that is the preferred contact medium"
                         },
-                        "type": {
+                        "mediumType": {
                             "type": "string",
                             "description": "Type of the contact medium, such as: email address, telephone number, postal address"
                         },
@@ -23,7 +23,8 @@
                             "description": "The time period that the contact medium is valid for"
                         },
                         "characteristic": {
-                            "$ref": "MediumCharacteristic.schema.json#MediumCharacteristic"
+                            "$ref": "MediumCharacteristic.schema.json#MediumCharacteristic",
+                            "description": "Any additional characteristic(s) of this contact medium"
                         }
                     }
                 },

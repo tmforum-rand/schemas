@@ -16,7 +16,7 @@
                         },
                         "href": {
                             "type": "string",
-                            "description": "hrefof the subAddress"
+                            "description": "Link to the subAddress"
                         },
                         "id": {
                             "type": "string",
@@ -50,9 +50,9 @@
                             "type": "string",
                             "description": "the type of subunit\ne.g.BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF"
                         },
-                        "type": {
+                        "subAddressType": {
                             "type": "string",
-                            "description": "type of subaddress : it can be a subunit or a private street"
+                            "description": "Type of subaddress : it can be a subunit or a private street"
                         }
                     }
                 },

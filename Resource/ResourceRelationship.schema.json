@@ -9,11 +9,13 @@
             "allOf": [
                 {
                     "properties": {
-                        "type": {
-                            "type": "string"
+                        "relationshipType": {
+                            "type": "string",
+                            "description": "The type of resource relationship"
                         },
                         "resourceRef": {
-                            "$ref": "ResourceRef.schema.json#ResourceRef"
+                            "$ref": "ResourceRef.schema.json#ResourceRef",
+                            "description": "A reference to the resource"
                         }
                     }
                 },

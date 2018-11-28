@@ -50,7 +50,7 @@
                             "type": "string",
                             "description": "Status of the reserve operation"
                         },
-                        "type": {
+                        "reserveType": {
                             "type": "string",
                             "description": "A preconfigured value that describes a reserve type which determines the prepay balance bucket in which the reserve is done"
                         },

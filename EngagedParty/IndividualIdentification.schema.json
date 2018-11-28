@@ -23,7 +23,7 @@
                             "format": "date-time",
                             "description": "Date at which the identifier was issued"
                         },
-                        "type": {
+                        "identificationType": {
                             "type": "string",
                             "description": "Identification type (passport, national identity card, driver's license, social security number, birth certificate)"
                         }

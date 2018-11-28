@@ -30,7 +30,7 @@
                             "$ref": "../Common/Money.schema.json#Money",
                             "description": "Amount paid"
                         },
-                        "type": {
+                        "planType": {
                             "type": "string",
                             "description": "Type of payment plan"
                         },

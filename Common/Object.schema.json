@@ -9,8 +9,9 @@
             "allOf": [
                 {
                     "properties": {
-                        "type": {
-                            "type": "string"
+                        "objectType": {
+                            "type": "string",
+                            "description": "The type of object"
                         },
                         "uri": {
                             "type": "string"

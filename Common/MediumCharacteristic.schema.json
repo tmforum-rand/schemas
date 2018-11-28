@@ -46,7 +46,7 @@
                             "type": "string",
                             "description": "Complementary street description"
                         },
-                        "type": {
+                        "mediumType": {
                             "type": "string",
                             "description": "Type of medium (fax, mobile phone...)"
                         }

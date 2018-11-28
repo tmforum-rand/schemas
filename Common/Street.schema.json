@@ -18,9 +18,9 @@
                             "type": "string",
                             "description": "The defined name of the street"
                         },
-                        "type": {
+                        "streetType": {
                             "type": "string",
-                            "description": "alley, avenue, etc."
+                            "description": "Alley, avenue, etc."
                         },
                         "characteristic": {
                             "type": "array",

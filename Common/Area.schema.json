@@ -18,12 +18,13 @@
                             "type": "string",
                             "description": "The defined name of the municipality"
                         },
-                        "type": {
+                        "areaType": {
                             "type": "string",
                             "description": "SUBURB, LOCALITY, CITY, TOWN, BOROUGH, ..."
                         },
                         "characteristic": {
                             "type": "array",
+                            "description": "Any additional characterization of the Area, defined for the Area type",
                             "items": {
                                 "$ref": "LocationCharacteristic.schema.json#LocationCharacteristic"
                             }

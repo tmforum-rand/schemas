@@ -14,7 +14,7 @@
                             "$ref": "../Common/Money.schema.json#Money",
                             "description": "Balance amount"
                         },
-                        "type": {
+                        "balanceType": {
                             "type": "string",
                             "description": "Type of the balance : deposit balance, disputed balance, loyalty balance, receivable balance..."
                         },

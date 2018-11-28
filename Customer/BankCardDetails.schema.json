@@ -16,15 +16,15 @@
                         },
                         "brand": {
                             "type": "string",
-                            "description": "Card brand. E.g.: Visa, MasterCard, AmericanExpress."
+                            "description": "Card brand, such as Visa, MasterCard, AmericanExpress"
                         },
                         "cardNumber": {
                             "type": "string",
-                            "description": "Credit card number"
+                            "description": "Credit long card number"
                         },
                         "cvv": {
                             "type": "string",
-                            "description": "security code (e.g.: CVV, CVV2) of the card"
+                            "description": "The security code (e.g.: CVV, CVV2) of the card"
                         },
                         "expirationDate": {
                             "type": "string",
@@ -39,9 +39,9 @@
                             "type": "string",
                             "description": "Name on the card"
                         },
-                        "type": {
+                        "cardType": {
                             "type": "string",
-                            "description": "Type of the card (e.g.: Credit, debit...)"
+                            "description": "Type of the card, such as Credit, Debit"
                         }
                     }
                 },

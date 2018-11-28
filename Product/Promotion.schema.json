@@ -16,32 +16,32 @@
                         },
                         "href": {
                             "type": "string",
-                            "description": "Hyperlink to access the promotion."
+                            "description": "Hyperlink to access the Promotion"
                         },
                         "id": {
                             "type": "string",
-                            "description": "Unique identifier of Promotion."
+                            "description": "Unique identifier of the Promotion"
                         },
                         "lastUpdate": {
                             "type": "string",
                             "format": "date-time",
-                            "description": "Latest update date of Promotion"
+                            "description": "Latest update date of the Promotion"
                         },
                         "lifecycleStatus": {
                             "type": "string",
-                            "description": "Status of Promotion, including draft/Test/WaitForApproval/Release/Suspend/Retirement."
+                            "description": "Status of the Promotion, including Draft/Test/WaitForApproval/Release/Suspend/Retirement"
                         },
                         "name": {
                             "type": "string",
-                            "description": "Name of Promotion."
+                            "description": "Name of the Promotion"
                         },
-                        "type": {
+                        "promotionType": {
                             "type": "string",
-                            "description": "Type of promotion.The basic type is Award/Discount/Reduction. More types can be extended in future."
+                            "description": "Type of the Promotion. The basic type is Award/Discount/Reduction. More types can be extended in future"
                         },
                         "validFor": {
                             "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "The period for which the promotion is valid."
+                            "description": "The period for which the Promotion is valid"
                         },
                         "pattern": {
                             "type": "array",

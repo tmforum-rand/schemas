@@ -37,7 +37,7 @@
                         "engagedParty": {
                             "$ref": "PartyRef.schema.json#PartyRef"
                         },
-                        "type": {
+                        "roleType": {
                             "$ref": "RoleTypeRef.schema.json#RoleTypeRef"
                         },
                         "account": {

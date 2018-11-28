@@ -38,7 +38,7 @@
                             "type": "string",
                             "description": "The name that the organization (unit) trades under"
                         },
-                        "type": {
+                        "organizationType": {
                             "type": "string",
                             "description": "Type of the organization (company...)"
                         },

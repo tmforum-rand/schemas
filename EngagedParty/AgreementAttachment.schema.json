@@ -18,9 +18,9 @@
                             "type": "string",
                             "description": "Unique identifier of the attachment"
                         },
-                        "type": {
+                        "attachmentType": {
                             "type": "string",
-                            "description": "Attachment type such as video, picture"
+                            "description": "The type of attachment, such as video, picture"
                         },
                         "url": {
                             "type": "string",
