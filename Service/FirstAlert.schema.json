@@ -16,7 +16,7 @@
                     "type": "string", 
                     "description": "Unique identifier of the object"
                 }, 
-                "type": {
+                "alertType": {
                     "type": "string", 
                     "description": "Type of the object"
                 }
