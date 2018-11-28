@@ -4,6 +4,7 @@
     "title": "OrderRelationship", 
     "definitions": {
         "OrderRelationship": {
+            "$id": "#OrderRelationship", 
             "type": "object", 
             "description": "Linked order to the one containing this attribute", 
             "properties": {
@@ -18,9 +19,9 @@
                     "type": "string", 
                     "description": "The id of the related order"
                 }, 
-                "type": {
+                "relationshipType": {
                     "type": "string", 
-                    "description": "The type of related order, can be : \u201cdependency\u201d if the order needs to be \u201cnot started\u201d until another order item is complete (a service order in this case) or \u201ccross-ref\u201d to keep track of the source order (a productOrder)"
+                    "description": "The type of related order, such as: [dependency] if the order needs to be [not started] until another order item is complete (a service order in this case) or [cross-ref] to keep track of the source order (a productOrder)"
                 }
             }, 
             "allOf": [

@@ -4,6 +4,7 @@
     "title": "ServiceTestSpecificationRef",
     "definitions": {
         "ServiceTestSpecificationRef": {
+            "$id": "#ServiceTestSpecificationRef",
             "type": "object",
             "description": "The service test specification used by the service test.",
             "properties": {

@@ -4,6 +4,7 @@
     "title": "ImpactPattern", 
     "definitions": {
         "ImpactPattern": {
+            "$id": "#ImpactPattern", 
             "type": "object", 
             "description": "Define the patterns of impact (optional)- e.g. other service characteristics- Used when defining impact through another pattern than the pre-defined attributes.", 
             "properties": {

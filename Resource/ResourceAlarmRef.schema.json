@@ -4,6 +4,7 @@
     "title": "ResourceAlarmRef",
     "definitions": {
         "ResourceAlarmRef": {
+            "$id": "#ResourceAlarmRef",
             "type": "object",
             "description": "A set of alarm ids identifying the alarms that are underlying this problem.",
             "properties": {

@@ -4,6 +4,7 @@
     "title": "CategoryRef",
     "definitions": {
         "CategoryRef": {
+            "$id": "#CategoryRef",
             "description": "The category for grouping recommendations",
             "type": "object",
             "properties": {

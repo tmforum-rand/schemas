@@ -4,6 +4,7 @@
     "title": "ServiceProblemRef",
     "definitions": {
         "ServiceProblemRef": {
+            "$id": "#ServiceProblemRef",
             "type": "object",
             "properties": {
                 "@referredType": {

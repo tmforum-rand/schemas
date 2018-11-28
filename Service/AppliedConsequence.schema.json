@@ -4,6 +4,7 @@
     "title": "AppliedConsequence", 
     "definitions": {
         "AppliedConsequence": {
+            "$id": "#AppliedConsequence", 
             "type": "object", 
             "description": "An Applied Consequence defines the action (prescribed action or notification) to take when a \nMeasureThresholdRuleViolation occurs.", 
             "properties": {

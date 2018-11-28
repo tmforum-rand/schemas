@@ -4,6 +4,7 @@
     "title": "EventRef",
     "definitions": {
         "EventRef": {
+            "$id": "#EventRef",
             "type": "object",
             "description": "Events linked with service problem",
             "properties": {

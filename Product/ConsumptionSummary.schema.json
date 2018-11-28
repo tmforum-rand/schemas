@@ -4,8 +4,9 @@
     "title": "ConsumptionSummary", 
     "definitions": {
         "ConsumptionSummary": {
+            "$id": "#ConsumptionSummary",
             "type": "object", 
-            "description": "The consumption counters (called ConsumptionSummary in the SID model) detail for example the different kind of consumption done on the bucket.", 
+            "description": "The consumption counters (called ConsumptionSummary in the SID model) detail for example the different kind of consumption done on the bucket", 
             "properties": {
                 "@baseType": {
                     "type": "string", 

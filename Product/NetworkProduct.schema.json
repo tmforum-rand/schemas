@@ -4,6 +4,7 @@
     "title": "NetworkProduct", 
     "definitions": {
         "NetworkProduct": {
+            "$id": "#NetworkProduct", 
             "type": "object", 
             "description": "An instantiated network product subscribed by a customer.", 
             "properties": {

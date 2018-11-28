@@ -4,6 +4,7 @@
     "title": "UsageVolumeProductRef",
     "definitions": {
         "UsageVolumeProductRef": {
+            "$id": "#UsageVolumeProductRef",
             "type": "object",
             "description": "Reference of a bucket",
             "properties": {

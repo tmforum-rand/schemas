@@ -4,6 +4,7 @@
     "title": "ServiceStateType", 
     "definitions": {
         "ServiceStateType": {
+            "$id": "#ServiceStateType", 
             "type": "string", 
             "description": "The life cycle state of the service",
             "enum": [

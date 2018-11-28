@@ -4,6 +4,7 @@
     "title": "StringCharacteristic", 
     "definitions": {
         "StringCharacteristic": {
+            "$id": "#StringCharacteristic", 
             "description": "A characteristic which value is a string", 
             "type": "object",
             "properties": {
@@ -16,7 +17,7 @@
                     "description": "Data type of the value of the characteristic"
                 }, 
                 "value": {
-		    "type": "string",
+        		    "type": "string",
                     "description": "Value of the characteristic"
                 }
             }

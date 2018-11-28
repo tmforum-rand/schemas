@@ -4,6 +4,7 @@
     "title": "NetworkProductRef",
     "definitions": {
         "NetworkProductRef": {
+            "$id": "#NetworkProductRef",
             "type": "object",
             "description": "Reference of a product",
             "properties": {

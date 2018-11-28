@@ -4,6 +4,7 @@
     "title": "NetworkFunction", 
     "definitions": {
         "NetworkFunction": {
+            "$id": "#NetworkFunction", 
             "type": "object", 
             "properties": {
                 "href": {

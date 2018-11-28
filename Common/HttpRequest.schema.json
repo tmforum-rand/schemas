@@ -4,6 +4,7 @@
     "title": "HttpRequest", 
     "definitions": {
         "HttpRequest": {
+            "$id": "#HttpRequest", 
             "type": "object", 
             "properties": {
                 "body": {

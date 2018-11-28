@@ -4,8 +4,9 @@
     "title": "TrackingRecord", 
     "definitions": {
         "TrackingRecord": {
+            "$id": "#TrackingRecord", 
             "type": "object", 
-            "description": "Tracking records allow the tracking of modifications on the problem.The tracking records should not be embedded in the problem to allow retrieving the problem without the tracking records.", 
+            "description": "Tracking records allow the tracking of modifications on the problem. The tracking records should not be embedded in the problem to allow retrieving the problem without the tracking records", 
             "properties": {
                 "description": {
                     "type": "string", 
@@ -24,7 +25,7 @@
                 }, 
                 "systemId": {
                     "type": "string", 
-                    "description": "Describes the system Id from which the action was done."
+                    "description": "Describes the system Id from which the action was done"
                 }, 
                 "time": {
                     "type": "string", 
@@ -33,7 +34,7 @@
                 }, 
                 "user": {
                     "type": "string", 
-                    "description": "Describes  the user doing the action."
+                    "description": "Describes  the user doing the action"
                 }
             },
             "allOf": [

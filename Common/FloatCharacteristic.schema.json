@@ -4,6 +4,7 @@
     "title": "FloatCharacteristic", 
     "definitions": {
         "FloatCharacteristic": {
+            "$id": "#FloatCharacteristic", 
             "description": "A characteristic which value is a float number", 
             "type": "object",
             "properties": {

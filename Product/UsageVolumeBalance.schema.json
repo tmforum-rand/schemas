@@ -4,6 +4,7 @@
     "title": "UsageVolumeBalance", 
     "definitions": {
         "UsageVolumeBalance": {
+            "$id": "#UsageVolumeBalance", 
             "type": "object", 
             "description": "The balance (called UsageVolumeBalance in the SID model) defines the remaining allowed product usage quantity in terms of volume, time, currency or events. It corresponds to the initial allowed usage quantity minus the usage consumed on the bucket.", 
             "properties": {

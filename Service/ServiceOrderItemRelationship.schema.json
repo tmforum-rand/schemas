@@ -4,6 +4,7 @@
     "title": "ServiceOrderItemRelationship", 
     "definitions": {
         "ServiceOrderItemRelationship": {
+            "$id": "#ServiceOrderItemRelationship", 
             "type": "object", 
             "description": "Linked order item to the one containing this attribute", 
             "properties": {

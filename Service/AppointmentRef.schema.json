@@ -4,6 +4,7 @@
     "title": "AppointmentRef",
     "definitions": {
         "AppointmentRef": {
+            "$id": "#AppointmentRef",
             "type": "object",
             "description": "Used to precise that an appointment was set-up with a related party for this order item",
             "properties": {
@@ -12,7 +13,7 @@
                 },
                 "href": {
                     "type": "string",
-                    "description": "Reference of the appointmenrt"
+                    "description": "Reference of the appointment"
                 },
                 "id": {
                     "type": "string",

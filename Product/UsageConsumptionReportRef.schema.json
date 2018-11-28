@@ -4,6 +4,7 @@
     "title": "UsageConsumptionReportRef",
     "definitions": {
         "UsageConsumptionReportRef": {
+            "$id": "#UsageConsumptionReportRef",
             "type": "object",
             "description": "Reference of an usage consumption report",
             "properties": {

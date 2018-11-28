@@ -4,6 +4,7 @@
     "title": "ChangeRequestRef",
     "definitions": {
         "ChangeRequestRef": {
+            "$id": "#ChangeRequestRef",
             "type": "object",
             "description": "Reference to a Change Request",
             "properties": {

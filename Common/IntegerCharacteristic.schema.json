@@ -4,6 +4,7 @@
     "title": "IntegerCharacteristic", 
     "definitions": {
         "IntegerCharacteristic": {
+            "$id": "#IntegerCharacteristic", 
             "description": "A characteristic which value is a integer number", 
             "type": "object",
             "properties": {

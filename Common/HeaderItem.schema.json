@@ -4,6 +4,7 @@
     "title": "HeaderItem", 
     "definitions": {
         "HeaderItem": {
+            "$id": "#HeaderItem", 
             "type": "object", 
             "properties": {
                 "name": {

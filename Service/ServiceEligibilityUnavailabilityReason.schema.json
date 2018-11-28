@@ -4,16 +4,17 @@
     "title": "ServiceEligibilityUnavailabilityReason", 
     "definitions": {
         "ServiceEligibilityUnavailabilityReason": {
-            "description": "Reason for eligibility result if the productOfferingQualification result is no (meaning the productOffering or productSpec is not available).", 
+            "$id": "#ServiceEligibilityUnavailabilityReason", 
+            "description": "Reason for eligibility result if the productOfferingQualification result is no (meaning the productOffering or productSpec is not available)", 
             "type": "object", 
             "properties": {
                 "code": {
                     "type": "string", 
-                    "description": "Unavailability reason code."
+                    "description": "Unavailability reason code"
                 }, 
                 "label": {
                     "type": "string", 
-                    "description": "Unavailability reason label."
+                    "description": "Unavailability reason label"
                 }
             }, 
             "allOf": [

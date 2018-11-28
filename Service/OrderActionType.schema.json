@@ -4,7 +4,8 @@
     "title": "OrderActionType", 
     "definitions": {
         "OrderActionType": {
-	    "description" : "string",
+            "$id": "#OrderActionType", 
+            "description" : "string",
             "type": "string", 
             "enum": [
                 "add",

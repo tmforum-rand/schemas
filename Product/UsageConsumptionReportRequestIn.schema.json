@@ -4,6 +4,7 @@
     "title": "UsageConsumptionReportRequestIn", 
     "definitions": {
         "UsageConsumptionReportRequestIn": {
+            "$id": "#UsageConsumptionReportRequestIn", 
             "type": "object", 
             "description": "", 
             "properties": {
