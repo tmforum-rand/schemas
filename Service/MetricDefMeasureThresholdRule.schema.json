@@ -26,6 +26,12 @@
                             "type": "string",
                             "description": "A value used to determine if the threshold is crossed or ceases \nto be crossed. It represents the Upper limit. The value should be greater than the conformanceTargetLower. The conformance comparators should also be logically defined so as to not lead to a logically impossible condition."
                         },
+                        "consequence": {
+                            "type": "array", 
+                            "items": {
+                                "$ref": "MetricDefMeasureConsequence.schema.json#/definitions/MetricDefMeasureConsequence"
+                            }
+                        }, 
                         "description": {
                             "type": "string",
                             "description": "Description for the MetricDefMeasureThresholdRule ."
@@ -38,6 +44,10 @@
                             "type": "string",
                             "description": "The number of allowed crossing occurrences in reference to the \ntolerancePeriod without a consequence being initiated."
                         },
+                        "thresholdRuleSeverity": {
+                            "type": "string", 
+                            "description": "A threshold can be generated in different severity levels. A \ncrossing for each level may require a different condition and possibly trigger a different consequence."
+                        }, 
                         "tolerancePeriod": {
                             "type": "string",
                             "description": "A String. An interval of time of allowed crossing occurrences before a consequence being initiated."

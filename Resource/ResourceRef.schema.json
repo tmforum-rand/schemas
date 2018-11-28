@@ -8,11 +8,17 @@
             "type": "object",
             "properties": {
                 "href": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Reference of the supporting resource"
                 },
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Unique identifier of the supporting resource"
                 },
+                "name": {
+                    "type": "string", 
+                    "description": "Name of the resource supporting the service"
+                }, 
                 "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."

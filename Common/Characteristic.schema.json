@@ -14,6 +14,10 @@
                             "type": "string",
                             "description": "Name of the characteristic"
                         },
+                        "valueType": {
+                            "type": "string", 
+                            "description": "Data type of the value of the characteristic"
+                        }, 
                         "value": {
                             "type": "string",
                             "description": "Value of the characteristic"

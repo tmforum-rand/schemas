@@ -47,11 +47,6 @@
                             "type": "string",
                             "description": "\"name\" is the name of the service."
                         },
-                        "orderDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "\"orderDate\" is the date when the service was ordered"
-                        },
                         "startDate": {
                             "type": "string",
                             "format": "date-time",

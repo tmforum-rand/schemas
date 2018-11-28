@@ -5,15 +5,16 @@
     "definitions": {
         "ResourceRelationship": {
             "$id": "#ResourceRelationship",
+            "description": "Describes links between resources", 
             "type": "object",
             "allOf": [
                 {
                     "properties": {
                         "relationshipType": {
                             "type": "string",
-                            "description": "The type of resource relationship"
+                            "description": "Semantic of the relationship"
                         },
-                        "resourceRef": {
+                        "resource": {
                             "$ref": "ResourceRef.schema.json#ResourceRef",
                             "description": "A reference to the resource"
                         }
