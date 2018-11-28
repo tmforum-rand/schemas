@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "EligibilityUnavailabilityReason.schema.json", 
-    "title": "EligibilityUnavailabilityReason", 
+    "$id": "ServiceEligibilityUnavailabilityReason.schema.json", 
+    "title": "ServiceEligibilityUnavailabilityReason", 
     "definitions": {
-        "EligibilityUnavailabilityReason": {
+        "ServiceEligibilityUnavailabilityReason": {
             "description": "Reason for eligibility result if the productOfferingQualification result is no (meaning the productOffering or productSpec is not available).", 
             "type": "object", 
             "properties": {
