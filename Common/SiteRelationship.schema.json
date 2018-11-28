@@ -21,7 +21,7 @@
                             "type": "string",
                             "description": "Role of the related site in the relationship"
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of relationship"
                         },
