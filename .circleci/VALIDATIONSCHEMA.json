@@ -26,10 +26,6 @@
                                 "required": { "type": "array" },
                                 "dependencies": { "type": "object" }
                             },
-                            "oneOf": [ { "required": [ "allOf" ] },
-                                        { "required": [ "properties" ] },
-                                        { "required": [ "enum" ] }
-                            ],
                             "required": ["type", "$id"],
                             "additionalProperties": false
                         }
