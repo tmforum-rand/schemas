@@ -3,6 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 const Validator = require('jsonschema').Validator;
+const $RefParser = require('./json-schema-ref-parser/lib/index.js');
+
 const { readSchemaSync, walk, executeAllPromises } = require('./utilities.js');
 
 const t0 = Date.now();
@@ -31,13 +33,13 @@ walk(DIR, (err,files) => {
 		console.log("error: " + err);
 		return;
 	}
-    
+
     // filter / remove files not to be validated
     const promises = files
-                        .filter(file => file.endsWith('.json') &&
-                                        !file.includes('/.circleci/') && !file.includes('/dev/') &&
-                                        !file.includes('/package') && !file.includes('/node_modules/'))
-                        .map(file => validateSchema(file));
+                    .filter(file => file.endsWith('.json') &&
+                                    !file.includes('/.circleci/') && !file.includes('/dev/') &&
+                                    !file.includes('/package') && !file.includes('/node_modules/'))
+                    .map(file => validateSchema(file));
 
     executeAllPromises(promises)
     .then(res => {
@@ -67,9 +69,7 @@ walk(DIR, (err,files) => {
             console.log('ERROR - schemas with error(s):');
             res.errors.forEach(item => {
                 console.log('... ' + item.file);
-                // skip the first item, contains just the number of errors found
-                item.errors.shift();
-                item.errors.forEach(err => console.log('... ... ' + JSON.stringify(err.stack)));
+                item.errors.forEach(err => console.log('... ... ' + err.stack)); // JSON.stringify(err.stack)));
             });
         }
 
@@ -119,14 +119,35 @@ function validateSchema(file) {
         validator.addSchema(METASCHEMA, 'http://json-schema.org/draft-07/schema#');
 
         const result = validator.validate(schema, SCHEMA, options);
-
         const issues = checkSchemaIssues(schema);
 
-        if(result.errors && result.errors.length>0) {
-            return reject({'file': file, 'errors': result.errors, 'issues': issues});
-        } else {
-            return resolve({'file': file, 'issues': issues});
-        }
+        const parser = new $RefParser();
+        parser.dereference(file)
+        .then(schema => {
+            // ok
+            if(result.errors && result.errors.length && result.errors.length>0) {
+                // skip the first item, contains just the number of errors found
+                if(result.errors.length>1) result.errors.shift();
+                return reject({'file': file, 'errors': result.errors, 'issues': issues});
+            } else {
+                return resolve({'file': file, 'issues': issues});
+            }
+        })
+        .catch(error => {
+            var message = error.message.split(/[\r\n]+/)[1];
+            message = message.replace(process.cwd(),'.');
+            message = 'de-reference check: ' + message;
+            result.errors.push({stack: message});
+
+            if(result.errors && result.errors.length && result.errors.length>0) {
+                // skip the first item, contains just the number of errors found
+                if(result.errors.length>1) result.errors.shift();
+                return reject({'file': file, 'errors': result.errors, 'issues': issues});
+            } else {
+                return resolve({'file': file, 'issues': issues});
+            }
+        });
+
     })
 }
 
