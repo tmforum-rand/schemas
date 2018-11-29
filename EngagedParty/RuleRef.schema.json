@@ -17,11 +17,11 @@
                 },
                 "id": {
                     "type": "string",
-                    "description": "The identifier of the referred rule",
+                    "description": "The identifier of the referred rule"
                 },
                 "@referredType": {
                     "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
+                    "description": "The actual type of the target instance when needed for disambiguation"
                 }
             }
         }
