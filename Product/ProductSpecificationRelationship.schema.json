@@ -18,7 +18,7 @@
                             "type": "string",
                             "description": "Unique identifier of the productSpecification"
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
                         },

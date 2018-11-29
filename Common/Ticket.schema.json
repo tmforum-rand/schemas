@@ -62,24 +62,27 @@
                             "format": "date-time",
                             "description": "Foreseen trouble resolution date"
                         },
-                        "type": {
+                        "ticketType": {
                             "type": "string",
                             "description": "Type of trouble ticket"
                         },
                         "relatedObject": {
                             "type": "array",
+                            "description": "Any object(s) associated with this trouble ticket",
                             "items": {
                                 "$ref": "RelatedObject.schema.json#RelatedObject"
                             }
                         },
                         "note": {
                             "type": "array",
+                            "description": "Any note(s) associated with this trouble ticket",
                             "items": {
                                 "$ref": "Note.schema.json#Note"
                             }
                         },
                         "relatedParty": {
                             "type": "array",
+                            "description": "Any Party/Parties associated with this trouble ticket",
                             "items": {
                                 "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                             }

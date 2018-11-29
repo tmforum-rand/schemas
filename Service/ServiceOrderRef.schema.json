@@ -7,30 +7,23 @@
             "$id": "#ServiceOrderRef",
             "description": "Service Order reference. Useful to understand the which was the Service order trough which the service was instantiated in the service inventory",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the Service Order"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the Service Order"
-                        },
-                        "serviceOrderItemId": {
-                            "type": "string"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the Service Order"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the Service Order"
+                },
+                "serviceOrderItemId": {
+                    "type": "string"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

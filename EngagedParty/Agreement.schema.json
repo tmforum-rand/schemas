@@ -45,19 +45,19 @@
                         },
                         "statementOfIntent": {
                             "type": "string",
-                            "description": "An overview and goals of the Agreement."
+                            "description": "An overview and goals of the Agreement"
                         },
                         "status": {
                             "type": "string",
-                            "description": "The current status of the agreement. Typical values are: in process, approved and rejected."
+                            "description": "The current status of the agreement. Typical values are: in process, approved and rejected"
                         },
-                        "type": {
+                        "agreementType": {
                             "type": "string",
-                            "description": "The type of the agreement. For example \"commercial\"."
+                            "description": "The type of the agreement. For example commercial"
                         },
                         "version": {
                             "type": "string",
-                            "description": "A string identifying the version of the agreement."
+                            "description": "A string identifying the version of the agreement"
                         },
                         "agreementSpecification": {
                             "$ref": "AgreementSpecificationRef.schema.json#AgreementSpecificationRef"

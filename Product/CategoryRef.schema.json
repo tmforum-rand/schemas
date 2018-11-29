@@ -1,26 +1,27 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "CategoryRef.schema.json", 
-    "title": "CategoryRef", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "CategoryRef.schema.json",
+    "title": "CategoryRef",
     "definitions": {
         "CategoryRef": {
-            "description": "The category for grouping recommendations", 
-            "type": "object", 
+            "$id": "#CategoryRef",
+            "description": "The category for grouping recommendations",
+            "type": "object",
             "properties": {
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Hypertext Reference of the category"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Unique identifier of category"
-                }, 
+                },
                 "name": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Name of the category."
-                }, 
+                },
                 "@referredType": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 }
             }

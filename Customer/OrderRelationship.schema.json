@@ -15,8 +15,9 @@
                         "id": {
                             "type": "string"
                         },
-                        "type": {
-                            "type": "string"
+                        "relationshipType": {
+                            "type": "string",
+                            "description": "The type of order relationship"
                         }
                     }
                 },

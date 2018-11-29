@@ -26,7 +26,7 @@
                             "type": "string",
                             "description": "The association role for this entity specification"
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of relationship such as migration, substitution, dependency, exclusivity"
                         },

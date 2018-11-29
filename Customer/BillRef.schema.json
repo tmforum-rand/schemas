@@ -7,31 +7,24 @@
             "$id": "#BillRef",
             "description": "Bill reference.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Unique reference of the bill."
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the bill"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the bill"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Unique reference of the bill."
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the bill"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the bill"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

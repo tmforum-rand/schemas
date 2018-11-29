@@ -7,31 +7,24 @@
             "$id": "#ProductOfferingRef",
             "description": "ProductOffering reference. A product offering represents entities that are orderable from the provider of the catalog, this resource includes pricing information.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the product offering"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the product offering"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the product offering"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the product offering"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the product offering"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the product offering"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

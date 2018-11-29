@@ -4,6 +4,7 @@
     "title": "ServiceProblem", 
     "definitions": {
         "ServiceProblem": {
+            "$id": "#ServiceProblem", 
             "type": "object", 
             "description": "The problem information for Middle B which is abstracted in the service layer from the issued event information by First B", 
             "properties": {

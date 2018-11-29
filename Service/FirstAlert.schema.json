@@ -4,6 +4,7 @@
     "title": "FirstAlert", 
     "definitions": {
         "FirstAlert": {
+            "$id": "#FirstAlert", 
             "type": "object", 
             "description": "Indicates what first alerted the system to the problem. It is not the root cause of the Service Problem. Examples: Threshold crossing alert", 
             "properties": {
@@ -15,7 +16,7 @@
                     "type": "string", 
                     "description": "Unique identifier of the object"
                 }, 
-                "type": {
+                "alertType": {
                     "type": "string", 
                     "description": "Type of the object"
                 }

@@ -1,9 +1,10 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "OrderItemRelationship.schema.json", 
-    "title": "OrderItemRelationship", 
+    "$id": "ServiceOrderItemRelationship.schema.json", 
+    "title": "ServiceOrderItemRelationship", 
     "definitions": {
-        "OrderItemRelationship": {
+        "ServiceOrderItemRelationship": {
+            "$id": "#ServiceOrderItemRelationship", 
             "type": "object", 
             "description": "Linked order item to the one containing this attribute", 
             "properties": {
@@ -13,7 +14,7 @@
                 }, 
                 "type": {
                     "type": "string", 
-                    "description": "The type of related order item, can be : dependancy if the order item needs to be \u201cnot started\u201d until another order item is complete"
+                    "description": "The type of related order item, can be : dependency if the order item needs to be not started until another order item is complete"
                 }
             }, 
             "allOf": [

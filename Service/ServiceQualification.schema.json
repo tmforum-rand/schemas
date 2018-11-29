@@ -39,7 +39,7 @@
                         "provideUnavailabilityReason": {
                             "type": "boolean"
                         },
-                        "serviceQualificationdateTime": {
+                        "serviceQualificationDateTime": {
                             "type": "string",
                             "format": "date-time"
                         },

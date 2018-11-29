@@ -22,7 +22,7 @@
                             "type": "string",
                             "description": "Name of the target specCharacteristic"
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of relationship such as aggregation, migration, substitution, dependency, exclusivity"
                         },

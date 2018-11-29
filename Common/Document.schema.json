@@ -17,11 +17,11 @@
                         },
                         "description": {
                             "type": "string",
-                            "description": "free-text description of the document"
+                            "description": "Free-text description of the document"
                         },
                         "href": {
                             "type": "string",
-                            "description": "The URI for the object itself."
+                            "description": "The URI for the object itself"
                         },
                         "id": {
                             "type": "string",
@@ -34,15 +34,15 @@
                         },
                         "lifecycleState": {
                             "type": "string",
-                            "description": "The life cycle state of the document."
+                            "description": "The life cycle state of the document"
                         },
                         "name": {
                             "type": "string",
                             "description": "A string used to give a name to the document"
                         },
-                        "type": {
+                        "documentType": {
                             "type": "string",
-                            "description": "Name of the document type"
+                            "description": "The specific type of this document"
                         },
                         "version": {
                             "type": "string",
@@ -50,12 +50,14 @@
                         },
                         "characteristic": {
                             "type": "array",
+                            "description": "Any additional characteristic(s) specific to this Document",
                             "items": {
                                 "$ref": "DocumentCharacteristic.schema.json#DocumentCharacteristic"
                             }
                         },
                         "relatedParty": {
                             "type": "array",
+                            "description": "Any Parties related to this Document (eg: author)",
                             "items": {
                                 "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                             }

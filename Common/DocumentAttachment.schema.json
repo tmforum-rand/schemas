@@ -20,7 +20,7 @@
                         },
                         "mimeType": {
                             "type": "string",
-                            "description": "mimeType of the Attachement ( e,g application/pdf)"
+                            "description": "mimeType of the Attachment ( e,g application/pdf)"
                         },
                         "name": {
                             "type": "string",
@@ -34,7 +34,7 @@
                             "type": "string",
                             "description": "The unit of measure for the size"
                         },
-                        "type": {
+                        "attachmentType": {
                             "type": "string",
                             "description": "Identifies the sub-type of the instance of binary attachment"
                         },

@@ -18,7 +18,7 @@
                             "type": "string",
                             "description": "Unique identifier of the related agreement specification."
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of relationship such as, substitution or dependency."
                         },

@@ -10,7 +10,7 @@
             "allOf": [
                 {
                     "properties": {
-                        "dertails": {
+                        "details": {
                             "$ref": "AccountRef.schema.json#AccountRef"
                         }
                     }

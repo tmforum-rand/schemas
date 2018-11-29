@@ -15,7 +15,7 @@
                         },
                         "href": {
                             "type": "string",
-                            "description": "Hypertext Reference of the recommendation."
+                            "description": "Hypertext Reference of the recommendation"
                         },
                         "id": {
                             "type": "string",
@@ -25,20 +25,20 @@
                             "type": "string",
                             "description": "Name of recommendation"
                         },
-                        "type": {
+                        "recommendationType": {
                             "type": "string",
-                            "description": "Type of recommendation.\nThe basic type is :\n¡®AD¡¯: it means the recommendation is the advertisement for display\n¡®OFFER¡¯: it means the recommended content is the offer entry page. By clicking it, the user can be forwarded to the details of the offering"
+                            "description": "The type of recommendation"
                         },
                         "validFor": {
                             "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "The period in which the recommendation is valid."
+                            "description": "The period in which the recommendation is valid"
                         },
                         "order": {
                             "$ref": "ProductOrderRef.schema.json#ProductOrderRef"
                         },
                         "location": {
                             "$ref": "../Common/GeographicLocationRef.schema.json#GeographicLocationRef",
-                            "description": "The geographic location which the recommendation is related with"
+                            "description": "The geographic location which the recommendation is related to"
                         },
                         "channel": {
                             "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
@@ -49,7 +49,7 @@
                         },
                         "shoppingCart": {
                             "$ref": "../Customer/ShoppingCartRef.schema.json#ShoppingCartRef",
-                            "description": "The shopping cart which the recommendation is related with."
+                            "description": "The shopping cart which the recommendation is related to"
                         },
                         "party": {
                             "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"

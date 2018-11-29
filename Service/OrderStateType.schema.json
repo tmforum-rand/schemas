@@ -4,6 +4,7 @@
     "title": "OrderStateType", 
     "definitions": {
         "OrderStateType": {
+            "$id": "#OrderStateType", 
             "type": "string", 
             "description": "Possible values for the state of the order",
             "enum": [

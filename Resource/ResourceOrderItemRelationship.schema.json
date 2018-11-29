@@ -9,7 +9,7 @@
             "allOf": [
                 {
                     "properties": {
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of the order item relationship"
                         },

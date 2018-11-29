@@ -39,7 +39,7 @@
                             "$ref": "../Common/Money.schema.json#Money",
                             "description": "All taxes included amount to be charged on the bill (expressed in the given currency) for this applied billing rate"
                         },
-                        "type": {
+                        "rateType": {
                             "type": "string",
                             "description": "Type of the applied billing rate : appliedBillingCharge (any kind of charge except taxation charges : recurringCharge, oneTimeCharge, usageCharge),  appliedBillingCredit (any kind of credit : rebate or productAlteration) or appliedPenaltyCharge (penalty charges such as late fees, payment rejection fees,...)"
                         },

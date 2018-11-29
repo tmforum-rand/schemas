@@ -7,35 +7,28 @@
             "$id": "#AccountRef",
             "description": "Account reference. A account may be a party account or a financial account.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Detailed description of the account"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the account"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the account"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the account"
-                        },
-                        "@referredType": {
-                            "type": "string",
-                            "description": "The actual type of the target instance when needed for disambiguation."
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Detailed description of the account"
                 },
-                {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the account"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the account"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the account"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            ]
+            }
         }
     }
 }

@@ -12,21 +12,22 @@
                     "properties": {
                         "buildingName": {
                             "type": "string",
-                            "description": "allows for buildings that have well-known names"
+                            "description": "Allows for buildings that have well-known names"
                         },
                         "href": {
                             "type": "string"
                         },
                         "id": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Unique ID for this SubAddress"
                         },
                         "levelNumber": {
                             "type": "string",
-                            "description": "used where a level type may be repeated e.g. BASEMENT 1, BASEMENT 2"
+                            "description": "Used where a level type may be repeated e.g. BASEMENT 1, BASEMENT 2"
                         },
                         "levelType": {
                             "type": "string",
-                            "description": "describes level types within a building"
+                            "description": "Describes level types within a building"
                         },
                         "name": {
                             "type": "string",
@@ -34,23 +35,23 @@
                         },
                         "privateStreetName": {
                             "type": "string",
-                            "description": "private streets internal to a property (e.g. a university) may have internal names that are not recorded by the land title office."
+                            "description": "Private streets internal to a property (e.g. a university) may have internal names that are not recorded by the land title office."
                         },
                         "privateStreetNumber": {
                             "type": "string",
-                            "description": "private streets numbers internal to a private street"
+                            "description": "Private streets numbers internal to a private street"
                         },
                         "subUnitNumber": {
                             "type": "string",
-                            "description": "the discriminator used for the subunit\noften just a simple number e.g. FLAT 5, may also be a range"
+                            "description": "The discriminator of the subunit, often just a simple number e.g. FLAT 5, may also be a range"
                         },
                         "subUnitType": {
                             "type": "string",
-                            "description": "the type of subunit\ne.g.BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF"
+                            "description": "The type of subunit, such as BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF"
                         },
-                        "type": {
+                        "subAddressType": {
                             "type": "string",
-                            "description": "type of subaddress : it can be a subunit or a private street"
+                            "description": "The type of subaddress : it can be a subunit or a private street"
                         }
                     }
                 },

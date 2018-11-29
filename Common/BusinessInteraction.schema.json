@@ -10,10 +10,12 @@
                 {
                     "properties": {
                         "description": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "A description of this interaction"
                         },
                         "id": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "The unique ID for this interaction"
                         },
                         "interactionData": {
                             "type": "string",

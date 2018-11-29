@@ -35,7 +35,24 @@ jobs:
         
       - run: 
           name: Validate
-          command: node .circleci/validate.js . .circleci > /tmp/results.txt
+          command: |
+            node .circleci/validate.js . .circleci > /tmp/results.txt
+        
+      - run:
+          name: Upload validation results
+          when: always
+          command: |     
+            FILE=validation-`date -u "+%Y%m%dT%H%M%SZ"`.txt
+            DIR=".circleci/validation_results"
+            mkdir -p $DIR
+            cp /tmp/results.txt $DIR/$FILE
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "${EMAIL}"
+            git config user.name "Deployment Bot"
+            git add $DIR/$FILE
+            git commit --allow-empty -m "Validation result [skip ci]"
+            # Push quietly to prevent showing the token in log
+            git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/schemas.git master
       
       - store_artifacts:
           path: /tmp/results.txt

@@ -36,7 +36,7 @@
                             "type": "string",
                             "description": "Status of the deduction operation"
                         },
-                        "type": {
+                        "deductType": {
                             "type": "string",
                             "description": "A preconfigured value that describes a deduct type which determines the prepay balance bucket in which the deduct is done"
                         },

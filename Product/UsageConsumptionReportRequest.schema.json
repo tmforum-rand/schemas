@@ -4,6 +4,7 @@
     "title": "UsageConsumptionReportRequest", 
     "definitions": {
         "UsageConsumptionReportRequest": {
+            "$id": "#UsageConsumptionReportRequest", 
             "type": "object", 
             "description": "This resource is used to manage the calculation request of an usage consumption report.", 
             "properties": {

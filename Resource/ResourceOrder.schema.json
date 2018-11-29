@@ -19,7 +19,7 @@
                             "format": "date-time",
                             "description": "Date when the order was completed"
                         },
-                        "corelationId": {
+                        "correlationId": {
                             "type": "string",
                             "description": "ID given by the consumer and only understandable by him (to facilitate his searches afterwards)"
                         },
@@ -62,7 +62,7 @@
                             "type": "string",
                             "description": "The life cycle state of the resource."
                         },
-                        "type": {
+                        "orderType": {
                             "type": "string",
                             "description": "Name of the Resource Order type"
                         },

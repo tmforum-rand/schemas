@@ -11,11 +11,12 @@
                 {
                     "properties": {
                         "callbackFlag": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "Do you want a callback on delivery of communication message?"
                         },
                         "content": {
                             "type": "string",
-                            "description": "The content of the communication message."
+                            "description": "The content of the communication message"
                         },
                         "description": {
                             "type": "string",
@@ -23,7 +24,7 @@
                         },
                         "href": {
                             "type": "string",
-                            "description": "Hypertext Reference of the Communication Message."
+                            "description": "Hypertext Reference of the Communication Message"
                         },
                         "id": {
                             "type": "string",
@@ -39,12 +40,12 @@
                         "sendTime": {
                             "type": "string",
                             "format": "date-time",
-                            "description": "The time of sending communication message."
+                            "description": "The time of sending communication message"
                         },
                         "sendTimeComplete": {
                             "type": "string",
                             "format": "date-time",
-                            "description": "The time of completion of sending communication message."
+                            "description": "The time of completion of sending communication message"
                         },
                         "status": {
                             "type": "string",
@@ -52,32 +53,37 @@
                         },
                         "subject": {
                             "type": "string",
-                            "description": "The title of the message. \nIt is necessary for the email and mobile app push."
+                            "description": "The title of the message, necessary for the email and mobile app push"
                         },
                         "tryTimes": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "How many times do you want to retry the delivery of this message?"
                         },
-                        "type": {
+                        "messageType": {
                             "type": "string",
-                            "description": "1: SMS\n2: Email\n3: Mobile app push notification"
+                            "description": "The type of message, such as: SMS, Email, Mobile app push notification"
                         },
                         "attachment": {
                             "type": "array",
+                            "description": "Any attachment associated with this message",
                             "items": {
                                 "$ref": "Attachment.schema.json#Attachment"
                             }
                         },
                         "receiver": {
                             "type": "array",
+                            "description": "The receiver(s) of this message",
                             "items": {
                                 "$ref": "Receiver.schema.json#Receiver"
                             }
                         },
                         "sender": {
-                            "$ref": "Sender.schema.json#Sender"
+                            "$ref": "Sender.schema.json#Sender",
+                            "description": "The sender of this message"
                         },
                         "characteristic": {
                             "type": "array",
+                            "description": "Any additional characteristic(s) of this message",
                             "items": {
                                 "$ref": "CommunicationRequestCharacteristic.schema.json#CommunicationRequestCharacteristic"
                             }

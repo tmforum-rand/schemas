@@ -14,7 +14,7 @@
                             "type": "string",
                             "description": "Unique identifier of the referred cart item"
                         },
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
                             "description": "Type of the cart item relationship"
                         },

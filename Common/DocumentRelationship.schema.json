@@ -10,9 +10,9 @@
             "allOf": [
                 {
                     "properties": {
-                        "type": {
+                        "relationshipType": {
                             "type": "string",
-                            "description": "a string, Type of relationship: e.g \"related\""
+                            "description": "The type of relationship"
                         },
                         "documentRef": {
                             "$ref": "DocumentRef.schema.json#DocumentRef"

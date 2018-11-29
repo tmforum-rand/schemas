@@ -4,6 +4,7 @@
     "title": "HttpResponse", 
     "definitions": {
         "HttpResponse": {
+            "$id": "#HttpResponse", 
             "type": "object", 
             "properties": {
                 "body": {
