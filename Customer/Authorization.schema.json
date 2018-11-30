@@ -7,37 +7,35 @@
             "$id": "#Authorization",
             "description": "If special discount or special product offering price or specific condition need an approval for ISP sale representative it is described here.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "authorizationGivenDate": {
-                            "$ref": "Date.schema.json#/Date",
-                            "description": "Date when the authorization (approved or declined) has been done"
-                        },
-                        "authorizationName": {
-                            "type": "string",
-                            "description": "Name of the required authorization"
-                        },
-                        "authorizationRequestedDate": {
-                            "$ref": "Date.schema.json#/Date",
-                            "description": "Date when the authorization is requested for"
-                        },
-                        "authorizationSignatureRepresentation": {
-                            "type": "string",
-                            "description": "To described a digital or manual signature"
-                        },
-                        "authorizationState": {
-                            "type": "string",
-                            "description": "State of the authorization - could be approved or declined"
-                        },
-                        "approver": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
-                            }
-                        }
-                    }
+            "properties": {
+                "authorizationGivenDate": {
+                    "$ref": "Date.schema.json#/Date",
+                    "description": "Date when the authorization (approved or declined) has been done"
                 },
+                "authorizationName": {
+                    "type": "string",
+                    "description": "Name of the required authorization"
+                },
+                "authorizationRequestedDate": {
+                    "$ref": "Date.schema.json#/Date",
+                    "description": "Date when the authorization is requested for"
+                },
+                "authorizationSignatureRepresentation": {
+                    "type": "string",
+                    "description": "To described a digital or manual signature"
+                },
+                "authorizationState": {
+                    "type": "string",
+                    "description": "State of the authorization - could be approved or declined"
+                },
+                "approver": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

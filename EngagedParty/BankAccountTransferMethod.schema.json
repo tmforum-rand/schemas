@@ -6,14 +6,12 @@
         "BankAccountTransferMethod": {
             "$id": "#BankAccountTransferMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "BankAccountTransferDetails.schema.json#BankAccountTransferDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "BankAccountTransferDetails.schema.json#BankAccountTransferDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -7,45 +7,43 @@
             "$id": "#ProductOfferingPrice",
             "description": "Is based on both the basic cost to develop and produce products and the enterprise's policy on revenue targets. This price may be further revised through discounting (prodOfferPriceAlteration). The price, applied for a productOffering may also be influenced by the productOfferingTerm, the customer selected - e.g. a productOffering can be offered with multiple terms, like commitment periods for the contract. The price may be influenced by this productOfferingTerm. A productOffering may be cheaper with a 24 month commitment than with a 12 month commitment.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Description of the productOfferingPrice"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the productOfferingPrice"
-                        },
-                        "priceType": {
-                            "type": "string",
-                            "description": "Indicates the price type: recurring, one time, usage"
-                        },
-                        "recurringChargePeriod": {
-                            "type": "string",
-                            "description": "Could be month, week..."
-                        },
-                        "unitOfMeasure": {
-                            "type": "string",
-                            "description": "Could be minutes, GB..."
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "The period for which the productOfferingPrice is valid"
-                        },
-                        "version": {
-                            "type": "string",
-                            "description": "ProductOffering version"
-                        },
-                        "price": {
-                            "$ref": "../Customer/Price.schema.json#Price"
-                        },
-                        "priceAlteration": {
-                            "$ref": "../Customer/PriceAlteration.schema.json#PriceAlteration"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the productOfferingPrice"
                 },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the productOfferingPrice"
+                },
+                "priceType": {
+                    "type": "string",
+                    "description": "Indicates the price type: recurring, one time, usage"
+                },
+                "recurringChargePeriod": {
+                    "type": "string",
+                    "description": "Could be month, week..."
+                },
+                "unitOfMeasure": {
+                    "type": "string",
+                    "description": "Could be minutes, GB..."
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The period for which the productOfferingPrice is valid"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "ProductOffering version"
+                },
+                "price": {
+                    "$ref": "../Customer/Price.schema.json#Price"
+                },
+                "priceAlteration": {
+                    "$ref": "../Customer/PriceAlteration.schema.json#PriceAlteration"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

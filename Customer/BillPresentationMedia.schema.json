@@ -7,27 +7,25 @@
             "$id": "#BillPresentationMedia",
             "description": "A mean of communicating a bill, supported by the associated bill format. For example, post mail, email, web page.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "An explanatory text describing this bill presentation media"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the bill presentation media"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the bill presentation media"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "A short descriptive name"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "An explanatory text describing this bill presentation media"
                 },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the bill presentation media"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the bill presentation media"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A short descriptive name"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

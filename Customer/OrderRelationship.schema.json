@@ -6,21 +6,19 @@
         "OrderRelationship": {
             "$id": "#OrderRelationship",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string"
-                        },
-                        "id": {
-                            "type": "string"
-                        },
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "The type of order relationship"
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string"
                 },
+                "id": {
+                    "type": "string"
+                },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "The type of order relationship"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -6,18 +6,16 @@
         "Quantity": {
             "$id": "#Quantity",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "amount": {
-                            "type": "number",
-                            "format": "float"
-                        },
-                        "units": {
-                            "type": "string"
-                        }
-                    }
+            "properties": {
+                "amount": {
+                    "type": "number",
+                    "format": "float"
                 },
+                "units": {
+                    "type": "string"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

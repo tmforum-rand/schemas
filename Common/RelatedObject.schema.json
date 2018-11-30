@@ -7,19 +7,17 @@
             "$id": "#RelatedObject",
             "description": "Defines objects linked with trouble ticket.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "involvement": {
-                            "type": "string",
-                            "description": "Consequence of the ticket on the related object (for instance disputed, adjusted...)"
-                        },
-                        "reference": {
-                            "type": "string",
-                            "description": "Reference of object"
-                        }
-                    }
+            "properties": {
+                "involvement": {
+                    "type": "string",
+                    "description": "Consequence of the ticket on the related object (for instance disputed, adjusted...)"
                 },
+                "reference": {
+                    "type": "string",
+                    "description": "Reference of object"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

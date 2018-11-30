@@ -6,83 +6,81 @@
         "ServiceOrder": {
             "$id": "#ServiceOrder",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "category": {
-                            "type": "string"
-                        },
-                        "completionDate": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "description": {
-                            "type": "string"
-                        },
-                        "expectedCompletionDate": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "externalId": {
-                            "type": "string"
-                        },
-                        "href": {
-                            "type": "string"
-                        },
-                        "id": {
-                            "type": "string"
-                        },
-                        "notificationContact": {
-                            "type": "string"
-                        },
-                        "orderDate": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "priority": {
-                            "type": "string"
-                        },
-                        "requestedCompletionDate": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "requestedStartDate": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "startDate": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "state": {
-                            "type": "string"
-                        },
-                        "note": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Common/Note.schema.json#Note"
-                            }
-                        },
-                        "orderItem": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "ServiceOrderItem.schema.json#ServiceOrderItem"
-                            }
-                        },
-                        "relatedParty": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
-                            }
-                        },
-                        "orderRelationship": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Customer/OrderRelationship.schema.json#OrderRelationship"
-                            }
-                        }
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "completionDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "expectedCompletionDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "externalId": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "notificationContact": {
+                    "type": "string"
+                },
+                "orderDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "priority": {
+                    "type": "string"
+                },
+                "requestedCompletionDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "requestedStartDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "note": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/Note.schema.json#Note"
                     }
                 },
+                "orderItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ServiceOrderItem.schema.json#ServiceOrderItem"
+                    }
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    }
+                },
+                "orderRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/OrderRelationship.schema.json#OrderRelationship"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

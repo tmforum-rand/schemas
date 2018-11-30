@@ -6,67 +6,65 @@
         "ProductOfferingQualificationItem": {
             "$id": "#ProductOfferingQualificationItem",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "expectedActivationDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "Date when the requester look for productOfferingQualification activation"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Id of the productOfferingQualification item"
-                        },
-                        "qualificationItemResult": {
-                            "type": "string",
-                            "description": "Qualification result for this productOfferingQualification item. It could be:\n\n qualified (request productOffering or productSpecification are available), \n unqualified (requested not available and not alternate available),\n alternate (requested not available but proposal available)\n"
-                        },
-                        "state": {
-                            "type": "string",
-                            "description": "State of the productOfferingQualification item (acknowledged, inProgress, terminatedWithError, done)"
-                        },
-                        "eligibilityUnavailabilityReason": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Customer/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
-                            }
-                        },
-                        "category": {
-                            "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
-                        },
-                        "qualificationItemRelationship": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Service/QualificationItemRelationship.schema.json#QualificationItemRelationship"
-                            }
-                        },
-                        "note": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Common/Note.schema.json#Note"
-                            }
-                        },
-                        "product": {
-                            "$ref": "Product.schema.json#Product"
-                        },
-                        "terminationError": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Customer/TerminationError.schema.json#TerminationError"
-                            }
-                        },
-                        "productOffering": {
-                            "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
-                        },
-                        "alternateProductOfferingProposal": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "AlternateProductOfferingProposal.schema.json#AlternateProductOfferingProposal"
-                            }
-                        }
+            "properties": {
+                "expectedActivationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when the requester look for productOfferingQualification activation"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Id of the productOfferingQualification item"
+                },
+                "qualificationItemResult": {
+                    "type": "string",
+                    "description": "Qualification result for this productOfferingQualification item. It could be:\n\n qualified (request productOffering or productSpecification are available), \n unqualified (requested not available and not alternate available),\n alternate (requested not available but proposal available)\n"
+                },
+                "state": {
+                    "type": "string",
+                    "description": "State of the productOfferingQualification item (acknowledged, inProgress, terminatedWithError, done)"
+                },
+                "eligibilityUnavailabilityReason": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
                     }
                 },
+                "category": {
+                    "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                },
+                "qualificationItemRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Service/QualificationItemRelationship.schema.json#QualificationItemRelationship"
+                    }
+                },
+                "note": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/Note.schema.json#Note"
+                    }
+                },
+                "product": {
+                    "$ref": "Product.schema.json#Product"
+                },
+                "terminationError": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/TerminationError.schema.json#TerminationError"
+                    }
+                },
+                "productOffering": {
+                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
+                },
+                "alternateProductOfferingProposal": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AlternateProductOfferingProposal.schema.json#AlternateProductOfferingProposal"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

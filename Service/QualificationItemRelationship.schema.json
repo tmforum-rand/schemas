@@ -7,19 +7,17 @@
             "$id": "#QualificationItemRelationship",
             "description": "Stucture used to describe relationship between productOfferingQualifcation item from the same ProductOfferingQualification.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "Id of the ProductOfferingQualificationItem (from the same ProductOfferingQualificationItem)."
-                        },
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "Type of relationship (ex: reliesOn, connectedTo, etc...)"
-                        }
-                    }
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Id of the ProductOfferingQualificationItem (from the same ProductOfferingQualificationItem)."
                 },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Type of relationship (ex: reliesOn, connectedTo, etc...)"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

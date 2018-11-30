@@ -7,19 +7,17 @@
             "$id": "#EligibilityUnavailabilityReason",
             "description": "Reason for eligibility result if the productOfferingQualification result is no (meaning the productOffering or productSpec is not available).",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "code": {
-                            "type": "string",
-                            "description": "Unavailability reason code."
-                        },
-                        "label": {
-                            "type": "string",
-                            "description": "Unavailability reason label."
-                        }
-                    }
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "Unavailability reason code."
                 },
+                "label": {
+                    "type": "string",
+                    "description": "Unavailability reason label."
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

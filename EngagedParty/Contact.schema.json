@@ -7,36 +7,34 @@
             "$id": "#Contact",
             "description": "An individual or an organization used as a contact point for a given account and accessed via some contact medium.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "contactName": {
-                            "type": "string",
-                            "description": "A displayable name for that contact"
-                        },
-                        "contactType": {
-                            "type": "string",
-                            "description": "Type of contact (primary, secondary...)"
-                        },
-                        "partyRoleType": {
-                            "type": "string",
-                            "description": "Identifies what kind of party role type is linked to the contact (a account manager...)"
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "Validity period of that contact"
-                        },
-                        "contactMedium": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
-                            }
-                        },
-                        "relatedParty": {
-                            "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
-                        }
+            "properties": {
+                "contactName": {
+                    "type": "string",
+                    "description": "A displayable name for that contact"
+                },
+                "contactType": {
+                    "type": "string",
+                    "description": "Type of contact (primary, secondary...)"
+                },
+                "partyRoleType": {
+                    "type": "string",
+                    "description": "Identifies what kind of party role type is linked to the contact (a account manager...)"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "Validity period of that contact"
+                },
+                "contactMedium": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
                     }
                 },
+                "relatedParty": {
+                    "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

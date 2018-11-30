@@ -7,23 +7,21 @@
             "$id": "#AlternateServiceProposal",
             "description": "Alternate service proposal is used when the requested service is not available with characteristic and date asked for. An alternate proposal could be a distinct serviceSpecification close to requested one or same as requested but with a different activation date",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "description": "Identifier of a alternate service proposal",
-                            "type": "string"
-                        },
-                        "alternateServiceAvailabilityDate": {
-                            "description": "Alternate availability date in case seller is not able to meet requested expected availability date for the service",
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "alternateService": {
-                            "$ref": "Service.schema.json#Service"
-                        }
-                    }
+            "properties": {
+                "id": {
+                    "description": "Identifier of a alternate service proposal",
+                    "type": "string"
                 },
+                "alternateServiceAvailabilityDate": {
+                    "description": "Alternate availability date in case seller is not able to meet requested expected availability date for the service",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "alternateService": {
+                    "$ref": "Service.schema.json#Service"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -7,23 +7,21 @@
             "$id": "#OrderTerm",
             "description": "Description of a productTerm linked to this orderItem. This reprsent a commitment with a duration",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Description of the productOrderTerm"
-                        },
-                        "duration": {
-                            "$ref": "../Common/Quantity.schema.json#Quantity",
-                            "description": "Duration of the productOrderTerm"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the productOrderTerm"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the productOrderTerm"
                 },
+                "duration": {
+                    "$ref": "../Common/Quantity.schema.json#Quantity",
+                    "description": "Duration of the productOrderTerm"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the productOrderTerm"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

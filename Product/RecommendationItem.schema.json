@@ -7,19 +7,17 @@
             "$id": "#RecommendationItem",
             "description": "A list of recommendation items. Every item is a product offering and its rank.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "priority": {
-                            "type": "integer",
-                            "description": "The rank of the list of recommended offering."
-                        },
-                        "offering": {
-                            "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef",
-                            "description": "Recommended product offering"
-                        }
-                    }
+            "properties": {
+                "priority": {
+                    "type": "integer",
+                    "description": "The rank of the list of recommended offering."
                 },
+                "offering": {
+                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef",
+                    "description": "Recommended product offering"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

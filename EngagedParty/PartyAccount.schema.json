@@ -7,30 +7,28 @@
             "$id": "#PartyAccount",
             "description": "Account used for billing or for settlement purposes concerning a given party (an organization or an individual).",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "paymentStatus": {
-                            "type": "string",
-                            "description": "The condition of the account, such as due, paid, in arrears."
-                        },
-                        "billStructure": {
-                            "$ref": "../Customer/BillStructure.schema.json#BillStructure"
-                        },
-                        "paymentPlan": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "PaymentPlan.schema.json#PaymentPlan"
-                            }
-                        },
-                        "financialAccount": {
-                            "$ref": "FinancialAccountRef.schema.json#FinancialAccountRef"
-                        },
-                        "defaultPaymentMethod": {
-                            "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
-                        }
+            "properties": {
+                "paymentStatus": {
+                    "type": "string",
+                    "description": "The condition of the account, such as due, paid, in arrears."
+                },
+                "billStructure": {
+                    "$ref": "../Customer/BillStructure.schema.json#BillStructure"
+                },
+                "paymentPlan": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "PaymentPlan.schema.json#PaymentPlan"
                     }
                 },
+                "financialAccount": {
+                    "$ref": "FinancialAccountRef.schema.json#FinancialAccountRef"
+                },
+                "defaultPaymentMethod": {
+                    "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

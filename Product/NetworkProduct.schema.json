@@ -1,49 +1,49 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "NetworkProduct.schema.json", 
-    "title": "NetworkProduct", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "NetworkProduct.schema.json",
+    "title": "NetworkProduct",
     "definitions": {
         "NetworkProduct": {
-            "$id": "#NetworkProduct", 
-            "type": "object", 
-            "description": "An instantiated network product subscribed by a customer.", 
+            "$id": "#NetworkProduct",
+            "type": "object",
+            "description": "An instantiated network product subscribed by a customer.",
             "properties": {
                 "@baseType": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current object is unknown to the implementation"
-                }, 
+                },
                 "@schemaLocation": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object"
-                }, 
+                },
                 "@type": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Generic attribute containing the name of the resource class type"
-                }, 
+                },
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Reference to the network product"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Unique identifier of the network product"
-                }, 
+                },
                 "name": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Network product Name"
-                }, 
+                },
                 "outOfBucketCounter": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "ConsumptionSummary.schema.json#/definitions/ConsumptionSummary"
                     }
-                }, 
+                },
                 "publicIdentifier": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Public number associated to the network product (msisdn number for mobile line for example)"
-                }, 
+                },
                 "user": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }

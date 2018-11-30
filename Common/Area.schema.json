@@ -7,30 +7,28 @@
             "$id": "#Area",
             "description": "Area corresponds to a geographic area as a city, a locality, a district, etc.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of an Area"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "The defined name of the municipality"
-                        },
-                        "areaType": {
-                            "type": "string",
-                            "description": "SUBURB, LOCALITY, CITY, TOWN, BOROUGH, ..."
-                        },
-                        "characteristic": {
-                            "type": "array",
-                            "description": "Any additional characterization of the Area, defined for the Area type",
-                            "items": {
-                                "$ref": "LocationCharacteristic.schema.json#LocationCharacteristic"
-                            }
-                        }
-                    }
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of an Area"
                 },
+                "name": {
+                    "type": "string",
+                    "description": "The defined name of the municipality"
+                },
+                "areaType": {
+                    "type": "string",
+                    "description": "SUBURB, LOCALITY, CITY, TOWN, BOROUGH, ..."
+                },
+                "characteristic": {
+                    "type": "array",
+                    "description": "Any additional characterization of the Area, defined for the Area type",
+                    "items": {
+                        "$ref": "LocationCharacteristic.schema.json#LocationCharacteristic"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

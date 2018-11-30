@@ -7,38 +7,36 @@
             "$id": "#TimePeriod",
             "description": "A period of time, either as a deadline (endDateTime only) or with a start and end. If you provide a startDateTime, you must also provide the endDateTime",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "startDateTime": {
-                            "description": "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
-                            "type": "string",
-                            "format": "date-time",
-                            "examples": [
-                                "1985-04-12T23:20:50.52Z",
-                                "2018-09-21T09:13:16-07:00"
-                            ]
-                        },
-                        "endDateTime": {
-                            "description": "End of the time period, using IETC-RFC-3339 format",
-                            "type": "string",
-                            "format": "date-time",
-                            "examples": [
-                                "1985-04-12T23:20:50.52Z",
-                                "2018-09-21T09:13:16-07:00"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
-                }
-            ],
             "dependencies": {
                 "startDateTime": [
                     "endDateTime"
                 ]
-            }
+            },
+            "properties": {
+                "startDateTime": {
+                    "description": "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "type": "string",
+                    "format": "date-time",
+                    "examples": [
+                        "1985-04-12T23:20:50.52Z",
+                        "2018-09-21T09:13:16-07:00"
+                    ]
+                },
+                "endDateTime": {
+                    "description": "End of the time period, using IETC-RFC-3339 format",
+                    "type": "string",
+                    "format": "date-time",
+                    "examples": [
+                        "1985-04-12T23:20:50.52Z",
+                        "2018-09-21T09:13:16-07:00"
+                    ]
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

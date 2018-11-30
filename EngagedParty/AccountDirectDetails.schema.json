@@ -6,14 +6,12 @@
         "AccountDirectDetails": {
             "$id": "#AccountDirectDetails",
             "type": "object",
+            "properties": {
+                "account": {
+                    "$ref": "AccountRef.schema.json#AccountRef"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "account": {
-                            "$ref": "AccountRef.schema.json#AccountRef"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

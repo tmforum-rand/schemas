@@ -6,14 +6,12 @@
         "CashMethod": {
             "$id": "#CashMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "CashDetails.schema.json#CashDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "CashDetails.schema.json#CashDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

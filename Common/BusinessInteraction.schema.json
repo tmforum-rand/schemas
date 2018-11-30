@@ -6,30 +6,28 @@
         "BusinessInteraction": {
             "$id": "#BusinessInteraction",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "A description of this interaction"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "The unique ID for this interaction"
-                        },
-                        "interactionData": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "interactionDataComplete": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "interactionDataStatus": {
-                            "type": "string"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "A description of this interaction"
                 },
+                "id": {
+                    "type": "string",
+                    "description": "The unique ID for this interaction"
+                },
+                "interactionData": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "interactionDataComplete": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "interactionDataStatus": {
+                    "type": "string"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

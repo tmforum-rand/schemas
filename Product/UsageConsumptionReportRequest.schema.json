@@ -1,65 +1,65 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "UsageConsumptionReportRequest.schema.json", 
-    "title": "UsageConsumptionReportRequest", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "UsageConsumptionReportRequest.schema.json",
+    "title": "UsageConsumptionReportRequest",
     "definitions": {
         "UsageConsumptionReportRequest": {
-            "$id": "#UsageConsumptionReportRequest", 
-            "type": "object", 
-            "description": "This resource is used to manage the calculation request of an usage consumption report.", 
+            "$id": "#UsageConsumptionReportRequest",
+            "type": "object",
+            "description": "This resource is used to manage the calculation request of an usage consumption report.",
             "properties": {
                 "@baseType": {
-                    "type": "string", 
+                    "type": "string",
                     "description": ""
-                }, 
+                },
                 "@schemaLocation": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Link to the schema describing the REST resource"
-                }, 
+                },
                 "@type": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Indicates the (class) type of the usage consumption report request"
-                }, 
+                },
                 "bucket": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "UsageVolumeProductRef.schema.json#/definitions/UsageVolumeProductRef"
                     }
-                }, 
+                },
                 "creationDate": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "Date and time of the request creation"
-                }, 
+                },
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Reference of the usage consumption report request"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Unique identifier of the usage consumption report request given by the server"
-                }, 
+                },
                 "lastUpdate": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "Date when the status was last changed"
-                }, 
+                },
                 "product": {
                     "$ref": "NetworkProductRef.schema.json#/definitions/NetworkProductRef"
-                }, 
+                },
                 "relatedParty": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
-                }, 
+                },
                 "status": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Status of the usage consumption report request (InProgress or done)"
-                }, 
+                },
                 "usageConsumptionReport": {
                     "$ref": "UsageConsumptionReportRef.schema.json#/definitions/UsageConsumptionReportRef"
-                }, 
+                },
                 "validPeriod": {
                     "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
                 }

@@ -7,10 +7,8 @@
             "$id": "#SettlementAccount",
             "description": "A party account used for settlement purposes. It includes a description of the structure used for the settlement (frequency, presentation media, format and so on).",
             "type": "object",
+            "properties": {},
             "allOf": [
-                {
-                    "properties": {}
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

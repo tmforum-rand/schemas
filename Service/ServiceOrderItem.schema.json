@@ -6,35 +6,33 @@
         "ServiceOrderItem": {
             "$id": "#ServiceOrderItem",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "action": {
-                            "type": "string"
-                        },
-                        "id": {
-                            "type": "string"
-                        },
-                        "state": {
-                            "type": "string"
-                        },
-                        "service": {
-                            "$ref": "Service.schema.json#Service"
-                        },
-                        "orderItemRelationship": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
-                            }
-                        },
-                        "appointment": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
-                            }
-                        }
+            "properties": {
+                "action": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "service": {
+                    "$ref": "Service.schema.json#Service"
+                },
+                "orderItemRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
                     }
                 },
+                "appointment": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

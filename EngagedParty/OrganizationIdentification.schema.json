@@ -7,32 +7,30 @@
             "$id": "#OrganizationIdentification",
             "description": "Represents our registration of information used as proof of identity by an organization",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "identificationId": {
-                            "type": "string",
-                            "description": "Identifier"
-                        },
-                        "issuingAuthority": {
-                            "type": "string",
-                            "description": "Authority which has issued the identifier (chamber of commerce...)"
-                        },
-                        "issuingDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "Date at which the identifier was issued"
-                        },
-                        "identificationType": {
-                            "type": "string",
-                            "description": "Type of identification information used to identify the company in a country or internationally"
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "The period for which the identification information is valid."
-                        }
-                    }
+            "properties": {
+                "identificationId": {
+                    "type": "string",
+                    "description": "Identifier"
                 },
+                "issuingAuthority": {
+                    "type": "string",
+                    "description": "Authority which has issued the identifier (chamber of commerce...)"
+                },
+                "issuingDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date at which the identifier was issued"
+                },
+                "identificationType": {
+                    "type": "string",
+                    "description": "Type of identification information used to identify the company in a country or internationally"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The period for which the identification information is valid."
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

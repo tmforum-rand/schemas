@@ -6,14 +6,12 @@
         "DigitalWalletMethod": {
             "$id": "#DigitalWalletMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "DigitalWalletDetails.schema.json#DigitalWalletDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "DigitalWalletDetails.schema.json#DigitalWalletDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

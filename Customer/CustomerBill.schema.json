@@ -6,10 +6,8 @@
         "CustomerBill": {
             "$id": "#CustomerBill",
             "type": "object",
+            "properties": {},
             "allOf": [
-                {
-                    "properties": {}
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

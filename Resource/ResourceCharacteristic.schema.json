@@ -6,19 +6,17 @@
         "ResourceCharacteristic": {
             "$id": "#ResourceCharacteristic",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "name of the characteristic"
-                        },
-                        "value": {
-                            "type": "string",
-                            "description": "value of the characteristic"
-                        }
-                    }
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "name of the characteristic"
                 },
+                "value": {
+                    "type": "string",
+                    "description": "value of the characteristic"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

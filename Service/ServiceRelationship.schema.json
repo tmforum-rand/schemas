@@ -7,21 +7,19 @@
             "$id": "#ServiceRelationship",
             "description": "Describes links with services of the same category (useful for bundled services)",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "Describes links with services of the same category (useful for bundled services)"
-                        },
-                        "service": {
-                            "$ref": "Service.schema.json#Service"
-                        },
-                        "serviceRef": {
-                            "$ref": "ServiceRef.schema.json#ServiceRef"
-                        }
-                    }
+            "properties": {
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Describes links with services of the same category (useful for bundled services)"
                 },
+                "service": {
+                    "$ref": "Service.schema.json#Service"
+                },
+                "serviceRef": {
+                    "$ref": "ServiceRef.schema.json#ServiceRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -6,31 +6,29 @@
         "SiteRelationship": {
             "$id": "#SiteRelationship",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the related site"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the related site entity within the server"
-                        },
-                        "role": {
-                            "type": "string",
-                            "description": "Role of the related site in the relationship"
-                        },
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "Type of relationship"
-                        },
-                        "validFor": {
-                            "$ref": "TimePeriod.schema.json#TimePeriod",
-                            "description": "Validity for the relationship"
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the related site"
                 },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the related site entity within the server"
+                },
+                "role": {
+                    "type": "string",
+                    "description": "Role of the related site in the relationship"
+                },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Type of relationship"
+                },
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "description": "Validity for the relationship"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

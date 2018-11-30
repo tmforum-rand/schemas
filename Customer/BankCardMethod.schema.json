@@ -6,14 +6,12 @@
         "BankCardMethod": {
             "$id": "#BankCardMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "BankCardDetails.schema.json#BankCardDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "BankCardDetails.schema.json#BankCardDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

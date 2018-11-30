@@ -7,23 +7,21 @@
             "$id": "#DigitalWalletDetails",
             "description": "Detailed information of a check",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "service": {
-                            "type": "string",
-                            "description": "Organization, platform or currency backing the wallet (e.g.: PayPal, Yandex, BitCoin...)"
-                        },
-                        "walletId": {
-                            "type": "string",
-                            "description": "account identifier in that service"
-                        },
-                        "walletUrl": {
-                            "type": "string",
-                            "description": "URI pointing at the digital wallet (e.g.: https://paypal.me/johndoe)"
-                        }
-                    }
+            "properties": {
+                "service": {
+                    "type": "string",
+                    "description": "Organization, platform or currency backing the wallet (e.g.: PayPal, Yandex, BitCoin...)"
                 },
+                "walletId": {
+                    "type": "string",
+                    "description": "account identifier in that service"
+                },
+                "walletUrl": {
+                    "type": "string",
+                    "description": "URI pointing at the digital wallet (e.g.: https://paypal.me/johndoe)"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

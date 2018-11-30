@@ -7,19 +7,17 @@
             "$id": "#SettlementMethod",
             "description": "Is the way in which the CSP provides the payment",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "code": {
-                            "type": "string",
-                            "description": "Code of the settlement method"
-                        },
-                        "label": {
-                            "type": "string",
-                            "description": "A word, term or phrase by which a settlement method is known and distinguished from other settlement method"
-                        }
-                    }
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "Code of the settlement method"
                 },
+                "label": {
+                    "type": "string",
+                    "description": "A word, term or phrase by which a settlement method is known and distinguished from other settlement method"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

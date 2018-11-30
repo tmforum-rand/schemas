@@ -6,10 +6,8 @@
         "PartyBill": {
             "$id": "#PartyBill",
             "type": "object",
+            "properties": {},
             "allOf": [
-                {
-                    "properties": {}
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

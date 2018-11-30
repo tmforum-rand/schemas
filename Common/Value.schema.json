@@ -6,10 +6,8 @@
         "Value": {
             "$id": "#Value",
             "type": "object",
+            "properties": {},
             "allOf": [
-                {
-                    "properties": {}
-                },
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

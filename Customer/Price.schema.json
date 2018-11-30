@@ -7,29 +7,27 @@
             "$id": "#Price",
             "description": "Provides all amounts (tax included, duty free, tax rate), used currency and percentage to apply for Price Alteration.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "dutyFreeAmount": {
-                            "$ref": "../Common/Money.schema.json#Money",
-                            "description": "All taxes excluded amount (expressed in the given currency)"
-                        },
-                        "percentage": {
-                            "type": "number",
-                            "format": "float",
-                            "description": "Percentage to apply for ProdOfferPriceAlteration"
-                        },
-                        "taxIncludedAmount": {
-                            "$ref": "../Common/Money.schema.json#Money",
-                            "description": "All taxes included amount (expressed in the given currency)"
-                        },
-                        "taxRate": {
-                            "type": "number",
-                            "format": "float",
-                            "description": "Tax rate"
-                        }
-                    }
+            "properties": {
+                "dutyFreeAmount": {
+                    "$ref": "../Common/Money.schema.json#Money",
+                    "description": "All taxes excluded amount (expressed in the given currency)"
                 },
+                "percentage": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Percentage to apply for ProdOfferPriceAlteration"
+                },
+                "taxIncludedAmount": {
+                    "$ref": "../Common/Money.schema.json#Money",
+                    "description": "All taxes included amount (expressed in the given currency)"
+                },
+                "taxRate": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Tax rate"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

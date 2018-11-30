@@ -7,30 +7,28 @@
             "$id": "#ChangeRequestSpecification",
             "description": "Defines a set of attributes related to Change Request.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Description of the specification"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Hyperlink to access the specification."
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Identifier of the specification."
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the specification."
-                        },
-                        "validFor": {
-                            "$ref": "TimePeriod.schema.json#TimePeriod"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the specification"
                 },
+                "href": {
+                    "type": "string",
+                    "description": "Hyperlink to access the specification."
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the specification."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the specification."
+                },
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#TimePeriod"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

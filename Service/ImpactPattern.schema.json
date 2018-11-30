@@ -1,22 +1,22 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ImpactPattern.schema.json", 
-    "title": "ImpactPattern", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ImpactPattern.schema.json",
+    "title": "ImpactPattern",
     "definitions": {
         "ImpactPattern": {
-            "$id": "#ImpactPattern", 
-            "type": "object", 
-            "description": "Define the patterns of impact (optional)- e.g. other service characteristics- Used when defining impact through another pattern than the pre-defined attributes.", 
+            "$id": "#ImpactPattern",
+            "type": "object",
+            "description": "Define the patterns of impact (optional)- e.g. other service characteristics- Used when defining impact through another pattern than the pre-defined attributes.",
             "properties": {
                 "description": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Basic description of the impact pattern"
-                }, 
+                },
                 "extensionInfo": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
-                    }, 
+                    },
                     "description": "A generic list of any type of elements. Used for vendor Extensions or loose element encapsulation from other namespaces"
                 }
             },

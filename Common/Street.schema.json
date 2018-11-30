@@ -7,35 +7,33 @@
             "$id": "#Street",
             "description": "A street is a road in a city or locality that has buildings that are usually close together along one or both sides",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the Street"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "The defined name of the street"
-                        },
-                        "streetType": {
-                            "type": "string",
-                            "description": "Alley, avenue, etc."
-                        },
-                        "characteristic": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "LocationCharacteristic.schema.json#LocationCharacteristic"
-                            }
-                        },
-                        "address": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "AddressRef.schema.json#AddressRef"
-                            }
-                        }
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the Street"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The defined name of the street"
+                },
+                "streetType": {
+                    "type": "string",
+                    "description": "Alley, avenue, etc."
+                },
+                "characteristic": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "LocationCharacteristic.schema.json#LocationCharacteristic"
                     }
                 },
+                "address": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AddressRef.schema.json#AddressRef"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -6,14 +6,12 @@
         "CheckMethod": {
             "$id": "#CheckMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "CheckDetails.schema.json#CheckDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "CheckDetails.schema.json#CheckDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

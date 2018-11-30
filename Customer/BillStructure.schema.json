@@ -7,23 +7,21 @@
             "$id": "#BillStructure",
             "description": "The structure of the bill for party accounts (billling or settlement).",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "presentationMedia": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "BillPresentationMediaRef.schema.json#BillPresentationMediaRef"
-                            }
-                        },
-                        "format": {
-                            "$ref": "BillFormatRef.schema.json#BillFormatRef"
-                        },
-                        "cycleSpecification": {
-                            "$ref": "BillingCycleSpecificationRef.schema.json#BillingCycleSpecificationRef"
-                        }
+            "properties": {
+                "presentationMedia": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "BillPresentationMediaRef.schema.json#BillPresentationMediaRef"
                     }
                 },
+                "format": {
+                    "$ref": "BillFormatRef.schema.json#BillFormatRef"
+                },
+                "cycleSpecification": {
+                    "$ref": "BillingCycleSpecificationRef.schema.json#BillingCycleSpecificationRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

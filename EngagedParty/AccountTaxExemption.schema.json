@@ -7,27 +7,25 @@
             "$id": "#AccountTaxExemption",
             "description": "Proof of freedom from taxes imposed by a taxing jurisdiction",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "certificateNumber": {
-                            "type": "string",
-                            "description": "Identifier of a document that shows proof of exemption from taxes for the taxing jurisdiction"
-                        },
-                        "issuingJurisdiction": {
-                            "type": "string",
-                            "description": "Name of the taxing jurisdiction for which taxes are exempt"
-                        },
-                        "reason": {
-                            "type": "string",
-                            "description": "Reason of the tax exemption"
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "Period for which the exemption is valid"
-                        }
-                    }
+            "properties": {
+                "certificateNumber": {
+                    "type": "string",
+                    "description": "Identifier of a document that shows proof of exemption from taxes for the taxing jurisdiction"
                 },
+                "issuingJurisdiction": {
+                    "type": "string",
+                    "description": "Name of the taxing jurisdiction for which taxes are exempt"
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "Reason of the tax exemption"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "Period for which the exemption is valid"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -6,14 +6,12 @@
         "ProductRequest": {
             "$id": "#ProductRequest",
             "type": "object",
+            "properties": {
+                "referredProduct": {
+                    "$ref": "ProductRef.schema.json#ProductRef"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "referredProduct": {
-                            "$ref": "ProductRef.schema.json#ProductRef"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

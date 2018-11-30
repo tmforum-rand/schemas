@@ -7,10 +7,8 @@
             "$id": "#AppliedCustomerBillingRate",
             "description": "An applied billing rate presented on a customer bill. It is created before or during the billing process.",
             "type": "object",
+            "properties": {},
             "allOf": [
-                {
-                    "properties": {}
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

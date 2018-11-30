@@ -7,25 +7,23 @@
             "$id": "#CartItemRelationship",
             "description": "Relationship among cart items mainly other than hierarchical relationships such as \"RelyOn\", \"DependentOn\", \"Shipping\" etc.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the referred cart item"
-                        },
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "Type of the cart item relationship"
-                        },
-                        "cartItem": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "CartItemRef.schema.json#CartItemRef"
-                            }
-                        }
-                    }
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the referred cart item"
                 },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Type of the cart item relationship"
+                },
+                "cartItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "CartItemRef.schema.json#CartItemRef"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

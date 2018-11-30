@@ -6,73 +6,71 @@
         "ServiceQualification": {
             "$id": "#ServiceQualification",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string"
-                        },
-                        "effectiveQualificationDate": {
-                            "$ref": "Date.schema.json#/Date"
-                        },
-                        "estimatedResponseDate": {
-                            "$ref": "Date.schema.json#/Date"
-                        },
-                        "expectedQualificationDate": {
-                            "$ref": "Date.schema.json#/Date"
-                        },
-                        "expirationDate": {
-                            "$ref": "Date.schema.json#/Date"
-                        },
-                        "href": {
-                            "type": "string"
-                        },
-                        "id": {
-                            "type": "string"
-                        },
-                        "provideAlternative": {
-                            "type": "boolean"
-                        },
-                        "provideOnlyAvailable": {
-                            "type": "boolean"
-                        },
-                        "provideUnavailabilityReason": {
-                            "type": "boolean"
-                        },
-                        "serviceQualificationDateTime": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "state": {
-                            "type": "string"
-                        },
-                        "serviceQualificationItem": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "ServiceQualificationItem.schema.json#ServiceQualificationItem"
-                            }
-                        },
-                        "relatedParty": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
-                            }
-                        },
-                        "serviceQualificationDate": {
-                            "description": "Date when the serviceQualification has been submitted",
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "externalId": {
-                            "description": "Identifier provided by the requester",
-                            "type": "string"
-                        },
-                        "qualificationResult": {
-                            "description": "Qualification result for this serviceQualification. It could be:  qualified (all qualification item are qualified), alternate (At least one item alternate and no item with  unqualified), unqualified (At least one item unqualified)",
-                            "type": "string"
-                        }
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "effectiveQualificationDate": {
+                    "$ref": "Date.schema.json#/Date"
+                },
+                "estimatedResponseDate": {
+                    "$ref": "Date.schema.json#/Date"
+                },
+                "expectedQualificationDate": {
+                    "$ref": "Date.schema.json#/Date"
+                },
+                "expirationDate": {
+                    "$ref": "Date.schema.json#/Date"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "provideAlternative": {
+                    "type": "boolean"
+                },
+                "provideOnlyAvailable": {
+                    "type": "boolean"
+                },
+                "provideUnavailabilityReason": {
+                    "type": "boolean"
+                },
+                "serviceQualificationDateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "serviceQualificationItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ServiceQualificationItem.schema.json#ServiceQualificationItem"
                     }
                 },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    }
+                },
+                "serviceQualificationDate": {
+                    "description": "Date when the serviceQualification has been submitted",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "externalId": {
+                    "description": "Identifier provided by the requester",
+                    "type": "string"
+                },
+                "qualificationResult": {
+                    "description": "Qualification result for this serviceQualification. It could be:  qualified (all qualification item are qualified), alternate (At least one item alternate and no item with  unqualified), unqualified (At least one item unqualified)",
+                    "type": "string"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

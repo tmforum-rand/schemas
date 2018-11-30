@@ -7,19 +7,17 @@
             "$id": "#ChangeRequestCharacteristic",
             "description": "Characteristics of the change request to instantiate or to modify",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the characteristic."
-                        },
-                        "value": {
-                            "type": "string",
-                            "description": "Value of the characteristic."
-                        }
-                    }
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the characteristic."
                 },
+                "value": {
+                    "type": "string",
+                    "description": "Value of the characteristic."
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

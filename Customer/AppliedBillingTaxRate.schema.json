@@ -7,24 +7,22 @@
             "$id": "#AppliedBillingTaxRate",
             "description": "The applied billing tax rate represents taxes applied billing rate it refers to. It is calculated during the billing process.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "taxAmount": {
-                            "$ref": "../Common/Money.schema.json#Money",
-                            "description": "Tax amount expressed in the given currency"
-                        },
-                        "taxCategory": {
-                            "type": "string",
-                            "description": "A categorization of the tax rate"
-                        },
-                        "taxRate": {
-                            "type": "number",
-                            "format": "float",
-                            "description": "Applied rate"
-                        }
-                    }
+            "properties": {
+                "taxAmount": {
+                    "$ref": "../Common/Money.schema.json#Money",
+                    "description": "Tax amount expressed in the given currency"
                 },
+                "taxCategory": {
+                    "type": "string",
+                    "description": "A categorization of the tax rate"
+                },
+                "taxRate": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Applied rate"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

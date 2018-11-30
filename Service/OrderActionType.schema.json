@@ -1,12 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "OrderActionType.schema.json", 
-    "title": "OrderActionType", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "OrderActionType.schema.json",
+    "title": "OrderActionType",
     "definitions": {
         "OrderActionType": {
-            "$id": "#OrderActionType", 
-            "description" : "string",
-            "type": "string", 
+            "$id": "#OrderActionType",
+            "description": "string",
+            "type": "string",
             "enum": [
                 "add",
                 "modify",

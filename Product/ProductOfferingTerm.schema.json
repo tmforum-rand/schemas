@@ -7,27 +7,25 @@
             "$id": "#ProductOfferingTerm",
             "description": "A condition under which a ProductOffering is made available to Customers. For instance, a productOffering can be offered with multiple commitment periods.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Description of the productOfferingTerm"
-                        },
-                        "duration": {
-                            "type": "string",
-                            "description": "Duration of the productOfferingTerm"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the productOfferingTerm"
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "The period for which the productOfferingterm is valid"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the productOfferingTerm"
                 },
+                "duration": {
+                    "type": "string",
+                    "description": "Duration of the productOfferingTerm"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the productOfferingTerm"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The period for which the productOfferingterm is valid"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

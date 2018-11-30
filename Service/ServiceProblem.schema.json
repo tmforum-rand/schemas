@@ -1,153 +1,153 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ServiceProblem.schema.json", 
-    "title": "ServiceProblem", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceProblem.schema.json",
+    "title": "ServiceProblem",
     "definitions": {
         "ServiceProblem": {
-            "$id": "#ServiceProblem", 
-            "type": "object", 
-            "description": "The problem information for Middle B which is abstracted in the service layer from the issued event information by First B", 
+            "$id": "#ServiceProblem",
+            "type": "object",
+            "description": "The problem information for Middle B which is abstracted in the service layer from the issued event information by First B",
             "properties": {
                 "affectedLocation": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Common/Place.schema.json#/definitions/Place"
                     }
-                }, 
+                },
                 "affectingServiceNumber": {
-                    "type": "integer", 
+                    "type": "integer",
                     "description": "Number of affected services"
-                }, 
+                },
                 "category": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Classifier for the problem. Settable. For example, this is used for distinguish the category of problem originator in [role].[category] format. Example: serviceProvider.declarer, supplier.originated, system.originated"
-                }, 
+                },
                 "comment": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Common/Note.schema.json#/definitions/Note"
                     }
-                }, 
+                },
                 "correlationId": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Additional identifier coming from an external system"
-                }, 
+                },
                 "description": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Free form text describing the Service Problem"
-                }, 
+                },
                 "extensionInfo": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
-                    }, 
+                    },
                     "description": "A generic list of any type of elements. Used for vendor Extensions or loose element encapsulation from other namespaces"
-                }, 
+                },
                 "firstAlert": {
                     "$ref": "FirstAlert.schema.json#/definitions/FirstAlert"
-                }, 
+                },
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Reference to the Service Problem"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Identifier of the service problem"
-                }, 
+                },
                 "impactImportanceFactor": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Impact Importance is characterized by an Impact Importance Factor: overall importance of the impact of all the affected services, e.g. 0 (zero impact) to 100 (worst impact). The Impact Importance is a calculated field which is set by the OSS determining the impact."
-                }, 
+                },
                 "impactPatterns": {
                     "$ref": "ImpactPattern.schema.json#/definitions/ImpactPattern"
-                }, 
+                },
                 "originatingSystem": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Indicates where the problem was generated"
-                }, 
+                },
                 "parentProblem": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "ServiceProblemRef.schema.json#/definitions/ServiceProblemRef"
                     }
-                }, 
+                },
                 "priority": {
-                    "type": "integer", 
+                    "type": "integer",
                     "description": "An indication varying from 1(highest) to 10(lowest) of how important it is for the service provider to correct the Service Problem."
-                }, 
+                },
                 "problemEscalation": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Indicates if this service problem has been escalated or not. Possible values are 0 to 10. A value of zero means no escalation. The meanings of values 1-10 are to be determined by the user of the interface, but they show increasing levels of escalation."
-                }, 
+                },
                 "reason": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Free text or optionally structured text. It can be Unknown."
-                }, 
+                },
                 "relatedEvent": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Common/EventRef.schema.json#/definitions/EventRef"
                     }
-                }, 
+                },
                 "relatedObject": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Common/RelatedEntityRef.schema.json#/definitions/RelatedEntityRef"
                     }
-                }, 
+                },
                 "relatedParty": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Common/RelatedParty.schema.json#/definitions/RelatedParty"
                     }
-                }, 
+                },
                 "resolutionDate": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "Time the problem was resolved"
-                }, 
+                },
                 "status": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The current status of the service problem. Possible values are Submitted, Rejected, Acknowledged, In Progress [Held, Pending], Resolved, Closed, and Cancelled."
-                }, 
+                },
                 "statusChangeDate": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "Time the problem was last status changed"
-                }, 
+                },
                 "statusChangeReason": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The reason of state change"
-                }, 
+                },
                 "timeChanged": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "Time the problem was last changed"
-                }, 
+                },
                 "timeRaised": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "Time the problem was raised"
-                }, 
+                },
                 "trackingRecord": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "TrackingRecord.schema.json#/definitions/TrackingRecord"
                     }
-                }, 
+                },
                 "underlyingAlarm": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "../Resource/ResourceAlarmRef.schema.json#/definitions/ResourceAlarmRef"
                     }
-                }, 
+                },
                 "underlyingProblem": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "ServiceProblemRef.schema.json#/definitions/ServiceProblemRef"
                     }
                 }
-            }, 
+            },
             "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"

@@ -7,31 +7,29 @@
             "$id": "#BankAccountDebitDetails",
             "description": "Detailed information for a bank account debit. Bear in mind that this could be extended to add any required authorization fields to allow recurring payments",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "accountNumber": {
-                            "type": "integer",
-                            "description": "Bank Account Number (this could refer to the IBAN or SWIFT number)"
-                        },
-                        "accountNumberType": {
-                            "type": "string",
-                            "description": "Type of account number (e.g.: IBAN, SWIFT, ...)"
-                        },
-                        "BIC": {
-                            "type": "string",
-                            "description": "Business Identifier Code/Swift code of the financial institution where the account is located"
-                        },
-                        "blank": {
-                            "type": "string",
-                            "description": "Display name of the bank"
-                        },
-                        "owner": {
-                            "type": "string",
-                            "description": "Owner of the bank account"
-                        }
-                    }
+            "properties": {
+                "accountNumber": {
+                    "type": "integer",
+                    "description": "Bank Account Number (this could refer to the IBAN or SWIFT number)"
                 },
+                "accountNumberType": {
+                    "type": "string",
+                    "description": "Type of account number (e.g.: IBAN, SWIFT, ...)"
+                },
+                "BIC": {
+                    "type": "string",
+                    "description": "Business Identifier Code/Swift code of the financial institution where the account is located"
+                },
+                "blank": {
+                    "type": "string",
+                    "description": "Display name of the bank"
+                },
+                "owner": {
+                    "type": "string",
+                    "description": "Owner of the bank account"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

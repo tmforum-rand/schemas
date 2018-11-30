@@ -6,41 +6,39 @@
         "Violation": {
             "$id": "#Violation",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "actualValue": {
-                            "type": "string"
-                        },
-                        "comment": {
-                            "type": "string"
-                        },
-                        "consequence": {
-                            "type": "string"
-                        },
-                        "operator": {
-                            "type": "string"
-                        },
-                        "referenceValue": {
-                            "type": "string"
-                        },
-                        "tolerance": {
-                            "type": "string"
-                        },
-                        "unit": {
-                            "type": "string"
-                        },
-                        "violationAverage": {
-                            "type": "string"
-                        },
-                        "attachment": {
-                            "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
-                        },
-                        "rule": {
-                            "$ref": "RuleRef.schema.json#RuleRef"
-                        }
-                    }
+            "properties": {
+                "actualValue": {
+                    "type": "string"
                 },
+                "comment": {
+                    "type": "string"
+                },
+                "consequence": {
+                    "type": "string"
+                },
+                "operator": {
+                    "type": "string"
+                },
+                "referenceValue": {
+                    "type": "string"
+                },
+                "tolerance": {
+                    "type": "string"
+                },
+                "unit": {
+                    "type": "string"
+                },
+                "violationAverage": {
+                    "type": "string"
+                },
+                "attachment": {
+                    "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
+                },
+                "rule": {
+                    "$ref": "RuleRef.schema.json#RuleRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

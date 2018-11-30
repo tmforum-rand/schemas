@@ -7,10 +7,8 @@
             "$id": "#CashDetails",
             "description": "Cash has no additional data, but it could be extended to add information (e.g.: the cashier who took the payment, the person who paid, etc)",
             "type": "object",
+            "properties": {},
             "allOf": [
-                {
-                    "properties": {}
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

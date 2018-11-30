@@ -7,47 +7,45 @@
             "$id": "#BalanceDeductRollback",
             "description": "The Rollback Balance Deduct task resource is a detailed description of rollback deduction",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Description of the rollback deduct operation"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "A resource URI pointing to the resource in the OB that stores the detailed information about a rollback deduction"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique Identifier within the server for the rollback deduction  operation request"
-                        },
-                        "requestedDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "Date when the rollback deduction request was received in the server"
-                        },
-                        "status": {
-                            "type": "string",
-                            "description": "Status of the rollback deduction operation"
-                        },
-                        "relatedParty": {
-                            "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
-                        },
-                        "product": {
-                            "$ref": "../Product/ProductRef.schema.json#ProductRef"
-                        },
-                        "partyAccount": {
-                            "$ref": "../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef"
-                        },
-                        "balanceDeduct": {
-                            "$ref": "BalanceDeductRef.schema.json#BalanceDeductRef"
-                        },
-                        "requestor": {
-                            "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the rollback deduct operation"
                 },
+                "href": {
+                    "type": "string",
+                    "description": "A resource URI pointing to the resource in the OB that stores the detailed information about a rollback deduction"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique Identifier within the server for the rollback deduction  operation request"
+                },
+                "requestedDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when the rollback deduction request was received in the server"
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status of the rollback deduction operation"
+                },
+                "relatedParty": {
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                },
+                "product": {
+                    "$ref": "../Product/ProductRef.schema.json#ProductRef"
+                },
+                "partyAccount": {
+                    "$ref": "../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef"
+                },
+                "balanceDeduct": {
+                    "$ref": "BalanceDeductRef.schema.json#BalanceDeductRef"
+                },
+                "requestor": {
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

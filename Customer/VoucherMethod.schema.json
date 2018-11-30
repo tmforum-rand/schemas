@@ -6,14 +6,12 @@
         "VoucherMethod": {
             "$id": "#VoucherMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "VoucherDetails.schema.json#VoucherDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "VoucherDetails.schema.json#VoucherDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -6,10 +6,8 @@
         "AlternateGeographicAddress": {
             "$id": "#AlternateGeographicAddress",
             "type": "object",
+            "properties": {},
             "allOf": [
-                {
-                    "properties": {}
-                },
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

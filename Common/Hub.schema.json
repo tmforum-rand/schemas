@@ -11,34 +11,32 @@
                 "id",
                 "callback"
             ],
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "This is the unique-id for your subscription - referenced when updating or deleting a subscription",
-                            "examples": [
-                                "4aafacbd-11ff-4dc8-b445-305f2215715f",
-                                "2334bc59-726e-4d34-ab96-f50e0561412f"
-                            ]
-                        },
-                        "callback": {
-                            "type": "string",
-                            "format": "uri",
-                            "description": "This is the URI that will be POST'ed to when a notification is triggered",
-                            "examples": [
-                                "http://host/resource/id/listener"
-                            ]
-                        },
-                        "query": {
-                            "type": "string",
-                            "description": "This is a query string used to filter notifications in the context of the notifier",
-                            "examples": [
-                                "status='active'"
-                            ]
-                        }
-                    }
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "This is the unique-id for your subscription - referenced when updating or deleting a subscription",
+                    "examples": [
+                        "4aafacbd-11ff-4dc8-b445-305f2215715f",
+                        "2334bc59-726e-4d34-ab96-f50e0561412f"
+                    ]
                 },
+                "callback": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "This is the URI that will be POST'ed to when a notification is triggered",
+                    "examples": [
+                        "http://host/resource/id/listener"
+                    ]
+                },
+                "query": {
+                    "type": "string",
+                    "description": "This is a query string used to filter notifications in the context of the notifier",
+                    "examples": [
+                        "status='active'"
+                    ]
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

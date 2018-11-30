@@ -7,20 +7,18 @@
             "$id": "#Money",
             "description": "A base / value business entity used to represent money",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "unit": {
-                            "type": "string",
-                            "description": "Currency (ISO4217 norm uses 3 letters to define the currency)"
-                        },
-                        "value": {
-                            "type": "number",
-                            "format": "float",
-                            "description": "A positive floating point number"
-                        }
-                    }
+            "properties": {
+                "unit": {
+                    "type": "string",
+                    "description": "Currency (ISO4217 norm uses 3 letters to define the currency)"
                 },
+                "value": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A positive floating point number"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

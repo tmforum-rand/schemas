@@ -7,29 +7,27 @@
             "$id": "#VoucherDetails",
             "description": "Detailed information of a voucher",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "campaign": {
-                            "type": "string",
-                            "description": "Campaign this voucher belongs to"
-                        },
-                        "code": {
-                            "type": "string",
-                            "description": "Code that identifies the voucher"
-                        },
-                        "expirationDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "the voucher's expiration date"
-                        },
-                        "value": {
-                            "type": "number",
-                            "format": "float",
-                            "description": "Discount that the voucher applies when it's a discount"
-                        }
-                    }
+            "properties": {
+                "campaign": {
+                    "type": "string",
+                    "description": "Campaign this voucher belongs to"
                 },
+                "code": {
+                    "type": "string",
+                    "description": "Code that identifies the voucher"
+                },
+                "expirationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "the voucher's expiration date"
+                },
+                "value": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Discount that the voucher applies when it's a discount"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

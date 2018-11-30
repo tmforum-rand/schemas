@@ -7,27 +7,25 @@
             "$id": "#SettlementNoteImage",
             "description": "Is the image of the settlement note",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "imageFileName": {
-                            "type": "string",
-                            "description": "The name of the file in which the settlement note image is saved."
-                        },
-                        "imageFileURL": {
-                            "type": "string",
-                            "description": "The URL of the settlement note image"
-                        },
-                        "imageFormat": {
-                            "type": "string",
-                            "description": "The format of the settlement note image (csv, pdf, xls, txt...)"
-                        },
-                        "imageSize": {
-                            "type": "integer",
-                            "description": "The size of the settlement note image (in bytes)"
-                        }
-                    }
+            "properties": {
+                "imageFileName": {
+                    "type": "string",
+                    "description": "The name of the file in which the settlement note image is saved."
                 },
+                "imageFileURL": {
+                    "type": "string",
+                    "description": "The URL of the settlement note image"
+                },
+                "imageFormat": {
+                    "type": "string",
+                    "description": "The format of the settlement note image (csv, pdf, xls, txt...)"
+                },
+                "imageSize": {
+                    "type": "integer",
+                    "description": "The size of the settlement note image (in bytes)"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

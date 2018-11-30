@@ -6,14 +6,12 @@
         "TokenizedCardMethod": {
             "$id": "#TokenizedCardMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "TokenizedCardDetails.schema.json#TokenizedCardDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "TokenizedCardDetails.schema.json#TokenizedCardDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

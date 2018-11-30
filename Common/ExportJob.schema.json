@@ -7,53 +7,51 @@
             "$id": "#ExportJob",
             "description": "Represents a task used to export resources to a file",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "completionDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "Data at which the job was completed"
-                        },
-                        "contentType": {
-                            "type": "string",
-                            "description": "The format of the exported data"
-                        },
-                        "creationDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "Date at which the job was created"
-                        },
-                        "errorLog": {
-                            "type": "string",
-                            "description": "Reason for failure"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the export job"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Identifier of the export job"
-                        },
-                        "path": {
-                            "type": "string",
-                            "description": "URL of the root resource acting as the source for streaming content to the file specified by the export job"
-                        },
-                        "query": {
-                            "type": "string",
-                            "description": "Used to scope the exported data"
-                        },
-                        "status": {
-                            "type": "string",
-                            "description": "Status of the export job (not started, running, succeeded, failed)"
-                        },
-                        "url": {
-                            "type": "string",
-                            "description": "URL of the file containing the data to be exported"
-                        }
-                    }
+            "properties": {
+                "completionDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Data at which the job was completed"
                 },
+                "contentType": {
+                    "type": "string",
+                    "description": "The format of the exported data"
+                },
+                "creationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date at which the job was created"
+                },
+                "errorLog": {
+                    "type": "string",
+                    "description": "Reason for failure"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the export job"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the export job"
+                },
+                "path": {
+                    "type": "string",
+                    "description": "URL of the root resource acting as the source for streaming content to the file specified by the export job"
+                },
+                "query": {
+                    "type": "string",
+                    "description": "Used to scope the exported data"
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status of the export job (not started, running, succeeded, failed)"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "URL of the file containing the data to be exported"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

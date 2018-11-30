@@ -7,28 +7,26 @@
             "$id": "#IndividualIdentification",
             "description": "Represents our registration of information used as proof of identity by an individual (passport, national identity card, driver's license, social security number, birth certificate)",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "identificationId": {
-                            "type": "string",
-                            "description": "Identifier"
-                        },
-                        "issuingAuthority": {
-                            "type": "string",
-                            "description": "Authority which has issued the identifier (social security, town hall...)"
-                        },
-                        "issuingDate": {
-                            "type": "string",
-                            "format": "date-time",
-                            "description": "Date at which the identifier was issued"
-                        },
-                        "identificationType": {
-                            "type": "string",
-                            "description": "Identification type (passport, national identity card, driver's license, social security number, birth certificate)"
-                        }
-                    }
+            "properties": {
+                "identificationId": {
+                    "type": "string",
+                    "description": "Identifier"
                 },
+                "issuingAuthority": {
+                    "type": "string",
+                    "description": "Authority which has issued the identifier (social security, town hall...)"
+                },
+                "issuingDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date at which the identifier was issued"
+                },
+                "identificationType": {
+                    "type": "string",
+                    "description": "Identification type (passport, national identity card, driver's license, social security number, birth certificate)"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

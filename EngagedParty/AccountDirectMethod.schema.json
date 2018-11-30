@@ -7,14 +7,12 @@
             "$id": "#AccountDirectMethod",
             "description": "A payment method using an internal account that could be billed directly to perform the payment",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "AccountRef.schema.json#AccountRef"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "AccountRef.schema.json#AccountRef"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

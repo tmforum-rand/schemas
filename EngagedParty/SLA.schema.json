@@ -7,61 +7,59 @@
             "$id": "#SLA",
             "description": "Part of a business agreement between a Service Provider and a Customer, quantitatively specifying the service performance level the Service Provider commits to deliver.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "approvalDate": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "approved": {
-                            "type": "boolean"
-                        },
-                        "description": {
-                            "type": "string",
-                            "description": "Description of the Service Level Agreement (SLA)"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the Service Level Agreement (SLA)"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the Service Level Agreement (SLA)"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the Service Level Agreement (SLA)"
-                        },
-                        "state": {
-                            "type": "string",
-                            "description": "State of the Service Level Agreement (SLA)"
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "Period where the clauses of the SLA are applicable"
-                        },
-                        "version": {
-                            "type": "string",
-                            "description": "Version of the Service Level Agreement (SLA)"
-                        },
-                        "rule": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "Rule.schema.json#Rule"
-                            }
-                        },
-                        "relatedParty": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
-                            }
-                        },
-                        "template": {
-                            "$ref": "TemplateRef.schema.json#TemplateRef"
-                        }
+            "properties": {
+                "approvalDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "approved": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the Service Level Agreement (SLA)"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the Service Level Agreement (SLA)"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the Service Level Agreement (SLA)"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the Service Level Agreement (SLA)"
+                },
+                "state": {
+                    "type": "string",
+                    "description": "State of the Service Level Agreement (SLA)"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "Period where the clauses of the SLA are applicable"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Version of the Service Level Agreement (SLA)"
+                },
+                "rule": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Rule.schema.json#Rule"
                     }
                 },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                    }
+                },
+                "template": {
+                    "$ref": "TemplateRef.schema.json#TemplateRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

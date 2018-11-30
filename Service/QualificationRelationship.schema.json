@@ -6,18 +6,16 @@
         "QualificationRelationship": {
             "$id": "#QualificationRelationship",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "id": {
-                            "type": "string"
-                        },
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "The type of relationship"
-                        }
-                    }
+            "properties": {
+                "id": {
+                    "type": "string"
                 },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "The type of relationship"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

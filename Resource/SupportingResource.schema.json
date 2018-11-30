@@ -6,23 +6,21 @@
         "SupportingResource": {
             "$id": "#SupportingResource",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the supporting resource"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the supporting resource"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the resource supporting the service"
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the supporting resource"
                 },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the supporting resource"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the resource supporting the service"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -7,39 +7,37 @@
             "$id": "#EntityAttachment",
             "description": "Complements the description of an entity through video, pictures...",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "A narrative text describing the content of the attachment"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the attachment"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the attachment"
-                        },
-                        "mimeType": {
-                            "type": "string",
-                            "description": "Attachment mime type such as extension file for video, picture and document"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "name given to the attachment"
-                        },
-                        "uri": {
-                            "type": "string",
-                            "description": "Uniform Resource Identifier (URI) of the attachment"
-                        },
-                        "validFor": {
-                            "$ref": "TimePeriod.schema.json#TimePeriod",
-                            "description": "The period for which this attachment is valid"
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "A narrative text describing the content of the attachment"
                 },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the attachment"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the attachment"
+                },
+                "mimeType": {
+                    "type": "string",
+                    "description": "Attachment mime type such as extension file for video, picture and document"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "name given to the attachment"
+                },
+                "uri": {
+                    "type": "string",
+                    "description": "Uniform Resource Identifier (URI) of the attachment"
+                },
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "description": "The period for which this attachment is valid"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

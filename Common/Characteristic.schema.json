@@ -7,23 +7,21 @@
             "$id": "#Characteristic",
             "description": "Describes a given characteristic of an object or entity through a name/value pair.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the characteristic"
-                        },
-                        "valueType": {
-                            "type": "string", 
-                            "description": "Data type of the value of the characteristic"
-                        }, 
-                        "value": {
-                            "type": "string",
-                            "description": "Value of the characteristic"
-                        }
-                    }
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the characteristic"
                 },
+                "valueType": {
+                    "type": "string",
+                    "description": "Data type of the value of the characteristic"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Value of the characteristic"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

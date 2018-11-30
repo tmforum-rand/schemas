@@ -7,27 +7,25 @@
             "$id": "#OrganizationChildRelationship",
             "description": "Represents the links between organizations: useful to describe an organization structure between headquarters, affiliates,... It indicates the children of the organization",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the child organization"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the child organization"
-                        },
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "Juridical, hierarchical, geographical, functional..."
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "The time period the relationship is valid"
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the child organization"
                 },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the child organization"
+                },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Juridical, hierarchical, geographical, functional..."
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The time period the relationship is valid"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

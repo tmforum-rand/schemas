@@ -6,14 +6,12 @@
         "BankAccountDebitMethod": {
             "$id": "#BankAccountDebitMethod",
             "type": "object",
+            "properties": {
+                "details": {
+                    "$ref": "BankAccountDebitDetails.schema.json#BankAccountDebitDetails"
+                }
+            },
             "allOf": [
-                {
-                    "properties": {
-                        "details": {
-                            "$ref": "BankAccountDebitDetails.schema.json#BankAccountDebitDetails"
-                        }
-                    }
-                },
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -1,18 +1,18 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ServiceStateType.schema.json", 
-    "title": "ServiceStateType", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceStateType.schema.json",
+    "title": "ServiceStateType",
     "definitions": {
         "ServiceStateType": {
-            "$id": "#ServiceStateType", 
-            "type": "string", 
+            "$id": "#ServiceStateType",
+            "type": "string",
             "description": "The life cycle state of the service",
             "enum": [
-                "feasibilityChecked", 
-                "designed", 
-                "reserved", 
-                "inactive", 
-                "active", 
+                "feasibilityChecked",
+                "designed",
+                "reserved",
+                "inactive",
+                "active",
                 "terminated"
             ]
         }

@@ -7,40 +7,38 @@
             "$id": "#QuotePrice",
             "description": "Description of price and discount awarded",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "Description of the quote/quote item price"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the quote /quote item price"
-                        },
-                        "priceType": {
-                            "type": "string",
-                            "description": "indicate if the price is for recurrent or no-recurrent charge"
-                        },
-                        "recurringChargePeriod": {
-                            "type": "string",
-                            "description": "Used for recurring charge to indicate period (month, week, etc..)"
-                        },
-                        "unitOfMeasure": {
-                            "type": "string",
-                            "description": "Unit of Measure if price depending on it (Gb, SMS volume, etc..)"
-                        },
-                        "priceAlteration": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "PriceAlteration.schema.json#PriceAlteration"
-                            }
-                        },
-                        "price": {
-                            "$ref": "Price.schema.json#Price"
-                        }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the quote/quote item price"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the quote /quote item price"
+                },
+                "priceType": {
+                    "type": "string",
+                    "description": "indicate if the price is for recurrent or no-recurrent charge"
+                },
+                "recurringChargePeriod": {
+                    "type": "string",
+                    "description": "Used for recurring charge to indicate period (month, week, etc..)"
+                },
+                "unitOfMeasure": {
+                    "type": "string",
+                    "description": "Unit of Measure if price depending on it (Gb, SMS volume, etc..)"
+                },
+                "priceAlteration": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "PriceAlteration.schema.json#PriceAlteration"
                     }
                 },
+                "price": {
+                    "$ref": "Price.schema.json#Price"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

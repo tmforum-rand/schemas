@@ -7,27 +7,25 @@
             "$id": "#BundledProductSpecification",
             "description": "A type of ProductSpecification that belongs to a grouping of ProductSpecifications made available to the market. It inherits of all attributes of ProductSpecification.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the product specification"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the product specification"
-                        },
-                        "lifecycleStatus": {
-                            "type": "string",
-                            "description": "Used to indicate the current lifecycle status"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the product specification"
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the product specification"
                 },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the product specification"
+                },
+                "lifecycleStatus": {
+                    "type": "string",
+                    "description": "Used to indicate the current lifecycle status"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the product specification"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

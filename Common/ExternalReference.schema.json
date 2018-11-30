@@ -7,19 +7,17 @@
             "$id": "#ExternalReference",
             "description": "To manage touch points to external OTT identifiers for the individual or the organization (facebook, google+,...)",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "href": {
-                            "type": "string",
-                            "description": "External reference"
-                        },
-                        "referenceType": {
-                            "type": "string",
-                            "description": "Reference type"
-                        }
-                    }
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "External reference"
                 },
+                "referenceType": {
+                    "type": "string",
+                    "description": "Reference type"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

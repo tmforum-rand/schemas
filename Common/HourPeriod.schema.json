@@ -6,19 +6,17 @@
         "HourPeriod": {
             "$id": "#HourPeriod",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "endHour": {
-                            "type": "string",
-                            "description": "The time when the status ends applying"
-                        },
-                        "startHour": {
-                            "type": "string",
-                            "description": "The time when the status starts applying"
-                        }
-                    }
+            "properties": {
+                "endHour": {
+                    "type": "string",
+                    "description": "The time when the status ends applying"
                 },
+                "startHour": {
+                    "type": "string",
+                    "description": "The time when the status starts applying"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -6,18 +6,16 @@
         "Object": {
             "$id": "#Object",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "objectType": {
-                            "type": "string",
-                            "description": "The type of object"
-                        },
-                        "uri": {
-                            "type": "string"
-                        }
-                    }
+            "properties": {
+                "objectType": {
+                    "type": "string",
+                    "description": "The type of object"
                 },
+                "uri": {
+                    "type": "string"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

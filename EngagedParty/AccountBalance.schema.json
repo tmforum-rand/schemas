@@ -7,23 +7,21 @@
             "$id": "#AccountBalance",
             "description": "Balances linked to the account",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "amount": {
-                            "$ref": "../Common/Money.schema.json#Money",
-                            "description": "Balance amount"
-                        },
-                        "balanceType": {
-                            "type": "string",
-                            "description": "Type of the balance : deposit balance, disputed balance, loyalty balance, receivable balance..."
-                        },
-                        "validFor": {
-                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                            "description": "Balance validity period"
-                        }
-                    }
+            "properties": {
+                "amount": {
+                    "$ref": "../Common/Money.schema.json#Money",
+                    "description": "Balance amount"
                 },
+                "balanceType": {
+                    "type": "string",
+                    "description": "Type of the balance : deposit balance, disputed balance, loyalty balance, receivable balance..."
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "Balance validity period"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

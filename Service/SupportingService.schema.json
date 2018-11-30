@@ -7,27 +7,25 @@
             "$id": "#SupportingService",
             "description": "A collection of services that support this service (links between CFS -> RFS)",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "category": {
-                            "type": "string",
-                            "description": "Category of the supporting service"
-                        },
-                        "href": {
-                            "type": "string",
-                            "description": "Reference of the supporting service"
-                        },
-                        "id": {
-                            "type": "string",
-                            "description": "Unique identifier of the supporting service"
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "Name of the supporting service"
-                        }
-                    }
+            "properties": {
+                "category": {
+                    "type": "string",
+                    "description": "Category of the supporting service"
                 },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the supporting service"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the supporting service"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the supporting service"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

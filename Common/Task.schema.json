@@ -7,23 +7,21 @@
             "$id": "#Task",
             "description": "A step or task along in the process of implementation a Change Request.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "description": {
-                            "type": "string",
-                            "description": "The description of the task."
-                        },
-                        "name": {
-                            "type": "string",
-                            "description": "The name of the task."
-                        },
-                        "state": {
-                            "type": "string",
-                            "description": "The state of the task."
-                        }
-                    }
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "The description of the task."
                 },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the task."
+                },
+                "state": {
+                    "type": "string",
+                    "description": "The state of the task."
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -7,23 +7,21 @@
             "$id": "#AgreementItem",
             "description": "A part of the agreement expressed in terms of a product offering and possibly including specific terms and conditions.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "productOffering": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
-                            }
-                        },
-                        "termOrCondition": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "AgreementTermOrCondition.schema.json#AgreementTermOrCondition"
-                            }
-                        }
+            "properties": {
+                "productOffering": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
                     }
                 },
+                "termOrCondition": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AgreementTermOrCondition.schema.json#AgreementTermOrCondition"
+                    }
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -7,19 +7,17 @@
             "$id": "#CommunicationRequestCharacteristic",
             "description": "The values of parameters which are used in the content if the content contains them.",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "Content parameter identifier"
-                        },
-                        "value": {
-                            "type": "string",
-                            "description": "Content parameter value"
-                        }
-                    }
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Content parameter identifier"
                 },
+                "value": {
+                    "type": "string",
+                    "description": "Content parameter value"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"
                 }

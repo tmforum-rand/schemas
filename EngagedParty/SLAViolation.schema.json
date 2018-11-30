@@ -6,33 +6,31 @@
         "SLAViolation": {
             "$id": "#SLAViolation",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "date": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "href": {
-                            "type": "string"
-                        },
-                        "id": {
-                            "type": "string"
-                        },
-                        "relatedParty": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
-                            }
-                        },
-                        "violation": {
-                            "$ref": "Violation.schema.json#Violation"
-                        },
-                        "sla": {
-                            "$ref": "SLARef.schema.json#SLARef"
-                        }
+            "properties": {
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
                     }
                 },
+                "violation": {
+                    "$ref": "Violation.schema.json#Violation"
+                },
+                "sla": {
+                    "$ref": "SLARef.schema.json#SLARef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

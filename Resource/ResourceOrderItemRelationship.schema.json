@@ -6,18 +6,16 @@
         "ResourceOrderItemRelationship": {
             "$id": "#ResourceOrderItemRelationship",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "Type of the order item relationship"
-                        },
-                        "orderItem": {
-                            "$ref": "ResourceOrderItemRef.schema.json#ResourceOrderItemRef"
-                        }
-                    }
+            "properties": {
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Type of the order item relationship"
                 },
+                "orderItem": {
+                    "$ref": "ResourceOrderItemRef.schema.json#ResourceOrderItemRef"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }

@@ -5,21 +5,19 @@
     "definitions": {
         "ResourceRelationship": {
             "$id": "#ResourceRelationship",
-            "description": "Describes links between resources", 
+            "description": "Describes links between resources",
             "type": "object",
-            "allOf": [
-                {
-                    "properties": {
-                        "relationshipType": {
-                            "type": "string",
-                            "description": "Semantic of the relationship"
-                        },
-                        "resource": {
-                            "$ref": "ResourceRef.schema.json#ResourceRef",
-                            "description": "A reference to the resource"
-                        }
-                    }
+            "properties": {
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Semantic of the relationship"
                 },
+                "resource": {
+                    "$ref": "ResourceRef.schema.json#ResourceRef",
+                    "description": "A reference to the resource"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
