@@ -163,7 +163,7 @@
                         "category": {
                             "type": "array",
                             "items": {
-                                "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                                "$ref": "../Common/CategoryRef.schema.json#CategoryRef"
                             }
                         },
                         "note": {
