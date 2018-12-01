@@ -5,12 +5,12 @@
     "definitions": {
         "AgreementSpecification": {
             "$id": "#AgreementSpecification",
-            "description": "A template of an agreement that can be used when establishing partnerships.",
+            "description": "A template of an agreement that can be used when establishing partnerships",
             "type": "object",
             "properties": {
                 "description": {
                     "type": "string",
-                    "description": "A narrative that explains in detail what the agreement specification is about."
+                    "description": "A narrative that explains in detail what the agreement specification is about"
                 },
                 "href": {
                     "type": "string",
@@ -22,7 +22,7 @@
                 },
                 "isBundle": {
                     "type": "boolean",
-                    "description": "Indicates that this agreement specification is a grouping of other agreement specifications. The list of bundled agreement specifications is provided via the specificationRelationship property."
+                    "description": "If true, this agreement specification is a grouping of other agreement specifications. The list of bundled agreement specifications is provided by the specificationRelationship property"
                 },
                 "lastUpdate": {
                     "type": "string",
@@ -46,7 +46,7 @@
                     "description": "Agreement specification version"
                 },
                 "serviceCategory": {
-                    "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                    "$ref": "../Common/CategoryRef.schema.json#CategoryRef"
                 },
                 "specCharacteristic": {
                     "type": "array",

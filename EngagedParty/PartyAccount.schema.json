@@ -18,14 +18,14 @@
                 "paymentPlan": {
                     "type": "array",
                     "items": {
-                        "$ref": "PaymentPlan.schema.json#PaymentPlan"
+                        "$ref": "../Customer/PaymentPlan.schema.json#PaymentPlan"
                     }
                 },
                 "financialAccount": {
                     "$ref": "FinancialAccountRef.schema.json#FinancialAccountRef"
                 },
                 "defaultPaymentMethod": {
-                    "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
+                    "$ref": "../Customer/PaymentMethodRef.schema.json#PaymentMethodRef"
                 }
             },
             "allOf": [

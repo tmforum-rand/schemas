@@ -82,7 +82,7 @@
                 "paymentItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/PaymentItem.schema.json#PaymentItem"
+                        "$ref": "PaymentItem.schema.json#PaymentItem"
                     },
                     "description": "Payment items already lettered on this bill."
                 },
@@ -96,7 +96,7 @@
                     }
                 },
                 "paymentMethod": {
-                    "$ref": "../EngagedParty/PaymentMethodRef.schema.json#PaymentMethodRef"
+                    "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
                 },
                 "relatedParty": {
                     "type": "array",

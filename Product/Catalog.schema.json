@@ -5,7 +5,7 @@
     "definitions": {
         "Catalog": {
             "$id": "#Catalog",
-            "description": "Is a collection of Product Offerings, intended for a specific DistributionChannel, enhanced with additional information such as SLA parameters, invoicing and shipping details.",
+            "description": "A collection of Product Offerings, intended for a specific DistributionChannel, enhanced with additional information such as SLA parameters, invoicing and shipping details",
             "type": "object",
             "properties": {
                 "href": {

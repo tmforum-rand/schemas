@@ -9,24 +9,26 @@
             "type": "object",
             "properties": {
                 "authorizationGivenDate": {
-                    "$ref": "Date.schema.json#/Date",
-                    "description": "Date when the authorization (approved or declined) has been done"
+                    "type": "string",
+                    "format" : "date-time",
+                    "description": "Date when the authorization (approved or declined) was done"
                 },
                 "authorizationName": {
                     "type": "string",
                     "description": "Name of the required authorization"
                 },
                 "authorizationRequestedDate": {
-                    "$ref": "Date.schema.json#/Date",
+                    "type": "string",
+                    "format" : "date-time",
                     "description": "Date when the authorization is requested for"
                 },
                 "authorizationSignatureRepresentation": {
                     "type": "string",
-                    "description": "To described a digital or manual signature"
+                    "description": "To describe a digital or manual signature"
                 },
                 "authorizationState": {
                     "type": "string",
-                    "description": "State of the authorization - could be approved or declined"
+                    "description": "State of the authorization, such as: approved or declined"
                 },
                 "approver": {
                     "type": "array",

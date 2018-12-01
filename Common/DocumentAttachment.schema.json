@@ -10,7 +10,7 @@
             "properties": {
                 "description": {
                     "type": "string",
-                    "description": "the description of the binary attachment"
+                    "description": "The description of the binary attachment"
                 },
                 "id": {
                     "type": "string",
@@ -18,15 +18,15 @@
                 },
                 "mimeType": {
                     "type": "string",
-                    "description": "mimeType of the Attachment ( e,g application/pdf)"
+                    "description": "mimeType of the Attachment, such as: application/pdf"
                 },
                 "name": {
                     "type": "string",
-                    "description": "name of the binary attachment"
+                    "description": "Name of the binary attachment"
                 },
                 "size": {
-                    "$ref": "Decimal.schema.json#/Decimal",
-                    "description": "The size in Bytes of the of the document or attachment. If this component contains the embedded data then the size is the size of the embedded data; if it is a reference without the data then it is the size of the referenced document."
+                    "type": "integer",
+                    "description": "The size of the document or attachment. If this component contains the embedded data then the size is the size of the embedded data; if it is a reference without the data then it is the size of the referenced document"
                 },
                 "sizeUnit": {
                     "type": "string",
@@ -42,7 +42,7 @@
                 },
                 "validFor": {
                     "$ref": "TimePeriod.schema.json#TimePeriod",
-                    "description": "validity period of the Attachment"
+                    "description": "Validity period of the Attachment"
                 }
             },
             "allOf": [

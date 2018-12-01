@@ -22,11 +22,13 @@
                     "description": "Date when the quote has been completed"
                 },
                 "expectedFulfillmentStartDate": {
-                    "$ref": "Date.schema.json#/Date",
+                    "type": "string",
+                    "format": "date-time",
                     "description": "this is the date wished by the requester to have the requested quote item delivered"
                 },
                 "expectedQuoteCompletionDate": {
-                    "$ref": "Date.schema.json#/Date",
+                    "type": "string",
+                    "format": "date-time",
                     "description": "This is expected date - from quote requester - to have a response for this quote"
                 },
                 "externalId": {

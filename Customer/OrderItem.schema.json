@@ -57,7 +57,7 @@
                 "payment": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/PaymentRef.schema.json#PaymentRef"
+                        "$ref": "PaymentRef.schema.json#PaymentRef"
                     }
                 },
                 "productOffering": {
