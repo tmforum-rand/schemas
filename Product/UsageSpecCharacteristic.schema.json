@@ -29,7 +29,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

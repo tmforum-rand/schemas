@@ -10,7 +10,7 @@
             "properties": {
                 "default": {
                     "type": "boolean",
-                    "description": "Indicates if the value is the default value for a characteristic"
+                    "description": "If true, this is the default value for a characteristic"
                 },
                 "value": {
                     "type": "string",
@@ -22,16 +22,16 @@
                 },
                 "valueTo": {
                     "type": "string",
-                    "description": "The upper range value that a characteristic can take on."
+                    "description": "The upper range value that a characteristic can take on"
                 },
                 "valueType": {
                     "type": "string",
-                    "description": "A kind of value that the characteristic can take on, such as numeric, text, and so forth."
+                    "description": "A kind of value that the characteristic can take on, such as numeric, text"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

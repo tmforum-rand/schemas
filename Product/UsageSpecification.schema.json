@@ -25,7 +25,7 @@
                     "description": "The name of the usage specification."
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which the usage specification is valid"
                 },
                 "usageSpecCharacteristic": {
@@ -37,7 +37,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

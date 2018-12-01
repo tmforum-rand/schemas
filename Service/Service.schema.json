@@ -72,7 +72,7 @@
                 "characteristic": {
                     "type": "array", 
                     "items": {
-                        "$ref": "Characteristic.schema.json#/definitions/Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
                     }
                 }, 
                 "serviceRelationship": {
