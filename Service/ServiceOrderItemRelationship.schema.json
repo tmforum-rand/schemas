@@ -7,12 +7,13 @@
             "$id": "#ServiceOrderItemRelationship",
             "type": "object",
             "description": "Linked order item to the one containing this attribute",
+            "required": ["id", "relationshipType"],
             "properties": {
                 "id": {
                     "type": "string",
                     "description": "Unique identifier of an order item"
                 },
-                "type": {
+                "relationshipType": {
                     "type": "string",
                     "description": "The type of related order item, can be : dependency if the order item needs to be not started until another order item is complete"
                 }

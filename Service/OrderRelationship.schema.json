@@ -7,6 +7,7 @@
             "$id": "#OrderRelationship",
             "type": "object",
             "description": "Linked order to the one containing this attribute",
+            "required": ["id"],
             "properties": {
                 "@referredType": {
                     "type": "string"
