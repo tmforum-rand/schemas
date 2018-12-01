@@ -20,11 +20,11 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedParty"
                     }
                 },
                 "validPeriod": {
-                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#/definitions/TimePeriod"
                 }
             },
             "allOf": [
