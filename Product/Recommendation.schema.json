@@ -42,7 +42,7 @@
                     "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
                 },
                 "category": {
-                    "$ref": "../Customer/CategoryRef.schema.json#CategoryRef",
+                    "$ref": "../Product/CategoryRef.schema.json#CategoryRef",
                     "description": "The category for grouping recommendations"
                 },
                 "shoppingCart": {

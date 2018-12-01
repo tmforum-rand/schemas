@@ -6,7 +6,7 @@
         "NetworkProduct": {
             "$id": "#NetworkProduct",
             "type": "object",
-            "description": "An instantiated network product subscribed by a customer.",
+            "description": "An instantiated network product subscribed by a customer",
             "properties": {
                 "href": {
                     "type": "string",
@@ -18,7 +18,7 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "Network product Name"
+                    "description": "Network product name"
                 },
                 "outOfBucketCounter": {
                     "type": "array",
@@ -28,12 +28,12 @@
                 },
                 "publicIdentifier": {
                     "type": "string",
-                    "description": "Public number associated to the network product (msisdn number for mobile line for example)"
+                    "description": "Public ID associated to the network product, such as: MSISDN for mobile line"
                 },
                 "user": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 }
             },

@@ -27,7 +27,7 @@
                 "eligibilityUnavailabilityReason": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
+                        "$ref": "../Product/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
                     }
                 },
                 "category": {

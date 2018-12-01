@@ -51,7 +51,7 @@
                 "ratedProductUsage": {
                     "type": "array",
                     "items": {
-                        "$ref": "RatedProductUsage.schema.json#RatedProductUsage"
+                        "$ref": "../Common/RatedProductUsage.schema.json#RatedProductUsage"
                     }
                 }
             },

@@ -45,7 +45,7 @@
                 "account": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountRef.schema.json#AccountRef"
+                        "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
                     }
                 }
             },

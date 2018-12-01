@@ -73,7 +73,7 @@
                 "category": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
                     }
                 },
                 "resourceCandidate": {

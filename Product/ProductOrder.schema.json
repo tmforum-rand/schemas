@@ -92,7 +92,7 @@
                 "payment": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/PaymentRef.schema.json#PaymentRef"
+                        "$ref": "../Customer/PaymentRef.schema.json#PaymentRef"
                     }
                 },
                 "billingAccount": {

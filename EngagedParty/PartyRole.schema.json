@@ -47,7 +47,7 @@
                 "paymentMethod": {
                     "type": "array",
                     "items": {
-                        "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
+                        "$ref": "../Customer/PaymentMethodRef.schema.json#PaymentMethodRef"
                     }
                 },
                 "contactMedium": {

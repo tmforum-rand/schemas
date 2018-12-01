@@ -9,7 +9,7 @@
             "description": "The consumption counters (called ConsumptionSummary in the SID model) detail for example the different kind of consumption done on the bucket",
             "properties": {
                 "consumptionPeriod": {
-                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
                 },
                 "counterType": {
                     "type": "string",
@@ -20,14 +20,14 @@
                     "description": "Counter level. The counter can be given globally for the bucket or detailed by user or by network product for example in case of shared bucket"
                 },
                 "product": {
-                    "$ref": "NetworkProductRef.schema.json#/definitions/NetworkProductRef"
+                    "$ref": "NetworkProductRef.schema.json#NetworkProductRef"
                 },
                 "unit": {
                     "type": "string",
                     "description": "Unit of the counter"
                 },
                 "user": {
-                    "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                    "$ref": "RelatedParty.schema.json#RelatedParty"
                 },
                 "value": {
                     "type": "number",

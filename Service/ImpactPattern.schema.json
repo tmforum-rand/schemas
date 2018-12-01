@@ -6,7 +6,7 @@
         "ImpactPattern": {
             "$id": "#ImpactPattern",
             "type": "object",
-            "description": "Define the patterns of impact (optional)- e.g. other service characteristics- Used when defining impact through another pattern than the pre-defined attributes.",
+            "description": "Define the patterns of impact (optional), such as other service characteristics- Used when defining impact through another pattern than the pre-defined attributes",
             "properties": {
                 "description": {
                     "type": "string",
@@ -15,14 +15,14 @@
                 "extensionInfo": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     },
-                    "description": "A generic list of any type of elements. Used for vendor Extensions or loose element encapsulation from other namespaces"
+                    "description": "A generic list of any type of elements. Used for extensions or loose element encapsulation from other namespaces"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json/#definitions/polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

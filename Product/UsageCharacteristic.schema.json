@@ -5,7 +5,7 @@
     "definitions": {
         "UsageCharacteristic": {
             "$id": "#UsageCharacteristic",
-            "description": "Provides the value of a given characteristic.",
+            "description": "Provides the value of a given characteristic",
             "type": "object",
             "properties": {
                 "name": {
@@ -14,12 +14,12 @@
                 },
                 "value": {
                     "type": "string",
-                    "description": "A discrete value that the characteristic can take on."
+                    "description": "A discrete value that the characteristic can take on"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }
