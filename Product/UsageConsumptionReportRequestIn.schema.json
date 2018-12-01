@@ -20,7 +20,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
                     }
                 },
                 "validPeriod": {

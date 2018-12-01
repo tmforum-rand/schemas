@@ -40,7 +40,7 @@
                 },
                 "usageType": {
                     "type": "string",
-                    "description": "Type of usage concerned by the bucket (voice, sms, data,…)"
+                    "description": "Type of usage concerned by the bucket, such as voice, sms, data"
                 }
             },
             "allOf": [

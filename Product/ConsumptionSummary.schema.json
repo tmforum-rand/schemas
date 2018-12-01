@@ -27,7 +27,7 @@
                     "description": "Unit of the counter"
                 },
                 "user": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedParty"
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                 },
                 "value": {
                     "type": "number",

@@ -96,7 +96,7 @@
                 "relatedParty": {
                     "type": "array", 
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
                     }
                 }, 
                 "serviceOrder": {

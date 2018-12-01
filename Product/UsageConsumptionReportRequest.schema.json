@@ -50,7 +50,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
                     }
                 },
                 "status": {
@@ -61,7 +61,7 @@
                     "$ref": "UsageConsumptionReportRef.schema.json#/definitions/UsageConsumptionReportRef"
                 },
                 "validPeriod": {
-                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#/definitions/TimePeriod"
                 }
             }
         }
