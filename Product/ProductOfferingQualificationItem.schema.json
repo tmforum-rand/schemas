@@ -31,7 +31,7 @@
                     }
                 },
                 "category": {
-                    "$ref": "../Customer/CategoryRef.schema.json#CategoryRef"
+                    "$ref": "CategoryRef.schema.json#CategoryRef"
                 },
                 "qualificationItemRelationship": {
                     "type": "array",

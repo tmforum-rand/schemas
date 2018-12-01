@@ -47,7 +47,7 @@
                 "appliedConsequence": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/AppliedConsequence.schema.json#AppliedConsequence"
+                        "$ref": "AppliedConsequence.schema.json#AppliedConsequence"
                     }
                 }
             },

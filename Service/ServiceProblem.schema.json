@@ -98,7 +98,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
                     }
                 },
                 "resolutionDate": {

@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ServiceRestriction.schema.json", 
+    "title": "ServiceRestriction", 
+    "definitions": {
+        "ServiceRestriction": {
+            "description": "In the context of a service order, and depending of the action requested (add/modify/delete/noChange) this data structure captures the configuration to apply to an existing subscribed service or to a new one", 
+            "type": "object", 
+            "properties": {
+                "@referredType": {
+                    "type": "string"
+                }, 
+                "id": {
+                    "description": "Unique identifier of the service",
+                    "type": "string"
+                }, 
+                "href": { 
+                    "description": "Reference of the service",
+                    "type": "string"
+                }, 
+                "serviceType": {
+                    "description": "Business type of the service",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Name of the service",
+                    "type": "string" 
+                }, 
+                "state": {
+                    "description": "The life cycle state of the service:\n\n feasibilityChecked\n designed\n reserved\n active\n inactive\n terminated  \n",
+                    "$ref": "ServiceStateType.schema.json#/definitions/ServiceStateType"
+                },
+                "category": {
+                    "type": "string", 
+                    "description": "Is it a customer facing or resource facing service"
+                }, 
+                "serviceSpecification": {
+                    "$ref": "ServiceSpecificationRef.schema.json#/definitions/ServiceSpecificationRef"
+                }, 
+                "characteristic": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "Characteristic.schema.json#/definitions/Characteristic"
+                    }
+                }, 
+                "serviceRelationship": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "ServiceRelationship.schema.json#/definitions/ServiceRelationship"
+                    }
+                },
+				"supportingService": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
+                    }
+                }, 		
+                "supportingResource": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../Resource/ResourceRef.schema.json#/definitions/ResourceRef"
+                    }
+                }, 
+                "relatedParty": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                    }
+                }, 
+                "place": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../Common/Place.schema.json#/definitions/Place"
+                    }
+                }
+            }, 
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#/definitions/polymorphicPattern"
+                }
+            ]
+       }
+    }
+}
