@@ -4,12 +4,13 @@
     "title": "Quantity",
     "definitions": {
         "Quantity": {
+            "$id": "#Quantity",
             "type": "object",
             "properties": {
                 "amount": {
                     "type": "number",
                     "format": "float",
-		    "default": 1
+	        	    "default": 1
                 },
                 "units": {
                     "type": "string"

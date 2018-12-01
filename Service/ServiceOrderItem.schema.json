@@ -19,10 +19,10 @@
                     "$ref": "OrderStateType.schema.json#/definitions/OrderStateType"
                 },
                 "quantity": {
-                    "$ref": "OrderStateType.schema.json#/definitions/Quantity"
+                    "$ref": "../Common/Quantity.schema.json#/definitions/Quantity"
                 },
                 "service": {
-                    "$ref": "Service.schema.json#/definitions/ServiceRestriction"
+                    "$ref": "ServiceRestriction.schema.json#/definitions/ServiceRestriction"
                 }, 
                 "appointment": {
                     "$ref": "AppointmentRef.schema.json#/definitions/AppointmentRef"

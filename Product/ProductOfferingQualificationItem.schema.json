@@ -51,7 +51,7 @@
                 "terminationError": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/TerminationError.schema.json#TerminationError"
+                        "$ref": "../Service/TerminationError.schema.json#TerminationError"
                     }
                 },
                 "productOffering": {

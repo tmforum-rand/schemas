@@ -4,6 +4,7 @@
     "title": "ServiceRestriction", 
     "definitions": {
         "ServiceRestriction": {
+            "id": "#ServiceRestriction",
             "description": "In the context of a service order, and depending of the action requested (add/modify/delete/noChange) this data structure captures the configuration to apply to an existing subscribed service or to a new one", 
             "type": "object", 
             "properties": {
@@ -76,7 +77,7 @@
             }, 
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json#/definitions/polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
        }
