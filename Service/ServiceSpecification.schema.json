@@ -72,7 +72,7 @@
                 "serviceSpecRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ServiceSpecRelationship.schema.json#ServiceSpecRelationship"
+                        "$ref": "ServiceSpecRelationship.schema.json#ServiceSpecificationRelationship"
                     }
                 },
                 "targetServiceSchema": {

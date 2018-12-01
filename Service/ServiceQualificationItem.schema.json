@@ -21,7 +21,7 @@
                     "type": "string"
                 },
                 "service": {
-                    "$ref": "Service.schema.json#Service"
+                    "$ref": "ServiceRestriction.schema.json#/definitions/ServiceRestriction"
                 },
                 "qualificationRelationship": {
                     "type": "array",
@@ -42,7 +42,7 @@
                 "eligibilityUnavailabilityReason": {
                     "type": "array",
                     "items": {
-                        "$ref": "EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
+                        "$ref": "ServiceEligibilityUnavailabilityReason.schema.json#ServiceEligibilityUnavailabilityReason"
                     }
                 },
                 "category": {
