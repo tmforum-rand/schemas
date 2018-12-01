@@ -6,29 +6,31 @@
         "ServiceOrderItem": {
             "$id": "#ServiceOrderItem",
             "type": "object",
+            "required": ["id", "action"],
             "properties": {
-                "action": {
-                    "type": "string"
-                },
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Identifier of the individual line item"
                 },
+                "action": {
+                    "$ref": "OrderActionType.schema.json#/definitions/OrderActionType"
+                }, 
                 "state": {
-                    "type": "string"
+                    "$ref": "OrderStateType.schema.json#/definitions/OrderStateType"
+                },
+                "quantity": {
+                    "$ref": "OrderStateType.schema.json#/definitions/Quantity"
                 },
                 "service": {
-                    "$ref": "Service.schema.json#Service"
+                    "$ref": "Service.schema.json#/definitions/ServiceRestriction"
+                }, 
+                "appointment": {
+                    "$ref": "AppointmentRef.schema.json#/definitions/AppointmentRef"
                 },
                 "orderItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
-                    }
-                },
-                "appointment": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
+                        "$ref": "ServiceOrderItemRelationship.schema.json#/definitions/ServiceOrderItemRelationship"
                     }
                 }
             },

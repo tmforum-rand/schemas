@@ -11,16 +11,20 @@
                     "type": "string"
                 },
                 "effectiveQualificationDate": {
-                    "$ref": "Date.schema.json#/Date"
+                    "type": "string", 
+                    "format": "date-time"
                 },
                 "estimatedResponseDate": {
-                    "$ref": "Date.schema.json#/Date"
+                    "type": "string", 
+                    "format": "date-time"
                 },
                 "expectedQualificationDate": {
-                    "$ref": "Date.schema.json#/Date"
+                    "type": "string", 
+                    "format": "date-time"
                 },
                 "expirationDate": {
-                    "$ref": "Date.schema.json#/Date"
+                    "type": "string", 
+                    "format": "date-time"
                 },
                 "href": {
                     "type": "string"

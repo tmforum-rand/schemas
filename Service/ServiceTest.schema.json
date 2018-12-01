@@ -8,57 +8,57 @@
             "description": "A service test is an entity that exists that exists for a controlled test invocation on a service. The service \ntest is executed according to a schedule and contains service test configuration parameters that are to be \napplied at execution time, and service test measures that result.",
             "type": "object",
             "properties": {
+                "characteristic": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+                    }
+                }, 
                 "description": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Description of the service test"
-                },
+                }, 
                 "endDateTime": {
-                    "type": "string",
-                    "format": "date-time",
+                    "type": "string", 
+                    "format": "date-time", 
                     "description": "The end date and time of the service test"
-                },
+                }, 
                 "href": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Hyperlink to access the service  test"
-                },
+                }, 
                 "id": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "The identifier of the service test"
-                },
+                }, 
                 "mode": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "An indication of whether the service test is running in \n\"PROACTIVE\" or \"ONDEMAND\" mode"
-                },
+                }, 
                 "name": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "The name of the service test"
-                },
-                "startDateTime": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "The start date and time of the service test."
-                },
-                "state": {
-                    "type": "string",
-                    "description": "The actual state the service test is in"
-                },
+                }, 
                 "relatedService": {
-                    "$ref": "RelatedServiceRef.schema.json#RelatedServiceRef"
-                },
-                "relatedServiceTestSpecification": {
-                    "$ref": "RelatedServiceTestSpecificationRef.schema.json#RelatedServiceTestSpecificationRef"
-                },
+                    "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
+                }, 
+                "startDateTime": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "The start date and time of the service test."
+                }, 
+                "state": {
+                    "type": "string", 
+                    "description": "The actual state the service test is in"
+                }, 
                 "testMeasure": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "TestMeasure.schema.json#TestMeasure"
+                        "$ref": "TestMeasure.schema.json#/definitions/TestMeasure"
                     }
-                },
-                "serviceTestCharacteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ServiceTestCharacteristic.schema.json#ServiceTestCharacteristic"
-                    }
+                }, 
+                "testSpecification": {
+                    "$ref": "ServiceTestSpecificationRef.schema.json#/definitions/ServiceTestSpecificationRef"
                 }
             },
             "allOf": [

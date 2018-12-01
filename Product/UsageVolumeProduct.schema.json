@@ -8,18 +8,6 @@
             "type": "object",
             "description": "A bucket represents a quantity of usage, as 2 hours national calls or 50 sms for example. It could be either a quantity or an amount in a currency (i.e. It could represent a fixed number of SMS, MMS, minutes of calls, quantity of data, number of events as well as a specific amount in a given currency). It requires one or more network products from which usages will debit the bucket.",
             "properties": {
-                "@baseType": {
-                    "type": "string",
-                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current object is unknown to the implementation"
-                },
-                "@schemaLocation": {
-                    "type": "string",
-                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object"
-                },
-                "@type": {
-                    "type": "string",
-                    "description": "Generic attribute containing the name of the resource class type"
-                },
                 "bucketBalance": {
                     "type": "array",
                     "items": {
@@ -54,7 +42,12 @@
                     "type": "string",
                     "description": "Type of usage concerned by the bucket (voice, sms, data,…)"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

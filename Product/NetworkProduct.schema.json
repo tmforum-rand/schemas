@@ -8,18 +8,6 @@
             "type": "object",
             "description": "An instantiated network product subscribed by a customer.",
             "properties": {
-                "@baseType": {
-                    "type": "string",
-                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current object is unknown to the implementation"
-                },
-                "@schemaLocation": {
-                    "type": "string",
-                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object"
-                },
-                "@type": {
-                    "type": "string",
-                    "description": "Generic attribute containing the name of the resource class type"
-                },
                 "href": {
                     "type": "string",
                     "description": "Reference to the network product"
@@ -48,7 +36,12 @@
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

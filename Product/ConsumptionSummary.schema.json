@@ -8,18 +8,6 @@
             "type": "object",
             "description": "The consumption counters (called ConsumptionSummary in the SID model) detail for example the different kind of consumption done on the bucket",
             "properties": {
-                "@baseType": {
-                    "type": "string",
-                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current object is unknown to the implementation"
-                },
-                "@schemaLocation": {
-                    "type": "string",
-                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object"
-                },
-                "@type": {
-                    "type": "string",
-                    "description": "Generic attribute containing the name of the resource class type"
-                },
                 "consumptionPeriod": {
                     "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
                 },
@@ -50,7 +38,12 @@
                     "type": "string",
                     "description": "Value of the counter in a formatted string used for display needs for example"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }
