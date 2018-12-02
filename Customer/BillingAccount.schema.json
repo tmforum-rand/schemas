@@ -44,7 +44,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     }
                 },
                 "taxExemption": {
