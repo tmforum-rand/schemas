@@ -32,15 +32,15 @@
                     "description": "The time period that the PartyRole is valid for."
                 },
                 "engagedParty": {
-                    "$ref": "PartyRef.schema.json#PartyRef"
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                 },
                 "roleType": {
-                    "$ref": "RoleTypeRef.schema.json#RoleTypeRef"
+                    "$ref": "../EngagedParty/RoleTypeRef.schema.json#RoleTypeRef"
                 },
                 "account": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountRef.schema.json#AccountRef"
+                        "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
                     }
                 },
                 "paymentMethod": {
@@ -71,13 +71,13 @@
                 "agreement": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementRef.schema.json#AgreementRef"
+                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     }
                 }
             },

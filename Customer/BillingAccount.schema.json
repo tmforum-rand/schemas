@@ -44,31 +44,31 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     }
                 },
                 "taxExemption": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountTaxExemption.schema.json#AccountTaxExemption"
+                        "$ref": "../EngagedParty/AccountTaxExemption.schema.json#AccountTaxExemption"
                     }
                 },
                 "contact": {
                     "type": "array",
                     "items": {
-                        "$ref": "Contact.schema.json#Contact"
+                        "$ref": "../EngagedParty/Contact.schema.json#Contact"
                     }
                 },
                 "accountBalance": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountBalance.schema.json#AccountBalance"
+                        "$ref": "../EngagedParty/AccountBalance.schema.json#AccountBalance"
                     }
                 },
                 "accountRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountRelationship.schema.json#AccountRelationship"
+                        "$ref": "../EngagedParty/AccountRelationship.schema.json#AccountRelationship"
                     }
                 },
                 "paymentStatus": {
@@ -85,7 +85,7 @@
                     }
                 },
                 "financialAccount": {
-                    "$ref": "FinancialAccountRef.schema.json#FinancialAccountRef"
+                    "$ref": "../EngagedParty/FinancialAccountRef.schema.json#FinancialAccountRef"
                 },
                 "defaultPaymentMethod": {
                     "$ref": "../Customer/PaymentMethodRef.schema.json#PaymentMethodRef"
