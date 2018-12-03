@@ -11,9 +11,10 @@
             "properties": {
                 "relationshipType": {
                     "type": "string",
-                    "description": "Describes links with services of the same category (useful for bundled services)"
+                    "description": "The type of relationship (e.g. depends on, enables)"
                 },
                 "service": {
+                    "description": "The service being referred to",
                     "$ref": "ServiceRef.schema.json#ServiceRef"
                 }
             }

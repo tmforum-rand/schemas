@@ -50,7 +50,7 @@
                     "description": "The shopping cart which the recommendation is related to"
                 },
                 "party": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "item": {
                     "type": "array",

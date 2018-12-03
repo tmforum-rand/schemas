@@ -13,22 +13,24 @@
                     "description": "Identifier of the individual line item"
                 },
                 "action": {
-                    "$ref": "OrderActionType.schema.json#/definitions/OrderActionType"
+                    "description": "The action to be carried out on the Service. Can be: add, modify, delete, noChange",
+                    "$ref": "ServiceOrderActionType.schema.json#/definitions/ServiceOrderActionType"
                 }, 
                 "state": {
-                    "$ref": "OrderStateType.schema.json#/definitions/OrderStateType"
-                },
-                "quantity": {
-                    "$ref": "../Common/Quantity.schema.json#/definitions/Quantity"
+                    "description": "State of the order item: described in the state machine diagram. This is the requested state.",
+                    "$ref": "ServiceOrderStateType.schema.json#/definitions/ServiceOrderStateType"
                 },
                 "service": {
+                    "description": "The Service to be acted on by the order item",
                     "$ref": "ServiceRestriction.schema.json#/definitions/ServiceRestriction"
                 }, 
                 "appointment": {
-                    "$ref": "AppointmentRef.schema.json#/definitions/AppointmentRef"
+                    "description": "An appointment that was set up with a related party for this order item",
+                    "$ref": "../Customer/AppointmentRef.schema.json#/definitions/AppointmentRef"
                 },
                 "orderItemRelationship": {
                     "type": "array",
+                    "description": "A list of order items related to this order item",
                     "items": {
                         "$ref": "ServiceOrderItemRelationship.schema.json#/definitions/ServiceOrderItemRelationship"
                     }

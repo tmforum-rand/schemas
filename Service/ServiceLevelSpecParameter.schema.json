@@ -34,6 +34,7 @@
                 },
                 "relatedEntity": {
                     "type": "array",
+                    "description": "A list of entities related to thsi parameter",
                     "items": {
                         "$ref": "../Common/RelatedEntityRef.schema.json#RelatedEntityRef"
                     }

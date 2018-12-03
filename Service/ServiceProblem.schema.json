@@ -10,6 +10,7 @@
             "properties": {
                 "affectedLocation": {
                     "type": "array",
+                    "description": "A list of the locations affected by the problem",
                     "items": {
                         "$ref": "../Common/Place.schema.json#/definitions/Place"
                     }
@@ -24,6 +25,7 @@
                 },
                 "comment": {
                     "type": "array",
+                    "description": "A list of comments or notes made on the problem",
                     "items": {
                         "$ref": "../Common/Note.schema.json#/definitions/Note"
                     }
@@ -44,6 +46,7 @@
                     "description": "A generic list of any type of elements. Used for vendor Extensions or loose element encapsulation from other namespaces"
                 },
                 "firstAlert": {
+                    "description": "Indicates what first alerted the system to the problem. It is not the root cause of the Service Problem. Examples: Threshold crossing alert",
                     "$ref": "FirstAlert.schema.json#/definitions/FirstAlert"
                 },
                 "href": {
@@ -59,6 +62,7 @@
                     "description": "Impact Importance is characterized by an Impact Importance Factor: overall importance of the impact of all the affected services, e.g. 0 (zero impact) to 100 (worst impact). The Impact Importance is a calculated field which is set by the OSS determining the impact."
                 },
                 "impactPatterns": {
+                    "description": "Define the patterns of impact (optional)- e.g. other service characteristics- Used when defining impact through another pattern than the predefined attributes.",
                     "$ref": "ImpactPattern.schema.json#/definitions/ImpactPattern"
                 },
                 "originatingSystem": {
@@ -67,6 +71,7 @@
                 },
                 "parentProblem": {
                     "type": "array",
+                    "description": "The parent problem to which this problem is attached.",
                     "items": {
                         "$ref": "ServiceProblemRef.schema.json#/definitions/ServiceProblemRef"
                     }
@@ -85,20 +90,23 @@
                 },
                 "relatedEvent": {
                     "type": "array",
+                    "description": "List of events associated to this problem",
                     "items": {
                         "$ref": "../Common/EventRef.schema.json#/definitions/EventRef"
                     }
                 },
                 "relatedObject": {
                     "type": "array",
+                    "description": "List of objects associated to this problem",
                     "items": {
                         "$ref": "../Common/RelatedEntityRef.schema.json#/definitions/RelatedEntityRef"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "List of parties or party roles playing a role within the service problem",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
                 "resolutionDate": {
@@ -131,18 +139,21 @@
                 },
                 "trackingRecord": {
                     "type": "array",
+                    "description": "List of tracking records that allow the tracking of modifications on the problem.The tracking records should not be embedded in the problem to allow retrieving the problem without the tracking records",
                     "items": {
                         "$ref": "TrackingRecord.schema.json#/definitions/TrackingRecord"
                     }
                 },
                 "underlyingAlarm": {
                     "type": "array",
+                    "description": "A list of alarms identifying the alarms that are underlying this problem.",
                     "items": {
                         "$ref": "../Resource/ResourceAlarmRef.schema.json#/definitions/ResourceAlarmRef"
                     }
                 },
                 "underlyingProblem": {
                     "type": "array",
+                    "description": "A list of underlying problems. Relevant only if this problem is derived from other problems.",
                     "items": {
                         "$ref": "ServiceProblemRef.schema.json#/definitions/ServiceProblemRef"
                     }

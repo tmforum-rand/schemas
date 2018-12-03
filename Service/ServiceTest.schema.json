@@ -10,6 +10,7 @@
             "properties": {
                 "characteristic": {
                     "type": "array", 
+                    "description": "List of characteristics with values that define the test run",
                     "items": {
                         "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
                     }
@@ -25,7 +26,7 @@
                 }, 
                 "href": {
                     "type": "string", 
-                    "description": "Hyperlink to access the service  test"
+                    "description": "Hyperlink to access the service test"
                 }, 
                 "id": {
                     "type": "string", 
@@ -40,6 +41,7 @@
                     "description": "The name of the service test"
                 }, 
                 "relatedService": {
+                    "description": "The actual service being tested",
                     "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
                 }, 
                 "startDateTime": {
@@ -53,11 +55,13 @@
                 }, 
                 "testMeasure": {
                     "type": "array", 
+                    "description": "The results of the test in terms of the measured metrics",
                     "items": {
                         "$ref": "TestMeasure.schema.json#/definitions/TestMeasure"
                     }
                 }, 
                 "testSpecification": {
+                    "description": "The specification for this test",
                     "$ref": "ServiceTestSpecificationRef.schema.json#/definitions/ServiceTestSpecificationRef"
                 }
             },

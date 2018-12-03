@@ -6,7 +6,7 @@
         "ServiceStateType": {
             "$id": "#ServiceStateType",
             "type": "string",
-            "description": "The life cycle state of the service",
+            "description": "Valid values for the lifecycle state of the service",
             "enum": [
                 "feasibilityChecked",
                 "designed",

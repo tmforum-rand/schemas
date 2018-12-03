@@ -69,7 +69,7 @@
                 "qualification": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Service/QualificationRef.schema.json#QualificationRef"
+                        "$ref": "../Common/QualificationRef.schema.json#QualificationRef"
                     }
                 },
                 "itemTerm": {

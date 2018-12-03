@@ -14,9 +14,10 @@
                 },
                 "valueType": {
                     "type": "string",
-                    "description": "Value of the characteristic"
+                    "description": "Data type of the characteristic"
                 },
                 "value": {
+                    "description": "Actual value of the characteristio",
                     "$ref": "../Common/Value.schema.json#Value"
                 }
             },

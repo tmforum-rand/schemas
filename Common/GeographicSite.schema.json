@@ -34,7 +34,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "calendar": {
@@ -54,10 +54,6 @@
                     "items": {
                         "$ref": "SiteRelationship.schema.json#SiteRelationship"
                     }
-                },
-                "role": {
-                    "type": "string",
-                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
                 }
             },
             "allOf": [

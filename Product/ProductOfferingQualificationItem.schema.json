@@ -36,7 +36,7 @@
                 "qualificationItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Service/QualificationItemRelationship.schema.json#QualificationItemRelationship"
+                        "$ref": "QualificationItemRelationship.schema.json#QualificationItemRelationship"
                     }
                 },
                 "note": {

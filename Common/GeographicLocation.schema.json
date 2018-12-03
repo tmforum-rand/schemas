@@ -35,10 +35,6 @@
                     "items": {
                         "$ref": "GeographicPoint.schema.json#GeographicPoint"
                     }
-                },
-                "role": {
-                    "type": "string",
-                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
                 }
             },
             "allOf": [

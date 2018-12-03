@@ -43,8 +43,9 @@
                 },
                 "category": {
                     "type": "array",
+                    "description": "List of categories for this candidate",
                     "items": {
-                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                        "$ref": "ServiceCategoryRef.schema.json#ServiceCategoryRef"
                     }
                 },
                 "serviceSpecification": {

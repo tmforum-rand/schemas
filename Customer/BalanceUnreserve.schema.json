@@ -33,10 +33,10 @@
                     "$ref": "BalanceReserveRef.schema.json#BalanceReserveRef"
                 },
                 "relatedParty": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "requestor": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "product": {
                     "$ref": "../Product/ProductRef.schema.json#ProductRef"

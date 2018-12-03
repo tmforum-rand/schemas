@@ -1,20 +1,20 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RelatedServiceSpecificationRef.schema.json",
-    "title": "RelatedServiceSpecificationRef",
+    "$id": "ServiceLevelObjectiveRef.schema.json",
+    "title": "ServiceLevelObjectiveRef",
     "definitions": {
-        "RelatedServiceSpecificationRef": {
-            "$id": "#RelatedServiceSpecificationRef",
-            "description": "The related service specification.",
+        "ServiceLevelObjectiveRef": {
+            "$id": "#ServiceLevelObjectiveRef",
+            "description": "A set of Service Level Objectives that are contained in the Service Level Specification.",
             "type": "object",
             "properties": {
                 "href": {
                     "type": "string",
-                    "description": "Hyperlink to access service specification."
+                    "description": "The hyperlink to access a service level object."
                 },
                 "id": {
                     "type": "string",
-                    "description": "The identifier of a service specification."
+                    "description": "The identifier of a service level object."
                 },
                 "@referredType": {
                     "type": "string",

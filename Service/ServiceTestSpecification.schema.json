@@ -26,16 +26,18 @@
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "A valid duration of a thing."
+                    "description": "The period of time for which this specification is valid"
                 },
                 "testMeasureDefinition": {
                     "type": "array",
+                    "description": "A list of definitions for the measurements for the test defined by this specification",
                     "items": {
                         "$ref": "TestMeasureDefinition.schema.json#TestMeasureDefinition"
                     }
                 },
                 "relatedServiceSpecification": {
-                    "$ref": "RelatedServiceSpecificationRef.schema.json#RelatedServiceSpecificationRef"
+                    "$ref": "ServiceSpecificationRef.schema.json#ServiceSpecificationRef",
+                    "description": "The related service specification."
                 }
             },
             "allOf": [

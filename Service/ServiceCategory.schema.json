@@ -51,20 +51,23 @@
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "List of parties or party roles related to this category",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "serviceCandidate": {
                     "type": "array",
+                    "description": "List of service candidates associated with this category",
                     "items": {
                         "$ref": "ServiceCandidateRef.schema.json#ServiceCandidateRef"
                     }
                 },
                 "category": {
                     "type": "array",
+                    "description": "List of child categories in the tree for in this category",
                     "items": {
-                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                        "$ref": "ServiceCategoryRef.schema.json#ServiceCategoryRef"
                     }
                 }
             },

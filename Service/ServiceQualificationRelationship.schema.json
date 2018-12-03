@@ -1,14 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "QualificationRelationship.schema.json",
-    "title": "QualificationRelationship",
+    "$id": "ServiceQualificationRelationship.schema.json",
+    "title": "ServiceQualificationRelationship",
     "definitions": {
-        "QualificationRelationship": {
-            "$id": "#QualificationRelationship",
+        "ServiceQualificationRelationship": {
+            "$id": "#ServiceQualificationRelationship",
             "type": "object",
             "properties": {
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "The id of the target qualification pointed to by this relationship"
                 },
                 "relationshipType": {
                     "type": "string",

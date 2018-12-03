@@ -47,36 +47,42 @@
                 },
                 "resourceSpecification": {
                     "type": "array",
+                    "description" : "A list of resource specification references (ResourceSpecificationRef [*]). The ResourceSpecification is required for a service specification with type ResourceFacingServiceSpecification (RFSS).",
                     "items": {
                         "$ref": "../Resource/ResourceSpecificationRef.schema.json#ResourceSpecificationRef"
                     }
                 },
                 "attachment": {
                     "type": "array",
+                    "description" : "A list of attachments (Attachment [*]). Complements the description of the specification through video, pictures...",
                     "items": {
                         "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
                     }
                 },
                 "serviceSpecCharacteristic": {
                     "type": "array",
+                    "description" : "A list of service spec characteristics (ServiceSpecCharacteristic [*]). This class represents the key features of this service specification.",
                     "items": {
                         "$ref": "ServiceSpecCharacteristic.schema.json#ServiceSpecCharacteristic"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description" : "A list of related party references (RelatedParty [*]). A related party defines party or party role linked to a specific entity.",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "serviceSpecRelationship": {
                     "type": "array",
+                    "description": "A list of service specifications related to this specification, e.g. migration, substitution, dependency or exclusivity relationship",
                     "items": {
-                        "$ref": "ServiceSpecRelationship.schema.json#ServiceSpecificationRelationship"
+                        "$ref": "ServiceSpecRelationship.schema.json#ServiceSpecRelationship"
                     }
                 },
                 "targetServiceSchema": {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                    "description": "A target service schema reference (TargetServiceSchemaRef). The reference object to the schema and type of target service which is described by service specification.",
+                    "$ref": "TargetServiceSchema.schema.json#/definitions/TargetServiceSchema"
                 }
             },
             "allOf": [

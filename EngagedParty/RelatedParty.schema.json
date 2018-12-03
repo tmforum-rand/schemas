@@ -1,10 +1,10 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RelatedPartyRef.schema.json",
-    "title": "RelatedPartyRef",
+    "$id": "RelatedParty.schema.json",
+    "title": "RelatedParty",
     "definitions": {
-        "RelatedPartyRef": {
-            "$id": "#RelatedPartyRef",
+        "RelatedParty": {
+            "$id": "#RelatedParty",
             "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity.",
             "type": "object",
             "properties": {
@@ -24,6 +24,19 @@
                     "type": "string",
                     "description": "Role of the related party."
                 },
+                "@baseType": {
+                    "type": "string", 
+                    "description": "When sub-classing, this defines the super-class"
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships", 
+                    "format": "uri"
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "When sub-classing, this defines the sub-class entity name"
+                }, 
                 "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."

@@ -63,7 +63,7 @@
                     "$ref": "../Product/ProductRef.schema.json#ProductRef"
                 },
                 "relatedParty": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "partyAccount": {
                     "$ref": "../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef"

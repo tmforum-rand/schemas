@@ -6,21 +6,21 @@
         "ServiceOrderItemRelationship": {
             "$id": "#ServiceOrderItemRelationship",
             "type": "object",
-            "description": "Linked order item to the one containing this attribute",
+            "description": "Linked service order item to the one containing this attribute",
             "required": ["id", "relationshipType"],
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier of an order item"
+                    "description": "Unique identifier of a service order item"
                 },
                 "relationshipType": {
                     "type": "string",
-                    "description": "The type of related order item, can be : dependency if the order item needs to be not started until another order item is complete"
+                    "description": "The type of related order item, can be: dependency if the order item needs to be not started until another order item is complete"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json#/definitions/polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
                 }
             ]
         }

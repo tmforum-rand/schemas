@@ -50,7 +50,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
                 "status": {

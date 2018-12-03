@@ -42,7 +42,7 @@
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "A valid duration of a thing"
+                    "description": "The time period for which this definition is valid"
                 },
                 "valueType": {
                     "type": "string",

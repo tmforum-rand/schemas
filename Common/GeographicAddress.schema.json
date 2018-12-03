@@ -72,14 +72,6 @@
                     "items": {
                         "$ref": "GeographicSubAddress.schema.json#GeographicSubAddress"
                     }
-                },
-                "name": {
-                    "type": "string",
-                    "description": "A user-friendly name for the place, such as \"Paris Store\", \"London Store\", \"Main Home\""
-                },
-                "role": {
-                    "type": "string",
-                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
                 }
             },
             "allOf": [

@@ -41,6 +41,7 @@
                     "description": "A value that used to specify when a warning should be used \nthat indicates an objective is danger of not being met. Notice, the data type should be adjusted case by case."
                 },
                 "tolerancePeriod": {
+                    "description": "A value that specifies the allowable time variation of a conformance",
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
                 },
                 "toleranceTarget": {
@@ -52,10 +53,12 @@
                     "description": "A valid duration of a thing."
                 },
                 "serviceLevelSpecParameter": {
+                    "description": "A parameter for this objective",
                     "$ref": "ServiceLevelSpecParameter.schema.json#ServiceLevelSpecParameter"
                 },
                 "serviceLevelSpecConsequence": {
                     "type": "array",
+                    "description": "A list consquences for this objective.",
                     "items": {
                         "$ref": "ServiceLevelSpecConsequence.schema.json#ServiceLevelSpecConsequence"
                     }

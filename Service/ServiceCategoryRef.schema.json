@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "CategoryRef.schema.json",
-    "title": "CategoryRef",
+    "$id": "ServiceCategoryRef.schema.json",
+    "title": "ServiceCategoryRef",
     "definitions": {
-        "CategoryRef": {
-            "$id": "#CategoryRef",
-            "description": "The category for grouping recommendations",
+        "ServiceCategoryRef": {
+            "$id": "#ServiceCategoryRef",
+            "description": "The (service) category resource is used to group service candidates in logical containers. Categories can contain other categories.",
             "type": "object",
             "properties": {
                 "href": {

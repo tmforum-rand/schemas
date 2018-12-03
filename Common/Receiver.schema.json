@@ -33,7 +33,7 @@
                     "description": "Phone number of the receiver, if the communication type is SMS."
                 },
                 "party": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 }
             },
             "allOf": [

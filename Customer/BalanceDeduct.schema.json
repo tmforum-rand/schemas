@@ -39,7 +39,7 @@
                     "description": "A preconfigured value that describes a deduct type which determines the prepay balance bucket in which the deduct is done"
                 },
                 "relatedParty": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "product": {
                     "$ref": "../Product/ProductRef.schema.json#ProductRef"
@@ -48,7 +48,7 @@
                     "$ref": "BalanceReserveRef.schema.json#BalanceReserveRef"
                 },
                 "requestor": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "partyAccount": {
                     "$ref": "../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef"

@@ -5,7 +5,7 @@
     "definitions": {
         "TestMeasure": {
             "$id": "#TestMeasure",
-            "description": "A TestMeasureDefinition specifies a measure of a specific aspect of a product, service, or resource test, such as lost packets or connectivity status",
+            "description": "A TestMeasure specifies a measure of a specific aspect of a product, service, or resource test, such as lost packets or connectivity status",
             "type": "object",
             "properties": {
                 "accuracy": {
@@ -36,6 +36,7 @@
                 }, 
                 "ruleViolation": {
                     "type": "array", 
+                    "description": "A list of rules that were violated in this test measure",
                     "items": {
                         "$ref": "MeasureThresholdRuleViolation.schema.json#/definitions/MeasureThresholdRuleViolation"
                     }

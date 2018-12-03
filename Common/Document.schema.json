@@ -57,7 +57,7 @@
                     "type": "array",
                     "description": "Any Parties related to this Document (eg: author)",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "documentSpecification": {

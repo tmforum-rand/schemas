@@ -38,6 +38,7 @@
                     "description": "ID created on repository side"
                 }, 
                 "note": {
+                    "description": "Extra-information about the order; e.g. useful to add extra delivery information that could be useful for a human process",
                     "$ref": "../Common/Note.schema.json#/definitions/Note"
                 }, 
                 "notificationContact": {
@@ -50,14 +51,16 @@
                 }, 
                 "orderItem": {
                     "type": "array", 
+                    "description": "A list of service order items to be processed by this order",
                     "items": {
                         "$ref": "ServiceOrderItem.schema.json#/definitions/ServiceOrderItem"
                     }
                 }, 
                 "orderRelationship": {
                     "type": "array", 
+                    "description": "A list of service orders related to this order (e.g. prerequisite, dependent on)",
                     "items": {
-                        "$ref": "OrderRelationship.schema.json#/definitions/OrderRelationship"
+                        "$ref": "ServiceOrderRelationship.schema.json#/definitions/ServiceOrderRelationship"
                     }
                 }, 
                 "priority": {
@@ -66,8 +69,9 @@
                 }, 
                 "relatedParty": {
                     "type": "array", 
+                    "description": "A list of parties which are involved in this order and the role they are playing.",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 }, 
                 "requestedCompletionDate": {
@@ -86,7 +90,8 @@
                     "description": "Date when the order was started for processing"
                 }, 
                 "state": {
-                    "$ref": "OrderStateType.schema.json#/definitions/OrderStateType"
+                    "description": "State of the order: described in the state-machine diagram",
+                    "$ref": "ServiceOrderStateType.schema.json#/definitions/ServiceOrderStateType"
                 }
             },
             "allOf": [

@@ -82,7 +82,7 @@
                     "type": "array",
                     "description": "Any Party/Parties associated with this trouble ticket",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 }
             },

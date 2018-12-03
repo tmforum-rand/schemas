@@ -30,8 +30,9 @@
                 },
                 "relatedServiceLevelObjective": {
                     "type": "array",
+                    "description": "A list of objectives related to this service level specification",
                     "items": {
-                        "$ref": "RelatedServiceLevelObjectiveRef.schema.json#RelatedServiceLevelObjectiveRef"
+                        "$ref": "ServiceLevelObjectiveRef.schema.json#ServiceLevelObjectiveRef"
                     }
                 }
             },

@@ -52,7 +52,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "template": {

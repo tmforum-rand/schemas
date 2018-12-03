@@ -1,7 +1,7 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "Note.schema.json",
-    "title": "Note",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Note.schema.json", 
+    "title": "Note", 
     "definitions": {
         "Note": {
             "$id": "#Note",
@@ -9,19 +9,23 @@
             "type": "object",
             "properties": {
                 "author": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Author of the note"
-                },
+                }, 
+                "system": {
+                    "type": "string", 
+                    "description": "Describes the system from which the action related to this note was done"
+                }, 
                 "date": {
-                    "type": "string",
-                    "format": "date-time",
+                    "type": "string", 
+                    "format": "date-time", 
                     "description": "Date of the note"
-                },
+                }, 
                 "text": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Text of the note"
                 }
-            },
+            }, 
             "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"

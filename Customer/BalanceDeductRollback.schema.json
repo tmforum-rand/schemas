@@ -30,7 +30,7 @@
                     "description": "Status of the rollback deduction operation"
                 },
                 "relatedParty": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "product": {
                     "$ref": "../Product/ProductRef.schema.json#ProductRef"
@@ -42,7 +42,7 @@
                     "$ref": "BalanceDeductRef.schema.json#BalanceDeductRef"
                 },
                 "requestor": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 }
             },
             "allOf": [

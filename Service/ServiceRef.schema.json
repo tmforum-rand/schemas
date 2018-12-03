@@ -5,7 +5,7 @@
     "definitions": {
         "ServiceRef": {
             "$id": "#ServiceRef",
-            "description": "Service reference. Useful to link services of the same category",
+            "description": "Service reference, for when Service is used by other entities",
             "type": "object",
             "properties": {
                 "href": {

@@ -25,7 +25,8 @@
                     "description": "Service specification version"
                 },
                 "targetServiceSchema": {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                    "description": "A target service schema reference (TargetServiceSchemaRef). The reference object to the schema and type of target service which is described by service specification.",
+                    "$ref": "TargetServiceSchema.schema.json#/definitions/TargetServiceSchema"
                 },
                 "@referredType": {
                     "type": "string",

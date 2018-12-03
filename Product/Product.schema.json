@@ -58,7 +58,7 @@
                 "realizingService": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Service/RealizingServiceRef.schema.json#RealizingServiceRef"
+                        "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
                     }
                 },
                 "billingAccount": {
@@ -97,7 +97,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "productPrice": {
