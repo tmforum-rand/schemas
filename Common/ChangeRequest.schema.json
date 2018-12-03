@@ -161,7 +161,7 @@
                 "category": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/CategoryRef.schema.json#CategoryRef"
+                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
                     }
                 },
                 "note": {

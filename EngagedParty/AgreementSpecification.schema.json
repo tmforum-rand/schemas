@@ -46,7 +46,7 @@
                     "description": "Agreement specification version"
                 },
                 "serviceCategory": {
-                    "$ref": "../Common/CategoryRef.schema.json#CategoryRef"
+                    "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
                 },
                 "specCharacteristic": {
                     "type": "array",
