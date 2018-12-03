@@ -7,7 +7,24 @@
             "$id": "#GeographicPlace",
             "description": "Resource base is an abstract resource that does not support any uniform creation or operation. The following is only used for documentation purposes. The intent is to describe the common set of attributes shared by all concrete resources (e.g. TPE, EQUIPMENT) in the inventory.",
             "type": "object",
-            "properties": {},
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Unique reference of the place"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the place"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A user-friendly name for the place, such as \"Paris Store\", \"London Store\", \"Main Home\""
+                },
+                "role": {
+                    "type": "string",
+                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
+                }
+            },
             "allOf": [
                 {
                     "$ref": "CommonComponents.schema.json#polymorphicPattern"

@@ -54,6 +54,10 @@
                     "items": {
                         "$ref": "SiteRelationship.schema.json#SiteRelationship"
                     }
+                },
+                "role": {
+                    "type": "string",
+                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
                 }
             },
             "allOf": [
