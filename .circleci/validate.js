@@ -83,6 +83,9 @@ walk(DIR, (err,files) => {
             });
         }
 
+	/*
+	 * skip listing of schemas
+	 *
         const results = res.results.filter(x => x.issues.length===0);
         if(results.length>0) {
             console.log();
@@ -90,7 +93,10 @@ walk(DIR, (err,files) => {
             results.forEach(r => console.log('... ' + r.file));
         }
         console.log();
-
+	* 
+	* end listing of schemas
+	*/
+		
         process.exit(res.errors.length);
 
     })
