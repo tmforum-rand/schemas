@@ -16,3 +16,4 @@ This repository contains the collection of JSON-Schema files that define the ent
 | [Common](https://github.com/tmforum-rand/schemas/tree/master/Common) | The common domain is of different nature from the above defined ones as the processes, information data and applications described there do not necessarily have relationships. |
 
 All schemas conform to JSON-Schema draft-07, and to [the design guidelines described here](https://github.com/tmforum-rand/schemas/blob/master/dev/README.md). The schemas are used in the construction of the TM Forum Open-API catalog.
+
