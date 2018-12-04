@@ -54,6 +54,10 @@ jobs:
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/schemas.git master
       
+      - run:
+          name: "Trigger swagger build"
+          command: "curl -u ${CIRCLE_API_KEY}: -d build_parameters[CIRCLE_JOB]=start_workflows https://circleci.com/api/v1.1/project/github/tmforum-rand/swagger-from-yaml-testing/tree/master"
+
       - store_artifacts:
           path: /tmp/results.txt
           
