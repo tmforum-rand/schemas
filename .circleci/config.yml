@@ -56,7 +56,7 @@ jobs:
       
       - run:
           name: "Trigger swagger build"
-          command: "curl -u ${CIRCLE_API_KEY}: -d build_parameters[CIRCLE_JOB]=build https://circleci.com/api/v1.1/project/github/tmforum-rand/swagger-from-yaml-testing/tree/master"
+          command: "curl -X POST -u ${CIRCLE_API_KEY}: -d build_parameters[CIRCLE_JOB]=build https://circleci.com/api/v1.1/project/github/tmforum-rand/swagger-from-yaml-testing/tree/master"
 
       - store_artifacts:
           path: /tmp/results.txt
