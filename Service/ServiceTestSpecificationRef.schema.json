@@ -20,7 +20,12 @@
                     "type": "string",
                     "description": "Identifier of a service test specification."
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

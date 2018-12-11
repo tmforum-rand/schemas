@@ -20,7 +20,12 @@
                     "type": "string",
                     "description": "Bucket name"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

@@ -23,7 +23,12 @@
                     "type": "string",
                     "description": "Unique identifier of the Alarm"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }
