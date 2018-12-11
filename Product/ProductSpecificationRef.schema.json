@@ -27,9 +27,6 @@
                 "targetResourceSchema": {
                     "$ref": "../Service/TargetServiceSchema.schema.json#TargetServiceSchema"
                 },
-                "describing": {
-                    "$ref": "ProductSpecificationSchemaRef.schema.json#ProductSpecificationSchemaRef"
-                },
                 "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
