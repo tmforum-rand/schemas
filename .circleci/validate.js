@@ -181,57 +181,61 @@ function checkSchemaIssues(schema) {
                 return;
             }
 
-            // from here handling of "properties" topics
+	});
+	    
+	//
+	// restructured to handle properties outside of allOf - in support of current tooling
+	//
+	const item = definitions[title];
+		      
+	// from here handling of "properties" topics
 
-            const keys = Object.keys(item.properties);
+	const keys = Object.keys(item.properties);
 
-            // check for empty properties
-            if(keys.length===0) {
-                res.push(title + ' :: no properties defined')
-                return;
-            }
+	// check for empty properties
+	if(keys.length===0) {
+	    res.push(title + ' :: no properties defined')
+	    return;
+	}
 
-            // check if possible Ref but not named as Ref?
-            const ignore = ['id', 'href', 'name'];
-            const realProps = keys.filter(k => !ignore.includes(k));
-            if(realProps.length<=1 && !realProps.includes('value') && !title.endsWith('Ref')) {
-                res.push(title + ' :: should be renamed as ' + title + 'Ref if this is a reference entity');
-            }
+	// check if possible Ref but not named as Ref?
+	const ignore = ['id', 'href', 'name'];
+	const realProps = keys.filter(k => !ignore.includes(k));
+	if(realProps.length<=1 && !realProps.includes('value') && !title.endsWith('Ref')) {
+	    res.push(title + ' :: should be renamed as ' + title + 'Ref if this is a reference entity');
+	}
 
-            keys.forEach(p => {
+	keys.forEach(p => {
+	    // some properties excluded from analysis
+	    if(ignore.includes(p)) return;
 
-                // some properties excluded from analysis
-                if(ignore.includes(p)) return;
+	    const prop = item.properties[p];
 
-                const prop = item.properties[p];
+	    // check for expected properties
+	    const expecting = ['description']; // ['example', 'description'];
+	    expecting.forEach(exp => {
+	        if(prop[exp] === undefined) {
+		    res.push(p + ' :: no ' + exp + ' value')
+	        }
+	    });
 
-                // check for expected properties
-                const expecting = ['description']; // ['example', 'description'];
-                expecting.forEach(exp => {
-                    if(prop[exp] === undefined) {
-                        res.push(p + ' :: no ' + exp + ' value')
-                    }
-                });
+	    // issue in case if 'type' and similar labels that should not be used    
+	    const avoid = ['type', 'baseType', 'schemaLocation'];
+	    avoid.forEach(item => {
+	        if(p === item) {
+		    res.push(p + ' :: rename to avoid conflict with @' + item)
+	        }
+	    });
 
-                // issue in case if 'type' and similar labels that should not be used    
-                const avoid = ['type', 'baseType', 'schemaLocation'];
-                avoid.forEach(item => {
-                    if(p === item) {
-                        res.push(p + ' :: rename to avoid conflict with @' + item)
-                    }
-                });
-
-                // issue in case if properties that should have format
-                if(prop.format === undefined) {   
-                    const formatCandidates = ['DATE', 'TIME', 'URI', 'URL'];
-                    formatCandidates.forEach(item => {
-                        if(p.toUpperCase().includes(item)) {
-                            res.push(p + ' :: recommend to add format');
-                        }
-                    });
-                };
-
-            })
+	    // issue in case if properties that should have format
+  	    if(prop.format === undefined) {   
+	        const formatCandidates = ['DATE', 'TIME', 'URI', 'URL'];
+		formatCandidates.forEach(item => {
+		   if(p.toUpperCase().includes(item)) {
+		       res.push(p + ' :: recommend to add format');
+		   }
+	        });
+	    }
         });
         
         if(!hasPolyPattern && allOf.length>0) {
