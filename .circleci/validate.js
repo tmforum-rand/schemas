@@ -177,16 +177,15 @@ function checkSchemaIssues(schema) {
             // polymorphicPattern?
             if(item['$ref'] && item['$ref'].includes('polymorphicPattern')) hasPolyPattern=true;
 
-            if(item.properties === undefined) {
-                return;
-            }
-
 	    });
-	    
+
         //
         // restructured to handle properties outside of allOf - in support of current tooling
         //
         const item = definitions[title];
+        if(item.properties === undefined) {
+            return res;
+        }
                 
         // from here handling of "properties" topics
 
@@ -195,7 +194,7 @@ function checkSchemaIssues(schema) {
         // check for empty properties
         if(keys===undefined || keys.length===0) {
             res.push(title + ' :: no properties defined')
-            return;
+            return res;
         }
 
         // check if possible Ref but not named as Ref?
@@ -215,7 +214,7 @@ function checkSchemaIssues(schema) {
             const expecting = ['description']; // ['example', 'description'];
             expecting.forEach(exp => {
                 if(prop[exp] === undefined) {
-                res.push(p + ' :: no ' + exp + ' value')
+                    res.push(p + ' :: no ' + exp + ' value')
                 }
             });
 
@@ -223,19 +222,20 @@ function checkSchemaIssues(schema) {
             const avoid = ['type', 'baseType', 'schemaLocation'];
             avoid.forEach(item => {
                 if(p === item) {
-                res.push(p + ' :: rename to avoid conflict with @' + item)
+                    res.push(p + ' :: rename to avoid conflict with @' + item)
                 }
             });
 
             // issue in case if properties that should have format
             if(prop.format === undefined) {   
                 const formatCandidates = ['DATE', 'TIME', 'URI', 'URL'];
-            formatCandidates.forEach(item => {
-            if(p.toUpperCase().includes(item)) {
-                res.push(p + ' :: recommend to add format');
-            }
+                formatCandidates.forEach(item => {
+                    if(p.toUpperCase().includes(item)) {
+                        res.push(p + ' :: recommend to add format');
+                    }  
                 });
             }
+
         });
         
         if(!hasPolyPattern && allOf.length>0) {
