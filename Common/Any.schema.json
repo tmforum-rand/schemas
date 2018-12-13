@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Any.schema.json",
+    "title": "Any",
+    "definitions": {
+        "Any": {
+            "$id": "#Any",
+            "description": "Describes a given characteristic of an object or entity through a name/value pair",
+            "type": "object"
+        }
+    }
+}

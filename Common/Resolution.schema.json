@@ -5,16 +5,16 @@
     "definitions": {
         "Resolution": {
             "$id": "#Resolution",
-            "description": "The way one or more change request has been implementation through a direct remedy or task.",
+            "description": "The way one or more change request has been implementation through a direct remedy or task",
             "type": "object",
             "properties": {
                 "code": {
                     "type": "string",
-                    "description": "The resolution's code, it can be configured as a multiple level \nhierarchy."
+                    "description": "The resolutions code, it can be configured as a multiple level hierarchy"
                 },
                 "description": {
                     "type": "string",
-                    "description": "The description of the resolution."
+                    "description": "The description of the resolution"
                 },
                 "name": {
                     "type": "string",

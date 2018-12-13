@@ -5,7 +5,7 @@
     "definitions": {
         "AppliedBillingRate": {
             "$id": "#AppliedBillingRate",
-            "description": "An applied billing rate presented on a bill. It is created before or during the billing process.",
+            "description": "An applied billing rate presented on a bill. It is created before or during the billing process",
             "type": "object",
             "properties": {
                 "date": {

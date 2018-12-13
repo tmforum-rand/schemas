@@ -65,11 +65,11 @@
                 }, 
                 "priority": {
                     "type": "string", 
-                    "description": "A way that can be used by consumers to prioritize orders in Service Order Management system (from 0 to 4 : 0 is the highest priority, and 4 the lowest)"
+                    "description": "Can be used by consumers to prioritize orders in a Service Order Management system"
                 }, 
                 "relatedParty": {
                     "type": "array", 
-                    "description": "A list of parties which are involved in this order and the role they are playing.",
+                    "description": "A list of parties which are involved in this order and the role they are playing",
                     "items": {
                         "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
                     }

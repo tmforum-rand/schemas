@@ -16,7 +16,7 @@
                     "type": "string",
                     "description": "The condition of the account balance, such as due, paid, in arrears."
                 },
-                "type": {
+                "balanceType": {
                     "type": "string",
                     "description": "Type of the balance : deposit balance, disputed balance, loyalty balance, receivable balance..."
                 },

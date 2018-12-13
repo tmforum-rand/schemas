@@ -5,7 +5,7 @@
     "definitions": {
         "IndividualIdentification": {
             "$id": "#IndividualIdentification",
-            "description": "Represents our registration of information used as proof of identity by an individual (passport, national identity card, driver's license, social security number, birth certificate)",
+            "description": "Represents our registration of information used as proof of identity by an individual (passport, national identity card, drivers license, social security number, birth certificate)",
             "type": "object",
             "properties": {
                 "identificationId": {
@@ -14,7 +14,7 @@
                 },
                 "issuingAuthority": {
                     "type": "string",
-                    "description": "Authority which has issued the identifier (social security, town hall...)"
+                    "description": "Authority which has issued the identifier, such as: social security, town hall"
                 },
                 "issuingDate": {
                     "type": "string",
@@ -23,7 +23,7 @@
                 },
                 "identificationType": {
                     "type": "string",
-                    "description": "Identification type (passport, national identity card, driver's license, social security number, birth certificate)"
+                    "description": "Identification type (passport, national identity card, drivers license, social security number, birth certificate)"
                 }
             },
             "allOf": [

@@ -25,7 +25,7 @@
                     "type": "string" 
                 }, 
                 "state": {
-                    "description": "The life cycle state of the service:\n\n feasibilityChecked\n designed\n reserved\n active\n inactive\n terminated  \n",
+                    "description": "The life cycle state of the service, such as: [feasibilityChecked], [designed]",
                     "$ref": "ServiceStateType.schema.json#/definitions/ServiceStateType"
                 },
                 "category": {
@@ -52,28 +52,28 @@
                 },
     			"supportingService": {
                     "type": "array", 
-                    "description" : "A list of supporting services (SupportingService [*]). A collection of services that support this service (bundling, link CFS to RFS).",
+                    "description" : "A list of supporting services (SupportingService [*]). A collection of services that support this service (bundling, link CFS to RFS)",
                     "items": {
                         "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
                     }
                 }, 		
                 "supportingResource": {
                     "type": "array", 
-                    "description" : "A list of supporting resources (SupportingResource [*]).Note: only Service of type RFS can be associated with Resources.",
+                    "description" : "A list of supporting resources (SupportingResource [*]).Note: only Service of type RFS can be associated with Resources",
                     "items": {
                         "$ref": "../Resource/ResourceRef.schema.json#/definitions/ResourceRef"
                     }
                 }, 
                 "relatedParty": {
                     "type": "array", 
-                    "description" : "A list of related party references (RelatedParty [1..*]). A related party defines party or party role linked to a specific entity.",
+                    "description" : "A list of related party references (RelatedParty [*]). A related party defines party or party role linked to a specific entity",
                     "items": {
                         "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 }, 
                 "place": {
                     "type": "array",
-                    "description" : "A list of places (Place [*]). Used to define a place useful for the service (for example a delivery geographical place).",
+                    "description" : "A list of places (Place [*]). Used to define a place useful for the service (for example a delivery geographical place)",
                     "items": {
                         "$ref": "../Common/Place.schema.json#/definitions/Place"
                     }

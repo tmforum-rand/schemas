@@ -10,20 +10,20 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "description": "the value of the logical resource. E.g '0746712345' for  MSISDN's"
+                    "description": "The value of the logical resource, such as: 0044746712345 for an MSISDN"
                 },
                 "category": {
                     "type": "string",
-                    "description": "Category of the concrete resource. e.g Gold, Silver for MSISDN concrete resource"
+                    "description": "Category of the concrete resource, such as: Gold, Silver for MSISDN concrete resource"
                 },
                 "description": {
                     "type": "string",
-                    "description": "free-text description of the resource"
+                    "description": "Free-text description of the resource"
                 },
                 "endDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "A date time( DateTime). The date till the resource is effective"
+                    "description": "The date till the resource is effective"
                 },
                 "href": {
                     "type": "string",
@@ -31,11 +31,11 @@
                 },
                 "id": {
                     "type": "string",
-                    "description": "Identifier of an instance of the resource. Required to be unique within the resource type.  Used in URIs as the identifier for specific instances of a type."
+                    "description": "Identifier of an instance of the resource. Required to be unique within the resource type.  Used in URIs as the identifier for specific instances of a type"
                 },
                 "lifecycleState": {
                     "type": "string",
-                    "description": "The life cycle state of the resource."
+                    "description": "The life cycle state of the resource"
                 },
                 "name": {
                     "type": "string",
@@ -48,7 +48,7 @@
                 },
                 "version": {
                     "type": "string",
-                    "description": "A field that identifies the specific version of an instance of a resource."
+                    "description": "A field that identifies the specific version of an instance of a resource"
                 },
                 "resourceRelationship": {
                     "type": "array",

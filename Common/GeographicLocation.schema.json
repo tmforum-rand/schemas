@@ -13,7 +13,7 @@
                 },
                 "geometryType": {
                     "type": "string",
-                    "description": "Type allows to describe Geolocation form: i could be a point, a line, a polygon, a cylinder, etc...."
+                    "description": "Type allows to describe the GeoLocation form: it could be a point, a line, a polygon, a cylinder, etc"
                 },
                 "href": {
                     "type": "string",
@@ -38,7 +38,7 @@
                 },
                 "role": {
                     "type": "string",
-                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
+                    "description": "Role of the place, such as: [home delivery], [shop retrieval]"
                 }
             },
             "allOf": [

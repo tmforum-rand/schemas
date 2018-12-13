@@ -19,7 +19,7 @@
                 },
                 "creditScore": {
                     "type": "integer",
-                    "description": "A measure of a person's or an organization's creditworthiness calculated on the basis of a combination of factors such as their income and credit history."
+                    "description": "A measure of a person or organizations creditworthiness calculated on the basis of a combination of factors such as their income and credit history"
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",

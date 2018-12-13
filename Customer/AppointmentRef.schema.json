@@ -5,7 +5,7 @@
     "definitions": {
         "AppointmentRef": {
             "$id": "#AppointmentRef",
-            "description": "Refers an appointment for this quote (Customer presentation or internal meeting for example)",
+            "description": "Refers an appointment, such as a Customer presentation or internal meeting or site visit",
             "type": "object",
             "properties": {
                 "description": {
@@ -22,7 +22,7 @@
                 },
                 "@referredType": {
                     "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
+                    "description": "The actual type of the target instance when needed for disambiguation"
                 }
             }
         }

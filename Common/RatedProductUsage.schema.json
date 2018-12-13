@@ -5,7 +5,7 @@
     "definitions": {
         "RatedProductUsage": {
             "$id": "#RatedProductUsage",
-            "description": "An occurrence of employing a product for its intended purpose with all rating details.",
+            "description": "An occurrence of employing a product for its intended purpose with all rating details",
             "type": "object",
             "properties": {
                 "bucketValueConvertedInAmount": {
@@ -59,7 +59,7 @@
                 },
                 "usageRatingTag": {
                     "type": "string",
-                    "description": "Tag value : 'usage' : the usage is always rated outside a usage bundle\n'included usage' : the usage is rated inside a usage bundle\n'non included usage' : the usage bundle is exhausted. The usage is rated outside the usage bundle"
+                    "description": "Tag value: [usage]: the usage is always rated outside a usage bundle\n[included usage]: the usage is rated inside a usage bundle\n[non included usage]: the usage bundle is exhausted. The usage is rated outside the usage bundle"
                 }
             },
             "allOf": [

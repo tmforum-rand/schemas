@@ -18,11 +18,11 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "A user-friendly name for the place, such as \"Paris Store\", \"London Store\", \"Main Home\""
+                    "description": "A user-friendly name for the place, such as [Paris Store], [London Store], [Main Home]"
                 },
                 "role": {
                     "type": "string",
-                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
+                    "description": "Role of the place, such as: [home delivery], [shop retrieval])"
                 }
             },
             "allOf": [

@@ -5,7 +5,7 @@
     "definitions": {
         "Channel": {
             "$id": "#Channel",
-            "description": "Channel reference. The channel defines the channel for selling product offerings.",
+            "description": "Channel reference. The channel defines the channel for selling product offerings",
             "type": "object",
             "properties": {
                 "href": {
@@ -22,7 +22,7 @@
                 },
                 "role": {
                     "type": "string",
-                    "description": "Role of the channel - could be 'initChannel', 'submitChannel' for example."
+                    "description": "Role of the channel, such as: [initChannel], [submitChannel]"
                 }
             },
             "allOf": [

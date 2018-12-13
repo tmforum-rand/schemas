@@ -9,7 +9,7 @@
             "properties": {
                 "code": {
                     "type": "string",
-                    "description": "A code that may be used for some addressing schemes e.g. [ANSI T1.253-1999]"
+                    "description": "A code that may be used for some addressing schemes eg: [ANSI T1.253-1999]"
                 },
                 "description": {
                     "type": "string",
@@ -57,7 +57,7 @@
                 },
                 "role": {
                     "type": "string",
-                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
+                    "description": "Role of the place, such as: [home delivery], [shop retrieval])"
                 }
             },
             "allOf": [
