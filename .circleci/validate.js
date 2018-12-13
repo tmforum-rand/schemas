@@ -38,7 +38,8 @@ walk(DIR, (err,files) => {
     const promises = files
                     .filter(file => file.endsWith('.json') &&
                                     !file.includes('/.circleci/') && !file.includes('/dev/') &&
-                                    !file.includes('/package') && !file.includes('/node_modules/'))
+                                    !file.includes('/package') && !file.includes('/node_modules/') &&
+			    	    !file.includes('Any.schema.json'))
                     .map(file => validateSchema(file));
 
     executeAllPromises(promises)
