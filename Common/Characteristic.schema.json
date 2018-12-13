@@ -17,7 +17,7 @@
                     "description": "Data type of the value of the characteristic"
                 },
                 "value": { 
-                    "$ref": "Any.schema.json#Any",
+                    "$ref": "Any.schema.json#/definitions/Any",
                     "description": "The value of the characteristic"
                 }
             },
