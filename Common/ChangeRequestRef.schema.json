@@ -20,7 +20,12 @@
                     "type": "string",
                     "description": "The identifier of the change request"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

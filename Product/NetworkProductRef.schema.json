@@ -28,7 +28,12 @@
                     "type": "string",
                     "description": "Public number associated to the product (msisdn number for mobile line for example)"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

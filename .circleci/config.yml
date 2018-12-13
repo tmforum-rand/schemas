@@ -1,18 +1,14 @@
 # Javascript Node CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
-# 
+#
+#
 version: 2
 jobs:
   build:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
 
@@ -54,6 +50,10 @@ jobs:
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/schemas.git master
       
+      - run:
+          name: "Trigger swagger build"
+          command: "curl -X POST -u ${CIRCLE_API_KEY}: -d build_parameters[CIRCLE_JOB]=build https://circleci.com/api/v1.1/project/github/tmforum-rand/swagger-from-yaml-testing/tree/master"
+
       - store_artifacts:
           path: /tmp/results.txt
           

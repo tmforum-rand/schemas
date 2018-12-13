@@ -29,7 +29,12 @@
                     "type": "string",
                     "description": "Usage consumption report name"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

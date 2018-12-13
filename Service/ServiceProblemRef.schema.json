@@ -23,7 +23,12 @@
                     "type": "string",
                     "description": "Unique identifier of the Problem"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
         }
     }
 }

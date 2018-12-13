@@ -94,6 +94,10 @@
                     "items": {
                         "$ref": "BundledProductSpecification.schema.json#BundledProductSpecification"
                     }
+                },
+                "targetProductSchema": {
+                    "description": "A target product schema reference. The reference object to the schema and type of target product which is described by product specification.",
+                    "$ref": "TargetProductSchema.schema.json#/definitions/TargetProductSchema"
                 }
             },
             "allOf": [
