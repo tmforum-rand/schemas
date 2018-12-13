@@ -12,7 +12,8 @@
                     "description": "The type of object"
                 },
                 "uri": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uri"
                 }
             },
             "allOf": [

@@ -4,9 +4,6 @@
     "title": "Any",
     "definitions": {
         "Any": {
-            "$id": "#Any",
-            "description": "Describes a given characteristic of an object or entity through a name/value pair",
-            "type": "object"
         }
     }
 }

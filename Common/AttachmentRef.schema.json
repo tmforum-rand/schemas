@@ -5,7 +5,7 @@
     "definitions": {
         "AttachmentRef": {
             "$id": "#AttachmentRef",
-            "description": "Attachement reference. An attachment complements the description of an element (for instance a product) through video, pictures...",
+            "description": "Attachment reference. An attachment complements the description of an element (for instance a product) through video, pictures",
             "type": "object",
             "properties": {
                 "description": {
@@ -14,13 +14,17 @@
                 },
                 "href": {
                     "type": "string",
-                    "description": "URL serving as reference for the attachment"
+                    "description": "URL serving as reference for the attachment resource",
+                    "format": "uri"
                 },
                 "id": {
+                    "description": "Unique-Identifier for this attachment",
                     "type": "string"
                 },
                 "url": {
-                    "type": "string"
+                    "description": "Link to the attachment media/content",
+                    "type": "string",
+                    "format": "uri"
                 },
                 "@referredType": {
                     "type": "string",

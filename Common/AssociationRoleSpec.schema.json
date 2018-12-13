@@ -11,7 +11,7 @@
                 "aggregation": {
                     "type": "string"
                 },
-                "defaulQuantity": {
+                "defaultQuantity": {
                     "type": "integer"
                 },
                 "entityType": {

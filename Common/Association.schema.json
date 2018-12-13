@@ -42,12 +42,15 @@
                     "description": "Version of this REST resource"
                 },
                 "associationSpec": {
-                    "$ref": "AssociationSpecRef.schema.json#AssociationSpecRef"
+                    "$ref": "AssociationSpecRef.schema.json#AssociationSpecRef",
+                    "description": "The specification of this association"
                 },
                 "associationRole": {
-                    "$ref": "AssociationRole.schema.json#AssociationRole"
+                    "$ref": "AssociationRole.schema.json#AssociationRole",
+                    "description": "The role of this association"
                 },
                 "constraint": {
+                    "description": "Any constraints in this association",
                     "type": "array",
                     "items": {
                         "$ref": "ConstraintRef.schema.json#ConstraintRef"

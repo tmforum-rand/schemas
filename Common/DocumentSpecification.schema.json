@@ -14,7 +14,7 @@
                 },
                 "id": {
                     "type": "string",
-                    "description": "Indentifier of the DocumentSpecification"
+                    "description": "Identifier of the DocumentSpecification"
                 },
                 "name": {
                     "type": "string",
@@ -22,6 +22,7 @@
                 },
                 "URL": {
                     "type": "string",
+                    "format": "uri",
                     "description": "URL of the Document Specification"
                 },
                 "version": {

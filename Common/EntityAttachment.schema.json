@@ -30,6 +30,7 @@
                 },
                 "uri": {
                     "type": "string",
+                    "format": "uri",
                     "description": "Uniform Resource Identifier (URI) of the attachment"
                 },
                 "validFor": {

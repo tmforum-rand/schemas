@@ -48,6 +48,7 @@
                 },
                 "url": {
                     "type": "string",
+                    "format": "uri",
                     "description": "URL of the file containing the data to be exported"
                 }
             },

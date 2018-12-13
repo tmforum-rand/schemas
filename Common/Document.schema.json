@@ -19,6 +19,7 @@
                 },
                 "href": {
                     "type": "string",
+                    "format": "uri",
                     "description": "The URI for the object itself"
                 },
                 "id": {
@@ -61,6 +62,7 @@
                     }
                 },
                 "documentSpecification": {
+                    "description": "The specification or this Document",
                     "$ref": "DocumentSpecification.schema.json#DocumentSpecification"
                 },
                 "binaryAttachment": {

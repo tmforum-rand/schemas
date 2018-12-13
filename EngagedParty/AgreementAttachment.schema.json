@@ -22,6 +22,7 @@
                 },
                 "url": {
                     "type": "string",
+                    "format": "uri",
                     "description": "Uniform Resource Locator, is a web page address (a subset of URI)"
                 }
             },
