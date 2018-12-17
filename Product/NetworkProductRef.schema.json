@@ -10,19 +10,19 @@
             "properties": {
                 "@referredType": {
                     "type": "string",
-                    "description": ""
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity"
                 },
                 "href": {
                     "type": "string",
-                    "description": ""
+                    "description": "Reference to the network product"
                 },
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier of the product"
+                    "description": "Unique identifier of the network product"
                 },
                 "name": {
                     "type": "string",
-                    "description": ""
+                    "description": "Network product name"
                 },
                 "publicIdentifier": {
                     "type": "string",

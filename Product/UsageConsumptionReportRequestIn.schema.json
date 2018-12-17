@@ -6,25 +6,29 @@
         "UsageConsumptionReportRequestIn": {
             "$id": "#UsageConsumptionReportRequestIn",
             "type": "object",
-            "description": "",
+            "description": "An UsageConsumptionReportRequest allows to manage the calculation request of an usage consumption report", 
             "properties": {
                 "bucket": {
                     "type": "array",
+                    "description": "Reference of the buckets for which the usage consumption report is requested",                                      
                     "items": {
-                        "$ref": "UsageVolumeProductRef.schema.json#/definitions/UsageVolumeProductRef"
+                        "$ref": "UsageVolumeProductRef.schema.json#UsageVolumeProductRef"
                     }
                 },
                 "product": {
-                    "$ref": "NetworkProductRef.schema.json#/definitions/NetworkProductRef"
+                    "$ref": "NetworkProductRef.schema.json#/definitions/NetworkProductRef",
+                    "description": "Network product reference for which the usage consumption report is requested"                                      
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "Reference and role of the related parties for which the usage consumption report is requested",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "validPeriod": {
-                    "$ref": "../Common/TimePeriod.schema.json#/definitions/TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "Validity period"                                            
                 }
             },
             "allOf": [

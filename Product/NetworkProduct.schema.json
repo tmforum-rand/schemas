@@ -6,7 +6,7 @@
         "NetworkProduct": {
             "$id": "#NetworkProduct",
             "type": "object",
-            "description": "An instantiated network product subscribed by a customer",
+            "description": "An instantiated network product (specialization of a product) subscribed by a customer.",
             "properties": {
                 "href": {
                     "type": "string",
@@ -22,18 +22,20 @@
                 },
                 "outOfBucketCounter": {
                     "type": "array",
+                    "description": "Counters detailing usage consumption out of the buckets",                                   
                     "items": {
-                        "$ref": "ConsumptionSummary.schema.json#/definitions/ConsumptionSummary"
+                        "$ref": "ConsumptionSummary.schema.json#ConsumptionSummary"
                     }
                 },
                 "publicIdentifier": {
                     "type": "string",
-                    "description": "Public ID associated to the network product, such as: MSISDN for mobile line"
+                    "description": "Public number associated to the network product (msisdn number for mobile line for example)"
                 },
                 "user": {
                     "type": "array",
+                    "description": "References of the users of the network product",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 }
             },

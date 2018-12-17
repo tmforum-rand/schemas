@@ -18,6 +18,7 @@
                 },
                 "walletUrl": {
                     "type": "string",
+                    "format": "uri",
                     "description": "URI pointing at the digital wallet (e.g.: https://paypal.me/johndoe)"
                 }
             },
