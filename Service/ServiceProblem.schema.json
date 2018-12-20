@@ -161,7 +161,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }
