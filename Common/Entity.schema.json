@@ -2,11 +2,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "Entity.schema.json",
     "title": "Entity",
-    "description": "Base entity schema for use in TMForum Open-APIs",
     "definitions": {
         "Entity": {
             "$id": "#Entity",
             "type": "object",
+            "description": "Base entity schema for use in TMForum Open-APIs",
             "properties": {
                 "@schemaLocation": {
                     "type": "string",
