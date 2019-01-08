@@ -176,7 +176,7 @@ function checkSchemaIssues(schema) {
         allOf.forEach(item => {
 
             // polymorphicPattern?
-            if(item['$ref'] && item['$ref'].includes('polymorphicPattern')) hasPolyPattern=true;
+            if(item['$ref'] && item['$ref'].includes('Entity.schema')) hasPolyPattern=true;
 
 	    });
 
@@ -240,7 +240,7 @@ function checkSchemaIssues(schema) {
         });
         
         if(!hasPolyPattern && allOf.length>0) {
-            res.push(title + ' :: missing polymorphicPattern');
+            res.push(title + ' :: missing Entity.schema');
         }
 
     } catch(error) {
