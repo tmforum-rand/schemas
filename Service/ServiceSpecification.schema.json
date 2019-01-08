@@ -80,6 +80,13 @@
                         "$ref": "ServiceSpecRelationship.schema.json#ServiceSpecRelationship"
                     }
                 },
+                "serviceLevelSpecification": {
+                    "type": "array", 
+                    "description": "A list of service level specifications related to this service specification, and which will need to be satisifiable for corresponding service instances; e.g. Gold, Platinum",
+                    "items": {
+                        "$ref": "ServiceLevelSpecificationRef.schema.json#/definitions/ServiceLevelSpecificationRef"
+                    }
+                },
                 "targetServiceSchema": {
                     "description": "A target service schema reference (TargetServiceSchemaRef). The reference object to the schema and type of target service which is described by service specification.",
                     "$ref": "TargetServiceSchema.schema.json#/definitions/TargetServiceSchema"

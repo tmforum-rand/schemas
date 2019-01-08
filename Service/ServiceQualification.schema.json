@@ -6,6 +6,7 @@
         "ServiceQualification": {
             "$id": "#ServiceQualification",
             "type": "object",
+            "description": "ServiceQualification is used to perform a technical eligibility. It allows to retrieve a list of services that are technically available in the context of the interaction (place, party, service characteristics, ...).",
             "properties": {
                 "description": {
                     "type": "string",

@@ -5,7 +5,7 @@
     "definitions": {
         "ServiceEligibilityUnavailabilityReason": {
             "$id": "#ServiceEligibilityUnavailabilityReason",
-            "description": "Reason for eligibility result if the productOfferingQualification result is no (meaning the productOffering or productSpec is not available)",
+            "description": "Reason for eligibility result if the ServiceQualification result is no (meaning the Service is not available)",
             "type": "object",
             "properties": {
                 "code": {

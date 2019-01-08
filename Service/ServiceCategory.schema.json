@@ -49,13 +49,6 @@
                     "type": "boolean",
                     "description": "If true, this Boolean indicates that the category is a root of categories"
                 },
-                "relatedParty": {
-                    "type": "array",
-                    "description": "List of parties or party roles related to this category",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
-                    }
-                },
                 "serviceCandidate": {
                     "type": "array",
                     "description": "List of service candidates associated with this category",

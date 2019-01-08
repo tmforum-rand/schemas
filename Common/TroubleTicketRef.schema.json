@@ -1,24 +1,28 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RelatedEntityRef.schema.json",
-    "title": "RelatedEntityRef",
+    "$id": "TroubleTicketRef.schema.json",
+    "title": "TroubleTicketRef",
     "definitions": {
-        "RelatedEntityRef": {
-            "$id": "#RelatedEntityRef",
-            "description": "A reference to an entity, where the type of the entity is not known in advance.",
+        "TroubleTicketRef": {
+            "$id": "#TroubleTicketRef",
+            "description": "A trouble ticket represents a record used for reporting and managing the resolution of resource problems",
             "type": "object",
             "properties": {
+                "correlationId": {
+                    "type": "string",
+                    "description": "Additional identifier coming from an external system"
+                },
                 "href": {
                     "type": "string",
-                    "description": "The hyperlink to access an entity."
+                    "description": "Reference of the trouble ticket"
                 },
                 "id": {
                     "type": "string",
-                    "description": "The identifier of an entity."
+                    "description": "Unique identifier of the trouble ticket"
                 },
-                "name": {
+                "status": {
                     "type": "string",
-                    "description": "The name of an entity."
+                    "description": "The current status of the Trouble Ticket"
                 },
                 "@referredType": {
                     "type": "string",

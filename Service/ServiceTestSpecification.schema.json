@@ -20,6 +20,10 @@
                     "type": "string",
                     "description": "Identifier of a service test specification."
                 },
+                "version": {
+                    "type": "string",
+                    "description": "Version of a service test specification "
+                },
                 "name": {
                     "type": "string",
                     "description": "Name of a service test specification."

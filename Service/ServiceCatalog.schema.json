@@ -40,6 +40,20 @@
                 "lifecycleStatus": {
                     "type": "string",
                     "description": "Used to indicate the current lifecycle status"
+                },
+                "category": {
+                    "type": "array",
+                    "description": "List of service categories associated with this catalog",
+                    "items": {
+                        "$ref": "ServiceCategoryRef.schema.json#ServiceCategoryRef"
+                    }
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "description": "List of parties or party roles related to this category",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                    }
                 }
             },
             "allOf": [
