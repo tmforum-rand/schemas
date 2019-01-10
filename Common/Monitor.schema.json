@@ -25,18 +25,12 @@
                 },
                 "state": {
                     "type": "string"
-                },
-                "monitorType": {
-                    "type": "string"
                 }
             },
-            "required": [
-                "id",
-                "state",
-                "request",
-                "response",
-                "href",
-                "sourceHref"
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#Entity"
+                }
             ]
         }
     }
