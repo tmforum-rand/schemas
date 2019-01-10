@@ -46,12 +46,8 @@
                     "description": "The unit of measure for the metric values, such as meters, cubic yards, kilograms [ISO 1000]."
                 }, 
                 "value": {
-                    "type": "string", 
-                    "description": "The value of Metric in the test. This also could be a document to record all values captured during the service test"
-                }, 
-                "valueType": {
-                    "type": "string", 
-                    "description": "The type of value that the Metric value is associated with (such as numeric, text)"
+                    "description": "The value of Metric in the test. This also could be a document to record all values captured during the service test",
+                    "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
                 }
             },
             "allOf": [

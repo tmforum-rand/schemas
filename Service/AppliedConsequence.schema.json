@@ -8,18 +8,6 @@
             "type": "object",
             "description": "An Applied Consequence defines the action (prescribed action or notification) to take when a \nMeasureThresholdRuleViolation occurs.",
             "properties": {
-                "@baseType": {
-                    "type": "string",
-                    "description": "The base type for use in polymorphic collections"
-                },
-                "@schemaLocation": {
-                    "type": "string",
-                    "description": "A link to the schema describing a resource (for type extension)."
-                },
-                "@type": {
-                    "type": "string",
-                    "description": "The class type of the actual resource (for type extension)."
-                },
                 "appliedAction": {
                     "type": "string",
                     "description": "The action for a violated threshold. This could be a hyperlink to \nthe action."
@@ -33,10 +21,15 @@
                     "description": "A word, term, or phrase by which Consequence is known and \ndistinguished from other MetricDefMeasureConsequences."
                 },
                 "repeatAction": {
-                    "type": "string",
+                    "type": "boolean",
                     "description": "An indicator use to specify that a consequence should cease \nbeing applied if a value is in the same range as the previous value or continue being applied if a value is in the same range as the previous value.  \nIf the repeatAcation is True, if the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatAcation is False, the consequence is applied only if the previous MetricMeasure value wasn¡¯t in the same range."
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
         }
     }
 }

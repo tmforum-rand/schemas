@@ -41,8 +41,8 @@
                     "description": "A threshold can be generated in different severity levels. A \ncrossing for each level may require a different condition and possibly trigger a different consequence."
                 },
                 "tolerancePeriod": {
-                    "type": "string",
-                    "description": "An interval of time of allowed crossing occurrences before a \nconsequence being initiated."
+                    "description": "An interval of time of allowed crossing occurrences before a \nconsequence being initiated.",
+                    "$ref": "../Common/Duration.schema.json#Duration"
                 },
                 "appliedConsequence": {
                     "type": "array",

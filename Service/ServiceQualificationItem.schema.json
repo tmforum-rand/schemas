@@ -5,6 +5,7 @@
     "definitions": {
         "ServiceQualificationItem": {
             "$id": "#ServiceQualificationItem",
+            "description": "A ServiceQualificationItem relates to a specific service being checked in a qualification operation.",
             "type": "object",
             "properties": {
                 "expectedActivationDate": {

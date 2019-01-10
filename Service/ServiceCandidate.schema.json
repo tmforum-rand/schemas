@@ -49,6 +49,7 @@
                     }
                 },
                 "serviceSpecification": {
+                    "description": "The service specification implied by this candidate",
                     "$ref": "ServiceSpecificationRef.schema.json#ServiceSpecificationRef"
                 }
             },

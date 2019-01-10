@@ -17,7 +17,7 @@
                     "description": "The method used to capture the Metric. Note: This may be replaced by a set of entities similar to the Performance Monitoring"
                 },
                 "capturePeriod": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/Duration.schema.json#Duration",
                     "description": "A period of the capture"
                 },
                 "metricDescription": {

@@ -5,7 +5,7 @@
     "definitions": {
         "ServiceQualificationItemRelationship": {
             "$id": "#ServiceQualificationItemRelationship",
-            "description": "Stucture used to describe relationship between serviceQualifcation items from the same serviceQualification.",
+            "description": "Stucture used to describe relationship between serviceQualification items from the same serviceQualification.",
             "type": "object",
             "properties": {
                 "id": {

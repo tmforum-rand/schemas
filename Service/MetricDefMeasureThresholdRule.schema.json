@@ -40,7 +40,7 @@
                     "description": "Name for the MetricDefMeasureThresholdRule ."
                 },
                 "numberOfAllowedCrossing": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "The number of allowed crossing occurrences in reference to the \ntolerancePeriod without a consequence being initiated."
                 },
                 "thresholdRuleSeverity": {
@@ -48,8 +48,8 @@
                     "description": "A threshold can be generated in different severity levels. A \ncrossing for each level may require a different condition and possibly trigger a different consequence."
                 },
                 "tolerancePeriod": {
-                    "type": "string",
-                    "description": "A String. An interval of time of allowed crossing occurrences before a consequence being initiated."
+                    "description": "An interval of time of allowed crossing occurrences before a consequence being initiated.",
+                    "$ref": "../Common/Duration.schema.json#Duration"
                 }
             },
             "allOf": [

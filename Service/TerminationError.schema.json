@@ -14,7 +14,7 @@
                 },
                 "value": {
                     "type": "string",
-                    "description": "Text to describe the termination error (Unable to proceed to qualification because incomplete information provided)"
+                    "description": "Text to describe the termination error - for example: Unable to proceed to qualification because incomplete information provided"
                 }
             }
         }

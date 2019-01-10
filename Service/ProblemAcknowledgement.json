@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProblemAcknowledgement.schema.json",
+    "title": "ProblemAcknowledgement",
+    "definitions": {
+        "ProblemAcknowledgement": {
+            "$id": "#ProblemAcknowledgement",
+            "type": "object", 
+            "description": "Task resource that requests acknowledgement of problems", 
+            "properties": {
+                "href": {
+                    "type": "string", 
+                    "description": "Reference to this task resource"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of this task resource"
+                }, 
+                "problem": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "ServiceProblemRef.schema.json#ServiceProblemRef"
+                    }
+                }, 
+                "ackProblem": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "ServiceProblemRef.schema.json#ServiceProblemRef"
+                    }
+                }, 
+                "trackingRecord": {
+                    "$ref": "TrackingRecord.schema.json#TrackingRecord"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}
