@@ -36,7 +36,7 @@
                 }, 
                 "notification": {
                     "description": "A notification from the possible notifications for Service Problem (such as creation, status change, information required, change)",
-                    "$ref": "Any.schema.json#/definitions/Any"
+                    "$ref": "../Common/Any.schema.json#/definitions/Any"
                 }
             }
         }
