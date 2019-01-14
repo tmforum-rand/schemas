@@ -1,16 +1,19 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "HttpResponse.schema.json",
-    "title": "HttpResponse",
+    "$id": "Response.schema.json",
+    "title": "Response",
     "definitions": {
-        "HttpResponse": {
-            "$id": "#HttpResponse",
+        "Response": {
+            "$id": "#Response",
             "type": "object",
+            "description": "A response to a request",
             "properties": {
                 "body": {
+                    "description": "The body of the response. For example for an HTTP response might contain HTML for rendering.",
                     "type": "string"
                 },
                 "header": {
+                    "description": "Items included in the header of the response. For example for an HTTP response might contain negotiated locale.",
                     "type": "array",
                     "items": {
                         "$ref": "HeaderItem.schema.json#/definitions/HeaderItem"
@@ -18,6 +21,7 @@
                     "title": "header"
                 },
                 "statusCode": {
+                    "description": "The status of the response. For example for an HTTP response would be codes such as 200, 400, etc.",
                     "type": "string"
                 }
             },

@@ -9,22 +9,28 @@
             "description": "Monitoring of resources",
             "properties": {
                 "href": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "reference to this monitor"
                 },
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Identifier of an instance of the monitor. Required to be unique within the resource type.  Used in URIs as the identifier for specific instances of a type"
                 },
                 "request": {
-                    "$ref": "HttpRequest.schema.json#/definitions/HttpRequest"
+                    "description": "Represents the request",
+                    "$ref": "Request.schema.json#/definitions/Request"
                 },
                 "response": {
-                    "$ref": "HttpResponse.schema.json#/definitions/HttpResponse"
+                    "description": "Represents the response",
+                    "$ref": "Response.schema.json#/definitions/Response"
                 },
                 "sourceHref": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "The monitored resource href"
                 },
                 "state": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "The Monitor state of the resource.  InProgess, InError, Completed"
                 }
             },
             "allOf": [
