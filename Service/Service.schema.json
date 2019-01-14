@@ -5,7 +5,7 @@
     "definitions": {
         "Service": {
             "$id": "#Service",
-            "description": "Service is an abstract base class for defining the Service hierarchy. All Services are characterized as either being possibly visible and usable by a Customer or not. This gives rise to the two subclasses of Service: CustomerFacingService and ResourceFacingService.",
+            "description": "Service is a base class for defining the Service hierarchy. All Services are characterized as either being possibly visible and usable by a Customer or not. This gives rise to the two subclasses of Service: CustomerFacingService and ResourceFacingService.",
             "type": "object",
             "properties": {
                 "id": {
