@@ -6,7 +6,7 @@
         "ProblemUnacknowledgement": {
             "$id": "#ProblemUnacknowledgement",
             "type": "object", 
-            "description": "Task resource that requests unacknowledgement of problems", 
+            "description": "Task resource that requests unacknowledgement of problems, rolling back the status of the problems from Acknowledged to Submitted.", 
             "properties": {
                 "href": {
                     "type": "string", 
