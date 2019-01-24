@@ -24,7 +24,7 @@
                     "type": "string",
                     "description": "status of cart item. e.g \"Active\" , \"SavedForLater\"."
                 },
-                "cartTerm": {
+                "itemTerm": {
                     "type": "array",
                     "items": {
                         "$ref": "CartTerm.schema.json#CartTerm"
