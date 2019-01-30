@@ -5,13 +5,8 @@
     "definitions": {
         "TimePeriod": {
             "$id": "#TimePeriod",
-            "description": "A period of time, either as a deadline (endDateTime only) or with a start and end. If you provide a startDateTime, you must also provide the endDateTime",
+            "description": "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both",
             "type": "object",
-            "dependencies": {
-                "startDateTime": [
-                    "endDateTime"
-                ]
-            },
             "properties": {
                 "startDateTime": {
                     "description": "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
