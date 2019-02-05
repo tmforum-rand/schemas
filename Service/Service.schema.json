@@ -70,7 +70,7 @@
                     "description": "The specification from which this service was instantiated",
                     "$ref": "ServiceSpecificationRef.schema.json#/definitions/ServiceSpecificationRef"
                 }, 
-                "characteristic": {
+                "serviceCharacteristic": {
                     "type": "array", 
                     "description" : "A list of characteristics that characterize this service (ServiceCharacteristic [*]) ",
                     "items": {
