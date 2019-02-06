@@ -5,7 +5,7 @@
     "definitions": {
         "TerminationError": {
             "$id": "#TerminationError",
-            "description": "If qualificationItem has not been done properly we indicate there the termination error(s)",
+            "description": "This indicates an error that caused a qualificationItem to be terminated.",
             "type": "object",
             "properties": {
                 "id": {

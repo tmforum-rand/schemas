@@ -66,7 +66,7 @@
                 },
                 "terminationError": {
                     "type": "array",
-                    "description" : "If qualificationItem has not been done properly we indicate there the termination error(s).",
+                    "description" : "If qualificationItem has not been done properly this lists the error(s) that caused termination of the qualification.",
                     "items": {
                         "$ref": "TerminationError.schema.json#TerminationError"
                     }
