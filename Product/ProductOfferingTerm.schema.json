@@ -22,7 +22,7 @@
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The period for which the productOfferingterm is valid"
+                    "description": "The period for which the productOfferingTerm is valid"
                 }
             },
             "allOf": [

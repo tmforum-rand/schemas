@@ -10,7 +10,7 @@
             "properties": {
                 "description": {
                     "type": "string",
-                    "description": "Description of the productOfferingQualifcation"
+                    "description": "Description of the productOfferingQualification"
                 },
                 "effectiveQualificationDate": {
                     "type": "string",

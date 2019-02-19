@@ -22,7 +22,7 @@
                 },
                 "status": {
                     "type": "string",
-                    "description": "Status of the address validation (inProgress, terminatedWithErrror, done)"
+                    "description": "Status of the address validation (inProgress, terminatedWithError, done)"
                 },
                 "validationDate": {
                     "type": "string",

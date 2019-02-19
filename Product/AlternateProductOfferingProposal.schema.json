@@ -11,11 +11,11 @@
                 "alternateActivationDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Alternat activation date in case seller is not able to meet requested expected activation date."
+                    "description": "Alternate activation date in case seller is not able to meet requested expected activation date."
                 },
                 "id": {
                     "type": "string",
-                    "description": "Identifier of a alternate propud offering proposal"
+                    "description": "Identifier of a alternate product offering proposal"
                 },
                 "alternateProductSpecification": {
                     "type": "array",

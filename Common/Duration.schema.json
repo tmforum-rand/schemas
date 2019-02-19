@@ -10,7 +10,7 @@
             "properties": {
                 "amount": {
                     "type": "number",
-                    "description": "Time interval (number of seconds, munutes, hours, etc.)"
+                    "description": "Time interval (number of seconds, minutes, hours, etc.)"
                 },
                 "units": {
                     "type": "string",

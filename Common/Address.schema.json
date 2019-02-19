@@ -5,7 +5,7 @@
     "definitions": {
         "Address": {
             "$id": "#Address",
-            "description": "Structured textual way of describing how to find a Property in an urban area (country properties are often\ndefined differently).\nNota : Address corresponds to SID UrbanPropertyAddress",
+            "description": "Structured textual way of describing how to find a Property in an urban area (country properties are often\ndefined differently).\nNote : Address corresponds to SID UrbanPropertyAddress",
             "type": "object",
             "properties": {
                 "city": {

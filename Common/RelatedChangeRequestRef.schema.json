@@ -22,7 +22,7 @@
                 },
                 "id": {
                     "type": "string",
-                    "description": "Identifier of an Change Reques"
+                    "description": "Identifier of an Change Request"
                 },
                 "@referredType": {
                     "type": "string",

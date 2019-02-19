@@ -10,11 +10,11 @@
             "properties": {
                 "criteriaOperator": {
                     "type": "string",
-                    "description": "The logic expression including parameter and operator. includeing:=,>,<,>=,<=,<>"
+                    "description": "The logic expression including parameter and operator. including:=,>,<,>=,<=,<>"
                 },
                 "criteriaPara": {
                     "type": "string",
-                    "description": "The parameter (factor) of the criteria.The basic factors are abstracted from these data sources.There are several detail parameters ."
+                    "description": "The parameter (factor) of the criteria.The basic factors are abstracted from these data sources. There are several detail parameters ."
                 },
                 "criteriaValue": {
                     "type": "string",

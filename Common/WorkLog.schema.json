@@ -8,7 +8,7 @@
             "description": "A record of the work performed on the change request during the investigation and resolution process.",
             "type": "object",
             "properties": {
-                "creatDateTime": {
+                "createDateTime": {
                     "type": "string",
                     "format": "date-time",
                     "description": "Date and time of worklog generated."

@@ -31,7 +31,7 @@
                 },
                 "qualificationRelationship": {
                     "type": "array",
-                    "description" : "Stucture used to describe relationship between serviceQualification item from the same serviceQualification.",
+                    "description" : "Structure used to describe relationship between serviceQualification item from the same serviceQualification.",
                     "items": {
                         "$ref": "ServiceQualificationRelationship.schema.json#ServiceQualificationRelationship"
                     }
