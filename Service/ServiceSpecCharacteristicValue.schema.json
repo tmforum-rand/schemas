@@ -17,7 +17,7 @@
                     "description": "Indicates if the value is the default value for a characteristic"
                 },
                 "value": {
-                    "type": "object",
+                    "$ref": "../Common/Any.schema.json#/definitions/Any",
                     "description": "A discrete value that the characteristic can take on"
                 },
                 "unitOfMeasure": {
