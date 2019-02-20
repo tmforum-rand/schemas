@@ -50,7 +50,7 @@
                 },
                 "subAddressType": {
                     "type": "string",
-                    "description": "Type of subaddress : it can be a subunit or a private street"
+                    "description": "Type of subAddress : it can be a subunit or a private street"
                 }
             },
             "allOf": [

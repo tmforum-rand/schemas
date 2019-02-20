@@ -30,7 +30,7 @@
                 },
                 "state": {
                     "type": "string",
-                    "description": "The Monitor state of the resource.  InProgess, InError, Completed"
+                    "description": "The Monitor state of the resource.  InProgress, InError, Completed"
                 }
             },
             "allOf": [

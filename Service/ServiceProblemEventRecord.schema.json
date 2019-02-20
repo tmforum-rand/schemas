@@ -6,7 +6,7 @@
         "ServiceProblemEventRecord": {
             "$id": "#ServiceProblemEventRecord",
             "type": "object", 
-            "description": "A record of an event (related to a service problemn) received from another system", 
+            "description": "A record of an event (related to a service problem) received from another system",
             "properties": {
                 "eventTime": {
                     "description": "Time at which the event occurred",

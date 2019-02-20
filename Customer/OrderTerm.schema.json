@@ -5,7 +5,7 @@
     "definitions": {
         "OrderTerm": {
             "$id": "#OrderTerm",
-            "description": "Description of a productTerm linked to this orderItem. This reprsent a commitment with a duration",
+            "description": "Description of a productTerm linked to this orderItem. This represent a commitment with a duration",
             "type": "object",
             "properties": {
                 "description": {

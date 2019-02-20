@@ -10,7 +10,7 @@
             "properties": {
                 "action": {
                     "type": "string",
-                    "description": "Action to be perfomed on this quote item (add, modify, remove, etc.)"
+                    "description": "Action to be performed on this quote item (add, modify, remove, etc.)"
                 },
                 "id": {
                     "type": "string",

@@ -22,7 +22,7 @@
                 },
                 "IBAN": {
                     "type": "string",
-                    "description": "International format to describe a bank account"
+                    "description": "International Bank Account Number"
                 }
             },
             "allOf": [

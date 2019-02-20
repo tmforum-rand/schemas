@@ -29,7 +29,7 @@
                     "format": "date-time",
                     "description": "Expiration date of the card"
                 },
-                "lastFourDiguts": {
+                "lastFourDigits": {
                     "type": "string",
                     "description": "Last four digits of the credit card"
                 },

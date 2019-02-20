@@ -58,7 +58,7 @@
                 },
                 "serviceLevelSpecConsequence": {
                     "type": "array",
-                    "description": "A list consquences for this objective.",
+                    "description": "A list of consequences for this objective.",
                     "items": {
                         "$ref": "ServiceLevelSpecConsequence.schema.json#ServiceLevelSpecConsequence"
                     }

@@ -5,7 +5,7 @@
     "definitions": {
         "BillStructure": {
             "$id": "#BillStructure",
-            "description": "The structure of the bill for party accounts (billling or settlement).",
+            "description": "The structure of the bill for party accounts (billing or settlement).",
             "type": "object",
             "properties": {
                 "presentationMedia": {

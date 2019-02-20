@@ -28,7 +28,7 @@
                 },
                 "formattedName": {
                     "type": "string",
-                    "description": "A formatted name useful for specific contexts (chinese, japonese, korean,...)"
+                    "description": "A formatted name useful for specific contexts (Chinese, Japanese, Korean,...)"
                 },
                 "fullName": {
                     "type": "string",

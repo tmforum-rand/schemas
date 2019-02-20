@@ -29,7 +29,7 @@
                     "type": "string",
                     "description": "Name of the catalog"
                 },
-                "caatalogType": {
+                "catalogType": {
                     "type": "string",
                     "description": "Indicates if the catalog is a product, service or resource catalog"
                 },
