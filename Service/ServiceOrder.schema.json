@@ -51,6 +51,7 @@
                 }, 
                 "orderItem": {
                     "type": "array", 
+     	            "minItems" : 1,
                     "description": "A list of service order items to be processed by this order",
                     "items": {
                         "$ref": "ServiceOrderItem.schema.json#/definitions/ServiceOrderItem"
