@@ -38,8 +38,11 @@
                     "description": "ID created on repository side"
                 }, 
                 "note": {
+                    "type": "array", 
                     "description": "Extra-information about the order; e.g. useful to add extra delivery information that could be useful for a human process",
-                    "$ref": "../Common/Note.schema.json#/definitions/Note"
+                    "items": {
+			"$ref": "../Common/Note.schema.json#/definitions/Note"
+                    }
                 }, 
                 "notificationContact": {
                     "type": "string", 
