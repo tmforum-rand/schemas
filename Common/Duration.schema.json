@@ -9,7 +9,7 @@
             "description": "A time interval in a given unit of time", 
             "properties": {
                 "amount": {
-                    "type": "number",
+                    "type": "integer",
                     "description": "Time interval (number of seconds, minutes, hours, etc.)"
                 },
                 "units": {
