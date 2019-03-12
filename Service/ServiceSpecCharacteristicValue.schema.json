@@ -18,7 +18,7 @@
                 },
                 "value": {
                     "$ref": "../Common/Any.schema.json#/definitions/Any",
-                    "description": "A discrete value that the characteristic can take on"
+                    "description": "A discrete value that the characteristic can take on, or the actual value of the characteristic"
                 },
                 "unitOfMeasure": {
                     "type": "string",
