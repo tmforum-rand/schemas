@@ -16,6 +16,10 @@
                     "type": "string",
                     "description": "Unique identifier of the Catalog"
                 },
+                "description": {
+                    "type": "string", 
+                    "description": "Description of this catalog"
+                }, 
                 "lastUpdate": {
                     "type": "string",
                     "format": "date-time",
@@ -50,7 +54,7 @@
                 "category": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                        "$ref": "CategoryRef.schema.json#CategoryRef"
                     }
                 }
             },

@@ -24,6 +24,10 @@
                     "type": "boolean",
                     "description": "isBundle determines whether a productOffering represents a single productOffering (false), or a bundle of productOfferings (true)."
                 },
+                "isSellable": {
+                    "type": "boolean", 
+                    "description": "A flag indicating if this product offer can be sold stand-alone for sale or not. If this flag is false it indicates that the offer can only be sold within a bundle."
+                }, 
                 "lastUpdate": {
                     "type": "string",
                     "format": "date-time",
@@ -73,7 +77,7 @@
                 "category": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                        "$ref": "CategoryRef.schema.json#CategoryRef"
                     }
                 },
                 "resourceCandidate": {
@@ -97,10 +101,28 @@
                         "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
                     }
                 },
+                "attachment": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/Attachment"
+                    }
+                }, 
+                "marketSegment": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../Common/MarketSegmentRef.schema.json#MarketSegmentRef"
+                    }
+                }, 
                 "bundledProductOffering": {
                     "type": "array",
                     "items": {
                         "$ref": "BundledProductOffering.schema.json#BundledProductOffering"
+                    }
+                }, 
+                "prodSpecCharValueUse": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "ProdSpecCharValueUse.schema.json#ProdSpecCharValueUse"
                     }
                 }
             },
