@@ -59,11 +59,11 @@
                 "requestedStartDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Order start date wished by the requestor"
+                    "description": "Order fulfillment start date wished by the requestor. This is used when, for any reason, requestor cannot allow seller to begin to operationally begin the fulfillment before a date. "
                 },
                 "state": {
-                    "type": "string",
-                    "description": "Tracks the lifecycle status of the product order, such as Acknowledged, Rejected, InProgress, Pending and so on."
+                    "description": "Tracks the lifecycle status of the product order, such as Acknowledged, Rejected, InProgress, Pending and so on.",
+                    "$ref": "ProductOrderStateType.schema.json#/definitions/ProductOrderStateType"
                 },
                 "note": {
                     "type": "array",

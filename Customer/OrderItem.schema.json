@@ -9,8 +9,8 @@
             "type": "object",
             "properties": {
                 "action": {
-                    "type": "string",
-                    "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
+                    "description": "he action to be carried out on the Product. Can be: add, modify, delete, noChange",
+					"$ref": "ProductActionType.schema.json#/definitions/ProductActionType"
                 },
                 "id": {
                     "type": "string",
@@ -21,8 +21,8 @@
                     "description": "Quantity ordered"
                 },
                 "state": {
-                    "type": "string",
-                    "description": "State of the order item : described in the state machine diagram"
+                    "description": "State of the order item : described in the state machine diagram",
+                    "$ref": "ProductOrderStateType.schema.json#/definitions/ProductOrderStateType"
                 },
                 "appointment": {
                     "$ref": "AppointmentRef.schema.json#AppointmentRef"
@@ -34,12 +34,6 @@
                     "type": "array",
                     "items": {
                         "$ref": "OrderPrice.schema.json#OrderPrice"
-                    }
-                },
-                "orderItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "OrderItem.schema.json#OrderItem"
                     }
                 },
                 "orderItemRelationship": {
@@ -64,7 +58,7 @@
                     "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
                 },
                 "product": {
-                    "$ref": "../Product/Product.schema.json#Product"
+                    "$ref": "../Product/ProductRestriction.schema.json#ProductRestriction"					
                 },
                 "qualification": {
                     "type": "array",

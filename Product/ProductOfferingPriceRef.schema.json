@@ -1,19 +1,24 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "ProductRef.schema.json",
-    "title": "ProductRef",
+    "$id": "ProductOfferingPriceRef.schema.json",
+    "title": "ProductOfferingPriceRef",
     "definitions": {
-        "ProductRef": {
-            "$id": "#ProductRef",
+        "ProductOfferingPriceRef": {
+            "$id": "#ProductOfferingPriceRef",
+            "description": "ProductPriceOffering reference. An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased",
             "type": "object",
             "properties": {
                 "href": {
                     "type": "string",
-                    "description": "Reference of the product"
+                    "description": "Reference of the product offering price"
                 },
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier of the product"
+                    "description": "Unique identifier of the product offering price"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the product offering price"
                 },
                 "@referredType": {
                     "type": "string",
