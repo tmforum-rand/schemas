@@ -49,7 +49,7 @@
                     }
                 },
                 "product": {
-                    "$ref": "../Product/Product.schema.json#Product"
+                    "$ref": "../Product/ProductRestriction.schema.json#ProductRestriction"
                 },
                 "itemPrice": {
                     "type": "array",

@@ -16,6 +16,9 @@
                     "type": "string",
                     "description": "A short descriptive name such as \"Subscription price\"."
                 },
+                "productOfferingPrice": {
+                    "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
+                },           
                 "priceType": {
                     "type": "string",
                     "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
