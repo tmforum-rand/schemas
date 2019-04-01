@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "PopRelationship.schema.json", 
+    "title": "PopRelationship", 
+    "definitions": {
+        "PopRelationship": {
+            "$id": "#PopRelationship",
+            "type": "object", 
+            "description": "product offering relationship", 
+            "properties": {
+                "@type": {
+                    "type": "string", 
+                    "description": "(Class) type of the associated product offering"
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "hyperlink reference of the associated product offering"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the associated product offering"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "Name of  the associated product offering"
+                }
+            }, 
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}

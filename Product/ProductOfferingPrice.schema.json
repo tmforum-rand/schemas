@@ -8,39 +8,126 @@
             "description": "Is based on both the basic cost to develop and produce products and the enterprises policy on revenue targets. This price may be further revised through discounting (prodOfferPriceAlteration). The price, applied for a productOffering may also be influenced by the productOfferingTerm, the customer selected, eg: a productOffering can be offered with multiple terms, like commitment periods for the contract. The price may be influenced by this productOfferingTerm. A productOffering may be cheaper with a 24 month commitment than with a 12 month commitment.",
             "type": "object",
             "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "Description of the productOfferingPrice"
-                },
+                "id": {
+                    "type": "string", 
+                    "description": "unique id of this resource"
+                }, 
+                "href": {
+                    "type": "string"
+                }, 
                 "name": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Name of the productOfferingPrice"
-                },
-                "priceType": {
-                    "type": "string",
-                    "description": "Indicates the price type: recurring, one time, usage"
-                },
-                "recurringChargePeriod": {
-                    "type": "string",
-                    "description": "Could be month, week..."
-                },
-                "unitOfMeasure": {
-                    "type": "string",
-                    "description": "Could be minutes, GB..."
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The period for which the productOfferingPrice is valid"
-                },
+                }, 
+                "description": {
+                    "type": "string", 
+                    "description": "Description of the productOfferingPrice"
+                }, 
                 "version": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "ProductOffering version"
-                },
+                }, 
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod", 
+                    "description": "The period for which the productOfferingPrice is valid"
+                }, 
+                "priceType": {
+                    "type": "string", 
+                    "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth."
+                }, 
+                "unitOfMeasure": {
+                    "$ref": "../Common/Quantity.schema.json#Quantity", 
+                    "description": "A number and unit representing how many (for instance 1 dozen) of an ProductOffering is available at the offered price. Its meaning depends on the priceType. It could be a price, a rate, or a discount."
+                }, 
+                "recurringChargePeriodType": {
+                    "type": "string", 
+                    "description": "The period to repeat the application of the price\nCould be month, week..."
+                }, 
+                "recurringChargePeriodLength": {
+                    "type": "integer", 
+                    "description": "the period of the recurring charge:  1, 2, ... .It sets to zero if it is not applicable"
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "The class type of this Product offering"
+                }, 
+                "@baseType": {
+                    "type": "string", 
+                    "description": "the immediate base class type of this product offering"
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "hyperlink reference to the schema describing this resource"
+                }, 
+                "lastUpdate": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "the last update time of this POP"
+                }, 
+                "isBundle": {
+                    "type": "boolean", 
+                    "description": "A flag indicating if this POP is composite (bundle) or not"
+                }, 
+                "lifecycleStatus": {
+                    "type": "string", 
+                    "description": "the lifecycle status of this POP"
+                }, 
                 "price": {
-                    "$ref": "../Customer/Price.schema.json#Price"
-                },
-                "priceAlteration": {
-                    "$ref": "../Customer/PriceAlteration.schema.json#PriceAlteration"
+                    "$ref": "../Common/Money.schema.json#Money", 
+                    "description": "The amount of money that characterizes the price."
+                }, 
+                "percentage": {
+                    "type": "number", 
+                    "format": "float", 
+                    "description": "Percentage to apply for ProdOfferPriceAlteration (Discount)"
+                }, 
+                "bundledPopRelationship": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "BundledPopRelationship.schema.json#BundledPopRelationship"
+                    }
+                }, 
+                "popRelationship": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "PopRelationship.schema.json#PopRelationship"
+                    }
+                }, 
+                "prodSpecCharValueUse": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "ProdSpecCharValueUse.schema.json#ProdSpecCharValueUse"
+                    }
+                }, 
+                "productOfferingTerm": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "ProductOfferingTerm.schema.json#ProductOfferingTerm"
+                    }
+                }, 
+                "place": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../Common/Place.schema.json#Place"
+                    }
+                }, 
+                "constraint": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../Common/ConstraintRef.schema.json#ConstraintRef"
+                    }
+                }, 
+                "pricingLogicAlgorithm": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "PricingLogicAlgorithm.schema.json#PricingLogicAlgorithm"
+                    }
+                }, 
+                "tax": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "../Customer/TaxItem.schema.json#TaxItem"
+                    }
                 }
             },
             "allOf": [

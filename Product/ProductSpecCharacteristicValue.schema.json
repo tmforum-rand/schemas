@@ -8,10 +8,18 @@
             "description": "A number or text that can be assigned to a ProductSpecCharacteristic.",
             "type": "object",
             "properties": {
-                "default": {
+                "isDefault": {
                     "type": "boolean",
                     "description": "Indicates if the value is the default value for a characteristic"
                 },
+                "rangeInterval": {
+                    "type": "string", 
+                    "description": "An indicator that specifies the inclusion or exclusion of the valueFrom and valueTo attributes. If applicable, possible values are \"open\", \"closed\", \"closedBottom\" and \"closedTop\"."
+                }, 
+                "regex": {
+                    "type": "string", 
+                    "description": "Regular expression to define constraint on the allowed value"
+                }, 
                 "unitOfMeasure": {
                     "type": "string",
                     "description": "Could be minutes, GB..."
