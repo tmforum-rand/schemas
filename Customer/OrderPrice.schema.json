@@ -7,6 +7,7 @@
             "$id": "#OrderPrice",
             "description": "An amount, usually of money, that represents the actual price paid by the Customer for this item or this order",
             "type": "object",
+			"required": ["priceType", "price"],
             "properties": {
                 "description": {
                     "type": "string",
@@ -14,8 +15,11 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "A short descriptive name such as \"Subscription price\"."
+                    "description": "Name of the order item price"
                 },
+                "productOfferingPrice": {
+                    "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
+                },               
                 "priceType": {
                     "type": "string",
                     "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"

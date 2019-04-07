@@ -6,13 +6,15 @@
         "OrderItemRelationship": {
             "$id": "#OrderItemRelationship",
             "type": "object",
+			"required": ["relationshipType", "id"],
             "properties": {
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Id of the productOrder item targeted for this relationship."
                 },
                 "relationshipType": {
                     "type": "string",
-                    "description": "The type of order item relationship"
+                    "description": "Type of the product order item relationship, such as [bundled] if the item related product is a bundle and you want to describe the bundled product order items inside this bundle; [reliesOn] if the product item related needs another product order iten (from this order) to rely on (e.g. an option on an already owned mobile access product) [targets] or [isTargeted] (depending on the way of expressing the link) for any other kind of links that may be useful"
                 }
             },
             "allOf": [
