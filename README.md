@@ -17,3 +17,4 @@ This repository contains the collection of JSON-Schema files that define the ent
 
 All schemas conform to JSON-Schema draft-07, and to [the design guidelines described here](https://github.com/tmforum-rand/schemas/blob/master/dev/README.md). The schemas are used in the construction of the TM Forum Open-API catalog.
 
+== added for testing ==
