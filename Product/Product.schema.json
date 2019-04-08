@@ -46,9 +46,9 @@
                     "format": "date-time",
                     "description": "Is the date from which the product starts"
                 },
-                "status": {
-                    "type": "string",
-                    "description": "Is the lifecycle status of the product."
+                "status": {                
+                    "description": "Is the lifecycle status of the product.",
+                    "$ref": "ProductStatusType.schema.json#/definitions/ProductStatusType"
                 },
                 "terminationDate": {
                     "type": "string",
@@ -62,10 +62,7 @@
                     }
                 },
                 "billingAccount": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
-                    }
+                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "productOffering": {
                     "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
@@ -108,6 +105,18 @@
                 },
                 "productSpecification": {
                     "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                },
+                "productOrder": {
+                    "type": "array",
+                    "items": {                      
+                        "$ref": "RelatedProductOrderItem.schema.json#RelatedProductOrderItem"
+                    }    
+                },
+                "productTerm": {
+                    "type": "array",
+                    "items": {  
+                        "$ref": "ProductTerm.schema.json#ProductTerm"
+                    }
                 },
                 "place": {
                     "type": "array",
