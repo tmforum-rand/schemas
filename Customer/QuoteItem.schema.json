@@ -9,8 +9,8 @@
             "type": "object",
             "properties": {
                 "action": {
-                    "type": "string",
-                    "description": "Action to be performed on this quote item (add, modify, remove, etc.)"
+                    "description": "Action to be performed on this quote item (add, modify, remove, etc.)",
+                    "$ref": "ProductActionType.schema.json#/definitions/ProductActionType"
                 },
                 "id": {
                     "type": "string",
@@ -21,19 +21,19 @@
                     "description": "Quantity asked for this quote item"
                 },
                 "state": {
-                    "type": "string",
-                    "description": "State of the quote item : described in the state machine diagram"
-                },
-                "quoteItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "QuoteItem.schema.json#QuoteItem"
-                    }
+                    "description": "State of the quote item : described in the state machine diagram",
+                    "$ref": "QuoteItemStateType.schema.json#/definitions/QuoteItemStateType"
                 },
                 "quoteItemRelationship": {
                     "type": "array",
                     "items": {
                         "$ref": "QuoteItemRelationship.schema.json#QuoteItemRelationship"
+                    }
+                },
+                "quoteItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuoteItem.schema.json#QuoteItem"
                     }
                 },
                 "attachment": {
@@ -76,7 +76,19 @@
                     }
                 },
                 "product": {
-                    "$ref": "../Product/Product.schema.json#Product"
+                    "$ref": "../Product/ProductRestriction.schema.json#ProductRestriction"
+                },
+                "qualification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/QualificationRef.schema.json#QualificationRef"
+                    }
+                },
+                "itemTerm": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuoteTerm.schema.json#QuoteTerm"
+                    }
                 }
             },
             "allOf": [

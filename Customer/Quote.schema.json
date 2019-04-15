@@ -16,6 +16,10 @@
                     "type": "string",
                     "description": "Description of the quote"
                 },
+                "instantSyncQuote": {
+                    "type": "boolean",
+                    "description": "An indicator which when the value is \"true\" means that requester expects to get quoting result in the response"
+                },
                 "effectiveQuoteCompletionDate": {
                     "type": "string",
                     "format": "date-time",
@@ -26,10 +30,15 @@
                     "format": "date-time",
                     "description": "this is the date wished by the requester to have the requested quote item delivered"
                 },
+                "requestedQuoteCompletionDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "This is requested date - from quote requester - to get a complete response for this quote"
+                },
                 "expectedQuoteCompletionDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "This is expected date - from quote requester - to have a response for this quote"
+                    "description": "This is expected date - from quote supplier - to be able to send back  a response for this quote"
                 },
                 "externalId": {
                     "type": "string",
@@ -49,8 +58,8 @@
                     "description": "Date and time when the quote was created"
                 },
                 "state": {
-                    "type": "string",
-                    "description": "State of the quote : described in the state-machine diagram above"
+                    "description": "State of the quote : described in the state-machine diagram",
+                    "$ref": "QuoteStateType.schema.json#/definitions/QuoteStateType"
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
@@ -87,7 +96,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     }
                 },
                 "contactMedium": {

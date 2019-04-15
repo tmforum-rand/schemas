@@ -16,6 +16,9 @@
                     "type": "string",
                     "description": "Name of the quote /quote item price"
                 },
+                "productOfferingPrice": {
+                    "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
+                },               
                 "priceType": {
                     "type": "string",
                     "description": "indicate if the price is for recurrent or no-recurrent charge"
