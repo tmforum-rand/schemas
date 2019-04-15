@@ -1,36 +1,44 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "IndividualIdentification.schema.json",
-    "title": "IndividualIdentification",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "IndividualIdentification.schema.json", 
+    "title": "IndividualIdentification", 
     "definitions": {
         "IndividualIdentification": {
-            "$id": "#IndividualIdentification",
-            "description": "Represents our registration of information used as proof of identity by an individual (passport, national identity card, drivers license, social security number, birth certificate)",
-            "type": "object",
+            "type": "object", 
+            "description": "Allows to store and access as required the information used as proof of identity by an individual", 
             "properties": {
+                "identificationType": {
+                    "type": "string", 
+                    "description": "Identification type (passport, national identity card, driver license, social security number, birth certificate,\u2026)"
+                },
                 "identificationId": {
-                    "type": "string",
-                    "description": "Identifier"
+                    "type": "string", 
+                    "description": "Identifier of the identification"
                 },
                 "issuingAuthority": {
-                    "type": "string",
-                    "description": "Authority which has issued the identifier, such as: social security, town hall"
+                    "type": "string", 
+                    "description": "Authority which has issued the identification (social security, town hall,\u2026)"
                 },
                 "issuingDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date at which the identifier was issued"
-                },
-                "identificationType": {
-                    "type": "string",
-                    "description": "Identification type (passport, national identity card, drivers license, social security number, birth certificate)"
-                }
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "Date of issue for the individual identification"
+                }, 
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                },			
+				"attachment": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "Attachment.schema.json#/definitions/Attachment"
+                    }
+                }  
             },
-            "allOf": [
+			"allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
-            ]
+            ]			
         }
     }
 }

@@ -1,39 +1,34 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "PartyRef.schema.json",
-    "title": "PartyRef",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "PartyRef.schema.json", 
+    "title": "PartyRef", 
     "definitions": {
         "PartyRef": {
-            "$id": "#PartyRef",
-            "description": "Party reference. A party represents an organization or an individual.",
-            "type": "object",
+            "type": "object", 
+            "description": "", 
             "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "Text describing the referred party"
-                },
                 "href": {
-                    "type": "string",
-                    "description": "Reference of the referred party (such as a partner or any other party role)."
-                },
+                    "type": "string", 
+                    "description": "Reference of the party"
+                }, 
                 "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the referred party"
-                },
+                    "type": "string", 
+                    "description": "Unique identifier of the party"
+                }, 
                 "name": {
-                    "type": "string",
-                    "description": "Name of the referred party (such as a partner or any other party role)"
+                    "type": "string", 
+                    "description": "Party name"
                 },
-                "@referredType": {
+               "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
-                }
+                }				
             },
-            "allOf": [
+			"allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
-            ]
+            ]			
         }
     }
 }

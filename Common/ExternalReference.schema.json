@@ -1,27 +1,30 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "ExternalReference.schema.json",
-    "title": "ExternalReference",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ExternalReference.schema.json", 
+    "title": "ExternalReference", 
     "definitions": {
         "ExternalReference": {
-            "$id": "#ExternalReference",
-            "description": "To manage touch points to external OTT identifiers for the individual or the organization (facebook, google+,...)",
-            "type": "object",
+            "type": "object", 
+            "description": "External reference of the individual or reference in other system", 
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "External reference"
-                },
-                "referenceType": {
-                    "type": "string",
-                    "description": "Reference type"
+                 "externalReferenceType": {
+                    "type": "string", 
+                    "description": "Type of the external reference"
+                }, 
+                "url": {
+                    "type": "string", 
+                    "description": "Link to the external reference"
+                }, 
+                "value": {
+                    "type": "string", 
+                    "description": "External reference value"
                 }
             },
-            "allOf": [
+			"allOf": [
                 {
                     "$ref": "Entity.schema.json#Entity"
                 }
-            ]
+            ]			
         }
     }
 }
