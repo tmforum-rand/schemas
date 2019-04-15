@@ -73,10 +73,10 @@
                         "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
                     }
                 },
-                "characteristic": {
+                "productCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductCharacteristic.schema.json#ProductCharacteristic"
+                        "$ref": "Characteristic.schema.json#Characteristic"
                     }
                 },
                 "productRelationship": {
@@ -94,7 +94,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     }
                 },
                 "productPrice": {
@@ -118,10 +118,10 @@
                         "$ref": "ProductTerm.schema.json#ProductTerm"
                     }
                 },
-                "place": {
+                "relatedPlace": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Place.schema.json#Place"
+                        "$ref": "../Common/RelatedPlace.schema.json#RelatedPlace"
                     }
                 }
             },
