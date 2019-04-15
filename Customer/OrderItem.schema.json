@@ -24,6 +24,12 @@
                     "description": "State of the order item : described in the state machine diagram",
                     "$ref": "ProductOrderStateType.schema.json#/definitions/ProductOrderStateType"
                 },
+                "orderItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "OrderItem.schema.json#OrderItem"
+                    }
+                },
                 "appointment": {
                     "$ref": "AppointmentRef.schema.json#AppointmentRef"
                 },
