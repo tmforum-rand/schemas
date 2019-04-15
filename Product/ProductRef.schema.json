@@ -15,12 +15,6 @@
                     "type": "string",
                     "description": "Unique identifier of the product"
                 },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
-                    }
-                },
                 "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
