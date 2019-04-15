@@ -1,1 +1,0 @@
-There are currently no schemas for this level-0 category

@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "MarketingCampaignRef.schema.json",
+    "title": "MarketingCampaignRef",
+    "definitions": {
+        "MarketingCampaignRef": {
+            "$id": "#MarketingCampaignRef",
+            "description": "MarketingCampaign reference. Marketing campaign represents the carrier-initiated marketing activity which aims at the better recognition about its brand and offerings by the market",
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the marketing campaign"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the marketing campaign"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the marketing campaign"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}

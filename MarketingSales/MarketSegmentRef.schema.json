@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "MarketSegmentRef.schema.json",
+    "title": "MarketSegmentRef",
+    "definitions": {
+        "MarketSegmentRef": {
+            "$id": "#MarketSegmentRef",
+            "description": "MarketSegment reference. A Market Segment is a grouping of Parties, GeographicAreas, SalesChannels, and so forth. MarketSegments are the target of MarketingCampaigns, ProductOfferings, ProductPromotions, ProductPlacements, and ProductPrograms from both internal and external (Competitors, and other Providers) perspective.",
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the Market Segment"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the Market Segment"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the Market Segment"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}
