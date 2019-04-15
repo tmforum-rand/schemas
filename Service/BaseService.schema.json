@@ -1,10 +1,10 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "ServiceRestriction.schema.json", 
-    "title": "ServiceRestriction", 
+    "$id": "BaseService.schema.json", 
+    "title": "BaseService", 
     "definitions": {
-        "ServiceRestriction": {
-            "$id": "#ServiceRestriction",
+        "BaseService": {
+            "$id": "#BaseService",
             "description": "In the context of a service order and depending on the action requested (add/modify/delete/noChange) this data structure captures the configuration to apply to an existing subscribed service or to a new one", 
             "type": "object", 
             "properties": {
