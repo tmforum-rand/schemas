@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "RelatedParty.schema.json",
+  "title": "RelatedParty",
+  "definitions": {
+      "RelatedParty": {
+          "discriminator": "isRef",
+          "$id": "#RelatedParty",
+          "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
+          "type": "object",
+          "properties": {
+            "isRef": {
+              "type": "boolean",
+              "default": true
+  
+            }
+          },
+          "required": [
+            "isRef"
+          ],
+          "allOf": [
+              {
+                  "$ref": "Entity.schema.json#PartyRef"
+              },
+              {
+                "$ref": "Entity.schema.json#Party"
+              }
+              
+          ]
+      }
+  }
+}
