@@ -10,19 +10,18 @@
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier for this particular attachment",
-                    "examples": [
-                        "4aafacbd-11ff-4dc8-b445-305f2215715f",
-                        "2334bc59-726e-4d34-ab96-f50e0561412f"
-                    ]
+                    "description": "Unique identifier for this particular attachment"
+                
                 },
                 "href": {
                     "type": "string",
                     "format": "uri",
-                    "description": "URI for this Attachment",
-                    "examples": [
-                        "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f"
-                    ]
+                    "description": "URI for this Attachment"
+                
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the attachment"
                 },
                 "description": {
                     "type": "string",
@@ -43,10 +42,20 @@
                 "url": {
                     "type": "string",
                     "format": "uri",
-                    "description": "Uniform Resource Locator, is a web page address (a subset of URI)",
-                    "examples": [
-                        "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f"
-                    ]
+                    "description": "Uniform Resource Locator, is a web page address (a subset of URI)"
+                
+                }, 
+                "mimeType": {
+                    "type": "string", 
+                    "description": "Attachment mime type such as extension file for video, picture and document"
+                }, 
+                "size": {
+                    "$ref": "../Common/Quantity.schema.json#Quantity",
+                    "description": "The size of the attachment."
+                 }, 
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod", 
+                    "description": "The period of time for which the attachment is valid"
                 }
             },
             "allOf": [
