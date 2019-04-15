@@ -1,28 +1,23 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RelatedEntityRef.schema.json",
-    "title": "RelatedEntityRef",
+    "$id": "CalendarEventRef.schema.json",
+    "title": "CalendarEventRef",
     "definitions": {
-        "RelatedEntityRef": {
-            "$id": "#RelatedEntityRef",
-            "description": "A reference to an entity, where the type of the entity is not known in advance.",
+        "CalendarEventRef": {
+            "$id": "#CalendarEventRef",
             "type": "object",
             "properties": {
                 "href": {
                     "type": "string",
-                    "description": "The hyperlink to access an entity."
+                    "description": "Reference of the CalendarEvent"
                 },
                 "id": {
                     "type": "string",
-                    "description": "The identifier of an entity."
+                    "description": "Unique identifier of the CalendarEvent"
                 },
                 "name": {
                     "type": "string",
-                    "description": "The name of an entity."
-                },
-                "role": {
-                    "type": "string",
-                    "description": "The role of an entity."
+                    "description": "Name of the CalendarEvent"
                 },
                 "@referredType": {
                     "type": "string",
@@ -31,7 +26,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

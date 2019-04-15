@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Appointment.schema.json", 
+    "title": "Appointment", 
+    "definitions": {
+        "Appointment": {
+            "type": "object", 
+            "description": "An Appointment is an arrangement to do something or meet someone at a particular time, at a place (for face to face appointment) or in a contact medium (for phone appointment).", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Indicates the base type of the resource. Here can be appointment"
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Link to schema describing this REST resource"
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Indicates the type of resource. Here can be appointment"
+                }, 
+                "attachment": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "Attachment.schema.json#/definitions/Attachment"
+                    }
+                }, 
+                "calendarEvent": {
+                    "$ref": "CalendarEventRef.schema.json#/definitions/CalendarEventRef",
+                    "description" : "A calendar event reference (CalendarEventRef). The appointment is associated with a calendar event (an happening at a point of time) associated to a calendar entry."
+                }, 
+                "category": {
+                    "type": "string", 
+                    "description": "Business category : intervention for example or to be more precise after SalesIntervention, orderDeliveryIntervention,..."
+                }, 
+                "contactMedium": {
+                    "$ref": "ContactMedium.schema.json#/definitions/ContactMedium"
+                }, 
+                "creationDate": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "Appointment creation date"
+                }, 
+                "description": {
+                    "type": "string", 
+                    "description": "Short free text describing the appointment"
+                }, 
+                "externalId": {
+                    "type": "string", 
+                    "description": "External reference known by the customer"
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Unique URI used to access to the appointment resource"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the appointment"
+                }, 
+                "lastUpdate": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "Date of last appointment update"
+                }, 
+                "note": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "Note.schema.json#/definitions/Note"
+                    }
+                }, 
+                "place": {
+                    "$ref": "Place.schema.json#/definitions/Place"
+                }, 
+                "relatedEntity": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "RelatedEntityRef.schema.json#/definitions/RelatedEntityRef"
+                    }
+                }, 
+                "relatedParty": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                    }
+                }, 
+                "status": {
+                    "$ref": "StateValues.schema.json#/definitions/AppointmentStateValues"
+                }, 
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                }
+            }, 
+            "required": [
+                "validFor"
+            ]
+        }
+    }
+}

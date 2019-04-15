@@ -1,35 +1,35 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RelatedEntityRef.schema.json",
-    "title": "RelatedEntityRef",
+    "$id": "RelatedPartyRef.schema.json",
+    "title": "RelatedPartyRef",
     "definitions": {
-        "RelatedEntityRef": {
-            "$id": "#RelatedEntityRef",
-            "description": "A reference to an entity, where the type of the entity is not known in advance.",
+        "RelatedPartyRef": {
+            "$id": "#RelatedPartyRef",
+            "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity.",
             "type": "object",
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "The hyperlink to access an entity."
-                },
                 "id": {
                     "type": "string",
-                    "description": "The identifier of an entity."
+                    "description": "Unique identifier of a related party"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the related party, could be a party reference or a party role reference"
                 },
                 "name": {
                     "type": "string",
-                    "description": "The name of an entity."
+                    "description": "Name of the related party"
                 },
                 "role": {
                     "type": "string",
-                    "description": "The role of an entity."
+                    "description": "Role of the related party."
                 },
-                "@referredType": {
+			    "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 }
             },
-            "allOf": [
+			"allOf": [
                 {
                     "$ref": "Entity.schema.json#Entity"
                 }

@@ -4,9 +4,8 @@
     "title": "MediumCharacteristic",
     "definitions": {
         "MediumCharacteristic": {
-            "$id": "#MediumCharacteristic",
-            "description": "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)",
             "type": "object",
+            "description": "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)",
             "properties": {
                 "city": {
                     "type": "string",
@@ -23,6 +22,14 @@
                 "faxNumber": {
                     "type": "string",
                     "description": "The fax number of the contact"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "The type of phone number such as mobile, fixed home, fixed office,…"
+                },
+                "socialNetworkId": {
+                    "type": "string",
+                    "description": "Identifier as a member of a social network"
                 },
                 "phoneNumber": {
                     "type": "string",
@@ -43,15 +50,11 @@
                 "street2": {
                     "type": "string",
                     "description": "Complementary street description"
-                },
-                "mediumType": {
-                    "type": "string",
-                    "description": "Type of medium (fax, mobile phone...)"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

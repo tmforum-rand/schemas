@@ -24,6 +24,10 @@
                         "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f"
                     ]
                 },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the attachment"
+                },
                 "description": {
                     "type": "string",
                     "description": "A narrative text describing the content of the attachment",
@@ -47,6 +51,28 @@
                     "examples": [
                         "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f"
                     ]
+                }, 
+                "mimeType": {
+                    "type": "string", 
+                    "description": "Attachment mime type such as extension file for video, picture and document"
+                }, 
+                "size": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "The size in Bytes of the document or attachment. If this component contains the embedded data then the size is the size of the embedded data; if it is a reference without the data then it is the size of the referenced document"
+                },
+                "sizeUnit": {
+                    "type": "string",
+                    "description": "Unit of measure used for the size"
+                },
+                "content": {
+                    "type": "string",
+					"format": "byte",
+                    "description": "The file considered by the attachment"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod", 
+                    "description": "The period of time for which the attachment is valid"
                 }
             },
             "allOf": [
