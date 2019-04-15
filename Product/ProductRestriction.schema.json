@@ -41,7 +41,7 @@
                 "productSpecification": {
                     "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 },
-                "relatedPlace": {
+                "place": {
                     "type": "array",
                     "items": {
                         "$ref": "../Common/RelatedPlace.schema.json#RelatedPlace"

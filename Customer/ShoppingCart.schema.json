@@ -42,7 +42,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     }
                 }
             },
