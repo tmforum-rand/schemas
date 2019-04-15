@@ -7,6 +7,10 @@
             "$id": "#BillingAccount",
             "description": "A party account used for billing purposes. It includes a description of the bill structure (frequency, presentation media, format and so on).",
             "type": "object",
+            "required": [
+                "name", 
+                "relatedParty"
+            ], 
             "properties": {
                 "creditLimit": {
                     "$ref": "../Common/Money.schema.json#Money",

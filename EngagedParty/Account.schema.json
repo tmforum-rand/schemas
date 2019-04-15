@@ -45,7 +45,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "RelatedParty.schema.json#RelatedParty"
-                    }
+                    },
+                    "minItems": 1
                 },
                 "taxExemption": {
                     "type": "array",
