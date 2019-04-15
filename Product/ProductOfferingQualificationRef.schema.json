@@ -5,7 +5,7 @@
     "definitions": {
         "ProductOfferingQualificationRef": {
             "$id": "#ProductOfferingQualificationRef",
-            "description": "It could be a serviceQualification or a productOfferingQualification that has been executed previously and captured in the productOrder to provide eligibility information",
+            "description": "It's a productOfferingQualification that has been executed previously and captured in the productOrder to provide eligibility information",
             "type": "object",
             "properties": {
                
