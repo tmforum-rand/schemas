@@ -48,13 +48,15 @@
                     "type": "array",
                     "items": {
                         "$ref": "ProductSpecCharacteristicValue.schema.json#ProductSpecCharacteristicValue"
-                    }
+                    },
+                    "description": "A ProductSpecCharacteristicValue object is used to define a set of attributes, each of which can be assigned to a corresponding set of attributes in a ProductSpecCharacteristic object. The values of the attributes in the ProductSpecCharacteristicValue object describe the values of the attributes that a corresponding ProductSpecCharacteristic object can take on."
                 },
                 "productSpecCharRelationship": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductSpecCharRelationship.schema.json#ProductSpecCharRelationship"
-                    }
+                    },
+                    "description": "An aggregation, migration, substitution, dependency or exclusivity relationship between/among Specification Characteristics."
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",

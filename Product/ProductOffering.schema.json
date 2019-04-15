@@ -57,73 +57,87 @@
                     "type": "array",
                     "items": {
                         "$ref": "../Common/Place.schema.json#Place"
-                    }
+                    },
+                    "description": "Place defines the places where the products are sold or delivered."
                 },
                 "serviceLevelAgreement": {
-                    "$ref": "../EngagedParty/SLARef.schema.json#SLARef"
+                    "$ref": "../EngagedParty/SLARef.schema.json#SLARef",
+                    "description": "A service level agreement (SLA) is a type of agreement that represents a formal negotiated agreement between two parties designed to create a common understanding about products, services, priorities, responsibilities, and so forth. The SLA is a set of appropriate procedures and targets formally or informally agreed between parties in order to achieve and maintain specified Quality of Service."
                 },
                 "productSpecification": {
-                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef",
+                    "description": "A ProductSpecification is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to customers or other parties playing a party role."
                 },
                 "channel": {
                     "type": "array",
                     "items": {
                         "$ref": "../Customer/Channel.schema.json#Channel"
-                    }
+                    },
+                    "description": "The channel defines the channel for selling product offerings."
                 },
                 "serviceCandidate": {
-                    "$ref": "../Service/ServiceCandidateRef.schema.json#ServiceCandidateRef"
+                    "$ref": "../Service/ServiceCandidateRef.schema.json#ServiceCandidateRef",
+                    "description": "ServiceCandidate is an entity that makes a ServiceSpecification available to a catalog."
                 },
                 "category": {
                     "type": "array",
                     "items": {
                         "$ref": "CategoryRef.schema.json#CategoryRef"
-                    }
+                    },
+                    "description": "The category resource is used to group product offerings, service and resource candidates in logical containers. Categories can contain other categories and/or product offerings, resource or service candidates."
                 },
                 "resourceCandidate": {
-                    "$ref": "../Resource/ResourceCandidateRef.schema.json#ResourceCandidateRef"
+                    "$ref": "../Resource/ResourceCandidateRef.schema.json#ResourceCandidateRef",
+                    "description": "A resource candidate is an entity that makes a ResourceSpecification available to a catalog."
                 },
                 "productOfferingTerm": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductOfferingTerm.schema.json#ProductOfferingTerm"
-                    }
+                    },
+                    "description": "A condition under which a ProductOffering is made available to Customers. For instance, a productOffering can be offered with multiple commitment periods."
                 },
                 "productOfferingPrice": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductOfferingPrice.schema.json#ProductOfferingPrice"
-                    }
+                    },
+                    "description": "An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased. The price is valid for a defined period of time and may not represent the actual price paid by a customer."
                 },
                 "agreement": {
                     "type": "array",
                     "items": {
                         "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
-                    }
+                    },
+                    "description": "An agreement represents a contract or arrangement, either written or verbal and sometimes enforceable by law, such as a service level agreement or a customer price agreement. An agreement involves a number of other business entities, such as products, services, and resources and/or their specifications."
                 },
                 "attachment": {
                     "type": "array", 
                     "items": {
                         "$ref": "#/definitions/Attachment"
-                    }
+                    },
+                    "description": "Complements the description of an element (for instance a product) through video, pictures..."
                 }, 
                 "marketSegment": {
                     "type": "array", 
                     "items": {
                         "$ref": "../Common/MarketSegmentRef.schema.json#MarketSegmentRef"
-                    }
+                    },
+                    "description": "provides references to the corresponding market segment as target of product offerings. A market segment is grouping of Parties, GeographicAreas, SalesChannels, and so forth."
                 }, 
                 "bundledProductOffering": {
                     "type": "array",
                     "items": {
                         "$ref": "BundledProductOffering.schema.json#BundledProductOffering"
-                    }
+                    },
+                    "description": "A type of ProductOffering that belongs to a grouping of ProductOfferings made available to the market. It inherits of all attributes of ProductOffering."
                 }, 
                 "prodSpecCharValueUse": {
                     "type": "array", 
                     "items": {
                         "$ref": "ProdSpecCharValueUse.schema.json#ProdSpecCharValueUse"
-                    }
+                    },
+                    "description": "A use of the ProdSpecCharacteristicValue by a ProductOffering to which additional properties (attributes) apply or override the properties of similar properties contained in ProdSpecCharacteristicValue. It should be noted that characteristics which their value(s) addressed by this object must exist in corresponding product specification. The available characteristic values for a ProductSpecCharacteristic in a Product specification can be modified at the ProductOffering level. For example, a characteristic 'Color' might have values White, Blue, Green, and Red. But, the list of values can be restricted to e.g. White and Blue in an associated product offering. It should be noted that the list of values in 'ProdSpecCharValueUse' is a strict subset of the list of values as defined in the corresponding product specification characteristics."
                 }
             },
             "allOf": [

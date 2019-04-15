@@ -8,13 +8,13 @@
             "description": "Extra information about a given entity",
             "type": "object",
             "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the note within its containing entity (may or may not be globally unique, depending on provider implementation)"
+                },
                 "author": {
                     "type": "string", 
                     "description": "Author of the note"
-                }, 
-                "system": {
-                    "type": "string", 
-                    "description": "Describes the system from which the action related to this note was done"
                 }, 
                 "date": {
                     "type": "string", 

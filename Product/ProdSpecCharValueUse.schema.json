@@ -36,10 +36,12 @@
                     "type": "array", 
                     "items": {
                         "$ref": "ProductSpecCharacteristicValue.schema.json#ProductSpecCharacteristicValue"
-                    }
+                    },
+                    "description": "A number or text that can be assigned to a ProductSpecCharacteristic."
                 }, 
                 "productSpecification": {
-                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef",
+                    "description": "A ProductSpecification is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to customers or other parties playing a party role."
                 }
             }
         }

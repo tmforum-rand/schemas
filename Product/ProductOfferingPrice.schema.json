@@ -13,7 +13,8 @@
                     "description": "unique id of this resource"
                 }, 
                 "href": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Reference of the ProductOfferingPrice"
                 }, 
                 "name": {
                     "type": "string", 
@@ -85,49 +86,57 @@
                     "type": "array", 
                     "items": {
                         "$ref": "BundledPopRelationship.schema.json#BundledPopRelationship"
-                    }
+                    }, 
+                    "description": "this object represents a bundle relationship from a bundle product offering price (parent) to a simple product offering price (child). A simple product offering price may participate in more than one bundle relationship."
                 }, 
                 "popRelationship": {
                     "type": "array", 
                     "items": {
                         "$ref": "PopRelationship.schema.json#PopRelationship"
-                    }
+                    }, 
+                    "description": "Product Offering Prices related to this Product Offering Price, for example a price alteration such as allowance or discount"
                 }, 
                 "prodSpecCharValueUse": {
                     "type": "array", 
                     "items": {
                         "$ref": "ProdSpecCharValueUse.schema.json#ProdSpecCharValueUse"
-                    }
+                    }, 
+                    "description": "A use of the ProdSpecCharacteristicValue by a ProductOfferingPrice to which additional properties (attributes) apply or override the properties of similar properties contained in ProdSpecCharacteristicValue. It should be noted that characteristics which their value(s) addressed by this object must exist in corresponding product specification. The available characteristic values for a ProductSpecCharacteristic in a Product specification can be modified at the ProductOffering and ProcuctOfferingPrice level. The list of values in ProdSpecCharValueUse is a strict subset of the list of values as defined in the corresponding product specification characteristics."
                 }, 
                 "productOfferingTerm": {
                     "type": "array", 
                     "items": {
                         "$ref": "ProductOfferingTerm.schema.json#ProductOfferingTerm"
-                    }
+                    }, 
+                    "description": "A list of conditions under which a ProductOfferingPrice is made available to Customers. For instance, a POP can be offered with multiple commitment periods."
                 }, 
                 "place": {
                     "type": "array", 
                     "items": {
                         "$ref": "../Common/Place.schema.json#Place"
-                    }
+                    }, 
+                    "description": "Place defines the places where the products are sold or delivered."
                 }, 
                 "constraint": {
                     "type": "array", 
                     "items": {
                         "$ref": "../Common/ConstraintRef.schema.json#ConstraintRef"
-                    }
+                    }, 
+                    "description": "The Constraint resource represents a policy/rule applied to POP."
                 }, 
                 "pricingLogicAlgorithm": {
                     "type": "array", 
                     "items": {
                         "$ref": "PricingLogicAlgorithm.schema.json#PricingLogicAlgorithm"
-                    }
+                    }, 
+                    "description": "The PricingLogicAlgorithm entity represents an instantiation of an interface specification to external rating function (without a modeled behavior in SID). Some of the parameters of the interface definition may be already set (such as price per unit) and some may be gathered during the rating process from the event (such as call duration) or from ProductCharacteristicValues (such as assigned bandwidth)."
                 }, 
                 "tax": {
                     "type": "array", 
                     "items": {
                         "$ref": "../Customer/TaxItem.schema.json#TaxItem"
-                    }
+                    }, 
+                    "description": "An amount of money levied on the price of a Product by a legislative body."
                 }
             },
             "allOf": [
