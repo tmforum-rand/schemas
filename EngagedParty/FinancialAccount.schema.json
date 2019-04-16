@@ -10,7 +10,7 @@
             "properties": { },
             "allOf": [
                 {
-                    "$ref": "../EngagedParty/Account.schema.json#Account"
+                    "$ref": "../EngagedParty/Account.schema.json#/Account"
                 }
             ]
         }
