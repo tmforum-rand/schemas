@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "BaseEvent.schema.json",
+  "title": "BaseEvent",
+  "definitions": {
+      "BaseEvent": {
+          "$id": "#BaseEvent",
+          "type": "object",
+          "description": "Base class for the Events",
+          "properties": {
+              "@referredType": {
+                  "type": "string",
+                  "description": "The actual type of the target instance when needed for disambiguation."
+              },
+              "eventTime": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Time the event occurred"
+              },
+              "eventType": {
+                  "type": "string",
+                  "description": "Type of the event"
+              },
+              "href": {
+                  "type": "string",
+                  "description": "event reference"
+              },
+              "eventId": {
+                  "type": "string",
+                  "description": "ID of the event"
+              }
+          },
+          "allOf": [
+              {
+                  "$ref": "Entity.schema.json#Entity"
+              }
+          ]
+      }
+  }
+}
