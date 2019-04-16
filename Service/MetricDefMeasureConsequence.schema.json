@@ -22,7 +22,7 @@
                 },
                 "repeatAction": {
                     "type": "boolean",
-                    "description": "An indicator use to specify that a consequence should cease \nbeing applied if a value is in the same range as the previous value  or continue being applied if a value is in the same range as the previous value.   \nIf the repeatAcation is True, if the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatAcation is False, the consequence is applied only if the previous MetricMeasure value wasn¡¯t in the same range."
+                    "description": "An indicator used to specify that a consequence should cease \nbeing applied if a value is in the same range as the previous value or continue being applied if a value is in the same range as the previous value. \nIf the repeatAction is True, if the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatAction is False, the consequence is applied only if the previous MetricMeasure value was not in the same range."
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",

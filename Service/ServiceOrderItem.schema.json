@@ -22,17 +22,17 @@
                 },
                 "service": {
                     "description": "The Service to be acted on by the order item",
-                    "$ref": "ServiceRestriction.schema.json#/definitions/ServiceRestriction"
+                    "$ref": "BaseService.schema.json#/definitions/BaseService"
                 }, 
                 "appointment": {
                     "description": "An appointment that was set up with a related party for this order item",
                     "$ref": "../Customer/AppointmentRef.schema.json#/definitions/AppointmentRef"
                 },
-                "orderItemRelationship": {
+                "serviceOrderItemRelationship": {
                     "type": "array",
                     "description": "A list of order items related to this order item",
                     "items": {
-                        "$ref": "ServiceOrderItemRelationship.schema.json#/definitions/ServiceOrderItemRelationship"
+                        "$ref": "OrderItemRelationship.schema.json#/definitions/OrderItemRelationship"
                     }
                 }
             },

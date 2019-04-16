@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "RelatedGeographicLocationRefOrValue.schema.json",
+    "title": "RelatedGeographicLocationRefOrValue",
+    "definitions": {
+        "RelatedGeographicLocationRefOrValue": {
+            "discriminator": "isRef",
+            "$id": "#RelatedGeographicLocationRefOrValue",
+            "description": "#TODO",
+            "type": "object",
+            "properties": {
+              "isRef": {
+                "type": "boolean",
+                "default": true
+    
+              },
+              "role":{
+                "type": "string"
+              }
+            },
+            "required": [
+              "isRef",
+              "role"
+            ],
+            "allOf": [
+                {
+                    "$ref": "RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
+                }
+                
+            ]
+        }
+    }
+  }

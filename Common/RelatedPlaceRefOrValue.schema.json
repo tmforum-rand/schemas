@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "RelatedPlaceRefOrValue.schema.json",
+    "title": "RelatedPlaceRefOrValue",
+    "definitions": {
+        "RelatedPlaceRefOrValue": {
+            "discriminator": "isRef",
+            "$id": "#RelatedPlaceRefOrValue",
+            "description": "#TODO",
+            "type": "object",
+            "properties": {
+              "isRef": {
+                "type": "boolean",
+                "default": true
+    
+              },
+              "role":{
+                "type": "string"
+              }
+            },
+            "required": [
+              "isRef",
+              "role"
+            ],
+            "allOf": [
+                {
+                    "$ref": "PlaceRef.schema.json#PlaceRef"
+                },
+                {
+                  "$ref": "Place.schema.json#Place"
+                }
+                
+            ]
+        }
+    }
+  }
