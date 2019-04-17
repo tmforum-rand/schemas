@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "AttachmentRefOrValue.schema.json",
+    "title": "AttachmentRefOrValue",
+    "definitions": {
+        "AttachmentRefOrValue": {
+            "discriminator": "isRef",
+            "$id": "#AttachmentRefOrValue",
+            "description": "An attachment by value or by reference.",
+            "type": "object",
+            "properties": {
+              "isRef": {
+                "type": "boolean",
+                "default": true
+
+              }
+            },
+            "required": [
+              "isRef",
+              "role"
+            ],
+            "allOf": [
+                {
+                    "$ref": "AttachmentRef.schema.json#AttachmentRef"
+                },
+                {
+                  "$ref": "Attachment.schema.json#Attachment"
+                }
+                
+            ]
+        }
+    }
+  }
