@@ -57,47 +57,54 @@
                     "type": "array",
                     "items": {
                         "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
-                    }
+                    },
+                    "description": "A related party defines party or party role linked to a specific entity."
                 },
                 "productSpecCharacteristic": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductSpecCharacteristic.schema.json#ProductSpecCharacteristic"
-                    }
+                    },
+                    "description": "A characteristic quality or distinctive feature of a ProductSpecification.  The characteristic can be take on a discrete value, such as color, can take on a range of values, (for example, sensitivity of 100-240 mV), or can be derived from a formula (for example, usage time (hrs) = 30 - talk time *3). Certain characteristics, such as color, may be configured during the ordering or some other process."
                 },
                 "serviceSpecification": {
                     "type": "array",
                     "items": {
                         "$ref": "../Service/ServiceSpecificationRef.schema.json#ServiceSpecificationRef"
-                    }
+                    },
+                    "description": "ServiceSpecification(s) required to realize a ProductSpecification."
                 },
                 "productSpecificationRelationship": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductSpecificationRelationship.schema.json#ProductSpecificationRelationship"
-                    }
+                    },
+                    "description": "A migration, substitution, dependency or exclusivity relationship between/among product specifications."
                 },
                 "resourceSpecification": {
                     "type": "array",
                     "items": {
                         "$ref": "../Resource/ResourceSpecificationRef.schema.json#ResourceSpecificationRef"
-                    }
+                    },
+                    "description": "The ResourceSpecification is required to realize a ProductSpecification."
                 },
                 "attachment": {
                     "type": "array",
                     "items": {
                         "$ref": "../Common/Attachment.schema.json#Attachment"
-                    }
+                    },
+                    "description": "Complements the description of an element (for instance a product) through video, pictures..."
                 },
                 "bundledProductSpecification": {
                     "type": "array",
                     "items": {
                         "$ref": "BundledProductSpecification.schema.json#BundledProductSpecification"
-                    }
+                    },
+                    "description": "A type of ProductSpecification that belongs to a grouping of ProductSpecifications made available to the market. It inherits of all attributes of ProductSpecification."
                 },
                 "targetProductSchema": {
                     "description": "A target product schema reference. The reference object to the schema and type of target product which is described by product specification.",
-                    "$ref": "TargetProductSchema.schema.json#/definitions/TargetProductSchema"
+                    "$ref": "TargetProductSchema.schema.json#TargetProductSchema"
                 }
             },
             "allOf": [

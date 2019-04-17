@@ -24,8 +24,9 @@
                     "type": "string",
                     "description": "Version of the product specification"
                 },
-                "targetResourceSchema": {
-                    "$ref": "../Service/TargetServiceSchema.schema.json#TargetServiceSchema"
+                "targetProductSchema": {
+                    "description": "A target product schema reference. The reference object to the schema and type of target product which is described by product specification.",
+                    "$ref": "TargetProductSchema.schema.json#TargetProductSchema"
                 },
                 "@referredType": {
                     "type": "string",

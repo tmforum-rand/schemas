@@ -16,29 +16,51 @@
                     "type": "string",
                     "description": "A narrative that explains in detail what the productSpecCharacteristic is"
                 },
+                "extensible": {
+                    "type": "boolean", 
+                    "description": "An indicator that specifies that the values for the characteristic can be extended by adding new values when instantiating a characteristic for a product"
+                }, 
+                "isUnique": {
+                    "type": "boolean", 
+                    "description": "An indicator that specifies if a value is unique for the specification. Possible values are; \"unique while value is in effect\" and \"unique whether value is in effect or not\""
+                }, 
+                "maxCardinality": {
+                    "type": "integer", 
+                    "description": "The maximum number of instances a CharacteristicValue can take on. For example, zero to five phone numbers in a group calling plan, where five is the value for the maxCardinality"
+                }, 
+                "minCardinality": {
+                    "type": "integer", 
+                    "description": "The minimum number of instances a CharacteristicValue can take on. For example, zero to five phone numbers in a group calling plan, where zero is the value for the minCardinality"
+                }, 
                 "name": {
                     "type": "string",
                     "description": "Name of the productSpecCharacteristic"
                 },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The period for which the productSpecCharacteristic is valid"
-                },
+                "regex": {
+                    "type": "string", 
+                    "description": "A rule or principle represented in regular expression used to derive the value of a characteristic value"
+                }, 
                 "valueType": {
                     "type": "string",
                     "description": "A kind of value that the characteristic can take on, such as numeric, text and so forth"
-                },
-                "productSpecCharRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductSpecCharRelationship.schema.json#ProductSpecCharRelationship"
-                    }
                 },
                 "productSpecCharacteristicValue": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductSpecCharacteristicValue.schema.json#ProductSpecCharacteristicValue"
-                    }
+                    },
+                    "description": "A ProductSpecCharacteristicValue object is used to define a set of attributes, each of which can be assigned to a corresponding set of attributes in a ProductSpecCharacteristic object. The values of the attributes in the ProductSpecCharacteristicValue object describe the values of the attributes that a corresponding ProductSpecCharacteristic object can take on."
+                },
+                "productSpecCharRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ProductSpecCharRelationship.schema.json#ProductSpecCharRelationship"
+                    },
+                    "description": "An aggregation, migration, substitution, dependency or exclusivity relationship between/among Specification Characteristics."
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The period for which the productSpecCharacteristic is valid"
                 }
             },
             "allOf": [
