@@ -12,10 +12,10 @@
                     "type": "string",
                     "description": "The role of an entity."
                 }
-              },
+            },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                    "$ref": "EntityRef.schema.json#EntityRef"
                 }
             ]
         }
