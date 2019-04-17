@@ -33,7 +33,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "EntityRef.schema.json#EntityRef"
                 }
             ]
         }
