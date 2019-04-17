@@ -1,39 +1,25 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "PartyRef.schema.json",
-    "title": "PartyRef",
-    "definitions": {
-        "PartyRef": {
-            "$id": "#PartyRef",
-            "description": "Party reference. A party represents an organization or an individual.",
-            "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "Text describing the referred party"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the referred party (such as a partner or any other party role)."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the referred party"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the referred party (such as a partner or any other party role)"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "PartyRef.schema.json",
+  "title": "PartyRef",
+  "definitions": {
+      "PartyRef": {
+          "$id": "#PartyRef",
+          "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
+          "type": "object",
+          "properties": {
+              "role": {
+                  "type": "string",
+                  "description": "Unique identifier of a related party"
+              }
             },
-            "allOf": [
+			"allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "EntityRef.schema.json#EntityRef"
                 }
             ]
         }
     }
 }
+
+      

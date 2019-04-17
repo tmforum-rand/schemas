@@ -6,7 +6,7 @@
         "RelatedPlaceRefOrValue": {
             "discriminator": "isRef",
             "$id": "#RelatedPlaceRefOrValue",
-            "description": "#TODO",
+            "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
             "type": "object",
             "properties": {
               "isRef": {

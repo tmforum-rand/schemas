@@ -12,17 +12,21 @@
                     "type": "string",
                     "description": "Description of the productOfferingQualification"
                 },
+                "instantSyncQualification": {
+                    "type": "boolean",
+                    "description": "An indicator which when the value is \"true\" means that requester expects to get qualifcation result in the response"
+                },                
                 "effectiveQualificationDate": {
                     "type": "string",
                     "format": "date-time",
                     "description": "Effective date to productOfferingQualification completion"
                 },
-                "estimatedResponseDate": {
+                "expectedPOQCompletionDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Date when the requester expect to provide an answer for the qualification request."
+                    "description": "Date when the requester expect to provide an answer for the qualification request"
                 },
-                "expectedQualificationDate": {
+                "requestedPOQCompletionDate": {
                     "type": "string",
                     "format": "date-time",
                     "description": "Deadline date when the requester expected a qualification answer"
@@ -61,8 +65,8 @@
                     "type": "string"
                 },
                 "state": {
-                    "type": "string",
-                    "description": "State of the productOfferingQualification (acknowledged, inProgress, terminatedWithError, done)"
+                    "description": "State of the productOfferingQualification defined in the state engine",
+                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType"
                 },
                 "productOfferingQualificationItem": {
                     "type": "array",
@@ -83,7 +87,7 @@
                     }
                 },
                 "channel": {
-                    "$ref": "../Customer/Channel.schema.json#Channel"
+                    "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
                 }
             },
             "allOf": [

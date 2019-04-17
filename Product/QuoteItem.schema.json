@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteItem.schema.json",
+    "title": "QuoteItem",
+    "definitions": {
+        "QuoteItem": {
+            "$id": "#QuoteItem",
+            "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
+            "type": "object",
+            "properties": {
+                "action": {
+                    "description": "Action to be performed on this quote item (add, modify, remove, etc.)",
+                    "$ref": "ProductActionType.schema.json#/definitions/ProductActionType"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the quote item (generally it is a sequence number 01, 02, 03, ...)"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "description": "Quantity asked for this quote item"
+                },
+                "state": {
+                    "description": "State of the quote item : described in the state machine diagram",
+                    "$ref": "QuoteItemStateType.schema.json#/definitions/QuoteItemStateType"
+                },
+                "quoteItemRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuoteItemRelationship.schema.json#QuoteItemRelationship"
+                    }
+                },
+                "quoteItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuoteItem.schema.json#QuoteItem"
+                    }
+                },
+                "attachment": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
+                    }
+                },
+                "quoteItemAuthorization": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Authorization.schema.json#Authorization"
+                    }
+                },
+                "note": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/Note.schema.json#Note"
+                    }
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                    }
+                },
+                "appointment": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AppointmentRef.schema.json#AppointmentRef"
+                    }
+                },
+                "productOffering": {
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
+                },
+                "quoteItemPrice": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuotePrice.schema.json#QuotePrice"
+                    }
+                },
+                "product": {
+                    "$ref": "../Product/BaseProductReforValue.schema.json#BaseProductRefOrValue"
+                },
+                "qualification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/QualificationRef.schema.json#QualificationRef"
+                    }
+                },
+                "itemTerm": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuoteTerm.schema.json#QuoteTerm"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}

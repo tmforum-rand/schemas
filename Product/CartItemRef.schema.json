@@ -1,19 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "ProductRef.schema.json",
-    "title": "ProductRef",
+    "$id": "CartItemRef.schema.json",
+    "title": "CartItemRef",
     "definitions": {
-        "ProductRef": {
-            "$id": "#ProductRef",
+        "CartItemRef": {
+            "$id": "#CartItemRef",
+            "description": "CartIIem reference. A CartItem is an identified part of the shopping cart.",
             "type": "object",
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the product"
-                },
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier of the product"
+                    "description": "Unique identifier of the cart item"
                 },
                 "@referredType": {
                     "type": "string",
