@@ -1,17 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "ProductPrice.schema.json",
-    "title": "ProductPrice",
+    "$id": "CartPrice.schema.json",
+    "title": "CartPrice",
     "definitions": {
-        "ProductPrice": {
-            "$id": "#ProductPrice",
-            "description": "An amount, usually of money, that represents the actual price paid by a Customer for a purchase, a rent or a lease of a Product. The price is valid for a defined period of time.",
+        "CartPrice": {
+            "$id": "#CartPrice",
+            "description": "An amount, usually of money, that represents the actual price paid by the customer for this item. May represent the total price of the shopping cart or the total of the cart item depending on the relation",
             "type": "object",
-			"required": ["priceType","price"],
             "properties": {
                 "description": {
                     "type": "string",
-                    "description": "A narrative that explains in detail the semantics of this product price."
+                    "description": "A narrative that explains in detail the semantics of this order item price."
                 },
                 "name": {
                     "type": "string",
@@ -19,13 +18,10 @@
                 },
                 "productOfferingPrice": {
                     "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
-                },  
-                "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
-                },
+                },           
                 "priceType": {
                     "type": "string",
-                    "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth."
+                    "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
                 },
                 "recurringChargePeriod": {
                     "type": "string",
@@ -35,14 +31,14 @@
                     "type": "string",
                     "description": "Could be minutes, GB..."
                 },
-                "productPriceAlteration": {
+                "price": {
+                    "$ref": "Price.schema.json#Price"
+                },
+                "priceAlteration": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/PriceAlteration.schema.json#PriceAlteration"
-                    }    
-                },
-                "price": {
-                    "$ref": "../Customer/Price.schema.json#Price"
+                        "$ref": "PriceAlteration.schema.json#PriceAlteration"
+                    }
                 }
             },
             "allOf": [

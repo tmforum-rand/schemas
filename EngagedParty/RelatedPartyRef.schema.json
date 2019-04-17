@@ -1,24 +1,28 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "EntityRef.schema.json",
-    "title": "EntityRef",
+    "$id": "RelatedPartyRef.schema.json",
+    "title": "RelatedPartyRef",
     "definitions": {
-        "EntityRef": {
-            "$id": "#EntityRef",
-            "description": "Entity reference schema to be use for all entityRef class.",
+        "RelatedPartyRef": {
+            "$id": "#RelatedPartyRef",
+            "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity.",
             "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier of a related entity."
+                    "description": "Unique identifier of a related party"
                 },
                 "href": {
                     "type": "string",
-                    "description": "Reference of the related entity."
+                    "description": "Reference of the related party, could be a party reference or a party role reference"
                 },
                 "name": {
                     "type": "string",
-                    "description": "Name of the related entity."
+                    "description": "Name of the related party"
+                },
+                "role": {
+                    "type": "string",
+                    "description": "Role of the related party."
                 },
 			    "@referredType": {
                     "type": "string",

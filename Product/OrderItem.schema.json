@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "OrderItem.schema.json",
+    "title": "OrderItem",
+    "definitions": {
+        "OrderItem": {
+            "$id": "#OrderItem",
+            "description": "An identified part of the order. A product order is decomposed into one or more order items.",
+            "type": "object",
+            "properties": {
+                "action": {
+                    "description": "he action to be carried out on the Product. Can be: add, modify, delete, noChange",
+					"$ref": "OrderItemActionType.schema.json#/definitions/OrderItemActionType"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the line item (generally it is a sequence number 01, 02, 03, ...)"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "description": "Quantity ordered"
+                },
+                "state": {
+                    "description": "State of the order item : described in the state machine diagram",
+                    "$ref": "ProductOrderItemStateType.schema.json#/definitions/ProductOrderItemStateType"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}

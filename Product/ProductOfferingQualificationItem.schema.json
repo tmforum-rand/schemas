@@ -16,13 +16,17 @@
                     "type": "string",
                     "description": "Id of the productOfferingQualification item"
                 },
+                "action": {
+                    "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\" - by default add is considered",
+                    "$ref": "ProductActionType.schema.json#/definitions/ProductActionType"
+                },
                 "qualificationItemResult": {
                     "type": "string",
                     "description": "Qualification result for this productOfferingQualification item. It could be:\n\n qualified (request productOffering or productSpecification are available), \n unqualified (requested not available and not alternate available),\n alternate (requested not available but proposal available)\n"
                 },
                 "state": {
-                    "type": "string",
-                    "description": "State of the productOfferingQualification item (acknowledged, inProgress, terminatedWithError, done)"
+                    "description": "State of the productOfferingQualification item defined in the state engine",
+                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType"
                 },
                 "eligibilityUnavailabilityReason": {
                     "type": "array",
@@ -46,7 +50,7 @@
                     }
                 },
                 "product": {
-                    "$ref": "Product.schema.json#Product"
+                    "$ref": "BaseProductRefOrValue.schema.json#BaseProductRefOrValue"
                 },
                 "terminationError": {
                     "type": "array",

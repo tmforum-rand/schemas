@@ -46,9 +46,9 @@
                     "format": "date-time",
                     "description": "Is the date from which the product starts"
                 },
-                "status": {
-                    "type": "string",
-                    "description": "Is the lifecycle status of the product."
+                "status": {                
+                    "description": "Is the lifecycle status of the product.",
+                    "$ref": "ProductStatusType.schema.json#/definitions/ProductStatusType"
                 },
                 "terminationDate": {
                     "type": "string",
@@ -62,24 +62,15 @@
                     }
                 },
                 "billingAccount": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
-                    }
+                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "productOffering": {
                     "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
                 },
-                "agreement": {
+                "productCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
-                    }
-                },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductCharacteristic.schema.json#ProductCharacteristic"
+                        "$ref": "Characteristic.schema.json#Characteristic"
                     }
                 },
                 "productRelationship": {
@@ -91,7 +82,7 @@
                 "realizingResource": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Resource/RealizingResourceRef.schema.json#RealizingResourceRef"
+                        "$ref": "../Resource/ResourceRef.schema.json#ResourceRef"
                     }
                 },
                 "relatedParty": {
@@ -109,10 +100,28 @@
                 "productSpecification": {
                     "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 },
-                "place": {
+                "productOrder": {
+                    "type": "array",
+                    "items": {                      
+                        "$ref": "RelatedProductOrderItem.schema.json#RelatedProductOrderItem"
+                    }    
+                },
+                "agreement": {
+                    "type": "array",
+                    "items": {                      
+                        "$ref": "AgreementItemRef.schema.json#AgreementItemRef"
+                    }    
+                },
+                "productTerm": {
+                    "type": "array",
+                    "items": {  
+                        "$ref": "ProductTerm.schema.json#ProductTerm"
+                    }
+                },
+                "relatedPlace": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Place.schema.json#Place"
+                        "$ref": "../Common/RelatedPlace.schema.json#RelatedPlace"
                     }
                 }
             },
