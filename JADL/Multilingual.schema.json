@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Multilingual.schema.json",
+  "title": "Multilingual",
+
+  "definitions": {
+    "Multilingual":{
+      "description": "Serialization format for JADL multilingual text",
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/definitions/supportedLanguages"
+      },
+      "patternProperties": {
+        ".*": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "supportedLanguages": {
+      "enum": [
+        "EN",
+        "ZH"
+      ]
+    }
+  }
+}
