@@ -13,6 +13,6 @@
           "$ref": "Multilingual.schema.json#/definitions/Multilingual"
         }
       }
+    }
   }
-}
 }

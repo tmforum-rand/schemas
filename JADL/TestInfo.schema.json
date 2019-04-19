@@ -15,16 +15,7 @@
           "$ref": "Multilingual.schema.json#/definitions/Multilingual"
         },
         "version": {
-          "properties": {
-            "description": {
-              "$ref": "Multilingual.schema.json#/definitions/Multilingual",
-              "description": "A longer description of the artifact. Should be different from the title. GitHub-flavored Markdown is allowed."
-            },
-            "versionNumber": {
-              "type": "string",
-              "description": "A version number of the artifact"
-            }
-          }
+          "$ref": "TestVersion.schema.json#/definitions/TestVersion"
         },
         "attributes": {
           "type": "array",
@@ -37,15 +28,7 @@
           "description": "The terms of service for the artifact"
         },
         "contact": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string",
-              "format": "email"
-            }
-          }
+          "$ref": "TestContact.schema.json#/definitions/TestContact"
         },
         "license": {
           "$ref": "License.schema.json#/definitions/License"

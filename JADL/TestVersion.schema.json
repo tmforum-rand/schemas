@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "TestVersion.schema.json",
+  "title": "TestVersion",
+  "definitions": {
+    "TestVersion": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "$ref": "Multilingual.schema.json#/definitions/Multilingual",
+          "description": "A longer description of the artifact. Should be different from the title. GitHub-flavored Markdown is allowed."
+        },
+        "versionNumber": {
+          "type": "string",
+           "description": "A version number of the artifact"
+        }
+      }
+    }
+  }
+}
