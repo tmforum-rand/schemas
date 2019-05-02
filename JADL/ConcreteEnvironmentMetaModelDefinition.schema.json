@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ConcreteEnvironmentMetaModelDefinition.schema.json",
+    "title": "ConcreteEnvironmentMetaModelDefinition",
+    "definitions": {
+        "ConcreteEnvironmentMetaModelDefinition": {
+            "type": "object",
+            "description": "JADL test environment metamodel definition",
+            "properties": {
+                "testResourceAPIs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestResourceAPI.schema.json#/TestResourceAPIRef"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}

@@ -8,20 +8,15 @@
       "description": "Serialization format for JADL multilingual text",
       "type": "object",
       "propertyNames": {
-        "$ref": "#/definitions/supportedLanguages"
+        "$ref": "SupportedLanguages.schema.json#/definitions/SupportedLanguages"
       },
       "patternProperties": {
         ".*": {
-          "type": "string"
+          "type": "string",
+          "example": "This text is in English"
         }
       },
       "additionalProperties": false
-    },
-    "supportedLanguages": {
-      "enum": [
-        "EN",
-        "ZH"
-      ]
     }
   }
 }

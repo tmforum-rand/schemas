@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "TestCaseRef.schema.json",
+  "title": "TestCaseRef",
+  "definitions": {
+      "TestCaseRef": {
+          "type": "object",
+          "description": "A reference to a managed test case artifact",
+          "properties": {
+
+          },
+          "allOf": [
+              {
+                  "$ref": "EntityRef.schema.json#/EntityRef"
+              }
+          ]
+      }
+  }
+}

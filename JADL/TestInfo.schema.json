@@ -25,7 +25,8 @@
         },
         "termsOfService": {
           "type": "string",
-          "description": "The terms of service for the artifact"
+          "description": "The terms of service for the artifact",
+          "example": "My terms of service"
         },
         "contact": {
           "$ref": "TestContact.schema.json#/definitions/TestContact"

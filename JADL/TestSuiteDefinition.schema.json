@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TestSuiteDefinition.schema.json",
+    "title": "TestSuiteDefinition",
+    "definitions": {
+        "TestSuiteDefinition": {
+            "type": "object",
+            "description": "JADL test suite definition",
+            "properties": {
+                "testDataInstances": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestDataInstanceRef.schema.json#/TestDataInstanceRef"
+                    }
+                },
+                "testCases": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestCase.schema.json#/TestCaseRef"
+                    }
+                },
+                "testSuites": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestSuite.schema.json#/TestSuiteRef"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}

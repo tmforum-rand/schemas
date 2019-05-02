@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "NonFunctionalTestModelDefinition.schema.json",
+    "title": "NonFunctionalTestModelDefinition",
+    "definitions": {
+        "NonFunctionalTestModelDefinition": {
+            "type": "object",
+            "description": "JADL non-functional test model definition",
+            "properties": {
+                "testDataInstances": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestDataInstanceRef.schema.json#/TestDataInstanceRef"
+                    }
+                },
+                "testCases": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestCaseRef.schema.json#/TestCaseRef"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}

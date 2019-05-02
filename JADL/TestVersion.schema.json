@@ -8,11 +8,12 @@
       "properties": {
         "description": {
           "$ref": "Multilingual.schema.json#/definitions/Multilingual",
-          "description": "A longer description of the artifact. Should be different from the title. GitHub-flavored Markdown is allowed."
+          "description": "A longer description of the artifact; should be different from the title; GitHub-flavored Markdown is allowed"
         },
         "versionNumber": {
           "type": "string",
-           "description": "A version number of the artifact"
+          "description": "A version number of the artifact",
+          "example": "1.0.12"
         }
       }
     }

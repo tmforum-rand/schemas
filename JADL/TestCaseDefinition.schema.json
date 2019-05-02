@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TestCaseDefinition.schema.json",
+    "title": "TestCaseDefinition",
+    "definitions": {
+        "TestCaseDefinition": {
+            "type": "object",
+            "description": "JADL test case definition (test resources, execution flow, etc.)",
+            "properties": {
+                "testDataSchemas": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestDataSchemaRef.schema.json#/TestDataSchemaRef"
+                    }
+                },
+                "concreteEnvironmentMetamodel" : {
+                  "$ref": "ConcreteEnvironmentMetaModelRef.schema.json#/ConcreteEnvironmentMetaModelRef"
+                },
+                "testResourceAPIs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestResourceAPIRef.schema.json#/TestResourceAPIRef"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}
