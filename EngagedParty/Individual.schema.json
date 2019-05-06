@@ -1,131 +1,136 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "Individual.schema.json",
-    "title": "Individual",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Individual.schema.json", 
+    "title": "Individual", 
     "definitions": {
         "Individual": {
-            "$id": "#Individual",
-            "description": "Represents a physical person",
-            "type": "object",
+            "type": "object", 
+            "description": "Individual represents a single human being (a man, woman or child). The individual can be a customer, an employee or any other person that the organization needs to store information about.", 
             "properties": {
-                "birthDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Birth date"
-                },
-                "countryOfBirth": {
-                    "type": "string",
-                    "description": "The country of birth"
-                },
-                "deathDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Death date"
-                },
-                "familyName": {
-                    "type": "string",
-                    "description": "Last name"
-                },
-                "formattedName": {
-                    "type": "string",
-                    "description": "A formatted name useful for specific contexts (Chinese, Japanese, Korean,...)"
-                },
-                "fullName": {
-                    "type": "string",
-                    "description": "Full name flatten (first, middle, and last names)"
-                },
                 "gender": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Gender"
                 },
-                "givenName": {
-                    "type": "string",
-                    "description": "First name"
+                "placeOfBirth": {
+                    "type": "string", 
+                    "description": "Reference to the place where the individual was born"
                 },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the individual"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier for the individual"
-                },
-                "location": {
-                    "type": "string",
-                    "description": "Temporary current location of the individual (may be used if the individual has approved its sharing)"
-                },
-                "maritalStatus": {
-                    "type": "string",
-                    "description": "Marital status (married, divorced, widow...)"
-                },
-                "middleName": {
-                    "type": "string",
-                    "description": "Middle name"
+                "countryOfBirth": {
+                    "type": "string", 
+                    "description": "Country where the individual was born"
                 },
                 "nationality": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Nationality"
                 },
-                "placeOfBirth": {
-                    "type": "string",
-                    "description": "An hyperlink to the place of birth"
+                "maritalStatus": {
+                    "type": "string", 
+                    "description": "Marital status (married, divorced, widow ...)"
                 },
-                "status": {
-                    "type": "string",
-                    "description": "Status of the individual (Initialized, Validated, Deceased)"
+                "birthDate": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "Birth date"
+                },
+                "deathDate": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "Date of death"
                 },
                 "title": {
-                    "type": "string",
-                    "description": "Used for titles (aristocratic, social...): Pr, Dr, Sir..."
+                    "type": "string", 
+                    "description": "Useful for titles (aristocratic, social,...) Pr, Dr, Sir, ..."
+                },				
+                "aristocraticTitle": {
+                    "type": "string", 
+                    "description": "e.g. Baron, Graf, Earl,\u2026"
                 },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
-                    }
+                "generation": {
+                    "type": "string", 
+                    "description": "e.g.. Sr, Jr, III (the third),\u2026"
                 },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
-                    }
+                "givenName": {
+                    "type": "string", 
+                    "description": "First name of the individual"
                 },
-                "externalReference": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/ExternalReference.schema.json#ExternalReference"
-                    }
+                "preferredGivenName": {
+                    "type": "string", 
+                    "description": "Contains the chosen name by which the individual prefers to be addressed. Note: This name may be a name other than a given name, such as a nickname"
                 },
-                "identification": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "IndividualIdentification.schema.json#IndividualIdentification"
-                    }
+                "familyNamePrefix": {
+                    "type": "string", 
+                    "description": "Family name prefix"
                 },
-                "disability": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/Disability.schema.json#Disability"
-                    }
+                "familyName": {
+                    "type": "string", 
+                    "description": "Contains the non-chosen or inherited name. Also known as last name in the Western context"
                 },
+                "legalName": {
+                    "type": "string", 
+                    "description": "Legal name or birth name (name one has for official purposes)"
+                },
+                "middleName": {
+                    "type": "string", 
+                    "description": "Middles name or initial"
+                },
+                "fullName": {
+                    "type": "string", 
+                    "description": "Full name flatten (first, middle, and last names)"
+                },				
+                "formattedName": {
+                    "type": "string", 
+                    "description": "A fully formatted name in one string with all of its pieces in their proper place and all of the necessary punctuation. Useful for specific contexts (Chinese, Japanese, Korean,\u2026)"
+                }, 
+                "location": {
+                    "type": "string", 
+                    "description": "Temporary current location od the individual (may be used if the individual has approved its sharing)"
+                },
+				"status": {
+				    "description": "Status of the individual",
+                    "$ref": "IndividualStateValues.schema.json#/definitions/IndividualStateValues"
+                }, 			
                 "otherName": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "OtherName.schema.json#OtherName"
+                        "$ref": "OtherNameIndividual.schema.json#/definitions/OtherNameIndividual"
                     }
-                },
-                "contactMedium": {
-                    "type": "array",
+                }, 				
+                "individualIdentification": {
+                    "type": "array", 
                     "items": {
-                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                        "$ref": "IndividualIdentification.schema.json#/definitions/IndividualIdentification"
                     }
-                }
+                },				
+                "disability": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "Disability.schema.json#/definitions/Disability"
+                    }
+                }, 
+                "languageAbility": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "LanguageAbility.schema.json#/definitions/LanguageAbility"
+                    }
+                },  
+                "skill": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "Skill.schema.json#/definitions/Skill"
+                    }
+                } 
             },
-            "allOf": [
+            "required": [
+                "id"
+            ],
+			"allOf": [
+			    {
+                    "$ref": "Party.schema.json#Party"
+                },
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
-            ]
+            ]			
         }
     }
 }

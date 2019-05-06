@@ -5,95 +5,17 @@
     "definitions": {
         "BillingAccount": {
             "$id": "#BillingAccount",
-            "description": "A party account used for billing purposes. It includes a description of the bill structure (frequency, presentation media, format and so on).",
+            "description": "A party account used for billing purposes. It includes a description of the bill structure (frequency, presentation media, format and so on). It is a specialization of entity PartyAccount.",
             "type": "object",
+            "required": [
+                "name", 
+                "relatedParty"
+            ], 
             "properties": {
-                "creditLimit": {
-                    "$ref": "../Common/Money.schema.json#Money",
-                    "description": "The maximum amount of money that may be charged on an account"
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Detailed description of the party account"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Unique reference of the account"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the account"
-                },
-                "lastModified": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date of last modification of the account"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the account"
-                },
-                "state": {
-                    "type": "string",
-                    "description": "Contains the lifecycle state such as: Active, Closed, Suspended and so on."
-                },
-                "accountType": {
-                    "type": "string",
-                    "description": "A categorization of an account, such as individual, joint, and so forth, whose instances share some of the same characteristics. Note: for flexibility we use a String here but an implementation may use an enumeration with a limited list of valid values."
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
-                    }
-                },
-                "taxExemption": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/AccountTaxExemption.schema.json#AccountTaxExemption"
-                    }
-                },
-                "contact": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/Contact.schema.json#Contact"
-                    }
-                },
-                "accountBalance": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/AccountBalance.schema.json#AccountBalance"
-                    }
-                },
-                "accountRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/AccountRelationship.schema.json#AccountRelationship"
-                    }
-                },
-                "paymentStatus": {
-                    "type": "string",
-                    "description": "The condition of the account, such as due, paid, in arrears."
-                },
-                "billStructure": {
-                    "$ref": "../Customer/BillStructure.schema.json#BillStructure"
-                },
-                "paymentPlan": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/PaymentPlan.schema.json#PaymentPlan"
-                    }
-                },
-                "financialAccount": {
-                    "$ref": "../EngagedParty/FinancialAccountRef.schema.json#FinancialAccountRef"
-                },
-                "defaultPaymentMethod": {
-                    "$ref": "../Customer/PaymentMethodRef.schema.json#PaymentMethodRef"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../Common/PartyAccount.schema.json#PartyAccount"
                 }
             ]
         }

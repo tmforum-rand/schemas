@@ -4,14 +4,31 @@
     "title": "ProductOrder",
     "definitions": {
         "ProductOrder": {
-            "$id": "#ProductOrder",
-            "description": "A Product Order is a type of order which  can  be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa,",
             "type": "object",
             "required": ["productOrderItem"],
+            "description": "A Product Order is a type of order which  can  be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa,",
             "properties": {
+                "billingAccount": {
+                    "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
+                },
+                "cancellationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when the order is cancelled. This is used when order is cancelled. "
+                },
+                "cancellationReason": {
+                    "type": "string",
+                    "description": "Reason why the order is cancelled. This is used when order is cancelled. "
+                },
                 "category": {
                     "type": "string",
                     "description": "Used to categorize the order from a business perspective that can be useful for the OM system (e.g. \"enterprise\", \"residential\", ...)"
+                },
+                "channel": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
+                    }
                 },
                 "completionDate": {
                     "type": "string",
@@ -39,6 +56,12 @@
                     "type": "string",
                     "description": "ID created on repository side (OM system)"
                 },
+                "note": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Note.schema.json#/definitions/Note"
+                    }
+                },
                 "notificationContact": {
                     "type": "string",
                     "description": "Contact attached to the order to send back information regarding this order"
@@ -48,9 +71,46 @@
                     "format": "date-time",
                     "description": "Date when the order was created"
                 },
+                "orderTotalPrice": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "OrderPrice.schema.json#/definitions/OrderPrice"
+                    }
+                },
+                "payment": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "PaymentRef.schema.json#/definitions/PaymentRef"
+                    }
+                },
                 "priority": {
                     "type": "string",
                     "description": "A way that can be used by consumers to prioritize orders in OM system (from 0 to 4 : 0 is the highest priority, and 4 the lowest)"
+                },
+                "ProductOfferingQualification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
+                    }
+                },
+                "quote": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuoteRef.schema.json#/definitions/QuoteRef"
+                    }
+                },
+                "productOrderItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ProductOrderItem.schema.json#/definitions/ProductOrderItem"
+                    },
+                    "minItems": 1
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                    }
                 },
                 "requestedCompletionDate": {
                     "type": "string",
@@ -62,63 +122,14 @@
                     "format": "date-time",
                     "description": "Order fulfillment start date wished by the requestor. This is used when, for any reason, requestor cannot allow seller to begin to operationally begin the fulfillment before a date. "
                 },
-                "cancellationDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date when the order is cancelled. This is used when order is cancelled. "
-                },
-                "cancellationReason": {
-                    "type": "string",
-                    "description": "Reason why the order is cancelled. This is used when order is cancelled. "
-                },               
                 "state": {
-                    "description": "Tracks the lifecycle status of the product order, such as Acknowledged, Rejected, InProgress, Pending and so on.",
-                    "$ref": "ProductOrderStateType.schema.json#/definitions/ProductOrderStateType"
-                },
-                "note": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Note.schema.json#Note"
-                    }
-                },
-                "orderTotalPrice": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/OrderPrice.schema.json#OrderPrice"
-                    }
-                },
-                "productOrderItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/ProductOrderItem.schema.json#ProductOrderItem"
-                    },
-                    "minItems": 1
-                },
-                "relatedParty": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
-                    }
-                },
-                "payment": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/PaymentRef.schema.json#PaymentRef"
-                    }
-                },
-                "billingAccount": {
-                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
-                },
-                "channel": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
-                    }
+                    "$ref": "ProductOrderStateType.schema.json#/definitions/ProductOrderStateType",
+                    "description": "Tracks the lifecycle status of the product order, such as Acknowledged, Rejected, InProgress, Pending and so on."
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

@@ -7,6 +7,9 @@
             "$id": "#RoleType",
             "description": "A RoleType represents the type of a PartyRole, defined in the context of a given type of partnership, such as Buyer, Seller.",
             "type": "object",
+	    "required": [
+		"name"
+	    ],
             "properties": {
                 "description": {
                     "type": "string",

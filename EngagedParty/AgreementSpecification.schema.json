@@ -7,6 +7,10 @@
             "$id": "#AgreementSpecification",
             "description": "A template of an agreement that can be used when establishing partnerships",
             "type": "object",
+	    "required": [
+		"name",
+		"attachment"
+	    ],
             "properties": {
                 "description": {
                     "type": "string",
@@ -48,7 +52,7 @@
                 "serviceCategory": {
                     "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
                 },
-                "specCharacteristic": {
+                "specificationCharacteristic": {
                     "type": "array",
                     "items": {
                         "$ref": "AgreementSpecCharacteristic.schema.json#AgreementSpecCharacteristic"
@@ -63,7 +67,7 @@
                 "attachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementAttachment.schema.json#AgreementAttachment"
+                        "$ref": "AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
                     }
                 },
                 "specificationRelationship": {

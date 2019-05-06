@@ -76,7 +76,7 @@
                     "description": "MarketSegment reference. A Market Segment is a grouping of Parties, GeographicAreas, SalesChannels, and so forth. MarketSegments are the target of MarketingCampaigns, ProductOfferings, ProductPromotions, ProductPlacements, and ProductPrograms from both internal and external (Competitors, and other Providers) perspective."
                 },
                 "channel": {
-                    "$ref": "../Customer/Channel.schema.json#Channel"
+                    "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
                 },
                 "productOffering": {
                     "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"

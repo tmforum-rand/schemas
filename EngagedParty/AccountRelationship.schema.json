@@ -7,6 +7,9 @@
             "$id": "#AccountRelationship",
             "description": "Significant connection between accounts. For instance an aggregating account for a list of shop branches each having its own billing account.",
             "type": "object",
+            "required": [
+                "relationshipType"
+            ], 
             "properties": {
                 "relationshipType": {
                     "type": "string",

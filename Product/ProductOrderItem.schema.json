@@ -4,14 +4,9 @@
     "title": "ProductOrderItem",
     "definitions": {
         "ProductOrderItem": {
-            "$id": "#ProductOrderItem",
-            "description": "An identified part of the order. A product order is decomposed into one or more order items.",
             "type": "object",
+            "description": "An identified part of the order. A product order is decomposed into one or more order items.",
             "properties": {
-                "action": {
-                    "description": "he action to be carried out on the Product. Can be: add, modify, delete, noChange",
-					"$ref": "ProductActionType.schema.json#/definitions/ProductActionType"
-                },
                 "id": {
                     "type": "string",
                     "description": "Identifier of the line item (generally it is a sequence number 01, 02, 03, ...)"
@@ -20,68 +15,78 @@
                     "type": "integer",
                     "description": "Quantity ordered"
                 },
-                "state": {
-                    "description": "State of the order item : described in the state machine diagram",
-                    "$ref": "OrderStateType.schema.json#/definitions/OrderStateType"
-                },
-                "productOrderItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductOrderItem.schema.json#ProductOrderItem"
-                    }
+                "action": {
+                    "$ref": "OrderItemActionType.schema.json#/definitions/OrderItemActionType",
+                    "description": "he action to be carried out on the Product. Can be: add, modify, delete, noChange"
                 },
                 "appointment": {
-                    "$ref": "AppointmentRef.schema.json#AppointmentRef"
+                    "$ref": "AppointmentRef.schema.json#/definitions/AppointmentRef"
                 },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
+                    "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
                 },
                 "itemPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderPrice.schema.json#OrderPrice"
-                    }
-                },
-                "productOrderItemRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "OrderItemRelationship.schema.json#OrderItemRelationship"
-                    }
-                },
-                "itemTotalPrice": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "OrderPrice.schema.json#OrderPrice"
-                    }
-                },
-                "payment": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "PaymentRef.schema.json#PaymentRef"
-                    }
-                },
-                "productOffering": {
-                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
-                },
-                "product": {
-                    "$ref": "../Product/BaseProductRefOrValue.schema.json#BaseProductRefOrValue"					
-                },
-                "qualification": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef"
+                        "$ref": "OrderPrice.schema.json#/definitions/OrderPrice"
                     }
                 },
                 "itemTerm": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderTerm.schema.json#OrderTerm"
+                        "$ref": "OrderTerm.schema.json#/definitions/OrderTerm"
                     }
+                },
+                "itemTotalPrice": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "OrderPrice.schema.json#/definitions/OrderPrice"
+                    }
+                },
+                "payment": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "PaymentRef.schema.json#/definitions/PaymentRef"
+                    }
+                },
+                "product": {
+                    "$ref": "BaseProductRefOrValue.schema.json#/definitions/BaseProductRefOrValue"
+                },
+                "productOffering": {
+                    "$ref": "ProductOfferingRef.schema.json#/definitions/ProductOfferingRef"
+                },
+                "ProductOfferingQualificationItem": {
+                        "$ref": "ProductOfferingQualificationItemRef.schema.json#/definitions/ProductOfferingQualificationItemRef"
+                },
+                "quoteItem": {
+                        "$ref": "QuoteItemRef.schema.json#/definitions/QuoteItemRef"
+                },
+                "productOrderItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ProductOrderItem.schema.json#/definitions/ProductOrderItem"
+                    }
+                },
+                "productOrderItemRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "OrderItemRelationship.schema.json#/definitions/OrderItemRelationship"
+                    }
+                },
+                "qualification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
+                    }
+                },
+                "state": {
+                    "$ref": "ProductOrderItemStateType.schema.json#/definitions/ProductOrderItemStateType",
+                    "description": "State of the order item : described in the state machine diagram"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "OrderItem.schema.json#OrderItem"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

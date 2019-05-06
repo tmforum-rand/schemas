@@ -22,7 +22,7 @@
                 "attachment": {
                     "type": "array", 
                     "items": {
-                        "$ref": "Attachment.schema.json#/definitions/Attachment"
+                        "$ref": "AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
                     }
                 }, 
                 "calendarEvent": {
@@ -85,7 +85,7 @@
                     }
                 }, 
                 "status": {
-                    "$ref": "StateValues.schema.json#/definitions/AppointmentStateValues"
+                    "$ref": "AppointmentStateType.schema.json#/definitions/AppointmentStateType"
                 }, 
                 "validFor": {
                     "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"

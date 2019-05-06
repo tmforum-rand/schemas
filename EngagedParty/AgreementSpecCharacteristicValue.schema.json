@@ -21,7 +21,7 @@
                     "description": "The period of time for which a value is applicable"
                 },
                 "value": {
-                    "type": "string",
+                    "$ref": "../Common/Any.schema.json#Any",
                     "description": "A discrete value that the characteristic can take on"
                 },
                 "valueFrom": {
