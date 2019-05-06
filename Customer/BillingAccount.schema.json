@@ -15,7 +15,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/PartyAccount.schema.json#PartyAccount"
+                    "$ref": "../EngagedParty/PartyAccount.schema.json#PartyAccount"
                 }
             ]
         }

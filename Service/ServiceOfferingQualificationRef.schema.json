@@ -27,7 +27,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "QualificationRef.schema.json#QualificationRef"
+                    "$ref": "../Common/QualificationRef.schema.json#QualificationRef"
                 }
             ]
         }

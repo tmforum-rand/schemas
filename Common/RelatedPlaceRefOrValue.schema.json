@@ -19,7 +19,6 @@
               }
             },
             "required": [
-              "isRef",
               "role"
             ],
             "allOf": [
