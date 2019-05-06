@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TestDataInstanceDefinition.schema.json",
+    "title": "TestDataInstanceDefinition",
+    "definitions": {
+        "TestDataInstanceDefinition": {
+            "type": "object",
+            "description": "JADL test data instance definition",
+            "properties": {
+                "testDataSchema": {
+                  "$ref": "TestDataSchemaRef.schema.json#/TestDataSchemaRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}
