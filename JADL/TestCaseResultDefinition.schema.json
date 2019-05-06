@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TestCaseResultDefinition.schema.json",
+    "title": "TestCaseResultDefinition",
+    "definitions": {
+        "TestCaseResultDefinition": {
+            "type": "object",
+            "description": "JADL test case result definition",
+            "properties": {
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}
