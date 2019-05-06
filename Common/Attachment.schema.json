@@ -61,7 +61,7 @@
             "allOf": [
                 {
                     "$ref": "Entity.schema.json#Entity"
-                }
+                } 
             ]
         }
     }
