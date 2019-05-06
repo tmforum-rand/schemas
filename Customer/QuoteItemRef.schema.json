@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteItemRef.schema.json",
+    "title": "QuoteItemRef",
+    "definitions": {
+        "QuoteItemRef": {
+            "type": "object",
+            "description": "It's a Quote item that has been executed previously.",
+            "required": ["id", "QuoteId"],
+            "properties": {
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                },
+                "QuoteHref": {
+                    "type": "string",
+                    "description": "Reference of the related entity."
+                },
+                "QuoteId": {
+                    "type": "string",
+                    "description": "Unique identifier of a related entity."
+                },
+                "QuoteName": {
+                    "type": "string",
+                    "description": "Name of the related entity."
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Id of an item of a quote"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}
