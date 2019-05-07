@@ -17,6 +17,7 @@
                     "patternProperties": {
                         ".*": {
                             "properties": {
+                                "discriminator": { "type": "string" },
                                 "$id": { "type": "string" },
                                 "type": { "type": "string" },
                                 "description": { "type": "string" },
