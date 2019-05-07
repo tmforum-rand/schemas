@@ -12,15 +12,15 @@
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 },
-                "ProductOfferingQualificationHref": {
+                "productOfferingQualificationHref": {
                     "type": "string",
                     "description": "Reference of the related entity."
                 },
-                "ProductOfferingQualificationId": {
+                "productOfferingQualificationId": {
                     "type": "string",
                     "description": "Unique identifier of a related entity."
                 },
-                "ProductOfferingQualificationName": {
+                "productOfferingQualificationName": {
                     "type": "string",
                     "description": "Name of the related entity."
                 },
