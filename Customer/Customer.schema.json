@@ -9,19 +9,19 @@
             "properties": {
                 "href": {
                     "type": "string",
-                    "description": "Url used to reference the party role."
+                    "description": "Url used to reference the customer."
                 },
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier for PartyRoles"
+                    "description": "Unique identifier for Customers"
                 },
                 "name": {
                     "type": "string",
-                    "description": "A word, term, or phrase by which the PartyRole is known and distinguished from other PartyRoles."
+                    "description": "A word, term, or phrase by which the Customer is known and distinguished from other Customers."
                 },
                 "status": {
                     "type": "string",
-                    "description": "Used to track the lifecycle status of the party role."
+                    "description": "Used to track the lifecycle status of the customer."
                 },
                 "statusReason": {
                     "type": "string",
@@ -29,7 +29,7 @@
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The time period that the PartyRole is valid for."
+                    "description": "The time period that the Customer is valid for."
                 },
                 "engagedParty": {
                     "$ref": "../EngagedParty/PartyRef.schema.json#PartyRef"
@@ -60,7 +60,7 @@
                     "items": {
                         "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     },
-                    "description": "Describes the characteristic of a party role."
+                    "description": "Describes the characteristic of a customer."
                 },
                 "creditProfile": {
                     "type": "array",

@@ -4,19 +4,13 @@
     "title": "ProductOfferingQualificationRef",
     "definitions": {
         "ProductOfferingQualificationRef": {
-            "$id": "#ProductOfferingQualificationRef",
-            "description": "It's a productOfferingQualification that has been executed previously and captured in the productOrder to provide eligibility information",
             "type": "object",
+            "description": "It's a productOfferingQualification that has been executed previously",
             "properties": {
-               
-                "qualificationItemId": {
-                    "type": "string",
-                    "description": "Id of an item of a qualification"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "EntityRef.schema.json#EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
                 }
             ]
         }

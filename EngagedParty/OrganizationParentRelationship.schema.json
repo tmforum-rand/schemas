@@ -1,35 +1,25 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "OrganizationParentRelationship.schema.json",
-    "title": "OrganizationParentRelationship",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "OrganizationParentRelationship.schema.json", 
+    "title": "OrganizationParentRelationship", 
     "definitions": {
         "OrganizationParentRelationship": {
-            "$id": "#OrganizationParentRelationship",
-            "description": "Represents the links between organizations: useful to describe an organization structure between headquarters, affiliates,... It indicates the parent of the organization.",
-            "type": "object",
+            "type": "object", 
+            "description": "Parent references of an organization in a structure of organizations.", 
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the parent organization"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the parent organization"
-                },
                 "relationshipType": {
-                    "type": "string",
-                    "description": "Juridical, hierarchical, geographical, functional..."
+                    "type": "string", 
+                    "description": "Type of the relationship. Could be juridical, hierarchical, geographical, functional for example."
                 },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The time period the relationship is valid"
-                }
-            },
-            "allOf": [
+                "organization": {
+                    "$ref": "OrganizationRef.schema.json#/definitions/OrganizationRef"
+                }				
+            }, 
+           "allOf": [
                 {
                     "$ref": "../Common/Entity.schema.json#Entity"
                 }
-            ]
+            ]			           
         }
     }
 }

@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Bucket.schema.json",
+    "title": "Bucket",
+    "definitions": {
+        "Bucket": {
+            "description": "desc",
+
+               "allOf": [
+                {
+                  "$ref": "BucketBalance.schema.json#/definitions/BucketBalance"
+                }
+            ]
+	 }
+    }
+}

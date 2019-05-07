@@ -10,14 +10,19 @@
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier for this particular attachment"
-                
+                    "description": "Unique identifier for this particular attachment",
+                    "examples": [
+                        "4aafacbd-11ff-4dc8-b445-305f2215715f",
+                        "2334bc59-726e-4d34-ab96-f50e0561412f"
+                    ]
                 },
                 "href": {
                     "type": "string",
                     "format": "uri",
-                    "description": "URI for this Attachment"
-                
+                    "description": "URI for this Attachment",
+                    "examples": [
+                        "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f"
+                    ]
                 },
                 "name": {
                     "type": "string",
@@ -42,8 +47,10 @@
                 "url": {
                     "type": "string",
                     "format": "uri",
-                    "description": "Uniform Resource Locator, is a web page address (a subset of URI)"
-                
+                    "description": "Uniform Resource Locator, is a web page address (a subset of URI)",
+                    "examples": [
+                        "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f"
+                    ]
                 }, 
                 "mimeType": {
                     "type": "string", 

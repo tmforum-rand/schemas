@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TaskFlow.schema.json",
+    "title": "TaskFlow",
+    "definitions": {
+        "TaskFlow": {
+            "$id": "#TaskFlow",
+            "type": "object",
+			"required": ["processFlow", "taskFlowType"],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the taskFlow"
+                },
+				"href": {
+                    "type": "string",
+                    "description": "Reference of the taskFlow"
+                },
+				"processFlowId": {
+                    "type": "string",
+					"description": "Identifier of the processFlow"
+                },
+                "state": {
+                    "description": "State of the taskFlow: described in the state machine diagram.",
+                    "$ref": "TaskFlowStateType.schema.json#/definitions/TaskFlowStateType"
+                },
+				"taskFlowType": {
+                    "type": "string",
+					"description": "Type of the taskFlow."
+                },
+				"priority": {
+                    "type": "integer",
+					"description": "TaskFlow priority."
+                },
+				"isMandatory": {
+                    "type": "boolean",
+					"description": "Indicate mandatory TaskFlow."
+                },
+				"completionMethod": {
+                    "type": "string",
+					"description": "TaskFlow completion method."
+                },
+                "taskFlowRelationship": {
+                    "type": "array",
+                    "description": "A list of taskFlows related to this taskFlow",
+                    "items": {
+                        "$ref": "TaskFlowRelationship.schema.json#/definitions/TaskFlowRelationship"
+                    }
+                },
+				"relatedParty": {
+                    "type": "array",
+                    "description": "A list of related party(ies) to this task",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                    }
+                },
+				"relatedEntity": {
+                    "type": "array",
+                    "description": "A list of related entity(ies) to this taskFlow",
+                    "items": {
+                        "$ref": "../Common/RelatedEntity.schema.json#RelatedEntity"
+                    }
+                },
+				"channel": {
+                    "type": "array",
+                    "description": "A list of channel(s) where this taskFlow is executed",
+                    "items": {
+                        "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                    }
+                },
+				"characteristic": {
+                    "type": "array",
+                    "description": "A list of characteristic(s) associated to this taskFlow",
+                    "items": {
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
+                    }
+                }				
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}

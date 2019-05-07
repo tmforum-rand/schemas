@@ -4,27 +4,38 @@
     "title": "RelatedProductOrderItem",
     "definitions": {
         "RelatedProductOrderItem": {
-            "$id": "#RelatedProductOrderItem",
-            "description": "RelatedProductOrderItem (ProductOrder item) .The product order item which triggered product creation/change/termination.",
             "type": "object",
-            "required": ["id", "href"],
+            "description": "RelatedProductOrderItem (ProductOrder item) .The product order item which triggered product creation/change/termination.",
+            "required": ["orderItemId","productOrderId"],
             "properties": {
-                "role": {
+                "@referredType": {
                     "type": "string",
-                    "description": "role of the product order for this product"
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                },
+                "productOrderHref": {
+                    "type": "string",
+                    "description": "Reference of the related entity."
+                },
+                "productOrderId": {
+                    "type": "string",
+                    "description": "Unique identifier of a related entity."
+                },
+                "orderItemAction": {
+                    "type": "string",
+                    "description": "Action of the order item for this product"
                 },
                 "orderItemId": {
                     "type": "string",
                     "description": "Identifier of the order item where the product was managed"
                 },
-                "orderItemAction": {
+                "role": {
                     "type": "string",
-                    "description": "Action of the order item for this product"
+                    "description": "role of the product order item for this product"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                    "$ref": "../Common/Entity.schema.json#/Entity"
                 }
             ]
         }

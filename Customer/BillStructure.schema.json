@@ -11,14 +11,14 @@
                 "presentationMedia": {
                     "type": "array",
                     "items": {
-                        "$ref": "BillPresentationMediaRef.schema.json#BillPresentationMediaRef"
+                        "$ref": "BillPresentationMediaRefOrValue.schema.json#BillPresentationMediaRefOrValue"
                     }
                 },
                 "format": {
-                    "$ref": "BillFormatRef.schema.json#BillFormatRef"
+                    "$ref": "BillFormatRefOrValue.schema.json#BillFormatRefOrValue"
                 },
                 "cycleSpecification": {
-                    "$ref": "BillingCycleSpecificationRef.schema.json#BillingCycleSpecificationRef"
+                    "$ref": "BillingCycleSpecificationRefOrValue.schema.json#BillingCycleSpecificationRefOrValue"
                 }
             },
             "allOf": [

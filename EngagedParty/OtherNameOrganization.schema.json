@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "OtherNameOrganization.schema.json", 
+    "title": "OtherNameOrganization", 
+    "definitions": {
+        "OtherNameOrganization": {
+            "type": "object", 
+            "description": "Keeps track of other names, for example the old name of an organization.", 
+            "properties": {
+                "tradingName": {
+                    "type": "string", 
+                    "description": "The name that the organization trades under"
+                },
+                "nameType": {
+                    "type": "string", 
+                    "description": "Co. , Inc. , Ltd. , Pty Ltd. , Plc; , Gmbh"
+                }, 		
+                "name": {
+                    "type": "string", 
+                    "description": "Organization name (department name for example)"
+                }, 
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                }
+            },
+			"allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]			
+        }
+    }
+}

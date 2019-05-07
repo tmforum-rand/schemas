@@ -3,6 +3,10 @@
     "$id": "PartyRole.schema.json",
     "title": "PartyRole",
     "definitions": {
+	"required": [
+	    "name",
+	    "roleType"
+	],
         "PartyRole": {
             "$id": "#PartyRole",
             "description": "The part played by a party in a given context.",

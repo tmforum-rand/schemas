@@ -4,13 +4,31 @@
     "title": "Quote",
     "definitions": {
         "Quote": {
-            "$id": "#Quote",
-            "description": "Quote can be used to negotiate service and product acquisition or modification between a customer and a service provider. Quote contain list of quote items, a reference to customer (partyRole), a list of productOffering and attached prices and conditions.",
             "type": "object",
+            "required": ["quoteItem"],
+            "description": "Quote can be used to negotiate service and product acquisition or modification between a customer and a service provider. Quote contain list of quote items, a reference to customer (partyRole), a list of productOffering and attached prices and conditions.",
             "properties": {
+                "agreement": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "AgreementRef.schema.json#/definitions/AgreementRef"
+                    }
+                },
+                "billingAccount": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
+                    }
+                },
                 "category": {
                     "type": "string",
                     "description": "Used to categorize the quote from a business perspective that can be useful for the CRM system (e.g. \"enterprise\", \"residential\", ...)"
+                },
+                "contactMedium": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ContactMedium.schema.json#/definitions/ContactMedium"
+                    }
                 },
                 "description": {
                     "type": "string",
@@ -29,7 +47,7 @@
                 "expectedQuoteCompletionDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "This is expected date - from quote requester - to have a response for this quote"
+                    "description": "This is expected date - from quote supplier - to be able to send back  a response for this quote"
                 },
                 "externalId": {
                     "type": "string",
@@ -43,77 +61,76 @@
                     "type": "string",
                     "description": "Unique identifier - attributed by quoting system"
                 },
-                "quoteDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date and time when the quote was created"
-                },
-                "state": {
-                    "type": "string",
-                    "description": "State of the quote : described in the state-machine diagram above"
-                },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "Quote validity period"
-                },
-                "version": {
-                    "type": "string",
-                    "description": "Quote version - if the customer rejected the quote but  negotiations still open a new version of the quote is managed"
+                "instantSyncQuote": {
+                    "type": "boolean",
+                    "description": "An indicator which when the value is \"true\" means that requester expects to get quoting result in the response"
                 },
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Note.schema.json#Note"
-                    }
-                },
-                "billingAccount": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
-                    }
-                },
-                "agreement": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                        "$ref": "Note.schema.json#/definitions/Note"
                     }
                 },
                 "quoteAuthorization": {
                     "type": "array",
                     "items": {
-                        "$ref": "Authorization.schema.json#Authorization"
+                        "$ref": "Authorization.schema.json#/definitions/Authorization"
+                    }
+                },
+                "quoteDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date and time when the quote was created"
+                },
+                "quoteItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuoteItem.schema.json#/definitions/QuoteItem"
+                    },
+                    "minItems": 1
+                },
+                "quoteTotalPrice": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "QuotePrice.schema.json#/definitions/QuotePrice"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
-                "contactMedium": {
+                "productOfferingQualification": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                        "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
                     }
                 },
-                "quoteItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "QuoteItem.schema.json#QuoteItem"
-                    }
+                "requestedQuoteCompletionDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "This is requested date - from quote requester - to get a complete response for this quote"
                 },
-                "quoteTotalPrice": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "QuotePrice.schema.json#QuotePrice"
-                    }
+                "state": {
+                    "$ref": "QuoteStateType.schema.json#/definitions/QuoteStateType",
+                    "description": "State of the quote : described in the state-machine diagram"
+                },
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod",
+                    "description": "Quote validity period"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Quote version - if the customer rejected the quote but  negotiations still open a new version of the quote is managed"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#/Entity"
                 }
             ]
         }
     }
 }
+   

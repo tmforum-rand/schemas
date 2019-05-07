@@ -16,7 +16,6 @@
               }
             },
             "required": [
-              "isRef",
               "role"
             ],
             "allOf": [

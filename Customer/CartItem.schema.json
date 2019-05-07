@@ -42,14 +42,14 @@
                         "$ref": "../Common/Note.schema.json#Note"
                     }
                 },
-                "totalItemPrice": {
+                "ItemTotalPrice": {
                     "type": "array",
                     "items": {
                         "$ref": "CartPrice.schema.json#CartPrice"
                     }
                 },
                 "product": {
-                    "$ref": "../Product/Product.schema.json#Product"
+                    "$ref": "../Product/BaseProductRefOrValue.schema.json#BaseProductRefOrValue"
                 },
                 "itemPrice": {
                     "type": "array",

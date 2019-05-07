@@ -16,6 +16,12 @@
                     "type": "string",
                     "description": "Unique identifier of the product"
                 },
+                "isRef": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "indicate if ref pattern is used"
+       
+                  },
                 "name": {
                     "type": "string",
                     "description": "This is the name of the product."

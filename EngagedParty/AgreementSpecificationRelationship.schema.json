@@ -8,14 +8,6 @@
             "description": "A relationship between agreement specifications. Typical relationships are substitution and dependency.",
             "type": "object",
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of an agreement specification."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the related agreement specification."
-                },
                 "relationshipType": {
                     "type": "string",
                     "description": "Type of relationship such as, substitution or dependency."
@@ -27,7 +19,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }
