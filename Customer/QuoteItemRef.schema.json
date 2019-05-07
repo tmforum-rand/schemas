@@ -12,15 +12,15 @@
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 },
-                "QuoteHref": {
+                "quoteHref": {
                     "type": "string",
                     "description": "Reference of the related entity."
                 },
-                "QuoteId": {
+                "quoteId": {
                     "type": "string",
                     "description": "Unique identifier of a related entity."
                 },
-                "QuoteName": {
+                "quoteName": {
                     "type": "string",
                     "description": "Name of the related entity."
                 },
