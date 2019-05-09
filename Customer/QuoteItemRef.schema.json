@@ -6,7 +6,7 @@
         "QuoteItemRef": {
             "type": "object",
             "description": "It's a Quote item that has been executed previously.",
-            "required": ["id", "QuoteId"],
+            "required": ["id", "quoteId"],
             "properties": {
                 "@referredType": {
                     "type": "string",
@@ -31,7 +31,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#/Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

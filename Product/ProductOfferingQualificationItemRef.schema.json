@@ -6,7 +6,7 @@
         "ProductOfferingQualificationItemRef": {
             "type": "object",
             "description": "It's a productOfferingQualification item that has been executed previously.",
-            "required": ["id", "ProductOfferingQualificationId"],
+            "required": ["id", "productOfferingQualificationId"],
             "properties": {
                 "@referredType": {
                     "type": "string",
