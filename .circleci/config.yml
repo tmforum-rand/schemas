@@ -22,17 +22,23 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
-
+      - run:
+          name: Install validation logic
+          command: |
+            git clone https://${GITHUB_TOKEN}@github.com/tmforum-rand/schema-validation.git /tmp/validation
+            cd /tmp/validation/basic
+            npm install
+            
       - save_cache:
           paths:
-            - node_modules
+            - /tmp/validation/basic/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
       - run: 
           name: Validate
           command: |
-            node .circleci/validate.js . .circleci > /tmp/results.txt
+            cd /tmp/validation/basic
+            node validate.js ~/repo . > /tmp/results.txt
         
       - run:
           name: Upload validation results
