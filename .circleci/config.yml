@@ -22,22 +22,36 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
-
+      - run:
+          name: Install validation logic
+          command: |
+            git clone https://${GITHUB_TOKEN}@github.com/tmforum-rand/schema-validation.git /tmp/validation
+            cd /tmp/validation/basic
+            npm install
+            
       - save_cache:
           paths:
-            - node_modules
+            - /tmp/validation/basic/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
       - run: 
           name: Validate
           command: |
-            node .circleci/validate.js . .circleci > /tmp/results.txt
+            cd /tmp/validation/basic
+            node validate.js ~/repo . > /tmp/results.txt
         
       - run:
           name: Upload validation results
           when: always
-          command: |     
+          command: |
+            IFS=':' read -r -a array < /tmp/stats.txt
+            if [[ ${array[1]} -gt 0 ]]; then
+              res="with ERRORS"
+            elif [[ ${array[3]} -gt 0 ]]; then
+              res="with ISSUES"
+            else
+              res="OK"
+            fi
             FILE=validation-`date -u "+%Y%m%dT%H%M%SZ"`.txt
             DIR=".circleci/validation_results"
             mkdir -p $DIR
@@ -46,7 +60,7 @@ jobs:
             git config user.email "${EMAIL}"
             git config user.name "Schema validation Bot"
             git add $DIR/$FILE
-            git commit --no-post-rewrite --no-verify --allow-empty -m "Validation result [skip ci]"
+            git commit --allow-empty -m "Validation result $res [skip ci]"
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/schemas.git ${CIRCLE_BRANCH}
       
