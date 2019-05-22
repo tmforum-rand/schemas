@@ -14,7 +14,7 @@
                 },
                 "eventTime": {
                     "type": "string",
-		    "format": "date-time",
+		            "format": "date-time",
                     "description": "Time of the event occurrence."
                 },
                 "eventType": {

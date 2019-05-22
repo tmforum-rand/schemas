@@ -1,35 +1,35 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "RelatedPlaceRefOrValue.schema.json",
-  "title": "RelatedPlaceRefOrValue",
-  "definitions": {
-      "RelatedPlaceRefOrValue": {
-          "discriminator": "isRef",
-          "$id": "#RelatedPlaceRefOrValue",
-          "description": "Related Entity reference. A related place defines a place described by reference or by value linked to a specific entity.",
-          "type": "object",
-          "properties": {
-            "isRef": {
-              "type": "boolean",
-              "default": true
-  
-            },
-            "role":{
-              "type": "string"
-            }
-          },
-          "required": [
-            "role"
-          ],
-          "allOf": [
-              {
-                "$ref": "PlaceRef.schema.json#PlaceRef"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "RelatedPlaceRefOrValue.schema.json",
+    "title": "RelatedPlaceRefOrValue",
+    "definitions": {
+        "RelatedPlaceRefOrValue": {
+            "discriminator": "isRef",
+            "$id": "#RelatedPlaceRefOrValue",
+            "description": "Related Entity reference. A related place defines a place described by reference or by value linked to a specific entity.",
+            "type": "object",
+            "properties": {
+              "isRef": {
+                "type": "boolean",
+                "default": true
+    
               },
-              {
-                "$ref": "Place.schema.json#Place"
+              "role":{
+                "type": "string"
               }
-              
-          ]
-      }
+            },
+            "required": [
+              "role"
+            ],
+            "allOf": [
+                {
+                    "$ref": "PlaceRef.schema.json#PlaceRef"
+                },
+                {
+                  "$ref": "Place.schema.json#Place"
+                }
+                
+            ]
+        }
+    }
   }
-}

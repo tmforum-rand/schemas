@@ -4,30 +4,17 @@
     "title": "ChannelRef",
     "definitions": {
         "ChannelRef": {
-            "$id": "#ChannelRef",
-            "description": "Channel(ChannelRef)The channel where the recommendation is used. May be online web, mobile app, social ,etc.",
             "type": "object",
+            "description": "Channel(ChannelRef)The channel where the recommendation is used. May be online web, mobile app, social ,etc.",
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Hypertext Reference of the channel."
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of channel"
-                },
                 "name": {
                     "type": "string",
                     "description": "Name of the channel."
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "EntityRef.schema.json#/EntityRef"
                 }
             ]
         }

@@ -4,20 +4,9 @@
     "title": "ResourceRef",
     "definitions": {
         "ResourceRef": {
-            "description": "Information about a resource that holds realizes the product that is linked to the bucket balance",
+            "$id": "#ResourceRef",
+            "type": "object",
             "properties": {
-                "@Type": {
-                    "type": "string",
-                    "description": "Indicates the type of resource"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference to the party"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the related party"
-                },
                 "name": {
                     "type": "string",
                     "description": "Name of the resource"
@@ -26,7 +15,12 @@
                     "type": "string",
                     "description": "The resource value that can be used to identify a resource with a public key (e.g.: a tel nr, an msisdn)"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                }
+            ]
         }
     }
 }

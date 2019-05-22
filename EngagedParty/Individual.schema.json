@@ -87,7 +87,7 @@
                 },
 				"status": {
 				    "description": "Status of the individual",
-                    "$ref": "IndividualStateValues.schema.json#/definitions/IndividualStateValues"
+                    "$ref": "IndividualStateType.schema.json#/definitions/IndividualStateType"
                 }, 			
                 "otherName": {
                     "type": "array", 

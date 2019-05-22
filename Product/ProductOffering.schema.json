@@ -111,7 +111,7 @@
                     },
                     "description": "An agreement represents a contract or arrangement, either written or verbal and sometimes enforceable by law, such as a service level agreement or a customer price agreement. An agreement involves a number of other business entities, such as products, services, and resources and/or their specifications."
                 },
-                "attachmentRefOrValue": {
+                "attachment": {
                     "type": "array", 
                     "items": {
                         "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
@@ -121,7 +121,7 @@
                 "marketSegment": {
                     "type": "array", 
                     "items": {
-                        "$ref": "../Common/MarketSegmentRef.schema.json#MarketSegmentRef"
+                        "$ref": "../MarketingSales/MarketSegmentRef.schema.json#MarketSegmentRef"
                     },
                     "description": "provides references to the corresponding market segment as target of product offerings. A market segment is grouping of Parties, GeographicAreas, SalesChannels, and so forth."
                 }, 
