@@ -14,11 +14,7 @@
                 "role": {
                     "type": "string",
                     "description": "Role played by the related party"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }            
+                }       
             },
 	  "allOf": [
               {
