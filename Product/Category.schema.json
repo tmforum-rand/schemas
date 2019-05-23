@@ -26,7 +26,7 @@
                 }, 
                 "href": {
                     "type": "string", 
-                    "description": "Reference of the catalog"
+                    "description": "Reference of the category"
                 }, 
                 "id": {
                     "type": "string", 

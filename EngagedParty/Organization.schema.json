@@ -36,7 +36,7 @@
                 },
  				"status": {
 				    "description": "Status of the organization",
-                    "$ref": "OrganizationStateValues.schema.json#/definitions/OrganizationStateValues"
+                    "$ref": "OrganizationStateType.schema.json#/definitions/OrganizationStateType"
                 }, 			
                 "otherName": {
 			        "type": "array",

@@ -16,7 +16,7 @@
                     "description": "Unique identifier of the TimeSlot"
                 },
                 "relatedParty": {
-                    "$ref": "RelatedParty.schema.json#/definitions/RelatedParty",
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty",
                     "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity."
                 },
                 "validFor": {

@@ -7,26 +7,14 @@
             "type": "object", 
             "description": "An Appointment is an arrangement to do something or meet someone at a particular time, at a place (for face to face appointment) or in a contact medium (for phone appointment).", 
             "properties": {
-                "@baseType": {
-                    "type": "string", 
-                    "description": "Indicates the base type of the resource. Here can be appointment"
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "Link to schema describing this REST resource"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "Indicates the type of resource. Here can be appointment"
-                }, 
                 "attachment": {
                     "type": "array", 
                     "items": {
-                        "$ref": "AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+                        "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
                     }
                 }, 
                 "calendarEvent": {
-                    "$ref": "CalendarEventRef.schema.json#/definitions/CalendarEventRef",
+                    "$ref": "../Common/CalendarEventRef.schema.json#CalendarEventRef",
                     "description" : "A calendar event reference (CalendarEventRef). The appointment is associated with a calendar event (an happening at a point of time) associated to a calendar entry."
                 }, 
                 "category": {
@@ -34,7 +22,7 @@
                     "description": "Business category : intervention for example or to be more precise after SalesIntervention, orderDeliveryIntervention,..."
                 }, 
                 "contactMedium": {
-                    "$ref": "ContactMedium.schema.json#/definitions/ContactMedium"
+                    "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
                 }, 
                 "creationDate": {
                     "type": "string", 
@@ -65,32 +53,37 @@
                 "note": {
                     "type": "array", 
                     "items": {
-                        "$ref": "Note.schema.json#/definitions/Note"
+                        "$ref": "../Common/Note.schema.json#Note"
                     }
                 }, 
                 "relatedPlace": {
-                    "$ref": "RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue",
+                    "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue",
 					"description": "Related place defines (by reference or value) the place where the appointment will take place."
                 }, 
                 "relatedEntity": {
                     "type": "array", 
                     "items": {
-                        "$ref": "RelatedEntity.schema.json#/definitions/RelatedEntity"
+                        "$ref": "../Common/RelatedEntity.schema.json#RelatedEntity"
                     }
                 }, 
                 "relatedParty": {
                     "type": "array", 
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 }, 
                 "status": {
                     "$ref": "AppointmentStateType.schema.json#/definitions/AppointmentStateType"
                 }, 
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
                 }
-            }, 
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ],
             "required": [
                 "validFor"
             ]

@@ -1,28 +1,28 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "QuoteItemRef.schema.json",
-    "title": "QuoteItemRef",
+    "$id": "ProductOfferingQualificationItemRef.schema.json",
+    "title": "ProductOfferingQualificationItemRef",
     "definitions": {
-        "QuoteItemRef": {
+        "ProductOfferingQualificationItemRef": {
             "type": "object",
-            "description": "It's a Quote item that has been executed previously.",
-            "required": ["id", "quoteId"],
+            "description": "It's a productOfferingQualification item that has been executed previously.",
+            "required": ["id", "productOfferingQualificationId"],
             "properties": {
-                "quoteHref": {
+                "productOfferingQualificationHref": {
                     "type": "string",
                     "description": "Reference of the related entity."
                 },
-                "quoteId": {
+                "productOfferingQualificationId": {
                     "type": "string",
                     "description": "Unique identifier of a related entity."
                 },
-                "quoteName": {
+                "productOfferingQualificationName": {
                     "type": "string",
                     "description": "Name of the related entity."
                 },
                 "id": {
                     "type": "string",
-                    "description": "Id of an item of a quote"
+                    "description": "Id of an item of a product offering qualification"
                 }
             },
             "allOf": [
