@@ -4,7 +4,6 @@
   "title": "ProductRefOrValue",
   "definitions": {
       "ProductRefOrValue": {
-          "discriminator": "isRef",
           "$id": "#ProductRefOrValue",
           "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
           "type": "object",
