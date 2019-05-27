@@ -82,21 +82,21 @@
                     "format": "float", 
                     "description": "Percentage to apply for ProductOfferPriceAlteration (Discount)"
                 }, 
-                "bundledProductOfferingPriceRelationship": {
+                "bundledPopRelationship": {
                     "type": "array", 
                     "items": {
                         "$ref": "BundledProductOfferingPriceRelationship.schema.json#BundledProductOfferingPriceRelationship"
                     }, 
                     "description": "this object represents a bundle relationship from a bundle product offering price (parent) to a simple product offering price (child). A simple product offering price may participate in more than one bundle relationship."
                 }, 
-                "productOfferingPriceRelationship": {
+                "popRelationship": {
                     "type": "array", 
                     "items": {
                         "$ref": "ProductOfferingPriceRelationship.schema.json#ProductOfferingPriceRelationship"
                     }, 
                     "description": "Product Offering Prices related to this Product Offering Price, for example a price alteration such as allowance or discount"
                 }, 
-                "productSpecificationCharacteristicValueUse": {
+                "prodSpecCharValueUse": {
                     "type": "array", 
                     "items": {
                         "$ref": "ProductSpecificationCharacteristicValueUse.schema.json#ProductSpecificationCharacteristicValueUse"

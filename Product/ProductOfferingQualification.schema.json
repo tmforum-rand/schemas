@@ -9,6 +9,7 @@
             "description": "ProductOfferingQualification is used to perform a commercial eligibility. It allows to retrieve a list of productOffering that are commercially available in the context of the interaction (defined be place, channel, party, product).",
             "properties": {
                 "channel": {
+                    "description": "Channel used for the qualification",
                     "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
                 },
                 "description": {
@@ -44,6 +45,7 @@
                 },
                 "note": {
                     "type": "array",
+                    "description": "Free form text associated with the qualification request",
                     "items": {
                         "$ref": "Note.schema.json#/definitions/Note"
                     }
@@ -55,6 +57,7 @@
                 },
                 "productOfferingQualificationItem": {
                     "type": "array",
+                    "description": "Qualification item for a product or a category",
                     "items": {
                         "$ref": "ProductOfferingQualificationItem.schema.json#/definitions/ProductOfferingQualificationItem"
                     },
@@ -73,10 +76,12 @@
                     "description": "An indicator which when the value is \"true\" means that unavailability reason are expected for non available product offering"
                 },
                 "qualificationResult": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Result of the qualification (example: green, yellow, red)"
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "Party playing a role for this qualification (as requester for example)",
                     "items": {
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }

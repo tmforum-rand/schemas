@@ -22,7 +22,10 @@
                     "description": "Business category : intervention for example or to be more precise after SalesIntervention, orderDeliveryIntervention,..."
                 }, 
                 "contactMedium": {
-                    "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                    }
                 }, 
                 "creationDate": {
                     "type": "string", 

@@ -17,7 +17,8 @@
                     "description": "A short descriptive name such as \"Subscription price\"."
                 },
                 "productOfferingPrice": {
-                    "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
+                    "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef",
+                    "description": "An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased. The price is valid for a defined period of time."
                 },  
                 "priceType": {
                     "type": "string",
@@ -32,13 +33,16 @@
                     "description": "Could be minutes, GB..."
                 },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
+                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef",
+                    "description": "A reference to a billing account used for paid the order price charge"
                 },
                 "price": {
-                    "$ref": "Price.schema.json#Price"
+                    "$ref": "Price.schema.json#Price",
+                    "description": "a structure used to define price amount"
                 },
                 "priceAlteration": {
                     "type": "array",
+                    "description": "a strucuture used to describe a price alteration",
                     "items": {
                         "$ref": "PriceAlteration.schema.json#PriceAlteration"
                     }
