@@ -8,17 +8,8 @@
             "required": ["productOrderItem"],
             "description": "A Product Order is a type of order which  can  be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa,",
             "properties": {
-                "agreement": {
-                    "type": "array",
-                    "description": "A reference to an agreement defining the context of the order",
-                    "items": {
-                        "$ref": "AgreementRef.schema.json#/definitions/AgreementRef"
-                    }
-                },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef",
-                    "description": "A reference to a billing account used for paid for the order charge"
-
+                    "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
                 },
                 "cancellationDate": {
                     "type": "string",
@@ -33,11 +24,10 @@
                     "type": "string",
                     "description": "Used to categorize the order from a business perspective that can be useful for the OM system (e.g. \"enterprise\", \"residential\", ...)"
                 },
-                "channel": {
+                "relatedChannel": {
                     "type": "array",
-                    "description": "Channel used to complete the order",
                     "items": {
-                        "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
+                        "$ref": "RelatedChannel.schema.json#/definitions/RelatedChannel"
                     }
                 },
                 "completionDate": {
@@ -68,7 +58,6 @@
                 },
                 "note": {
                     "type": "array",
-                    "description": "Free form text associated with the order",
                     "items": {
                         "$ref": "Note.schema.json#/definitions/Note"
                     }
@@ -84,14 +73,12 @@
                 },
                 "orderTotalPrice": {
                     "type": "array",
-                    "description": "This structure describes Order total price",
                     "items": {
                         "$ref": "OrderPrice.schema.json#/definitions/OrderPrice"
                     }
                 },
                 "payment": {
                     "type": "array",
-                    "description": "A reference to a payment associated to the charge",
                     "items": {
                         "$ref": "PaymentRef.schema.json#/definitions/PaymentRef"
                     }
@@ -100,23 +87,20 @@
                     "type": "string",
                     "description": "A way that can be used by consumers to prioritize orders in OM system (from 0 to 4 : 0 is the highest priority, and 4 the lowest)"
                 },
-                "productOfferingQualification": {
+                "ProductOfferingQualification": {
                     "type": "array",
-                    "description": "A reference to a product offering qualification previously done and related to this order",
                     "items": {
                         "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
                     }
                 },
                 "quote": {
                     "type": "array",
-                    "description": "A reference to a quote previously done and used as a reference for this order",
                     "items": {
                         "$ref": "QuoteRef.schema.json#/definitions/QuoteRef"
                     }
                 },
                 "productOrderItem": {
                     "type": "array",
-                    "description": "This structure is a order sub structure and describe an action on a product",
                     "items": {
                         "$ref": "ProductOrderItem.schema.json#/definitions/ProductOrderItem"
                     },
@@ -124,7 +108,6 @@
                 },
                 "relatedParty": {
                     "type": "array",
-                    "description": "A reference to a party playing a role in this order (customer, seller, user, etc.)",
                     "items": {
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
