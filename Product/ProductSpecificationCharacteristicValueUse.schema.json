@@ -32,7 +32,7 @@
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which the productSpecificationCharacteristic is valid"
                 }, 
-                "productSpecificationCharacteristicValue": {
+                "productSpecCharacteristicValue": {
                     "type": "array", 
                     "items": {
                         "$ref": "ProductSpecificationCharacteristicValue.schema.json#ProductSpecificationCharacteristicValue"

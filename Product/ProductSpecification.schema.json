@@ -60,7 +60,7 @@
                     },
                     "description": "A related party defines party or party role linked to a specific entity."
                 },
-                "productSpecificationCharacteristic": {
+                "productSpecCharacteristic": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductSpecificationCharacteristic.schema.json#ProductSpecificationCharacteristic"

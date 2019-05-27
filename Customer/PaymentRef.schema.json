@@ -14,7 +14,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "EntityRef.schema.json#/EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
                 }
             ]
         }

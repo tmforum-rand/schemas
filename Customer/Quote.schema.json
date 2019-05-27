@@ -10,12 +10,14 @@
             "properties": {
                 "agreement": {
                     "type": "array",
+                    "description": "A reference to an agreement defining the context of the quote",
                     "items": {
                         "$ref": "AgreementRef.schema.json#/definitions/AgreementRef"
                     }
                 },
                 "billingAccount": {
                     "type": "array",
+                    "description": "A reference to a billing account to provide quote context information ",
                     "items": {
                         "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
                     }
@@ -26,6 +28,7 @@
                 },
                 "contactMedium": {
                     "type": "array",
+                    "description": "Information contact related to the quote requester",
                     "items": {
                         "$ref": "ContactMedium.schema.json#/definitions/ContactMedium"
                     }
@@ -67,12 +70,14 @@
                 },
                 "note": {
                     "type": "array",
+                    "description": "Free form text associated with the quote",
                     "items": {
                         "$ref": "Note.schema.json#/definitions/Note"
                     }
                 },
                 "quoteAuthorization": {
                     "type": "array",
+                    "description": "An authorization provided for the quote",
                     "items": {
                         "$ref": "Authorization.schema.json#/definitions/Authorization"
                     }
@@ -84,6 +89,7 @@
                 },
                 "quoteItem": {
                     "type": "array",
+                    "description": "An item of the quote - it is used to descirbe an operation on a product to be quoted",
                     "items": {
                         "$ref": "QuoteItem.schema.json#/definitions/QuoteItem"
                     },
@@ -91,18 +97,21 @@
                 },
                 "quoteTotalPrice": {
                     "type": "array",
+                    "description": "Quote total price",
                     "items": {
                         "$ref": "QuotePrice.schema.json#/definitions/QuotePrice"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "A reference to a party playing a role in this quote (customer, seller, requester, etc.)",
                     "items": {
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
                 "productOfferingQualification": {
                     "type": "array",
+                    "description": "A reference to a previously done product offering qualification",
                     "items": {
                         "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
                     }

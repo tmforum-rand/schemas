@@ -132,7 +132,7 @@
                     },
                     "description": "A type of ProductOffering that belongs to a grouping of ProductOfferings made available to the market. It inherits of all attributes of ProductOffering."
                 }, 
-                "productSpecificationCharacteristicValueUse": {
+                "prodSpecCharValueUse": {
                     "type": "array", 
                     "items": {
                         "$ref": "ProductSpecificationCharacteristicValueUse.schema.json#ProductSpecificationCharacteristicValueUse"

@@ -24,7 +24,7 @@
                     "type": "string", 
                     "description": "Name given to the PricingLogicAlgorithm"
                 }, 
-                "pricingLogicAlgorithmSpecificationId": {
+                "plaSpecId": {
                     "type": "string", 
                     "description": "id of corresponding PricingLogicAlgorithm specification"
                 }, 

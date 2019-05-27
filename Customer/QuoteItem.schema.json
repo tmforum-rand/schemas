@@ -13,12 +13,14 @@
                 },
                 "appointment": {
                     "type": "array",
+                    "description": "A reference to appointment(s) associated with this quote item",
                     "items": {
                         "$ref": "AppointmentRef.schema.json#/definitions/AppointmentRef"
                     }
                 },
                 "attachment": {
                     "type": "array",
+                    "description": "A reference to attachment(s) associated with this quote item",
                     "items": {
                         "$ref": "AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
                     }
@@ -29,6 +31,7 @@
                 },
                 "note": {
                     "type": "array",
+                    "description": "Free form text associated with the quote item",
                     "items": {
                         "$ref": "Note.schema.json#/definitions/Note"
                     }
@@ -45,33 +48,39 @@
                 },
                 "quoteItem": {
                     "type": "array",
+                    "description": "A structure to embedded quote item within quote item",
                     "items": {
                         "$ref": "QuoteItem.schema.json#/definitions/QuoteItem"
                     }
                 },
                 "quoteItemAuthorization": {
                     "type": "array",
+                    "description": "Authorization related to this quote item",
                     "items": {
                         "$ref": "Authorization.schema.json#/definitions/Authorization"
                     }
                 },
                 "quoteItemPrice": {
                     "type": "array",
+                    "description": "Price for this quote item",
                     "items": {
                         "$ref": "QuotePrice.schema.json#/definitions/QuotePrice"
                     }
                 },
                 "quoteItemRelationship": {
                     "type": "array",
+                    "description": "A relationship from item within a quote",
                     "items": {
                         "$ref": "QuoteItemRelationship.schema.json#/definitions/QuoteItemRelationship"
                     }
                 },
                 "productOfferingQualificationItem": {
+                    "description": "A reference to a previously done POQ with item specified",
                     "$ref": "ProductOfferingQualificationItemRef.schema.json#/definitions/ProductOfferingQualificationItemRef"
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "A reference to a party playing a role in this quote item",
                     "items": {
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
