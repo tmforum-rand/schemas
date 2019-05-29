@@ -23,9 +23,9 @@
                     "type": "string",
                     "description": "The fax number of the contact"
                 },
-                "type": {
+                "contactType": {
                     "type": "string",
-                    "description": "The type of phone number such as mobile, fixed home, fixed office,…"
+                    "description": "The type of contact, for example: phone number such as mobile, fixed home, fixed office. postal address such as shipping instalation…"
                 },
                 "socialNetworkId": {
                     "type": "string",

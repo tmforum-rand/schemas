@@ -8,6 +8,13 @@
             "required": ["productOrderItem"],
             "description": "A Product Order is a type of order which  can  be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa,",
             "properties": {
+                "agreement": {
+                    "type": "array",
+                    "description": "A reference to an agreement defined in the context of the product order",
+                    "items": {
+                        "$ref": "AgreementRef.schema.json#/definitions/AgreementRef"
+                    }
+                },
                 "billingAccount": {
                     "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
                 },

@@ -10,7 +10,7 @@
             "properties": {
                 "action": {
                     "type": "string",
-                    "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
+                    "description": "The action to be carried out on the Product. Can be: add, modify, delete, noChange"
                 },
                 "id": {
                     "type": "string",
@@ -22,7 +22,7 @@
                 },
                 "status": {
                     "type": "string",
-                    "description": "status of cart item. e.g \"Active\" , \"SavedForLater\"."
+                    "description": "status of cart item. e.g \"active\" , \"savedForLater\"."
                 },
                 "itemTerm": {
                     "type": "array",
