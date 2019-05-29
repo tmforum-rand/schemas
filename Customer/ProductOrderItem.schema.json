@@ -17,7 +17,7 @@
                 },
                 "action": {
                     "$ref": "OrderItemActionType.schema.json#/definitions/OrderItemActionType",
-                    "description": "he action to be carried out on the Product. Can be: add, modify, delete, noChange"
+                    "description": "The action to be carried out on the Product. Can be: add, modify, delete, noChange"
                 },
                 "appointment": {
                     "$ref": "AppointmentRef.schema.json#/definitions/AppointmentRef"

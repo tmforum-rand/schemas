@@ -20,6 +20,10 @@
                     "type": "string",
                     "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
                 },
+                "productOfferingPrice": {
+                    "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef",
+                    "description": "An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased. The price is valid for a defined period of time."
+                },
                 "recurringChargePeriod": {
                     "type": "string",
                     "description": "Could be month, week..."

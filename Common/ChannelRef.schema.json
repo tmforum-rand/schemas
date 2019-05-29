@@ -5,7 +5,7 @@
     "definitions": {
         "ChannelRef": {
             "type": "object",
-            "description": "Channel(ChannelRef)The channel where the recommendation is used. May be online web, mobile app, social ,etc.",
+            "description": "The channel to which the resource reference to. e.g. channel for selling product offerings, channel for opening a trouble ticket etc..",
             "properties": {
                 "name": {
                     "type": "string",
