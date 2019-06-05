@@ -9,7 +9,7 @@
             "type": "object",
             "properties": {
                 "action": {
-                    "type": "string",
+                    "$ref": "CartItemActionType.schema.json#/definitions/CartItemActionType",
                     "description": "The action to be carried out on the Product. Can be: add, modify, delete, noChange"
                 },
                 "id": {
@@ -21,7 +21,7 @@
                     "description": "Quantity of cart items"
                 },
                 "status": {
-                    "type": "string",
+                    "$ref": "CartItemStatusType.schema.json#/definitions/CartItemStatusType",
                     "description": "status of cart item. e.g \"active\" , \"savedForLater\"."
                 },
                 "itemTerm": {

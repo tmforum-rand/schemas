@@ -7,7 +7,7 @@
             "type": "object",
             "description": "Represents a relationship between trouble TroubleTickets",
             "properties": {
-                "TroubleTicket": {
+                "troubleTicket": {
                     "$ref": "TroubleTicketRef.schema.json#/definitions/TroubleTicketRef"
                 },
                 "relationshipType": {
