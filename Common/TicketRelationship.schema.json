@@ -4,6 +4,7 @@
     "title": "TicketRelationship",
     "definitions": {
         "TicketRelationship": {
+            "$id": "TicketRelationship",
             "type": "object",
             "description": "Represents a relationship between trouble tickets",
             "properties": {
@@ -17,7 +18,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

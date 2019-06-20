@@ -22,7 +22,7 @@
                 },
                 "state": {
                     "description": "State of the taskFlow: described in the state machine diagram.",
-                    "$ref": "TaskFlowStateType.schema.json#/definitions/TaskFlowStateType"
+                    "$ref": "TaskFlowStateType.schema.json#TaskFlowStateType"
                 },
 				"taskFlowType": {
                     "type": "string",
@@ -44,7 +44,7 @@
                     "type": "array",
                     "description": "A list of taskFlows related to this taskFlow",
                     "items": {
-                        "$ref": "TaskFlowRelationship.schema.json#/definitions/TaskFlowRelationship"
+                        "$ref": "TaskFlowRelationship.schema.json#TaskFlowRelationship"
                     }
                 },
 				"relatedParty": {
@@ -65,7 +65,7 @@
                     "type": "array",
                     "description": "A list of channel(s) where this taskFlow is executed",
                     "items": {
-                        "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                        "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                     }
                 },
 				"characteristic": {
@@ -74,7 +74,7 @@
                     "items": {
                         "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     }
-                }				
+                }
             },
             "allOf": [
                 {

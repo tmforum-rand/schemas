@@ -3,11 +3,11 @@
     "$id": "StatusChange.schema.json",
     "title": "StatusChange",
     "definitions": {
+        "$id": "#StatusChange",
         "StatusChange": {
             "type": "object",
             "description": "Holds the status notification reasons and associated date the status changed, populated by the server",
             "properties": {
-        
                 "changeDate": {
                     "type": "string",
                     "format": "date-time",
@@ -24,7 +24,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }
