@@ -4,7 +4,7 @@
     "title": "TicketRelationship",
     "definitions": {
         "TicketRelationship": {
-            "$id": "TicketRelationship",
+            "$id": "#TicketRelationship",
             "type": "object",
             "description": "Represents a relationship between trouble tickets",
             "properties": {

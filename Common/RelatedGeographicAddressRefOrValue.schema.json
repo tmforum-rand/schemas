@@ -12,7 +12,6 @@
               "isRef": {
                 "type": "boolean",
                 "default": true
-    
               },
               "role":{
                 "type": "string"
@@ -25,8 +24,8 @@
                 {
                     "$ref": "RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
                 }
-                
+
             ]
         }
     }
-  }
+}

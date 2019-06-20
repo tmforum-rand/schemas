@@ -17,7 +17,7 @@
                 },
                 "state": {
                     "description": "State of the ProcessFlow: described in the state machine diagram.",
-                    "$ref": "ProcessFlowStateType.schema.json#/definitions/ProcessFlowStateType"
+                    "$ref": "ProcessFlowStateType.schema.json#ProcessFlowStateType"
                 },
 				"processFlowType": {
                     "type": "string",
@@ -46,7 +46,7 @@
                     "type": "array",
                     "description": "A list of channel(s) where this processFlow is executed",
                     "items": {
-                        "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                        "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                     }
                 },
 				"characteristic": {
@@ -60,7 +60,7 @@
                     "type": "array",
                     "description": "A list of taskflow related to this processFlow",
                     "items": {
-                        "$ref": "TaskFlowRef.schema.json#/definitions/TaskFlowRef"
+                        "$ref": "TaskFlowRef.schema.json#TaskFlowRef"
                     }
                 }
             },
