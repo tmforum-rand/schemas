@@ -13,15 +13,15 @@
                 },
                 "amount": {
                     "description": "Amount (can be monetary or non-monetary) that was involved in the balance operation",
-                    "$ref": "Quantity.schema.json#Quantity"
+                    "$ref": "../Common/Quantity.schema.json#Quantity"
                 },
                 "amountAfter": {
                     "description": "Remained amount in the bucket involved in the operation after it took place",
-                    "$ref": "Quantity.schema.json#Quantity"
+                    "$ref": "../Common/Quantity.schema.json#Quantity"
                 },
                 "amountBefore": {
                     "description": "Remained amount in the bucket involved in the operation before it took place",
-                    "$ref": "Quantity.schema.json#Quantity"
+                    "$ref": "../Common/Quantity.schema.json#Quantity"
                 },
                 "bucketBalance": {
                     "description": "A reference to the bucket involved in the balance-related operation",

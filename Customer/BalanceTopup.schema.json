@@ -4,6 +4,7 @@
     "title": "BalanceTopup",
     "definitions": {
         "BalanceTopup": {
+            "$id": "#BalanceTopup",
             "description": "#TODO"
         }
     }

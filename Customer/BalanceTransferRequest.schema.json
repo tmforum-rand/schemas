@@ -4,14 +4,16 @@
     "title": "BalanceTransferRequest",
     "definitions": {
         "BalanceTransferRequest": {
+            "$id": "#BalanceTransferRequest",
             "description": "The BalanceTransfer resource is a detailed description of credit transfer operation requested between two buckets (reference to products owned by customers and consuming credit when using a service).",
             "properties": {
                 "bucket": {
                     "description": "A reference to the bucket impacted by the request. This is used in scenarios where the requestor knows beforehand the bucket that is going to be impacted instead of just referring to the commercial identifier of the impacted product and the type of bucket created under that product",
-                    "$ref": "BucketBalanceRef.schema.json#/definitions/BucketBalanceRef"
+                    "$ref": "BucketBalanceRef.schema.json#BucketBalanceRef"
                 },
                 "confirmationDate": {
                     "type": "string",
+                    "format": "date-time",
                     "description": "Date when the transfer was confirmed in the server"
                 },
                 "costOwner": {
@@ -28,6 +30,7 @@
                 },
                 "href": {
                     "type": "string",
+                    "format": "uri",
                     "description": "A resource URI pointing to the resource in the OB that stores the detailed information. This is typically the resource url to retrieve individual transfer operation details"
                 },
                 "id": {
@@ -36,7 +39,7 @@
                 },
                 "partyAccount": {
                     "description": "A reference to the account that owns the bucket impacted by the balance related operation",
-                    "$ref": "PartyAccountRef.schema.json#/definitions/PartyAccountRef"
+                    "$ref": "../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef"
                 },
                 "reason": {
                     "type": "string",
@@ -44,22 +47,23 @@
                 },
                 "receiver": {
                     "description": "Identifier for the user/customer/entity that receives the transfer action when it is required to indicate additional customer hierarchy information regarding the entity receiving the balance transfer",
-                    "$ref": "RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     },
                     "description": "Used to provide information about any other entity with relation to the operation"
                 },
                 "requestedDate": {
                     "type": "string",
+                    "format": "date-time",
                     "description": "Date when the transfer request was received in the server"
                 },
                 "requestor": {
                     "description": "Identifier for the user/customer/entity that performs the top-up action. This can be used to indicate the identifier of an agent that performs the operation on behalf of a user via a customer service channel. Structure including at least attributes \ufffdrole\ufffd and \ufffdname\ufffd.",
-                    "$ref": "RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                 },
                 "status": {
                     "type": "string",
@@ -76,12 +80,12 @@
                 },
                 "transferCost": {
                     "description": "Associated cost to be charged for the transfer operation (can be monetary or non-monetary)",
-                    "$ref": "QuantityType.schema.json#/definitions/QuantityType"
+                    "$ref": "../Common/Quantity.schema.json#Quantity"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "BalanceTransferBody.schema.json#/definitions/BalanceTransferBody"
+                    "$ref": "BalanceTransferBody.schema.json#BalanceTransferBody"
                 }
             ],
             "required": [
