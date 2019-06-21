@@ -4,6 +4,7 @@
     "title": "ProductOfferingQualificationItemRef",
     "definitions": {
         "ProductOfferingQualificationItemRef": {
+            "$id": "#ProductOfferingQualificationItemRef",
             "type": "object",
             "description": "It's a productOfferingQualification item that has been executed previously.",
             "required": ["id", "productOfferingQualificationId"],

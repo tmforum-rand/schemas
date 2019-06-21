@@ -4,10 +4,12 @@
     "title": "BucketBalanceRef",
     "definitions": {
         "BucketBalanceRef": {
+            "$id": "#BucketBalanceRef",
             "description": "link to the resource that holds bucket balance information",
             "properties": {
                 "href": {
                     "type": "string",
+                    "format": "uri",
                     "description": "A resource URI pointing to the resource in the OB that stores the balance information for a bucket"
                 },
                 "id": {
