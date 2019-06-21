@@ -4,6 +4,7 @@
     "title": "BalanceActionRequestRef",
     "definitions": {
         "BalanceActionRequestRef": {
+            "$id": "#BalanceActionRequestRef",
             "description": "link to the resource that holds balance-related request information",
             "properties": {
                 "href": {

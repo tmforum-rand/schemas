@@ -4,12 +4,13 @@
     "title": "AccumulatedBalance",
     "definitions": {
         "AccumulatedBalance": {
+            "$id": "#AccumulatedBalance",
             "description": "Represents and tracks the aggregated amount remained or owed in certain account which is owned by certain customer for a set of buckets.",
             "properties": {
                 "bucket": {
                     "type": "array",
                     "items": {
-                        "$ref": "BucketBalanceRef.schema.json#/definitions/BucketBalanceRef"
+                        "$ref": "BucketBalanceRef.schema.json#BucketBalanceRef"
                     },
                     "description": "A reference to the buckets involved in the aggregation"
                 },
@@ -24,27 +25,27 @@
                 "partyAccount": {
                     "type": "array",
                     "items": {
-                        "$ref": "PartyAccountRef.schema.json#/definitions/PartyAccountRef"
+                        "$ref": "PartyAccountRef.schema.json#PartyAccountRef"
                     },
                     "description": "A reference to the account that owns the buckets aggregated"
                 },
                 "product": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductRef.schema.json#/definitions/ProductRef"
+                        "$ref": "ProductRef.schema.json#ProductRef"
                     },
-                    "description": "A reference to the product whose consumption is managed by the bucket . This is an array to allow scenarios where a buckets are shared between different products"
+                    "description": "A reference to the product whose consumption is managed by the bucket. This is an array to allow scenarios where a buckets are shared between different products"
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     },
                     "description": "Used to provide information about any other entity with relation to the balance, for instance to define customer hierarchy for the balance (e.g.: customerId, userId, )"
                 },
                 "totalBalance": {
                     "description": "Aggregated for a set of prepay balance buckets associated to the product",
-                    "$ref": "QuantityType.schema.json#/definitions/QuantityType"
+                    "$ref": "QuantityType.schema.json#QuantityType"
                 }
             },
             "required": [

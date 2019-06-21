@@ -4,14 +4,15 @@
     "title": "BalanceAdjustmentBody",
     "definitions": {
         "BalanceAdjustmentBody": {
+            "$id": "#BalanceAdjustmentBody",
             "properties": {
                 "amount": {
                     "description": "Amount (can be monetary or non-monetary) to be recharged in the bucket. It could refer to positive (increment) or negative (decrement) values",
-                    "$ref": "QuantityType.schema.json#/definitions/QuantityType"
+                    "$ref": "Quantity.schema.json#Quantity"
                 },
                 "product": {
                     "description": "A reference to the product related to the bucket that is impacted by the balance related operation",
-                    "$ref": "ProductRef.schema.json#/definitions/ProductRef"
+                    "$ref": "ProductRef.schema.json#ProductRef"
                 },
                 "reason": {
                     "type": "string",

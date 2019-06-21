@@ -3,6 +3,7 @@
     "$id": "BalanceAdjustment.schema.json",
     "title": "BalanceAdjustment",
     "definitions": {
+        "$id": "#BalanceAdjustment",
         "BalanceAdjustment": {
             "description": "#TODO"
         }

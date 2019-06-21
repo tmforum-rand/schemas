@@ -75,7 +75,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     },
                     "description": "The related party(ies) that are associated to the ticket."
                 },
