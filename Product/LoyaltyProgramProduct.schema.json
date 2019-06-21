@@ -4,7 +4,7 @@
     "title": "LoyaltyProgramProduct",
     "definitions": {
         "LoyaltyProgramProduct": {
-            "id": "$LoyaltyProgramProduct",
+            "$id": "#LoyaltyProgramProduct",
             "description": "An instance of a loyalty program specification, linked to a specified loyalty member.",
             "type": "object",
             "title": "LoyaltyProgramProduct",
@@ -15,6 +15,7 @@
                 },
                 "href": {
                     "type": "string",
+                    "format": "uri",
                     "description": "A reference to the loyalty account."
                 },
                 "name": {
@@ -33,7 +34,7 @@
                     "type": "array",
                     "description": "Name value pairs of product characteristics.",
                     "items": {
-                        "$ref": "Characteristic.schema.json#Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     }
                 },
                 "loyaltyProgramProductSpec": {
@@ -45,7 +46,7 @@
                   "$ref": "LoyaltyAccountRef.schema.json#LoyaltyAccountRef"
                 },
                 "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#/definitions/TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
                 }
             },
             "allOf": [

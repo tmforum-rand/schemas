@@ -23,7 +23,7 @@
                 },
                 "productOfferingPrice": {
                     "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
-                }, 
+                },
                 "priceType": {
                     "type": "string",
                     "description": "A category that describes the price such as recurring, one time and usage."

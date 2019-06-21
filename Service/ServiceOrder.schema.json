@@ -41,7 +41,7 @@
                     "type": "array", 
                     "description": "Extra-information about the order; e.g. useful to add extra delivery information that could be useful for a human process",
                     "items": {
-			"$ref": "../Common/Note.schema.json#/definitions/Note"
+            			"$ref": "../Common/Note.schema.json#/definitions/Note"
                     }
                 }, 
                 "notificationContact": {

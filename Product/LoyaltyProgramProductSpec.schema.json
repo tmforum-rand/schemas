@@ -22,6 +22,7 @@
                   },
                   "href": {
                       "type": "string",
+                      "format": "uri",
                       "description": "A reference to the product specification."
                   },
                   "lifeCycleStatus": {
@@ -41,10 +42,9 @@
                       "productNumber": "An identification number assigned to uniquely identify the specification."
                   },
                   "ValidFor": {
-                      "$ref": "../Common/TimePeriod.schema.json#/definitions/TimePeriod"
+                      "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
                   }
-              },
-              "title": "LoyaltyProgramProductSpec"
+              }
           }
-      }
+    }
 }

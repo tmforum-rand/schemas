@@ -17,7 +17,6 @@
                   "description": "A reference to the product specification."
               }
             },
-            "title": "LoyaltyProgramProductSpec"
-          }
       }
+  }
 }

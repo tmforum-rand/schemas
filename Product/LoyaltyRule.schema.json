@@ -7,7 +7,6 @@
             "$id": "#LoyaltyRule",
             "description": "Loyalty rule, containing conditions, event types and actions.",
             "type": "object",
-            "title": "LoyaltyBalance",
             "properties": {
                 "id": {
                     "type": "string",
