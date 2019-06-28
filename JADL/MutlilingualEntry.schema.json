@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "MutlilingualEntry.schema.json",
+  "title": "MutlilingualEntry",
+  "definitions": {
+    "MutlilingualEntry": {
+      "type": "object",
+      "required": [
+        "language",
+        "text"
+      ],
+      "properties": {
+        "language": {
+          "$ref": "SupportedLanguages.schema.json#/definitions/SupportedLanguages"
+        },
+        "text": {
+          "type": "string",
+          "description": "Text in the corresponding supported language",
+          "example": "Some text in English"
+        }
+      }
+    }
+  }
+}

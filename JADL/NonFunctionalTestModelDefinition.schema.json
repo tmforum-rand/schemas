@@ -7,17 +7,10 @@
             "type": "object",
             "description": "JADL non-functional test model definition",
             "properties": {
-                "testDataInstances": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestDataInstanceRef.schema.json#/TestDataInstanceRef"
-                    }
-                },
-                "testCases": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestCaseRef.schema.json#/TestCaseRef"
-                    }
+                "code": {
+                    "type": "string",
+                    "description": "Non-functional test definition code",
+                    "example": "traffic mix, execution rates, etc"
                 }
             },
             "allOf": [

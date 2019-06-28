@@ -1,18 +1,23 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "Attribute.schema.json",
-  "title": "Attribute",
-  "definitions": {
-    "Attribute": {
-      "type": "object",
-      "properties": {
-        "characteristic": {
-          "$ref": "Characteristic.schema.json#/definitions/Characteristic"
-        },
-        "description": {
-          "$ref": "Multilingual.schema.json#/definitions/Multilingual"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Attribute.schema.json",
+    "title": "Attribute",
+    "definitions": {
+        "Attribute": {
+            "type": "object",
+            "properties": {
+                "characteristic": {
+                    "$ref": "Characteristic.schema.json#/definitions/Characteristic"
+                },
+                "description": {
+                    "$ref": "Multilingual.schema.json#/definitions/Multilingual"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
         }
-      }
     }
-  }
 }

@@ -8,7 +8,10 @@
       "description": "General information about the artifact",
       "required": [
         "description",
-        "version"
+        "version",
+        "termsOfService",
+        "contract",
+        "license"
       ],
       "properties": {
         "description": {

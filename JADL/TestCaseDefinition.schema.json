@@ -5,22 +5,12 @@
     "definitions": {
         "TestCaseDefinition": {
             "type": "object",
-            "description": "JADL test case definition (test resources, execution flow, etc.)",
+            "description": "JADL test case definition",
             "properties": {
-                "testDataSchemas": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestDataSchemaRef.schema.json#/TestDataSchemaRef"
-                    }
-                },
-                "concreteEnvironmentMetamodel" : {
-                  "$ref": "ConcreteEnvironmentMetaModelRef.schema.json#/ConcreteEnvironmentMetaModelRef"
-                },
-                "testResourceAPIs": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestResourceAPIRef.schema.json#/TestResourceAPIRef"
-                    }
+                "code": {
+                    "type": "string",
+                    "description": "The test case code",
+                    "example": "test resources, execution flow, etc."
                 }
             },
             "allOf": [

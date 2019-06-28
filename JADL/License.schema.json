@@ -8,11 +8,13 @@
       "properties": {
         "name": {
           "type": "string",
+          "description": "The license name",
           "example": "MyLicense"
         },
         "url": {
           "type": "string",
           "format": "uri",
+          "description": "The license URL",
           "example": "http://mylicense.com"
         }
       }

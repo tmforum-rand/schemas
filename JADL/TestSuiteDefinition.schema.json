@@ -7,23 +7,10 @@
             "type": "object",
             "description": "JADL test suite definition",
             "properties": {
-                "testDataInstances": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestDataInstanceRef.schema.json#/TestDataInstanceRef"
-                    }
-                },
-                "testCases": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestCase.schema.json#/TestCaseRef"
-                    }
-                },
-                "testSuites": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestSuite.schema.json#/TestSuiteRef"
-                    }
+                "code": {
+                    "type": "string",
+                    "description": "The test suite definition code",
+                    "example": "test cases, constituient test suites, etc"
                 }
             },
             "allOf": [

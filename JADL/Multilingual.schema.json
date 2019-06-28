@@ -2,21 +2,19 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "Multilingual.schema.json",
   "title": "Multilingual",
-
   "definitions": {
     "Multilingual":{
       "description": "Serialization format for JADL multilingual text",
       "type": "object",
-      "propertyNames": {
-        "$ref": "SupportedLanguages.schema.json#/definitions/SupportedLanguages"
-      },
-      "patternProperties": {
-        ".*": {
-          "type": "string",
-          "example": "This text is in English"
+      "properties": {
+        "multilingual": {
+          "type": "array",
+          "items": {
+            "$ref": "MutlilingualEntry.schema.json#/definitions/MutlilingualEntry"
+          },
+          "description": "Text in supported languages"
         }
-      },
-      "additionalProperties": false
+      }
     }
   }
 }

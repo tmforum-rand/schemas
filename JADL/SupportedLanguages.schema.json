@@ -5,6 +5,7 @@
 
   "definitions": {
     "SupportedLanguages": {
+      "type": "string",
       "description": "Enumeration for the supported languages in JADL multilingual support",
       "enum": [
         "EN",
