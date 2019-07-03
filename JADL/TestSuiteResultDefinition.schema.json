@@ -6,7 +6,15 @@
         "TestSuiteResultDefinition": {
             "type": "object",
             "description": "JADL test suite result definition",
+            "required": [
+                "result"
+            ],
             "properties": {
+                "result": {
+                    "type": "string",
+                    "description": "The test suite result",
+                    "example": "<test suite result representation>"
+                }
             },
             "allOf": [
                 {

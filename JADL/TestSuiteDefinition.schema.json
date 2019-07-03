@@ -10,7 +10,7 @@
                 "code": {
                     "type": "string",
                     "description": "The test suite definition code",
-                    "example": "test cases, constituient test suites, etc"
+                    "example": "<test cases, constituient test suites, etc>"
                 }
             },
             "allOf": [

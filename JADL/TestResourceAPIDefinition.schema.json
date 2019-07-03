@@ -6,12 +6,14 @@
         "TestResourceAPIDefinition": {
             "type": "object",
             "description": "JADL test resource API definition",
+            "required": [
+                "code"
+            ],
             "properties": {
-                "methods": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
+                "code": {
+                    "type": "string",
+                    "description": "The test resource API definition code",
+                    "example": "<API methods, parameter and return value schemas>"
                 }
             },
             "allOf": [

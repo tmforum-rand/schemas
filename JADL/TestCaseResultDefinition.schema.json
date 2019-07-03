@@ -6,7 +6,15 @@
         "TestCaseResultDefinition": {
             "type": "object",
             "description": "JADL test case result definition",
+            "required": [
+                "result"
+            ],
             "properties": {
+                "result": {
+                    "type": "string",
+                    "description": "The test case result",
+                    "example": "<test case result representation>"
+                }
             },
             "allOf": [
                 {

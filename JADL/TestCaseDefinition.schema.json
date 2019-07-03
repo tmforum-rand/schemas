@@ -6,11 +6,14 @@
         "TestCaseDefinition": {
             "type": "object",
             "description": "JADL test case definition",
+            "required": [
+                "code"
+            ],
             "properties": {
                 "code": {
                     "type": "string",
                     "description": "The test case code",
-                    "example": "test resources, execution flow, etc."
+                    "example": "<test resources, execution flow, etc.>"
                 }
             },
             "allOf": [

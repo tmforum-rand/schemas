@@ -10,7 +10,7 @@
                 "code": {
                     "type": "string",
                     "description": "Non-functional test definition code",
-                    "example": "traffic mix, execution rates, etc"
+                    "example": "<traffic mix, execution rates, etc>"
                 }
             },
             "allOf": [

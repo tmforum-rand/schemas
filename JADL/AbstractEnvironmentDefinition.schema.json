@@ -6,12 +6,14 @@
         "AbstractEnvironmentDefinition": {
             "type": "object",
             "description": "JADL abstract environment definition",
+            "required": [
+                "code"
+            ],
             "properties": {
-                "abstractResources": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
+                "code": {
+                    "type": "string",
+                    "description": "The abstract environment definition code",
+                    "example": "<required test resources, provisioning data, scripts, etc>"
                 }
             },
             "allOf": [

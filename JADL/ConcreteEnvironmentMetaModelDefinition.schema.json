@@ -6,12 +6,14 @@
         "ConcreteEnvironmentMetaModelDefinition": {
             "type": "object",
             "description": "JADL test environment metamodel definition",
+            "required": [
+                "code"
+            ],
             "properties": {
-                "testResourceAPIs": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "TestResourceAPI.schema.json#/TestResourceAPIRef"
-                    }
+                "code": {
+                    "type": "string",
+                    "description": "The test environment metamodel definition code",
+                    "example": "<Abstract to concrete resource mapping, resource APIs, etc>"
                 }
             },
             "allOf": [

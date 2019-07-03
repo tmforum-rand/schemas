@@ -6,7 +6,15 @@
         "NonFunctionalTestResultDefinition": {
             "type": "object",
             "description": "JADL test non-functional test result definition",
+            "required": [
+                "result"
+            ],
             "properties": {
+                "result": {
+                    "type": "string",
+                    "description": "The non-functional test case result",
+                    "example": "<non-functional test result representation>"
+                }
             },
             "allOf": [
                 {
