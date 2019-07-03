@@ -56,6 +56,11 @@
                     "type": "string", 
                     "description": "Attachment mime type such as extension file for video, picture and document"
                 }, 
+                "content": {
+                    "type": "string",
+                    "format": "base64",
+                    "description": "The actual contents of the attachment object, if embedded, encoded as base64"
+                },
                 "size": {
                     "$ref": "../Common/Quantity.schema.json#Quantity",
                     "description": "The size of the attachment."

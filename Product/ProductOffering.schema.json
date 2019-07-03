@@ -71,7 +71,7 @@
                 "channel": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                        "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                     },
                     "description": "The channel defines the channel for selling product offerings."
                 },
@@ -100,7 +100,7 @@
                 "productOfferingPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductOfferingPrice.schema.json#ProductOfferingPrice"
+                        "$ref": "ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
                     },
                     "description": "An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased. The price is valid for a defined period of time and may not represent the actual price paid by a customer."
                 },

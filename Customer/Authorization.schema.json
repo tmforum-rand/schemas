@@ -8,25 +8,25 @@
             "description": "If special discount or special product offering price or specific condition need an approval for ISP sale representative it is described here.",
             "type": "object",
             "properties": {
-                "authorizationGivenDate": {
+                "givenDate": {
                     "type": "string",
                     "format" : "date-time",
                     "description": "Date when the authorization (approved or declined) was done"
                 },
-                "authorizationName": {
+                "name": {
                     "type": "string",
                     "description": "Name of the required authorization"
                 },
-                "authorizationRequestedDate": {
+                "requestedDate": {
                     "type": "string",
                     "format" : "date-time",
                     "description": "Date when the authorization is requested for"
                 },
-                "authorizationSignatureRepresentation": {
+                "signatureRepresentation": {
                     "type": "string",
                     "description": "To describe a digital or manual signature"
                 },
-                "authorizationState": {
+                "state": {
                     "type": "string",
                     "description": "State of the authorization, such as: approved or declined"
                 },

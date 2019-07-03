@@ -4,13 +4,24 @@
     "title": "TaskFlowRef",
     "definitions": {
         "TaskFlowRef": {
-            "$id": "#TaskFlowRef",
             "type": "object",
-            "properties": {				
+            "properties": {
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the related entity."
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of a related entity."
+                }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }
