@@ -93,7 +93,7 @@
                     "description": "The severity of the issue. Indicate the implication of the issue on the expected functionality e.g. of a system, application, service etc.. \nSeverity values can be for example : Critical, Major, Minor"
                 },
                 "status": {
-                    "type": "string",
+                    "$ref": "TroubleTicketStatusType.schema.json#/definitions/TroubleTicketStatusType",
                     "description": "The current status of the trouble ticket"
                 },
                 "statusChange": {

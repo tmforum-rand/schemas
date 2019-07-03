@@ -39,8 +39,8 @@
                     "description": "URL of the root resource where the content of the file specified by the import job must be applied"
                 },
                 "status": {
-                    "type": "string",
-                    "description": "Status of the import job (not started, running, succeeded, failed)"
+                    "description": "Status of the import job (not started, running, succeeded, failed)",
+                    "$ref": "JobStateType.schema.json#/definitions/JobStateType"
                 },
                 "url": {
                     "type": "string",

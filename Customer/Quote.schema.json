@@ -66,7 +66,7 @@
                 },
                 "instantSyncQuote": {
                     "type": "boolean",
-                    "description": "An indicator which when the value is \"true\" means that requester expects to get quoting result in the response"
+                    "description": "An indicator which when the value is \"true\" means that requester expects to get quoting result immediately in the response. If the indicator is true then the response code of 200 indicates the operation is successful otherwise a task is created with a response 201. "
                 },
                 "note": {
                     "type": "array",
@@ -75,7 +75,7 @@
                         "$ref": "Note.schema.json#/definitions/Note"
                     }
                 },
-                "quoteAuthorization": {
+                "authorization": {
                     "type": "array",
                     "description": "An authorization provided for the quote",
                     "items": {
