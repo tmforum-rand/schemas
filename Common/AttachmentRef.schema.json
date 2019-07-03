@@ -25,10 +25,6 @@
                     "description": "Link to the attachment media/content",
                     "type": "string",
                     "format": "uri"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             },
             "allOf": [
