@@ -44,8 +44,9 @@
                     "default": true
                 },
                 "content": {
-                    "$ref": "ContentType.schema.json#/definitions/ContentType",
-                    "description": "The file itself when provided."
+                    "type": "string",
+                    "format": "base64",
+                    "description": "The actual contents of the attachment object, if embedded, encoded as base64"
                 },
                 "size": {
                     "$ref": "Quantity.schema.json#/definitions/Quantity",
