@@ -4,6 +4,7 @@
     "title": "MediumCharacteristic",
     "definitions": {
         "MediumCharacteristic": {
+            "$id": "#MediumCharacteristic",
             "type": "object",
             "description": "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)",
             "properties": {
