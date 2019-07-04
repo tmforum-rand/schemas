@@ -9,7 +9,7 @@
             "description": "Represents a relationship between trouble TroubleTickets",
             "properties": {
                 "troubleTicket": {
-                    "$ref": "TroubleTicketRef.schema.json#/definitions/TroubleTicketRef"
+                    "$ref": "TroubleTicketRef.schema.json#TroubleTicketRef"
                 },
                 "relationshipType": {
                     "type": "string",
