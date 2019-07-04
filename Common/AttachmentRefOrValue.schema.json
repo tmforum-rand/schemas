@@ -4,6 +4,7 @@
     "title": "AttachmentRefOrValue",
     "definitions": {
         "AttachmentRefOrValue": {
+            "$id": "AttachmentRefOrValue",
             "type": "object",
             "description": "An attachment by value or by reference. For AttachmentRefOrValue, the attribute type,schemaLocation and referredType are related to the contained entity and not to AttchmentRefOrValue itself",
             "allOf": [
