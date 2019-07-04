@@ -50,7 +50,7 @@
                     }
                 },
                 "product": {
-                    "$ref": "BaseProductRefOrValue.schema.json#BaseProductRefOrValue"
+                    "$ref": "ProductRefOrValue.schema.json#ProductRefOrValue"
                 },
                 "terminationError": {
                     "type": "array",

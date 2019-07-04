@@ -63,7 +63,7 @@
                 "product": {
                     "type": "array",
                     "items": {
-                        "$ref": "Product.schema.json#/definitions/Product"
+                        "$ref": "ProductRefOrValue.schema.json#/definitions/ProductRefOrValue"
                     }
                 },
                 "productPrice": {
@@ -109,7 +109,7 @@
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
-                "relatedPlace": {
+                "place": {
                     "type": "array",
                     "items": {
                         "$ref": "RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue"

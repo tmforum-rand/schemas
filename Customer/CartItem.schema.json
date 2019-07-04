@@ -49,7 +49,7 @@
                     }
                 },
                 "product": {
-                    "$ref": "../Product/BaseProductRefOrValue.schema.json#BaseProductRefOrValue"
+                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
                 },
                 "itemPrice": {
                     "type": "array",

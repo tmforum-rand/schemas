@@ -8,18 +8,6 @@
             "type": "object", 
             "description": "The category resource is used to group product offerings, service and resource candidates in logical containers. Categories can contain other categories and/or product offerings, resource or service candidates.", 
             "properties": {
-                "@baseType": {
-                    "type": "string", 
-                    "description": "the base class type of the category"
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "link to the schema describing this category"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "the class type of the Category"
-                }, 
                 "description": {
                     "type": "string", 
                     "description": "Description of the category"

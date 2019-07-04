@@ -37,7 +37,7 @@
                     }
                 },
                 "product": {
-                    "$ref": "BaseProductRefOrValue.schema.json#/definitions/BaseProductRefOrValue"
+                    "$ref": "ProductRefOrValue.schema.json#/definitions/ProductRefOrValue"
                 },
                 "productOffering": {
                     "$ref": "ProductOfferingRef.schema.json#/definitions/ProductOfferingRef"

@@ -31,7 +31,7 @@
                     "type": "string",
                     "description": "Used to categorize the order from a business perspective that can be useful for the OM system (e.g. \"enterprise\", \"residential\", ...)"
                 },
-                "relatedChannel": {
+                "channel": {
                     "type": "array",
                     "items": {
                         "$ref": "RelatedChannel.schema.json#/definitions/RelatedChannel"
@@ -94,7 +94,7 @@
                     "type": "string",
                     "description": "A way that can be used by consumers to prioritize orders in OM system (from 0 to 4 : 0 is the highest priority, and 4 the lowest)"
                 },
-                "ProductOfferingQualification": {
+                "productOfferingQualification": {
                     "type": "array",
                     "items": {
                         "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
