@@ -4,6 +4,7 @@
     "title": "QualificationRef",
     "definitions": {
         "QualificationRef": {
+            "$id": "#QualificationRef",
             "type": "object",
             "description": "It could be a serviceQualification or a productOfferingQualification that has been executed previously and captured in the productOrder to provide eligibility information",
             "properties": {
