@@ -4,6 +4,7 @@
     "title": "ProcessFlow",
     "definitions": {
         "ProcessFlow": {
+            "$id": "#ProcessFlow",
             "type": "object",
             "properties": {
                 "channel": {
