@@ -4,6 +4,7 @@
     "title": "ExternalReference", 
     "definitions": {
         "ExternalReference": {
+	    "$id": "#ExternalReference",
             "type": "object", 
             "description": "External reference of the individual or reference in other system", 
             "properties": {
