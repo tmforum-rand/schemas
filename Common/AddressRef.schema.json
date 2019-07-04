@@ -6,21 +6,9 @@
         "AddressRef": {
             "$id": "#AddressRef",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#EntityRef"
                 }
             ]
         }

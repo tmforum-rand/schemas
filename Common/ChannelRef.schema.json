@@ -7,10 +7,14 @@
             "type": "object",
             "description": "The channel to which the resource reference to. e.g. channel for selling product offerings, channel for opening a trouble ticket etc..",
             "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the channel."
+                }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
+                    "$ref": "EntityRef.schema.json#/EntityRef"
                 }
             ]
         }
