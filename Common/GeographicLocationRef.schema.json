@@ -1,18 +1,17 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "GeographicLocationRef.schema.json",
-    "title": "GeographicLocationRef",
-    "definitions": {
-        "GeographicLocationRef": {
-            "$id": "#GeographicLocationRef",
-            "type": "object",
-            "properties": {
-            },
-            "allOf": [
-                {
-                    "$ref": "PlaceRef.schema.json#PlaceRef"
-                }
-            ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "GeographicLocationRef.schema.json",
+  "title": "GeographicLocationRef",
+  "definitions": {
+    "GeographicLocationRef": {
+      "$id": "#GeographicLocationRef",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "PlaceRef.schema.json#PlaceRef"
         }
+      ]
     }
+  }
 }
