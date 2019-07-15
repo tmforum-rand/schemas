@@ -1,26 +1,26 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "TroubleTicketRelationship.schema.json",
-  "title": "TroubleTicketRelationship",
-  "definitions": {
-    "TroubleTicketRelationship": {
-      "$id": "#TroubleTicketRelationship",
-      "type": "object",
-      "description": "Represents a relationship between trouble TroubleTickets",
-      "properties": {
-        "troubleTicket": {
-          "$ref": "TroubleTicketRef.schema.json#TroubleTicketRef"
-        },
-        "relationshipType": {
-          "type": "string",
-          "description": "Type of the  Trouble Ticket relationship can be isChiled, dependent etc..."
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TroubleTicketRelationship.schema.json",
+    "title": "TroubleTicketRelationship",
+    "definitions": {
+        "TroubleTicketRelationship": {
+            "$id": "#TroubleTicketRelationship",
+            "type": "object",
+            "description": "Represents a relationship between trouble TroubleTickets",
+            "properties": {
+                "troubleTicket": {
+                    "$ref": "TroubleTicketRef.schema.json#TroubleTicketRef"
+                },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Type of the  Trouble Ticket relationship can be isChiled, dependent etc..."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#Entity"
+                }
+            ]
         }
-      },
-      "allOf": [
-        {
-          "$ref": "Entity.schema.json#Entity"
-        }
-      ]
     }
-  }
 }

@@ -1,17 +1,17 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "Bucket.schema.json",
-  "title": "Bucket",
-  "definitions": {
-    "Bucket": {
-      "$id": "#Bucket",
-      "description": "desc",
-      "allOf": [
-        {
-          "$ref": "BucketBalance.schema.json#BucketBalance"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Bucket.schema.json",
+    "title": "Bucket",
+    "definitions": {
+        "Bucket": {
+            "$id": "#Bucket",
+            "description": "desc",
+            "allOf": [
+                {
+                    "$ref": "BucketBalance.schema.json#BucketBalance"
+                }
+            ],
+            "type": "object"
         }
-      ],
-      "type": "object"
     }
-  }
 }

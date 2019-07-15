@@ -1,31 +1,31 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "BillFormatRefOrValue.schema.json",
-  "title": "BillFormatRefOrValue",
-  "definitions": {
-    "BillFormatRefOrValue": {
-      "discriminator": "isRef",
-      "$id": "#BillFormatRefOrValue",
-      "description": "An attachment by value or by reference.",
-      "type": "object",
-      "properties": {
-        "isRef": {
-          "type": "boolean",
-          "default": true
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BillFormatRefOrValue.schema.json",
+    "title": "BillFormatRefOrValue",
+    "definitions": {
+        "BillFormatRefOrValue": {
+            "discriminator": "isRef",
+            "$id": "#BillFormatRefOrValue",
+            "description": "An attachment by value or by reference.",
+            "type": "object",
+            "properties": {
+                "isRef": {
+                    "type": "boolean",
+                    "default": true
+                }
+            },
+            "required": [
+                "isRef",
+                "role"
+            ],
+            "allOf": [
+                {
+                    "$ref": "BillFormatRef.schema.json#BillFormatRef"
+                },
+                {
+                    "$ref": "BillFormat.schema.json#BillFormat"
+                }
+            ]
         }
-      },
-      "required": [
-        "isRef",
-        "role"
-      ],
-      "allOf": [
-        {
-          "$ref": "BillFormatRef.schema.json#BillFormatRef"
-        },
-        {
-          "$ref": "BillFormat.schema.json#BillFormat"
-        }
-      ]
     }
-  }
 }
