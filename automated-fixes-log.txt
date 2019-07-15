@@ -1,0 +1,732 @@
+... schema loaded
+... #schemas = 489
+... keys polymorphicPattern len=1
+... keys BalanceTopupStatusType len=1
+... keys LoyaltyAccount len=1
+... schemas processed
+... fixes
+... AddressRef.schema.json
+... ... replaced schema $ref=Entity.schema.json#EntityRef with EntityRef.schema.json#EntityRef
+
+... Any.schema.json
+... ... added $id for Any
+... ... added missing type (object) for Any
+
+... Attachment.schema.json
+... ... replaced schema $ref=../Common/Quantity.schema.json#Quantity with Quantity.schema.json#Quantity
+... ... replaced schema $ref=../Common/TimePeriod.schema.json#TimePeriod with TimePeriod.schema.json#TimePeriod
+
+... AttachmentRefOrValue.schema.json
+... ... added $id for AttachmentRefOrValue
+
+... CalendarEventRef.schema.json
+... ... replaced schema $ref=../Common/EntityRef.schema.json#EntityRef with EntityRef.schema.json#EntityRef
+
+... Channel.schema.json
+... ... replaced schema $ref=../Common/Entity.schema.json#Entity with Entity.schema.json#Entity
+
+... ChannelRef.schema.json
+... ... added $id for ChannelRef
+
+... Characteristic.schema.json
+... ... replaced schema $ref=Any.schema.json#/definitions/Any with Any.schema.json#Any
+
+... ExportJob.schema.json
+... ... replaced schema $ref=JobStateType.schema.json#/definitions/JobStateType with JobStateType.schema.json#JobStateType
+
+... ExternalReference.schema.json
+... ... added $id for ExternalReference
+
+... ImportJob.schema.json
+... ... replaced schema $ref=JobStateType.schema.json#/definitions/JobStateType with JobStateType.schema.json#JobStateType
+
+... MediumCharacteristic.schema.json
+... ... added $id for MediumCharacteristic
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... Monitor.schema.json
+... ... replaced schema $ref=Request.schema.json#/definitions/Request with Request.schema.json#Request
+... ... replaced schema $ref=Response.schema.json#/definitions/Response with Response.schema.json#Response
+
+... ProcessFlow.schema.json
+... ... added $id for ProcessFlow
+... ... replaced schema $ref=ChannelRef.schema.json#/definitions/ChannelRef with ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=Characteristic.schema.json#/definitions/Characteristic with Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=RelatedEntity.schema.json#/definitions/RelatedEntity with RelatedEntity.schema.json#RelatedEntity
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=ProcessFlowStateType.schema.json#/definitions/ProcessFlowStateType with ProcessFlowStateType.schema.json#ProcessFlowStateType
+... ... replaced schema $ref=TaskFlowRef.schema.json#/definitions/TaskFlowRef with TaskFlowRef.schema.json#TaskFlowRef
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... ProcessFlowRef.schema.json
+... ... replaced schema $ref=ProcessFlowStateType.schema.json#/definitions/ProcessFlowStateType with ProcessFlowStateType.schema.json#ProcessFlowStateType
+... ... replaced schema $ref=../Common/EntityRef.schema.json#EntityRef with EntityRef.schema.json#EntityRef
+
+... QualificationRef.schema.json
+... ... added $id for QualificationRef
+... ... replaced schema $ref=EntityRef.schema.json#/EntityRef with EntityRef.schema.json#EntityRef
+
+... QuantityType.schema.json
+... ... added $id for QuantityType
+... ... added missing type (object) for QuantityType
+
+... RelatedChannel.schema.json
+... ... added $id for RelatedChannel
+... ... replaced schema $ref=../Common/EntityRef.schema.json#/EntityRef with EntityRef.schema.json#EntityRef
+
+... Request.schema.json
+... ... replaced schema $ref=HeaderItem.schema.json#/definitions/HeaderItem with HeaderItem.schema.json#HeaderItem
+
+... Response.schema.json
+... ... replaced schema $ref=HeaderItem.schema.json#/definitions/HeaderItem with HeaderItem.schema.json#HeaderItem
+
+... StatusChange.schema.json
+... ... added $id for StatusChange
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... TaskFlow.schema.json
+... ... added $id for TaskFlow
+... ... replaced schema $ref=ChannelRef.schema.json#/definitions/ChannelRef with ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=Characteristic.schema.json#/definitions/Characteristic with Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=RelatedEntity.schema.json#/definitions/RelatedEntity with RelatedEntity.schema.json#RelatedEntity
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=TaskFlowStateType.schema.json#/definitions/TaskFlowStateType with TaskFlowStateType.schema.json#TaskFlowStateType
+... ... replaced schema $ref=TaskFlowRelationship.schema.json#/definitions/TaskFlowRelationship with TaskFlowRelationship.schema.json#TaskFlowRelationship
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... TaskFlowRef.schema.json
+... ... added $id for TaskFlowRef
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... TaxDefinition.schema.json
+... ... added $id for TaxDefinition
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... TicketRelationship.schema.json
+... ... added $id for TicketRelationship
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... TimePeriodType.schema.json
+... ... added $id for TimePeriodType
+... ... added missing type (object) for TimePeriodType
+
+... TroubleTicket.schema.json
+... ... added $id for TroubleTicket
+... ... replaced schema $ref=AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue with AttachmentRefOrValue.schema.json#AttachmentRefOrValue
+... ... replaced schema $ref=ChannelRef.schema.json#/definitions/ChannelRef with ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=Note.schema.json#/definitions/Note with Note.schema.json#Note
+... ... replaced schema $ref=RelatedEntity.schema.json#/definitions/RelatedEntity with RelatedEntity.schema.json#RelatedEntity
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=TroubleTicketStatusType.schema.json#/definitions/TroubleTicketStatusType with TroubleTicketStatusType.schema.json#TroubleTicketStatusType
+... ... replaced schema $ref=StatusChange.schema.json#/definitions/StatusChange with StatusChange.schema.json#StatusChange
+... ... replaced schema $ref=TroubleTicketRelationship.schema.json#/definitions/TroubleTicketRelationship with TroubleTicketRelationship.schema.json#TroubleTicketRelationship
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... TroubleTicketRef.schema.json
+... ... replaced schema $ref=../Common/EntityRef.schema.json#EntityRef with EntityRef.schema.json#EntityRef
+
+... TroubleTicketRelationship.schema.json
+... ... added $id for TroubleTicketRelationship
+... ... replaced schema $ref=TroubleTicketRef.schema.json#/definitions/TroubleTicketRef with TroubleTicketRef.schema.json#TroubleTicketRef
+... ... replaced schema $ref=Entity.schema.json#/Entity with Entity.schema.json#Entity
+
+... AccumulatedBalance.schema.json
+... ... added $id for AccumulatedBalance
+... ... added missing type (object) for AccumulatedBalance
+... ... replaced schema $ref=BucketBalanceRef.schema.json#/definitions/BucketBalanceRef with BucketBalanceRef.schema.json#BucketBalanceRef
+... ... replaced schema $ref=PartyAccountRef.schema.json#/definitions/PartyAccountRef with ../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef
+... ... replaced schema $ref=ProductRef.schema.json#/definitions/ProductRef with ../Product/ProductRef.schema.json#ProductRef
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+
+... Appointment.schema.json
+... ... added $id for Appointment
+... ... replaced schema $ref=AppointmentStateType.schema.json#/definitions/AppointmentStateType with AppointmentStateType.schema.json#AppointmentStateType
+
+... AppointmentStateValues.schema.json
+... ... added $id for AppointmentStateValues
+
+... BalanceActionRequestRef.schema.json
+... ... added $id for BalanceActionRequestRef
+... ... added missing type (object) for BalanceActionRequestRef
+
+... BalanceActivity.schema.json
+... ... added $id for BalanceActivity
+... ... added missing type (object) for BalanceActivity
+... ... replaced schema $ref=BalanceActionRequestRef.schema.json#/definitions/BalanceActionRequestRef with BalanceActionRequestRef.schema.json#BalanceActionRequestRef
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=BucketBalanceRef.schema.json#/definitions/BucketBalanceRef with BucketBalanceRef.schema.json#BucketBalanceRef
+... ... replaced schema $ref=PartyAccountRef.schema.json#/definitions/PartyAccountRef with ../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef
+... ... replaced schema $ref=ProductRef.schema.json#/definitions/ProductRef with ../Product/ProductRef.schema.json#ProductRef
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+
+... BalanceAdjustment.schema.json
+... ... added $id for BalanceAdjustment
+... ... added missing type (object) for BalanceAdjustment
+
+... BalanceAdjustmentBody.schema.json
+... ... added $id for BalanceAdjustmentBody
+... ... added missing type (object) for BalanceAdjustmentBody
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=ProductRef.schema.json#/definitions/ProductRef with ../Product/ProductRef.schema.json#ProductRef
+
+... BalanceAdjustmentRequest.schema.json
+... ... added $id for BalanceAdjustmentRequest
+... ... added missing type (object) for BalanceAdjustmentRequest
+... ... replaced schema $ref=BucketBalanceRef.schema.json#/definitions/BucketBalanceRef with BucketBalanceRef.schema.json#BucketBalanceRef
+... ... replaced schema $ref=PartyAccountRef.schema.json#/definitions/PartyAccountRef with ../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+... ... replaced schema $ref=TimePeriodType.schema.json#/definitions/TimePeriodType with ../Common/TimePeriodType.schema.json#TimePeriodType
+... ... replaced schema $ref=BalanceAdjustmentBody.schema.json#/definitions/BalanceAdjustmentBody with BalanceAdjustmentBody.schema.json#BalanceAdjustmentBody
+
+... BalanceTopup.schema.json
+... ... added $id for BalanceTopup
+... ... added missing type (object) for BalanceTopup
+
+... BalanceTopupBody.schema.json
+... ... added $id for BalanceTopupBody
+... ... added missing type (object) for BalanceTopupBody
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=ChannelRef.schema.json#/definitions/ChannelRef with ../Common/ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=ProductRef.schema.json#/definitions/ProductRef with ../Product/ProductRef.schema.json#ProductRef
+
+... BalanceTopupRequest.schema.json
+... ... added $id for BalanceTopupRequest
+... ... added missing type (object) for BalanceTopupRequest
+... ... replaced schema $ref=BucketBalanceRef.schema.json#/definitions/BucketBalanceRef with BucketBalanceRef.schema.json#BucketBalanceRef
+... ... replaced schema $ref=PartyAccountRef.schema.json#/definitions/PartyAccountRef with ../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef
+... ... replaced schema $ref=PaymentMethodRefOrValue.schema.json#/definitions/PaymentMethodRefOrValue with PaymentMethodRefOrValue.schema.json#PaymentMethodRefOrValue
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+... ... replaced schema $ref=TimePeriodType.schema.json#/definitions/TimePeriodType with ../Common/TimePeriodType.schema.json#TimePeriodType
+... ... replaced schema $ref=BalanceTopupBody.schema.json#/definitions/BalanceTopupBody with BalanceTopupBody.schema.json#BalanceTopupBody
+
+... BalanceTopupStatusTypeModify.schema.json
+... ... added $id for BalanceTopupStatusTypeModify
+... ... added missing type (object) for BalanceTopupStatusTypeModify
+
+... BalanceTransfer.schema.json
+... ... added $id for BalanceTransfer
+... ... added missing type (object) for BalanceTransfer
+
+... BalanceTransferBody.schema.json
+... ... added $id for BalanceTransferBody
+... ... added missing type (object) for BalanceTransferBody
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=ChannelRef.schema.json#/definitions/ChannelRef with ../Common/ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=ProductRef.schema.json#/definitions/ProductRef with ../Product/ProductRef.schema.json#ProductRef
+
+... BalanceTransferRequest.schema.json
+... ... added $id for BalanceTransferRequest
+... ... added missing type (object) for BalanceTransferRequest
+... ... replaced schema $ref=BucketBalanceRef.schema.json#/definitions/BucketBalanceRef with BucketBalanceRef.schema.json#BucketBalanceRef
+... ... replaced schema $ref=PartyAccountRef.schema.json#/definitions/PartyAccountRef with ../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=BalanceTransferBody.schema.json#/definitions/BalanceTransferBody with BalanceTransferBody.schema.json#BalanceTransferBody
+
+... BalanceTransferStatusTypeModify.schema.json
+... ... added $id for BalanceTransferStatusTypeModify
+... ... added missing type (object) for BalanceTransferStatusTypeModify
+
+... BillingAccount.schema.json
+... ... replaced schema $ref=../Common/PartyAccount.schema.json#PartyAccount with ../EngagedParty/PartyAccount.schema.json#PartyAccount
+
+... Bucket.schema.json
+... ... added $id for Bucket
+... ... added missing type (object) for Bucket
+... ... replaced schema $ref=BucketBalance.schema.json#/definitions/BucketBalance with BucketBalance.schema.json#BucketBalance
+
+... BucketBalance.schema.json
+... ... added $id for BucketBalance
+... ... added missing type (object) for BucketBalance
+... ... replaced schema $ref=PartyAccountRef.schema.json#/definitions/PartyAccountRef with ../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef
+... ... replaced schema $ref=ProductRef.schema.json#/definitions/ProductRef with ../Product/ProductRef.schema.json#ProductRef
+... ... replaced schema $ref=ResourceRef.schema.json#/definitions/ResourceRef with ../Resource/ResourceRef.schema.json#ResourceRef
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=QuantityType.schema.json#/definitions/QuantityType with ../Common/QuantityType.schema.json#QuantityType
+... ... replaced schema $ref=TimePeriodType.schema.json#/definitions/TimePeriodType with ../Common/TimePeriodType.schema.json#TimePeriodType
+
+... BucketBalanceRef.schema.json
+... ... added $id for BucketBalanceRef
+... ... added missing type (object) for BucketBalanceRef
+
+... CartItem.schema.json
+... ... replaced schema $ref=CartItemActionType.schema.json#/definitions/CartItemActionType with CartItemActionType.schema.json#CartItemActionType
+... ... replaced schema $ref=CartItemStatusType.schema.json#/definitions/CartItemStatusType with CartItemStatusType.schema.json#CartItemStatusType
+
+... CartPrice.schema.json
+... ... replaced schema $ref=PriceAlteration.schema.json#PriceAlteration with ../Product/PriceAlteration.schema.json#PriceAlteration
+
+... Customer.schema.json
+... ... replaced schema $ref=../Customer/PaymentMethodRef.schema.json#PaymentMethodRef with PaymentMethodRef.schema.json#PaymentMethodRef
+... ... replaced schema $ref=../Customer/CreditProfile.schema.json#CreditProfile with CreditProfile.schema.json#CreditProfile
+
+... Disability.schema.json
+... ... added $id for Disability
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... OrderItemPrice.schema.json
+... ... replaced schema $ref=PriceAlteration.schema.json#PriceAlteration with ../Product/PriceAlteration.schema.json#PriceAlteration
+
+... OrderPrice.schema.json
+... ... replaced schema $ref=PriceAlteration.schema.json#PriceAlteration with ../Product/PriceAlteration.schema.json#PriceAlteration
+
+... PaymentMethodRefOrValue.schema.json
+... ... added $id for PaymentMethodRefOrValue
+... ... added missing type (object) for PaymentMethodRefOrValue
+... ... replaced schema $ref=RelatedPartyRef.schema.json#/definitions/RelatedPartyRef with ../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef
+
+... PaymentRef.schema.json
+... ... added $id for PaymentRef
+... ... replaced schema $ref=../Common/EntityRef.schema.json#/EntityRef with ../Common/EntityRef.schema.json#EntityRef
+
+... ProductOfferingQualificationItemRef.schema.json
+... ... added $id for ProductOfferingQualificationItemRef
+... ... replaced schema $ref=../Common/Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... ProductOrder.schema.json
+... ... added $id for ProductOrder
+... ... replaced schema $ref=AgreementRef.schema.json#/definitions/AgreementRef with ../EngagedParty/AgreementRef.schema.json#AgreementRef
+... ... replaced schema $ref=BillingAccountRef.schema.json#/definitions/BillingAccountRef with BillingAccountRef.schema.json#BillingAccountRef
+... ... replaced schema $ref=RelatedChannel.schema.json#/definitions/RelatedChannel with ../Common/RelatedChannel.schema.json#RelatedChannel
+... ... replaced schema $ref=Note.schema.json#/definitions/Note with ../Common/Note.schema.json#Note
+... ... replaced schema $ref=OrderPrice.schema.json#/definitions/OrderPrice with OrderPrice.schema.json#OrderPrice
+... ... replaced schema $ref=PaymentRef.schema.json#/definitions/PaymentRef with PaymentRef.schema.json#PaymentRef
+... ... replaced schema $ref=ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef with ../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef
+... ... replaced schema $ref=QuoteRef.schema.json#/definitions/QuoteRef with QuoteRef.schema.json#QuoteRef
+... ... replaced schema $ref=ProductOrderItem.schema.json#/definitions/ProductOrderItem with ProductOrderItem.schema.json#ProductOrderItem
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=ProductOrderStateType.schema.json#/definitions/ProductOrderStateType with ProductOrderStateType.schema.json#ProductOrderStateType
+... ... replaced schema $ref=Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... ProductOrderItem.schema.json
+... ... added $id for ProductOrderItem
+... ... replaced schema $ref=OrderItemActionType.schema.json#/definitions/OrderItemActionType with OrderItemActionType.schema.json#OrderItemActionType
+... ... replaced schema $ref=AppointmentRef.schema.json#/definitions/AppointmentRef with AppointmentRef.schema.json#AppointmentRef
+... ... replaced schema $ref=BillingAccountRef.schema.json#/definitions/BillingAccountRef with BillingAccountRef.schema.json#BillingAccountRef
+... ... replaced schema $ref=OrderPrice.schema.json#/definitions/OrderPrice with OrderPrice.schema.json#OrderPrice
+... ... replaced schema $ref=OrderTerm.schema.json#/definitions/OrderTerm with OrderTerm.schema.json#OrderTerm
+... ... replaced schema $ref=OrderPrice.schema.json#/definitions/OrderPrice with OrderPrice.schema.json#OrderPrice
+... ... replaced schema $ref=PaymentRef.schema.json#/definitions/PaymentRef with PaymentRef.schema.json#PaymentRef
+... ... replaced schema $ref=ProductRefOrValue.schema.json#/definitions/ProductRefOrValue with ../Product/ProductRefOrValue.schema.json#ProductRefOrValue
+... ... replaced schema $ref=ProductOfferingRef.schema.json#/definitions/ProductOfferingRef with ../Product/ProductOfferingRef.schema.json#ProductOfferingRef
+... ... replaced schema $ref=ProductOfferingQualificationItemRef.schema.json#/definitions/ProductOfferingQualificationItemRef with ../Product/ProductOfferingQualificationItemRef.schema.json#ProductOfferingQualificationItemRef
+... ... replaced schema $ref=QuoteItemRef.schema.json#/definitions/QuoteItemRef with QuoteItemRef.schema.json#QuoteItemRef
+... ... replaced schema $ref=ProductOrderItem.schema.json#/definitions/ProductOrderItem with ProductOrderItem.schema.json#ProductOrderItem
+... ... replaced schema $ref=OrderItemRelationship.schema.json#/definitions/OrderItemRelationship with OrderItemRelationship.schema.json#OrderItemRelationship
+... ... replaced schema $ref=ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef with ../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef
+... ... replaced schema $ref=ProductOrderItemStateType.schema.json#/definitions/ProductOrderItemStateType with ProductOrderItemStateType.schema.json#ProductOrderItemStateType
+... ... replaced schema $ref=Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... Quote.schema.json
+... ... added $id for Quote
+... ... replaced schema $ref=AgreementRef.schema.json#/definitions/AgreementRef with ../EngagedParty/AgreementRef.schema.json#AgreementRef
+... ... replaced schema $ref=BillingAccountRef.schema.json#/definitions/BillingAccountRef with BillingAccountRef.schema.json#BillingAccountRef
+... ... replaced schema $ref=ContactMedium.schema.json#/definitions/ContactMedium with ../Common/ContactMedium.schema.json#ContactMedium
+... ... replaced schema $ref=Note.schema.json#/definitions/Note with ../Common/Note.schema.json#Note
+... ... replaced schema $ref=Authorization.schema.json#/definitions/Authorization with Authorization.schema.json#Authorization
+... ... replaced schema $ref=QuoteItem.schema.json#/definitions/QuoteItem with QuoteItem.schema.json#QuoteItem
+... ... replaced schema $ref=QuotePrice.schema.json#/definitions/QuotePrice with QuotePrice.schema.json#QuotePrice
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef with ../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef
+... ... replaced schema $ref=QuoteStateType.schema.json#/definitions/QuoteStateType with ../Product/QuoteStateType.schema.json#QuoteStateType
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... QuoteItem.schema.json
+... ... added $id for QuoteItem
+... ... replaced schema $ref=AppointmentRef.schema.json#/definitions/AppointmentRef with AppointmentRef.schema.json#AppointmentRef
+... ... replaced schema $ref=AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue with ../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue
+... ... replaced schema $ref=Note.schema.json#/definitions/Note with ../Common/Note.schema.json#Note
+... ... replaced schema $ref=ProductRefOrValue.schema.json#/definitions/ProductRefOrValue with ../Product/ProductRefOrValue.schema.json#ProductRefOrValue
+... ... replaced schema $ref=ProductOfferingRef.schema.json#/definitions/ProductOfferingRef with ../Product/ProductOfferingRef.schema.json#ProductOfferingRef
+... ... replaced schema $ref=QuoteItem.schema.json#/definitions/QuoteItem with QuoteItem.schema.json#QuoteItem
+... ... replaced schema $ref=Authorization.schema.json#/definitions/Authorization with Authorization.schema.json#Authorization
+... ... replaced schema $ref=QuotePrice.schema.json#/definitions/QuotePrice with QuotePrice.schema.json#QuotePrice
+... ... replaced schema $ref=QuoteItemRelationship.schema.json#/definitions/QuoteItemRelationship with QuoteItemRelationship.schema.json#QuoteItemRelationship
+... ... replaced schema $ref=ProductOfferingQualificationItemRef.schema.json#/definitions/ProductOfferingQualificationItemRef with ../Product/ProductOfferingQualificationItemRef.schema.json#ProductOfferingQualificationItemRef
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... QuoteItemRef.schema.json
+... ... added $id for QuoteItemRef
+... ... replaced schema $ref=../Common/EntityRef.schema.json#/EntityRef with ../Common/EntityRef.schema.json#EntityRef
+
+... QuotePrice.schema.json
+... ... replaced schema $ref=PriceAlteration.schema.json#PriceAlteration with ../Product/PriceAlteration.schema.json#PriceAlteration
+
+... QuoteRef.schema.json
+... ... added $id for QuoteRef
+... ... replaced schema $ref=../Common/EntityRef.schema.json#/EntityRef with ../Common/EntityRef.schema.json#EntityRef
+
+... SearchTimeSlot.schema.json
+... ... added $id for SearchTimeSlot
+... ... replaced schema $ref=TimeSlot.schema.json#/definitions/TimeSlot with TimeSlot.schema.json#TimeSlot
+... ... replaced schema $ref=TimeSlot.schema.json#/definitions/TimeSlot with TimeSlot.schema.json#TimeSlot
+
+... AccountDirectMethod.schema.json
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#RelatedParty with RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../EngagedParty/AccountRef.schema.json#AccountRef with AccountRef.schema.json#AccountRef
+
+... AgreementSpecification.schema.json
+... ... replaced schema $ref=AttachmentRefOrValue.schema.json#AttachmentRefOrValue with ../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue
+
+... BankAccountDebitMethod.schema.json
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#RelatedParty with RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../EngagedParty/AccountRef.schema.json#AccountRef with AccountRef.schema.json#AccountRef
+
+... BankAccountTransferMethod.schema.json
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#RelatedParty with RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../EngagedParty/AccountRef.schema.json#AccountRef with AccountRef.schema.json#AccountRef
+
+... FinancialAccount.schema.json
+... ... replaced schema $ref=../Common/Account.schema.json#Account with Account.schema.json#Account
+
+... Individual.schema.json
+... ... added $id for Individual
+... ... replaced schema $ref=IndividualStateType.schema.json#/definitions/IndividualStateType with IndividualStateType.schema.json#IndividualStateType
+... ... replaced schema $ref=OtherNameIndividual.schema.json#/definitions/OtherNameIndividual with OtherNameIndividual.schema.json#OtherNameIndividual
+... ... replaced schema $ref=IndividualIdentification.schema.json#/definitions/IndividualIdentification with IndividualIdentification.schema.json#IndividualIdentification
+... ... replaced schema $ref=Disability.schema.json#/definitions/Disability with ../Customer/Disability.schema.json#Disability
+... ... replaced schema $ref=LanguageAbility.schema.json#/definitions/LanguageAbility with LanguageAbility.schema.json#LanguageAbility
+... ... replaced schema $ref=Skill.schema.json#/definitions/Skill with Skill.schema.json#Skill
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... IndividualIdentification.schema.json
+... ... replaced schema $ref=AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue with ../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue
+
+... LanguageAbility.schema.json
+... ... added $id for LanguageAbility
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... Organization.schema.json
+... ... added $id for Organization
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=OrganizationStateType.schema.json#/definitions/OrganizationStateType with OrganizationStateType.schema.json#OrganizationStateType
+... ... replaced schema $ref=OtherNameOrganization.schema.json#/definitions/OtherNameOrganization with OtherNameOrganization.schema.json#OtherNameOrganization
+... ... replaced schema $ref=OrganizationIdentification.schema.json#/definitions/OrganizationIdentification with OrganizationIdentification.schema.json#OrganizationIdentification
+... ... replaced schema $ref=OrganizationChildRelationship.schema.json#/definitions/OrganizationChildRelationship with OrganizationChildRelationship.schema.json#OrganizationChildRelationship
+... ... replaced schema $ref=OrganizationParentRelationship.schema.json#/definitions/OrganizationParentRelationship with OrganizationParentRelationship.schema.json#OrganizationParentRelationship
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... OrganizationChildRelationship.schema.json
+... ... added $id for OrganizationChildRelationship
+
+... OrganizationIdentification.schema.json
+... ... replaced schema $ref=AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue with ../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue
+
+... OrganizationParentRelationship.schema.json
+... ... added $id for OrganizationParentRelationship
+... ... replaced schema $ref=OrganizationRef.schema.json#/definitions/OrganizationRef with OrganizationRef.schema.json#OrganizationRef
+
+... OtherNameIndividual.schema.json
+... ... added $id for OtherNameIndividual
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... OtherNameOrganization.schema.json
+... ... added $id for OtherNameOrganization
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... Party.schema.json
+... ... added $id for Party
+... ... replaced schema $ref=ExternalReference.schema.json#/definitions/ExternalReference with ../Common/ExternalReference.schema.json#ExternalReference
+... ... replaced schema $ref=Characteristic.schema.json#/definitions/Characteristic with ../Common/Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=TaxExemptionCertificate.schema.json#/definitions/TaxExemptionCertificate with TaxExemptionCertificate.schema.json#TaxExemptionCertificate
+... ... replaced schema $ref=PartyCreditProfile.schema.json#/definitions/PartyCreditProfile with PartyCreditProfile.schema.json#PartyCreditProfile
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=ContactMedium.schema.json#/definitions/ContactMedium with ../Common/ContactMedium.schema.json#ContactMedium
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... PartyAccount.schema.json
+... ... replaced schema $ref=../Common/Account.schema.json#Account with Account.schema.json#Account
+
+... PartyBill.schema.json
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#RelatedParty with RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../EngagedParty/FinancialAccountRef.schema.json#FinancialAccountRef with FinancialAccountRef.schema.json#FinancialAccountRef
+
+... PartyCreditProfile.schema.json
+... ... added $id for PartyCreditProfile
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... PartyRole.schema.json
+... ... added $id for required
+... ... added missing type (object) for required
+
+... SettlementAccount.schema.json
+... ... replaced schema $ref=../Common/PartyAccount.schema.json#PartyAccount with PartyAccount.schema.json#PartyAccount
+
+... Skill.schema.json
+... ... added $id for Skill
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... TaxExemptionCertificate.schema.json
+... ... added $id for TaxExemptionCertificate
+... ... replaced schema $ref=TaxDefinition.schema.json#/definitions/TaxDefinition with ../Common/TaxDefinition.schema.json#TaxDefinition
+... ... replaced schema $ref=TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+... ... replaced schema $ref=AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue with ../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue
+... ... replaced schema $ref=Entity.schema.json#Entity with ../Common/Entity.schema.json#Entity
+
+... SalesLead.schema.json
+... ... replaced schema $ref=../MarketingSales/MarketingCampaignRef.schema.json#MarketingCampaignRef with MarketingCampaignRef.schema.json#MarketingCampaignRef
+... ... replaced schema $ref=../MarketingSales/MarketSegmentRef.schema.json#MarketSegmentRef with MarketSegmentRef.schema.json#MarketSegmentRef
+... ... replaced schema $ref=../Customer/ChannelRef.schema.json#ChannelRef with ../Common/ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=../MarketingSales/SalesOpportunityRef.schema.json#SalesOpportunityRef with SalesOpportunityRef.schema.json#SalesOpportunityRef
+
+... BaseProductRefOrValue.schema.json
+... ... replaced schema $ref=Characteristic.schema.json#Characteristic with ../Common/Characteristic.schema.json#Characteristic
+
+... CancelOrder.schema.json
+... ... replaced schema $ref=TaskStateType.schema.json#/definitions/TaskStateType with ../Common/TaskStateType.schema.json#TaskStateType
+
+... CancelProductOrder.schema.json
+... ... replaced schema $ref=../Common/EntityRef.schema.json#CancelOrder with ../Common/EntityRef.schema.json#CancelOrderRef
+
+... LoyaltyAccount.schema.json
+... ... removed title for LoyaltyAccount (should be at outer level)
+... ... replaced schema $ref=LoyaltyProgramProductRef.schema.json#/definitions/LoyaltyProgramProductRef with LoyaltyProgramProductRef.schema.json#LoyaltyProgramProductRef
+
+... LoyaltyAccountRef.schema.json
+... ... removed title for LoyaltyAccountRef (should be at outer level)
+
+... LoyaltyAction.schema.json
+... ... removed title for LoyaltyAction (should be at outer level)
+... ... replaced schema $ref=../Common/Any.schema.json#/definitions/Any with ../Common/Any.schema.json#Any
+... ... replaced schema $ref=../Common/Any.schema.json#/definitions/Any with ../Common/Any.schema.json#Any
+... ... replaced schema $ref=../Common/Any.schema.json#/definitions/Any with ../Common/Any.schema.json#Any
+
+... LoyaltyActionRef.schema.json
+... ... removed title for LoyaltyActionRef (should be at outer level)
+
+... LoyaltyBalance.schema.json
+... ... removed title for LoyaltyBalance (should be at outer level)
+... ... replaced schema $ref=../Common/Money.schema.json#/definitions/Money with ../Common/Money.schema.json#Money
+... ... replaced schema $ref=LoyaltyProgramMemberRef.schema.json#/definitions/LoyaltyProgramMemberRef with LoyaltyProgramMemberRef.schema.json#LoyaltyProgramMemberRef
+... ... replaced schema $ref=../Common/TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+
+... LoyaltyCondition.schema.json
+... ... removed title for LoyaltyCondition (should be at outer level)
+
+... LoyaltyConditionRef.schema.json
+... ... removed title for LoyaltyConditionRef (should be at outer level)
+
+... LoyaltyEvent.schema.json
+... ... removed title for LoyaltyEvent (should be at outer level)
+... ... replaced schema $ref=LoyaltyProgramProductRef.schema.json#/definitions/LoyaltyProgramProductRef with LoyaltyProgramProductRef.schema.json#LoyaltyProgramProductRef
+... ... replaced schema $ref=../Common/Any.schema.json#/definitions/Any with ../Common/Any.schema.json#Any
+
+... LoyaltyEventType.schema.json
+... ... removed title for LoyaltyEventType (should be at outer level)
+
+... LoyaltyEventTypeRef.schema.json
+... ... removed title for LoyaltyEventTypeRef (should be at outer level)
+
+... LoyaltyProgramMember.schema.json
+... ... added $id for LoyaltyProgramMember
+... ... removed id for LoyaltyProgramMember (using $id)
+... ... removed title for LoyaltyProgramMember (should be at outer level)
+... ... replaced schema $ref=../Common/TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+
+... LoyaltyProgramMemberRef.schema.json
+... ... added $id for LoyaltyProgramMemberRef
+... ... removed id for LoyaltyProgramMemberRef (using $id)
+... ... removed title for LoyaltyProgramMemberRef (should be at outer level)
+
+... LoyaltyProgramProduct.schema.json
+... ... added $id for LoyaltyProgramProduct
+... ... removed id for LoyaltyProgramProduct (using $id)
+... ... removed title for LoyaltyProgramProduct (should be at outer level)
+... ... replaced schema $ref=Characteristic.schema.json#Characteristic with ../Common/Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=../Common/TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+
+... LoyaltyProgramProductRef.schema.json
+... ... added $id for LoyaltyProgramProductRef
+... ... removed id for LoyaltyProgramProductRef (using $id)
+... ... removed title for LoyaltyProgramProductRef (should be at outer level)
+
+... LoyaltyProgramProductSpec.schema.json
+... ... removed title for LoyaltyProgramProductSpec (should be at outer level)
+... ... replaced schema $ref=../Common/TimePeriod.schema.json#/definitions/TimePeriod with ../Common/TimePeriod.schema.json#TimePeriod
+
+... LoyaltyProgramProductSpecRef.schema.json
+... ... removed title for LoyaltyProgramProductSpecRef (should be at outer level)
+
+... LoyaltyRule.schema.json
+... ... removed title for LoyaltyRule (should be at outer level)
+
+... LoyaltyRuleAction.schema.json
+... ... removed title for LoyaltyRuleAction (should be at outer level)
+
+... LoyaltyRuleCondition.schema.json
+... ... removed title for LoyaltyRuleCondition (should be at outer level)
+
+... LoyaltyRuleEventType.schema.json
+... ... removed title for LoyaltyRuleEventType (should be at outer level)
+
+... PriceAlteration.schema.json
+... ... replaced schema $ref=../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef with ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef
+... ... replaced schema $ref=Price.schema.json#Price with ../Customer/Price.schema.json#Price
+
+... Product.schema.json
+... ... added $id for Product
+... ... replaced schema $ref=AgreementItemRef.schema.json#/definitions/AgreementItemRef with ../EngagedParty/AgreementItemRef.schema.json#AgreementItemRef
+... ... replaced schema $ref=BillingAccountRef.schema.json#/definitions/BillingAccountRef with ../Customer/BillingAccountRef.schema.json#BillingAccountRef
+... ... replaced schema $ref=Characteristic.schema.json#/definitions/Characteristic with ../Common/Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=ProductOfferingRef.schema.json#/definitions/ProductOfferingRef with ProductOfferingRef.schema.json#ProductOfferingRef
+... ... replaced schema $ref=RelatedProductOrderItem.schema.json#/definitions/RelatedProductOrderItem with RelatedProductOrderItem.schema.json#RelatedProductOrderItem
+... ... replaced schema $ref=ProductRefOrValue.schema.json#/definitions/ProductRefOrValue with ProductRefOrValue.schema.json#ProductRefOrValue
+... ... replaced schema $ref=ProductPrice.schema.json#/definitions/ProductPrice with ProductPrice.schema.json#ProductPrice
+... ... replaced schema $ref=ProductRelationship.schema.json#/definitions/ProductRelationship with ProductRelationship.schema.json#ProductRelationship
+... ... replaced schema $ref=ProductSpecificationRef.schema.json#/definitions/ProductSpecificationRef with ProductSpecificationRef.schema.json#ProductSpecificationRef
+... ... replaced schema $ref=ProductTerm.schema.json#/definitions/ProductTerm with ProductTerm.schema.json#ProductTerm
+... ... replaced schema $ref=ResourceRef.schema.json#/definitions/ResourceRef with ../Resource/ResourceRef.schema.json#ResourceRef
+... ... replaced schema $ref=ServiceRef.schema.json#/definitions/ServiceRef with ../Service/ServiceRef.schema.json#ServiceRef
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue with ../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue
+... ... replaced schema $ref=ProductStatusType.schema.json#/definitions/ProductStatusType with ProductStatusType.schema.json#ProductStatusType
+... ... replaced schema $ref=Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... ProductOfferingQualification.schema.json
+... ... added $id for ProductOfferingQualification
+... ... replaced schema $ref=ChannelRef.schema.json#/definitions/ChannelRef with ../Common/ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=Note.schema.json#/definitions/Note with ../Common/Note.schema.json#Note
+... ... replaced schema $ref=ProductOfferingQualificationItem.schema.json#/definitions/ProductOfferingQualificationItem with ProductOfferingQualificationItem.schema.json#ProductOfferingQualificationItem
+... ... replaced schema $ref=RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=TaskStateType.schema.json#/definitions/TaskStateType with ../Common/TaskStateType.schema.json#TaskStateType
+... ... replaced schema $ref=Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... ProductOfferingQualificationItem.schema.json
+... ... replaced schema $ref=ProductActionType.schema.json#/definitions/ProductActionType with ProductActionType.schema.json#ProductActionType
+... ... replaced schema $ref=TaskStateType.schema.json#/definitions/TaskStateType with ../Common/TaskStateType.schema.json#TaskStateType
+... ... replaced schema $ref=../Product/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason with EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason
+
+... ProductOfferingQualificationRef.schema.json
+... ... added $id for ProductOfferingQualificationRef
+... ... replaced schema $ref=EntityRef.schema.json#/EntityRef with ../Common/EntityRef.schema.json#EntityRef
+
+... ProductPrice.schema.json
+... ... replaced schema $ref=../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef with ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef
+... ... replaced schema $ref=BillingAccountRef.schema.json#BillingAccountRef with ../Customer/BillingAccountRef.schema.json#BillingAccountRef
+... ... replaced schema $ref=../Customer/PriceAlteration.schema.json#PriceAlteration with PriceAlteration.schema.json#PriceAlteration
+
+... ProductRestriction.schema.json
+... ... replaced schema $ref=Characteristic.schema.json#Characteristic with ../Common/Characteristic.schema.json#Characteristic
+
+... ProductSpecificationCharacteristicValue.schema.json
+... ... replaced schema $ref=../Common/Any.schema.json#/definitions/Any with ../Common/Any.schema.json#Any
+
+... Recommendation.schema.json
+... ... replaced schema $ref=ProductOrderRef.schema.json#ProductOrderRef with ../Customer/ProductOrderRef.schema.json#ProductOrderRef
+... ... replaced schema $ref=../Customer/ChannelRef.schema.json#ChannelRef with ../Common/ChannelRef.schema.json#ChannelRef
+... ... replaced schema $ref=../Product/CategoryRef.schema.json#CategoryRef with CategoryRef.schema.json#CategoryRef
+
+... RelatedProductOrderItem.schema.json
+... ... added $id for RelatedProductOrderItem
+... ... replaced schema $ref=Entity.schema.json#/Entity with ../Common/Entity.schema.json#Entity
+
+... UsageConsumptionReportRequest.schema.json
+... ... replaced schema $ref=UsageVolumeProductRef.schema.json#/definitions/UsageVolumeProductRef with UsageVolumeProductRef.schema.json#UsageVolumeProductRef
+
+... UsageConsumptionReportRequestIn.schema.json
+... ... replaced schema $ref=NetworkProductRef.schema.json#/definitions/NetworkProductRef with NetworkProductRef.schema.json#NetworkProductRef
+
+... RealizingResourceRef.schema.json
+... ... added $id for RealizingResourceRef
+... ... replaced schema $ref=EntityRef.schema.json#/EntityRef with ../Common/EntityRef.schema.json#EntityRef
+
+... ResourceAlarmRef.schema.json
+... ... replaced schema $ref=../Common/ChangeRequestRef.schema.json#/definitions/ChangeRequestRef with ../Common/ChangeRequestRef.schema.json#ChangeRequestRef
+
+... BaseService.schema.json
+... ... replaced schema $ref=ServiceStateType.schema.json#/definitions/ServiceStateType with ServiceStateType.schema.json#ServiceStateType
+... ... replaced schema $ref=ServiceSpecificationRef.schema.json#/definitions/ServiceSpecificationRef with ServiceSpecificationRef.schema.json#ServiceSpecificationRef
+... ... replaced schema $ref=../Common/Characteristic.schema.json#/definitions/Characteristic with ../Common/Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=ServiceRelationship.schema.json#/definitions/ServiceRelationship with ServiceRelationship.schema.json#ServiceRelationship
+... ... replaced schema $ref=ServiceRef.schema.json#/definitions/ServiceRef with ServiceRef.schema.json#ServiceRef
+... ... replaced schema $ref=../Resource/ResourceRef.schema.json#/definitions/ResourceRef with ../Resource/ResourceRef.schema.json#ResourceRef
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../Common/Place.schema.json#/definitions/Place with ../Common/Place.schema.json#Place
+
+... MetricDefMeasureThresholdRule.schema.json
+... ... replaced schema $ref=MetricDefMeasureConsequence.schema.json#/definitions/MetricDefMeasureConsequence with MetricDefMeasureConsequence.schema.json#MetricDefMeasureConsequence
+
+... Service.schema.json
+... ... replaced schema $ref=ServiceOrderRef.schema.json#/definitions/ServiceOrderRef with ServiceOrderRef.schema.json#ServiceOrderRef
+... ... replaced schema $ref=../Common/Note.schema.json#/definitions/Note with ../Common/Note.schema.json#Note
+... ... replaced schema $ref=../Service/BaseService.schema.json#BaseService with BaseService.schema.json#BaseService
+
+... ServiceOrder.schema.json
+... ... replaced schema $ref=../Common/Note.schema.json#/definitions/Note with ../Common/Note.schema.json#Note
+... ... replaced schema $ref=ServiceOrderItem.schema.json#/definitions/ServiceOrderItem with ServiceOrderItem.schema.json#ServiceOrderItem
+... ... replaced schema $ref=ServiceOrderRelationship.schema.json#/definitions/ServiceOrderRelationship with ServiceOrderRelationship.schema.json#ServiceOrderRelationship
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=ServiceOrderStateType.schema.json#/definitions/ServiceOrderStateType with ServiceOrderStateType.schema.json#ServiceOrderStateType
+
+... ServiceOrderItem.schema.json
+... ... replaced schema $ref=ServiceOrderActionType.schema.json#/definitions/ServiceOrderActionType with ServiceOrderActionType.schema.json#ServiceOrderActionType
+... ... replaced schema $ref=ServiceOrderStateType.schema.json#/definitions/ServiceOrderStateType with ServiceOrderStateType.schema.json#ServiceOrderStateType
+... ... replaced schema $ref=BaseService.schema.json#/definitions/BaseService with BaseService.schema.json#BaseService
+... ... replaced schema $ref=../Customer/AppointmentRef.schema.json#/definitions/AppointmentRef with ../Customer/AppointmentRef.schema.json#AppointmentRef
+... ... replaced schema $ref=OrderItemRelationship.schema.json#/definitions/OrderItemRelationship with ../Customer/OrderItemRelationship.schema.json#OrderItemRelationship
+
+... ServiceProblem.schema.json
+... ... replaced schema $ref=../Common/Place.schema.json#/definitions/Place with ../Common/Place.schema.json#Place
+... ... replaced schema $ref=../Resource/ResourceRef.schema.json#/definitions/ResourceRef with ../Resource/ResourceRef.schema.json#ResourceRef
+... ... replaced schema $ref=ServiceRef.schema.json#/definitions/ServiceRef with ServiceRef.schema.json#ServiceRef
+... ... replaced schema $ref=../Common/Note.schema.json#/definitions/Note with ../Common/Note.schema.json#Note
+... ... replaced schema $ref=../Common/Characteristic.schema.json#/definitions/Characteristic with ../Common/Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=../Common/RelatedEntityRef.schema.json#/definitions/RelatedEntityRef with ../Common/RelatedEntityRef.schema.json#RelatedEntityRef
+... ... replaced schema $ref=ImpactPattern.schema.json#/definitions/ImpactPattern with ImpactPattern.schema.json#ImpactPattern
+... ... replaced schema $ref=ServiceProblemRef.schema.json#/definitions/ServiceProblemRef with ServiceProblemRef.schema.json#ServiceProblemRef
+... ... replaced schema $ref=../Common/EventRef.schema.json#/definitions/EventRef with ../Common/EventRef.schema.json#EventRef
+... ... replaced schema $ref=../Common/RelatedEntityRef.schema.json#/definitions/RelatedEntityRef with ../Common/RelatedEntityRef.schema.json#RelatedEntityRef
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty with ../EngagedParty/RelatedParty.schema.json#RelatedParty
+... ... replaced schema $ref=../Resource/ResourceRef.schema.json#/definitions/ResourceRef with ../Resource/ResourceRef.schema.json#ResourceRef
+... ... replaced schema $ref=ServiceRef.schema.json#/definitions/ServiceRef with ServiceRef.schema.json#ServiceRef
+... ... replaced schema $ref=TrackingRecord.schema.json#/definitions/TrackingRecord with TrackingRecord.schema.json#TrackingRecord
+... ... replaced schema $ref=../Resource/ResourceAlarmRef.schema.json#/definitions/ResourceAlarmRef with ../Resource/ResourceAlarmRef.schema.json#ResourceAlarmRef
+... ... replaced schema $ref=../EngagedParty/SLAViolationRef.schema.json#/definitions/SLAViolationRef with ../EngagedParty/SLAViolationRef.schema.json#SLAViolationRef
+... ... replaced schema $ref=../Common/TroubleTicketRef.schema.json#/definitions/TroubleTicketRef with ../Common/TroubleTicketRef.schema.json#TroubleTicketRef
+... ... replaced schema $ref=ServiceProblemRef.schema.json#/definitions/ServiceProblemRef with ServiceProblemRef.schema.json#ServiceProblemRef
+
+... ServiceProblemEventRecord.schema.json
+... ... replaced schema $ref=ServiceProblemRef.schema.json#/definitions/ServiceProblemRef with ServiceProblemRef.schema.json#ServiceProblemRef
+... ... replaced schema $ref=../Common/Any.schema.json#/definitions/Any with ../Common/Any.schema.json#Any
+
+... ServiceSpecCharacteristicValue.schema.json
+... ... replaced schema $ref=../Common/Any.schema.json#/definitions/Any with ../Common/Any.schema.json#Any
+
+... ServiceSpecification.schema.json
+... ... replaced schema $ref=ServiceLevelSpecificationRef.schema.json#/definitions/ServiceLevelSpecificationRef with ServiceLevelSpecificationRef.schema.json#ServiceLevelSpecificationRef
+... ... replaced schema $ref=TargetServiceSchema.schema.json#/definitions/TargetServiceSchema with TargetServiceSchema.schema.json#TargetServiceSchema
+
+... ServiceSpecificationRef.schema.json
+... ... replaced schema $ref=TargetServiceSchema.schema.json#/definitions/TargetServiceSchema with TargetServiceSchema.schema.json#TargetServiceSchema
+
+... ServiceTest.schema.json
+... ... replaced schema $ref=../Common/Characteristic.schema.json#/definitions/Characteristic with ../Common/Characteristic.schema.json#Characteristic
+... ... replaced schema $ref=ServiceRef.schema.json#/definitions/ServiceRef with ServiceRef.schema.json#ServiceRef
+... ... replaced schema $ref=TestMeasure.schema.json#/definitions/TestMeasure with TestMeasure.schema.json#TestMeasure
+... ... replaced schema $ref=ServiceTestSpecificationRef.schema.json#/definitions/ServiceTestSpecificationRef with ServiceTestSpecificationRef.schema.json#ServiceTestSpecificationRef
+
+... TestMeasure.schema.json
+... ... replaced schema $ref=MeasureThresholdRuleViolation.schema.json#/definitions/MeasureThresholdRuleViolation with MeasureThresholdRuleViolation.schema.json#MeasureThresholdRuleViolation
+... ... replaced schema $ref=../Common/Characteristic.schema.json#/definitions/Characteristic with ../Common/Characteristic.schema.json#Characteristic
+
+... TrackingRecord.schema.json
+... ... replaced schema $ref=../Common/Characteristic.schema.json#/definitions/Characteristic with ../Common/Characteristic.schema.json#Characteristic
+
