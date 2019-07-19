@@ -4,7 +4,6 @@
     "title": "RelatedPlaceRefOrValue",
     "definitions": {
         "RelatedPlaceRefOrValue": {
-            "discriminator": "isRef",
             "$id": "#RelatedPlaceRefOrValue",
             "description": "Related Entity reference. A related place defines a place described by reference or by value linked to a specific entity. The polymorphic attributes @type, @schemaLocation & @referredType are related to the place entity and not the RelatedPlaceRefOrValue class itself",
             "type": "object",
@@ -18,10 +17,10 @@
             ],
             "allOf": [
                 {
-                "$ref": "PlaceRef.schema.json#PlaceRef"
+                    "$ref": "PlaceRef.schema.json#PlaceRef"
                 },
                 {
-                  "$ref": "Place.schema.json#Place"
+                    "$ref": "Place.schema.json#Place"
                 }
                 
             ]

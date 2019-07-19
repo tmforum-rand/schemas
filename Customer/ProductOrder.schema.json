@@ -5,6 +5,7 @@
     "definitions": {
         "ProductOrder": {
             "type": "object",
+            "$id": "#ProductOrder",
             "required": ["productOrderItem"],
             "description": "A Product Order is a type of order which  can  be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa,",
             "properties": {
@@ -12,11 +13,11 @@
                     "type": "array",
                     "description": "A reference to an agreement defined in the context of the product order",
                     "items": {
-                        "$ref": "AgreementRef.schema.json#/definitions/AgreementRef"
+                        "$ref": "AgreementRef.schema.json#AgreementRef"
                     }
                 },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
+                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "cancellationDate": {
                     "type": "string",
@@ -66,7 +67,7 @@
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "Note.schema.json#/definitions/Note"
+                        "$ref": "Note.schema.json#Note"
                     }
                 },
                 "notificationContact": {
@@ -81,13 +82,13 @@
                 "orderTotalPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderPrice.schema.json#/definitions/OrderPrice"
+                        "$ref": "OrderPrice.schema.json#OrderPrice"
                     }
                 },
                 "payment": {
                     "type": "array",
                     "items": {
-                        "$ref": "PaymentRef.schema.json#/definitions/PaymentRef"
+                        "$ref": "PaymentRef.schema.json#PaymentRef"
                     }
                 },
                 "priority": {
@@ -97,26 +98,26 @@
                 "productOfferingQualification": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
+                        "$ref": "ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef"
                     }
                 },
                 "quote": {
                     "type": "array",
                     "items": {
-                        "$ref": "QuoteRef.schema.json#/definitions/QuoteRef"
+                        "$ref": "QuoteRef.schema.json#QuoteRef"
                     }
                 },
                 "productOrderItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductOrderItem.schema.json#/definitions/ProductOrderItem"
+                        "$ref": "ProductOrderItem.schema.json#ProductOrderItem"
                     },
                     "minItems": 1
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "requestedCompletionDate": {
@@ -130,13 +131,13 @@
                     "description": "Order fulfillment start date wished by the requestor. This is used when, for any reason, requestor cannot allow seller to begin to operationally begin the fulfillment before a date. "
                 },
                 "state": {
-                    "$ref": "ProductOrderStateType.schema.json#/definitions/ProductOrderStateType",
+                    "$ref": "ProductOrderStateType.schema.json#ProductOrderStateType",
                     "description": "Tracks the lifecycle status of the product order, such as Acknowledged, Rejected, InProgress, Pending and so on."
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

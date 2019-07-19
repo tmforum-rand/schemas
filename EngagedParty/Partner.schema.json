@@ -1,27 +1,31 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "Customer.schema.json",
-    "title": "Customer",
+    "$id": "Partner.schema.json",
+    "title": "Partner",
     "definitions": {
-        "Customer": {
-            "$id": "#Customer",
+	"required": [
+	    "name","engagedParty"
+	],
+        "Partner": {
+            "$id": "#Partner",
+            "description": "The part played by a party in a given context.",
             "type": "object",
             "properties": {
                 "href": {
                     "type": "string",
-                    "description": "Url used to reference the customer."
+                    "description": "Url used to reference the partner."
                 },
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier for Customers"
+                    "description": "Unique identifier for Partners"
                 },
                 "name": {
                     "type": "string",
-                    "description": "A word, term, or phrase by which the Customer is known and distinguished from other Customers."
+                    "description": "A word, term, or phrase by which the Partner is known and distinguished from other Partners."
                 },
                 "status": {
                     "type": "string",
-                    "description": "Used to track the lifecycle status of the customer."
+                    "description": "Used to track the lifecycle status of the partner."
                 },
                 "statusReason": {
                     "type": "string",
@@ -29,15 +33,16 @@
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The time period that the Customer is valid for."
+                    "description": "The time period that the Partner is valid for."
                 },
                 "engagedParty": {
-                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                    "$ref": "RelatedParty.schema.json#RelatedParty",
+		    "description": "The reference to the party engaged in this partnership."
                 },
                 "account": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
+                        "$ref": "AccountRef.schema.json#AccountRef"
                     }
                 },
                 "paymentMethod": {
@@ -57,7 +62,7 @@
                     "items": {
                         "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     },
-                    "description": "Describes the characteristic of a customer."
+                    "description": "Describes the characteristic of a partner."
                 },
                 "creditProfile": {
                     "type": "array",
@@ -68,13 +73,13 @@
                 "agreement": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                        "$ref": "AgreementRef.schema.json#AgreementRef"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#RelatedParty"
                     }
                 }
             },
