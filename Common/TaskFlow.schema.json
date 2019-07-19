@@ -40,10 +40,6 @@
                     "type": "integer",
                     "description": "TaskFlow priority."
                 },
-                "processFlowId": {
-                    "type": "string",
-                    "description": "Identifier of the processFlow"
-                },
                 "relatedEntity": {
                     "type": "array",
                     "items": {

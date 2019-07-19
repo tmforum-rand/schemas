@@ -34,9 +34,6 @@
                         "$ref": "../Product/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
                     }
                 },
-                "category": {
-                    "$ref": "CategoryRef.schema.json#CategoryRef"
-                },
                 "qualificationItemRelationship": {
                     "type": "array",
                     "items": {

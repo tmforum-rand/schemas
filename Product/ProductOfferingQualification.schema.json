@@ -5,12 +5,14 @@
     "definitions": {
         "ProductOfferingQualification": {
             "type": "object",
-            "required": ["productOfferingQualificationItem"],
             "description": "ProductOfferingQualification is used to perform a commercial eligibility. It allows to retrieve a list of productOffering that are commercially available in the context of the interaction (defined be place, channel, party, product).",
             "properties": {
                 "channel": {
                     "description": "Channel used for the qualification",
                     "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
+                },
+                "category": {
+                    "$ref": "CategoryRef.schema.json#CategoryRef"
                 },
                 "description": {
                     "type": "string",
@@ -60,8 +62,7 @@
                     "description": "Qualification item for a product or a category",
                     "items": {
                         "$ref": "ProductOfferingQualificationItem.schema.json#/definitions/ProductOfferingQualificationItem"
-                    },
-                    "minItems": 1
+                    }
                 },
                 "provideAlternative": {
                     "type": "boolean",
@@ -84,6 +85,12 @@
                     "description": "Party playing a role for this qualification (as requester for example)",
                     "items": {
                         "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                    }
+                },
+                "place": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue"
                     }
                 },
                 "requestedPOQCompletionDate": {
