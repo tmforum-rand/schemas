@@ -54,7 +54,11 @@ jobs:
               res="OK"
             fi
             FILE=validation-`date -u "+%Y%m%dT%H%M%SZ"`.txt
-            DIR=".circleci/validation_results"
+            # DIR=".circleci/validation_results"
+            mkdir -p validation-reports
+            cd validation-reports
+            git clone https://${GITHUB_TOKEN}@github.com/tmforum-rand/validation-reports.git .
+            DIR="${CIRCLE_BRANCH}/validation_results"
             mkdir -p $DIR
             cp /tmp/results.txt $DIR/$FILE
             git config credential.helper 'cache --timeout=120'
@@ -63,7 +67,7 @@ jobs:
             git add $DIR/$FILE
             git commit --allow-empty -m "Validation result $res [skip ci]"
             # Push quietly to prevent showing the token in log
-            git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/schemas.git ${CIRCLE_BRANCH}
+            git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/validation-reports.git ${CIRCLE_BRANCH}
       
       - run:
           name: "Trigger swagger build"
