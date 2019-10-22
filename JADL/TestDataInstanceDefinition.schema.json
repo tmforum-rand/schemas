@@ -5,7 +5,7 @@
     "definitions": {
         "TestDataInstanceDefinition": {
             "type": "object",
-            "description": "JADL test data instance definition",
+            "description": "Test data instance definition",
             "properties": {
                 "testDataSchema": {
                   "$ref": "TestDataSchemaRef.schema.json#/TestDataSchemaRef"

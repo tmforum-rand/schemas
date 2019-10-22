@@ -11,7 +11,9 @@
       ],
       "properties": {
         "language": {
-          "$ref": "SupportedLanguages.schema.json#/definitions/SupportedLanguages"
+          "type": "string",
+          "description": "A supported language",
+          "example": "EN"
         },
         "text": {
           "type": "string",

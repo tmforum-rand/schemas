@@ -6,16 +6,13 @@
         "Attribute": {
             "type": "object",
             "properties": {
-                "characteristic": {
-                    "$ref": "Characteristic.schema.json#/definitions/Characteristic"
-                },
                 "description": {
-                    "$ref": "Multilingual.schema.json#/definitions/Multilingual"
+                    "$ref": "MultilingualConverter.schema.json#/definitions/MultilingualConverter"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Characteristic.schema.json#/definitions/Characteristic"
                 }
             ]
         }

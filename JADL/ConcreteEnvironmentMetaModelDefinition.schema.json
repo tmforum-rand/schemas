@@ -5,7 +5,7 @@
     "definitions": {
         "ConcreteEnvironmentMetaModelDefinition": {
             "type": "object",
-            "description": "JADL test environment metamodel definition",
+            "description": "Test environment metamodel definition",
             "required": [
                 "code"
             ],

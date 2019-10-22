@@ -5,7 +5,7 @@
     "definitions": {
         "TestResourceAPIDefinition": {
             "type": "object",
-            "description": "JADL test resource API definition",
+            "description": "Test resource API definition",
             "required": [
                 "code"
             ],

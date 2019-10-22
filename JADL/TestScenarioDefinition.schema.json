@@ -1,19 +1,19 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "TestSuiteResultDefinition.schema.json",
-    "title": "TestSuiteResultDefinition",
+    "$id": "TestScenarioDefinition.schema.json",
+    "title": "TestScenarioDefinition",
     "definitions": {
-        "TestSuiteResultDefinition": {
+        "TestScenarioDefinition": {
             "type": "object",
-            "description": "Test suite result definition",
+            "description": "Test scenario definition",
             "required": [
-                "result"
+                "code"
             ],
             "properties": {
-                "result": {
+                "code": {
                     "type": "string",
-                    "description": "The test suite result",
-                    "example": "<test suite result representation>"
+                    "description": "The test scenario specification",
+                    "example": "refs to test suites, test cases, test data, etc."
                 }
             },
             "allOf": [

@@ -5,7 +5,7 @@
     "definitions": {
         "NonFunctionalTestResultDefinition": {
             "type": "object",
-            "description": "JADL test non-functional test result definition",
+            "description": "Non-functional test result definition",
             "required": [
                 "result"
             ],

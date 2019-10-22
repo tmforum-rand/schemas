@@ -5,7 +5,7 @@
   "definitions": {
       "TestDataSchemaRef": {
           "type": "object",
-          "description": "A reference to a managed test data schema artifact",
+          "description": "A reference to a managed test data schema resource",
           "properties": {
 
           },

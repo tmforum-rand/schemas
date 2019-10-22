@@ -5,7 +5,7 @@
     "definitions": {
         "TestCaseResultDefinition": {
             "type": "object",
-            "description": "JADL test case result definition",
+            "description": "Test case result definition",
             "required": [
                 "result"
             ],

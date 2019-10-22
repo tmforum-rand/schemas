@@ -5,7 +5,7 @@
   "definitions": {
       "TestSuiteRef": {
           "type": "object",
-          "description": "A reference to a managed test suite artifact",
+          "description": "A reference to a managed test suite resource",
           "properties": {
 
           },

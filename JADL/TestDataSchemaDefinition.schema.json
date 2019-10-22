@@ -5,7 +5,7 @@
     "definitions": {
         "TestDataSchemaDefinition": {
             "type": "object",
-            "description": "JADL test data schema definition",
+            "description": "Test data schema definition",
             "properties": {
             },
             "allOf": [

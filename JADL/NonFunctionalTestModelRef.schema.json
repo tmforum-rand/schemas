@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "TestResourceAPIRef.schema.json",
-  "title": "TestResourceAPIRef",
+  "$id": "NonFunctionalTestModelRef.schema.json",
+  "title": "NonFunctionalTestModelRef",
   "definitions": {
-      "TestResourceAPIRef": {
+      "NonFunctionalTestModelRef": {
           "type": "object",
-          "description": "A reference to a managed test resource API resource",
+          "description": "A reference to a managed non-functional test model resource",
           "properties": {
           },
           "allOf": [

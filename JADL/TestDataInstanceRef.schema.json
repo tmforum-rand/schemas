@@ -5,7 +5,7 @@
   "definitions": {
       "TestDataInstanceRef": {
           "type": "object",
-          "description": "A reference to a managed test data instance artifact",
+          "description": "A reference to a managed test data instance resource",
           "properties": {
 
           },

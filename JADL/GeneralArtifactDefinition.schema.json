@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GeneralArtifactDefinition.schema.json",
+    "title": "GeneralArtifactDefinition",
+    "definitions": {
+        "GeneralArtifactDefinition": {
+            "type": "object",
+            "description": "General artifact definition",
+            "required": [
+                "artifact"
+            ],
+            "properties": {
+                "artifact": {
+                    "$ref": "Any.schema.json#/definitions/Any",
+                    "description": "The actual general artifact",
+                    "example": "<binaries, images, jar files, etc>"
+                },
+                "artifactType": {
+                    "type": "string",
+                    "description": "Data type of the artifact",
+                    "example": "string"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}

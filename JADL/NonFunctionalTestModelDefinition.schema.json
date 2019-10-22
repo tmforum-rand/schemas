@@ -5,7 +5,7 @@
     "definitions": {
         "NonFunctionalTestModelDefinition": {
             "type": "object",
-            "description": "JADL non-functional test model definition",
+            "description": "Non-functional test model definition",
             "properties": {
                 "code": {
                     "type": "string",

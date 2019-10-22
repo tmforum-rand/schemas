@@ -5,7 +5,7 @@
     "definitions": {
         "AbstractEnvironmentDefinition": {
             "type": "object",
-            "description": "JADL abstract environment definition",
+            "description": "Abstract environment definition",
             "required": [
                 "code"
             ],

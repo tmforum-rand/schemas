@@ -15,7 +15,7 @@
       ],
       "properties": {
         "description": {
-          "$ref": "Multilingual.schema.json#/definitions/Multilingual"
+          "$ref": "MultilingualConverter.schema.json#/definitions/MultilingualConverter"
         },
         "version": {
           "$ref": "TestVersion.schema.json#/definitions/TestVersion"

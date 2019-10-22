@@ -7,7 +7,7 @@
       "type": "object",
       "properties": {
         "description": {
-          "$ref": "Multilingual.schema.json#/definitions/Multilingual",
+          "$ref": "MultilingualConverter.schema.json#/definitions/MultilingualConverter",
           "description": "A longer description of the artifact; should be different from the title; GitHub-flavored Markdown is allowed"
         },
         "versionNumber": {

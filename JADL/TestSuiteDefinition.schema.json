@@ -5,7 +5,7 @@
     "definitions": {
         "TestSuiteDefinition": {
             "type": "object",
-            "description": "JADL test suite definition",
+            "description": "Test suite definition",
             "properties": {
                 "code": {
                     "type": "string",
