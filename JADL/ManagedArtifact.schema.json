@@ -1,18 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "TestInfo.schema.json",
+  "$id": "ManagedArtifact.schema.json",
   "definitions": {
-    "TestInfo": {
-      "$id": "#TestInfo",
+    "ManagedArtifact": {
+      "$id": "#ManagedArtifact",
       "type": "object",
-      "description": "General information about the artifact",
-      "required": [
-        "description",
-        "version",
-        "termsOfService",
-        "contact",
-        "license"
-      ],
+      "description": "General information about a managed artifact",
       "properties": {
         "description": {
           "$ref": "MultilingualConverter.schema.json#/definitions/MultilingualConverter"
@@ -31,13 +24,23 @@
           "description": "The terms of service for the artifact",
           "example": "My terms of service"
         },
+        "state": {
+          "type": "string",
+          "description": "The state of the artifact",
+          "example": "locked"
+        },
         "contact": {
           "$ref": "TestContact.schema.json#/definitions/TestContact"
         },
         "license": {
           "$ref": "License.schema.json#/definitions/License"
         }
-      }
+      },
+      "allOf": [
+        {
+          "$ref": "ResourceEntity.schema.json#/ResourceEntity"
+        }
+      ]
     }
   }
 }

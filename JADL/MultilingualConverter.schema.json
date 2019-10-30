@@ -6,6 +6,9 @@
     "MultilingualConverter":{
       "description": "REST resource for multilingual conversion from the base language",
       "type": "object",
+      "required": [
+        "baseText"
+      ],
       "properties": {
         "baseText": {
             "type": "string",
