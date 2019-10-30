@@ -7,6 +7,11 @@
             "type": "object",
             "description": "Test data schema definition",
             "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "The test data schema code",
+                    "example": "<definition of valid symbols for test data instances>"
+                }
             },
             "allOf": [
                 {

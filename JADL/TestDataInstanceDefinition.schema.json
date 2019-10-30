@@ -6,9 +6,14 @@
         "TestDataInstanceDefinition": {
             "type": "object",
             "description": "Test data instance definition",
+            "required": [
+                "code"
+            ],
             "properties": {
-                "testDataSchema": {
-                  "$ref": "TestDataSchemaRef.schema.json#/TestDataSchemaRef"
+                "code": {
+                    "type": "string",
+                    "description": "The test data instance code",
+                    "example": "<test data lookup representation>"
                 }
             },
             "allOf": [
