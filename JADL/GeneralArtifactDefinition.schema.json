@@ -7,7 +7,8 @@
             "type": "object",
             "description": "General artifact definition",
             "required": [
-                "artifact"
+                "artifact",
+                "artifactType"
             ],
             "properties": {
                 "artifact": {
@@ -18,7 +19,7 @@
                 "artifactType": {
                     "type": "string",
                     "description": "Data type of the artifact",
-                    "example": "string"
+                    "example": "binary"
                 }
             },
             "allOf": [
