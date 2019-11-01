@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TestExecution.schema.json",
+    "title": "TestExecution",
+    "definitions": {
+        "TestExecution": {
+            "type": "object",
+            "description": "The base for all Test Execution resources",
+            "properties": {
+                "testEnvironmentProvisioningExecution": {
+                    "$ref": "TestEnvironmentProvisioningExecution.schema.json#/TestEnvironmentProvisioningExecution"
+                },
+                "testDataInstances": {
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Execution.schema.json#/Execution"
+                }
+            ]
+        }
+    }
+}
