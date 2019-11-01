@@ -1,30 +1,30 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RelatedPartyRefOrValue.schema.json",
-    "title": "RelatedPartyRefOrValue",
-    "definitions": {
-        "RelatedPartyRefOrValue": {
-            "discriminator": "isRef",
-            "$id": "#RelatedPartyRefOrValue",
-            "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
-            "type": "object",
-            "properties": {
-                "isRef": {
-                    "type": "boolean",
-                    "default": true
-                },
-                "role": {
-                    "type": "string"
-                }
-            },
-            "allOf": [
-                {
-                    "$ref": "Party.schema.json#Party"
-                },
-                {
-                    "$ref": "PartyRef.schema.json#PartyRef"
-                }
-            ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "RelatedPartyRefOrValue.schema.json",
+  "title": "RelatedPartyRefOrValue",
+  "definitions": {
+    "RelatedPartyRefOrValue": {
+      "discriminator": "isRef",
+      "$id": "#RelatedPartyRefOrValue",
+      "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
+      "type": "object",
+      "properties": {
+        "isRef": {
+          "type": "boolean",
+          "default": true
+        },
+        "role": {
+          "type": "string"
         }
+      },
+      "allOf": [
+        {
+          "$ref": "../EngagedParty/Party.schema.json#Party"
+        },
+        {
+          "$ref": "../EngagedParty/PartyRef.schema.json#PartyRef"
+        }
+      ]
     }
+  }
 }

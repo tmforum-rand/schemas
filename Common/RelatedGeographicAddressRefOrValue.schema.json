@@ -1,30 +1,30 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RelatedGeographicAddressRefOrValue.schema.json",
-    "title": "RelatedGeographicAddressRefOrValue",
-    "definitions": {
-        "RelatedGeographicAddressRefOrValue": {
-            "discriminator": "isRef",
-            "$id": "#RelatedGeographicAddressRefOrValue",
-            "description": "#TODO",
-            "type": "object",
-            "properties": {
-                "isRef": {
-                    "type": "boolean",
-                    "default": true
-                },
-                "role": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "role"
-            ],
-            "allOf": [
-                {
-                    "$ref": "RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
-                }
-            ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "RelatedGeographicAddressRefOrValue.schema.json",
+  "title": "RelatedGeographicAddressRefOrValue",
+  "definitions": {
+    "RelatedGeographicAddressRefOrValue": {
+      "discriminator": "isRef",
+      "$id": "#RelatedGeographicAddressRefOrValue",
+      "description": "#TODO",
+      "type": "object",
+      "properties": {
+        "isRef": {
+          "type": "boolean",
+          "default": true
+        },
+        "role": {
+          "type": "string"
         }
+      },
+      "required": [
+        "role"
+      ],
+      "allOf": [
+        {
+          "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
+        }
+      ]
     }
+  }
 }
