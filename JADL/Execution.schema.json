@@ -12,6 +12,12 @@
                     "description": "Data correlation ID passed in by the API consumer",
                     "example": "aac9969d-219d-4ff1-b256-1765dcf9b342"
                 },
+                "generalArtifacts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "GeneralArtifactRef.schema.json#/definitions/GeneralArtifactRef"
+                    }
+                },
                 "state": {
                     "$ref": "ExecutionStateType.schema.json#/ExecutionStateType"
                 }

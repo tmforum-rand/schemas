@@ -6,9 +6,15 @@
         "TestEnvironmentAllocationExecution": {
             "type": "object",
             "description": "REST resource for test environment allocation lifecycle",
+            "required": [
+                "resourceManagerUrl"
+            ],
             "properties": {
                 "abstractEnvironment": {
                     "$ref": "AbstractEnvironmentRef.schema.json#/AbstractEnvironmentRef"
+                },
+                "testScenario": {
+                    "$ref": "TestScenarioRef.schema.json#/definitions/TestScenarioRef"
                 },
                 "concreteResourceMapping": {
                     "type": "array",

@@ -6,11 +6,18 @@
         "TestExecution": {
             "type": "object",
             "description": "The base for all Test Execution resources",
+            "required": [
+                "testEnvironmentProvisioningExecution"
+            ],
             "properties": {
                 "testEnvironmentProvisioningExecution": {
                     "$ref": "TestEnvironmentProvisioningExecution.schema.json#/TestEnvironmentProvisioningExecution"
                 },
                 "testDataInstances": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "TestDataInstanceRef.schema.json#/definitions/TestDataInstanceRef"
+                    }
                 }
             },
             "allOf": [

@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "TestDataSchemaRef.schema.json",
-  "title": "TestDataSchemaRef",
+  "$id": "GeneralArtifactRef.schema.json",
+  "title": "GeneralArtifactRef",
   "definitions": {
-      "TestDataSchemaRef": {
+      "GeneralArtifactRef": {
           "type": "object",
-          "description": "A reference to a managed test data schema resource",
+          "description": "A reference to a managed general artifact resource",
           "allOf": [
               {
                   "$ref": "EntityRef.schema.json#/EntityRef"

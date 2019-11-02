@@ -6,9 +6,6 @@
       "TestDataInstanceRef": {
           "type": "object",
           "description": "A reference to a managed test data instance resource",
-          "properties": {
-
-          },
           "allOf": [
               {
                   "$ref": "EntityRef.schema.json#/EntityRef"

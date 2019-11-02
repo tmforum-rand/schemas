@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "NonFunctionalTestExecution.schema.json",
+    "title": "NonFunctionalTestExecution",
+    "definitions": {
+        "NonFunctionalTestExecution": {
+            "type": "object",
+            "description": "REST resource for the non-functional test execution lifecycle",
+            "properties": {
+                "nonFunctionalTestModel": {
+                    "$ref": "NonFunctionalTestModelRef.schema.json#/NonFunctionalTestModelRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "TestExecution.schema.json#/TestExecution"
+                }
+            ]
+        }
+    }
+}

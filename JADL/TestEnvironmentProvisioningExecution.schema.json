@@ -6,6 +6,9 @@
         "TestEnvironmentProvisioningExecution": {
             "type": "object",
             "description": "REST resource for test environment provisioning lifecycle",
+            "required": [
+                "testEnvironmentAllocationExecution"
+            ],
             "properties": {
                 "testEnvironmentAllocationExecution": {
                     "$ref": "TestEnvironmentAllocationExecution.schema.json#/TestEnvironmentAllocationExecution"
