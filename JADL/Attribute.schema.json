@@ -7,7 +7,9 @@
             "type": "object",
             "properties": {
                 "description": {
-                    "$ref": "MultilingualConverter.schema.json#/definitions/MultilingualConverter"
+                    "type": "string",
+                    "description": "The description for the attribute",
+                    "example": ""
                 }
             },
             "allOf": [

@@ -8,7 +8,9 @@
       "description": "General information about a managed artifact",
       "properties": {
         "description": {
-          "$ref": "MultilingualConverter.schema.json#/definitions/MultilingualConverter"
+          "type": "string",
+          "description": "The description for the artifact",
+          "example": ""
         },
         "version": {
           "$ref": "TestVersion.schema.json#/definitions/TestVersion"
@@ -17,6 +19,12 @@
           "type": "array",
           "items": {
             "$ref": "Attribute.schema.json#/definitions/Attribute"
+          }
+        },
+        "relatedParties": {
+          "type": "array",
+          "items": {
+            "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
           }
         },
         "termsOfService": {
@@ -30,7 +38,7 @@
           "example": "locked"
         },
         "contact": {
-          "$ref": "TestContact.schema.json#/definitions/TestContact"
+          "$ref": "Contact.schema.json#/definitions/Contact"
         },
         "license": {
           "$ref": "License.schema.json#/definitions/License"
