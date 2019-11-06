@@ -4,16 +4,10 @@
     "title": "RelatedGeographicAddressRefOrValue",
     "definitions": {
         "RelatedGeographicAddressRefOrValue": {
-            "discriminator": "isRef",
             "$id": "#RelatedGeographicAddressRefOrValue",
             "description": "#TODO",
             "type": "object",
             "properties": {
-              "isRef": {
-                "type": "boolean",
-                "default": true
-    
-              },
               "role":{
                 "type": "string"
               }

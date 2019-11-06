@@ -4,19 +4,12 @@
     "title": "BillingCycleSpecificationRefOrValue",
     "definitions": {
         "BillingCycleSpecificationRefOrValue": {
-            "discriminator": "isRef",
             "$id": "#BillingCycleSpecificationRefOrValue",
             "description": "An attachment by value or by reference.",
             "type": "object",
             "properties": {
-              "isRef": {
-                "type": "boolean",
-                "default": true
-
-              }
             },
             "required": [
-              "isRef",
               "role"
             ],
             "allOf": [
