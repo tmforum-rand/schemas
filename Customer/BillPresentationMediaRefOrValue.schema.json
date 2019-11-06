@@ -4,19 +4,12 @@
     "title": "BillPresentationMediaRefOrValue",
     "definitions": {
         "BillPresentationMediaRefOrValue": {
-            "discriminator": "isRef",
             "$id": "#BillPresentationMediaRefOrValue",
             "description": "An attachment by value or by reference.",
             "type": "object",
             "properties": {
-              "isRef": {
-                "type": "boolean",
-                "default": true
-
-              }
             },
             "required": [
-              "isRef",
               "role"
             ],
             "allOf": [
