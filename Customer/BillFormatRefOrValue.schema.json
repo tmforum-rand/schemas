@@ -4,19 +4,12 @@
     "title": "BillFormatRefOrValue",
     "definitions": {
         "BillFormatRefOrValue": {
-            "discriminator": "isRef",
             "$id": "#BillFormatRefOrValue",
             "description": "An attachment by value or by reference.",
             "type": "object",
             "properties": {
-              "isRef": {
-                "type": "boolean",
-                "default": true
-
-              }
             },
             "required": [
-              "isRef",
               "role"
             ],
             "allOf": [

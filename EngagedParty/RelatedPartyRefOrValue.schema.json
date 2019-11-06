@@ -4,16 +4,10 @@
   "title": "RelatedPartyRefOrValue",
   "definitions": {
       "RelatedPartyRefOrValue": {
-          "discriminator": "isRef",
           "$id": "#RelatedPartyRefOrValue",
           "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
           "type": "object",
           "properties": {
-            "isRef": {
-              "type": "boolean",
-              "default": true
-  
-            },
             "role":{
               "type": "string"
             }
