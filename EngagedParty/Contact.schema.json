@@ -7,6 +7,9 @@
             "$id": "#Contact",
             "description": "An individual or an organization used as a contact point for a given account and accessed via some contact medium.",
             "type": "object",
+            "required": [
+                "contactType"
+            ], 
             "properties": {
                 "contactName": {
                     "type": "string",

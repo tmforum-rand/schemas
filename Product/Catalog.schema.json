@@ -16,6 +16,10 @@
                     "type": "string",
                     "description": "Unique identifier of the Catalog"
                 },
+                "description": {
+                    "type": "string", 
+                    "description": "Description of this catalog"
+                }, 
                 "lastUpdate": {
                     "type": "string",
                     "format": "date-time",
@@ -45,13 +49,15 @@
                     "type": "array",
                     "items": {
                         "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
-                    }
+                    },
+                    "description": "List of parties involved in this catalog"
                 },
                 "category": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
-                    }
+                        "$ref": "CategoryRef.schema.json#CategoryRef"
+                    },
+                    "description": "List of root categories contained in this catalog"
                 }
             },
             "allOf": [

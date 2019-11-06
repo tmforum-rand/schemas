@@ -7,16 +7,15 @@
             "type": "object",
             "description": "A trouble ticket is a record of an issue that is created, tracked, and managed by a trouble ticket management system",
             "properties": {
-    
                 "attachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+                        "$ref": "AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
                     },
                     "description": "File(s) attached to the trouble ticket. e.g. pictur of broken device, scaning of a bill or charge"
                 },
                 "channel": {
-                    "$ref": "../Customer/ChannelRef.schema.json#/definitions/ChannelRef",
+                    "$ref": "ChannelRef.schema.json#/definitions/ChannelRef",
                     "description": "The channel that origin the trouble ticket"
                 },
                 "creationDate": {
@@ -57,7 +56,7 @@
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Note.schema.json#/definitions/Note"
+                        "$ref": "Note.schema.json#/definitions/Note"
                     },
                     "description": "The note(s) that are associated to the ticket."
                 },
@@ -68,14 +67,14 @@
                 "relatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/RelatedEntity.schema.json#/definitions/RelatedEntity"
+                        "$ref": "RelatedEntity.schema.json#/definitions/RelatedEntity"
                     },
                     "description": "An entity that is related to the ticket such as a bill, a product, etc. The entity against which the ticket is associated."
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     },
                     "description": "The related party(ies) that are associated to the ticket."
                 },
@@ -94,29 +93,29 @@
                     "description": "The severity of the issue. Indicate the implication of the issue on the expected functionality e.g. of a system, application, service etc.. \nSeverity values can be for example : Critical, Major, Minor"
                 },
                 "status": {
-                    "type": "string",
+                    "$ref": "TroubleTicketStatusType.schema.json#/definitions/TroubleTicketStatusType",
                     "description": "The current status of the trouble ticket"
                 },
                 "statusChange": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/StatusChange.schema.json#/definitions/StatusChange"
+                        "$ref": "StatusChange.schema.json#/definitions/StatusChange"
                     },
                     "description": "The status change history that are associated to the ticket.Populated by the server"
-                },
-                "statusChangeReason": {
-                    "type": "string",
-                    "description": "The reason for changing the status"
                 },
                 "statusChangeDate": {
                     "type": "string",
                     "format": "date-time",
                     "description": "The date and time the status changed."
                 },
-                "ticketRelationship": {
+                "statusChangeReason": {
+                    "type": "string",
+                    "description": "The reason for changing the status"
+                },
+                "troubleTicketRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/TicketRelationship.schema.json#/definitions/TicketRelationship"
+                        "$ref": "TroubleTicketRelationship.schema.json#/definitions/TroubleTicketRelationship"
                     },
                     "description": "A list of trouble ticket relationships (TroubleTicketRelationship [*]). Represents a relationship between trouble tickets"
                 },

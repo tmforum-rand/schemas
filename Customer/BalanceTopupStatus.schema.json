@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BalanceTopupStatus.schema.json",
+    "title": "BalanceTopupStatus",
+    "definitions": {
+        "BalanceTopupStatusType": {
+            "description": "Structure including specific information about change of status for the topup operation",
+            "properties": {
+                "statusChangeDate": {
+                    "type": "string",
+                    "description": "Date in which the latest change of status was requested"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "BalanceTopupStatusTypeModify.schema.json#/definitions/BalanceTopupStatusTypeModify"
+                }
+            ],
+            "required": [
+                "statusChangeDate"
+            ]
+        }
+    }
+}

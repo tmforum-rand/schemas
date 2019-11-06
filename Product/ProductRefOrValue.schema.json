@@ -4,23 +4,14 @@
   "title": "ProductRefOrValue",
   "definitions": {
       "ProductRefOrValue": {
-          "discriminator": "isRef",
           "$id": "#ProductRefOrValue",
-          "description": "Entity reference. A related party defines party or party role linked to a specific entity.",
+          "description": "A product to be created defined by value or existing defined by reference. The polymorphic attributes @type, @schemaLocation & @referredType are related to the product entity and not the RelatedProductRefOrValue class itself",
           "type": "object",
           "properties": {
-            "isRef": {
-              "type": "boolean",
-              "default": true
-  
-            }
           },
-          "required": [
-            "isRef"
-          ],
           "allOf": [
               {
-                  "$ref": "ProductRef.schema.json#ProductRef"
+                "$ref": "ProductRef.schema.json#ProductRef"
               },
               {
                 "$ref": "Product.schema.json#Product"

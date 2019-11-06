@@ -12,26 +12,14 @@
                     "type": "string",
                     "description": "A narrative that explains in detail what the agreement specification is about."
                 },
-                "href": {
-                    "type": "string",
-                    "description": "Reference URL of the agreement specification"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the agreement specification"
-                },
                 "name": {
                     "type": "string",
                     "description": "Name of the agreement specification"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

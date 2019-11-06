@@ -39,7 +39,7 @@
                 "alternateGeographicAddress": {
                     "type": "array",
                     "items": {
-                        "$ref": "AlternateGeographicAddress.schema.json#AlternateGeographicAddress"
+                        "$ref": "GeographicAddress.schema.json#GeographicAddress"
                     }
                 }
             },

@@ -1,92 +1,75 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "Organization.schema.json",
-    "title": "Organization",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Organization.schema.json", 
+    "title": "Organization", 
     "definitions": {
         "Organization": {
-            "$id": "#Organization",
-            "description": "Represents a group of people identified by shared interests or purpose. Because of the complex nature of many businesses, both organizations and organization units are represented by the same business entity in this model.",
-            "type": "object",
+            "type": "object", 
+            "description": "Organization represents a group of people identified by shared interests or purpose. Examples include business, department and enterprise. Because of the complex nature of many businesses, both organizations and organization units are represented by the same data.", 
             "properties": {
-                "existsDuring": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "Details the establishment of the organization and its cessation"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the organization"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier for the organization"
-                },
                 "isLegalEntity": {
-                    "type": "boolean",
-                    "description": "To tag if the organization is a legal entity known by a national referential"
-                },
-                "nameType": {
-                    "type": "string",
-                    "description": "Co., Inc., Ltd., Pty Ltd., Plc., Gmbh."
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Status of the organization (initialized, validated, closed)"
-                },
-                "tradingName": {
-                    "type": "string",
-                    "description": "The name that the organization (unit) trades under"
-                },
+                    "type": "boolean", 
+                    "description": "If value is true, the organization is a legal entity known by a national referential."
+                },				
+                "isHeadOffice": {
+                    "type": "boolean", 
+                    "description": "If value is true, the organization is the head office"
+                }, 
                 "organizationType": {
-                    "type": "string",
-                    "description": "Type of the organization (company...)"
+                    "type": "string", 
+                    "description": "Type of Organization (company, department...)"
+                },		
+                "tradingName": {
+                    "type": "string", 
+                    "description": "Name that the organization (unit) trades under"
+                },			
+                "existsDuring": {
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod"
+                },			
+                "name": {
+                    "type": "string", 
+                    "description": "Organization name (department name for example)"
+                }, 
+                "nameType": {
+                    "type": "string", 
+                    "description": "Type of the name : Co, Inc, Ltd,\u2026"
                 },
+ 				"status": {
+				    "description": "Status of the organization",
+                    "$ref": "OrganizationStateType.schema.json#/definitions/OrganizationStateType"
+                }, 			
                 "otherName": {
-                    "$ref": "OtherName.schema.json#OtherName"
+			        "type": "array",
+					 "items": {
+                       "$ref": "OtherNameOrganization.schema.json#/definitions/OtherNameOrganization"
+					 }
                 },
-                "externalReference": {
-                    "type": "array",
+                "organizationIdentification": {
+                    "type": "array", 
                     "items": {
-                        "$ref": "../Common/ExternalReference.schema.json#ExternalReference"
+                        "$ref": "OrganizationIdentification.schema.json#/definitions/OrganizationIdentification"
                     }
-                },
-                "relatedParty": {
-                    "type": "array",
+                },				
+                "organizationChildRelationship": {
+                    "type": "array", 
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "OrganizationChildRelationship.schema.json#/definitions/OrganizationChildRelationship"
                     }
-                },
-                "parentRelationship": {
-                    "$ref": "OrganizationParentRelationship.schema.json#OrganizationParentRelationship"
-                },
-                "contactMedium": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
-                    }
-                },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
-                    }
-                },
-                "childRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "OrganizationChildRelationship.schema.json#OrganizationChildRelationship"
-                    }
-                },
-                "identification": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "OrganizationIdentification.schema.json#OrganizationIdentification"
-                    }
+                }, 
+                "organizationParentRelationship": {
+                    "$ref": "OrganizationParentRelationship.schema.json#/definitions/OrganizationParentRelationship"
                 }
             },
-            "allOf": [
+			"allOf": [
+			    {
+                    "$ref": "Party.schema.json#Party"
+                },			
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
+            ], 
+            "required": [
+                "id"
             ]
         }
     }

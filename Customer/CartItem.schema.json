@@ -9,8 +9,8 @@
             "type": "object",
             "properties": {
                 "action": {
-                    "type": "string",
-                    "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
+                    "$ref": "CartItemActionType.schema.json#/definitions/CartItemActionType",
+                    "description": "The action to be carried out on the Product. Can be: add, modify, delete, noChange"
                 },
                 "id": {
                     "type": "string",
@@ -21,8 +21,8 @@
                     "description": "Quantity of cart items"
                 },
                 "status": {
-                    "type": "string",
-                    "description": "status of cart item. e.g \"Active\" , \"SavedForLater\"."
+                    "$ref": "CartItemStatusType.schema.json#/definitions/CartItemStatusType",
+                    "description": "status of cart item. e.g \"active\" , \"savedForLater\"."
                 },
                 "itemTerm": {
                     "type": "array",
@@ -42,14 +42,14 @@
                         "$ref": "../Common/Note.schema.json#Note"
                     }
                 },
-                "totalItemPrice": {
+                "ItemTotalPrice": {
                     "type": "array",
                     "items": {
                         "$ref": "CartPrice.schema.json#CartPrice"
                     }
                 },
                 "product": {
-                    "$ref": "../Product/Product.schema.json#Product"
+                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
                 },
                 "itemPrice": {
                     "type": "array",

@@ -13,7 +13,7 @@
                     "description": "Description of the productOfferingTerm"
                 },
                 "duration": {
-                    "type": "string",
+                    "$ref": "../Common/Quantity.schema.json#Quantity", 
                     "description": "Duration of the productOfferingTerm"
                 },
                 "name": {

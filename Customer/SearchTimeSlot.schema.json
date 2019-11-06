@@ -17,7 +17,7 @@
                 },
                 "status": {
                     "type": "string",
-                    "description": "Status of the search time slot (rejected, inProgress, done or terminatedWithError)"
+                    "$ref": "SearchTimeSlotStateType.schema.json#/definitions/SearchTimeSlotStateType"
                 },
                 "searchDate": {
                     "type": "string",
@@ -27,14 +27,6 @@
                 "searchResult": {
                     "type": "string",
                     "description": "Result of the search time slot (success or fail for example)"
-                },
-                "@type": {
-                    "type": "string",
-                    "description": "Indicates the type of resource"
-                },
-                "@schemaLocation": {
-                    "type": "string",
-                    "description": "Link to schema describing this REST resource"
                 },
                 "requestedTimeSlot": {
                     "type": "array",
@@ -49,20 +41,25 @@
                     }
                 },
                 "relatedParty": {
-                    "$ref": "RelatedParty.schema.json#/definitions/RelatedParty",
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty",
                     "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity."
                 },
                 "relatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedEntity.schema.json#/definitions/RelatedEntity"
+                        "$ref": "../Common/RelatedEntity.schema.json#RelatedEntity"
                     }
                 },
                 "relatedPlace": {
-                    "$ref": "RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue",
+                    "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue",
                     "description": "Related place defines (by reference or value) the place where the appointment will take place."
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
         }
     }
 }

@@ -4,18 +4,20 @@
     "title": "ProductOfferingQualification",
     "definitions": {
         "ProductOfferingQualification": {
-            "$id": "#ProductOfferingQualification",
-            "description": "ProductOfferingQualification is used to perform a commercial eligibility. It allows to retrieve a list of productOffering that are commercially available in the context of the interaction (defined be place, channel, party, product).",
             "type": "object",
+            "description": "ProductOfferingQualification is used to perform a commercial eligibility. It allows to retrieve a list of productOffering that are commercially available in the context of the interaction (defined be place, channel, party, product).",
             "properties": {
+                "channel": {
+                    "description": "Channel used for the qualification",
+                    "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
+                },
+                "category": {
+                    "$ref": "CategoryRef.schema.json#CategoryRef"
+                },
                 "description": {
                     "type": "string",
                     "description": "Description of the productOfferingQualification"
                 },
-                "instantSyncQualification": {
-                    "type": "boolean",
-                    "description": "An indicator which when the value is \"true\" means that requester expects to get qualifcation result in the response"
-                },                
                 "effectiveQualificationDate": {
                     "type": "string",
                     "format": "date-time",
@@ -25,11 +27,6 @@
                     "type": "string",
                     "format": "date-time",
                     "description": "Date when the requester expect to provide an answer for the qualification request"
-                },
-                "requestedPOQCompletionDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Deadline date when the requester expected a qualification answer"
                 },
                 "expirationDate": {
                     "type": "string",
@@ -44,10 +41,28 @@
                     "type": "string",
                     "description": "Unique identifier of the productOfferingQualification resource"
                 },
+                "instantSyncQualification": {
+                    "type": "boolean",
+                    "description": "An indicator which when the value is \"true\" means that requester expects to get qualifcation result immediately in the response. If the indicator is true then the response code of 200 indicates the operation is successful otherwise a task is created with a response 201."
+                },
+                "note": {
+                    "type": "array",
+                    "description": "Free form text associated with the qualification request",
+                    "items": {
+                        "$ref": "Note.schema.json#/definitions/Note"
+                    }
+                },
                 "productOfferingQualificationDate": {
                     "type": "string",
                     "format": "date-time",
                     "description": "Date when the productOfferingQualification has been submitted"
+                },
+                "productOfferingQualificationItem": {
+                    "type": "array",
+                    "description": "Qualification item for a product or a category",
+                    "items": {
+                        "$ref": "ProductOfferingQualificationItem.schema.json#/definitions/ProductOfferingQualificationItem"
+                    }
                 },
                 "provideAlternative": {
                     "type": "boolean",
@@ -62,37 +77,35 @@
                     "description": "An indicator which when the value is \"true\" means that unavailability reason are expected for non available product offering"
                 },
                 "qualificationResult": {
-                    "type": "string"
-                },
-                "state": {
-                    "description": "State of the productOfferingQualification defined in the state engine",
-                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType"
-                },
-                "productOfferingQualificationItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductOfferingQualificationItem.schema.json#ProductOfferingQualificationItem"
-                    }
-                },
-                "note": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Note.schema.json#Note"
-                    }
+                    "type": "string",
+                    "description": "Result of the qualification (example: green, yellow, red)"
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "Party playing a role for this qualification (as requester for example)",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
-                "channel": {
-                    "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                "place": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue"
+                    }
+                },
+                "requestedPOQCompletionDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Deadline date when the requester expected a qualification answer"
+                },
+                "state": {
+                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType",
+                    "description": "State of the productOfferingQualification defined in the state engine"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

@@ -43,8 +43,8 @@
                     "description": "Used to scope the exported data"
                 },
                 "status": {
-                    "type": "string",
-                    "description": "Status of the export job (not started, running, succeeded, failed)"
+                    "description": "Status of the export job (not started, running, succeeded, failed)",
+                    "$ref": "JobStateType.schema.json#/definitions/JobStateType"
                 },
                 "url": {
                     "type": "string",
