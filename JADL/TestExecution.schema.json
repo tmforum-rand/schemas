@@ -13,7 +13,7 @@
                 "testEnvironmentProvisioningExecution": {
                     "$ref": "TestEnvironmentProvisioningExecution.schema.json#/TestEnvironmentProvisioningExecution"
                 },
-                "testDataInstances": {
+                "testDataInstance": {
                     "type": "array",
                     "items": {
                         "$ref": "TestDataInstanceRef.schema.json#/definitions/TestDataInstanceRef"

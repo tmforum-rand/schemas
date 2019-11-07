@@ -6,19 +6,11 @@
         "TestDataInstanceDefinition": {
             "type": "object",
             "description": "Test data instance definition",
-            "required": [
-                "code"
-            ],
             "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "The test data instance code",
-                    "example": "<test data lookup representation>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

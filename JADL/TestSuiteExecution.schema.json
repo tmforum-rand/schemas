@@ -14,6 +14,9 @@
             "allOf": [
                 {
                     "$ref": "TestExecution.schema.json#/TestExecution"
+                },
+                {
+                    "$ref": "TestExecutionRef.schema.json#/TestExecutionRef"
                 }
             ]
         }

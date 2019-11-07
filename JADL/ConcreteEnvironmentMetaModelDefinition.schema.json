@@ -6,19 +6,11 @@
         "ConcreteEnvironmentMetaModelDefinition": {
             "type": "object",
             "description": "Test environment metamodel definition",
-            "required": [
-                "code"
-            ],
             "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "The test environment metamodel definition code",
-                    "example": "<Abstract to concrete resource mapping, resource APIs, etc>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

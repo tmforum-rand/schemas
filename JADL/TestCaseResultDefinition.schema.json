@@ -6,19 +6,11 @@
         "TestCaseResultDefinition": {
             "type": "object",
             "description": "Test case result definition",
-            "required": [
-                "result"
-            ],
             "properties": {
-                "result": {
-                    "type": "string",
-                    "description": "The test case result",
-                    "example": "<test case result representation>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

@@ -6,19 +6,11 @@
         "TestScenarioDefinition": {
             "type": "object",
             "description": "Test scenario definition",
-            "required": [
-                "code"
-            ],
             "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "The test scenario specification",
-                    "example": "refs to test suites, test cases, test data, etc."
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

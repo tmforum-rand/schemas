@@ -6,19 +6,11 @@
         "AbstractEnvironmentDefinition": {
             "type": "object",
             "description": "Abstract environment definition",
-            "required": [
-                "code"
-            ],
             "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "The abstract environment definition code",
-                    "example": "<required test resources, provisioning data, scripts, etc>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

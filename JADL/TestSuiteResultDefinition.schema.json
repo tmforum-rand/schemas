@@ -6,19 +6,11 @@
         "TestSuiteResultDefinition": {
             "type": "object",
             "description": "Test suite result definition",
-            "required": [
-                "result"
-            ],
             "properties": {
-                "result": {
-                    "type": "string",
-                    "description": "The test suite result",
-                    "example": "<test suite result representation>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

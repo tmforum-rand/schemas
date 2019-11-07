@@ -6,19 +6,11 @@
         "TestResourceAPIDefinition": {
             "type": "object",
             "description": "Test resource API definition",
-            "required": [
-                "code"
-            ],
             "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "The test resource API definition code",
-                    "example": "<API methods, parameter and return value schemas>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

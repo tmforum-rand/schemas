@@ -11,7 +11,7 @@
                     "type": "string",
                     "example": "phone"
                 },
-                "concreteResources": {
+                "concreteResource": {
                     "type": "array",
                     "items": {
                         "$ref": "ConcreteResource.schema.json#/ConcreteResource"

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "TestCaseExecutionRef.schema.json",
+  "title": "TestCaseExecutionRef",
+  "definitions": {
+      "TestCaseExecutionRef": {
+          "type": "object",
+          "description": "A reference to a test case execution",
+          "allOf": [
+              {
+                  "$ref": "EntityRef.schema.json#/EntityRef"
+              }
+          ]
+      }
+  }
+}

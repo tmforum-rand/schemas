@@ -6,19 +6,11 @@
         "ProvisioningArtifactDefinition": {
             "type": "object",
             "description": "Provisioning artifact definition",
-            "required": [
-                "artifact"
-            ],
             "properties": {
-                "artifact": {
-                    "type": "string",
-                    "description": "The actual provisioning artifact",
-                    "example": "<scripts, data, workflows, etc>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

@@ -13,7 +13,7 @@
                 "testEnvironmentAllocationExecution": {
                     "$ref": "TestEnvironmentAllocationExecution.schema.json#/TestEnvironmentAllocationExecution"
                 },
-                "provisioningArtifacts": {
+                "provisioningArtifact": {
                     "type": "array",
                     "items": {
                         "$ref": "ProvisioningArtifactRef.schema.json#/ProvisioningArtifactRef"

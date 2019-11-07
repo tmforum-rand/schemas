@@ -6,19 +6,11 @@
         "NonFunctionalTestResultDefinition": {
             "type": "object",
             "description": "Non-functional test result definition",
-            "required": [
-                "result"
-            ],
             "properties": {
-                "result": {
-                    "type": "string",
-                    "description": "The non-functional test case result",
-                    "example": "<non-functional test result representation>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

@@ -6,25 +6,11 @@
         "GeneralArtifactDefinition": {
             "type": "object",
             "description": "General artifact definition",
-            "required": [
-                "artifact",
-                "artifactType"
-            ],
             "properties": {
-                "artifact": {
-                    "$ref": "Any.schema.json#/definitions/Any",
-                    "description": "The actual general artifact",
-                    "example": "<binaries, images, jar files, etc>"
-                },
-                "artifactType": {
-                    "type": "string",
-                    "description": "Data type of the artifact",
-                    "example": "binary"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

@@ -7,15 +7,10 @@
             "type": "object",
             "description": "Test suite definition",
             "properties": {
-                "code": {
-                    "type": "string",
-                    "description": "The test suite definition code",
-                    "example": "<test cases, constituient test suites, etc>"
-                }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "Attachment.schema.json#/Attachment"
                 }
             ]
         }

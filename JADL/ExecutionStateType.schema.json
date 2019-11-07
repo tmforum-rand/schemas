@@ -14,9 +14,7 @@
                 "inProgress",
                 "cancelled",
                 "completed",
-                "failed",
-                "assessingCancellation",
-                "pendingCancellation"
+                "failed"
             ]
         }
     }
