@@ -20,7 +20,7 @@
         "versionDescription": {
           "type": "string",
           "description": "The artifact verion description",
-          "example": "This version does foo"
+          "example": "What's changed: ..."
         },
         "attribute": {
           "type": "array",
