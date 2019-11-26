@@ -4,6 +4,7 @@
     "title": "QuantityType",
     "definitions": {
         "QuantityType": {
+            "$id": "#QuantityType",
             "description": "Representation of a quantity of something. I can also be used to represent a quantity range",
             "properties": {
                 "amount": {
@@ -19,7 +20,8 @@
             "required": [
                 "units",
                 "amount"
-            ]
+            ],
+            "type": "object"
         }
     }
 }

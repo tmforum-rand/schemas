@@ -8,7 +8,7 @@
             "type": "object",
             "properties": {
                 "details": {
-                    "$ref": "BankCardDetails.schema.json#BankCardDetails"
+                    "$ref": "../Customer/BankCardDetails.schema.json#BankCardDetails"
                 },
                 "description": {
                     "type": "string",

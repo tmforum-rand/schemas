@@ -1,13 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "LoyaltyProgramMemberRef.schema.json",
     "title": "LoyaltyProgramMemberRef",
     "definitions": {
         "LoyaltyProgramMemberRef": {
-            "id": "LoyaltyProgramMemberRef",
+            "$id": "#LoyaltyProgramMemberRef",
             "description": "Reference to a loyalty member.",
             "type": "object",
-            "title": "LoyaltyProgramMemberRef",
             "properties": {
                 "id": {
                     "type": "string",

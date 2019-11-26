@@ -7,7 +7,9 @@
             "$id": "#ServiceOrderRelationship",
             "type": "object",
             "description": "Linked service order to the one containing this attribute",
-            "required": ["id"],
+            "required": [
+                "id"
+            ],
             "properties": {
                 "@referredType": {
                     "type": "string",

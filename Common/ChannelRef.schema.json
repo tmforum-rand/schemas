@@ -4,6 +4,7 @@
     "title": "ChannelRef",
     "definitions": {
         "ChannelRef": {
+            "$id": "#ChannelRef",
             "type": "object",
             "description": "The channel to which the resource reference to. e.g. channel for selling product offerings, channel for opening a trouble ticket etc..",
             "properties": {
@@ -14,7 +15,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "EntityRef.schema.json#/EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

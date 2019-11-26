@@ -4,6 +4,7 @@
     "title": "TaxDefinition",
     "definitions": {
         "TaxDefinition": {
+            "$id": "#TaxDefinition",
             "type": "object",
             "description": "Reference of a tax definition. A tax is levied by an authorized tax jurisdiction. There are many different types of tax (Federal Tax levied by the US Government, State Tax levied by the State of California,…).",
             "properties": {
@@ -19,14 +20,14 @@
                     "type": "string",
                     "description": "Tax name."
                 },
-               "taxType": {
+                "taxType": {
                     "type": "string",
                     "description": "Type of  the tax."
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

@@ -4,6 +4,7 @@
     "title": "TimePeriodType",
     "definitions": {
         "TimePeriodType": {
+            "$id": "#TimePeriodType",
             "description": "Representation of a time period",
             "properties": {
                 "endDateTime": {
@@ -19,7 +20,8 @@
             },
             "required": [
                 "startDateTime"
-            ]
+            ],
+            "type": "object"
         }
     }
 }

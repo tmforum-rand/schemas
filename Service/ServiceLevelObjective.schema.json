@@ -54,13 +54,13 @@
                 },
                 "serviceLevelSpecParameter": {
                     "description": "A parameter for this objective",
-                    "$ref": "ServiceLevelSpecParameter.schema.json#ServiceLevelSpecParameter"
+                    "$ref": "../Service/ServiceLevelSpecParameter.schema.json#ServiceLevelSpecParameter"
                 },
                 "serviceLevelSpecConsequence": {
                     "type": "array",
                     "description": "A list of consequences for this objective.",
                     "items": {
-                        "$ref": "ServiceLevelSpecConsequence.schema.json#ServiceLevelSpecConsequence"
+                        "$ref": "../Service/ServiceLevelSpecConsequence.schema.json#ServiceLevelSpecConsequence"
                     }
                 }
             },

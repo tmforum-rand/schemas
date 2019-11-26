@@ -7,8 +7,7 @@
             "$id": "#ProductOfferingPriceRef",
             "description": "ProductPriceOffering reference. An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../Common/EntityRef.schema.json#EntityRef"

@@ -7,10 +7,10 @@
             "$id": "#Partnership",
             "description": "A partnership represents a formalized collaboration between various parties, each party playing a role in the partnership. The parties playing a role in the partnership represented by the Partner entity. The structure of a partnership is specified by a PartnershipSpecification which contain all the information for the setup of the partnership, including the list of identified roles and the agreement that should apply.",
             "type": "object",
-	    "required": [
-		"name",
-		"specification"
-	    ],
+            "required": [
+                "name",
+                "specification"
+            ],
             "properties": {
                 "description": {
                     "type": "string",
@@ -30,13 +30,13 @@
                 },
                 "specification": {
                     "description": "The specification of this partnership.",
-		    "$ref": "PartnershipSpecificationRef.schema.json#PartnershipSpecificationRef"
+                    "$ref": "../EngagedParty/PartnershipSpecificationRef.schema.json#PartnershipSpecificationRef"
                 },
                 "partner": {
                     "description": "The list of partners of the partnership, where a partner represents a party playing a given role. Hence a partner structure includes primarily a reference to the engaged party and a role name matching necessarily the name of one of the role specifications defined in the specification of the partnership.",
                     "type": "array",
                     "items": {
-                        "$ref": "Partner.schema.json#Partner"
+                        "$ref": "../EngagedParty/Partner.schema.json#Partner"
                     }
                 }
             },

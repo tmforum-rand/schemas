@@ -6,11 +6,10 @@
         "GeographicLocationRef": {
             "$id": "#GeographicLocationRef",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
-                    "$ref": "PlaceRef.schema.json#PlaceRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

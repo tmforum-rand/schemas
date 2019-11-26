@@ -21,7 +21,7 @@
                     "description": "Name of the account"
                 },
                 "accountBalance": {
-                    "$ref": "AccountBalance.schema.json#AccountBalance"
+                    "$ref": "../EngagedParty/AccountBalance.schema.json#AccountBalance"
                 },
                 "@referredType": {
                     "type": "string",

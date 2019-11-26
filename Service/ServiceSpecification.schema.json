@@ -47,28 +47,28 @@
                 },
                 "resourceSpecification": {
                     "type": "array",
-                    "description" : "A list of resource specification references (ResourceSpecificationRef [*]). The ResourceSpecification is required for a service specification with type ResourceFacingServiceSpecification (RFSS).",
+                    "description": "A list of resource specification references (ResourceSpecificationRef [*]). The ResourceSpecification is required for a service specification with type ResourceFacingServiceSpecification (RFSS).",
                     "items": {
                         "$ref": "../Resource/ResourceSpecificationRef.schema.json#ResourceSpecificationRef"
                     }
                 },
                 "attachment": {
                     "type": "array",
-                    "description" : "A list of attachments (Attachment [*]). Complements the description of the specification through video, pictures...",
+                    "description": "A list of attachments (Attachment [*]). Complements the description of the specification through video, pictures...",
                     "items": {
                         "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
                     }
                 },
                 "serviceSpecCharacteristic": {
                     "type": "array",
-                    "description" : "A list of service spec characteristics (ServiceSpecCharacteristic [*]). This class represents the key features of this service specification.",
+                    "description": "A list of service spec characteristics (ServiceSpecCharacteristic [*]). This class represents the key features of this service specification.",
                     "items": {
-                        "$ref": "ServiceSpecCharacteristic.schema.json#ServiceSpecCharacteristic"
+                        "$ref": "../Service/ServiceSpecCharacteristic.schema.json#ServiceSpecCharacteristic"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
-                    "description" : "A list of related party references (RelatedParty [*]). A related party defines party or party role linked to a specific entity.",
+                    "description": "A list of related party references (RelatedParty [*]). A related party defines party or party role linked to a specific entity.",
                     "items": {
                         "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
@@ -77,19 +77,19 @@
                     "type": "array",
                     "description": "A list of service specifications related to this specification, e.g. migration, substitution, dependency or exclusivity relationship",
                     "items": {
-                        "$ref": "ServiceSpecRelationship.schema.json#ServiceSpecRelationship"
+                        "$ref": "../Service/ServiceSpecRelationship.schema.json#ServiceSpecRelationship"
                     }
                 },
                 "serviceLevelSpecification": {
-                    "type": "array", 
+                    "type": "array",
                     "description": "A list of service level specifications related to this service specification, and which will need to be satisifiable for corresponding service instances; e.g. Gold, Platinum",
                     "items": {
-                        "$ref": "ServiceLevelSpecificationRef.schema.json#/definitions/ServiceLevelSpecificationRef"
+                        "$ref": "../Service/ServiceLevelSpecificationRef.schema.json#ServiceLevelSpecificationRef"
                     }
                 },
                 "targetServiceSchema": {
                     "description": "A target service schema reference (TargetServiceSchemaRef). The reference object to the schema and type of target service which is described by service specification.",
-                    "$ref": "TargetServiceSchema.schema.json#/definitions/TargetServiceSchema"
+                    "$ref": "../Service/TargetServiceSchema.schema.json#TargetServiceSchema"
                 }
             },
             "allOf": [

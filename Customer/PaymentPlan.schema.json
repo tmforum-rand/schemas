@@ -37,7 +37,7 @@
                     "description": "Validity period of the payment plan"
                 },
                 "paymentMethod": {
-                    "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
+                    "$ref": "../Customer/PaymentMethodRef.schema.json#PaymentMethodRef"
                 }
             },
             "allOf": [

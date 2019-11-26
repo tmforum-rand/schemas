@@ -7,7 +7,10 @@
             "$id": "#ProductPrice",
             "description": "An amount, usually of money, that represents the actual price paid by a Customer for a purchase, a rent or a lease of a Product. The price is valid for a defined period of time.",
             "type": "object",
-			"required": ["priceType","price"],
+            "required": [
+                "priceType",
+                "price"
+            ],
             "properties": {
                 "description": {
                     "type": "string",
@@ -19,9 +22,9 @@
                 },
                 "productOfferingPrice": {
                     "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
-                },  
+                },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
+                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "priceType": {
                     "type": "string",
@@ -38,8 +41,8 @@
                 "productPriceAlteration": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/PriceAlteration.schema.json#PriceAlteration"
-                    }    
+                        "$ref": "../Product/PriceAlteration.schema.json#PriceAlteration"
+                    }
                 },
                 "price": {
                     "$ref": "../Customer/Price.schema.json#Price"

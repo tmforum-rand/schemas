@@ -45,12 +45,12 @@
                     "type": "array",
                     "description": "List of categories for this candidate",
                     "items": {
-                        "$ref": "ServiceCategoryRef.schema.json#ServiceCategoryRef"
+                        "$ref": "../Service/ServiceCategoryRef.schema.json#ServiceCategoryRef"
                     }
                 },
                 "serviceSpecification": {
                     "description": "The service specification implied by this candidate",
-                    "$ref": "ServiceSpecificationRef.schema.json#ServiceSpecificationRef"
+                    "$ref": "../Service/ServiceSpecificationRef.schema.json#ServiceSpecificationRef"
                 }
             },
             "allOf": [

@@ -35,13 +35,13 @@
                 "action": {
                     "type": "array",
                     "items": {
-                        "$ref": "PromotionAction.schema.json#PromotionAction"
+                        "$ref": "../Product/PromotionAction.schema.json#PromotionAction"
                     }
                 },
                 "criteriaGroup": {
                     "type": "array",
                     "items": {
-                        "$ref": "PromotionCriteriaGroup.schema.json#PromotionCriteriaGroup"
+                        "$ref": "../Product/PromotionCriteriaGroup.schema.json#PromotionCriteriaGroup"
                     }
                 }
             },

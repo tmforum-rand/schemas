@@ -22,13 +22,13 @@
                 "hourPeriod": {
                     "type": "array",
                     "items": {
-                        "$ref": "HourPeriod.schema.json#HourPeriod"
+                        "$ref": "../Common/HourPeriod.schema.json#HourPeriod"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

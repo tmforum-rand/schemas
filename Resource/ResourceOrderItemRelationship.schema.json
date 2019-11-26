@@ -12,7 +12,7 @@
                     "description": "Type of the order item relationship"
                 },
                 "orderItem": {
-                    "$ref": "ResourceOrderItemRef.schema.json#ResourceOrderItemRef"
+                    "$ref": "../Resource/ResourceOrderItemRef.schema.json#ResourceOrderItemRef"
                 }
             },
             "allOf": [

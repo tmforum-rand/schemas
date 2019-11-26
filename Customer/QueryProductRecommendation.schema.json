@@ -36,14 +36,14 @@
                     "description": "The period in which the recommendation is valid"
                 },
                 "order": {
-                    "$ref": "ProductOrderRef.schema.json#ProductOrderRef"
+                    "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
                 },
                 "place": {
                     "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue",
                     "description": "The place which the recommendation is related to"
                 },
                 "channel": {
-                    "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                    "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                 },
                 "category": {
                     "$ref": "../Product/CategoryRef.schema.json#CategoryRef",
@@ -59,11 +59,11 @@
                 "item": {
                     "type": "array",
                     "items": {
-                        "$ref": "RecommendationItem.schema.json#RecommendationItem"
+                        "$ref": "../Product/RecommendationItem.schema.json#RecommendationItem"
                     }
                 },
                 "state": {
-                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType",
+                    "$ref": "../Common/TaskStateType.schema.json#TaskStateType",
                     "description": "State of the Recommendation defined in the state engine"
                 }
             },

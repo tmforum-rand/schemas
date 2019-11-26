@@ -8,7 +8,7 @@
             "type": "object",
             "properties": {
                 "account": {
-                    "$ref": "AccountRef.schema.json#AccountRef"
+                    "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
                 }
             },
             "allOf": [

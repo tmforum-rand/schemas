@@ -29,10 +29,10 @@
                 "cancellationReason": {
                     "type": "string",
                     "description": "Reason why the order is cancelled."
-                },               
+                },
                 "state": {
                     "description": "Tracks the lifecycle status of the cancellation request, such as Acknowledged, Rejected, InProgress, Pending and so on.",
-                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType"
+                    "$ref": "../Common/TaskStateType.schema.json#TaskStateType"
                 }
             },
             "allOf": [

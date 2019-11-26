@@ -7,20 +7,18 @@
             "$id": "#BillPresentationMediaRefOrValue",
             "description": "An attachment by value or by reference.",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "required": [
-              "role"
+                "role"
             ],
             "allOf": [
                 {
-                    "$ref": "BillPresentationMediaRef.schema.json#BillPresentationMediaRef"
+                    "$ref": "../Customer/BillPresentationMediaRef.schema.json#BillPresentationMediaRef"
                 },
                 {
-                  "$ref": "BillPresentationMedia.schema.json#BillPresentationMedia"
+                    "$ref": "../Customer/BillPresentationMedia.schema.json#BillPresentationMedia"
                 }
-                
             ]
         }
     }
-  }
+}

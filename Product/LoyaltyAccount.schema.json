@@ -1,13 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
-    "$id": "LoyaltyAccount.schema.json", 
-    "title": "LoyaltyAccount", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "LoyaltyAccount.schema.json",
+    "title": "LoyaltyAccount",
     "definitions": {
         "LoyaltyAccount": {
             "$id": "#LoyaltyAccount",
             "description": "A loyalty account, containing loyalty balances.",
             "type": "object",
-            "title": "LoyaltyAccount",
             "properties": {
                 "id": {
                     "type": "string",
@@ -18,7 +17,7 @@
                     "description": "A reference to the loyalty member’s loyalty account."
                 },
                 "loyaltyProgramProduct": {
-                    "$ref": "LoyaltyProgramProductRef.schema.json#/definitions/LoyaltyProgramProductRef"
+                    "$ref": "../Product/LoyaltyProgramProductRef.schema.json#LoyaltyProgramProductRef"
                 }
             }
         }

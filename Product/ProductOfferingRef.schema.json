@@ -7,8 +7,7 @@
             "$id": "#ProductOfferingRef",
             "description": "ProductOffering reference. A product offering represents entities that are orderable from the provider of the catalog, this resource includes pricing information.",
             "type": "object",
-            "properties": {
-             },
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../Common/EntityRef.schema.json#EntityRef"

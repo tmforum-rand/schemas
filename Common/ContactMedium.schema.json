@@ -17,17 +17,17 @@
                     "description": "Type of the contact medium, such as: email address, telephone number, postal address"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The time period that the contact medium is valid for"
                 },
                 "characteristic": {
-                    "$ref": "MediumCharacteristic.schema.json#MediumCharacteristic",
+                    "$ref": "../Common/MediumCharacteristic.schema.json#MediumCharacteristic",
                     "description": "Any additional characteristic(s) of this contact medium"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

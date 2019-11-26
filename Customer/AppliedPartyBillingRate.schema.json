@@ -44,16 +44,16 @@
                 "appliedTax": {
                     "type": "array",
                     "items": {
-                        "$ref": "AppliedBillingTaxRate.schema.json#AppliedBillingTaxRate"
+                        "$ref": "../Customer/AppliedBillingTaxRate.schema.json#AppliedBillingTaxRate"
                     }
                 },
                 "bill": {
-                    "$ref": "BillRef.schema.json#BillRef"
+                    "$ref": "../Customer/BillRef.schema.json#BillRef"
                 },
                 "characteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "AppliedBillingRateCharacteristic.schema.json#AppliedBillingRateCharacteristic"
+                        "$ref": "../Customer/AppliedBillingRateCharacteristic.schema.json#AppliedBillingRateCharacteristic"
                     }
                 }
             },

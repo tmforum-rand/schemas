@@ -25,11 +25,11 @@
                     "description": "unit of measure for the valueCould be minutes, GB, etc"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which this object is valid"
                 },
                 "value": {
-                    "$ref": "Object.schema.json#Object",
+                    "$ref": "../Common/Object.schema.json#Object",
                     "description": "the  value that the characteristic can take on."
                 },
                 "valueFrom": {
@@ -47,7 +47,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

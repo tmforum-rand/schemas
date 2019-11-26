@@ -54,16 +54,16 @@
                 },
                 "serviceSpecCharacteristicValue": {
                     "type": "array",
-                    "description" : "A list of service spec characteristic values (ServiceSpecCharacteristicValue [*]). A ServiceSpecCharacteristicValue object is used to define a set of attributes, each of which can be assigned to a corresponding set of attributes in a ServiceSpecCharacteristic object. The values of the attributes in the ServiceSpecCharacteristicValue object describe the values of the attributes that a corresponding ServiceSpecCharacteristic object can take on.",
+                    "description": "A list of service spec characteristic values (ServiceSpecCharacteristicValue [*]). A ServiceSpecCharacteristicValue object is used to define a set of attributes, each of which can be assigned to a corresponding set of attributes in a ServiceSpecCharacteristic object. The values of the attributes in the ServiceSpecCharacteristicValue object describe the values of the attributes that a corresponding ServiceSpecCharacteristic object can take on.",
                     "items": {
-                        "$ref": "ServiceSpecCharacteristicValue.schema.json#ServiceSpecCharacteristicValue"
+                        "$ref": "../Service/ServiceSpecCharacteristicValue.schema.json#ServiceSpecCharacteristicValue"
                     }
                 },
                 "serviceSpecCharRelationship": {
                     "type": "array",
-                    "description" : "A list of service spec char relationships (ServiceSpecCharRelationship [*]). An aggregation, migration, substitution, dependency or exclusivity relationship between/among Specification Characteristics.",
+                    "description": "A list of service spec char relationships (ServiceSpecCharRelationship [*]). An aggregation, migration, substitution, dependency or exclusivity relationship between/among Specification Characteristics.",
                     "items": {
-                        "$ref": "ServiceSpecCharRelationship.schema.json#ServiceSpecCharRelationship"
+                        "$ref": "../Service/ServiceSpecCharRelationship.schema.json#ServiceSpecCharRelationship"
                     }
                 }
             },

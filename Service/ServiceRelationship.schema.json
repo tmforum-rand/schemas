@@ -7,7 +7,10 @@
             "$id": "#ServiceRelationship",
             "description": "Describes links with services of the same category (useful for bundled services)",
             "type": "object",
-            "required": ["relationshipType", "service"],
+            "required": [
+                "relationshipType",
+                "service"
+            ],
             "properties": {
                 "relationshipType": {
                     "type": "string",
@@ -15,7 +18,7 @@
                 },
                 "service": {
                     "description": "The service being referred to",
-                    "$ref": "ServiceRef.schema.json#ServiceRef"
+                    "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
                 }
             }
         }

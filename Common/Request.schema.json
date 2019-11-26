@@ -16,7 +16,7 @@
                     "type": "array",
                     "description": "Items included in the header of the request. For example for an HTTP request might contain requested locale, basic authentication.",
                     "items": {
-                        "$ref": "HeaderItem.schema.json#/definitions/HeaderItem"
+                        "$ref": "../Common/HeaderItem.schema.json#HeaderItem"
                     },
                     "title": "header"
                 },

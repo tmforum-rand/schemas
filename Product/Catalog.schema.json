@@ -17,9 +17,9 @@
                     "description": "Unique identifier of the Catalog"
                 },
                 "description": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Description of this catalog"
-                }, 
+                },
                 "lastUpdate": {
                     "type": "string",
                     "format": "date-time",
@@ -55,7 +55,7 @@
                 "category": {
                     "type": "array",
                     "items": {
-                        "$ref": "CategoryRef.schema.json#CategoryRef"
+                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
                     },
                     "description": "List of root categories contained in this catalog"
                 }

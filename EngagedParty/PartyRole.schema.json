@@ -3,10 +3,6 @@
     "$id": "PartyRole.schema.json",
     "title": "PartyRole",
     "definitions": {
-	"required": [
-	    "name",
-	    "roleType"
-	],
         "PartyRole": {
             "$id": "#PartyRole",
             "description": "The part played by a party in a given context.",
@@ -37,12 +33,12 @@
                     "description": "The time period that the PartyRole is valid for."
                 },
                 "engagedParty": {
-                    "$ref": "RelatedParty.schema.json#RelatedParty"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "account": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountRef.schema.json#AccountRef"
+                        "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
                     }
                 },
                 "paymentMethod": {
@@ -73,13 +69,13 @@
                 "agreement": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementRef.schema.json#AgreementRef"
+                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 }
             },
@@ -87,6 +83,10 @@
                 {
                     "$ref": "../Common/Entity.schema.json#Entity"
                 }
+            ],
+            "required": [
+                "name",
+                "roleType"
             ]
         }
     }

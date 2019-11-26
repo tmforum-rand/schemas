@@ -7,9 +7,9 @@
             "$id": "#RoleSpecification",
             "description": "A RoleSpecification represents a specification of a role, which may be defined in the context of a given type of partnership (PartnershipSpecification), such as Buyer, Seller.",
             "type": "object",
-	    "required": [
-		"name"
-	    ],
+            "required": [
+                "name"
+            ],
             "properties": {
                 "description": {
                     "type": "string",
@@ -30,7 +30,7 @@
                 "agreementSpecification": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementSpecificationRef.schema.json#AgreementSpecificationRef"
+                        "$ref": "../EngagedParty/AgreementSpecificationRef.schema.json#AgreementSpecificationRef"
                     }
                 }
             },

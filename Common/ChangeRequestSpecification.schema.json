@@ -25,12 +25,12 @@
                     "description": "Name of the specification."
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

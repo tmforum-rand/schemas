@@ -7,9 +7,9 @@
             "$id": "#PartnershipSpecification",
             "description": "A partnership specification contains all the information for the setup of a partnership of a given kind. This includes the list of identified role types for the partnership with the corresponding agreement specifications.",
             "type": "object",
-	    "required": [
-		"name"
-	    ],
+            "required": [
+                "name"
+            ],
             "properties": {
                 "description": {
                     "type": "string",
@@ -28,10 +28,10 @@
                     "description": "An identifying name for the partnership specification."
                 },
                 "roleSpecification": {
-		    "description" : "The list of roles specifications a engaged party will be able to play for this kind of partnership",
+                    "description": "The list of roles specifications a engaged party will be able to play for this kind of partnership",
                     "type": "array",
                     "items": {
-                        "$ref": "RoleSpecification.schema.json#RoleSpecification"
+                        "$ref": "../EngagedParty/RoleSpecification.schema.json#RoleSpecification"
                     }
                 }
             },

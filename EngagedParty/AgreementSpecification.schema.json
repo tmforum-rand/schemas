@@ -7,10 +7,10 @@
             "$id": "#AgreementSpecification",
             "description": "A template of an agreement that can be used when establishing partnerships",
             "type": "object",
-	    "required": [
-		"name",
-		"attachment"
-	    ],
+            "required": [
+                "name",
+                "attachment"
+            ],
             "properties": {
                 "description": {
                     "type": "string",
@@ -55,25 +55,25 @@
                 "specificationCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementSpecCharacteristic.schema.json#AgreementSpecCharacteristic"
+                        "$ref": "../EngagedParty/AgreementSpecCharacteristic.schema.json#AgreementSpecCharacteristic"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "attachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
+                        "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
                     }
                 },
                 "specificationRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementSpecificationRelationship.schema.json#AgreementSpecificationRelationship"
+                        "$ref": "../EngagedParty/AgreementSpecificationRelationship.schema.json#AgreementSpecificationRelationship"
                     }
                 }
             },
