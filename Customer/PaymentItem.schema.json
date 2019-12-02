@@ -13,7 +13,7 @@
                     "description": "Part of a payment amount lettered to the customer bill"
                 },
                 "payment": {
-                    "$ref": "PaymentRef.schema.json#PaymentRef"
+                    "$ref": "../Customer/PaymentRef.schema.json#PaymentRef"
                 }
             },
             "allOf": [

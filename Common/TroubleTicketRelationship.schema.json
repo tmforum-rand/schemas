@@ -4,11 +4,12 @@
     "title": "TroubleTicketRelationship",
     "definitions": {
         "TroubleTicketRelationship": {
+            "$id": "#TroubleTicketRelationship",
             "type": "object",
             "description": "Represents a relationship between trouble TroubleTickets",
             "properties": {
                 "troubleTicket": {
-                    "$ref": "TroubleTicketRef.schema.json#/definitions/TroubleTicketRef"
+                    "$ref": "../Common/TroubleTicketRef.schema.json#TroubleTicketRef"
                 },
                 "relationshipType": {
                     "type": "string",
@@ -17,7 +18,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

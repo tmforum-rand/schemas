@@ -7,7 +7,10 @@
             "$id": "#TaskFlowRelationship",
             "description": "Describes relationship between taskFlow",
             "type": "object",
-            "required": ["relationshipType", "taskFlow"],
+            "required": [
+                "relationshipType",
+                "taskFlow"
+            ],
             "properties": {
                 "relationshipType": {
                     "type": "string",
@@ -15,7 +18,7 @@
                 },
                 "taskFlow": {
                     "description": "The taskFlow being referred to",
-                    "$ref": "TaskFlowRef.schema.json#TaskFlowRef"
+                    "$ref": "../Common/TaskFlowRef.schema.json#TaskFlowRef"
                 }
             }
         }

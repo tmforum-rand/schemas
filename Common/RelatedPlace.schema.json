@@ -24,10 +24,10 @@
                     "type": "string",
                     "description": "A user-friendly name for the place, such as [Paris Store], [London Store], [Main Home]"
                 }
-            },    
+            },
             "allOf": [
-                 {
-                    "$ref": "Entity.schema.json#Entity"
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

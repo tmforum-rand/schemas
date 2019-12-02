@@ -48,7 +48,7 @@
                     "type": "array",
                     "description": "An Applied Consequence defines the action (prescribed action or notification) to take when a MeasureThresholdRuleViolation occurs.",
                     "items": {
-                        "$ref": "AppliedConsequence.schema.json#AppliedConsequence"
+                        "$ref": "../Service/AppliedConsequence.schema.json#AppliedConsequence"
                     }
                 }
             },

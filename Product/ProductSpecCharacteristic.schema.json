@@ -31,13 +31,13 @@
                 "productSpecCharRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductSpecCharRelationship.schema.json#ProductSpecCharRelationship"
+                        "$ref": "../Product/ProductSpecCharRelationship.schema.json#ProductSpecCharRelationship"
                     }
                 },
                 "productSpecCharacteristicValue": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductSpecCharacteristicValue.schema.json#ProductSpecCharacteristicValue"
+                        "$ref": "../Product/ProductSpecCharacteristicValue.schema.json#ProductSpecCharacteristicValue"
                     }
                 }
             },

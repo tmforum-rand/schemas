@@ -4,17 +4,18 @@
     "title": "Product",
     "definitions": {
         "Product": {
+            "$id": "#Product",
             "type": "object",
             "description": "A product offering procured by a customer or other interested party playing a party role. A product is realized as one or more service(s) and / or resource(s).",
             "properties": {
                 "agreement": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementItemRef.schema.json#/definitions/AgreementItemRef"
+                        "$ref": "../EngagedParty/AgreementItemRef.schema.json#AgreementItemRef"
                     }
                 },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
+                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "description": {
                     "type": "string",
@@ -48,34 +49,34 @@
                 "productCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "Characteristic.schema.json#/definitions/Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     }
                 },
                 "productOffering": {
-                    "$ref": "ProductOfferingRef.schema.json#/definitions/ProductOfferingRef"
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
                 },
                 "productOrderItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedProductOrderItem.schema.json#/definitions/RelatedProductOrderItem"
+                        "$ref": "../Product/RelatedProductOrderItem.schema.json#RelatedProductOrderItem"
                     }
                 },
                 "product": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductRefOrValue.schema.json#/definitions/ProductRefOrValue"
+                        "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
                     }
                 },
                 "productPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductPrice.schema.json#/definitions/ProductPrice"
+                        "$ref": "../Product/ProductPrice.schema.json#ProductPrice"
                     }
                 },
                 "productRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductRelationship.schema.json#/definitions/ProductRelationship"
+                        "$ref": "../Product/ProductRelationship.schema.json#ProductRelationship"
                     }
                 },
                 "productSerialNumber": {
@@ -83,36 +84,36 @@
                     "description": "Is the serial number for the product. This is typically applicable to tangible products e.g. Broadband Router."
                 },
                 "productSpecification": {
-                    "$ref": "ProductSpecificationRef.schema.json#/definitions/ProductSpecificationRef"
+                    "$ref": "../Product/ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 },
                 "productTerm": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductTerm.schema.json#/definitions/ProductTerm"
+                        "$ref": "../Product/ProductTerm.schema.json#ProductTerm"
                     }
                 },
                 "realizingResource": {
                     "type": "array",
                     "items": {
-                        "$ref": "ResourceRef.schema.json#/definitions/ResourceRef"
+                        "$ref": "../Resource/ResourceRef.schema.json#ResourceRef"
                     }
                 },
                 "realizingService": {
                     "type": "array",
                     "items": {
-                        "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
+                        "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "place": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue"
+                        "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
                     }
                 },
                 "startDate": {
@@ -121,7 +122,7 @@
                     "description": "Is the date from which the product starts"
                 },
                 "status": {
-                    "$ref": "ProductStatusType.schema.json#/definitions/ProductStatusType",
+                    "$ref": "../Product/ProductStatusType.schema.json#ProductStatusType",
                     "description": "Is the lifecycle status of the product."
                 },
                 "terminationDate": {
@@ -132,7 +133,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

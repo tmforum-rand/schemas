@@ -4,7 +4,9 @@
     "title": "BalanceTransfer",
     "definitions": {
         "BalanceTransfer": {
-            "description": "#TODO"
+            "$id": "#BalanceTransfer",
+            "description": "#TODO",
+            "type": "object"
         }
     }
 }

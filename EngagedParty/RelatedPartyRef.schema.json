@@ -24,12 +24,12 @@
                     "type": "string",
                     "description": "Role of the related party."
                 },
-			    "@referredType": {
+                "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 }
             },
-			"allOf": [
+            "allOf": [
                 {
                     "$ref": "../Common/Entity.schema.json#Entity"
                 }

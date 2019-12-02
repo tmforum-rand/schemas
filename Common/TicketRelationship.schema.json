@@ -4,6 +4,7 @@
     "title": "TicketRelationship",
     "definitions": {
         "TicketRelationship": {
+            "$id": "#TicketRelationship",
             "type": "object",
             "description": "Represents a relationship between trouble tickets",
             "properties": {
@@ -12,12 +13,12 @@
                     "description": "Type of the trouble ticket relationship can be isChiled, dependent etc..."
                 },
                 "product": {
-                    "$ref": "TroubleTicketRef.schema.json#TroubleTicketRef"
+                    "$ref": "../Common/TroubleTicketRef.schema.json#TroubleTicketRef"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

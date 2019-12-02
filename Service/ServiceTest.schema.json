@@ -9,60 +9,60 @@
             "type": "object",
             "properties": {
                 "characteristic": {
-                    "type": "array", 
+                    "type": "array",
                     "description": "List of characteristics with values that define the test run",
                     "items": {
-                        "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     }
-                }, 
+                },
                 "description": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Description of the service test"
-                }, 
+                },
                 "endDateTime": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "The end date and time of the service test"
-                }, 
+                },
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Hyperlink to access the service test"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The identifier of the service test"
-                }, 
+                },
                 "mode": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "An indication of whether the service test is running in \n\"PROACTIVE\" or \"ONDEMAND\" mode"
-                }, 
+                },
                 "name": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The name of the service test"
-                }, 
+                },
                 "relatedService": {
                     "description": "The actual service being tested",
-                    "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
-                }, 
+                    "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
+                },
                 "startDateTime": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "The start date and time of the service test."
-                }, 
+                },
                 "state": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The actual state the service test is in"
-                }, 
+                },
                 "testMeasure": {
-                    "type": "array", 
+                    "type": "array",
                     "description": "The results of the test in terms of the measured metrics",
                     "items": {
-                        "$ref": "TestMeasure.schema.json#/definitions/TestMeasure"
+                        "$ref": "../Service/TestMeasure.schema.json#TestMeasure"
                     }
-                }, 
+                },
                 "testSpecification": {
                     "description": "The specification for this test",
-                    "$ref": "ServiceTestSpecificationRef.schema.json#/definitions/ServiceTestSpecificationRef"
+                    "$ref": "../Service/ServiceTestSpecificationRef.schema.json#ServiceTestSpecificationRef"
                 }
             },
             "allOf": [

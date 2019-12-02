@@ -23,13 +23,13 @@
                 "task": {
                     "type": "array",
                     "items": {
-                        "$ref": "Task.schema.json#Task"
+                        "$ref": "../Common/Task.schema.json#Task"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

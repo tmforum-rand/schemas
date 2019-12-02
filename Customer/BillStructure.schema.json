@@ -11,14 +11,14 @@
                 "presentationMedia": {
                     "type": "array",
                     "items": {
-                        "$ref": "BillPresentationMediaRefOrValue.schema.json#BillPresentationMediaRefOrValue"
+                        "$ref": "../Customer/BillPresentationMediaRefOrValue.schema.json#BillPresentationMediaRefOrValue"
                     }
                 },
                 "format": {
-                    "$ref": "BillFormatRefOrValue.schema.json#BillFormatRefOrValue"
+                    "$ref": "../Customer/BillFormatRefOrValue.schema.json#BillFormatRefOrValue"
                 },
                 "cycleSpecification": {
-                    "$ref": "BillingCycleSpecificationRefOrValue.schema.json#BillingCycleSpecificationRefOrValue"
+                    "$ref": "../Customer/BillingCycleSpecificationRefOrValue.schema.json#BillingCycleSpecificationRefOrValue"
                 }
             },
             "allOf": [

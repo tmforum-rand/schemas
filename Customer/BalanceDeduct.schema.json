@@ -45,7 +45,7 @@
                     "$ref": "../Product/ProductRef.schema.json#ProductRef"
                 },
                 "balanceReserve": {
-                    "$ref": "BalanceReserveRef.schema.json#BalanceReserveRef"
+                    "$ref": "../Customer/BalanceReserveRef.schema.json#BalanceReserveRef"
                 },
                 "requestor": {
                     "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"

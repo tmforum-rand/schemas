@@ -4,7 +4,9 @@
     "title": "BalanceAdjustment",
     "definitions": {
         "BalanceAdjustment": {
-            "description": "#TODO"
+            "$id": "#BalanceAdjustment",
+            "description": "#TODO",
+            "type": "object"
         }
     }
 }

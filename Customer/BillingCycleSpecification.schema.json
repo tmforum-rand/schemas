@@ -9,7 +9,7 @@
             "type": "object",
             "required": [
                 "name"
-            ], 
+            ],
             "properties": {
                 "billingDateShift": {
                     "type": "integer",

@@ -4,6 +4,7 @@
     "title": "BalanceTransferStatusTypeModify",
     "definitions": {
         "BalanceTransferStatusTypeModify": {
+            "$id": "#BalanceTransferStatusTypeModify",
             "properties": {
                 "status": {
                     "type": "string"
@@ -11,7 +12,8 @@
             },
             "required": [
                 "status"
-            ]
+            ],
+            "type": "object"
         }
     }
 }

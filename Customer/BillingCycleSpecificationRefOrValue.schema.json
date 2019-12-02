@@ -7,20 +7,18 @@
             "$id": "#BillingCycleSpecificationRefOrValue",
             "description": "An attachment by value or by reference.",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "required": [
-              "role"
+                "role"
             ],
             "allOf": [
                 {
-                    "$ref": "BillingCycleSpecificationRef.schema.json#BillingCycleSpecificationRef"
+                    "$ref": "../Customer/BillingCycleSpecificationRef.schema.json#BillingCycleSpecificationRef"
                 },
                 {
-                  "$ref": "BillingCycleSpecification.schema.json#BillingCycleSpecification"
+                    "$ref": "../Customer/BillingCycleSpecification.schema.json#BillingCycleSpecification"
                 }
-                
             ]
         }
     }
-  }
+}

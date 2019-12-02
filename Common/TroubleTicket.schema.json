@@ -4,18 +4,19 @@
     "title": "TroubleTicket",
     "definitions": {
         "TroubleTicket": {
+            "$id": "#TroubleTicket",
             "type": "object",
             "description": "A trouble ticket is a record of an issue that is created, tracked, and managed by a trouble ticket management system",
             "properties": {
                 "attachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+                        "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
                     },
                     "description": "File(s) attached to the trouble ticket. e.g. pictur of broken device, scaning of a bill or charge"
                 },
                 "channel": {
-                    "$ref": "ChannelRef.schema.json#/definitions/ChannelRef",
+                    "$ref": "../Common/ChannelRef.schema.json#ChannelRef",
                     "description": "The channel that origin the trouble ticket"
                 },
                 "creationDate": {
@@ -56,7 +57,7 @@
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "Note.schema.json#/definitions/Note"
+                        "$ref": "../Common/Note.schema.json#Note"
                     },
                     "description": "The note(s) that are associated to the ticket."
                 },
@@ -67,14 +68,14 @@
                 "relatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedEntity.schema.json#/definitions/RelatedEntity"
+                        "$ref": "../Common/RelatedEntity.schema.json#RelatedEntity"
                     },
                     "description": "An entity that is related to the ticket such as a bill, a product, etc. The entity against which the ticket is associated."
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     },
                     "description": "The related party(ies) that are associated to the ticket."
                 },
@@ -93,13 +94,13 @@
                     "description": "The severity of the issue. Indicate the implication of the issue on the expected functionality e.g. of a system, application, service etc.. \nSeverity values can be for example : Critical, Major, Minor"
                 },
                 "status": {
-                    "$ref": "TroubleTicketStatusType.schema.json#/definitions/TroubleTicketStatusType",
+                    "$ref": "../Common/TroubleTicketStatusType.schema.json#TroubleTicketStatusType",
                     "description": "The current status of the trouble ticket"
                 },
                 "statusChange": {
                     "type": "array",
                     "items": {
-                        "$ref": "StatusChange.schema.json#/definitions/StatusChange"
+                        "$ref": "../Common/StatusChange.schema.json#StatusChange"
                     },
                     "description": "The status change history that are associated to the ticket.Populated by the server"
                 },
@@ -115,7 +116,7 @@
                 "troubleTicketRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "TroubleTicketRelationship.schema.json#/definitions/TroubleTicketRelationship"
+                        "$ref": "../Common/TroubleTicketRelationship.schema.json#TroubleTicketRelationship"
                     },
                     "description": "A list of trouble ticket relationships (TroubleTicketRelationship [*]). Represents a relationship between trouble tickets"
                 },
@@ -126,7 +127,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

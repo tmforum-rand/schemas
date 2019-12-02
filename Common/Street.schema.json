@@ -23,19 +23,19 @@
                 "characteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "LocationCharacteristic.schema.json#LocationCharacteristic"
+                        "$ref": "../Common/LocationCharacteristic.schema.json#LocationCharacteristic"
                     }
                 },
                 "address": {
                     "type": "array",
                     "items": {
-                        "$ref": "AddressRef.schema.json#AddressRef"
+                        "$ref": "../Common/AddressRef.schema.json#AddressRef"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

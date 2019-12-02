@@ -9,7 +9,7 @@
             "type": "object",
             "properties": {
                 "version": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Category version"
                 }
             },

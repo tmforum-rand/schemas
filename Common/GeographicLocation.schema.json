@@ -15,20 +15,19 @@
                     "type": "string",
                     "description": "Type allows to describe the GeoLocation form: it could be a point, a line, a polygon, a cylinder, etc"
                 },
-                
                 "spatialRef": {
                     "type": "string"
                 },
                 "geometry": {
                     "type": "array",
                     "items": {
-                        "$ref": "GeographicPoint.schema.json#GeographicPoint"
+                        "$ref": "../Common/GeographicPoint.schema.json#GeographicPoint"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Place.schema.json#Place"
+                    "$ref": "../Common/Place.schema.json#Place"
                 }
             ]
         }

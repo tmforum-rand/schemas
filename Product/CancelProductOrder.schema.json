@@ -7,10 +7,12 @@
             "$id": "#CancelProductOrder",
             "description": "Request for cancellation an existing product order",
             "type": "object",
-            "required": ["productOrder"],
+            "required": [
+                "productOrder"
+            ],
             "properties": {
                 "productOrder": {
-                        "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
+                    "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
                 }
             },
             "allOf": [

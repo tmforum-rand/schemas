@@ -6,10 +6,8 @@
         "CalendarEventRef": {
             "$id": "#CalendarEventRef",
             "type": "object",
-			
-			"description": "Reference of a CalendarEvent",
-            "properties": {
-            },
+            "description": "Reference of a CalendarEvent",
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../Common/EntityRef.schema.json#EntityRef"

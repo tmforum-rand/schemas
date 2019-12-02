@@ -13,7 +13,7 @@
                     "description": "The actual type of the target instance when needed for disambiguation."
                 },
                 "changeRequest": {
-                    "$ref": "../Common/ChangeRequestRef.schema.json#/definitions/ChangeRequestRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 },
                 "href": {
                     "type": "string",

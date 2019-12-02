@@ -5,23 +5,23 @@
     "definitions": {
         "MarketSegmentRef": {
             "$id": "#MarketSegmentRef",
-            "type": "object", 
-            "description": "provides references to the corresponding market segment as target of product offerings. A market segment is grouping of Parties, GeographicAreas, SalesChannels, and so forth.", 
+            "type": "object",
+            "description": "provides references to the corresponding market segment as target of product offerings. A market segment is grouping of Parties, GeographicAreas, SalesChannels, and so forth.",
             "properties": {
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Unique identifier of the market segment"
-                }, 
+                },
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Reference of the market segment"
-                }, 
+                },
                 "name": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Name of the market segment"
-                }, 
+                },
                 "@referredType": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "(Class) type of the referred market segment"
                 }
             },

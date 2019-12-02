@@ -33,12 +33,12 @@
                     "description": "Could be minutes, GB..."
                 },
                 "price": {
-                    "$ref": "Price.schema.json#Price"
+                    "$ref": "../Customer/Price.schema.json#Price"
                 },
                 "priceAlteration": {
                     "type": "array",
                     "items": {
-                        "$ref": "PriceAlteration.schema.json#PriceAlteration"
+                        "$ref": "../Product/PriceAlteration.schema.json#PriceAlteration"
                     }
                 }
             },

@@ -23,7 +23,7 @@
                 "productCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "Characteristic.schema.json#Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     }
                 },
                 "realizingResource": {
@@ -38,7 +38,6 @@
                         "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
                     }
                 },
-
                 "isBundle": {
                     "type": "boolean",
                     "description": "If true, the product is a ProductBundle which is an instantiation of a BundledProductOffering. If false, the product is a ProductComponent which is an instantiation of a SimpleProductOffering."
@@ -46,7 +45,7 @@
                 "productRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductRelationship.schema.json#ProductRelationship"
+                        "$ref": "../Product/ProductRelationship.schema.json#ProductRelationship"
                     }
                 },
                 "relatedParty": {
@@ -56,7 +55,7 @@
                     }
                 },
                 "productSpecification": {
-                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                    "$ref": "../Product/ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 },
                 "relatedPlace": {
                     "type": "array",

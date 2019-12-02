@@ -8,7 +8,7 @@
             "type": "object",
             "properties": {
                 "details": {
-                    "$ref": "BankAccountTransferDetails.schema.json#BankAccountTransferDetails"
+                    "$ref": "../EngagedParty/BankAccountTransferDetails.schema.json#BankAccountTransferDetails"
                 },
                 "description": {
                     "type": "string",

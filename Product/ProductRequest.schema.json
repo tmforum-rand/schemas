@@ -8,7 +8,7 @@
             "type": "object",
             "properties": {
                 "referredProduct": {
-                    "$ref": "ProductRef.schema.json#ProductRef"
+                    "$ref": "../Product/ProductRef.schema.json#ProductRef"
                 },
                 "description": {
                     "type": "string",
@@ -70,7 +70,7 @@
                     }
                 },
                 "productOffering": {
-                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
                 },
                 "agreement": {
                     "type": "array",
@@ -81,13 +81,13 @@
                 "characteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductCharacteristic.schema.json#ProductCharacteristic"
+                        "$ref": "../Product/ProductCharacteristic.schema.json#ProductCharacteristic"
                     }
                 },
                 "productRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductRelationship.schema.json#ProductRelationship"
+                        "$ref": "../Product/ProductRelationship.schema.json#ProductRelationship"
                     }
                 },
                 "realizingResource": {
@@ -105,11 +105,11 @@
                 "productPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductPrice.schema.json#ProductPrice"
+                        "$ref": "../Product/ProductPrice.schema.json#ProductPrice"
                     }
                 },
                 "productSpecification": {
-                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                    "$ref": "../Product/ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 },
                 "place": {
                     "type": "array",

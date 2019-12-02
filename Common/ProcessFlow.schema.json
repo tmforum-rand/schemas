@@ -4,19 +4,20 @@
     "title": "ProcessFlow",
     "definitions": {
         "ProcessFlow": {
+            "$id": "#ProcessFlow",
             "type": "object",
             "properties": {
                 "channel": {
                     "type": "array",
                     "items": {
-                        "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
+                        "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                     },
                     "description": "A list of channel(s) where this processFlow is executed"
                 },
                 "characteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "Characteristic.schema.json#/definitions/Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     },
                     "description": "A list of characteristic(s) associated to this processFlow"
                 },
@@ -40,32 +41,32 @@
                 "relatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedEntity.schema.json#/definitions/RelatedEntity"
+                        "$ref": "../Common/RelatedEntity.schema.json#RelatedEntity"
                     },
                     "description": "A list of related entity(ies) to this processFlow"
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     },
                     "description": "A list of related party(ies) to this processFlow"
                 },
                 "state": {
-                    "$ref": "ProcessFlowStateType.schema.json#/definitions/ProcessFlowStateType",
+                    "$ref": "../Common/ProcessFlowStateType.schema.json#ProcessFlowStateType",
                     "description": "State of the ProcessFlow: described in the state machine diagram."
                 },
                 "taskFlow": {
                     "type": "array",
                     "items": {
-                        "$ref": "TaskFlowRef.schema.json#/definitions/TaskFlowRef"
+                        "$ref": "../Common/TaskFlowRef.schema.json#TaskFlowRef"
                     },
                     "description": "A list of taskflow related to this processFlow"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

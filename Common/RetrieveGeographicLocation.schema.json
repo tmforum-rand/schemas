@@ -25,15 +25,15 @@
                     "format": "date-time"
                 },
                 "geographicLocation": {
-                    "$ref": "GeographicLocation.schema.json#GeographicLocation"
+                    "$ref": "../Common/GeographicLocation.schema.json#GeographicLocation"
                 },
                 "thing": {
-                    "$ref": "Object.schema.json#Object"
+                    "$ref": "../Common/Object.schema.json#Object"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

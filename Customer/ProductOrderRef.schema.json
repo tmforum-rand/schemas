@@ -7,8 +7,7 @@
             "$id": "#ProductOrderRef",
             "description": "ProductOrder (ProductOrder) .The product order which the recommendation is related with.",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../Common/EntityRef.schema.json#EntityRef"

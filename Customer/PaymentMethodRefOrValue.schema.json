@@ -4,11 +4,12 @@
     "title": "PaymentMethodRefOrValue",
     "definitions": {
         "PaymentMethodRefOrValue": {
+            "$id": "#PaymentMethodRefOrValue",
             "description": "link to the resource that holds information about the payment mean used to complete the operation",
             "properties": {
                 "details": {
                     "description": "The list of parameters depends on the type of payment method",
-                    "$ref": "RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                 },
                 "href": {
                     "type": "string",
@@ -24,13 +25,14 @@
                 },
                 "type": {
                     "type": "string",
-                    "description": "Type of payment method (bankcard, voucher, \ufffd)"
+                    "description": "Type of payment method (bankcard, voucher, �)"
                 }
             },
             "required": [
                 "id",
                 "href"
-            ]
+            ],
+            "type": "object"
         }
     }
 }

@@ -13,7 +13,7 @@
                     "description": "Semantic of the relationship"
                 },
                 "resource": {
-                    "$ref": "ResourceRef.schema.json#ResourceRef",
+                    "$ref": "../Resource/ResourceRef.schema.json#ResourceRef",
                     "description": "A reference to the resource"
                 }
             },

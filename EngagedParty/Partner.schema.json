@@ -3,9 +3,6 @@
     "$id": "Partner.schema.json",
     "title": "Partner",
     "definitions": {
-	"required": [
-	    "name","engagedParty"
-	],
         "Partner": {
             "$id": "#Partner",
             "description": "The part played by a party in a given context.",
@@ -36,13 +33,13 @@
                     "description": "The time period that the Partner is valid for."
                 },
                 "engagedParty": {
-                    "$ref": "RelatedParty.schema.json#RelatedParty",
-		    "description": "The reference to the party engaged in this partnership."
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty",
+                    "description": "The reference to the party engaged in this partnership."
                 },
                 "account": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountRef.schema.json#AccountRef"
+                        "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
                     }
                 },
                 "paymentMethod": {
@@ -73,13 +70,13 @@
                 "agreement": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementRef.schema.json#AgreementRef"
+                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 }
             },
@@ -87,6 +84,10 @@
                 {
                     "$ref": "../Common/Entity.schema.json#Entity"
                 }
+            ],
+            "required": [
+                "name",
+                "engagedParty"
             ]
         }
     }

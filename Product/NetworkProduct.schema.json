@@ -22,9 +22,9 @@
                 },
                 "outOfBucketCounter": {
                     "type": "array",
-                    "description": "Counters detailing usage consumption out of the buckets",                                   
+                    "description": "Counters detailing usage consumption out of the buckets",
                     "items": {
-                        "$ref": "ConsumptionSummary.schema.json#ConsumptionSummary"
+                        "$ref": "../Product/ConsumptionSummary.schema.json#ConsumptionSummary"
                     }
                 },
                 "publicIdentifier": {

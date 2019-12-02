@@ -65,31 +65,31 @@
                     "type": "array",
                     "description": "Any attachment associated with this message",
                     "items": {
-                        "$ref": "Attachment.schema.json#Attachment"
+                        "$ref": "../Common/Attachment.schema.json#Attachment"
                     }
                 },
                 "receiver": {
                     "type": "array",
                     "description": "The receiver(s) of this message",
                     "items": {
-                        "$ref": "Receiver.schema.json#Receiver"
+                        "$ref": "../Common/Receiver.schema.json#Receiver"
                     }
                 },
                 "sender": {
-                    "$ref": "Sender.schema.json#Sender",
+                    "$ref": "../Common/Sender.schema.json#Sender",
                     "description": "The sender of this message"
                 },
                 "characteristic": {
                     "type": "array",
                     "description": "Any additional characteristic(s) of this message",
                     "items": {
-                        "$ref": "CommunicationRequestCharacteristic.schema.json#CommunicationRequestCharacteristic"
+                        "$ref": "../Common/CommunicationRequestCharacteristic.schema.json#CommunicationRequestCharacteristic"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

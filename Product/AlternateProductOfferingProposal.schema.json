@@ -18,11 +18,11 @@
                     "description": "Identifier of a alternate product offering proposal"
                 },
                 "alternateProduct": {
-                    "$ref": "ProductRefOrValue.schema.json#ProductRefOrValue",
+                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue",
                     "description": "Alternate product proposal"
                 },
                 "alternateProductOffering": {
-                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef",
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef",
                     "description": "Alternate product offering proposal"
                 }
             },

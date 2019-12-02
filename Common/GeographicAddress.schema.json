@@ -57,18 +57,18 @@
                     "description": "alley, avenue, boulevard, brae, crescent, drive, highway, lane, terrace, parade, place, tarn, way, wharf "
                 },
                 "geographicLocation": {
-                    "$ref": "GeographicLocation.schema.json#GeographicLocation"
+                    "$ref": "../Common/GeographicLocation.schema.json#GeographicLocation"
                 },
                 "geographicSubAddress": {
                     "type": "array",
                     "items": {
-                        "$ref": "GeographicSubAddress.schema.json#GeographicSubAddress"
+                        "$ref": "../Common/GeographicSubAddress.schema.json#GeographicSubAddress"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Place.schema.json#Place"
+                    "$ref": "../Common/Place.schema.json#Place"
                 }
             ]
         }

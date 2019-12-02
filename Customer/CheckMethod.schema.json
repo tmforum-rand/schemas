@@ -8,7 +8,7 @@
             "type": "object",
             "properties": {
                 "details": {
-                    "$ref": "CheckDetails.schema.json#CheckDetails"
+                    "$ref": "../Customer/CheckDetails.schema.json#CheckDetails"
                 },
                 "description": {
                     "type": "string",

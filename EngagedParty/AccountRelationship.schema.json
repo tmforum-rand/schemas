@@ -9,7 +9,7 @@
             "type": "object",
             "required": [
                 "relationshipType"
-            ], 
+            ],
             "properties": {
                 "relationshipType": {
                     "type": "string",
@@ -20,7 +20,7 @@
                     "description": "Validity period of that relationship"
                 },
                 "account": {
-                    "$ref": "AccountRef.schema.json#AccountRef"
+                    "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
                 }
             },
             "allOf": [

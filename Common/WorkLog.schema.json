@@ -24,13 +24,13 @@
                 "record": {
                     "type": "array",
                     "items": {
-                        "$ref": "Record.schema.json#Record"
+                        "$ref": "../Common/Record.schema.json#Record"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }
