@@ -82,21 +82,21 @@
                 "paymentItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "PaymentItem.schema.json#PaymentItem"
+                        "$ref": "../Customer/PaymentItem.schema.json#PaymentItem"
                     },
                     "description": "Payment items already lettered on this bill."
                 },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
+                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "taxItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "TaxItem.schema.json#TaxItem"
+                        "$ref": "../Customer/TaxItem.schema.json#TaxItem"
                     }
                 },
                 "paymentMethod": {
-                    "$ref": "PaymentMethodRef.schema.json#PaymentMethodRef"
+                    "$ref": "../Customer/PaymentMethodRef.schema.json#PaymentMethodRef"
                 },
                 "relatedParty": {
                     "type": "array",

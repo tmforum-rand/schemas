@@ -14,22 +14,22 @@
                 },
                 "effectiveQualificationDate": {
                     "type": "string",
-                    "description": "Effective date to serviceQualification completion", 
+                    "description": "Effective date to serviceQualification completion",
                     "format": "date-time"
                 },
                 "estimatedResponseDate": {
                     "type": "string",
-                    "description": "Date when the requester expect to provide an answer for the qualification request.", 
+                    "description": "Date when the requester expect to provide an answer for the qualification request.",
                     "format": "date-time"
                 },
                 "expectedQualificationDate": {
                     "type": "string",
-                    "description": "A date (DateTime). Deadline date when the requester expected a qualification answer.", 
+                    "description": "A date (DateTime). Deadline date when the requester expected a qualification answer.",
                     "format": "date-time"
                 },
                 "expirationDate": {
                     "type": "string",
-                    "description": "Date when the qualification response expires", 
+                    "description": "Date when the qualification response expires",
                     "format": "date-time"
                 },
                 "href": {
@@ -64,9 +64,9 @@
                 "serviceQualificationItem": {
                     "type": "array",
                     "description": "A list of service qualification items.",
-     	            "minItems" : 1,
+                    "minItems": 1,
                     "items": {
-                        "$ref": "ServiceQualificationItem.schema.json#ServiceQualificationItem"
+                        "$ref": "../Service/ServiceQualificationItem.schema.json#ServiceQualificationItem"
                     }
                 },
                 "relatedParty": {

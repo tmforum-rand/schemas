@@ -102,38 +102,38 @@
                 "attachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "Attachment.schema.json#Attachment"
+                        "$ref": "../Common/Attachment.schema.json#Attachment"
                     },
                     "description": "The attachments of the communication message (when it is email type)"
                 },
                 "workLog": {
-                    "$ref": "WorkLog.schema.json#WorkLog"
+                    "$ref": "../Common/WorkLog.schema.json#WorkLog"
                 },
                 "incident": {
                     "type": "array",
                     "items": {
-                        "$ref": "Incident.schema.json#Incident"
+                        "$ref": "../Common/Incident.schema.json#Incident"
                     }
                 },
                 "changeRequestSpecification": {
-                    "$ref": "ChangeRequestSpecification.schema.json#ChangeRequestSpecification"
+                    "$ref": "../Common/ChangeRequestSpecification.schema.json#ChangeRequestSpecification"
                 },
                 "impactEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "ImpactEntityRef.schema.json#ImpactEntityRef"
+                        "$ref": "../Common/ImpactEntityRef.schema.json#ImpactEntityRef"
                     }
                 },
                 "changeRequestCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "ChangeRequestCharacteristic.schema.json#ChangeRequestCharacteristic"
+                        "$ref": "../Common/ChangeRequestCharacteristic.schema.json#ChangeRequestCharacteristic"
                     }
                 },
                 "targetEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "TargetEntityRef.schema.json#TargetEntityRef"
+                        "$ref": "../Common/TargetEntityRef.schema.json#TargetEntityRef"
                     }
                 },
                 "relatedParty": {
@@ -144,7 +144,7 @@
                     "description": "The parties involved in the change request"
                 },
                 "resolution": {
-                    "$ref": "Resolution.schema.json#Resolution"
+                    "$ref": "../Common/Resolution.schema.json#Resolution"
                 },
                 "sla": {
                     "type": "array",
@@ -155,7 +155,7 @@
                 "relateChangeRequest": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedChangeRequestRef.schema.json#RelatedChangeRequestRef"
+                        "$ref": "../Common/RelatedChangeRequestRef.schema.json#RelatedChangeRequestRef"
                     }
                 },
                 "category": {
@@ -167,17 +167,17 @@
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "Note.schema.json#Note"
+                        "$ref": "../Common/Note.schema.json#Note"
                     }
                 },
                 "location": {
-                    "$ref": "GeographicAddressRef.schema.json#GeographicAddressRef",
+                    "$ref": "../Common/GeographicAddressRef.schema.json#GeographicAddressRef",
                     "description": "The place at which the change request occurred"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

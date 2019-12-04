@@ -43,8 +43,8 @@
                     "description": "Used to scope the exported data"
                 },
                 "status": {
-                    "type": "string",
-                    "description": "Status of the export job (not started, running, succeeded, failed)"
+                    "description": "Status of the export job (not started, running, succeeded, failed)",
+                    "$ref": "../Common/JobStateType.schema.json#JobStateType"
                 },
                 "url": {
                     "type": "string",
@@ -54,7 +54,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

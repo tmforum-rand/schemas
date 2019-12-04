@@ -9,7 +9,7 @@
             "type": "object",
             "properties": {
                 "details": {
-                    "$ref": "AccountRef.schema.json#AccountRef"
+                    "$ref": "../EngagedParty/AccountRef.schema.json#AccountRef"
                 },
                 "description": {
                     "type": "string",

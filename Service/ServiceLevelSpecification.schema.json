@@ -32,7 +32,7 @@
                     "type": "array",
                     "description": "A list of objectives related to this service level specification",
                     "items": {
-                        "$ref": "ServiceLevelObjectiveRef.schema.json#ServiceLevelObjectiveRef"
+                        "$ref": "../Service/ServiceLevelObjectiveRef.schema.json#ServiceLevelObjectiveRef"
                     }
                 }
             },

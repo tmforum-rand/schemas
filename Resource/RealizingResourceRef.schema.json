@@ -5,25 +5,12 @@
     "definitions": {
         "RealizingResourceRef": {
             "$id": "#RealizingResourceRef",
-            "description": "RealizingResource reference. RealizingResource is a link to the resource that realizes the product.",
             "type": "object",
-            "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the resource"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the resource"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
-                }
-            },
+            "description": "RealizingResource reference. RealizingResource is a link to the resource that realizes the product.",
+            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

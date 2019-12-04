@@ -23,7 +23,7 @@
                 "criteria": {
                     "type": "array",
                     "items": {
-                        "$ref": "PromotionCriteria.schema.json#PromotionCriteria"
+                        "$ref": "../Product/PromotionCriteria.schema.json#PromotionCriteria"
                     }
                 }
             },

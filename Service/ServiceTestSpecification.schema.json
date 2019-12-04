@@ -36,11 +36,11 @@
                     "type": "array",
                     "description": "A list of definitions for the measurements for the test defined by this specification",
                     "items": {
-                        "$ref": "TestMeasureDefinition.schema.json#TestMeasureDefinition"
+                        "$ref": "../Service/TestMeasureDefinition.schema.json#TestMeasureDefinition"
                     }
                 },
                 "relatedServiceSpecification": {
-                    "$ref": "ServiceSpecificationRef.schema.json#ServiceSpecificationRef",
+                    "$ref": "../Service/ServiceSpecificationRef.schema.json#ServiceSpecificationRef",
                     "description": "The related service specification."
                 }
             },

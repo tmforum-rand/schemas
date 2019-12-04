@@ -5,21 +5,21 @@
     "definitions": {
         "ExternalReference": {
             "$id": "#ExternalReference",
-            "description": "To manage touch points to external OTT identifiers for the individual or the organization (facebook, google+,...)",
             "type": "object",
+            "description": "External reference of the individual or reference in other system",
             "properties": {
-                "href": {
+                "externalReferenceType": {
                     "type": "string",
-                    "description": "External reference"
+                    "description": "Type of the external reference"
                 },
-                "referenceType": {
+                "name": {
                     "type": "string",
-                    "description": "Reference type"
+                    "description": "External reference name"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

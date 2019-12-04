@@ -24,6 +24,13 @@
                 "identificationType": {
                     "type": "string",
                     "description": "Identification type (passport, national identity card, drivers license, social security number, birth certificate)"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The period for which the identification information is valid."
+                },
+                "attachment": {
+                    "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
                 }
             },
             "allOf": [

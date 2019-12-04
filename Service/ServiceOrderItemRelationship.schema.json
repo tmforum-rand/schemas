@@ -7,7 +7,10 @@
             "$id": "#ServiceOrderItemRelationship",
             "type": "object",
             "description": "Linked service order item to the one containing this attribute",
-            "required": ["id", "relationshipType"],
+            "required": [
+                "id",
+                "relationshipType"
+            ],
             "properties": {
                 "id": {
                     "type": "string",

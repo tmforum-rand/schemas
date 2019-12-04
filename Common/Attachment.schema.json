@@ -24,6 +24,10 @@
                         "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f"
                     ]
                 },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the attachment"
+                },
                 "description": {
                     "type": "string",
                     "description": "A narrative text describing the content of the attachment",
@@ -47,11 +51,28 @@
                     "examples": [
                         "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f"
                     ]
+                },
+                "mimeType": {
+                    "type": "string",
+                    "description": "Attachment mime type such as extension file for video, picture and document"
+                },
+                "content": {
+                    "type": "string",
+                    "format": "base64",
+                    "description": "The actual contents of the attachment object, if embedded, encoded as base64"
+                },
+                "size": {
+                    "$ref": "../Common/Quantity.schema.json#Quantity",
+                    "description": "The size of the attachment."
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The period of time for which the attachment is valid"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

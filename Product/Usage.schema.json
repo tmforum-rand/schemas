@@ -34,12 +34,12 @@
                     "description": "Type of usage"
                 },
                 "usageSpecification": {
-                    "$ref": "UsageSpecificationRef.schema.json#UsageSpecificationRef"
+                    "$ref": "../Product/UsageSpecificationRef.schema.json#UsageSpecificationRef"
                 },
                 "usageCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "UsageCharacteristic.schema.json#UsageCharacteristic"
+                        "$ref": "../Product/UsageCharacteristic.schema.json#UsageCharacteristic"
                     }
                 },
                 "relatedParty": {

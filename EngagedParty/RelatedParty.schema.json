@@ -5,43 +5,27 @@
     "definitions": {
         "RelatedParty": {
             "$id": "#RelatedParty",
-            "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity.",
+            "description": "Related Entity reference. A related party defines party or party role linked to a specific entity.",
             "type": "object",
+            "required": [
+                "id",
+                "@referredType"
+            ],
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the related party, could be a party reference or a party role reference"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of a related party"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the related party"
-                },
                 "role": {
                     "type": "string",
-                    "description": "Role of the related party."
+                    "description": "Role played by the related party"
                 },
-                "@baseType": {
-                    "type": "string", 
-                    "description": "When sub-classing, this defines the super-class"
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships", 
-                    "format": "uri"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "When sub-classing, this defines the sub-class entity name"
-                }, 
                 "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                }
+            ]
         }
     }
 }

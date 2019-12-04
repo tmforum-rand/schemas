@@ -7,26 +7,18 @@
             "$id": "#ResourceRef",
             "type": "object",
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the supporting resource"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the supporting resource"
-                },
                 "name": {
                     "type": "string",
-                    "description": "Name of the resource supporting the service"
+                    "description": "Name of the resource"
                 },
-                "@referredType": {
+                "value": {
                     "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
+                    "description": "The resource value that can be used to identify a resource with a public key (e.g.: a tel nr, an msisdn)"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

@@ -28,6 +28,9 @@
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which the identification information is valid."
+                },
+                "attachment": {
+                    "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
                 }
             },
             "allOf": [

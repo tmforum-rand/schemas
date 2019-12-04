@@ -40,19 +40,19 @@
                 "calendar": {
                     "type": "array",
                     "items": {
-                        "$ref": "CalendarPeriod.schema.json#CalendarPeriod"
+                        "$ref": "../Common/CalendarPeriod.schema.json#CalendarPeriod"
                     }
                 },
                 "geographicLocation": {
-                    "$ref": "GeographicLocation.schema.json#GeographicLocation"
+                    "$ref": "../Common/GeographicLocation.schema.json#GeographicLocation"
                 },
                 "address": {
-                    "$ref": "GeographicAddress.schema.json#GeographicAddress"
+                    "$ref": "../Common/GeographicAddress.schema.json#GeographicAddress"
                 },
                 "siteRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "SiteRelationship.schema.json#SiteRelationship"
+                        "$ref": "../Common/SiteRelationship.schema.json#SiteRelationship"
                     }
                 },
                 "role": {
@@ -62,7 +62,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

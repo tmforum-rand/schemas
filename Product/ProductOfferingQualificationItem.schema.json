@@ -16,13 +16,17 @@
                     "type": "string",
                     "description": "Id of the productOfferingQualification item"
                 },
+                "action": {
+                    "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\" - by default add is considered",
+                    "$ref": "../Product/ProductActionType.schema.json#ProductActionType"
+                },
                 "qualificationItemResult": {
                     "type": "string",
                     "description": "Qualification result for this productOfferingQualification item. It could be:\n\n qualified (request productOffering or productSpecification are available), \n unqualified (requested not available and not alternate available),\n alternate (requested not available but proposal available)\n"
                 },
                 "state": {
-                    "type": "string",
-                    "description": "State of the productOfferingQualification item (acknowledged, inProgress, terminatedWithError, done)"
+                    "description": "State of the productOfferingQualification item defined in the state engine",
+                    "$ref": "../Common/TaskStateType.schema.json#TaskStateType"
                 },
                 "eligibilityUnavailabilityReason": {
                     "type": "array",
@@ -30,13 +34,10 @@
                         "$ref": "../Product/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
                     }
                 },
-                "category": {
-                    "$ref": "CategoryRef.schema.json#CategoryRef"
-                },
                 "qualificationItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "QualificationItemRelationship.schema.json#QualificationItemRelationship"
+                        "$ref": "../Product/QualificationItemRelationship.schema.json#QualificationItemRelationship"
                     }
                 },
                 "note": {
@@ -46,7 +47,7 @@
                     }
                 },
                 "product": {
-                    "$ref": "Product.schema.json#Product"
+                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
                 },
                 "terminationError": {
                     "type": "array",
@@ -55,12 +56,12 @@
                     }
                 },
                 "productOffering": {
-                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
                 },
                 "alternateProductOfferingProposal": {
                     "type": "array",
                     "items": {
-                        "$ref": "AlternateProductOfferingProposal.schema.json#AlternateProductOfferingProposal"
+                        "$ref": "../Product/AlternateProductOfferingProposal.schema.json#AlternateProductOfferingProposal"
                     }
                 }
             },

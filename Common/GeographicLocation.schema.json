@@ -15,35 +15,19 @@
                     "type": "string",
                     "description": "Type allows to describe the GeoLocation form: it could be a point, a line, a polygon, a cylinder, etc"
                 },
-                "href": {
-                    "type": "string",
-                    "description": "href of the GeoLocation"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique Identifier of a GeoLocation"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of a GeoLocation"
-                },
                 "spatialRef": {
                     "type": "string"
                 },
                 "geometry": {
                     "type": "array",
                     "items": {
-                        "$ref": "GeographicPoint.schema.json#GeographicPoint"
+                        "$ref": "../Common/GeographicPoint.schema.json#GeographicPoint"
                     }
-                },
-                "role": {
-                    "type": "string",
-                    "description": "Role of the place, such as: [home delivery], [shop retrieval]"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Place.schema.json#Place"
                 }
             ]
         }

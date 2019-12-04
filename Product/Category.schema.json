@@ -5,8 +5,8 @@
     "definitions": {
         "Category": {
             "$id": "#Category",
-            "description": "The category resource is used to group product offerings, service and resource candidates in logical containers. Categories can contain other categories and/or product offerings, resource or service candidates.",
             "type": "object",
+            "description": "The category resource is used to group product offerings, service and resource candidates in logical containers. Categories can contain other categories and/or product offerings, resource or service candidates.",
             "properties": {
                 "description": {
                     "type": "string",
@@ -14,7 +14,7 @@
                 },
                 "href": {
                     "type": "string",
-                    "description": "Reference of the catalog"
+                    "description": "Reference of the category"
                 },
                 "id": {
                     "type": "string",
@@ -41,6 +41,20 @@
                     "type": "string",
                     "description": "Unique identifier of the parent category"
                 },
+                "productOffering": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
+                    },
+                    "description": "A product offering represents entities that are orderable from the provider of the catalog, this resource includes pricing information."
+                },
+                "subCategory": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                    },
+                    "description": "The category resource is used to group product offerings, service and resource candidates in logical containers. Categories can contain other (sub-)categories and/or product offerings."
+                },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which the category is valid"
@@ -50,9 +64,11 @@
                     "description": "Category version"
                 }
             },
-            "allOf": [{
-                "$ref": "../Common/Entity.schema.json#Entity"
-            }]
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
         }
     }
 }

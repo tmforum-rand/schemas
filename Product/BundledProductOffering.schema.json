@@ -5,8 +5,8 @@
     "definitions": {
         "BundledProductOffering": {
             "$id": "#BundledProductOffering",
-            "description": "A type of ProductOffering that belongs to a grouping of ProductOfferings made available to the market. It inherits of all attributes of ProductOffering.",
             "type": "object",
+            "description": "A type of ProductOffering that belongs to a grouping of ProductOfferings made available to the market. It inherits of all attributes of ProductOffering.",
             "properties": {
                 "href": {
                     "type": "string",
@@ -23,6 +23,10 @@
                 "name": {
                     "type": "string",
                     "description": "Name of the BundledProductOffering"
+                },
+                "bundledProductOfferingOption": {
+                    "$ref": "../Product/BundledProductOfferingOption.schema.json#BundledProductOfferingOption",
+                    "description": "A set of numbers that specifies the lower and upper limits for a ProductOffering that can be procured as part of the related BundledProductOffering. Values can range from 0 to unbounded."
                 }
             },
             "allOf": [

@@ -29,12 +29,12 @@
                     "description": "the first street number suffix"
                 },
                 "address": {
-                    "$ref": "AddressRef.schema.json#AddressRef"
+                    "$ref": "../Common/AddressRef.schema.json#AddressRef"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

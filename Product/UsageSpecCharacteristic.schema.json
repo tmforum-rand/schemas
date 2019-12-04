@@ -23,7 +23,7 @@
                 "usageSpecCharacteristicValue": {
                     "type": "array",
                     "items": {
-                        "$ref": "UsageSpecCharacteristicValue.schema.json#UsageSpecCharacteristicValue"
+                        "$ref": "../Product/UsageSpecCharacteristicValue.schema.json#UsageSpecCharacteristicValue"
                     }
                 }
             },

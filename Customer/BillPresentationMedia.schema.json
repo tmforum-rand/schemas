@@ -7,6 +7,9 @@
             "$id": "#BillPresentationMedia",
             "description": "A mean of communicating a bill, supported by the associated bill format. For example, post mail, email, web page.",
             "type": "object",
+            "required": [
+                "name"
+            ],
             "properties": {
                 "description": {
                     "type": "string",

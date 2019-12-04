@@ -3,29 +3,29 @@
     "$id": "ProblemUngroup.schema.json",
     "title": "ProblemUngroup",
     "definitions": {
-        "ProblemUngroup" : {
+        "ProblemUngroup": {
             "$id": "#ProblemUngroup",
-            "description": "Task resource that requests Service Problems to be ungrouped from a parent", 
-            "type": "object", 
+            "description": "Task resource that requests Service Problems to be ungrouped from a parent",
+            "type": "object",
             "properties": {
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Reference to this task resource"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Unique identifier of this task resource"
-                }, 
+                },
                 "childProblem": {
-                    "type": "array", 
+                    "type": "array",
                     "description": "List of problems to be ungrouped from a parent problem",
                     "items": {
-                        "$ref": "ServiceProblemRef.schema.json#ServiceProblemRef"
+                        "$ref": "../Service/ServiceProblemRef.schema.json#ServiceProblemRef"
                     }
-                }, 
+                },
                 "parentProblem": {
                     "description": "The parent problem from which the problems are to be ungrouped",
-                    "$ref": "ServiceProblemRef.schema.json#ServiceProblemRef"
+                    "$ref": "../Service/ServiceProblemRef.schema.json#ServiceProblemRef"
                 }
             },
             "allOf": [

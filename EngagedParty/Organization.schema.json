@@ -5,88 +5,72 @@
     "definitions": {
         "Organization": {
             "$id": "#Organization",
-            "description": "Represents a group of people identified by shared interests or purpose. Because of the complex nature of many businesses, both organizations and organization units are represented by the same business entity in this model.",
             "type": "object",
+            "description": "Organization represents a group of people identified by shared interests or purpose. Examples include business, department and enterprise. Because of the complex nature of many businesses, both organizations and organization units are represented by the same data.",
             "properties": {
-                "existsDuring": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "Details the establishment of the organization and its cessation"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the organization"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier for the organization"
-                },
                 "isLegalEntity": {
                     "type": "boolean",
-                    "description": "To tag if the organization is a legal entity known by a national referential"
+                    "description": "If value is true, the organization is a legal entity known by a national referential."
                 },
-                "nameType": {
-                    "type": "string",
-                    "description": "Co., Inc., Ltd., Pty Ltd., Plc., Gmbh."
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Status of the organization (initialized, validated, closed)"
-                },
-                "tradingName": {
-                    "type": "string",
-                    "description": "The name that the organization (unit) trades under"
+                "isHeadOffice": {
+                    "type": "boolean",
+                    "description": "If value is true, the organization is the head office"
                 },
                 "organizationType": {
                     "type": "string",
-                    "description": "Type of the organization (company...)"
+                    "description": "Type of Organization (company, department...)"
+                },
+                "tradingName": {
+                    "type": "string",
+                    "description": "Name that the organization (unit) trades under"
+                },
+                "existsDuring": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Organization name (department name for example)"
+                },
+                "nameType": {
+                    "type": "string",
+                    "description": "Type of the name : Co, Inc, Ltd,…"
+                },
+                "status": {
+                    "description": "Status of the organization",
+                    "$ref": "../EngagedParty/OrganizationStateType.schema.json#OrganizationStateType"
                 },
                 "otherName": {
-                    "$ref": "OtherName.schema.json#OtherName"
-                },
-                "externalReference": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/ExternalReference.schema.json#ExternalReference"
+                        "$ref": "../EngagedParty/OtherNameOrganization.schema.json#OtherNameOrganization"
                     }
                 },
-                "relatedParty": {
+                "organizationIdentification": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/OrganizationIdentification.schema.json#OrganizationIdentification"
                     }
                 },
-                "parentRelationship": {
-                    "$ref": "OrganizationParentRelationship.schema.json#OrganizationParentRelationship"
-                },
-                "contactMedium": {
+                "organizationChildRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                        "$ref": "../EngagedParty/OrganizationChildRelationship.schema.json#OrganizationChildRelationship"
                     }
                 },
-                "characteristic": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
-                    }
-                },
-                "childRelationship": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "OrganizationChildRelationship.schema.json#OrganizationChildRelationship"
-                    }
-                },
-                "identification": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "OrganizationIdentification.schema.json#OrganizationIdentification"
-                    }
+                "organizationParentRelationship": {
+                    "$ref": "../EngagedParty/OrganizationParentRelationship.schema.json#OrganizationParentRelationship"
                 }
             },
             "allOf": [
                 {
+                    "$ref": "../EngagedParty/Party.schema.json#Party"
+                },
+                {
                     "$ref": "../Common/Entity.schema.json#Entity"
                 }
+            ],
+            "required": [
+                "id"
             ]
         }
     }

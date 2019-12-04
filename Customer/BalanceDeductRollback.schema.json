@@ -39,7 +39,7 @@
                     "$ref": "../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef"
                 },
                 "balanceDeduct": {
-                    "$ref": "BalanceDeductRef.schema.json#BalanceDeductRef"
+                    "$ref": "../Customer/BalanceDeductRef.schema.json#BalanceDeductRef"
                 },
                 "requestor": {
                     "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"

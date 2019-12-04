@@ -9,8 +9,8 @@
             "type": "object",
             "properties": {
                 "action": {
-                    "type": "string",
-                    "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
+                    "$ref": "../Customer/CartItemActionType.schema.json#CartItemActionType",
+                    "description": "The action to be carried out on the Product. Can be: add, modify, delete, noChange"
                 },
                 "id": {
                     "type": "string",
@@ -21,19 +21,19 @@
                     "description": "Quantity of cart items"
                 },
                 "status": {
-                    "type": "string",
-                    "description": "status of cart item. e.g \"Active\" , \"SavedForLater\"."
+                    "$ref": "../Customer/CartItemStatusType.schema.json#CartItemStatusType",
+                    "description": "status of cart item. e.g \"active\" , \"savedForLater\"."
                 },
                 "itemTerm": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartTerm.schema.json#CartTerm"
+                        "$ref": "../Customer/CartTerm.schema.json#CartTerm"
                     }
                 },
                 "cartItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartItem.schema.json#CartItem"
+                        "$ref": "../Customer/CartItem.schema.json#CartItem"
                     }
                 },
                 "note": {
@@ -42,19 +42,19 @@
                         "$ref": "../Common/Note.schema.json#Note"
                     }
                 },
-                "totalItemPrice": {
+                "ItemTotalPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartPrice.schema.json#CartPrice"
+                        "$ref": "../Customer/CartPrice.schema.json#CartPrice"
                     }
                 },
                 "product": {
-                    "$ref": "../Product/Product.schema.json#Product"
+                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
                 },
                 "itemPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartPrice.schema.json#CartPrice"
+                        "$ref": "../Customer/CartPrice.schema.json#CartPrice"
                     }
                 },
                 "productOffering": {
@@ -63,7 +63,7 @@
                 "cartItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartItemRelationship.schema.json#CartItemRelationship"
+                        "$ref": "../Customer/CartItemRelationship.schema.json#CartItemRelationship"
                     }
                 }
             },

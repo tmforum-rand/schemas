@@ -17,14 +17,13 @@
                     "type": "string",
                     "description": "Identifier of a alternate product offering proposal"
                 },
-                "alternateProductSpecification": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
-                    }
+                "alternateProduct": {
+                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue",
+                    "description": "Alternate product proposal"
                 },
                 "alternateProductOffering": {
-                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef",
+                    "description": "Alternate product offering proposal"
                 }
             },
             "allOf": [

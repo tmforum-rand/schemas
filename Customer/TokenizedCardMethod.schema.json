@@ -8,7 +8,7 @@
             "type": "object",
             "properties": {
                 "details": {
-                    "$ref": "TokenizedCardDetails.schema.json#TokenizedCardDetails"
+                    "$ref": "../Customer/TokenizedCardDetails.schema.json#TokenizedCardDetails"
                 },
                 "description": {
                     "type": "string",

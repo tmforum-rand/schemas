@@ -8,33 +8,18 @@
             "description": "Product specification reference: A ProductSpecification is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to customers or other parties playing a party role.",
             "type": "object",
             "properties": {
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the product specification"
-                },
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the product specification"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the product specification"
-                },
                 "version": {
                     "type": "string",
                     "description": "Version of the product specification"
                 },
-                "targetResourceSchema": {
-                    "$ref": "../Service/TargetServiceSchema.schema.json#TargetServiceSchema"
-                },
-                "@referredType": {
-                    "type": "string",
-                    "description": "The actual type of the target instance when needed for disambiguation."
+                "targetProductSchema": {
+                    "description": "A target product schema reference. The reference object to the schema and type of target product which is described by product specification.",
+                    "$ref": "../Product/TargetProductSchema.schema.json#TargetProductSchema"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

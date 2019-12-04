@@ -7,6 +7,9 @@
             "$id": "#BillingCycleSpecification",
             "description": "A detailed description of when to initiate a billing cycle and the various sub steps of a billing cycle.",
             "type": "object",
+            "required": [
+                "name"
+            ],
             "properties": {
                 "billingDateShift": {
                     "type": "integer",

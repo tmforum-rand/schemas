@@ -5,12 +5,19 @@
     "definitions": {
         "Disability": {
             "$id": "#Disability",
-            "description": "Lack or inadequate strength or ability",
             "type": "object",
+            "description": "Lack or inadequate strength or ability.",
             "properties": {
-                "disability": {
+                "disabilityCode": {
                     "type": "string",
-                    "description": "Physical or mental handicap"
+                    "description": "Code of the disability"
+                },
+                "disabilityName": {
+                    "type": "string",
+                    "description": "Name of the disability"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
                 }
             },
             "allOf": [

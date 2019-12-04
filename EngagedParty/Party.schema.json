@@ -6,7 +6,53 @@
         "Party": {
             "$id": "#Party",
             "type": "object",
-            "properties": {},
+            "description": "Generic Party structure used to define commonalities between sub concepts of Individual and Organization.",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the organization"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Hyperlink to access the organization"
+                },
+                "externalReference": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/ExternalReference.schema.json#ExternalReference"
+                    }
+                },
+                "partyCharacteristic": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
+                    }
+                },
+                "taxExemptionCertificate": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/TaxExemptionCertificate.schema.json#TaxExemptionCertificate"
+                    }
+                },
+                "creditRating": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/PartyCreditProfile.schema.json#PartyCreditProfile"
+                    }
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                    }
+                },
+                "contactMedium": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                    }
+                }
+            },
             "allOf": [
                 {
                     "$ref": "../Common/Entity.schema.json#Entity"

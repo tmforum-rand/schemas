@@ -30,7 +30,7 @@
                     "description": "Status of the unreserve operation"
                 },
                 "balanceReserve": {
-                    "$ref": "BalanceReserveRef.schema.json#BalanceReserveRef"
+                    "$ref": "../Customer/BalanceReserveRef.schema.json#BalanceReserveRef"
                 },
                 "relatedParty": {
                     "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
