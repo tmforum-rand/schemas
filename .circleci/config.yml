@@ -67,7 +67,7 @@ jobs:
             git add $DIR/$FILE
             git commit --allow-empty -m "Validation result $res [skip ci]"
             # Push quietly to prevent showing the token in log
-            git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/validation-reports.git ${CIRCLE_BRANCH}
+            git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/validation-reports.git
       
       - run:
           name: "Trigger swagger build"
