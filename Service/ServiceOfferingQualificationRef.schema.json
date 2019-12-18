@@ -27,7 +27,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/QualificationRef.schema.json#QualificationRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

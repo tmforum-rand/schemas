@@ -8,7 +8,7 @@
             "type": "object",
             "properties": {
                 "details": {
-                    "$ref": "DigitalWalletDetails.schema.json#DigitalWalletDetails"
+                    "$ref": "../Customer/DigitalWalletDetails.schema.json#DigitalWalletDetails"
                 },
                 "description": {
                     "type": "string",

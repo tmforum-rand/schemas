@@ -9,12 +9,11 @@
             "type": "object",
             "required": [
                 "name"
-            ], 
-            "properties": {
-            },
+            ],
+            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/Account.schema.json#Account"
+                    "$ref": "../EngagedParty/Account.schema.json#Account"
                 }
             ]
         }

@@ -24,13 +24,13 @@
                     "description": "Type of relationship"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "Validity for the relationship"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

@@ -9,21 +9,21 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "the identifier of the associated product specification"
-                }, 
+                },
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Hyperlink reference to the target product specification"
-                }, 
+                },
                 "charSpecSeq": {
-                    "type": "integer", 
+                    "type": "integer",
                     "description": "The order in which a CharacteristicSpecification appears within another CharacteristicSpecification that defines a grouping of CharacteristicSpecifications.\n\nFor example, a grouping may represent the name of an individual. The given name is first, the middle name is second, and the last name is third."
-                }, 
+                },
                 "name": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Name of the target product specification characteristic"
-                }, 
+                },
                 "relationshipType": {
                     "type": "string",
                     "description": "Type of relationship such as aggregation, migration, substitution, dependency, exclusivity"

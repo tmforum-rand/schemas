@@ -4,18 +4,19 @@
     "title": "BalanceTopupBody",
     "definitions": {
         "BalanceTopupBody": {
+            "$id": "#BalanceTopupBody",
             "properties": {
                 "amount": {
                     "description": "Amount (can be monetary or non-monetary) to be recharged in the bucket",
-                    "$ref": "QuantityType.schema.json#/definitions/QuantityType"
+                    "$ref": "../Common/QuantityType.schema.json#QuantityType"
                 },
                 "channel": {
-                    "description": "Indicator for the channel used to request the top-up operation. Structure including at least attribute \ufffdname\ufffd",
-                    "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
+                    "description": "Indicator for the channel used to request the top-up operation. Structure including at least attribute �name�",
+                    "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                 },
                 "product": {
                     "description": "A reference to the product related to the bucket that is impacted by the balance related operation",
-                    "$ref": "ProductRef.schema.json#/definitions/ProductRef"
+                    "$ref": "../Product/ProductRef.schema.json#ProductRef"
                 },
                 "type": {
                     "type": "string",
@@ -26,7 +27,8 @@
                 "type",
                 "channel",
                 "amount"
-            ]
+            ],
+            "type": "object"
         }
     }
 }

@@ -6,7 +6,7 @@
         "Duration": {
             "$id": "#Duration",
             "type": "object",
-            "description": "A time interval in a given unit of time", 
+            "description": "A time interval in a given unit of time",
             "properties": {
                 "amount": {
                     "type": "integer",
@@ -20,4 +20,3 @@
         }
     }
 }
-

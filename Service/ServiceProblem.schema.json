@@ -12,7 +12,7 @@
                     "type": "array",
                     "description": "A list of the locations affected by the problem. At least one of affectedResource, affectedService or affectedLocation should be present.",
                     "items": {
-                        "$ref": "../Common/Place.schema.json#/definitions/Place"
+                        "$ref": "../Common/Place.schema.json#Place"
                     }
                 },
                 "affectedNumberOfServices": {
@@ -23,14 +23,14 @@
                     "type": "array",
                     "description": "A list of the resources affected by the problem. At least one of affectedResource, affectedService or affectedLocation should be present.",
                     "items": {
-                        "$ref": "../Resource/ResourceRef.schema.json#/definitions/ResourceRef"
+                        "$ref": "../Resource/ResourceRef.schema.json#ResourceRef"
                     }
                 },
                 "affectedService": {
                     "type": "array",
                     "description": "List of affected services. At least one of affectedResource, affectedService or affectedLocation should be present.",
                     "items": {
-                        "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
+                        "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
                     }
                 },
                 "category": {
@@ -41,7 +41,7 @@
                     "type": "array",
                     "description": "A list of comments or notes made on the problem",
                     "items": {
-                        "$ref": "../Common/Note.schema.json#/definitions/Note"
+                        "$ref": "../Common/Note.schema.json#Note"
                     }
                 },
                 "correlationId": {
@@ -55,13 +55,13 @@
                 "extensionInfo": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     },
                     "description": "A generic list of any type of elements. Used for vendor Extensions or loose element encapsulation from other namespaces"
                 },
                 "firstAlert": {
                     "description": "Indicates what first alerted the system to the problem. It is not the root cause of the Service Problem. Examples: Threshold crossing alert",
-                    "$ref": "../Common/RelatedEntityRef.schema.json#/definitions/RelatedEntityRef"
+                    "$ref": "../Common/RelatedEntityRef.schema.json#RelatedEntityRef"
                 },
                 "href": {
                     "type": "string",
@@ -77,7 +77,7 @@
                 },
                 "impactPatterns": {
                     "description": "Define the patterns of impact (optional)- e.g. other service characteristics- Used when defining impact through another pattern than the predefined attributes.",
-                    "$ref": "ImpactPattern.schema.json#/definitions/ImpactPattern"
+                    "$ref": "../Service/ImpactPattern.schema.json#ImpactPattern"
                 },
                 "originatingSystem": {
                     "type": "string",
@@ -87,7 +87,7 @@
                     "type": "array",
                     "description": "The parent problem to which this problem is attached.",
                     "items": {
-                        "$ref": "ServiceProblemRef.schema.json#/definitions/ServiceProblemRef"
+                        "$ref": "../Service/ServiceProblemRef.schema.json#ServiceProblemRef"
                     }
                 },
                 "priority": {
@@ -106,43 +106,43 @@
                     "type": "array",
                     "description": "List of events associated to this problem",
                     "items": {
-                        "$ref": "../Common/EventRef.schema.json#/definitions/EventRef"
+                        "$ref": "../Common/EventRef.schema.json#EventRef"
                     }
                 },
                 "relatedObject": {
                     "type": "array",
                     "description": "List of objects associated to this problem",
                     "items": {
-                        "$ref": "../Common/RelatedEntityRef.schema.json#/definitions/RelatedEntityRef"
+                        "$ref": "../Common/RelatedEntityRef.schema.json#RelatedEntityRef"
                     }
                 },
                 "originatorParty": {
                     "description": "Individual or organization that created the problem",
-                    "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "responsibleParty": {
                     "description": "Individual or organization responsible for handling this problem",
-                    "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 },
                 "relatedParty": {
                     "type": "array",
                     "description": "List of parties or party roles playing a role within the service problem",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "rootCauseResource": {
                     "type": "array",
                     "description": "Resource(s) that are associated to the underlying service problems that are the Root Cause of this one if any (used only if applicable).",
                     "items": {
-                        "$ref": "../Resource/ResourceRef.schema.json#/definitions/ResourceRef"
+                        "$ref": "../Resource/ResourceRef.schema.json#ResourceRef"
                     }
                 },
                 "rootCauseService": {
                     "type": "array",
                     "description": "Service(s) that are associated to the underlying service problems that are the Root Cause of this one if any (used only if applicable)",
                     "items": {
-                        "$ref": "ServiceRef.schema.json#/definitions/ServiceRef"
+                        "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
                     }
                 },
                 "resolutionDate": {
@@ -177,35 +177,35 @@
                     "type": "array",
                     "description": "List of tracking records that allow the tracking of modifications on the problem.The tracking records should not be embedded in the problem to allow retrieving the problem without the tracking records",
                     "items": {
-                        "$ref": "TrackingRecord.schema.json#/definitions/TrackingRecord"
+                        "$ref": "../Service/TrackingRecord.schema.json#TrackingRecord"
                     }
                 },
                 "underlyingAlarm": {
                     "type": "array",
                     "description": "A list of alarms underlying this problem.",
                     "items": {
-                        "$ref": "../Resource/ResourceAlarmRef.schema.json#/definitions/ResourceAlarmRef"
+                        "$ref": "../Resource/ResourceAlarmRef.schema.json#ResourceAlarmRef"
                     }
                 },
                 "associatedSLAViolation": {
                     "type": "array",
                     "description": "A List of SLA violations associated with this problem.",
                     "items": {
-                        "$ref": "../EngagedParty/SLAViolationRef.schema.json#/definitions/SLAViolationRef"
+                        "$ref": "../EngagedParty/SLAViolationRef.schema.json#SLAViolationRef"
                     }
                 },
                 "associatedTroubleTicket": {
                     "type": "array",
                     "description": "A list of trouble tickets associated with this problem.",
                     "items": {
-                        "$ref": "../Common/TroubleTicketRef.schema.json#/definitions/TroubleTicketRef"
+                        "$ref": "../Common/TroubleTicketRef.schema.json#TroubleTicketRef"
                     }
                 },
                 "underlyingProblem": {
                     "type": "array",
                     "description": "A list of underlying problems. Relevant only if this problem is derived from other problems.",
                     "items": {
-                        "$ref": "ServiceProblemRef.schema.json#/definitions/ServiceProblemRef"
+                        "$ref": "../Service/ServiceProblemRef.schema.json#ServiceProblemRef"
                     }
                 }
             },

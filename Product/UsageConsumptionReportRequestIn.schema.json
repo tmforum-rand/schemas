@@ -6,18 +6,18 @@
         "UsageConsumptionReportRequestIn": {
             "$id": "#UsageConsumptionReportRequestIn",
             "type": "object",
-            "description": "An UsageConsumptionReportRequest allows to manage the calculation request of an usage consumption report", 
+            "description": "An UsageConsumptionReportRequest allows to manage the calculation request of an usage consumption report",
             "properties": {
                 "bucket": {
                     "type": "array",
-                    "description": "Reference of the buckets for which the usage consumption report is requested",                                      
+                    "description": "Reference of the buckets for which the usage consumption report is requested",
                     "items": {
-                        "$ref": "UsageVolumeProductRef.schema.json#UsageVolumeProductRef"
+                        "$ref": "../Product/UsageVolumeProductRef.schema.json#UsageVolumeProductRef"
                     }
                 },
                 "product": {
-                    "$ref": "NetworkProductRef.schema.json#/definitions/NetworkProductRef",
-                    "description": "Network product reference for which the usage consumption report is requested"                                      
+                    "$ref": "../Product/NetworkProductRef.schema.json#NetworkProductRef",
+                    "description": "Network product reference for which the usage consumption report is requested"
                 },
                 "relatedParty": {
                     "type": "array",
@@ -28,7 +28,7 @@
                 },
                 "validPeriod": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "Validity period"                                            
+                    "description": "Validity period"
                 }
             },
             "allOf": [

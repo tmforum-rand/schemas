@@ -6,7 +6,10 @@
         "ServiceOrderItem": {
             "$id": "#ServiceOrderItem",
             "type": "object",
-            "required": ["id", "action"],
+            "required": [
+                "id",
+                "action"
+            ],
             "properties": {
                 "id": {
                     "type": "string",
@@ -14,25 +17,25 @@
                 },
                 "action": {
                     "description": "The action to be carried out on the Service. Can be: add, modify, delete, noChange",
-                    "$ref": "ServiceOrderActionType.schema.json#/definitions/ServiceOrderActionType"
-                }, 
+                    "$ref": "../Service/ServiceOrderActionType.schema.json#ServiceOrderActionType"
+                },
                 "state": {
                     "description": "State of the order item: described in the state machine diagram. This is the requested state.",
-                    "$ref": "ServiceOrderStateType.schema.json#/definitions/ServiceOrderStateType"
+                    "$ref": "../Service/ServiceOrderStateType.schema.json#ServiceOrderStateType"
                 },
                 "service": {
                     "description": "The Service to be acted on by the order item",
-                    "$ref": "BaseService.schema.json#/definitions/BaseService"
-                }, 
+                    "$ref": "../Service/BaseService.schema.json#BaseService"
+                },
                 "appointment": {
                     "description": "An appointment that was set up with a related party for this order item",
-                    "$ref": "../Customer/AppointmentRef.schema.json#/definitions/AppointmentRef"
+                    "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
                 },
                 "serviceOrderItemRelationship": {
                     "type": "array",
                     "description": "A list of order items related to this order item",
                     "items": {
-                        "$ref": "OrderItemRelationship.schema.json#/definitions/OrderItemRelationship"
+                        "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
                     }
                 }
             },

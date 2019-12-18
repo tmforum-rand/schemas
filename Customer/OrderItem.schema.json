@@ -25,39 +25,39 @@
                     "description": "State of the order item : described in the state machine diagram"
                 },
                 "appointment": {
-                    "$ref": "AppointmentRef.schema.json#AppointmentRef"
+                    "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
                 },
                 "billingAccount": {
-                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
+                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "itemPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderPrice.schema.json#OrderPrice"
+                        "$ref": "../Customer/OrderPrice.schema.json#OrderPrice"
                     }
                 },
                 "orderItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderItem.schema.json#OrderItem"
+                        "$ref": "../Customer/OrderItem.schema.json#OrderItem"
                     }
                 },
                 "orderItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderItemRelationship.schema.json#OrderItemRelationship"
+                        "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
                     }
                 },
                 "itemTotalPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderPrice.schema.json#OrderPrice"
+                        "$ref": "../Customer/OrderPrice.schema.json#OrderPrice"
                     }
                 },
                 "payment": {
                     "type": "array",
                     "items": {
-                        "$ref": "PaymentRef.schema.json#PaymentRef"
+                        "$ref": "../Customer/PaymentRef.schema.json#PaymentRef"
                     }
                 },
                 "productOffering": {
@@ -75,7 +75,7 @@
                 "itemTerm": {
                     "type": "array",
                     "items": {
-                        "$ref": "OrderTerm.schema.json#OrderTerm"
+                        "$ref": "../Customer/OrderTerm.schema.json#OrderTerm"
                     }
                 }
             },

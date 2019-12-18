@@ -34,18 +34,18 @@
                     "description": "Result of the address validation (success, partial, fail)"
                 },
                 "validAddress": {
-                    "$ref": "GeographicAddress.schema.json#GeographicAddress"
+                    "$ref": "../Common/GeographicAddress.schema.json#GeographicAddress"
                 },
                 "alternateGeographicAddress": {
                     "type": "array",
                     "items": {
-                        "$ref": "GeographicAddress.schema.json#GeographicAddress"
+                        "$ref": "../Common/GeographicAddress.schema.json#GeographicAddress"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

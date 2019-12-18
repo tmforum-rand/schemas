@@ -45,7 +45,7 @@
                 "taxItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "TaxItem.schema.json#TaxItem"
+                        "$ref": "../Customer/TaxItem.schema.json#TaxItem"
                     }
                 }
             },

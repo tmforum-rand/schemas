@@ -7,8 +7,8 @@
             "$id": "#RelatedEntity",
             "description": "A reference to an entity, where the type of the entity is not known in advance.",
             "type": "object",
-            "required" : [
-                "id", 
+            "required": [
+                "id",
                 "role",
                 "@referredType"
             ],
@@ -20,7 +20,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "EntityRef.schema.json#EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

@@ -44,7 +44,7 @@
                 "pattern": {
                     "type": "array",
                     "items": {
-                        "$ref": "PromotionPattern.schema.json#PromotionPattern"
+                        "$ref": "../Product/PromotionPattern.schema.json#PromotionPattern"
                     }
                 }
             },

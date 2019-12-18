@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "LoyaltyEvent.schema.json",
     "title": "LoyaltyEvent",
     "definitions": {
@@ -7,10 +7,9 @@
             "$id": "#LoyaltyEvent",
             "description": "A loyalty event notification.",
             "type": "object",
-            "title": "LoyaltyEvent",
             "properties": {
                 "eventId": {
-                    "$ref": "LoyaltyProgramProductRef.schema.json#/definitions/LoyaltyProgramProductRef"
+                    "$ref": "../Product/LoyaltyProgramProductRef.schema.json#LoyaltyProgramProductRef"
                 },
                 "eventType": {
                     "type": "string",
@@ -26,7 +25,7 @@
                 },
                 "event": {
                     "type": "object",
-                    "$ref": "../Common/Any.schema.json#/definitions/Any",
+                    "$ref": "../Common/Any.schema.json#Any",
                     "description": "The event attributes."
                 }
             }

@@ -14,7 +14,7 @@
                 },
                 "eventTime": {
                     "type": "string",
-		            "format": "date-time",
+                    "format": "date-time",
                     "description": "Time of the event occurrence."
                 },
                 "eventType": {
@@ -43,7 +43,7 @@
                 },
                 "timeOcurred": {
                     "type": "string",
-		    "format": "date-time",
+                    "format": "date-time",
                     "description": "The time the event occured."
                 },
                 "fieldPath": {
@@ -53,7 +53,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

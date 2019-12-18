@@ -4,16 +4,16 @@
     "title": "AttachmentRefOrValue",
     "definitions": {
         "AttachmentRefOrValue": {
+            "$id": "#AttachmentRefOrValue",
             "type": "object",
             "description": "An attachment by value or by reference. For AttachmentRefOrValue, the attribute type,schemaLocation and referredType are related to the contained entity and not to AttchmentRefOrValue itself",
             "allOf": [
                 {
-                    "$ref": "AttachmentRef.schema.json#AttachmentRef"
+                    "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
                 },
                 {
-                  "$ref": "Attachment.schema.json#Attachment"
+                    "$ref": "../Common/Attachment.schema.json#Attachment"
                 }
-                
             ]
         }
     }

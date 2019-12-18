@@ -34,7 +34,7 @@
                     "description": "Name given to this REST resource"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which this REST resource is valid"
                 },
                 "version": {
@@ -44,16 +44,16 @@
                 "attachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "EntityAttachment.schema.json#EntityAttachment"
+                        "$ref": "../Common/EntityAttachment.schema.json#EntityAttachment"
                     }
                 },
                 "entitySchema": {
-                    "$ref": "EntitySchemaRef.schema.json#EntitySchemaRef"
+                    "$ref": "../Common/EntitySchemaRef.schema.json#EntitySchemaRef"
                 },
                 "specCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "SpecCharacteristic.schema.json#SpecCharacteristic"
+                        "$ref": "../Common/SpecCharacteristic.schema.json#SpecCharacteristic"
                     }
                 },
                 "relatedParty": {
@@ -65,7 +65,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

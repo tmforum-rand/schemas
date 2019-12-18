@@ -51,7 +51,7 @@
                     "type": "array",
                     "description": "Any additional characteristic(s) specific to this Document",
                     "items": {
-                        "$ref": "DocumentCharacteristic.schema.json#DocumentCharacteristic"
+                        "$ref": "../Common/DocumentCharacteristic.schema.json#DocumentCharacteristic"
                     }
                 },
                 "relatedParty": {
@@ -63,12 +63,12 @@
                 },
                 "documentSpecification": {
                     "description": "The specification or this Document",
-                    "$ref": "DocumentSpecification.schema.json#DocumentSpecification"
+                    "$ref": "../Common/DocumentSpecification.schema.json#DocumentSpecification"
                 },
                 "binaryAttachment": {
                     "type": "array",
                     "items": {
-                        "$ref": "DocumentAttachment.schema.json#DocumentAttachment"
+                        "$ref": "../Common/DocumentAttachment.schema.json#DocumentAttachment"
                     }
                 },
                 "category": {
@@ -80,16 +80,16 @@
                 "documentRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "DocumentRelationship.schema.json#DocumentRelationship"
+                        "$ref": "../Common/DocumentRelationship.schema.json#DocumentRelationship"
                     }
                 },
                 "relatedObject": {
-                    "$ref": "RelatedObject.schema.json#RelatedObject"
+                    "$ref": "../Common/RelatedObject.schema.json#RelatedObject"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

@@ -15,7 +15,7 @@
                 "extensionInfo": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     },
                     "description": "A generic list of any type of elements. Used for vendor Extensions or loose element encapsulation from other namespaces"
                 },

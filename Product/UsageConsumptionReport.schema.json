@@ -12,7 +12,7 @@
                     "type": "array",
                     "description": "Bucket(s) included in the offer or option subscribed.",
                     "items": {
-                        "$ref": "UsageVolumeProduct.schema.json#UsageVolumeProduct"
+                        "$ref": "../Product/UsageVolumeProduct.schema.json#UsageVolumeProduct"
                     }
                 },
                 "description": {

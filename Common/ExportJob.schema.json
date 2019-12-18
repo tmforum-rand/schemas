@@ -44,7 +44,7 @@
                 },
                 "status": {
                     "description": "Status of the export job (not started, running, succeeded, failed)",
-                    "$ref": "JobStateType.schema.json#/definitions/JobStateType"
+                    "$ref": "../Common/JobStateType.schema.json#JobStateType"
                 },
                 "url": {
                     "type": "string",
@@ -54,7 +54,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

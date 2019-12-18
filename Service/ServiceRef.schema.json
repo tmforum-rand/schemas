@@ -7,8 +7,7 @@
             "$id": "#ServiceRef",
             "description": "Service reference, for when Service is used by other entities",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../Common/EntityRef.schema.json#EntityRef"

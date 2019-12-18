@@ -4,13 +4,14 @@
     "title": "Bucket",
     "definitions": {
         "Bucket": {
+            "$id": "#Bucket",
             "description": "desc",
-
-               "allOf": [
+            "allOf": [
                 {
-                  "$ref": "BucketBalance.schema.json#/definitions/BucketBalance"
+                    "$ref": "../Customer/BucketBalance.schema.json#BucketBalance"
                 }
-            ]
-	 }
+            ],
+            "type": "object"
+        }
     }
 }

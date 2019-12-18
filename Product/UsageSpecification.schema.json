@@ -31,7 +31,7 @@
                 "usageSpecCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "UsageSpecCharacteristic.schema.json#UsageSpecCharacteristic"
+                        "$ref": "../Product/UsageSpecCharacteristic.schema.json#UsageSpecCharacteristic"
                     }
                 }
             },

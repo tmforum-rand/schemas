@@ -45,7 +45,7 @@
                     "type": "array",
                     "description": "List of service categories associated with this catalog",
                     "items": {
-                        "$ref": "ServiceCategoryRef.schema.json#ServiceCategoryRef"
+                        "$ref": "../Service/ServiceCategoryRef.schema.json#ServiceCategoryRef"
                     }
                 },
                 "relatedParty": {

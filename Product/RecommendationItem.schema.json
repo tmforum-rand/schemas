@@ -13,7 +13,7 @@
                     "description": "The rank of the list of recommended offering."
                 },
                 "offering": {
-                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef",
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef",
                     "description": "Recommended product offering"
                 }
             },

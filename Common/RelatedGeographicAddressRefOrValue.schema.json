@@ -8,19 +8,18 @@
             "description": "#TODO",
             "type": "object",
             "properties": {
-              "role":{
-                "type": "string"
-              }
+                "role": {
+                    "type": "string"
+                }
             },
             "required": [
-              "role"
+                "role"
             ],
             "allOf": [
                 {
-                    "$ref": "RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
+                    "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
                 }
-                
             ]
         }
     }
-  }
+}

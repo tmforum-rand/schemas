@@ -61,13 +61,15 @@ jobs:
             DIR="${CIRCLE_BRANCH}/validation_results"
             mkdir -p $DIR
             cp /tmp/results.txt $DIR/$FILE
+            cp /tmp/results.txt $DIR/latest.txt
             git config credential.helper 'cache --timeout=120'
             git config user.email "${EMAIL}"
             git config user.name "Schema validation Bot"
             git add $DIR/$FILE
+            git add $DIR/latest.txt
             git commit --allow-empty -m "Validation result $res [skip ci]"
             # Push quietly to prevent showing the token in log
-            git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/validation-reports.git ${CIRCLE_BRANCH}
+            git push -q https://${GITHUB_TOKEN}@github.com/tmforum-rand/validation-reports.git
       
       - run:
           name: "Trigger swagger build"

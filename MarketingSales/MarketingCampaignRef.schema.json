@@ -7,8 +7,7 @@
             "$id": "#MarketingCampaignRef",
             "description": "MarketingCampaign reference. Marketing campaign represents the carrier-initiated marketing activity which aims at the better recognition about its brand and offerings by the market",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../Common/EntityRef.schema.json#EntityRef"

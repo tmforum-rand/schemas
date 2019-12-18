@@ -4,6 +4,7 @@
     "title": "BucketBalanceRef",
     "definitions": {
         "BucketBalanceRef": {
+            "$id": "#BucketBalanceRef",
             "description": "link to the resource that holds bucket balance information",
             "properties": {
                 "href": {
@@ -18,7 +19,8 @@
             "required": [
                 "id",
                 "href"
-            ]
+            ],
+            "type": "object"
         }
     }
 }

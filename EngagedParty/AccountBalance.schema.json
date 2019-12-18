@@ -8,10 +8,10 @@
             "description": "Balances linked to the account",
             "type": "object",
             "required": [
-                "amount", 
-                "balanceType", 
+                "amount",
+                "balanceType",
                 "validFor"
-            ], 
+            ],
             "properties": {
                 "amount": {
                     "$ref": "../Common/Money.schema.json#Money",

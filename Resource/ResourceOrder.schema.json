@@ -67,7 +67,7 @@
                 "orderRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ResourceOrderRelationship.schema.json#ResourceOrderRelationship"
+                        "$ref": "../Resource/ResourceOrderRelationship.schema.json#ResourceOrderRelationship"
                     }
                 },
                 "relatedParty": {

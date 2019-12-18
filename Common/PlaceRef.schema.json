@@ -7,11 +7,10 @@
             "$id": "#PlaceRef",
             "description": "Place reference. PlaceRef defines the placeRefs where the products are sold or delivered.",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
-                    "$ref": "EntityRef.schema.json#EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

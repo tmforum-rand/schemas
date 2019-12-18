@@ -4,10 +4,9 @@
     "title": "LoyaltyProgramProductRef",
     "definitions": {
         "LoyaltyProgramProductRef": {
-            "id": "$LoyaltyProgramProductRef",
+            "$id": "#LoyaltyProgramProductRef",
             "type": "object",
             "description": "A reference to a loyalty product.",
-            "title": "LoyaltyProgramProductRef",
             "properties": {
                 "id": {
                     "type": "string",

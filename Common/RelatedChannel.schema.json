@@ -4,6 +4,7 @@
     "title": "RelatedChannel",
     "definitions": {
         "RelatedChannel": {
+            "$id": "#RelatedChannel",
             "type": "object",
             "description": "Related channel to another entity. May be online web, mobile app, social ,etc.",
             "properties": {
@@ -18,7 +19,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

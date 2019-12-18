@@ -18,11 +18,11 @@
                 },
                 "request": {
                     "description": "Represents the request",
-                    "$ref": "Request.schema.json#/definitions/Request"
+                    "$ref": "../Common/Request.schema.json#Request"
                 },
                 "response": {
                     "description": "Represents the response",
-                    "$ref": "Response.schema.json#/definitions/Response"
+                    "$ref": "../Common/Response.schema.json#Response"
                 },
                 "sourceHref": {
                     "type": "string",
@@ -35,7 +35,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

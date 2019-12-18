@@ -4,13 +4,13 @@
     "title": "QuoteRef",
     "definitions": {
         "QuoteRef": {
+            "$id": "#QuoteRef",
             "type": "object",
             "description": "It's a Quote that has been executed previously",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

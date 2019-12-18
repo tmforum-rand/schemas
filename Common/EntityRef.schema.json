@@ -20,14 +20,14 @@
                     "type": "string",
                     "description": "Name of the related entity."
                 },
-			    "@referredType": {
+                "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 }
             },
-			"allOf": [
+            "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

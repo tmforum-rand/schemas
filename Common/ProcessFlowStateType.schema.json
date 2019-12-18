@@ -10,7 +10,7 @@
             "enum": [
                 "active",
                 "cancelled",
-                "hold",				
+                "hold",
                 "completed"
             ]
         }

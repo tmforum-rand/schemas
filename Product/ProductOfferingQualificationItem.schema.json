@@ -18,7 +18,7 @@
                 },
                 "action": {
                     "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\" - by default add is considered",
-                    "$ref": "ProductActionType.schema.json#/definitions/ProductActionType"
+                    "$ref": "../Product/ProductActionType.schema.json#ProductActionType"
                 },
                 "qualificationItemResult": {
                     "type": "string",
@@ -26,7 +26,7 @@
                 },
                 "state": {
                     "description": "State of the productOfferingQualification item defined in the state engine",
-                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType"
+                    "$ref": "../Common/TaskStateType.schema.json#TaskStateType"
                 },
                 "eligibilityUnavailabilityReason": {
                     "type": "array",
@@ -37,7 +37,7 @@
                 "qualificationItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "QualificationItemRelationship.schema.json#QualificationItemRelationship"
+                        "$ref": "../Product/QualificationItemRelationship.schema.json#QualificationItemRelationship"
                     }
                 },
                 "note": {
@@ -47,7 +47,7 @@
                     }
                 },
                 "product": {
-                    "$ref": "ProductRefOrValue.schema.json#ProductRefOrValue"
+                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
                 },
                 "terminationError": {
                     "type": "array",
@@ -56,12 +56,12 @@
                     }
                 },
                 "productOffering": {
-                    "$ref": "ProductOfferingRef.schema.json#ProductOfferingRef"
+                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
                 },
                 "alternateProductOfferingProposal": {
                     "type": "array",
                     "items": {
-                        "$ref": "AlternateProductOfferingProposal.schema.json#AlternateProductOfferingProposal"
+                        "$ref": "../Product/AlternateProductOfferingProposal.schema.json#AlternateProductOfferingProposal"
                     }
                 }
             },

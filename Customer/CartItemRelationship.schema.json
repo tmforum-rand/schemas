@@ -19,7 +19,7 @@
                 "cartItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartItemRef.schema.json#CartItemRef"
+                        "$ref": "../Customer/CartItemRef.schema.json#CartItemRef"
                     }
                 }
             },

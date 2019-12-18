@@ -13,13 +13,13 @@
                     "description": "Indicates if the value is the default value for a characteristic"
                 },
                 "rangeInterval": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "An indicator that specifies the inclusion or exclusion of the valueFrom and valueTo attributes. If applicable, possible values are \"open\", \"closed\", \"closedBottom\" and \"closedTop\"."
-                }, 
+                },
                 "regex": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Regular expression to define constraint on the allowed value"
-                }, 
+                },
                 "unitOfMeasure": {
                     "type": "string",
                     "description": "A length, surface, volume, dry measure, liquid measure, money, weight, time, and the like. In general, a determinate quantity or magnitude of the kind designated, taken as a standard of comparison for others of the same kind, in assigning to them numerical values, as 1 foot, 1 yard, 1 mile, 1 square foot."
@@ -29,7 +29,7 @@
                     "description": "The period of time for which a value is applicable"
                 },
                 "value": {
-                    "$ref": "../Common/Any.schema.json#/definitions/Any",
+                    "$ref": "../Common/Any.schema.json#Any",
                     "description": "A discrete value that the characteristic can take on, or the actual value of the characteristic"
                 },
                 "valueFrom": {

@@ -9,7 +9,7 @@
             "type": "object",
             "required": [
                 "name"
-            ], 
+            ],
             "properties": {
                 "creditLimit": {
                     "$ref": "../Common/Money.schema.json#Money",
@@ -47,31 +47,31 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "taxExemption": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountTaxExemption.schema.json#AccountTaxExemption"
+                        "$ref": "../EngagedParty/AccountTaxExemption.schema.json#AccountTaxExemption"
                     }
                 },
                 "contact": {
                     "type": "array",
                     "items": {
-                        "$ref": "Contact.schema.json#Contact"
+                        "$ref": "../EngagedParty/Contact.schema.json#Contact"
                     }
                 },
                 "accountBalance": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountBalance.schema.json#AccountBalance"
+                        "$ref": "../EngagedParty/AccountBalance.schema.json#AccountBalance"
                     }
                 },
                 "accountRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "AccountRelationship.schema.json#AccountRelationship"
+                        "$ref": "../EngagedParty/AccountRelationship.schema.json#AccountRelationship"
                     }
                 }
             },

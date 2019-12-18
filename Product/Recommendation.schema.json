@@ -32,14 +32,14 @@
                     "description": "The period in which the recommendation is valid"
                 },
                 "order": {
-                    "$ref": "ProductOrderRef.schema.json#ProductOrderRef"
+                    "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
                 },
                 "location": {
                     "$ref": "../Common/GeographicLocationRef.schema.json#GeographicLocationRef",
                     "description": "The geographic location which the recommendation is related to"
                 },
                 "channel": {
-                    "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                    "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                 },
                 "category": {
                     "$ref": "../Product/CategoryRef.schema.json#CategoryRef",
@@ -55,7 +55,7 @@
                 "item": {
                     "type": "array",
                     "items": {
-                        "$ref": "RecommendationItem.schema.json#RecommendationItem"
+                        "$ref": "../Product/RecommendationItem.schema.json#RecommendationItem"
                     }
                 }
             },

@@ -46,17 +46,17 @@
                 "rule": {
                     "type": "array",
                     "items": {
-                        "$ref": "Rule.schema.json#Rule"
+                        "$ref": "../EngagedParty/Rule.schema.json#Rule"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "template": {
-                    "$ref": "TemplateRef.schema.json#TemplateRef"
+                    "$ref": "../EngagedParty/TemplateRef.schema.json#TemplateRef"
                 }
             },
             "allOf": [

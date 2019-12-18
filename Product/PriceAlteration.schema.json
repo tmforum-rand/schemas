@@ -7,7 +7,10 @@
             "$id": "#PriceAlteration",
             "description": "Is an amount, usually of money, that modifies the price charged for an order item.",
             "type": "object",
-			"required": ["priceType","price"],
+            "required": [
+                "priceType",
+                "price"
+            ],
             "properties": {
                 "applicationDuration": {
                     "type": "integer",
@@ -23,7 +26,7 @@
                 },
                 "productOfferingPrice": {
                     "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef"
-                }, 
+                },
                 "priceType": {
                     "type": "string",
                     "description": "A category that describes the price such as recurring, one time and usage."
@@ -41,7 +44,7 @@
                     "description": "Could be minutes, GB..."
                 },
                 "price": {
-                    "$ref": "Price.schema.json#Price"
+                    "$ref": "../Customer/Price.schema.json#Price"
                 }
             },
             "allOf": [

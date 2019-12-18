@@ -63,7 +63,7 @@
                 "productSpecCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductSpecificationCharacteristic.schema.json#ProductSpecificationCharacteristic"
+                        "$ref": "../Product/ProductSpecificationCharacteristic.schema.json#ProductSpecificationCharacteristic"
                     },
                     "description": "A characteristic quality or distinctive feature of a ProductSpecification.  The characteristic can be take on a discrete value, such as color, can take on a range of values, (for example, sensitivity of 100-240 mV), or can be derived from a formula (for example, usage time (hrs) = 30 - talk time *3). Certain characteristics, such as color, may be configured during the ordering or some other process."
                 },
@@ -77,7 +77,7 @@
                 "productSpecificationRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductSpecificationRelationship.schema.json#ProductSpecificationRelationship"
+                        "$ref": "../Product/ProductSpecificationRelationship.schema.json#ProductSpecificationRelationship"
                     },
                     "description": "A migration, substitution, dependency or exclusivity relationship between/among product specifications."
                 },
@@ -98,13 +98,13 @@
                 "bundledProductSpecification": {
                     "type": "array",
                     "items": {
-                        "$ref": "BundledProductSpecification.schema.json#BundledProductSpecification"
+                        "$ref": "../Product/BundledProductSpecification.schema.json#BundledProductSpecification"
                     },
                     "description": "A type of ProductSpecification that belongs to a grouping of ProductSpecifications made available to the market. It inherits of all attributes of ProductSpecification."
                 },
                 "targetProductSchema": {
                     "description": "A target product schema reference. The reference object to the schema and type of target product which is described by product specification.",
-                    "$ref": "TargetProductSchema.schema.json#TargetProductSchema"
+                    "$ref": "../Product/TargetProductSchema.schema.json#TargetProductSchema"
                 }
             },
             "allOf": [

@@ -34,7 +34,7 @@
                     "description": "Name given to this association specification"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which this specification is valid"
                 },
                 "version": {
@@ -44,16 +44,16 @@
                 "constraint": {
                     "type": "array",
                     "items": {
-                        "$ref": "ConstraintRef.schema.json#ConstraintRef"
+                        "$ref": "../Common/ConstraintRef.schema.json#ConstraintRef"
                     }
                 },
                 "associationRoleSpec": {
-                    "$ref": "AssociationRoleSpec.schema.json#AssociationRoleSpec"
+                    "$ref": "../Common/AssociationRoleSpec.schema.json#AssociationRoleSpec"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

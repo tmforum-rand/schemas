@@ -8,9 +8,9 @@
             "description": "Account used for billing or for settlement purposes concerning a given party (an organization or an individual). It is a specialization of entity Account.",
             "type": "object",
             "required": [
-                "name", 
+                "name",
                 "relatedParty"
-            ], 
+            ],
             "properties": {
                 "paymentStatus": {
                     "type": "string",
@@ -26,7 +26,7 @@
                     }
                 },
                 "financialAccount": {
-                    "$ref": "FinancialAccountRef.schema.json#FinancialAccountRef"
+                    "$ref": "../EngagedParty/FinancialAccountRef.schema.json#FinancialAccountRef"
                 },
                 "defaultPaymentMethod": {
                     "$ref": "../Customer/PaymentMethodRef.schema.json#PaymentMethodRef"
@@ -34,7 +34,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Account.schema.json#Account"
+                    "$ref": "../EngagedParty/Account.schema.json#Account"
                 }
             ]
         }
