@@ -4,10 +4,10 @@
     "title": "StatusChange",
     "definitions": {
         "StatusChange": {
+            "$id": "#StatusChange",
             "type": "object",
             "description": "Holds the status notification reasons and associated date the status changed, populated by the server",
             "properties": {
-        
                 "changeDate": {
                     "type": "string",
                     "format": "date-time",
@@ -24,7 +24,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#/Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

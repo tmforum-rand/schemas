@@ -4,7 +4,7 @@
     "title": "ObjectCharacteristic",
     "definitions": {
         "ObjectCharacteristic": {
-            "$id": "ObjectCharacteristic",
+            "$id": "#ObjectCharacteristic",
             "description": "A characteristic which value is an object",
             "type": "object",
             "properties": {

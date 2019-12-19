@@ -28,7 +28,7 @@
                     "type": "array",
                     "description": "A list of consequences (actions, notifications) that will arise if the threshold is crossed",
                     "items": {
-                        "$ref": "MetricDefMeasureConsequence.schema.json#/definitions/MetricDefMeasureConsequence"
+                        "$ref": "../Service/MetricDefMeasureConsequence.schema.json#MetricDefMeasureConsequence"
                     }
                 },
                 "description": {

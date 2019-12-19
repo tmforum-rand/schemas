@@ -4,11 +4,12 @@
     "title": "BalanceTopupRequest",
     "definitions": {
         "BalanceTopupRequest": {
+            "$id": "#BalanceTopupRequest",
             "description": "Represents a detailed description of a recharge operation requested over a bucket (defined by a specific product or reference to a product (i.e.: a commercial id such as an msisidn) and a service type)",
             "properties": {
                 "bucket": {
                     "description": "A reference to the bucket impacted by the request. This is used in scenarios where the requestor knows beforehand the bucket that is going to be impacted instead of just referring to the commercial identifier of the impacted product and the type of bucket created under that product",
-                    "$ref": "BucketBalanceRef.schema.json#/definitions/BucketBalanceRef"
+                    "$ref": "../Customer/BucketBalanceRef.schema.json#BucketBalanceRef"
                 },
                 "confirmationDate": {
                     "type": "string",
@@ -36,11 +37,11 @@
                 },
                 "partyAccount": {
                     "description": "A reference to the account that owns the bucket impacted by the balance related operation",
-                    "$ref": "PartyAccountRef.schema.json#/definitions/PartyAccountRef"
+                    "$ref": "../EngagedParty/PartyAccountRef.schema.json#PartyAccountRef"
                 },
                 "paymentMethod": {
-                    "description": "Payment method used for the recharge operation (e.g.: cash, credit card, \ufffd). Structure including at least attribute \ufffdname\ufffd. Notice that the use of a voucher can be managed as a specific methodtype, where he voucher code can be passed as value.",
-                    "$ref": "PaymentMethodRefOrValue.schema.json#/definitions/PaymentMethodRefOrValue"
+                    "description": "Payment method used for the recharge operation (e.g.: cash, credit card, �). Structure including at least attribute �name�. Notice that the use of a voucher can be managed as a specific methodtype, where he voucher code can be passed as value.",
+                    "$ref": "../Customer/PaymentMethodRefOrValue.schema.json#PaymentMethodRefOrValue"
                 },
                 "recurringPeriod": {
                     "type": "string",
@@ -49,7 +50,7 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                        "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                     },
                     "description": "Used to provide information about any other entity with relation to the operation"
                 },
@@ -58,8 +59,8 @@
                     "description": "Date when the top-up request was received in the server"
                 },
                 "requestor": {
-                    "description": "Identifier for the user/customer/entity that performs the top-up action. This can be used to indicate the identifier of an agent that performs the operation on behalf of a user via a customer service channel. Structure including at least attributes \ufffdrole\ufffd and \ufffdname\ufffd.",
-                    "$ref": "RelatedPartyRef.schema.json#/definitions/RelatedPartyRef"
+                    "description": "Identifier for the user/customer/entity that performs the top-up action. This can be used to indicate the identifier of an agent that performs the operation on behalf of a user via a customer service channel. Structure including at least attributes �role� and �name�.",
+                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
                 },
                 "status": {
                     "type": "string",
@@ -72,7 +73,7 @@
                 },
                 "validFor": {
                     "description": "The period defined for the recharged amount to be part of the prepay balance. This could be used to define expiration times to remove balance not consumed.",
-                    "$ref": "TimePeriodType.schema.json#/definitions/TimePeriodType"
+                    "$ref": "../Common/TimePeriodType.schema.json#TimePeriodType"
                 },
                 "voucher": {
                     "type": "string",
@@ -81,7 +82,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "BalanceTopupBody.schema.json#/definitions/BalanceTopupBody"
+                    "$ref": "../Customer/BalanceTopupBody.schema.json#BalanceTopupBody"
                 }
             ],
             "required": [
@@ -91,7 +92,8 @@
                 "requestedDate",
                 "confirmationDate",
                 "status"
-            ]
+            ],
+            "type": "object"
         }
     }
 }

@@ -24,13 +24,13 @@
                     "type": "array",
                     "description": "Any additional characterization of the Area, defined for the Area type",
                     "items": {
-                        "$ref": "LocationCharacteristic.schema.json#LocationCharacteristic"
+                        "$ref": "../Common/LocationCharacteristic.schema.json#LocationCharacteristic"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

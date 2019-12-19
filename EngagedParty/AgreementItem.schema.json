@@ -9,7 +9,7 @@
             "type": "object",
             "properties": {
                 "productOffering": {
-		    "description": "The list of product offerings referred by this agreement item",
+                    "description": "The list of product offerings referred by this agreement item",
                     "type": "array",
                     "items": {
                         "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
@@ -18,16 +18,16 @@
                 "termOrCondition": {
                     "type": "array",
                     "items": {
-                        "$ref": "AgreementTermOrCondition.schema.json#AgreementTermOrCondition"
+                        "$ref": "../EngagedParty/AgreementTermOrCondition.schema.json#AgreementTermOrCondition"
                     }
                 },
-		"product": {
-		    "description": "The list of products indirectly referred by this agreement item (since an agreement item refers primarily to product offerings)",
+                "product": {
+                    "description": "The list of products indirectly referred by this agreement item (since an agreement item refers primarily to product offerings)",
                     "type": "array",
                     "items": {
                         "$ref": "../Product/ProductRef.schema.json#ProductRef"
                     }
-		}
+                }
             },
             "allOf": [
                 {

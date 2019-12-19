@@ -13,12 +13,12 @@
                     "description": "The type of relationship"
                 },
                 "documentRef": {
-                    "$ref": "DocumentRef.schema.json#DocumentRef"
+                    "$ref": "../Common/DocumentRef.schema.json#DocumentRef"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

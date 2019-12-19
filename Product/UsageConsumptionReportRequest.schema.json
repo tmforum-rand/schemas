@@ -6,13 +6,13 @@
         "UsageConsumptionReportRequest": {
             "$id": "#UsageConsumptionReportRequest",
             "type": "object",
-            "description": "An UsageConsumptionReportRequest allows to manage the calculation request of an usage consumption report", 
+            "description": "An UsageConsumptionReportRequest allows to manage the calculation request of an usage consumption report",
             "properties": {
                 "bucket": {
                     "type": "array",
                     "description": "Reference of the buckets for which the usage consumption report is requested",
                     "items": {
-                        "$ref": "UsageVolumeProductRef.schema.json#/definitions/UsageVolumeProductRef"
+                        "$ref": "../Product/UsageVolumeProductRef.schema.json#UsageVolumeProductRef"
                     }
                 },
                 "creationDate": {
@@ -34,12 +34,12 @@
                     "description": "Date when the status was last changed"
                 },
                 "product": {
-                    "$ref": "NetworkProductRef.schema.json#NetworkProductRef",
-                    "description": "Network product reference for which the usage consumption report is requested"                                      
+                    "$ref": "../Product/NetworkProductRef.schema.json#NetworkProductRef",
+                    "description": "Network product reference for which the usage consumption report is requested"
                 },
                 "relatedParty": {
                     "type": "array",
-                    "description": "Reference and role of the related parties for which the usage consumption report is requested",                                     
+                    "description": "Reference and role of the related parties for which the usage consumption report is requested",
                     "items": {
                         "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
@@ -49,12 +49,12 @@
                     "description": "Status of the usage consumption report request (InProgress or done)"
                 },
                 "usageConsumptionReport": {
-                    "$ref": "UsageConsumptionReportRef.schema.json#UsageConsumptionReportRef",
-                    "description": "References of the usage consumption report (given when it has been calculated and the status of the request is done)"                                       
+                    "$ref": "../Product/UsageConsumptionReportRef.schema.json#UsageConsumptionReportRef",
+                    "description": "References of the usage consumption report (given when it has been calculated and the status of the request is done)"
                 },
                 "validPeriod": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "Validity period"                                    
+                    "description": "Validity period"
                 }
             }
         }

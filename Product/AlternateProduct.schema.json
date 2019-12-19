@@ -23,17 +23,17 @@
                 "productCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "Characteristic.schema.json#Characteristic"
+                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     }
                 },
                 "productRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ProductRelationship.schema.json#ProductRelationship"
+                        "$ref": "../Product/ProductRelationship.schema.json#ProductRelationship"
                     }
                 },
                 "productSpecification": {
-                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                    "$ref": "../Product/ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 }
             },
             "allOf": [

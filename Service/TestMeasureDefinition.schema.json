@@ -52,7 +52,7 @@
                     "type": "array",
                     "description": "The rule(s) associated with the measure threshold",
                     "items": {
-                        "$ref": "MetricDefMeasureThresholdRule.schema.json#MetricDefMeasureThresholdRule"
+                        "$ref": "../Service/MetricDefMeasureThresholdRule.schema.json#MetricDefMeasureThresholdRule"
                     }
                 }
             },

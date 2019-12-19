@@ -7,9 +7,9 @@
             "$id": "#PartnershipType",
             "description": "A partnership type contains all the information for the setup of a partnership of a given kind. This includes the list of identified role types for the partnership with the corresponding agreement specifications.",
             "type": "object",
-	    "required": [
-		"name"
-	    ],
+            "required": [
+                "name"
+            ],
             "properties": {
                 "description": {
                     "type": "string",
@@ -30,7 +30,7 @@
                 "roleType": {
                     "type": "array",
                     "items": {
-                        "$ref": "RoleType.schema.json#RoleType"
+                        "$ref": "../EngagedParty/RoleType.schema.json#RoleType"
                     }
                 }
             },

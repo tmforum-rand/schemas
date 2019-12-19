@@ -20,14 +20,14 @@
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "violation": {
-                    "$ref": "Violation.schema.json#Violation"
+                    "$ref": "../EngagedParty/Violation.schema.json#Violation"
                 },
                 "sla": {
-                    "$ref": "SLARef.schema.json#SLARef"
+                    "$ref": "../EngagedParty/SLARef.schema.json#SLARef"
                 }
             },
             "allOf": [

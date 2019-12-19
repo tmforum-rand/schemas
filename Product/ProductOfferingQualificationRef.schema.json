@@ -4,13 +4,13 @@
     "title": "ProductOfferingQualificationRef",
     "definitions": {
         "ProductOfferingQualificationRef": {
+            "$id": "#ProductOfferingQualificationRef",
             "type": "object",
             "description": "It's a productOfferingQualification that has been executed previously",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

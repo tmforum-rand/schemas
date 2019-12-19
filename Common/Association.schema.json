@@ -34,7 +34,7 @@
                     "description": "Name given to this association"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which this association is valid"
                 },
                 "version": {
@@ -42,24 +42,24 @@
                     "description": "Version of this REST resource"
                 },
                 "associationSpec": {
-                    "$ref": "AssociationSpecRef.schema.json#AssociationSpecRef",
+                    "$ref": "../Common/AssociationSpecRef.schema.json#AssociationSpecRef",
                     "description": "The specification of this association"
                 },
                 "associationRole": {
-                    "$ref": "AssociationRole.schema.json#AssociationRole",
+                    "$ref": "../Common/AssociationRole.schema.json#AssociationRole",
                     "description": "The role of this association"
                 },
                 "constraint": {
                     "description": "Any constraints in this association",
                     "type": "array",
                     "items": {
-                        "$ref": "ConstraintRef.schema.json#ConstraintRef"
+                        "$ref": "../Common/ConstraintRef.schema.json#ConstraintRef"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

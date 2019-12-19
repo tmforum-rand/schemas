@@ -26,16 +26,16 @@
                 "intersection": {
                     "type": "array",
                     "items": {
-                        "$ref": "GeographicLocation.schema.json#GeographicLocation"
+                        "$ref": "../Common/GeographicLocation.schema.json#GeographicLocation"
                     }
                 },
                 "location": {
-                    "$ref": "GeographicLocationRef.schema.json#GeographicLocationRef"
+                    "$ref": "../Common/GeographicLocationRef.schema.json#GeographicLocationRef"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

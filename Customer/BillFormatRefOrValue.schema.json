@@ -7,20 +7,18 @@
             "$id": "#BillFormatRefOrValue",
             "description": "An attachment by value or by reference.",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "required": [
-              "role"
+                "role"
             ],
             "allOf": [
                 {
-                    "$ref": "BillFormatRef.schema.json#BillFormatRef"
+                    "$ref": "../Customer/BillFormatRef.schema.json#BillFormatRef"
                 },
                 {
-                  "$ref": "BillFormat.schema.json#BillFormat"
+                    "$ref": "../Customer/BillFormat.schema.json#BillFormat"
                 }
-                
             ]
         }
     }
-  }
+}

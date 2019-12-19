@@ -3,29 +3,29 @@
     "$id": "ProblemGroup.schema.json",
     "title": "ProblemGroup",
     "definitions": {
-        "ProblemGroup" : {
+        "ProblemGroup": {
             "$id": "#ProblemGroup",
-            "description": "Task resource that requests Service Problems to be grouped together into a parent and set of children", 
-            "type": "object", 
+            "description": "Task resource that requests Service Problems to be grouped together into a parent and set of children",
+            "type": "object",
             "properties": {
                 "href": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Reference to this task resource"
-                }, 
+                },
                 "id": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Unique identifier of this task resource"
-                }, 
+                },
                 "childProblem": {
-                    "type": "array", 
+                    "type": "array",
                     "description": "List of problems to be grouped under a parent problem",
                     "items": {
-                        "$ref": "ServiceProblemRef.schema.json#ServiceProblemRef"
+                        "$ref": "../Service/ServiceProblemRef.schema.json#ServiceProblemRef"
                     }
-                }, 
+                },
                 "parentProblem": {
                     "description": "The parent problem to which the problems are to be grouped",
-                    "$ref": "ServiceProblemRef.schema.json#ServiceProblemRef"
+                    "$ref": "../Service/ServiceProblemRef.schema.json#ServiceProblemRef"
                 }
             },
             "allOf": [

@@ -8,9 +8,9 @@
             "description": "Proof of freedom from taxes imposed by a taxing jurisdiction",
             "type": "object",
             "required": [
-                "issuingJurisdiction", 
+                "issuingJurisdiction",
                 "validFor"
-            ], 
+            ],
             "properties": {
                 "certificateNumber": {
                     "type": "string",

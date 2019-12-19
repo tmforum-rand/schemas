@@ -53,14 +53,14 @@
                     "type": "array",
                     "description": "List of service candidates associated with this category",
                     "items": {
-                        "$ref": "ServiceCandidateRef.schema.json#ServiceCandidateRef"
+                        "$ref": "../Service/ServiceCandidateRef.schema.json#ServiceCandidateRef"
                     }
                 },
                 "category": {
                     "type": "array",
                     "description": "List of child categories in the tree for in this category",
                     "items": {
-                        "$ref": "ServiceCategoryRef.schema.json#ServiceCategoryRef"
+                        "$ref": "../Service/ServiceCategoryRef.schema.json#ServiceCategoryRef"
                     }
                 }
             },

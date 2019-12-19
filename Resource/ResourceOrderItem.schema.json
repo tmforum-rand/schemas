@@ -25,12 +25,12 @@
                     "description": "State of the order item : described in the state machine diagram"
                 },
                 "resourceSpecification": {
-                    "$ref": "ResourceSpecificationRef.schema.json#ResourceSpecificationRef"
+                    "$ref": "../Resource/ResourceSpecificationRef.schema.json#ResourceSpecificationRef"
                 },
                 "orderItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ResourceOrderItemRelationship.schema.json#ResourceOrderItemRelationship"
+                        "$ref": "../Resource/ResourceOrderItemRelationship.schema.json#ResourceOrderItemRelationship"
                     }
                 }
             },

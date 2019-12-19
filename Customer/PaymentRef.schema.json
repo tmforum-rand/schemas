@@ -4,6 +4,7 @@
     "title": "PaymentRef",
     "definitions": {
         "PaymentRef": {
+            "$id": "#PaymentRef",
             "type": "object",
             "description": "If an immediate payment has been done at the product order submission, the payment information are captured and stored (as a reference) in the order.",
             "properties": {
@@ -14,7 +15,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
                 }
             ]
         }

@@ -9,7 +9,7 @@
             "type": "object",
             "required": [
                 "contactType"
-            ], 
+            ],
             "properties": {
                 "contactName": {
                     "type": "string",
@@ -34,7 +34,7 @@
                     }
                 },
                 "relatedParty": {
-                    "$ref": "RelatedParty.schema.json#RelatedParty"
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
                 }
             },
             "allOf": [

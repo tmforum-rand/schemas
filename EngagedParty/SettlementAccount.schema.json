@@ -8,14 +8,13 @@
             "description": "A party account used for settlement purposes. It includes a description of the bill structure (frequency, presentation media, format and so on). It is a specialization of entity PartyAccount.",
             "type": "object",
             "required": [
-                "name", 
+                "name",
                 "relatedParty"
-            ], 
-            "properties": {
-            },
+            ],
+            "properties": {},
             "allOf": [
                 {
-                    "$ref": "../Common/PartyAccount.schema.json#PartyAccount"
+                    "$ref": "../EngagedParty/PartyAccount.schema.json#PartyAccount"
                 }
             ]
         }

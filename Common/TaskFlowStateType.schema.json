@@ -11,7 +11,7 @@
                 "new",
                 "active",
                 "hold",
-				"cancelled",
+                "cancelled",
                 "completed"
             ]
         }

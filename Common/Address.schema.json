@@ -57,13 +57,13 @@
                     "description": "alley, avenue, boulevard, brae, crescent, drive, highway, lane, terrace, parade, place, tarn, way, wharf "
                 },
                 "subAddress": {
-                    "$ref": "SubAddress.schema.json#SubAddress",
+                    "$ref": "../Common/SubAddress.schema.json#SubAddress",
                     "description": "Within a property in an urban area, may refer to a building, building cluster, or a floor of a multistory building"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

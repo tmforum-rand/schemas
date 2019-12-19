@@ -9,45 +9,45 @@
             "type": "object",
             "properties": {
                 "accuracy": {
-                    "type": "number", 
-                    "format": "float", 
+                    "type": "number",
+                    "format": "float",
                     "description": "The number of digits of accuracy captured for associated Metrics"
-                }, 
+                },
                 "captureDateTime": {
-                    "type": "string", 
-                    "format": "date-time", 
+                    "type": "string",
+                    "format": "date-time",
                     "description": "The date and time that the metric was captured"
-                }, 
+                },
                 "captureMethod": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The method used to capture the Metrics (This may be replaced by a set of entities similar to the Performance Monitoring Ref)"
-                }, 
+                },
                 "metricDescription": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Brief description of the metric"
-                }, 
+                },
                 "metricHref": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "Hyperlink to access a metric for detail information"
-                }, 
+                },
                 "metricName": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The name of the metric"
-                }, 
+                },
                 "ruleViolation": {
-                    "type": "array", 
+                    "type": "array",
                     "description": "A list of rules that were violated in this test measure",
                     "items": {
-                        "$ref": "MeasureThresholdRuleViolation.schema.json#/definitions/MeasureThresholdRuleViolation"
+                        "$ref": "../Service/MeasureThresholdRuleViolation.schema.json#MeasureThresholdRuleViolation"
                     }
-                }, 
+                },
                 "unitOfMeasure": {
-                    "type": "string", 
+                    "type": "string",
                     "description": "The unit of measure for the metric values, such as meters, cubic yards, kilograms [ISO 1000]."
-                }, 
+                },
                 "value": {
                     "description": "The value of Metric in the test. This also could be a document to record all values captured during the service test",
-                    "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+                    "$ref": "../Common/Characteristic.schema.json#Characteristic"
                 }
             },
             "allOf": [

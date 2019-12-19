@@ -42,13 +42,13 @@
                     "description": "URL of the Attachment"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "Validity period of the Attachment"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

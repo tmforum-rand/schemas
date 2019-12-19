@@ -16,7 +16,7 @@
                     "description": "Items included in the header of the response. For example for an HTTP response might contain negotiated locale.",
                     "type": "array",
                     "items": {
-                        "$ref": "HeaderItem.schema.json#/definitions/HeaderItem"
+                        "$ref": "../Common/HeaderItem.schema.json#HeaderItem"
                     },
                     "title": "header"
                 },

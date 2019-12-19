@@ -21,7 +21,7 @@
                     "description": "Name of the SpecCharacteristic"
                 },
                 "validFor": {
-                    "$ref": "TimePeriod.schema.json#TimePeriod",
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which the productSpecCharacteristic is valid"
                 },
                 "valueType": {
@@ -31,19 +31,19 @@
                 "specCharacteristicValue": {
                     "type": "array",
                     "items": {
-                        "$ref": "SpecCharacteristicValue.schema.json#SpecCharacteristicValue"
+                        "$ref": "../Common/SpecCharacteristicValue.schema.json#SpecCharacteristicValue"
                     }
                 },
                 "specCharRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "SpecCharRelationship.schema.json#SpecCharRelationship"
+                        "$ref": "../Common/SpecCharRelationship.schema.json#SpecCharRelationship"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

@@ -68,14 +68,14 @@
                     "type": "array",
                     "description": "Any object(s) associated with this trouble ticket",
                     "items": {
-                        "$ref": "RelatedObject.schema.json#RelatedObject"
+                        "$ref": "../Common/RelatedObject.schema.json#RelatedObject"
                     }
                 },
                 "note": {
                     "type": "array",
                     "description": "Any note(s) associated with this trouble ticket",
                     "items": {
-                        "$ref": "Note.schema.json#Note"
+                        "$ref": "../Common/Note.schema.json#Note"
                     }
                 },
                 "relatedParty": {
@@ -88,7 +88,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "Entity.schema.json#Entity"
+                    "$ref": "../Common/Entity.schema.json#Entity"
                 }
             ]
         }

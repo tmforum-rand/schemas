@@ -58,10 +58,10 @@
                     "description": "All taxes included amount (expressed in the given currency)"
                 },
                 "settlementMethod": {
-                    "$ref": "SettlementMethod.schema.json#SettlementMethod"
+                    "$ref": "../Customer/SettlementMethod.schema.json#SettlementMethod"
                 },
                 "settlementNoteImage": {
-                    "$ref": "SettlementNoteImage.schema.json#SettlementNoteImage"
+                    "$ref": "../Customer/SettlementNoteImage.schema.json#SettlementNoteImage"
                 },
                 "receiver": {
                     "$ref": "../EngagedParty/PartyRef.schema.json#PartyRef"
@@ -69,7 +69,7 @@
                 "taxItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "TaxItem.schema.json#TaxItem"
+                        "$ref": "../Customer/TaxItem.schema.json#TaxItem"
                     }
                 },
                 "issuer": {
@@ -78,7 +78,7 @@
                 "settlementNoteItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "SettlementNoteItem.schema.json#SettlementNoteItem"
+                        "$ref": "../Customer/SettlementNoteItem.schema.json#SettlementNoteItem"
                     }
                 }
             },

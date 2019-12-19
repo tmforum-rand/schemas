@@ -6,7 +6,7 @@
         "Quantity": {
             "$id": "#Quantity",
             "type": "object",
-            "description": "An amount in a given unit", 
+            "description": "An amount in a given unit",
             "properties": {
                 "amount": {
                     "type": "number",

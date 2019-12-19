@@ -49,13 +49,13 @@
                 "resourceRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "ResourceRelationship.schema.json#ResourceRelationship"
+                        "$ref": "../Resource/ResourceRelationship.schema.json#ResourceRelationship"
                     }
                 },
                 "characteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "ResourceCharacteristic.schema.json#ResourceCharacteristic"
+                        "$ref": "../Resource/ResourceCharacteristic.schema.json#ResourceCharacteristic"
                     }
                 },
                 "place": {

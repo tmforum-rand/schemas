@@ -29,14 +29,14 @@
                 "cartTotalPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartPrice.schema.json#CartPrice"
+                        "$ref": "../Customer/CartPrice.schema.json#CartPrice"
                     },
                     "description": "Total amount of the shopping cart, usually of money, that represents the actual price paid by the Customer for cart (considering only \"Active\" cart items)"
                 },
                 "cartItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "CartItem.schema.json#CartItem"
+                        "$ref": "../Customer/CartItem.schema.json#CartItem"
                     }
                 },
                 "relatedParty": {

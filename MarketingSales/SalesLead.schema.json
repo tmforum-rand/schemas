@@ -25,7 +25,7 @@
                     "description": "Unique description of the salesLead"
                 },
                 "status": {
-                    "$ref": "SalesLeadStateType.schema.json#/definitions/SalesLeadStateType"
+                    "$ref": "../MarketingSales/SalesLeadStateType.schema.json#SalesLeadStateType"
                 },
                 "statusChangeDate": {
                     "type": "string",
@@ -55,7 +55,7 @@
                     "description": "Identifies the potential of a salesLead for becoming a sale. Usual ratings for qualified leads are: hot, warm, cold."
                 },
                 "priority": {
-                    "$ref": "SalesLeadPriorityType.schema.json#/definitions/SalesLeadPriorityType"
+                    "$ref": "../MarketingSales/SalesLeadPriorityType.schema.json#SalesLeadPriorityType"
                 },
                 "estimatedRevenue": {
                     "$ref": "../Common/Money.schema.json#Money",
@@ -74,7 +74,7 @@
                     "description": "MarketSegment reference. A Market Segment is a grouping of Parties, GeographicAreas, SalesChannels, and so forth. MarketSegments are the target of MarketingCampaigns, ProductOfferings, ProductPromotions, ProductPlacements, and ProductPrograms from both internal and external (Competitors, and other Providers) perspective."
                 },
                 "channel": {
-                    "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                    "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
                 },
                 "productOffering": {
                     "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
