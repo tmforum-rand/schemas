@@ -5,10 +5,19 @@
     "definitions": {
         "TroubleTicketRelationship": {
             "type": "object",
-            "description": "Represents a relationship between trouble TroubleTickets",
+            "description": "Represents a relationship between trouble Trouble Tickets",
             "properties": {
-                "troubleTicket": {
-                    "$ref": "TroubleTicketRef.schema.json#/definitions/TroubleTicketRef"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the Trouble Ticket"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Reference of the Trouble Ticket"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the Trouble Ticket"
                 },
                 "relationshipType": {
                     "type": "string",
