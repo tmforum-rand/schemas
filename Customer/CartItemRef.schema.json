@@ -5,7 +5,7 @@
     "definitions": {
         "CartItemRef": {
             "$id": "#CartItemRef",
-            "description": "CartIIem reference. A CartItem is an identified part of the shopping cart.",
+            "description": "CartIIem reference. A CartItem is an identified part of the shopping cart.(depricated will be removed in next version)",
             "type": "object",
             "properties": {
                 "id": {
