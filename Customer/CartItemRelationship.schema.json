@@ -15,12 +15,6 @@
                 "relationshipType": {
                     "type": "string",
                     "description": "Type of the cart item relationship"
-                },
-                "cartItem": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "../Customer/CartItemRef.schema.json#CartItemRef"
-                    }
                 }
             },
             "allOf": [
