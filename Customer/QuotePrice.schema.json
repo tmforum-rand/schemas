@@ -19,7 +19,7 @@
                 "productOfferingPrice": {
                     "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef",
                     "description": "An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased. The price is valid for a defined period of time."
-                },
+                },  
                 "priceType": {
                     "type": "string",
                     "description": "indicate if the price is for recurrent or no-recurrent charge"
@@ -35,11 +35,11 @@
                 "priceAlteration": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/PriceAlteration.schema.json#PriceAlteration"
+                        "$ref": "PriceAlteration.schema.json#PriceAlteration"
                     }
                 },
                 "price": {
-                    "$ref": "../Customer/Price.schema.json#Price"
+                    "$ref": "Price.schema.json#Price"
                 }
             },
             "allOf": [

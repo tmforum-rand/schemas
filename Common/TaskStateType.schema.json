@@ -8,7 +8,7 @@
             "type": "string",
             "description": "Possible values for the state of a task",
             "enum": [
-                "acknowledged",
+                "accepted",
                 "terminatedWithError",
                 "inProgress",
                 "done"

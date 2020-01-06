@@ -4,13 +4,9 @@
     "title": "RelatedProductOrderItem",
     "definitions": {
         "RelatedProductOrderItem": {
-            "$id": "#RelatedProductOrderItem",
             "type": "object",
             "description": "RelatedProductOrderItem (ProductOrder item) .The product order item which triggered product creation/change/termination.",
-            "required": [
-                "orderItemId",
-                "productOrderId"
-            ],
+            "required": ["orderItemId","productOrderId"],
             "properties": {
                 "@referredType": {
                     "type": "string",
@@ -39,7 +35,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

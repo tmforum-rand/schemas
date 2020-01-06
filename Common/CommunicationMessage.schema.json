@@ -8,10 +8,6 @@
             "description": "Communication message means a notification approach in the format of a message which can be dispatched (sent) to the certain user by the system with the content which can be felt and understood by the recipient. The user can be either a final customer or a customer service agent. The message can reach the customer in different interaction channels, including: email, short message, mobile app notification (push).",
             "type": "object",
             "properties": {
-                "callbackFlag": {
-                    "type": "boolean",
-                    "description": "Do you want a callback on delivery of communication message?"
-                },
                 "content": {
                     "type": "string",
                     "description": "The content of the communication message"
@@ -35,6 +31,11 @@
                     "type": "string",
                     "description": "The priority of the communication message.\nSmall number means higher priority."
                 },
+                "scheduledSendTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "The scheduled time for sending the communication message"
+                },
                 "sendTime": {
                     "type": "string",
                     "format": "date-time",
@@ -45,8 +46,8 @@
                     "format": "date-time",
                     "description": "The time of completion of sending communication message"
                 },
-                "status": {
-                    "type": "string",
+                "state": {
+                    "$ref": "../Common/CommunicationMessageStateType.schema.json#CommunicationMessageStateType",
                     "description": "Status of communication message"
                 },
                 "subject": {
@@ -65,31 +66,32 @@
                     "type": "array",
                     "description": "Any attachment associated with this message",
                     "items": {
-                        "$ref": "../Common/Attachment.schema.json#Attachment"
+                        "$ref": "Attachment.schema.json#Attachment"
                     }
                 },
                 "receiver": {
                     "type": "array",
                     "description": "The receiver(s) of this message",
                     "items": {
-                        "$ref": "../Common/Receiver.schema.json#Receiver"
+                        "$ref": "Receiver.schema.json#Receiver"
                     }
                 },
                 "sender": {
-                    "$ref": "../Common/Sender.schema.json#Sender",
+                    "$ref": "Sender.schema.json#Sender",
                     "description": "The sender of this message"
                 },
                 "characteristic": {
                     "type": "array",
                     "description": "Any additional characteristic(s) of this message",
                     "items": {
-                        "$ref": "../Common/CommunicationRequestCharacteristic.schema.json#CommunicationRequestCharacteristic"
+                        "$ref": "Characteristic.schema.json#Characteristic"
                     }
                 }
+
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

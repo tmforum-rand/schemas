@@ -8,7 +8,7 @@
             "type": "object",
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                    "$ref": "Entity.schema.json#EntityRef"
                 }
             ]
         }

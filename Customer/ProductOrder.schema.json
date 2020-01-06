@@ -6,20 +6,18 @@
         "ProductOrder": {
             "type": "object",
             "$id": "#ProductOrder",
-            "required": [
-                "productOrderItem"
-            ],
+            "required": ["productOrderItem"],
             "description": "A Product Order is a type of order which  can  be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa,",
             "properties": {
                 "agreement": {
                     "type": "array",
                     "description": "A reference to an agreement defined in the context of the product order",
                     "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                        "$ref": "AgreementRef.schema.json#AgreementRef"
                     }
                 },
                 "billingAccount": {
-                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
+                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef"
                 },
                 "cancellationDate": {
                     "type": "string",
@@ -37,7 +35,7 @@
                 "channel": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/RelatedChannel.schema.json#RelatedChannel"
+                        "$ref": "RelatedChannel.schema.json#/definitions/RelatedChannel"
                     }
                 },
                 "completionDate": {
@@ -69,7 +67,7 @@
                 "note": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Note.schema.json#Note"
+                        "$ref": "Note.schema.json#Note"
                     }
                 },
                 "notificationContact": {
@@ -84,13 +82,13 @@
                 "orderTotalPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/OrderPrice.schema.json#OrderPrice"
+                        "$ref": "OrderPrice.schema.json#OrderPrice"
                     }
                 },
                 "payment": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/PaymentRef.schema.json#PaymentRef"
+                        "$ref": "PaymentRef.schema.json#PaymentRef"
                     }
                 },
                 "priority": {
@@ -100,26 +98,26 @@
                 "productOfferingQualification": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef"
+                        "$ref": "ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef"
                     }
                 },
                 "quote": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/QuoteRef.schema.json#QuoteRef"
+                        "$ref": "QuoteRef.schema.json#QuoteRef"
                     }
                 },
                 "productOrderItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/ProductOrderItem.schema.json#ProductOrderItem"
+                        "$ref": "ProductOrderItem.schema.json#ProductOrderItem"
                     },
                     "minItems": 1
                 },
                 "relatedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "requestedCompletionDate": {
@@ -133,13 +131,13 @@
                     "description": "Order fulfillment start date wished by the requestor. This is used when, for any reason, requestor cannot allow seller to begin to operationally begin the fulfillment before a date. "
                 },
                 "state": {
-                    "$ref": "../Customer/ProductOrderStateType.schema.json#ProductOrderStateType",
+                    "$ref": "ProductOrderStateType.schema.json#ProductOrderStateType",
                     "description": "Tracks the lifecycle status of the product order, such as Acknowledged, Rejected, InProgress, Pending and so on."
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

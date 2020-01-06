@@ -5,7 +5,7 @@
     "definitions": {
         "EntitySpecification": {
             "$id": "#EntitySpecification",
-            "description": "EntitySpecification is a class that offers characteristics to describe a type of entity. Entities are generic constructs that may be used to describe bespoke business entities that are not effectively covered by the existing SID model.",
+            "description": "EntitySpecification is a class that offers characteristics to describe a type of entity. Entities are generic constructs that may be used to describe bespoke business entities that are not effectively covered by the existing SID model.\nFunctionally, the entity specification acts as a template by which entities may be instantiated and described. By sharing the same specification, these entities would therefore share the same set of characteristics.\nNote: The ‘configurable’ attribute on the specCharacteristics determines if an entity instantiated from the entity specification can override the value of the attribute. When set to false, the entity instance may not define a value that differs from the value in the specification.",
             "type": "object",
             "properties": {
                 "description": {
@@ -34,7 +34,7 @@
                     "description": "Name given to this REST resource"
                 },
                 "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "$ref": "TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which this REST resource is valid"
                 },
                 "version": {
@@ -43,29 +43,40 @@
                 },
                 "attachment": {
                     "type": "array",
+                    "description": "Attachments that may be of relevance to this specification, such as picture, document, media",
                     "items": {
-                        "$ref": "../Common/EntityAttachment.schema.json#EntityAttachment"
+                        "$ref": "Attachment.schema.json#Attachment"
                     }
                 },
                 "entitySchema": {
-                    "$ref": "../Common/EntitySchemaRef.schema.json#EntitySchemaRef"
+                    "description": "Pointer to a schema that defines the entity",
+                    "$ref": "EntitySchemaRef.schema.json#EntitySchemaRef"
                 },
                 "specCharacteristic": {
                     "type": "array",
+                    "description": "List of characteristics that the entity can take",
                     "items": {
-                        "$ref": "../Common/SpecCharacteristic.schema.json#SpecCharacteristic"
+                        "$ref": "SpecificationCharacteristic.schema.json#SpecificationCharacteristic"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
+                    "description": "Parties who manage or otherwise have an interest in this entity specification",
                     "items": {
                         "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                    }
+                },
+                "entitySpecRelationship": {
+                    "type": "array",
+                    "description": "Relationship to another entity specification, might be dependency, substitution, etc.",
+                    "items": {
+                        "$ref": "EntitySpecificationRelationship.schema.json#EntitySpecificationRelationship"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

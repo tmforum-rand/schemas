@@ -10,7 +10,7 @@
             "properties": {
                 "givenDate": {
                     "type": "string",
-                    "format": "date-time",
+                    "format" : "date-time",
                     "description": "Date when the authorization (approved or declined) was done"
                 },
                 "name": {
@@ -19,7 +19,7 @@
                 },
                 "requestedDate": {
                     "type": "string",
-                    "format": "date-time",
+                    "format" : "date-time",
                     "description": "Date when the authorization is requested for"
                 },
                 "signatureRepresentation": {

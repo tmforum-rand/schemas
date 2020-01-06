@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BillCycleSpecRef.schema.json",
+    "title": "BillCycleSpecRef",
+    "definitions": {
+        "BillCycleSpecRef": {
+            "type": "object",
+            "description": "....",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the BillCycleSpec"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Explanation: Unique reference of the BillCycleSpec"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the BillCycleSpec"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}

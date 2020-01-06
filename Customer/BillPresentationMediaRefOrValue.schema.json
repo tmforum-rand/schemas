@@ -4,21 +4,19 @@
     "title": "BillPresentationMediaRefOrValue",
     "definitions": {
         "BillPresentationMediaRefOrValue": {
+            "discriminator": "isRef",
             "$id": "#BillPresentationMediaRefOrValue",
             "description": "An attachment by value or by reference.",
             "type": "object",
-            "properties": {},
-            "required": [
-                "role"
-            ],
             "allOf": [
                 {
-                    "$ref": "../Customer/BillPresentationMediaRef.schema.json#BillPresentationMediaRef"
+                    "$ref": "BillPresentationMediaRef.schema.json#BillPresentationMediaRef"
                 },
                 {
-                    "$ref": "../Customer/BillPresentationMedia.schema.json#BillPresentationMedia"
+                  "$ref": "BillPresentationMedia.schema.json#BillPresentationMedia"
                 }
+                
             ]
         }
     }
-}
+  }

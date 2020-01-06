@@ -4,13 +4,13 @@
     "title": "RealizingResourceRef",
     "definitions": {
         "RealizingResourceRef": {
-            "$id": "#RealizingResourceRef",
             "type": "object",
             "description": "RealizingResource reference. RealizingResource is a link to the resource that realizes the product.",
-            "properties": {},
+            "properties": {
+            },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                    "$ref": "EntityRef.schema.json#/EntityRef"
                 }
             ]
         }

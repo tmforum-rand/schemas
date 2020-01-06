@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
     "$id": "LoyaltyRuleCondition.schema.json",
     "title": "LoyaltyRuleCondition",
     "definitions": {
@@ -7,6 +7,7 @@
             "$id": "#LoyaltyRuleCondition",
             "description": "Resource containing a the ID of a condition to link to a loyalty rule.",
             "type": "object",
+            "title": "LoyaltyRuleCondition",
             "properties": {
                 "id": {
                     "type": "string",

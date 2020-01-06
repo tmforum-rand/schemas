@@ -4,33 +4,27 @@
     "title": "ServiceCatalog",
     "definitions": {
         "ServiceCatalog": {
-            "$id": "#ServiceCatalog",
-            "description": "The root entity for service catalog management.\nA service catalog is a group of service specifications made available through service candidates that an organization provides to the consumers (internal consumers like its employees or B2B customers or B2C customers). \nA service catalog typically includes name, description and time period that is valid for. It will have a list of ServiceCandidate catalog items. A ServiceCandidate is an entity that makes a ServiceSpecification available to a catalog.\nA ServiceCandidate and its associated ServiceSpecification may be \"published\" - made visible -in any number of ServiceCatalogs, or in none.",
             "type": "object",
+            "description": "The root entity for service catalog management.\nA service catalog is a group of service specifications made available through service candidates that an organization provides to the consumers (internal consumers like its employees or B2B customers or B2C customers). \nA service catalog typically includes name, description and time period that is valid for. It will have a list of ServiceCandidate catalog items. A ServiceCandidate is an entity that makes a ServiceSpecification available to a catalog.\nA ServiceCandidate and its associated ServiceSpecification may be \"published\" - made visible -in any number of ServiceCatalogs, or in none.",
             "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "Unique identifier of the ServiceCatalog"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Unique reference of the service catalog"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Name of the service catalog"
+                "category": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ServiceCategoryRef.schema.json#/definitions/ServiceCategoryRef"
+                    },
+                    "description": "List of service categories associated with this catalog"
                 },
                 "description": {
                     "type": "string",
                     "description": "Description of this catalog"
                 },
-                "version": {
+                "href": {
                     "type": "string",
-                    "description": "ServiceCatalog version"
+                    "description": "Unique reference of the service catalog"
                 },
-                "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The period for which the service catalog is valid"
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the ServiceCatalog"
                 },
                 "lastUpdate": {
                     "type": "string",
@@ -41,24 +35,29 @@
                     "type": "string",
                     "description": "Used to indicate the current lifecycle status"
                 },
-                "category": {
-                    "type": "array",
-                    "description": "List of service categories associated with this catalog",
-                    "items": {
-                        "$ref": "../Service/ServiceCategoryRef.schema.json#ServiceCategoryRef"
-                    }
+                "name": {
+                    "type": "string",
+                    "description": "Name of the service catalog"
                 },
                 "relatedParty": {
                     "type": "array",
-                    "description": "List of parties or party roles related to this category",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
-                    }
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
+                    },
+                    "description": "List of parties or party roles related to this category"
+                },
+                "validFor": {
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod",
+                    "description": "The period for which the service catalog is valid"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "ServiceCatalog version"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

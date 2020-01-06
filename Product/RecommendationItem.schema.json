@@ -5,16 +5,26 @@
     "definitions": {
         "RecommendationItem": {
             "$id": "#RecommendationItem",
+            "required": [
+                "product"
+            ],
             "description": "A list of recommendation items. Every item is a product offering and its rank.",
             "type": "object",
             "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the product"
+                },
                 "priority": {
                     "type": "integer",
                     "description": "The rank of the list of recommended offering."
                 },
-                "offering": {
-                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef",
-                    "description": "Recommended product offering"
+                "product": {
+                    "$ref": "ProductRefOrValue.schema.json#ProductRefOrValue",
+                    "description": "A recommended product."
+                },
+                "productOffering": {
+                    "$ref": "ProductOfferingRef.schema.json#/definitions/ProductOfferingRef"
                 }
             },
             "allOf": [

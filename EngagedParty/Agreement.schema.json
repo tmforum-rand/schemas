@@ -7,12 +7,7 @@
             "$id": "#Agreement",
             "description": "An agreement represents a contract or arrangement, either written or verbal and sometimes enforceable by law, such as a service level agreement or a customer price agreement. An agreement involves a number of other business entities, such as products, services, and resources and/or their specifications.",
             "type": "object",
-            "required": [
-                "name",
-                "agreementType",
-                "engagedPartyRole",
-                "agreementItem"
-            ],
+	    "required": ["name","agreementType","engagedParty","agreementItem"],
             "properties": {
                 "agreementPeriod": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
@@ -64,25 +59,25 @@
                     "description": "A string identifying the version of the agreement"
                 },
                 "agreementSpecification": {
-                    "$ref": "../EngagedParty/AgreementSpecificationRef.schema.json#AgreementSpecificationRef"
+                    "$ref": "AgreementSpecificationRef.schema.json#AgreementSpecificationRef"
                 },
                 "agreementItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/AgreementItem.schema.json#AgreementItem"
+                        "$ref": "AgreementItem.schema.json#AgreementItem"
                     },
-                    "minItems": 1
+		    "minItems": 1
                 },
-                "engagedPartyRole": {
+                "engagedParty": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#RelatedParty"
                     }
                 },
                 "agreementAuthorization": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/AgreementAuthorization.schema.json#AgreementAuthorization"
+                        "$ref": "AgreementAuthorization.schema.json#AgreementAuthorization"
                     }
                 },
                 "characteristic": {
@@ -94,7 +89,7 @@
                 "associatedAgreement": {
                     "type": "array",
                     "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                        "$ref": "AgreementRef.schema.json#AgreementRef"
                     }
                 }
             },

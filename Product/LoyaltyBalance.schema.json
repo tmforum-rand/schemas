@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
     "$id": "LoyaltyBalance.schema.json",
     "title": "LoyaltyBalance",
     "definitions": {
@@ -7,6 +7,7 @@
             "$id": "#LoyaltyBalance",
             "description": "A loyalty balance, containing a balance unit and value.",
             "type": "object",
+            "title": "LoyaltyBalance",
             "properties": {
                 "id": {
                     "type": "string",
@@ -19,17 +20,17 @@
                 "quantity": {
                     "type": "object",
                     "description": "Unit and value of the balance.",
-                    "$ref": "../Common/Money.schema.json#Money"
+                    "$ref": "../Common/Money.schema.json#/definitions/Money"
                 },
                 "loyaltyProgramMember": {
                     "type": "object",
                     "description": "Reference to the loyaltyProgramMember to whom the loyaltyAccount belongs.",
-                    "$ref": "../Product/LoyaltyProgramMemberRef.schema.json#LoyaltyProgramMemberRef"
+                    "$ref": "LoyaltyProgramMemberRef.schema.json#/definitions/LoyaltyProgramMemberRef"
                 },
                 "validFor": {
                     "type": "object",
                     "description": "The validity period in which loyalty can be burned using the account.",
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod"
+                    "$ref": "../Common/TimePeriod.schema.json#/definitions/TimePeriod"
                 }
             }
         }

@@ -4,7 +4,6 @@
     "title": "ProductOrderItem",
     "definitions": {
         "ProductOrderItem": {
-            "$id": "#ProductOrderItem",
             "type": "object",
             "description": "An identified part of the order. A product order is decomposed into one or more order items.",
             "properties": {
@@ -17,77 +16,77 @@
                     "description": "Quantity ordered"
                 },
                 "action": {
-                    "$ref": "../Customer/OrderItemActionType.schema.json#OrderItemActionType",
+                    "$ref": "OrderItemActionType.schema.json#/definitions/OrderItemActionType",
                     "description": "The action to be carried out on the Product. Can be: add, modify, delete, noChange"
                 },
                 "appointment": {
-                    "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
+                    "$ref": "AppointmentRef.schema.json#/definitions/AppointmentRef"
                 },
                 "billingAccount": {
-                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
+                    "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
                 },
                 "itemPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/OrderPrice.schema.json#OrderPrice"
+                        "$ref": "OrderPrice.schema.json#/definitions/OrderPrice"
                     }
                 },
                 "itemTerm": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/OrderTerm.schema.json#OrderTerm"
+                        "$ref": "OrderTerm.schema.json#/definitions/OrderTerm"
                     }
                 },
                 "itemTotalPrice": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/OrderPrice.schema.json#OrderPrice"
+                        "$ref": "OrderPrice.schema.json#/definitions/OrderPrice"
                     }
                 },
                 "payment": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/PaymentRef.schema.json#PaymentRef"
+                        "$ref": "PaymentRef.schema.json#/definitions/PaymentRef"
                     }
                 },
                 "product": {
-                    "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
+                    "$ref": "ProductRefOrValue.schema.json#/definitions/ProductRefOrValue"
                 },
                 "productOffering": {
-                    "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
+                    "$ref": "ProductOfferingRef.schema.json#/definitions/ProductOfferingRef"
                 },
                 "productOfferingQualificationItem": {
-                    "$ref": "../Product/ProductOfferingQualificationItemRef.schema.json#ProductOfferingQualificationItemRef"
+                        "$ref": "ProductOfferingQualificationItemRef.schema.json#/definitions/ProductOfferingQualificationItemRef"
                 },
                 "quoteItem": {
-                    "$ref": "../Customer/QuoteItemRef.schema.json#QuoteItemRef"
+                        "$ref": "QuoteItemRef.schema.json#/definitions/QuoteItemRef"
                 },
                 "productOrderItem": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/ProductOrderItem.schema.json#ProductOrderItem"
+                        "$ref": "ProductOrderItem.schema.json#/definitions/ProductOrderItem"
                     }
                 },
                 "productOrderItemRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
+                        "$ref": "OrderItemRelationship.schema.json#/definitions/OrderItemRelationship"
                     }
                 },
                 "qualification": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef"
+                        "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
                     }
                 },
                 "state": {
-                    "$ref": "../Customer/ProductOrderItemStateType.schema.json#ProductOrderItemStateType",
+                    "$ref": "ProductOrderItemStateType.schema.json#/definitions/ProductOrderItemStateType",
                     "description": "State of the order item : described in the state machine diagram"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

@@ -30,7 +30,7 @@
                     "description": "The period for which the identification information is valid."
                 },
                 "attachment": {
-                    "$ref": "../Common/AttachmentRefOrValue.schema.json#AttachmentRefOrValue"
+                    "$ref": "AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
                 }
             },
             "allOf": [

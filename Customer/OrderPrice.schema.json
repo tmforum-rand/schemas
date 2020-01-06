@@ -19,7 +19,7 @@
                 "productOfferingPrice": {
                     "$ref": "../Product/ProductOfferingPriceRef.schema.json#ProductOfferingPriceRef",
                     "description": "An amount, usually of money, that is asked for or allowed when a ProductOffering is bought, rented, or leased. The price is valid for a defined period of time."
-                },
+                },  
                 "priceType": {
                     "type": "string",
                     "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
@@ -33,18 +33,18 @@
                     "description": "Could be minutes, GB..."
                 },
                 "billingAccount": {
-                    "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef",
+                    "$ref": "BillingAccountRef.schema.json#BillingAccountRef",
                     "description": "A reference to a billing account used for paid the order price charge"
                 },
                 "price": {
-                    "$ref": "../Customer/Price.schema.json#Price",
+                    "$ref": "Price.schema.json#Price",
                     "description": "a structure used to define price amount"
                 },
                 "priceAlteration": {
                     "type": "array",
                     "description": "a strucuture used to describe a price alteration",
                     "items": {
-                        "$ref": "../Product/PriceAlteration.schema.json#PriceAlteration"
+                        "$ref": "PriceAlteration.schema.json#PriceAlteration"
                     }
                 }
             },

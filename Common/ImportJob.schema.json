@@ -40,7 +40,7 @@
                 },
                 "status": {
                     "description": "Status of the import job (not started, running, succeeded, failed)",
-                    "$ref": "../Common/JobStateType.schema.json#JobStateType"
+                    "$ref": "JobStateType.schema.json#/definitions/JobStateType"
                 },
                 "url": {
                     "type": "string",
@@ -50,7 +50,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

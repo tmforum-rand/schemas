@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ConcreteEnvironmentMetaModel.schema.json",
+    "title": "Concrete Environtment Resource Metamodel",
+    "definitions": {
+        "ConcreteEnvironmentMetaModel": {
+            "type": "object",
+            "description": "A managed concrete environment resource metamodel resource",
+            "required": [
+                "concreteEnvironmentMetaModelDefinition"
+            ],
+            "properties": {
+                "concreteEnvironmentMetaModelDefinition": {
+                    "$ref": "ConcreteEnvironmentMetaModelDefinition.schema.json#/ConcreteEnvironmentMetaModelDefinition"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "ManagedArtifact.schema.json#/ManagedArtifact"
+                }
+            ]
+        }
+    }
+}

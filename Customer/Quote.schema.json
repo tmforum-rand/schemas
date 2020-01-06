@@ -4,25 +4,22 @@
     "title": "Quote",
     "definitions": {
         "Quote": {
-            "$id": "#Quote",
             "type": "object",
-            "required": [
-                "quoteItem"
-            ],
+            "required": ["quoteItem"],
             "description": "Quote can be used to negotiate service and product acquisition or modification between a customer and a service provider. Quote contain list of quote items, a reference to customer (partyRole), a list of productOffering and attached prices and conditions.",
             "properties": {
                 "agreement": {
                     "type": "array",
                     "description": "A reference to an agreement defining the context of the quote",
                     "items": {
-                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                        "$ref": "AgreementRef.schema.json#/definitions/AgreementRef"
                     }
                 },
                 "billingAccount": {
                     "type": "array",
                     "description": "A reference to a billing account to provide quote context information ",
                     "items": {
-                        "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
+                        "$ref": "BillingAccountRef.schema.json#/definitions/BillingAccountRef"
                     }
                 },
                 "category": {
@@ -33,7 +30,7 @@
                     "type": "array",
                     "description": "Information contact related to the quote requester",
                     "items": {
-                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                        "$ref": "ContactMedium.schema.json#/definitions/ContactMedium"
                     }
                 },
                 "description": {
@@ -75,14 +72,14 @@
                     "type": "array",
                     "description": "Free form text associated with the quote",
                     "items": {
-                        "$ref": "../Common/Note.schema.json#Note"
+                        "$ref": "Note.schema.json#/definitions/Note"
                     }
                 },
                 "authorization": {
                     "type": "array",
                     "description": "An authorization provided for the quote",
                     "items": {
-                        "$ref": "../Customer/Authorization.schema.json#Authorization"
+                        "$ref": "Authorization.schema.json#/definitions/Authorization"
                     }
                 },
                 "quoteDate": {
@@ -94,7 +91,7 @@
                     "type": "array",
                     "description": "An item of the quote - it is used to descirbe an operation on a product to be quoted",
                     "items": {
-                        "$ref": "../Customer/QuoteItem.schema.json#QuoteItem"
+                        "$ref": "QuoteItem.schema.json#/definitions/QuoteItem"
                     },
                     "minItems": 1
                 },
@@ -102,21 +99,21 @@
                     "type": "array",
                     "description": "Quote total price",
                     "items": {
-                        "$ref": "../Customer/QuotePrice.schema.json#QuotePrice"
+                        "$ref": "QuotePrice.schema.json#/definitions/QuotePrice"
                     }
                 },
                 "relatedParty": {
                     "type": "array",
                     "description": "A reference to a party playing a role in this quote (customer, seller, requester, etc.)",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
                 "productOfferingQualification": {
                     "type": "array",
                     "description": "A reference to a previously done product offering qualification",
                     "items": {
-                        "$ref": "../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef"
+                        "$ref": "ProductOfferingQualificationRef.schema.json#/definitions/ProductOfferingQualificationRef"
                     }
                 },
                 "requestedQuoteCompletionDate": {
@@ -125,11 +122,11 @@
                     "description": "This is requested date - from quote requester - to get a complete response for this quote"
                 },
                 "state": {
-                    "$ref": "../Product/QuoteStateType.schema.json#QuoteStateType",
+                    "$ref": "QuoteStateType.schema.json#/definitions/QuoteStateType",
                     "description": "State of the quote : described in the state-machine diagram"
                 },
                 "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "$ref": "TimePeriod.schema.json#/definitions/TimePeriod",
                     "description": "Quote validity period"
                 },
                 "version": {
@@ -139,9 +136,10 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }
     }
 }
+   

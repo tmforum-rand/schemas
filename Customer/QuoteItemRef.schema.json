@@ -4,13 +4,9 @@
     "title": "QuoteItemRef",
     "definitions": {
         "QuoteItemRef": {
-            "$id": "#QuoteItemRef",
             "type": "object",
             "description": "It's a Quote item that has been executed previously.",
-            "required": [
-                "id",
-                "quoteId"
-            ],
+            "required": ["id", "quoteId"],
             "properties": {
                 "quoteHref": {
                     "type": "string",
@@ -31,7 +27,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                    "$ref": "../Common/EntityRef.schema.json#/EntityRef"
                 }
             ]
         }

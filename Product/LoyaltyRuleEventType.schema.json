@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
     "$id": "LoyaltyRuleEventType.schema.json",
     "title": "LoyaltyRuleEventType",
     "definitions": {
@@ -7,6 +7,7 @@
             "$id": "#LoyaltyRuleEventType",
             "description": "Resource containing a the ID of a event type to link to a loyalty rule.",
             "type": "object",
+            "title": "LoyaltyRuleEventType",
             "properties": {
                 "id": {
                     "type": "string",

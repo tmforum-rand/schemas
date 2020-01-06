@@ -20,9 +20,8 @@
                     "type": "boolean",
                     "description": "Indicator provided by the requester to specify if alternate addresses must be provided in case of partial or fail result."
                 },
-                "status": {
-                    "type": "string",
-                    "description": "Status of the address validation (inProgress, terminatedWithError, done)"
+                "state": {
+		    "$ref": "TaskStateType.schema.json#TaskStateType"
                 },
                 "validationDate": {
                     "type": "string",
@@ -31,21 +30,26 @@
                 },
                 "validationResult": {
                     "type": "string",
-                    "description": "Result of the address validation (success, partial, fail)"
+                    "description": "Result of the address validation (success, partial, fails)"
                 },
-                "validAddress": {
-                    "$ref": "../Common/GeographicAddress.schema.json#GeographicAddress"
+                "submittedGeographicAddress": {
+                    "$ref": "GeographicAddress.schema.json#GeographicAddress",
+                    "description": "the address as submitted to validation"
                 },
+		"validGeographicAddress": {
+                    "$ref": "GeographicAddress.schema.json#GeographicAddress",
+                    "description": "the correct form of the validated address in case of validation success"
+		},
                 "alternateGeographicAddress": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/GeographicAddress.schema.json#GeographicAddress"
+                        "$ref": "GeographicAddress.schema.json#GeographicAddress"
                     }
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

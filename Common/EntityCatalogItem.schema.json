@@ -34,8 +34,22 @@
                     "description": "Name given to this REST resource"
                 },
                 "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "$ref": "TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which this REST resource is valid"
+                },
+                "category": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "EntityCategoryRef.schema.json#EntityCategoryRef",
+                        "description": "The category(ies) if any that refer to this catalog item"
+                    }
+                },
+                "specification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "EntitySpecificationRef.schema.json#EntitySpecificationRef",
+                        "description": "The category(ies) if any that refer to this catalog item"
+                    }
                 },
                 "version": {
                     "type": "string",
@@ -44,7 +58,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

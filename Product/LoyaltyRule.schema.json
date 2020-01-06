@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
     "$id": "LoyaltyRule.schema.json",
     "title": "LoyaltyRule",
     "definitions": {
@@ -7,6 +7,7 @@
             "$id": "#LoyaltyRule",
             "description": "Loyalty rule, containing conditions, event types and actions.",
             "type": "object",
+            "title": "LoyaltyBalance",
             "properties": {
                 "id": {
                     "type": "string",
@@ -18,7 +19,7 @@
                 },
                 "isCNF": {
                     "type": "boolean",
-                    "description": "Unit and value of the balance."
+                    "description": "This is a Boolean attribute that, if true, defines the condition clause of this rule to be represented in Conjunctive Normal Form (e.g., an AND of ORs). If the value of this attribute is false, then the condition clause will be represented in Disjunctive Normal Form (e.g., an OR of ANDs)."
                 },
                 "hasSubRules": {
                     "type": "boolean",
@@ -52,21 +53,21 @@
                     "type": "array",
                     "description": "References to linked event types.",
                     "items": {
-                        "$ref": "../Product/LoyaltyEventTypeRef.schema.json#LoyaltyEventTypeRef"
+                        "$ref": "LoyaltyEventTypeRef.schema.json#LoyaltyEventTypeRef"
                     }
                 },
                 "loyaltyCondition": {
                     "type": "array",
                     "description": "References to linked conditions.",
                     "items": {
-                        "$ref": "../Product/LoyaltyConditionRef.schema.json#LoyaltyConditionRef"
+                        "$ref": "LoyaltyConditionRef.schema.json#LoyaltyConditionRef"
                     }
                 },
                 "loyaltyAction": {
                     "type": "array",
                     "description": "References to linked actions.",
                     "items": {
-                        "$ref": "../Product/LoyaltyActionRef.schema.json#LoyaltyActionRef"
+                        "$ref": "LoyaltyActionRef.schema.json#LoyaltyActionRef"
                     }
                 }
             }

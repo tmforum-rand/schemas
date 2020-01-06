@@ -5,7 +5,7 @@
     "definitions": {
         "AgreementSpecificationRef": {
             "$id": "#AgreementSpecificationRef",
-            "description": "AgreementSpecification reference. An AgreementSpecification represents a template of an agreement that can be used when establishing partnerships.",
+            "description": "Agreement specification reference. An AgreementSpecification represents a template of an agreement that can be used when establishing partnerships.",
             "type": "object",
             "properties": {
                 "description": {
@@ -19,7 +19,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                    "$ref": "../Common/Entity.schema.json#EntityRef"
                 }
             ]
         }

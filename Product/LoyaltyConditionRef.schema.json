@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
     "$id": "LoyaltyConditionRef.schema.json",
     "title": "LoyaltyConditionRef",
     "definitions": {
@@ -7,6 +7,7 @@
             "$id": "#LoyaltyConditionRef",
             "description": "A reference to a loyalty condition.",
             "type": "object",
+            "title": "LoyaltyConditionRef",
             "properties": {
                 "id": {
                     "type": "string",

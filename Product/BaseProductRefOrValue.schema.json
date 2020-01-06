@@ -16,6 +16,12 @@
                     "type": "string",
                     "description": "Unique identifier of the product"
                 },
+                "isRef": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "indicate if ref pattern is used"
+       
+                  },
                 "name": {
                     "type": "string",
                     "description": "This is the name of the product."
@@ -23,7 +29,7 @@
                 "productCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
+                        "$ref": "Characteristic.schema.json#Characteristic"
                     }
                 },
                 "realizingResource": {
@@ -38,6 +44,7 @@
                         "$ref": "../Service/ServiceRef.schema.json#ServiceRef"
                     }
                 },
+
                 "isBundle": {
                     "type": "boolean",
                     "description": "If true, the product is a ProductBundle which is an instantiation of a BundledProductOffering. If false, the product is a ProductComponent which is an instantiation of a SimpleProductOffering."
@@ -45,7 +52,7 @@
                 "productRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/ProductRelationship.schema.json#ProductRelationship"
+                        "$ref": "ProductRelationship.schema.json#ProductRelationship"
                     }
                 },
                 "relatedParty": {
@@ -55,7 +62,7 @@
                     }
                 },
                 "productSpecification": {
-                    "$ref": "../Product/ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 },
                 "relatedPlace": {
                     "type": "array",

@@ -6,7 +6,8 @@
         "ProductRef": {
             "$id": "#ProductRef",
             "type": "object",
-            "properties": {},
+            "properties": {
+            },
             "allOf": [
                 {
                     "$ref": "../Common/EntityRef.schema.json#EntityRef"

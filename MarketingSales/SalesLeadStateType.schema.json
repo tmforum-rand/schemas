@@ -1,18 +1,18 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "SalesLeadStateType.schema.json",
-    "title": "SalesLeadStateType",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "SalesLeadStateType.schema.json", 
+    "title": "SalesLeadStateType", 
     "definitions": {
         "SalesLeadStateType": {
             "$id": "#SalesLeadStateType",
-            "type": "string",
-            "description": "Valid values for the lifecycle state of a salesLead resource",
+     		"type": "string", 
+            "description": "Valid values for the lifecycle state of a salesLead resource", 
             "enum": [
                 "accepted",
                 "acknowledged",
-                "cancelled",
-                "inProgress",
-                "pending",
+                "cancelled", 
+                "inProgress", 
+                "pending", 
                 "rejected"
             ]
         }

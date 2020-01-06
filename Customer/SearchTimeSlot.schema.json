@@ -4,7 +4,6 @@
     "title": "SearchTimeSlot",
     "definitions": {
         "SearchTimeSlot": {
-            "$id": "#SearchTimeSlot",
             "type": "object",
             "description": "This task resource is used to retrieve available time slots. One of this available time slot is after used to create or reschedule an appointment",
             "properties": {
@@ -18,7 +17,7 @@
                 },
                 "status": {
                     "type": "string",
-                    "$ref": "../Customer/SearchTimeSlotStateType.schema.json#SearchTimeSlotStateType"
+                    "$ref": "SearchTimeSlotStateType.schema.json#/definitions/SearchTimeSlotStateType"
                 },
                 "searchDate": {
                     "type": "string",
@@ -32,13 +31,13 @@
                 "requestedTimeSlot": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/TimeSlot.schema.json#TimeSlot"
+                        "$ref": "TimeSlot.schema.json#/definitions/TimeSlot"
                     }
                 },
                 "availableTimeSlot": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Customer/TimeSlot.schema.json#TimeSlot"
+                        "$ref": "TimeSlot.schema.json#/definitions/TimeSlot"
                     }
                 },
                 "relatedParty": {

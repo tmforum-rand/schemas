@@ -34,8 +34,23 @@
                     "description": "Name of the catalog"
                 },
                 "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "$ref": "TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which the catalog is valid"
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "description": "The parties who are involved or have an interest in this catalog",
+                    "items":
+                    {
+                        "$ref": "RelatedParty.schema.json#RelatedParty"
+                    }
+                },
+                "category": {
+                    "type": "array",
+                    "description": "The categories used in this catalog",
+                    "items": {
+                        "$ref": "EntityCategoryRef.schema.json#EntityCategoryRef"
+                    }
                 },
                 "version": {
                     "type": "string",
@@ -44,7 +59,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

@@ -4,7 +4,6 @@
     "title": "TaskFlowRef",
     "definitions": {
         "TaskFlowRef": {
-            "$id": "#TaskFlowRef",
             "type": "object",
             "properties": {
                 "@referredType": {
@@ -22,7 +21,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

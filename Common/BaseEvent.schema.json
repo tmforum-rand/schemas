@@ -8,13 +8,8 @@
             "description": "Base event with common attributes.",
             "type": "object",
             "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "Identifier of the Process flow"
-                },
-                "href": {
-                    "type": "string",
-                    "description": "Reference of the ProcessFlow"
+                "event": {
+                    "$ref": "Any.schema.json#Any"
                 },
                 "eventId": {
                     "type": "string",
@@ -22,7 +17,7 @@
                 },
                 "eventTime": {
                     "type": "string",
-                    "format": "date-time",
+		                "format": "date-time",
                     "description": "Time of the event occurrence."
                 },
                 "eventType": {
@@ -51,13 +46,13 @@
                 },
                 "timeOcurred": {
                     "type": "string",
-                    "format": "date-time",
+		                "format": "date-time",
                     "description": "The time the event occured."
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

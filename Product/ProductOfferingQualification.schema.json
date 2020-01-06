@@ -4,16 +4,15 @@
     "title": "ProductOfferingQualification",
     "definitions": {
         "ProductOfferingQualification": {
-            "$id": "#ProductOfferingQualification",
             "type": "object",
             "description": "ProductOfferingQualification is used to perform a commercial eligibility. It allows to retrieve a list of productOffering that are commercially available in the context of the interaction (defined be place, channel, party, product).",
             "properties": {
                 "channel": {
                     "description": "Channel used for the qualification",
-                    "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
+                    "$ref": "ChannelRef.schema.json#/definitions/ChannelRef"
                 },
                 "category": {
-                    "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                    "$ref": "CategoryRef.schema.json#CategoryRef"
                 },
                 "description": {
                     "type": "string",
@@ -50,7 +49,7 @@
                     "type": "array",
                     "description": "Free form text associated with the qualification request",
                     "items": {
-                        "$ref": "../Common/Note.schema.json#Note"
+                        "$ref": "Note.schema.json#/definitions/Note"
                     }
                 },
                 "productOfferingQualificationDate": {
@@ -62,7 +61,7 @@
                     "type": "array",
                     "description": "Qualification item for a product or a category",
                     "items": {
-                        "$ref": "../Product/ProductOfferingQualificationItem.schema.json#ProductOfferingQualificationItem"
+                        "$ref": "ProductOfferingQualificationItem.schema.json#/definitions/ProductOfferingQualificationItem"
                     }
                 },
                 "provideAlternative": {
@@ -85,13 +84,13 @@
                     "type": "array",
                     "description": "Party playing a role for this qualification (as requester for example)",
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
                 },
                 "place": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue"
+                        "$ref": "RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue"
                     }
                 },
                 "requestedPOQCompletionDate": {
@@ -100,13 +99,13 @@
                     "description": "Deadline date when the requester expected a qualification answer"
                 },
                 "state": {
-                    "$ref": "../Common/TaskStateType.schema.json#TaskStateType",
+                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType",
                     "description": "State of the productOfferingQualification defined in the state engine"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#/Entity"
                 }
             ]
         }

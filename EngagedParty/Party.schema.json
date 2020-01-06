@@ -1,61 +1,60 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "Party.schema.json",
-    "title": "Party",
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "Party.schema.json", 
+    "title": "Party", 
     "definitions": {
         "Party": {
-            "$id": "#Party",
-            "type": "object",
-            "description": "Generic Party structure used to define commonalities between sub concepts of Individual and Organization.",
+            "type": "object", 
+            "description": "Generic Party structure used to define commonalities between sub concepts of Individual and Organization.", 
             "properties": {
-                "id": {
-                    "type": "string",
+	            "id": {
+                   "type": "string", 
                     "description": "Unique identifier of the organization"
-                },
+                }, 
                 "href": {
-                    "type": "string",
+                    "type": "string", 
                     "description": "Hyperlink to access the organization"
                 },
                 "externalReference": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "../Common/ExternalReference.schema.json#ExternalReference"
+                        "$ref": "ExternalReference.schema.json#/definitions/ExternalReference"
                     }
-                },
+                },				
                 "partyCharacteristic": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
+                        "$ref": "Characteristic.schema.json#/definitions/Characteristic"
                     }
                 },
                 "taxExemptionCertificate": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "../EngagedParty/TaxExemptionCertificate.schema.json#TaxExemptionCertificate"
+                        "$ref": "TaxExemptionCertificate.schema.json#/definitions/TaxExemptionCertificate"
                     }
                 },
                 "creditRating": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "../EngagedParty/PartyCreditProfile.schema.json#PartyCreditProfile"
+                        "$ref": "PartyCreditProfile.schema.json#/definitions/PartyCreditProfile"
                     }
-                },
+                }, 
                 "relatedParty": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                        "$ref": "RelatedParty.schema.json#/definitions/RelatedParty"
                     }
-                },
+                },				
                 "contactMedium": {
-                    "type": "array",
+                    "type": "array", 
                     "items": {
-                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                        "$ref": "ContactMedium.schema.json#/definitions/ContactMedium"
                     }
                 }
             },
-            "allOf": [
+			"allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

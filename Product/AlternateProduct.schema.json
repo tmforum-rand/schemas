@@ -16,6 +16,12 @@
                     "type": "string",
                     "description": "Unique identifier of the product"
                 },
+                "isRef": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "indicate if ref pattern is used"
+       
+                  },
                 "name": {
                     "type": "string",
                     "description": "This is the name of the product."
@@ -23,17 +29,17 @@
                 "productCharacteristic": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Common/Characteristic.schema.json#Characteristic"
+                        "$ref": "Characteristic.schema.json#Characteristic"
                     }
                 },
                 "productRelationship": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/ProductRelationship.schema.json#ProductRelationship"
+                        "$ref": "ProductRelationship.schema.json#ProductRelationship"
                     }
                 },
                 "productSpecification": {
-                    "$ref": "../Product/ProductSpecificationRef.schema.json#ProductSpecificationRef"
+                    "$ref": "ProductSpecificationRef.schema.json#ProductSpecificationRef"
                 }
             },
             "allOf": [

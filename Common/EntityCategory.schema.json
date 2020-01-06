@@ -5,7 +5,7 @@
     "definitions": {
         "EntityCategory": {
             "$id": "#EntityCategory",
-            "description": "The (entity) category resource is used to group entity catalog items in logical containers. Categories can contain other categories.",
+            "description": "The (entity) category resource is used to group entity catalog items in logical containers. Categories can contain other categories.\nResource IDs for categories are strings and are defined by the catalog application.",
             "type": "object",
             "properties": {
                 "description": {
@@ -42,8 +42,22 @@
                     "description": "Unique identifier of the parent category"
                 },
                 "validFor": {
-                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "$ref": "TimePeriod.schema.json#TimePeriod",
                     "description": "The period for which the category is valid"
+                },
+                "childCategory": {
+                    "type": "array",
+                    "description": "The child category(ies) if any, contained in this category",
+                    "items": {
+                        "$ref": "EntityCategoryRef.schema.json#EntityCategoryRef"
+                     }
+                },
+                "entityCatalogItem": {
+                    "type": "array",
+                    "description": "The catalog items referred to by this category",
+                    "items": {
+                        "$ref": "EntityCatalogItemRef.schema.json#EntityCatalogItemRef"
+                    }
                 },
                 "version": {
                     "type": "string",
@@ -52,7 +66,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "Entity.schema.json#Entity"
                 }
             ]
         }

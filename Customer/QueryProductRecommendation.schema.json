@@ -13,7 +13,7 @@
                 },
                 "id": {
                     "type": "string",
-                    "description": "Unique identifier of recommendation"
+                    "description": "Unique identifier of the queryProductRecommendation"
                 },
                 "instantSyncRecommendation": {
                     "type": "boolean",
@@ -21,50 +21,72 @@
                 },
                 "href": {
                     "type": "string",
-                    "description": "Hypertext Reference of the recommendation"
+                    "description": "Hypertext Reference of the queryProductRecommendation"
                 },
                 "name": {
                     "type": "string",
-                    "description": "Name of recommendation"
+                    "description": "Name of the queryProductRecommendation"
                 },
                 "recommendationType": {
                     "type": "string",
-                    "description": "The type of recommendation"
+                    "description": "The type of the queryProductRecommendation"
                 },
                 "validFor": {
                     "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
-                    "description": "The period in which the recommendation is valid"
+                    "description": "The period in which the queryProductRecommendation is valid"
                 },
-                "order": {
-                    "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
+                "productOrder": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
+                    }
+                },
+                "productOrderItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/ItemRef.schema.json#ItemRef"
+                    }
                 },
                 "place": {
                     "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#RelatedPlaceRefOrValue",
-                    "description": "The place which the recommendation is related to"
+                    "description": "The place which the queryProductRecommendation is related to"
                 },
                 "channel": {
-                    "$ref": "../Common/ChannelRef.schema.json#ChannelRef"
-                },
-                "category": {
-                    "$ref": "../Product/CategoryRef.schema.json#CategoryRef",
-                    "description": "The category for grouping recommendations"
-                },
-                "shoppingCart": {
-                    "$ref": "../Customer/ShoppingCartRef.schema.json#ShoppingCartRef",
-                    "description": "The shopping cart which the recommendation is related to"
-                },
-                "relatedParty": {
-                    "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
-                },
-                "item": {
                     "type": "array",
                     "items": {
-                        "$ref": "../Product/RecommendationItem.schema.json#RecommendationItem"
+                        "$ref": "../Customer/ChannelRef.schema.json#ChannelRef"
+                    }
+                },
+                "category": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/CategoryRef.schema.json#CategoryRef"
+                    }
+                },
+                "shoppingCart": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/ShoppingCartRef.schema.json#ShoppingCartRef"
+                    }
+                },
+                "shoppingCartItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Customer/ItemRef.schema.json#ItemRef"
+                    }
+                },
+                "relatedParty": {
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                },
+                "recommendationItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "RecommendationItem.schema.json#RecommendationItem"
                     }
                 },
                 "state": {
-                    "$ref": "../Common/TaskStateType.schema.json#TaskStateType",
-                    "description": "State of the Recommendation defined in the state engine"
+                    "$ref": "TaskStateType.schema.json#/definitions/TaskStateType",
+                    "description": "State of the queryProductRecommendation defined in the state engine"
                 }
             },
             "allOf": [

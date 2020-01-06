@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TestCaseResult.schema.json",
+    "title": "TestCaseResult",
+    "definitions": {
+        "TestCaseResult": {
+            "type": "object",
+            "description": "A managed test case result resource",
+            "required": [
+                "testCaseResultDefinition",
+                "testExecution"
+            ],
+            "properties": {
+                "testCaseResultDefinition": {
+                    "$ref": "TestCaseResultDefinition.schema.json#/TestCaseResultDefinition"
+                },
+               "testExecution": {
+                    "$ref": "TestCaseExecutionRefOrValue.schema.json#/TestCaseExecutionRefOrValue"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "ResourceEntity.schema.json#/ResourceEntity"
+                }
+            ]
+        }
+    }
+}

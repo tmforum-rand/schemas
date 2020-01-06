@@ -20,17 +20,12 @@
                     "type": "string",
                     "description": "Unique Identifier within the server for the unreserve operation request"
                 },
-                "requestedDate": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date when the unreserve request was received in the server"
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Status of the unreserve operation"
-                },
                 "balanceReserve": {
-                    "$ref": "../Customer/BalanceReserveRef.schema.json#BalanceReserveRef"
+                    "$ref": "BalanceReserveRef.schema.json#BalanceReserveRef"
+                },
+                "bucketBalance": {
+                    "description": "A reference to the bucket involved in the balance-related operation",
+                    "$ref": "BucketBalanceRef.schema.json#BucketBalanceRef"
                 },
                 "relatedParty": {
                     "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
@@ -44,7 +39,7 @@
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "BalanceAction.schema.json#BalanceAction"
                 }
             ]
         }

@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "CustomerBillRef.schema.json",
+    "title": "CustomerBillRef",
+    "definitions": {
+        "CustomerBillRef": {
+            "type": "object",
+            "description": "Bill reference.",
+            "properties": {
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                },
+                {
+					"$ref": "EntityRef.schema.json#/EntityRef"
+				}
+            ]
+        }
+    }
+}
