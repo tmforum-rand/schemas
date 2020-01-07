@@ -3,14 +3,15 @@
   "$id": "NonFunctionalTestExecutionRef.schema.json",
   "title": "NonFunctionalTestExecutionRef",
   "definitions": {
-      "NonFunctionalTestExecutionRef": {
-          "type": "object",
-          "description": "A reference to a non-funcitonal test execution",
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "NonFunctionalTestExecutionRef": {
+      "$id": "#NonFunctionalTestExecutionRef",
+      "type": "object",
+      "description": "A reference to a non-funcitonal test execution",
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

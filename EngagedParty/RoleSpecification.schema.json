@@ -1,30 +1,30 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "RoleSpecification.schema.json",
-    "title": "RoleSpecification",
-    "definitions": {
-        "RoleSpecification": {
-            "$id": "#RoleSpecification",
-            "description": "A RoleSpecification represents a specification of a role.",
-            "type": "object",
-	    "required": [
-		"name"
-	    ],
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "An explanatory text documenting the role specification"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "The name of the role specification. This name uniquely identifies the role specification"
-                }
-            },
-            "allOf": [
-                {
-                    "$ref": "../Common/Entity.schema.json#Entity"
-                }
-            ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "RoleSpecification.schema.json",
+  "title": "RoleSpecification",
+  "definitions": {
+    "RoleSpecification": {
+      "$id": "#RoleSpecification",
+      "description": "A RoleSpecification represents a specification of a role.",
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "An explanatory text documenting the role specification"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the role specification. This name uniquely identifies the role specification"
         }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
     }
+  }
 }

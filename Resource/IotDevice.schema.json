@@ -14,12 +14,11 @@
           "items": {
             "$ref": "DataAccessEndpoint.schema.json#DataAccessEndpoint"
           }
-            
         },
         "category": {
           "type": "array",
           "items": {
-            "$ref": "CategoryType.schema.json#CategoryType"
+            "$ref": "../Resource/CategoryType.schema.json#CategoryType"
           }
         },
         "location": {
@@ -33,7 +32,6 @@
         {
           "$ref": "../Resource/Device.json#Device"
         }
-        
       ],
       "required": [
         "id",

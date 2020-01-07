@@ -4,16 +4,17 @@
   "title": "TestAgreement",
   "definitions": {
     "TestAgreement": {
+      "$id": "#TestAgreement",
       "type": "object",
       "oneOf": [
         {
           "required": [
-              "terms"
+            "terms"
           ]
         },
         {
           "required": [
-              "url"
+            "url"
           ]
         }
       ],

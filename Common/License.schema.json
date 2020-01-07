@@ -4,6 +4,7 @@
   "title": "License",
   "definitions": {
     "License": {
+      "$id": "#License",
       "type": "object",
       "properties": {
         "name": {

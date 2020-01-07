@@ -4,23 +4,23 @@
   "title": "CategoryType",
   "definitions": {
     "CategoryType": {
-    "$id": "CategoryType",
-    "type": "array",
-    "items": {
-      "type": "string",
-      "enum": [
-        "sensor",
-        "actuator",
-        "meter",
-        "HVAC",
-        "network",
-        "multimedia",
-        "implement",
-        "irrSystem",
-        "irrSection",
-        "endgun"
-      ]
-    }
+      "$id": "#CategoryType",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "sensor",
+          "actuator",
+          "meter",
+          "HVAC",
+          "network",
+          "multimedia",
+          "implement",
+          "irrSystem",
+          "irrSection",
+          "endgun"
+        ]
+      }
     }
   }
 }

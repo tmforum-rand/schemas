@@ -12,7 +12,6 @@
         {
           "$ref": "../EngagedParty/PartyRole.json#PartyRole"
         }
-        
       ]
     }
   }

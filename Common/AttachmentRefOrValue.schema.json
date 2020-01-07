@@ -1,20 +1,20 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "AttachmentRefOrValue.schema.json",
-    "title": "AttachmentRefOrValue",
-    "definitions": {
-        "AttachmentRefOrValue": {
-            "type": "object",
-            "description": "An attachment by value or by reference. An attachment complements the description of an element, for example through a document, a video, a picture.",
-            "allOf": [
-                {
-                    "$ref": "AttachmentRef.schema.json#AttachmentRef"
-                },
-                {
-                  "$ref": "Attachment.schema.json#Attachment"
-                }
-                
-            ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "AttachmentRefOrValue.schema.json",
+  "title": "AttachmentRefOrValue",
+  "definitions": {
+    "AttachmentRefOrValue": {
+      "$id": "#AttachmentRefOrValue",
+      "type": "object",
+      "description": "An attachment by value or by reference. An attachment complements the description of an element, for example through a document, a video, a picture.",
+      "allOf": [
+        {
+          "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
+        },
+        {
+          "$ref": "../Common/Attachment.schema.json#Attachment"
         }
+      ]
     }
+  }
 }

@@ -3,16 +3,16 @@
   "$id": "NonFunctionalTestModelRef.schema.json",
   "title": "NonFunctionalTestModelRef",
   "definitions": {
-      "NonFunctionalTestModelRef": {
-          "type": "object",
-          "description": "A reference to a managed non-functional test model resource",
-          "properties": {
-          },
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "NonFunctionalTestModelRef": {
+      "$id": "#NonFunctionalTestModelRef",
+      "type": "object",
+      "description": "A reference to a managed non-functional test model resource",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

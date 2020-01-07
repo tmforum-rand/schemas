@@ -3,14 +3,15 @@
   "$id": "GeneralTestArtifactRef.schema.json",
   "title": "GeneralTestArtifactRef",
   "definitions": {
-      "GeneralTestArtifactRef": {
-          "type": "object",
-          "description": "A reference to a managed general test artifact resource",
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "GeneralTestArtifactRef": {
+      "$id": "#GeneralTestArtifactRef",
+      "type": "object",
+      "description": "A reference to a managed general test artifact resource",
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

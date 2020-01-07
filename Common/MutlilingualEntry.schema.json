@@ -4,6 +4,7 @@
   "title": "MutlilingualEntry",
   "definitions": {
     "MutlilingualEntry": {
+      "$id": "#MutlilingualEntry",
       "type": "object",
       "required": [
         "language",

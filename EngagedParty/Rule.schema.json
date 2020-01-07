@@ -6,9 +6,7 @@
     "Rule": {
       "type": "object",
       "$id": "#Rule",
-      "properties": {
-        
-      },
+      "properties": {},
       "allOf": [
         {
           "$ref": "../Common/Entity.json#Entity"

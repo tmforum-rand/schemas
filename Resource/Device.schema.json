@@ -4,12 +4,13 @@
   "title": "Device",
   "definitions": {
     "Device": {
+      "$id": "#Device",
       "type": "object",
       "properties": {
         "rule": {
           "type": "array",
           "items": {
-            "$ref": "../Rule.schema.json#Rule"
+            "$ref": "../EngagedParty/Rule.schema.json#Rule"
           }
         },
         "deviceType": {
@@ -57,7 +58,7 @@
           }
         },
         "configuration": {
-          "$ref": "Configuration.schema.json/#Configuration"
+          "$ref": "../Common/Configuration.schema.json#Configuration"
         },
         "dateInstalled": {
           "type": "string",
@@ -136,10 +137,10 @@
       },
       "allOf": [
         {
-          "$ref": "GSMACommons.schema.json#/definitions/GSMACommons"
+          "$ref": "../Common/GSMACommons.schema.json#GSMACommons"
         },
         {
-          "$ref": "LocationCommons.schema.json#/definitions/LocationCommons"
+          "$ref": "../Common/LocationCommons.schema.json#LocationCommons"
         },
         {
           "$ref": "../Resource/PhysicalResource.schema.json#PhysicalResource"

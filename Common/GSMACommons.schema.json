@@ -7,7 +7,6 @@
       "type": "object",
       "$id": "#GSMACommons",
       "properties": {
-        
         "dateCreated": {
           "type": "string",
           "format": "date-time"

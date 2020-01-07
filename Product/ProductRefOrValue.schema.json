@@ -3,21 +3,19 @@
   "$id": "ProductRefOrValue.schema.json",
   "title": "ProductRefOrValue",
   "definitions": {
-      "ProductRefOrValue": {
-          "$id": "#ProductRefOrValue",
-          "description": "A product to be created defined by value or existing defined by reference. The polymorphic attributes @type, @schemaLocation & @referredType are related to the product entity and not the RelatedProductRefOrValue class itself",
-          "type": "object",
-          "properties": {
-          },
-          "allOf": [
-              {
-                "$ref": "ProductRef.schema.json#ProductRef"
-              },
-              {
-                "$ref": "Product.schema.json#Product"
-              }
-              
-          ]
-      }
+    "ProductRefOrValue": {
+      "$id": "#ProductRefOrValue",
+      "description": "A product to be created defined by value or existing defined by reference. The polymorphic attributes @type, @schemaLocation & @referredType are related to the product entity and not the RelatedProductRefOrValue class itself",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Product/ProductRef.schema.json#ProductRef"
+        },
+        {
+          "$ref": "../Product/Product.schema.json#Product"
+        }
+      ]
+    }
   }
 }

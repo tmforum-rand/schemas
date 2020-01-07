@@ -1,20 +1,18 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "FinancialAccountRef.schema.json",
-    "title": "FinancialAccountRef",
-    "definitions": {
-        "FinancialAccountRef": {
-            "$id": "#FinancialAccountRef",
-            "description": "AccountReceivable reference. An account of money owed by a party to another entity in exchange for goods or services that have been delivered or used. An account receivable aggregates the amounts of one or more party accounts (billing or settlement) owned by a given party.",
-            "type": "object",
-            "properties": {
-             },
-            "allOf": [
-                {
-                    "$ref": "../Common/Entity.schema.json#Entity",
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
-                }
-            ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FinancialAccountRef.schema.json",
+  "title": "FinancialAccountRef",
+  "definitions": {
+    "FinancialAccountRef": {
+      "$id": "#FinancialAccountRef",
+      "description": "AccountReceivable reference. An account of money owed by a party to another entity in exchange for goods or services that have been delivered or used. An account receivable aggregates the amounts of one or more party accounts (billing or settlement) owned by a given party.",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
         }
+      ]
     }
+  }
 }

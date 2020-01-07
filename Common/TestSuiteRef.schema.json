@@ -3,17 +3,16 @@
   "$id": "TestSuiteRef.schema.json",
   "title": "TestSuiteRef",
   "definitions": {
-      "TestSuiteRef": {
-          "type": "object",
-          "description": "A reference to a managed test suite resource",
-          "properties": {
-
-          },
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "TestSuiteRef": {
+      "$id": "#TestSuiteRef",
+      "type": "object",
+      "description": "A reference to a managed test suite resource",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

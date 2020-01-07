@@ -3,14 +3,15 @@
   "$id": "TestCaseExecutionRef.schema.json",
   "title": "TestCaseExecutionRef",
   "definitions": {
-      "TestCaseExecutionRef": {
-          "type": "object",
-          "description": "A reference to a test case execution",
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "TestCaseExecutionRef": {
+      "$id": "#TestCaseExecutionRef",
+      "type": "object",
+      "description": "A reference to a test case execution",
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

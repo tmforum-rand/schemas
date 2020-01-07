@@ -4,6 +4,7 @@
   "title": "TestContact",
   "definitions": {
     "TestContact": {
+      "$id": "#TestContact",
       "type": "object",
       "required": [
         "name",

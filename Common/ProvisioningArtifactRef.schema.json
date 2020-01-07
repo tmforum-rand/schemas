@@ -3,16 +3,16 @@
   "$id": "ProvisioningArtifactRef.schema.json",
   "title": "ProvisioningArtifactRef",
   "definitions": {
-      "ProvisioningArtifactRef": {
-          "type": "object",
-          "description": "A reference to a managed provisioning artifact resource",
-          "properties": {
-          },
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "ProvisioningArtifactRef": {
+      "$id": "#ProvisioningArtifactRef",
+      "type": "object",
+      "description": "A reference to a managed provisioning artifact resource",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

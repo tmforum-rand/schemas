@@ -8,14 +8,11 @@
       "$id": "#Configuration",
       "description": "#TODO",
       "type": "object",
-      "properties": {
-        
-      },
+      "properties": {},
       "allOf": [
         {
           "$ref": "../Common/Entity.json#Entity"
         }
-        
       ]
     }
   }

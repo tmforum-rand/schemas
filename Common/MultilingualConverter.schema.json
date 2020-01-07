@@ -3,7 +3,8 @@
   "$id": "MultilingualConverter.schema.json",
   "title": "MultilingualConverter",
   "definitions": {
-    "MultilingualConverter":{
+    "MultilingualConverter": {
+      "$id": "#MultilingualConverter",
       "description": "REST resource for multilingual conversion from the base language",
       "type": "object",
       "required": [
@@ -11,24 +12,24 @@
       ],
       "properties": {
         "baseText": {
-            "type": "string",
-            "description": "The text in the base language",
-            "example": "The quick brown fox jumps over the lazy dog"
-          },
-        "langSelector": {
-            "type": "string",
-            "description": "The language to provide conversion to",
-            "example": "FR"
-          },
-        "convertedText": {
-            "type": "string",
-            "description": "The converted text",
-            "example": "Portez ce vieux whisky au juge blond qui fume"
-          }
+          "type": "string",
+          "description": "The text in the base language",
+          "example": "The quick brown fox jumps over the lazy dog"
         },
+        "langSelector": {
+          "type": "string",
+          "description": "The language to provide conversion to",
+          "example": "FR"
+        },
+        "convertedText": {
+          "type": "string",
+          "description": "The converted text",
+          "example": "Portez ce vieux whisky au juge blond qui fume"
+        }
+      },
       "allOf": [
         {
-          "$ref": "ResourceEntity.schema.json#/ResourceEntity"
+          "$ref": "../Resource/ResourceEntity.schema.json#ResourceEntity"
         }
       ]
     }

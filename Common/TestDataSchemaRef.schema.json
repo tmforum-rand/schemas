@@ -3,14 +3,15 @@
   "$id": "TestDataSchemaRef.schema.json",
   "title": "TestDataSchemaRef",
   "definitions": {
-      "TestDataSchemaRef": {
-          "type": "object",
-          "description": "A reference to a managed test data schema resource",
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "TestDataSchemaRef": {
+      "$id": "#TestDataSchemaRef",
+      "type": "object",
+      "description": "A reference to a managed test data schema resource",
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

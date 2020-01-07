@@ -3,16 +3,16 @@
   "$id": "AbstractEnvironmentRef.schema.json",
   "title": "AbstractEnvironmentRef",
   "definitions": {
-      "AbstractEnvironmentRef": {
-          "type": "object",
-          "description": "A reference to a managed test abstract environment resource",
-          "properties": {
-          },
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "AbstractEnvironmentRef": {
+      "$id": "#AbstractEnvironmentRef",
+      "type": "object",
+      "description": "A reference to a managed test abstract environment resource",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

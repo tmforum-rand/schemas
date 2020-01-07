@@ -3,20 +3,20 @@
   "$id": "User.schema.json",
   "title": "User",
   "definitions": {
-      "User": {
-          "$id": "#User",
-          "description": "Generic User structure used to define commonalities between sub concepts of PartyUser and Financial User.",
-          "type": "object",
-          "properties": {
-            "description": {
-              "type": "string"
-            }
-          },
-          "allOf": [
-              {
-                  "$ref": "../Common/Entity.schema.json#Entity"
-              }
-          ]
-      }
+    "User": {
+      "$id": "#User",
+      "description": "Generic User structure used to define commonalities between sub concepts of PartyUser and Financial User.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    }
   }
 }

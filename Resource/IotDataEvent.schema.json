@@ -8,18 +8,13 @@
       "$id": "#IotDataEvent",
       "description": "#TODO",
       "type": "object",
-      "properties": {
-        
-      },
+      "properties": {},
       "allOf": [
         {
           "$ref": "../Common/BaseEvent.json#BaseEvent"
         }
-        
       ],
-      "required": [
-
-      ]
+      "required": []
     }
   }
 }

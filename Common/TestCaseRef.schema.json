@@ -3,17 +3,16 @@
   "$id": "TestCaseRef.schema.json",
   "title": "TestCaseRef",
   "definitions": {
-      "TestCaseRef": {
-          "type": "object",
-          "description": "A reference to a managed test case artifact",
-          "properties": {
-
-          },
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "TestCaseRef": {
+      "$id": "#TestCaseRef",
+      "type": "object",
+      "description": "A reference to a managed test case artifact",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

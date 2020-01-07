@@ -3,14 +3,15 @@
   "$id": "TestScenarioRef.schema.json",
   "title": "TestScenarioRef",
   "definitions": {
-      "TestScenarioRef": {
-          "type": "object",
-          "description": "A reference to a managed test scenario resource",
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "TestScenarioRef": {
+      "$id": "#TestScenarioRef",
+      "type": "object",
+      "description": "A reference to a managed test scenario resource",
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

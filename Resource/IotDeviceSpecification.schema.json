@@ -8,13 +8,11 @@
       "$id": "#IotDeviceSpecification",
       "description": "#TODO",
       "type": "object",
-      "properties": {
-      },
+      "properties": {},
       "allOf": [
         {
           "$ref": "../Resource/ResourceSpecification.json#ResourceSpecification"
         }
-        
       ]
     }
   }

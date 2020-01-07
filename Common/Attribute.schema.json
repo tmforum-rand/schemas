@@ -4,15 +4,16 @@
   "title": "Attribute",
   "definitions": {
     "Attribute": {
+      "$id": "#Attribute",
       "type": "object",
       "properties": {
         "characteristic": {
-          "$ref": "Characteristic.schema.json#/definitions/Characteristic"
+          "$ref": "../Common/Characteristic.schema.json#Characteristic"
         },
         "description": {
-          "$ref": "Multilingual.schema.json#/definitions/Multilingual"
+          "$ref": "../Common/Multilingual.schema.json#Multilingual"
         }
       }
+    }
   }
-}
 }

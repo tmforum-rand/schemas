@@ -4,6 +4,7 @@
   "title": "TestVersion",
   "definitions": {
     "TestVersion": {
+      "$id": "#TestVersion",
       "type": "object",
       "properties": {
         "description": {

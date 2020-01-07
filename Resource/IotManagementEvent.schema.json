@@ -3,20 +3,20 @@
   "$id": "IotManagementEvent.schema.json",
   "title": "IotManagementEvent",
   "definitions": {
-      "IotManagementEvent": {
-          "$id": "#IotManagementEvent",
-          "description": "Generic IotManagementEvent structure used to define commonalities between sub concepts of PartyIotManagementEvent and Financial IotManagementEvent.",
-          "type": "object",
-          "properties": {
-            "description": {
-              "type": "string"
-            }
-          },
-          "allOf": [
-              {
-                  "$ref": "../Common/BaseEvent.schema.json#BaseEvent"
-              }
-          ]
-      }
+    "IotManagementEvent": {
+      "$id": "#IotManagementEvent",
+      "description": "Generic IotManagementEvent structure used to define commonalities between sub concepts of PartyIotManagementEvent and Financial IotManagementEvent.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/BaseEvent.schema.json#BaseEvent"
+        }
+      ]
+    }
   }
 }

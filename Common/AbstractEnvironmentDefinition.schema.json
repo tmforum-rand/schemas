@@ -1,18 +1,18 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "AbstractEnvironmentDefinition.schema.json",
-    "title": "AbstractEnvironmentDefinition",
-    "definitions": {
-        "AbstractEnvironmentDefinition": {
-            "type": "object",
-            "description": "Abstract environment definition",
-            "properties": {
-            },
-            "allOf": [
-                {
-                    "$ref": "Attachment.schema.json#/Attachment"
-                }
-            ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "AbstractEnvironmentDefinition.schema.json",
+  "title": "AbstractEnvironmentDefinition",
+  "definitions": {
+    "AbstractEnvironmentDefinition": {
+      "$id": "#AbstractEnvironmentDefinition",
+      "type": "object",
+      "description": "Abstract environment definition",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/Attachment.schema.json#Attachment"
         }
+      ]
     }
+  }
 }

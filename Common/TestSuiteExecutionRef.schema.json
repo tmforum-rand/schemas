@@ -3,14 +3,15 @@
   "$id": "TestSuiteExecutionRef.schema.json",
   "title": "TestSuiteExecutionRef",
   "definitions": {
-      "TestSuiteExecutionRef": {
-          "type": "object",
-          "description": "A reference to a test suite execution",
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "TestSuiteExecutionRef": {
+      "$id": "#TestSuiteExecutionRef",
+      "type": "object",
+      "description": "A reference to a test suite execution",
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }

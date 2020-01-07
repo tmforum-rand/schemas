@@ -3,16 +3,16 @@
   "$id": "TestResourceAPIRef.schema.json",
   "title": "TestResourceAPIRef",
   "definitions": {
-      "TestResourceAPIRef": {
-          "type": "object",
-          "description": "A reference to a managed test resource API resource",
-          "properties": {
-          },
-          "allOf": [
-              {
-                  "$ref": "EntityRef.schema.json#/EntityRef"
-              }
-          ]
-      }
+    "TestResourceAPIRef": {
+      "$id": "#TestResourceAPIRef",
+      "type": "object",
+      "description": "A reference to a managed test resource API resource",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    }
   }
 }
