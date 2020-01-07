@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "AbstractEnvironment.schema.json",
-  "title": "Abstract Environment",
+  "title": "AbstractEnvironment",
   "definitions": {
     "AbstractEnvironment": {
       "$id": "#AbstractEnvironment",

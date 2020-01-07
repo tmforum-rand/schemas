@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://fiware.github.io/data-models/specs/Device/device-schema.json",
-  "title": "GSMA / FIWARE - Device  Commons schema",
+  "title": "DeviceCommons",
   "description": "Common defintions to describe Device and Device Model scemas.",
   "definitions": {
     "MacAddressType": {
