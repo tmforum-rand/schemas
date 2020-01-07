@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "TestSuiteExecutionRef.schema.json",
+  "title": "TestSuiteExecutionRef",
+  "definitions": {
+      "TestSuiteExecutionRef": {
+          "type": "object",
+          "description": "A reference to a test suite execution",
+          "allOf": [
+              {
+                  "$ref": "EntityRef.schema.json#/EntityRef"
+              }
+          ]
+      }
+  }
+}

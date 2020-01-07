@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TestSuiteExecution.schema.json",
+    "title": "TestSuiteExecution",
+    "definitions": {
+        "TestSuiteExecution": {
+            "type": "object",
+            "description": "REST resource for the test suite execution lifecycle",
+            "properties": {
+                "testSuite": {
+                    "$ref": "TestSuiteRef.schema.json#/TestSuiteRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "TestExecution.schema.json#/TestExecution"
+                },
+                {
+                    "$ref": "TestExecutionRef.schema.json#/TestExecutionRef"
+                }
+            ]
+        }
+    }
+}

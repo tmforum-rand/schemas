@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ConcreteResourceMapping.schema.json",
+    "title": "ConcreteResourceMapping",
+    "definitions": {
+        "ConcreteResourceMapping": {
+            "type": "object",
+            "description": "Individual mapping from an abstract resource to a list of concrete resources",
+            "properties": {
+                "abstractResource": {
+                    "type": "string",
+                    "example": "phone"
+                },
+                "concreteResource": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "ConcreteResource.schema.json#/ConcreteResource"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "Entity.schema.json#/Entity"
+                }
+            ]
+        }
+    }
+}

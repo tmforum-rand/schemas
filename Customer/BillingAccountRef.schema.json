@@ -20,20 +20,18 @@
                     "type": "string",
                     "description": "Name of the billing account"
                 },
-		"ratingType": {
-		    "type": "string",
-		    "description": "Indicates whether the account follows a specific payment option such as prepaid or postpaid"
-		}
+                "ratingType": {
+                    "type": "string",
+                    "description": "Indicates whether the account follows a specific payment option such as prepaid or postpaid"
+                },
                 "@referredType": {
                     "type": "string",
                     "description": "The actual type of the target instance when needed for disambiguation."
                 }
             },
-            "allOf": [
-                {
-                    "$ref": "../Common/Entity.schema.json#Entity"
-                }
-            ]
+            "allOf": [{
+                "$ref": "../Common/Entity.schema.json#Entity"
+            }]
         }
     }
 }
