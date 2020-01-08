@@ -31,7 +31,7 @@
         "relatedParty": {
           "type": "array",
           "items": {
-            "$ref": "RelatedPartyWithContactInfo.schema.json#/definitions/RelatedPartyWithContactInfo"
+            "$ref": "../EngagedParty/RelatedPartyWithContactInfo.schema.json#/definitions/RelatedPartyWithContactInfo"
           }
         },
         "state": {
@@ -45,7 +45,7 @@
       },
       "allOf": [
         {
-          "$ref": "ResourceEntity.schema.json#/ResourceEntity"
+          "$ref": "../Resource/ResourceEntity.schema.json#/definitions/ResourceEntity"
         }
       ]
     }

@@ -11,7 +11,7 @@
       "properties": {},
       "allOf": [
         {
-          "$ref": "../Common/Entity.json#Entity"
+          "$ref": "../Common/Entity.schema.json#Entity"
         }
       ]
     }

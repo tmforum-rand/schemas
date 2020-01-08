@@ -7,6 +7,10 @@
       "$id": "#PartyRole",
       "description": "The part played by a party in a given context.",
       "type": "object",
+      "required": [
+        "name",
+        "roleType"
+      ],
       "properties": {
         "href": {
           "type": "string",
@@ -86,10 +90,6 @@
         {
           "$ref": "../Common/Entity.schema.json#Entity"
         }
-      ],
-      "required": [
-        "name",
-        "roleType"
       ]
     }
   }

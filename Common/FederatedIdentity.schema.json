@@ -8,11 +8,9 @@
       "$id": "#FederatedIdentity",
       "description": "#TODO",
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "../EngagedParty/PartyRole.json#PartyRole"
-        }
-      ]
+      "allOf": [{
+        "$ref": "../EngagedParty/PartyRole.schema.json#PartyRole"
+      }]
     }
   }
 }
