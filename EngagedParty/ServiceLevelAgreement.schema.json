@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ServiceLevelAgreement.schema.json",
+  "title": "ServiceLevelAgreement",
+  "definitions": {
+    "ServiceLevelAgreement": {
+      "$id": "#ServiceLevelAgreement",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+          }
+        },
+        "rule": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/Rule.schema.json#Rule"
+          }
+        },
+        "template": {
+          "$ref": "../Common/Template.schema.json#Template"
+        },
+        "validFor": {
+          "$ref": "../Common/ValidFor.schema.json#ValidFor"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
