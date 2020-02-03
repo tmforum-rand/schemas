@@ -1,3 +1,6 @@
+import glob
+md = '''
+
 # TM Forum Open-API Schema Repository
 
 [![CircleCI](https://circleci.com/gh/tmforum-rand/schemas/tree/master.svg?style=svg)](https://circleci.com/gh/tmforum-rand/schemas/tree/master)
@@ -21,3 +24,9 @@ This is how you dropdown.
 | [Common](https://github.com/tmforum-rand/schemas/tree/master/Common) | The common domain is of different nature from the above defined ones as the processes, information data and applications described there do not necessarily have relationships. |
 
 All schemas conform to JSON-Schema draft-07, and to [the design guidelines described here](https://github.com/tmforum-rand/TMF630_REST_API_Design_Guidelines). The schemas are used in the construction of the TM Forum Open-API catalog.
+
+
+'''
+
+for domain in glob.glob("../*/"):
+    
