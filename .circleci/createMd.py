@@ -9,7 +9,7 @@ This repository contains the collection of JSON-Schema files that define the ent
 | Level-0 |  |
 |-----------------|---|
 | [Marketing/Sales](https://github.com/tmforum-rand/schemas/tree/master/MarketingSales) | The Market/Sales domain supports the sales and marketing activities needed to gain business from customers and potential customers. |
-| | <details><summary>schemas from Marketing/Sales</summary>${Marketing/Sales}<br></details> | |
+| | <details><summary>schemas from Marketing/Sales</summary>${Sales}<br></details> | |
 | [Product](https://github.com/tmforum-rand/schemas/tree/master/Product/) | The Product domain is concerned with the lifecycle of products offered to and procured by customers. |
 | | <details><summary>schemas from Product</summary>${Product}<br></details> | |
 | [Customer](https://github.com/tmforum-rand/schemas/tree/master/Customer) | The Customer domain represents individuals or organizations that obtain products from an enterprise, such as a service provider. It represents of all types of contact with the customer, the management of the relationship, and the administration of customer data. |
@@ -45,7 +45,7 @@ for domain in schemaTree:
     print(domain)
     schemaMd = ""
     for schema in schemaTree[domain]:
-        schemaMd += schemaTree[domain][schema]['name']+"["+schemaTree[domain][schema]['url']+"]<br>"
+        schemaMd += "["+schemaTree[domain][schema]['name']+"]"+"("+schemaTree[domain][schema]['url']+")<br>"
     md = md.replace("${"+domain+"}",schemaMd)
 with open('test.md',"w+") as out:
     out.write(md)
