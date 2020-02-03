@@ -1,5 +1,3 @@
-import glob
-md = '''
 # TM Forum Open-API Schema Repository
 
 [![CircleCI](https://circleci.com/gh/tmforum-rand/schemas/tree/master.svg?style=svg)](https://circleci.com/gh/tmforum-rand/schemas/tree/master)
@@ -26,26 +24,3 @@ This repository contains the collection of JSON-Schema files that define the ent
 | | <details><summary>schemas from Common</summary>${Common}<br></details> | |
 
 All schemas conform to JSON-Schema draft-07, and to [the design guidelines described here](https://github.com/tmforum-rand/TMF630_REST_API_Design_Guidelines). The schemas are used in the construction of the TM Forum Open-API catalog.
-
-
-'''
-schemaTree = {}
-for domain in glob.glob("../*/"):
-    domainName = domain.split('/')[-2].replace("/","")
-    schemaTree[domainName] = {}
-    schemasForDomain = glob.glob(domain+"*")
-    for schema in schemasForDomain:
-        schema = schema.split("/")[-1]
-        schemaTree[domainName][schema] = {
-            "name": schema,
-            "url": "https://raw.githubusercontent.com/tmforum-rand/schemas/gh-pages/"+domainName+"/"+schema 
-        }
-
-for domain in schemaTree:
-    print(domain)
-    schemaMd = ""
-    for schema in schemaTree[domain]:
-        schemaMd += schemaTree[domain][schema]['name']+"["+schemaTree[domain][schema]['url']+"]<br>"
-    md = md.replace("${"+domain+"}",schemaMd)
-with open('test.md',"w+") as out:
-    out.write(md)
