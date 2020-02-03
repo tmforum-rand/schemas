@@ -7,7 +7,7 @@ This repository contains the collection of JSON-Schema files that define the ent
 | Level-0 |  |
 |-----------------|---|
 | [Marketing/Sales](https://github.com/tmforum-rand/schemas/tree/master/MarketingSales) | The Market/Sales domain supports the sales and marketing activities needed to gain business from customers and potential customers. |
-| <details><summary>How do I dropdown?</summary><br>This is how you dropdown.</details>
+| | <details><summary>How do I dropdown?</summary><br>This is how you dropdown.</details>
 | [Product](https://github.com/tmforum-rand/schemas/tree/master/Product/) | The Product domain is concerned with the lifecycle of products offered to and procured by customers. |
 | [Customer](https://github.com/tmforum-rand/schemas/tree/master/Customer) | The Customer domain represents individuals or organizations that obtain products from an enterprise, such as a service provider. It represents of all types of contact with the customer, the management of the relationship, and the administration of customer data. |
 | [Service](https://github.com/tmforum-rand/schemas/tree/master/Service) | The Service Domain is concerned with the definition, development, and operational aspects of Services used to realize offerings to the market. |
